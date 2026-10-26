@@ -1,0 +1,63 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:mig_10_torchtpu_distributed_support",
+  "@type": "DocumentationResource",
+  "name": "TorchTPU distributed support",
+  "canonicalUrl": "https://torchtpu.readthedocs.io/en/latest/distributed_support/",
+  "category": "Nvidia to tpu migration docs",
+  "categorySlug": "nvidia_to_tpu_migration_docs",
+  "description": "Use torch.distributed with tpu_dist, DDP, FSDP, and DTensor across TPU devices.",
+  "provenance": {
+    "sourceUrl": "https://torchtpu.readthedocs.io/en/latest/distributed_support/",
+    "crawledAt": "2026-10-26T12:48:08.749722+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 39465
+  },
+  "triples": [
+    [
+      "TorchTPU distributed support",
+      "documentedIn",
+      "https://torchtpu.readthedocs.io/en/latest/distributed_support/"
+    ],
+    [
+      "TorchTPU distributed support",
+      "belongsToCategory",
+      "nvidia_to_tpu_migration_docs"
+    ],
+    [
+      "TorchTPU distributed support",
+      "supportsWorkflow",
+      "CUDA to TPU Code Migration"
+    ],
+    [
+      "TorchTPU distributed support",
+      "primaryFramework",
+      "TorchTPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "TorchTPU distributed support provides official guidance on Use torch.distributed with tpu_dist, DDP, FSDP, and DTensor across TPU devices.",
+      "confidence": 1.0,
+      "source": "https://torchtpu.readthedocs.io/en/latest/distributed_support/",
+      "verified": true
+    },
+    {
+      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
+      "confidence": 1.0,
+      "source": "https://torchtpu.readthedocs.io/en/latest/distributed_support/",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is TorchTPU distributed support used for in Cloud TPU workflows?",
+      "answer": "Use torch.distributed with tpu_dist, DDP, FSDP, and DTensor across TPU devices.",
+      "category": "nvidia_to_tpu_migration_docs"
+    }
+  ],
+  "contentSummary": "Use torch.distributed with tpu_dist, DDP, FSDP, and DTensor across TPU devices."
+}

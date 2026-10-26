@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:infer_14_vllm_tpu_recommended_models",
+  "@type": "DocumentationResource",
+  "name": "vLLM TPU recommended models",
+  "canonicalUrl": "https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/",
+  "category": "Inference deployment links",
+  "categorySlug": "inference_deployment_links",
+  "description": "Model and feature validation matrix; check release and nightly support before deploying.",
+  "provenance": {
+    "sourceUrl": "https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/",
+    "crawledAt": "2026-10-26T12:47:44.915019+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 18646
+  },
+  "triples": [
+    [
+      "vLLM TPU recommended models",
+      "documentedIn",
+      "https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/"
+    ],
+    [
+      "vLLM TPU recommended models",
+      "belongsToCategory",
+      "inference_deployment_links"
+    ],
+    [
+      "vLLM TPU recommended models",
+      "supportsWorkflow",
+      "High Throughput LLM Inference Serving"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "vLLM TPU recommended models provides official guidance on Model and feature validation matrix; check release and nightly support before deploying.",
+      "confidence": 1.0,
+      "source": "https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is vLLM TPU recommended models used for in Cloud TPU workflows?",
+      "answer": "Model and feature validation matrix; check release and nightly support before deploying.",
+      "category": "inference_deployment_links"
+    }
+  ],
+  "contentSummary": "Model and feature validation matrix; check release and nightly support before deploying."
+}

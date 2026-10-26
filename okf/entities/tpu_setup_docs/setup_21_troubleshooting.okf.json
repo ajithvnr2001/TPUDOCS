@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:setup_21_troubleshooting",
+  "@type": "DocumentationResource",
+  "name": "Troubleshoot your Cloud TPU workflow",
+  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/troubleshooting/troubleshooting",
+  "category": "TPU setup docs",
+  "categorySlug": "tpu_setup_docs",
+  "description": "Operations troubleshooting using Cloud Monitoring metrics, Cloud Logging, profiling, diagnostics, and serial console output.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/troubleshooting/troubleshooting",
+    "crawledAt": "2026-10-26T12:45:27.785293+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 26881
+  },
+  "triples": [
+    [
+      "Troubleshoot your Cloud TPU workflow",
+      "documentedIn",
+      "https://docs.cloud.google.com/tpu/docs/troubleshooting/troubleshooting"
+    ],
+    [
+      "Troubleshoot your Cloud TPU workflow",
+      "belongsToCategory",
+      "tpu_setup_docs"
+    ],
+    [
+      "Troubleshoot your Cloud TPU workflow",
+      "targetsPlatform",
+      "Google Cloud Platform"
+    ],
+    [
+      "Troubleshoot your Cloud TPU workflow",
+      "managesHardware",
+      "Google Cloud TPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Troubleshoot your Cloud TPU workflow provides official guidance on Operations troubleshooting using Cloud Monitoring metrics, Cloud Logging, profiling, diagnostics, and serial console output.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/troubleshooting/troubleshooting",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Troubleshoot your Cloud TPU workflow used for in Cloud TPU workflows?",
+      "answer": "Operations troubleshooting using Cloud Monitoring metrics, Cloud Logging, profiling, diagnostics, and serial console output.",
+      "category": "tpu_setup_docs"
+    }
+  ],
+  "contentSummary": "Operations troubleshooting using Cloud Monitoring metrics, Cloud Logging, profiling, diagnostics, and serial console output."
+}

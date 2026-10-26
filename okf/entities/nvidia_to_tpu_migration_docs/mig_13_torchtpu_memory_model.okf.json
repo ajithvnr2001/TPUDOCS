@@ -1,0 +1,63 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:mig_13_torchtpu_memory_model",
+  "@type": "DocumentationResource",
+  "name": "TorchTPU memory model",
+  "canonicalUrl": "https://torchtpu.readthedocs.io/en/latest/torchtpu_memory_model/",
+  "category": "Nvidia to tpu migration docs",
+  "categorySlug": "nvidia_to_tpu_migration_docs",
+  "description": "Explains tensor views, layout transformations, and why CUDA-like view operations can have different TPU performance.",
+  "provenance": {
+    "sourceUrl": "https://torchtpu.readthedocs.io/en/latest/torchtpu_memory_model/",
+    "crawledAt": "2026-10-26T12:48:11.941517+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 21669
+  },
+  "triples": [
+    [
+      "TorchTPU memory model",
+      "documentedIn",
+      "https://torchtpu.readthedocs.io/en/latest/torchtpu_memory_model/"
+    ],
+    [
+      "TorchTPU memory model",
+      "belongsToCategory",
+      "nvidia_to_tpu_migration_docs"
+    ],
+    [
+      "TorchTPU memory model",
+      "supportsWorkflow",
+      "CUDA to TPU Code Migration"
+    ],
+    [
+      "TorchTPU memory model",
+      "primaryFramework",
+      "TorchTPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "TorchTPU memory model provides official guidance on Explains tensor views, layout transformations, and why CUDA-like view operations can have different TPU performance.",
+      "confidence": 1.0,
+      "source": "https://torchtpu.readthedocs.io/en/latest/torchtpu_memory_model/",
+      "verified": true
+    },
+    {
+      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
+      "confidence": 1.0,
+      "source": "https://torchtpu.readthedocs.io/en/latest/torchtpu_memory_model/",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is TorchTPU memory model used for in Cloud TPU workflows?",
+      "answer": "Explains tensor views, layout transformations, and why CUDA-like view operations can have different TPU performance.",
+      "category": "nvidia_to_tpu_migration_docs"
+    }
+  ],
+  "contentSummary": "Explains tensor views, layout transformations, and why CUDA-like view operations can have different TPU performance."
+}

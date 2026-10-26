@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:setup_06_tpus_in_compute_engine",
+  "@type": "DocumentationResource",
+  "name": "Cloud TPU resources in Compute Engine",
+  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine",
+  "category": "TPU setup docs",
+  "categorySlug": "tpu_setup_docs",
+  "description": "Conceptual migration guide mapping TPU VMs/slices to Compute Engine instances, MIGs, and workload policies.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine",
+    "crawledAt": "2026-10-26T12:45:04.919729+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 26749
+  },
+  "triples": [
+    [
+      "Cloud TPU resources in Compute Engine",
+      "documentedIn",
+      "https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine"
+    ],
+    [
+      "Cloud TPU resources in Compute Engine",
+      "belongsToCategory",
+      "tpu_setup_docs"
+    ],
+    [
+      "Cloud TPU resources in Compute Engine",
+      "targetsPlatform",
+      "Google Cloud Platform"
+    ],
+    [
+      "Cloud TPU resources in Compute Engine",
+      "managesHardware",
+      "Google Cloud TPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Cloud TPU resources in Compute Engine provides official guidance on Conceptual migration guide mapping TPU VMs/slices to Compute Engine instances, MIGs, and workload policies.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Cloud TPU resources in Compute Engine used for in Cloud TPU workflows?",
+      "answer": "Conceptual migration guide mapping TPU VMs/slices to Compute Engine instances, MIGs, and workload policies.",
+      "category": "tpu_setup_docs"
+    }
+  ],
+  "contentSummary": "Conceptual migration guide mapping TPU VMs/slices to Compute Engine instances, MIGs, and workload policies."
+}

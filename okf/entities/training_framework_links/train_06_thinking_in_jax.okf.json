@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:train_06_thinking_in_jax",
+  "@type": "DocumentationResource",
+  "name": "Thinking in JAX",
+  "canonicalUrl": "https://docs.jax.dev/en/latest/notebooks/thinking_in_jax.html",
+  "category": "Training framework links",
+  "categorySlug": "training_framework_links",
+  "description": "JAX programming concepts for portable CPU, GPU, and TPU computation.",
+  "provenance": {
+    "sourceUrl": "https://docs.jax.dev/en/latest/notebooks/thinking_in_jax.html",
+    "crawledAt": "2026-10-26T12:45:40.303967+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 55486
+  },
+  "triples": [
+    [
+      "Thinking in JAX",
+      "documentedIn",
+      "https://docs.jax.dev/en/latest/notebooks/thinking_in_jax.html"
+    ],
+    [
+      "Thinking in JAX",
+      "belongsToCategory",
+      "training_framework_links"
+    ],
+    [
+      "Thinking in JAX",
+      "supportsWorkflow",
+      "Distributed Machine Learning Training"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Thinking in JAX provides official guidance on JAX programming concepts for portable CPU, GPU, and TPU computation.",
+      "confidence": 1.0,
+      "source": "https://docs.jax.dev/en/latest/notebooks/thinking_in_jax.html",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Thinking in JAX used for in Cloud TPU workflows?",
+      "answer": "JAX programming concepts for portable CPU, GPU, and TPU computation.",
+      "category": "training_framework_links"
+    }
+  ],
+  "contentSummary": "JAX programming concepts for portable CPU, GPU, and TPU computation."
+}

@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:train_17_maxtext_setup_sh",
+  "@type": "DocumentationResource",
+  "name": "MaxText TPU setup script",
+  "canonicalUrl": "https://github.com/google/maxtext/blob/main/src/dependencies/scripts/setup.sh",
+  "category": "Training framework links",
+  "categorySlug": "training_framework_links",
+  "description": "Concrete MaxText dependency setup for TPU, including stable/nightly JAX, jaxlib, and libtpu selection.",
+  "provenance": {
+    "sourceUrl": "https://github.com/google/maxtext/blob/main/src/dependencies/scripts/setup.sh",
+    "crawledAt": "2026-10-26T12:47:08.817111+00:00",
+    "extractorEngine": "GitHubRaw",
+    "contentLengthBytes": 18710
+  },
+  "triples": [
+    [
+      "MaxText TPU setup script",
+      "documentedIn",
+      "https://github.com/google/maxtext/blob/main/src/dependencies/scripts/setup.sh"
+    ],
+    [
+      "MaxText TPU setup script",
+      "belongsToCategory",
+      "training_framework_links"
+    ],
+    [
+      "MaxText TPU setup script",
+      "supportsWorkflow",
+      "Distributed Machine Learning Training"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "MaxText TPU setup script provides official guidance on Concrete MaxText dependency setup for TPU, including stable/nightly JAX, jaxlib, and libtpu selection.",
+      "confidence": 1.0,
+      "source": "https://github.com/google/maxtext/blob/main/src/dependencies/scripts/setup.sh",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is MaxText TPU setup script used for in Cloud TPU workflows?",
+      "answer": "Concrete MaxText dependency setup for TPU, including stable/nightly JAX, jaxlib, and libtpu selection.",
+      "category": "training_framework_links"
+    }
+  ],
+  "contentSummary": "Concrete MaxText dependency setup for TPU, including stable/nightly JAX, jaxlib, and libtpu selection."
+}

@@ -1,0 +1,63 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:mig_04_torchtpu_cuda_api_ref",
+  "@type": "DocumentationResource",
+  "name": "TorchTPU CUDA-to-TPU API reference",
+  "canonicalUrl": "https://torchtpu.readthedocs.io/en/latest/api_reference/",
+  "category": "Nvidia to tpu migration docs",
+  "categorySlug": "nvidia_to_tpu_migration_docs",
+  "description": "Mappings from torch.cuda to device-agnostic APIs, plus TPU runtime, precision, distributed, and profiling APIs.",
+  "provenance": {
+    "sourceUrl": "https://torchtpu.readthedocs.io/en/latest/api_reference/",
+    "crawledAt": "2026-10-26T12:47:59.741803+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 43615
+  },
+  "triples": [
+    [
+      "TorchTPU CUDA-to-TPU API reference",
+      "documentedIn",
+      "https://torchtpu.readthedocs.io/en/latest/api_reference/"
+    ],
+    [
+      "TorchTPU CUDA-to-TPU API reference",
+      "belongsToCategory",
+      "nvidia_to_tpu_migration_docs"
+    ],
+    [
+      "TorchTPU CUDA-to-TPU API reference",
+      "supportsWorkflow",
+      "CUDA to TPU Code Migration"
+    ],
+    [
+      "TorchTPU CUDA-to-TPU API reference",
+      "primaryFramework",
+      "TorchTPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "TorchTPU CUDA-to-TPU API reference provides official guidance on Mappings from torch.cuda to device-agnostic APIs, plus TPU runtime, precision, distributed, and profiling APIs.",
+      "confidence": 1.0,
+      "source": "https://torchtpu.readthedocs.io/en/latest/api_reference/",
+      "verified": true
+    },
+    {
+      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
+      "confidence": 1.0,
+      "source": "https://torchtpu.readthedocs.io/en/latest/api_reference/",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is TorchTPU CUDA-to-TPU API reference used for in Cloud TPU workflows?",
+      "answer": "Mappings from torch.cuda to device-agnostic APIs, plus TPU runtime, precision, distributed, and profiling APIs.",
+      "category": "nvidia_to_tpu_migration_docs"
+    }
+  ],
+  "contentSummary": "Mappings from torch.cuda to device-agnostic APIs, plus TPU runtime, precision, distributed, and profiling APIs."
+}

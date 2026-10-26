@@ -1,0 +1,63 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:setup_20_ironwood_performance",
+  "@type": "DocumentationResource",
+  "name": "TPU7x performance optimizations",
+  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/ironwood-performance",
+  "category": "TPU setup docs",
+  "categorySlug": "tpu_setup_docs",
+  "description": "Optimize memory movement, low-precision computation, sharding, and communication on Ironwood.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/ironwood-performance",
+    "crawledAt": "2026-10-26T12:45:23.629303+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 36988
+  },
+  "triples": [
+    [
+      "TPU7x performance optimizations",
+      "documentedIn",
+      "https://docs.cloud.google.com/tpu/docs/ironwood-performance"
+    ],
+    [
+      "TPU7x performance optimizations",
+      "belongsToCategory",
+      "tpu_setup_docs"
+    ],
+    [
+      "TPU7x performance optimizations",
+      "targetsPlatform",
+      "Google Cloud Platform"
+    ],
+    [
+      "TPU7x performance optimizations",
+      "managesHardware",
+      "Google Cloud TPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "TPU7x performance optimizations provides official guidance on Optimize memory movement, low-precision computation, sharding, and communication on Ironwood.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/ironwood-performance",
+      "verified": true
+    },
+    {
+      "assertion": "TPU7x (Ironwood) supports PyTorch and JAX, but explicitly does NOT support TensorFlow.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/ironwood-performance",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is TPU7x performance optimizations used for in Cloud TPU workflows?",
+      "answer": "Optimize memory movement, low-precision computation, sharding, and communication on Ironwood.",
+      "category": "tpu_setup_docs"
+    }
+  ],
+  "contentSummary": "Optimize memory movement, low-precision computation, sharding, and communication on Ironwood."
+}

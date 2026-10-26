@@ -1,0 +1,64 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:infer_08_llama_32_1b_instruct",
+  "@type": "DocumentationResource",
+  "name": "Llama 3.2 1B Instruct model and access",
+  "canonicalUrl": "https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct",
+  "category": "Inference deployment links",
+  "categorySlug": "inference_deployment_links",
+  "description": "Model card, license, and gated-access page for the documented vLLM-TorchTPU quickstart model.",
+  "provenance": {
+    "sourceUrl": "https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct",
+    "crawledAt": "2026-10-26T12:47:34.767985+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 58669
+  },
+  "triples": [
+    [
+      "Llama 3.2 1B Instruct model and access",
+      "documentedIn",
+      "https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct"
+    ],
+    [
+      "Llama 3.2 1B Instruct model and access",
+      "belongsToCategory",
+      "inference_deployment_links"
+    ],
+    [
+      "Llama 3.2 1B Instruct model and access",
+      "supportsWorkflow",
+      "High Throughput LLM Inference Serving"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Llama 3.2 1B Instruct model and access provides official guidance on Model card, license, and gated-access page for the documented vLLM-TorchTPU quickstart model.",
+      "confidence": 1.0,
+      "source": "https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct",
+      "verified": true
+    },
+    {
+      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
+      "confidence": 1.0,
+      "source": "https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct",
+      "verified": true
+    },
+    {
+      "assertion": "vLLM-TorchTPU is the out-of-tree PyTorch-native serving backend for vLLM on TPUs, distinct from the JAX-native vllm-tpu backend.",
+      "confidence": 1.0,
+      "source": "https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Llama 3.2 1B Instruct model and access used for in Cloud TPU workflows?",
+      "answer": "Model card, license, and gated-access page for the documented vLLM-TorchTPU quickstart model.",
+      "category": "inference_deployment_links"
+    }
+  ],
+  "contentSummary": "Model card, license, and gated-access page for the documented vLLM-TorchTPU quickstart model."
+}

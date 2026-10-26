@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:setup_18_bfloat16_guide",
+  "@type": "DocumentationResource",
+  "name": "Cloud TPU bfloat16 guide",
+  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/bfloat16",
+  "category": "TPU setup docs",
+  "categorySlug": "tpu_setup_docs",
+  "description": "Precision guidance and checkpoint portability considerations for TPU workloads.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/bfloat16",
+    "crawledAt": "2026-10-26T12:45:22.303904+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 24236
+  },
+  "triples": [
+    [
+      "Cloud TPU bfloat16 guide",
+      "documentedIn",
+      "https://docs.cloud.google.com/tpu/docs/bfloat16"
+    ],
+    [
+      "Cloud TPU bfloat16 guide",
+      "belongsToCategory",
+      "tpu_setup_docs"
+    ],
+    [
+      "Cloud TPU bfloat16 guide",
+      "targetsPlatform",
+      "Google Cloud Platform"
+    ],
+    [
+      "Cloud TPU bfloat16 guide",
+      "managesHardware",
+      "Google Cloud TPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Cloud TPU bfloat16 guide provides official guidance on Precision guidance and checkpoint portability considerations for TPU workloads.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/bfloat16",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Cloud TPU bfloat16 guide used for in Cloud TPU workflows?",
+      "answer": "Precision guidance and checkpoint portability considerations for TPU workloads.",
+      "category": "tpu_setup_docs"
+    }
+  ],
+  "contentSummary": "Precision guidance and checkpoint portability considerations for TPU workloads."
+}

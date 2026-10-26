@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:mig_17_tpu_agent_suite",
+  "@type": "DocumentationResource",
+  "name": "TPU Agent Suite installation",
+  "canonicalUrl": "https://github.com/google-pytorch/tpu-agent-suite/blob/main/docs/install.md",
+  "category": "Nvidia to tpu migration docs",
+  "categorySlug": "nvidia_to_tpu_migration_docs",
+  "description": "Experimental assisted onboarding and diagnostics; documents TPU environment and dependency setup.",
+  "provenance": {
+    "sourceUrl": "https://github.com/google-pytorch/tpu-agent-suite/blob/main/docs/install.md",
+    "crawledAt": "2026-10-26T12:48:13.577696+00:00",
+    "extractorEngine": "GitHubRaw",
+    "contentLengthBytes": 29790
+  },
+  "triples": [
+    [
+      "TPU Agent Suite installation",
+      "documentedIn",
+      "https://github.com/google-pytorch/tpu-agent-suite/blob/main/docs/install.md"
+    ],
+    [
+      "TPU Agent Suite installation",
+      "belongsToCategory",
+      "nvidia_to_tpu_migration_docs"
+    ],
+    [
+      "TPU Agent Suite installation",
+      "supportsWorkflow",
+      "CUDA to TPU Code Migration"
+    ],
+    [
+      "TPU Agent Suite installation",
+      "primaryFramework",
+      "TorchTPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "TPU Agent Suite installation provides official guidance on Experimental assisted onboarding and diagnostics; documents TPU environment and dependency setup.",
+      "confidence": 1.0,
+      "source": "https://github.com/google-pytorch/tpu-agent-suite/blob/main/docs/install.md",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is TPU Agent Suite installation used for in Cloud TPU workflows?",
+      "answer": "Experimental assisted onboarding and diagnostics; documents TPU environment and dependency setup.",
+      "category": "nvidia_to_tpu_migration_docs"
+    }
+  ],
+  "contentSummary": "Experimental assisted onboarding and diagnostics; documents TPU environment and dependency setup."
+}

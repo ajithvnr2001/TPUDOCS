@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:train_15_hf_training_guide",
+  "@type": "DocumentationResource",
+  "name": "Hugging Face fine-tuning guide",
+  "canonicalUrl": "https://huggingface.co/docs/transformers/training",
+  "category": "Training framework links",
+  "categorySlug": "training_framework_links",
+  "description": "General model, dataset, Trainer, and checkpoint workflow; not a TPU runtime setup guide.",
+  "provenance": {
+    "sourceUrl": "https://huggingface.co/docs/transformers/training",
+    "crawledAt": "2026-10-26T12:46:47.969855+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 11565
+  },
+  "triples": [
+    [
+      "Hugging Face fine-tuning guide",
+      "documentedIn",
+      "https://huggingface.co/docs/transformers/training"
+    ],
+    [
+      "Hugging Face fine-tuning guide",
+      "belongsToCategory",
+      "training_framework_links"
+    ],
+    [
+      "Hugging Face fine-tuning guide",
+      "supportsWorkflow",
+      "Distributed Machine Learning Training"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Hugging Face fine-tuning guide provides official guidance on General model, dataset, Trainer, and checkpoint workflow; not a TPU runtime setup guide.",
+      "confidence": 1.0,
+      "source": "https://huggingface.co/docs/transformers/training",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Hugging Face fine-tuning guide used for in Cloud TPU workflows?",
+      "answer": "General model, dataset, Trainer, and checkpoint workflow; not a TPU runtime setup guide.",
+      "category": "training_framework_links"
+    }
+  ],
+  "contentSummary": "General model, dataset, Trainer, and checkpoint workflow; not a TPU runtime setup guide."
+}

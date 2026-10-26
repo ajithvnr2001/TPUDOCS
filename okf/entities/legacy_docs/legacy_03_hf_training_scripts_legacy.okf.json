@@ -1,0 +1,69 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:legacy_03_hf_training_scripts_legacy",
+  "@type": "DocumentationResource",
+  "name": "Hugging Face training scripts \u2014 legacy TPU instructions",
+  "canonicalUrl": "https://huggingface.co/docs/transformers/run_scripts",
+  "category": "Legacy docs",
+  "categorySlug": "legacy_docs",
+  "description": "The TPU section uses PyTorch/XLA and xla_spawn.py; do not treat it as the current TorchTPU setup.",
+  "provenance": {
+    "sourceUrl": "https://huggingface.co/docs/transformers/run_scripts",
+    "crawledAt": "2026-10-26T12:44:53.045494+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 11788
+  },
+  "triples": [
+    [
+      "Hugging Face training scripts \u2014 legacy TPU instructions",
+      "documentedIn",
+      "https://huggingface.co/docs/transformers/run_scripts"
+    ],
+    [
+      "Hugging Face training scripts \u2014 legacy TPU instructions",
+      "belongsToCategory",
+      "legacy_docs"
+    ],
+    [
+      "Hugging Face training scripts \u2014 legacy TPU instructions",
+      "status",
+      "Deprecated/Legacy"
+    ],
+    [
+      "Hugging Face training scripts \u2014 legacy TPU instructions",
+      "replacedBy",
+      "TorchTPU / Compute Engine TPU VM"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Hugging Face training scripts \u2014 legacy TPU instructions provides official guidance on The TPU section uses PyTorch/XLA and xla_spawn.py; do not treat it as the current TorchTPU setup.",
+      "confidence": 1.0,
+      "source": "https://huggingface.co/docs/transformers/run_scripts",
+      "verified": true
+    },
+    {
+      "assertion": "Resource Hugging Face training scripts \u2014 legacy TPU instructions is legacy or deprecated; use Compute Engine TPU API and TorchTPU for current workloads.",
+      "confidence": 1.0,
+      "source": "https://huggingface.co/docs/transformers/run_scripts",
+      "verified": true
+    },
+    {
+      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
+      "confidence": 1.0,
+      "source": "https://huggingface.co/docs/transformers/run_scripts",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Hugging Face training scripts \u2014 legacy TPU instructions used for in Cloud TPU workflows?",
+      "answer": "The TPU section uses PyTorch/XLA and xla_spawn.py; do not treat it as the current TorchTPU setup.",
+      "category": "legacy_docs"
+    }
+  ],
+  "contentSummary": "The TPU section uses PyTorch/XLA and xla_spawn.py; do not treat it as the current TorchTPU setup."
+}

@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:setup_10_pricing",
+  "@type": "DocumentationResource",
+  "name": "Cloud TPU pricing",
+  "canonicalUrl": "https://cloud.google.com/tpu/pricing",
+  "category": "TPU setup docs",
+  "categorySlug": "tpu_setup_docs",
+  "description": "Official current price reference linked from TPU quota and regions documentation; use it to compare generation, zone, and consumption mode.",
+  "provenance": {
+    "sourceUrl": "https://cloud.google.com/tpu/pricing",
+    "crawledAt": "2026-10-26T12:45:10.434770+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 86112
+  },
+  "triples": [
+    [
+      "Cloud TPU pricing",
+      "documentedIn",
+      "https://cloud.google.com/tpu/pricing"
+    ],
+    [
+      "Cloud TPU pricing",
+      "belongsToCategory",
+      "tpu_setup_docs"
+    ],
+    [
+      "Cloud TPU pricing",
+      "targetsPlatform",
+      "Google Cloud Platform"
+    ],
+    [
+      "Cloud TPU pricing",
+      "managesHardware",
+      "Google Cloud TPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Cloud TPU pricing provides official guidance on Official current price reference linked from TPU quota and regions documentation; use it to compare generation, zone, and consumption mode.",
+      "confidence": 1.0,
+      "source": "https://cloud.google.com/tpu/pricing",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Cloud TPU pricing used for in Cloud TPU workflows?",
+      "answer": "Official current price reference linked from TPU quota and regions documentation; use it to compare generation, zone, and consumption mode.",
+      "category": "tpu_setup_docs"
+    }
+  ],
+  "contentSummary": "Official current price reference linked from TPU quota and regions documentation; use it to compare generation, zone, and consumption mode."
+}

@@ -1,0 +1,58 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:train_19_maxtext_gemma_sft_multihost",
+  "@type": "DocumentationResource",
+  "name": "MaxText multi-host Gemma SFT",
+  "canonicalUrl": "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-gemma4-31b-sft-maxtext",
+  "category": "Training framework links",
+  "categorySlug": "training_framework_links",
+  "description": "Multi-host v6e/GKE recipe for Gemma 4 31B SFT with MaxText, Cluster Toolkit, UltraChat, and export back to Hugging Face format.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-gemma4-31b-sft-maxtext",
+    "crawledAt": "2026-10-26T12:47:17.390435+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 46098
+  },
+  "triples": [
+    [
+      "MaxText multi-host Gemma SFT",
+      "documentedIn",
+      "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-gemma4-31b-sft-maxtext"
+    ],
+    [
+      "MaxText multi-host Gemma SFT",
+      "belongsToCategory",
+      "training_framework_links"
+    ],
+    [
+      "MaxText multi-host Gemma SFT",
+      "supportsWorkflow",
+      "Distributed Machine Learning Training"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "MaxText multi-host Gemma SFT provides official guidance on Multi-host v6e/GKE recipe for Gemma 4 31B SFT with MaxText, Cluster Toolkit, UltraChat, and export back to Hugging Face format.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-gemma4-31b-sft-maxtext",
+      "verified": true
+    },
+    {
+      "assertion": "TPU v6e (Trillium) is Google's 6th generation TPU offering high efficiency for inference and training.",
+      "confidence": 0.99,
+      "source": "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-gemma4-31b-sft-maxtext",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is MaxText multi-host Gemma SFT used for in Cloud TPU workflows?",
+      "answer": "Multi-host v6e/GKE recipe for Gemma 4 31B SFT with MaxText, Cluster Toolkit, UltraChat, and export back to Hugging Face format.",
+      "category": "training_framework_links"
+    }
+  ],
+  "contentSummary": "Multi-host v6e/GKE recipe for Gemma 4 31B SFT with MaxText, Cluster Toolkit, UltraChat, and export back to Hugging Face format."
+}

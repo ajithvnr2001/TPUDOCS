@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:setup_08_regions_zones",
+  "@type": "DocumentationResource",
+  "name": "TPU regions and zones",
+  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/regions-zones",
+  "category": "TPU setup docs",
+  "categorySlug": "tpu_setup_docs",
+  "description": "Authoritative availability matrix for TPU generations, configurations, regions, and zones.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/regions-zones",
+    "crawledAt": "2026-10-26T12:45:04.536020+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 27213
+  },
+  "triples": [
+    [
+      "TPU regions and zones",
+      "documentedIn",
+      "https://docs.cloud.google.com/tpu/docs/regions-zones"
+    ],
+    [
+      "TPU regions and zones",
+      "belongsToCategory",
+      "tpu_setup_docs"
+    ],
+    [
+      "TPU regions and zones",
+      "targetsPlatform",
+      "Google Cloud Platform"
+    ],
+    [
+      "TPU regions and zones",
+      "managesHardware",
+      "Google Cloud TPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "TPU regions and zones provides official guidance on Authoritative availability matrix for TPU generations, configurations, regions, and zones.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/regions-zones",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is TPU regions and zones used for in Cloud TPU workflows?",
+      "answer": "Authoritative availability matrix for TPU generations, configurations, regions, and zones.",
+      "category": "tpu_setup_docs"
+    }
+  ],
+  "contentSummary": "Authoritative availability matrix for TPU generations, configurations, regions, and zones."
+}

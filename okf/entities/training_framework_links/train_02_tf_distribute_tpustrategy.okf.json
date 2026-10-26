@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:train_02_tf_distribute_tpustrategy",
+  "@type": "DocumentationResource",
+  "name": "TensorFlow TPUStrategy API",
+  "canonicalUrl": "https://www.tensorflow.org/api_docs/python/tf/distribute/TPUStrategy",
+  "category": "Training framework links",
+  "categorySlug": "training_framework_links",
+  "description": "API reference for synchronous TensorFlow training on TPUs and TPU Pods.",
+  "provenance": {
+    "sourceUrl": "https://www.tensorflow.org/api_docs/python/tf/distribute/TPUStrategy",
+    "crawledAt": "2026-10-26T12:45:35.106305+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 531934
+  },
+  "triples": [
+    [
+      "TensorFlow TPUStrategy API",
+      "documentedIn",
+      "https://www.tensorflow.org/api_docs/python/tf/distribute/TPUStrategy"
+    ],
+    [
+      "TensorFlow TPUStrategy API",
+      "belongsToCategory",
+      "training_framework_links"
+    ],
+    [
+      "TensorFlow TPUStrategy API",
+      "supportsWorkflow",
+      "Distributed Machine Learning Training"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "TensorFlow TPUStrategy API provides official guidance on API reference for synchronous TensorFlow training on TPUs and TPU Pods.",
+      "confidence": 1.0,
+      "source": "https://www.tensorflow.org/api_docs/python/tf/distribute/TPUStrategy",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is TensorFlow TPUStrategy API used for in Cloud TPU workflows?",
+      "answer": "API reference for synchronous TensorFlow training on TPUs and TPU Pods.",
+      "category": "training_framework_links"
+    }
+  ],
+  "contentSummary": "API reference for synchronous TensorFlow training on TPUs and TPU Pods."
+}

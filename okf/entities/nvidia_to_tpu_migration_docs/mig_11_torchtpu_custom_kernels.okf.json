@@ -1,0 +1,63 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:mig_11_torchtpu_custom_kernels",
+  "@type": "DocumentationResource",
+  "name": "TorchTPU custom kernels and API reference",
+  "canonicalUrl": "https://torchtpu.readthedocs.io/en/latest/custom_kernels/",
+  "category": "Nvidia to tpu migration docs",
+  "categorySlug": "nvidia_to_tpu_migration_docs",
+  "description": "Integrate prebuilt Tokamax kernels, custom Pallas kernels, or experimental Helion kernels.",
+  "provenance": {
+    "sourceUrl": "https://torchtpu.readthedocs.io/en/latest/custom_kernels/",
+    "crawledAt": "2026-10-26T12:48:08.094119+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 14733
+  },
+  "triples": [
+    [
+      "TorchTPU custom kernels and API reference",
+      "documentedIn",
+      "https://torchtpu.readthedocs.io/en/latest/custom_kernels/"
+    ],
+    [
+      "TorchTPU custom kernels and API reference",
+      "belongsToCategory",
+      "nvidia_to_tpu_migration_docs"
+    ],
+    [
+      "TorchTPU custom kernels and API reference",
+      "supportsWorkflow",
+      "CUDA to TPU Code Migration"
+    ],
+    [
+      "TorchTPU custom kernels and API reference",
+      "primaryFramework",
+      "TorchTPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "TorchTPU custom kernels and API reference provides official guidance on Integrate prebuilt Tokamax kernels, custom Pallas kernels, or experimental Helion kernels.",
+      "confidence": 1.0,
+      "source": "https://torchtpu.readthedocs.io/en/latest/custom_kernels/",
+      "verified": true
+    },
+    {
+      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
+      "confidence": 1.0,
+      "source": "https://torchtpu.readthedocs.io/en/latest/custom_kernels/",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is TorchTPU custom kernels and API reference used for in Cloud TPU workflows?",
+      "answer": "Integrate prebuilt Tokamax kernels, custom Pallas kernels, or experimental Helion kernels.",
+      "category": "nvidia_to_tpu_migration_docs"
+    }
+  ],
+  "contentSummary": "Integrate prebuilt Tokamax kernels, custom Pallas kernels, or experimental Helion kernels."
+}

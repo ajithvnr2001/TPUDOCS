@@ -1,0 +1,63 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:legacy_01_manage_tpus_legacy_api",
+  "@type": "DocumentationResource",
+  "name": "Manage TPU resources (legacy Cloud TPU API)",
+  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm",
+  "category": "Legacy docs",
+  "categorySlug": "legacy_docs",
+  "description": "Legacy stop/delete cleanup reference; retain only for existing Cloud TPU API resources.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm",
+    "crawledAt": "2026-10-26T12:44:51.367923+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 57619
+  },
+  "triples": [
+    [
+      "Manage TPU resources (legacy Cloud TPU API)",
+      "documentedIn",
+      "https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm"
+    ],
+    [
+      "Manage TPU resources (legacy Cloud TPU API)",
+      "belongsToCategory",
+      "legacy_docs"
+    ],
+    [
+      "Manage TPU resources (legacy Cloud TPU API)",
+      "status",
+      "Deprecated/Legacy"
+    ],
+    [
+      "Manage TPU resources (legacy Cloud TPU API)",
+      "replacedBy",
+      "TorchTPU / Compute Engine TPU VM"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Manage TPU resources (legacy Cloud TPU API) provides official guidance on Legacy stop/delete cleanup reference; retain only for existing Cloud TPU API resources.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm",
+      "verified": true
+    },
+    {
+      "assertion": "Resource Manage TPU resources (legacy Cloud TPU API) is legacy or deprecated; use Compute Engine TPU API and TorchTPU for current workloads.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Manage TPU resources (legacy Cloud TPU API) used for in Cloud TPU workflows?",
+      "answer": "Legacy stop/delete cleanup reference; retain only for existing Cloud TPU API resources.",
+      "category": "legacy_docs"
+    }
+  ],
+  "contentSummary": "Legacy stop/delete cleanup reference; retain only for existing Cloud TPU API resources."
+}

@@ -1,0 +1,63 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:mig_09_torchtpu_dynamic_shapes",
+  "@type": "DocumentationResource",
+  "name": "TorchTPU compilation and dynamic shapes",
+  "canonicalUrl": "https://torchtpu.readthedocs.io/en/latest/dynamic_shapes/",
+  "category": "Nvidia to tpu migration docs",
+  "categorySlug": "nvidia_to_tpu_migration_docs",
+  "description": "Static and bounded dynamic shapes, recompilation behavior, and current limitations.",
+  "provenance": {
+    "sourceUrl": "https://torchtpu.readthedocs.io/en/latest/dynamic_shapes/",
+    "crawledAt": "2026-10-26T12:48:08.848600+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 22655
+  },
+  "triples": [
+    [
+      "TorchTPU compilation and dynamic shapes",
+      "documentedIn",
+      "https://torchtpu.readthedocs.io/en/latest/dynamic_shapes/"
+    ],
+    [
+      "TorchTPU compilation and dynamic shapes",
+      "belongsToCategory",
+      "nvidia_to_tpu_migration_docs"
+    ],
+    [
+      "TorchTPU compilation and dynamic shapes",
+      "supportsWorkflow",
+      "CUDA to TPU Code Migration"
+    ],
+    [
+      "TorchTPU compilation and dynamic shapes",
+      "primaryFramework",
+      "TorchTPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "TorchTPU compilation and dynamic shapes provides official guidance on Static and bounded dynamic shapes, recompilation behavior, and current limitations.",
+      "confidence": 1.0,
+      "source": "https://torchtpu.readthedocs.io/en/latest/dynamic_shapes/",
+      "verified": true
+    },
+    {
+      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
+      "confidence": 1.0,
+      "source": "https://torchtpu.readthedocs.io/en/latest/dynamic_shapes/",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is TorchTPU compilation and dynamic shapes used for in Cloud TPU workflows?",
+      "answer": "Static and bounded dynamic shapes, recompilation behavior, and current limitations.",
+      "category": "nvidia_to_tpu_migration_docs"
+    }
+  ],
+  "contentSummary": "Static and bounded dynamic shapes, recompilation behavior, and current limitations."
+}

@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:setup_09_quota",
+  "@type": "DocumentationResource",
+  "name": "Cloud TPU quotas",
+  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/quota",
+  "category": "TPU setup docs",
+  "categorySlug": "tpu_setup_docs",
+  "description": "Quota names, default per-zone limits, on-demand/preemptible distinctions, and quota-request guidance.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/quota",
+    "crawledAt": "2026-10-26T12:45:08.066146+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 19235
+  },
+  "triples": [
+    [
+      "Cloud TPU quotas",
+      "documentedIn",
+      "https://docs.cloud.google.com/tpu/docs/quota"
+    ],
+    [
+      "Cloud TPU quotas",
+      "belongsToCategory",
+      "tpu_setup_docs"
+    ],
+    [
+      "Cloud TPU quotas",
+      "targetsPlatform",
+      "Google Cloud Platform"
+    ],
+    [
+      "Cloud TPU quotas",
+      "managesHardware",
+      "Google Cloud TPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Cloud TPU quotas provides official guidance on Quota names, default per-zone limits, on-demand/preemptible distinctions, and quota-request guidance.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/quota",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Cloud TPU quotas used for in Cloud TPU workflows?",
+      "answer": "Quota names, default per-zone limits, on-demand/preemptible distinctions, and quota-request guidance.",
+      "category": "tpu_setup_docs"
+    }
+  ],
+  "contentSummary": "Quota names, default per-zone limits, on-demand/preemptible distinctions, and quota-request guidance."
+}

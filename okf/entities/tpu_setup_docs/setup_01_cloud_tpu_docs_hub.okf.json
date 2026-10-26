@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:setup_01_cloud_tpu_docs_hub",
+  "@type": "DocumentationResource",
+  "name": "Cloud TPU documentation hub",
+  "canonicalUrl": "https://cloud.google.com/tpu/docs",
+  "category": "TPU setup docs",
+  "categorySlug": "tpu_setup_docs",
+  "description": "Main entry point for official TPU setup, hardware, training, serving, and operations documentation.",
+  "provenance": {
+    "sourceUrl": "https://cloud.google.com/tpu/docs",
+    "crawledAt": "2026-10-26T12:44:57.384936+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 45214
+  },
+  "triples": [
+    [
+      "Cloud TPU documentation hub",
+      "documentedIn",
+      "https://cloud.google.com/tpu/docs"
+    ],
+    [
+      "Cloud TPU documentation hub",
+      "belongsToCategory",
+      "tpu_setup_docs"
+    ],
+    [
+      "Cloud TPU documentation hub",
+      "targetsPlatform",
+      "Google Cloud Platform"
+    ],
+    [
+      "Cloud TPU documentation hub",
+      "managesHardware",
+      "Google Cloud TPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Cloud TPU documentation hub provides official guidance on Main entry point for official TPU setup, hardware, training, serving, and operations documentation.",
+      "confidence": 1.0,
+      "source": "https://cloud.google.com/tpu/docs",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Cloud TPU documentation hub used for in Cloud TPU workflows?",
+      "answer": "Main entry point for official TPU setup, hardware, training, serving, and operations documentation.",
+      "category": "tpu_setup_docs"
+    }
+  ],
+  "contentSummary": "Main entry point for official TPU setup, hardware, training, serving, and operations documentation."
+}

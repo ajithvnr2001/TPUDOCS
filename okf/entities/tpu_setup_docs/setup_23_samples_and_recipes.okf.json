@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:setup_23_samples_and_recipes",
+  "@type": "DocumentationResource",
+  "name": "Cloud TPU samples and recipes",
+  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/samples",
+  "category": "TPU setup docs",
+  "categorySlug": "tpu_setup_docs",
+  "description": "Official index of TPU recipes, including MaxText LLM training examples and MaxDiffusion SDXL pretraining examples.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/samples",
+    "crawledAt": "2026-10-26T12:45:26.985891+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 20973
+  },
+  "triples": [
+    [
+      "Cloud TPU samples and recipes",
+      "documentedIn",
+      "https://docs.cloud.google.com/tpu/docs/samples"
+    ],
+    [
+      "Cloud TPU samples and recipes",
+      "belongsToCategory",
+      "tpu_setup_docs"
+    ],
+    [
+      "Cloud TPU samples and recipes",
+      "targetsPlatform",
+      "Google Cloud Platform"
+    ],
+    [
+      "Cloud TPU samples and recipes",
+      "managesHardware",
+      "Google Cloud TPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Cloud TPU samples and recipes provides official guidance on Official index of TPU recipes, including MaxText LLM training examples and MaxDiffusion SDXL pretraining examples.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/samples",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Cloud TPU samples and recipes used for in Cloud TPU workflows?",
+      "answer": "Official index of TPU recipes, including MaxText LLM training examples and MaxDiffusion SDXL pretraining examples.",
+      "category": "tpu_setup_docs"
+    }
+  ],
+  "contentSummary": "Official index of TPU recipes, including MaxText LLM training examples and MaxDiffusion SDXL pretraining examples."
+}

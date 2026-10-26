@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:setup_16_spot_compute",
+  "@type": "DocumentationResource",
+  "name": "Request TPU Spot VMs",
+  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/spot-compute",
+  "category": "TPU setup docs",
+  "categorySlug": "tpu_setup_docs",
+  "description": "Current discounted/preemptible Compute Engine TPU operation, including single VMs and MIG-backed multi-host slices.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/spot-compute",
+    "crawledAt": "2026-10-26T12:45:19.717710+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 30033
+  },
+  "triples": [
+    [
+      "Request TPU Spot VMs",
+      "documentedIn",
+      "https://docs.cloud.google.com/tpu/docs/spot-compute"
+    ],
+    [
+      "Request TPU Spot VMs",
+      "belongsToCategory",
+      "tpu_setup_docs"
+    ],
+    [
+      "Request TPU Spot VMs",
+      "targetsPlatform",
+      "Google Cloud Platform"
+    ],
+    [
+      "Request TPU Spot VMs",
+      "managesHardware",
+      "Google Cloud TPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Request TPU Spot VMs provides official guidance on Current discounted/preemptible Compute Engine TPU operation, including single VMs and MIG-backed multi-host slices.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/spot-compute",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Request TPU Spot VMs used for in Cloud TPU workflows?",
+      "answer": "Current discounted/preemptible Compute Engine TPU operation, including single VMs and MIG-backed multi-host slices.",
+      "category": "tpu_setup_docs"
+    }
+  ],
+  "contentSummary": "Current discounted/preemptible Compute Engine TPU operation, including single VMs and MIG-backed multi-host slices."
+}

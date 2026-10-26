@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:setup_12_system_architecture",
+  "@type": "DocumentationResource",
+  "name": "TPU architecture",
+  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm",
+  "category": "TPU setup docs",
+  "categorySlug": "tpu_setup_docs",
+  "description": "Explains TPU chips, matrix units, hosts, slices, topology, and distributed connectivity.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm",
+    "crawledAt": "2026-10-26T12:45:14.799947+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 34843
+  },
+  "triples": [
+    [
+      "TPU architecture",
+      "documentedIn",
+      "https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm"
+    ],
+    [
+      "TPU architecture",
+      "belongsToCategory",
+      "tpu_setup_docs"
+    ],
+    [
+      "TPU architecture",
+      "targetsPlatform",
+      "Google Cloud Platform"
+    ],
+    [
+      "TPU architecture",
+      "managesHardware",
+      "Google Cloud TPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "TPU architecture provides official guidance on Explains TPU chips, matrix units, hosts, slices, topology, and distributed connectivity.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is TPU architecture used for in Cloud TPU workflows?",
+      "answer": "Explains TPU chips, matrix units, hosts, slices, topology, and distributed connectivity.",
+      "category": "tpu_setup_docs"
+    }
+  ],
+  "contentSummary": "Explains TPU chips, matrix units, hosts, slices, topology, and distributed connectivity."
+}

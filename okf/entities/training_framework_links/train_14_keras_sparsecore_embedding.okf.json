@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:train_14_keras_sparsecore_embedding",
+  "@type": "DocumentationResource",
+  "name": "Keras SparseCore embedding example",
+  "canonicalUrl": "https://keras.io/keras_rs/examples/distributed_embedding_jax/",
+  "category": "Training framework links",
+  "categorySlug": "training_framework_links",
+  "description": "Distributed recommendation-model embeddings using JAX and TPU SparseCore.",
+  "provenance": {
+    "sourceUrl": "https://keras.io/keras_rs/examples/distributed_embedding_jax/",
+    "crawledAt": "2026-10-26T12:47:07.591927+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 15552
+  },
+  "triples": [
+    [
+      "Keras SparseCore embedding example",
+      "documentedIn",
+      "https://keras.io/keras_rs/examples/distributed_embedding_jax/"
+    ],
+    [
+      "Keras SparseCore embedding example",
+      "belongsToCategory",
+      "training_framework_links"
+    ],
+    [
+      "Keras SparseCore embedding example",
+      "supportsWorkflow",
+      "Distributed Machine Learning Training"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Keras SparseCore embedding example provides official guidance on Distributed recommendation-model embeddings using JAX and TPU SparseCore.",
+      "confidence": 1.0,
+      "source": "https://keras.io/keras_rs/examples/distributed_embedding_jax/",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Keras SparseCore embedding example used for in Cloud TPU workflows?",
+      "answer": "Distributed recommendation-model embeddings using JAX and TPU SparseCore.",
+      "category": "training_framework_links"
+    }
+  ],
+  "contentSummary": "Distributed recommendation-model embeddings using JAX and TPU SparseCore."
+}

@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:train_05_jax_installation",
+  "@type": "DocumentationResource",
+  "name": "JAX installation",
+  "canonicalUrl": "https://docs.jax.dev/en/latest/installation.html",
+  "category": "Training framework links",
+  "categorySlug": "training_framework_links",
+  "description": "Official accelerator-specific installation, including jax[tpu] for Cloud TPU VMs.",
+  "provenance": {
+    "sourceUrl": "https://docs.jax.dev/en/latest/installation.html",
+    "crawledAt": "2026-10-26T12:45:39.934757+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 57871
+  },
+  "triples": [
+    [
+      "JAX installation",
+      "documentedIn",
+      "https://docs.jax.dev/en/latest/installation.html"
+    ],
+    [
+      "JAX installation",
+      "belongsToCategory",
+      "training_framework_links"
+    ],
+    [
+      "JAX installation",
+      "supportsWorkflow",
+      "Distributed Machine Learning Training"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "JAX installation provides official guidance on Official accelerator-specific installation, including jax[tpu] for Cloud TPU VMs.",
+      "confidence": 1.0,
+      "source": "https://docs.jax.dev/en/latest/installation.html",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is JAX installation used for in Cloud TPU workflows?",
+      "answer": "Official accelerator-specific installation, including jax[tpu] for Cloud TPU VMs.",
+      "category": "training_framework_links"
+    }
+  ],
+  "contentSummary": "Official accelerator-specific installation, including jax[tpu] for Cloud TPU VMs."
+}

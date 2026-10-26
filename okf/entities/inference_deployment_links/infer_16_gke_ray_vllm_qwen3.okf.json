@@ -1,0 +1,58 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:infer_16_gke_ray_vllm_qwen3",
+  "@type": "DocumentationResource",
+  "name": "Google Kubernetes Engine Ray + vLLM TPU Qwen3 sample",
+  "canonicalUrl": "https://github.com/GoogleCloudPlatform/kubernetes-engine-samples/tree/main/ai-ml/gke-ray/tpu/get-started/serve",
+  "category": "Inference deployment links",
+  "categorySlug": "inference_deployment_links",
+  "description": "Official GKE production-oriented tutorial/sample using Ray Serve and vLLM-TPU to deploy an ungated small model on a TPU v6e slice.",
+  "provenance": {
+    "sourceUrl": "https://github.com/GoogleCloudPlatform/kubernetes-engine-samples/tree/main/ai-ml/gke-ray/tpu/get-started/serve",
+    "crawledAt": "2026-10-26T12:47:49.299819+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 20793
+  },
+  "triples": [
+    [
+      "Google Kubernetes Engine Ray + vLLM TPU Qwen3 sample",
+      "documentedIn",
+      "https://github.com/GoogleCloudPlatform/kubernetes-engine-samples/tree/main/ai-ml/gke-ray/tpu/get-started/serve"
+    ],
+    [
+      "Google Kubernetes Engine Ray + vLLM TPU Qwen3 sample",
+      "belongsToCategory",
+      "inference_deployment_links"
+    ],
+    [
+      "Google Kubernetes Engine Ray + vLLM TPU Qwen3 sample",
+      "supportsWorkflow",
+      "High Throughput LLM Inference Serving"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Google Kubernetes Engine Ray + vLLM TPU Qwen3 sample provides official guidance on Official GKE production-oriented tutorial/sample using Ray Serve and vLLM-TPU to deploy an ungated small model on a TPU v6e slice.",
+      "confidence": 1.0,
+      "source": "https://github.com/GoogleCloudPlatform/kubernetes-engine-samples/tree/main/ai-ml/gke-ray/tpu/get-started/serve",
+      "verified": true
+    },
+    {
+      "assertion": "TPU v6e (Trillium) is Google's 6th generation TPU offering high efficiency for inference and training.",
+      "confidence": 0.99,
+      "source": "https://github.com/GoogleCloudPlatform/kubernetes-engine-samples/tree/main/ai-ml/gke-ray/tpu/get-started/serve",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Google Kubernetes Engine Ray + vLLM TPU Qwen3 sample used for in Cloud TPU workflows?",
+      "answer": "Official GKE production-oriented tutorial/sample using Ray Serve and vLLM-TPU to deploy an ungated small model on a TPU v6e slice.",
+      "category": "inference_deployment_links"
+    }
+  ],
+  "contentSummary": "Official GKE production-oriented tutorial/sample using Ray Serve and vLLM-TPU to deploy an ungated small model on a TPU v6e slice."
+}

@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:infer_12_vllm_tpu_quickstart",
+  "@type": "DocumentationResource",
+  "name": "vLLM TPU quickstart",
+  "canonicalUrl": "https://docs.vllm.ai/projects/tpu/en/latest/getting_started/quickstart/",
+  "category": "Inference deployment links",
+  "categorySlug": "inference_deployment_links",
+  "description": "Install the TPU-compatible vLLM stack and start an inference API server.",
+  "provenance": {
+    "sourceUrl": "https://docs.vllm.ai/projects/tpu/en/latest/getting_started/quickstart/",
+    "crawledAt": "2026-10-26T12:47:44.623882+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 11560
+  },
+  "triples": [
+    [
+      "vLLM TPU quickstart",
+      "documentedIn",
+      "https://docs.vllm.ai/projects/tpu/en/latest/getting_started/quickstart/"
+    ],
+    [
+      "vLLM TPU quickstart",
+      "belongsToCategory",
+      "inference_deployment_links"
+    ],
+    [
+      "vLLM TPU quickstart",
+      "supportsWorkflow",
+      "High Throughput LLM Inference Serving"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "vLLM TPU quickstart provides official guidance on Install the TPU-compatible vLLM stack and start an inference API server.",
+      "confidence": 1.0,
+      "source": "https://docs.vllm.ai/projects/tpu/en/latest/getting_started/quickstart/",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is vLLM TPU quickstart used for in Cloud TPU workflows?",
+      "answer": "Install the TPU-compatible vLLM stack and start an inference API server.",
+      "category": "inference_deployment_links"
+    }
+  ],
+  "contentSummary": "Install the TPU-compatible vLLM stack and start an inference API server."
+}

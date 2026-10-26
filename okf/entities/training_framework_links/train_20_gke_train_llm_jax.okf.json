@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:train_20_gke_train_llm_jax",
+  "@type": "DocumentationResource",
+  "name": "Fine-tune an LLM on GKE with JAX",
+  "canonicalUrl": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/train-llm-tpus-gke-jax",
+  "category": "Training framework links",
+  "categorySlug": "training_framework_links",
+  "description": "Introductory distributed Gemma fine-tuning tutorial on TPUs using JAX; points production LLM fine-tuning to MaxText and diffusion work to MaxDiffusion.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/train-llm-tpus-gke-jax",
+    "crawledAt": "2026-10-26T12:47:16.613336+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 76332
+  },
+  "triples": [
+    [
+      "Fine-tune an LLM on GKE with JAX",
+      "documentedIn",
+      "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/train-llm-tpus-gke-jax"
+    ],
+    [
+      "Fine-tune an LLM on GKE with JAX",
+      "belongsToCategory",
+      "training_framework_links"
+    ],
+    [
+      "Fine-tune an LLM on GKE with JAX",
+      "supportsWorkflow",
+      "Distributed Machine Learning Training"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Fine-tune an LLM on GKE with JAX provides official guidance on Introductory distributed Gemma fine-tuning tutorial on TPUs using JAX; points production LLM fine-tuning to MaxText and diffusion work to MaxDiffusion.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/train-llm-tpus-gke-jax",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Fine-tune an LLM on GKE with JAX used for in Cloud TPU workflows?",
+      "answer": "Introductory distributed Gemma fine-tuning tutorial on TPUs using JAX; points production LLM fine-tuning to MaxText and diffusion work to MaxDiffusion.",
+      "category": "training_framework_links"
+    }
+  ],
+  "contentSummary": "Introductory distributed Gemma fine-tuning tutorial on TPUs using JAX; points production LLM fine-tuning to MaxText and diffusion work to MaxDiffusion."
+}

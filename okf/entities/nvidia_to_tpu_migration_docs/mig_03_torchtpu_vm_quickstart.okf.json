@@ -1,0 +1,63 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:mig_03_torchtpu_vm_quickstart",
+  "@type": "DocumentationResource",
+  "name": "TorchTPU VM quickstart",
+  "canonicalUrl": "https://torchtpu.readthedocs.io/en/latest/get_started_on_a_vm/",
+  "category": "Nvidia to tpu migration docs",
+  "categorySlug": "nvidia_to_tpu_migration_docs",
+  "description": "Create a Python environment on a TPU VM, install TorchTPU, and run your first tensor operations.",
+  "provenance": {
+    "sourceUrl": "https://torchtpu.readthedocs.io/en/latest/get_started_on_a_vm/",
+    "crawledAt": "2026-10-26T12:47:59.499851+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 11428
+  },
+  "triples": [
+    [
+      "TorchTPU VM quickstart",
+      "documentedIn",
+      "https://torchtpu.readthedocs.io/en/latest/get_started_on_a_vm/"
+    ],
+    [
+      "TorchTPU VM quickstart",
+      "belongsToCategory",
+      "nvidia_to_tpu_migration_docs"
+    ],
+    [
+      "TorchTPU VM quickstart",
+      "supportsWorkflow",
+      "CUDA to TPU Code Migration"
+    ],
+    [
+      "TorchTPU VM quickstart",
+      "primaryFramework",
+      "TorchTPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "TorchTPU VM quickstart provides official guidance on Create a Python environment on a TPU VM, install TorchTPU, and run your first tensor operations.",
+      "confidence": 1.0,
+      "source": "https://torchtpu.readthedocs.io/en/latest/get_started_on_a_vm/",
+      "verified": true
+    },
+    {
+      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
+      "confidence": 1.0,
+      "source": "https://torchtpu.readthedocs.io/en/latest/get_started_on_a_vm/",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is TorchTPU VM quickstart used for in Cloud TPU workflows?",
+      "answer": "Create a Python environment on a TPU VM, install TorchTPU, and run your first tensor operations.",
+      "category": "nvidia_to_tpu_migration_docs"
+    }
+  ],
+  "contentSummary": "Create a Python environment on a TPU VM, install TorchTPU, and run your first tensor operations."
+}

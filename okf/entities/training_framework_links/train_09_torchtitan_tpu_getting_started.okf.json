@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:train_09_torchtitan_tpu_getting_started",
+  "@type": "DocumentationResource",
+  "name": "TorchTitan on TPU getting started",
+  "canonicalUrl": "https://github.com/google-pytorch/torchtitan/blob/main/torchtitan/experiments/tpu/README.md",
+  "category": "Training framework links",
+  "categorySlug": "training_framework_links",
+  "description": "TPU-specific setup and training recipes for TorchTitan.",
+  "provenance": {
+    "sourceUrl": "https://github.com/google-pytorch/torchtitan/blob/main/torchtitan/experiments/tpu/README.md",
+    "crawledAt": "2026-10-26T12:45:41.290148+00:00",
+    "extractorEngine": "GitHubRaw",
+    "contentLengthBytes": 30190
+  },
+  "triples": [
+    [
+      "TorchTitan on TPU getting started",
+      "documentedIn",
+      "https://github.com/google-pytorch/torchtitan/blob/main/torchtitan/experiments/tpu/README.md"
+    ],
+    [
+      "TorchTitan on TPU getting started",
+      "belongsToCategory",
+      "training_framework_links"
+    ],
+    [
+      "TorchTitan on TPU getting started",
+      "supportsWorkflow",
+      "Distributed Machine Learning Training"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "TorchTitan on TPU getting started provides official guidance on TPU-specific setup and training recipes for TorchTitan.",
+      "confidence": 1.0,
+      "source": "https://github.com/google-pytorch/torchtitan/blob/main/torchtitan/experiments/tpu/README.md",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is TorchTitan on TPU getting started used for in Cloud TPU workflows?",
+      "answer": "TPU-specific setup and training recipes for TorchTitan.",
+      "category": "training_framework_links"
+    }
+  ],
+  "contentSummary": "TPU-specific setup and training recipes for TorchTitan."
+}

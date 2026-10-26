@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:setup_04_setup_gcp_account",
+  "@type": "DocumentationResource",
+  "name": "Set up a Google Cloud project for TPUs",
+  "canonicalUrl": "https://cloud.google.com/tpu/docs/setup-gcp-account",
+  "category": "TPU setup docs",
+  "categorySlug": "tpu_setup_docs",
+  "description": "Account/project, API enablement, IAM, and access prerequisites for TPU work.",
+  "provenance": {
+    "sourceUrl": "https://cloud.google.com/tpu/docs/setup-gcp-account",
+    "crawledAt": "2026-10-26T12:45:00.213122+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 27871
+  },
+  "triples": [
+    [
+      "Set up a Google Cloud project for TPUs",
+      "documentedIn",
+      "https://cloud.google.com/tpu/docs/setup-gcp-account"
+    ],
+    [
+      "Set up a Google Cloud project for TPUs",
+      "belongsToCategory",
+      "tpu_setup_docs"
+    ],
+    [
+      "Set up a Google Cloud project for TPUs",
+      "targetsPlatform",
+      "Google Cloud Platform"
+    ],
+    [
+      "Set up a Google Cloud project for TPUs",
+      "managesHardware",
+      "Google Cloud TPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Set up a Google Cloud project for TPUs provides official guidance on Account/project, API enablement, IAM, and access prerequisites for TPU work.",
+      "confidence": 1.0,
+      "source": "https://cloud.google.com/tpu/docs/setup-gcp-account",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Set up a Google Cloud project for TPUs used for in Cloud TPU workflows?",
+      "answer": "Account/project, API enablement, IAM, and access prerequisites for TPU work.",
+      "category": "tpu_setup_docs"
+    }
+  ],
+  "contentSummary": "Account/project, API enablement, IAM, and access prerequisites for TPU work."
+}

@@ -1,0 +1,63 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:setup_14_tpu7x_hardware",
+  "@type": "DocumentationResource",
+  "name": "TPU7x Ironwood hardware documentation",
+  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/tpu7x",
+  "category": "TPU setup docs",
+  "categorySlug": "tpu_setup_docs",
+  "description": "Hardware, topology, and supported configurations; supports PyTorch and JAX, not TensorFlow.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/tpu7x",
+    "crawledAt": "2026-10-26T12:45:14.239130+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 34722
+  },
+  "triples": [
+    [
+      "TPU7x Ironwood hardware documentation",
+      "documentedIn",
+      "https://docs.cloud.google.com/tpu/docs/tpu7x"
+    ],
+    [
+      "TPU7x Ironwood hardware documentation",
+      "belongsToCategory",
+      "tpu_setup_docs"
+    ],
+    [
+      "TPU7x Ironwood hardware documentation",
+      "targetsPlatform",
+      "Google Cloud Platform"
+    ],
+    [
+      "TPU7x Ironwood hardware documentation",
+      "managesHardware",
+      "Google Cloud TPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "TPU7x Ironwood hardware documentation provides official guidance on Hardware, topology, and supported configurations; supports PyTorch and JAX, not TensorFlow.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/tpu7x",
+      "verified": true
+    },
+    {
+      "assertion": "TPU7x (Ironwood) supports PyTorch and JAX, but explicitly does NOT support TensorFlow.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/tpu7x",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is TPU7x Ironwood hardware documentation used for in Cloud TPU workflows?",
+      "answer": "Hardware, topology, and supported configurations; supports PyTorch and JAX, not TensorFlow.",
+      "category": "tpu_setup_docs"
+    }
+  ],
+  "contentSummary": "Hardware, topology, and supported configurations; supports PyTorch and JAX, not TensorFlow."
+}

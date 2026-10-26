@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:train_16_maxtext",
+  "@type": "DocumentationResource",
+  "name": "MaxText",
+  "canonicalUrl": "https://github.com/google/maxtext",
+  "category": "Training framework links",
+  "categorySlug": "training_framework_links",
+  "description": "Google AI-Hypercomputer JAX/XLA LLM training and post-training codebase for Cloud TPUs and GPUs; supports models such as Gemma, Llama, DeepSeek, Qwen, and Mistral plus SFT/GRPO/GSPO.",
+  "provenance": {
+    "sourceUrl": "https://github.com/google/maxtext",
+    "crawledAt": "2026-10-26T12:47:12.696272+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 34482
+  },
+  "triples": [
+    [
+      "MaxText",
+      "documentedIn",
+      "https://github.com/google/maxtext"
+    ],
+    [
+      "MaxText",
+      "belongsToCategory",
+      "training_framework_links"
+    ],
+    [
+      "MaxText",
+      "supportsWorkflow",
+      "Distributed Machine Learning Training"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "MaxText provides official guidance on Google AI-Hypercomputer JAX/XLA LLM training and post-training codebase for Cloud TPUs and GPUs; supports models such as Gemma, Llama, DeepSeek, Qwen, and Mistral plus SFT/GRPO/GSPO.",
+      "confidence": 1.0,
+      "source": "https://github.com/google/maxtext",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is MaxText used for in Cloud TPU workflows?",
+      "answer": "Google AI-Hypercomputer JAX/XLA LLM training and post-training codebase for Cloud TPUs and GPUs; supports models such as Gemma, Llama, DeepSeek, Qwen, and Mistral plus SFT/GRPO/GSPO.",
+      "category": "training_framework_links"
+    }
+  ],
+  "contentSummary": "Google AI-Hypercomputer JAX/XLA LLM training and post-training codebase for Cloud TPUs and GPUs; supports models such as Gemma, Llama, DeepSeek, Qwen, and Mistral plus SFT/GRPO/GSPO."
+}

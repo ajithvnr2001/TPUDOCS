@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:setup_17_storage_buckets",
+  "@type": "DocumentationResource",
+  "name": "Connect TPU VMs to Cloud Storage",
+  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/storage-buckets-compute",
+  "category": "TPU setup docs",
+  "categorySlug": "tpu_setup_docs",
+  "description": "Access datasets and model artifacts from TPU VMs; includes Compute Engine cleanup commands.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/storage-buckets-compute",
+    "crawledAt": "2026-10-26T12:45:19.223292+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 29332
+  },
+  "triples": [
+    [
+      "Connect TPU VMs to Cloud Storage",
+      "documentedIn",
+      "https://docs.cloud.google.com/tpu/docs/storage-buckets-compute"
+    ],
+    [
+      "Connect TPU VMs to Cloud Storage",
+      "belongsToCategory",
+      "tpu_setup_docs"
+    ],
+    [
+      "Connect TPU VMs to Cloud Storage",
+      "targetsPlatform",
+      "Google Cloud Platform"
+    ],
+    [
+      "Connect TPU VMs to Cloud Storage",
+      "managesHardware",
+      "Google Cloud TPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Connect TPU VMs to Cloud Storage provides official guidance on Access datasets and model artifacts from TPU VMs; includes Compute Engine cleanup commands.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/storage-buckets-compute",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Connect TPU VMs to Cloud Storage used for in Cloud TPU workflows?",
+      "answer": "Access datasets and model artifacts from TPU VMs; includes Compute Engine cleanup commands.",
+      "category": "tpu_setup_docs"
+    }
+  ],
+  "contentSummary": "Access datasets and model artifacts from TPU VMs; includes Compute Engine cleanup commands."
+}

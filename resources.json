@@ -1,0 +1,682 @@
+[
+  {
+    "id": "legacy_01_manage_tpus_legacy_api",
+    "category": "legacy_docs",
+    "category_display": "Legacy docs",
+    "url": "https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm",
+    "name": "Manage TPU resources (legacy Cloud TPU API)",
+    "description": "Legacy stop/delete cleanup reference; retain only for existing Cloud TPU API resources."
+  },
+  {
+    "id": "legacy_02_run_calculation_jax_legacy",
+    "category": "legacy_docs",
+    "category_display": "Legacy docs",
+    "url": "https://docs.cloud.google.com/tpu/docs/run-calculation-jax",
+    "name": "Run JAX on a Cloud TPU VM \u2014 legacy API",
+    "description": "Older Cloud TPU API quickstart; use the Compute Engine quickstart for new provisioning."
+  },
+  {
+    "id": "legacy_03_hf_training_scripts_legacy",
+    "category": "legacy_docs",
+    "category_display": "Legacy docs",
+    "url": "https://huggingface.co/docs/transformers/run_scripts",
+    "name": "Hugging Face training scripts \u2014 legacy TPU instructions",
+    "description": "The TPU section uses PyTorch/XLA and xla_spawn.py; do not treat it as the current TorchTPU setup."
+  },
+  {
+    "id": "legacy_04_pytorch_xla_legacy_notice",
+    "category": "legacy_docs",
+    "category_display": "Legacy docs",
+    "url": "https://docs.pytorch.org/xla/master/index.html",
+    "name": "PyTorch/XLA documentation (legacy notice)",
+    "description": "Retain only for migrating existing code: the documentation now labels PyTorch/XLA deprecated and replaced by TorchTPU."
+  },
+  {
+    "id": "setup_01_cloud_tpu_docs_hub",
+    "category": "tpu_setup_docs",
+    "category_display": "TPU setup docs",
+    "url": "https://cloud.google.com/tpu/docs",
+    "name": "Cloud TPU documentation hub",
+    "description": "Main entry point for official TPU setup, hardware, training, serving, and operations documentation."
+  },
+  {
+    "id": "setup_02_intro_to_tpu",
+    "category": "tpu_setup_docs",
+    "category_display": "TPU setup docs",
+    "url": "https://docs.cloud.google.com/tpu/docs/intro-to-tpu",
+    "name": "Introduction to Cloud TPU",
+    "description": "Official entry point: explains service choices, hardware fit, and points to setup, planning, and provisioning. Explicitly says the Cloud TPU API is deprecated."
+  },
+  {
+    "id": "setup_03_quickstart_create_tpu_instance",
+    "category": "tpu_setup_docs",
+    "category_display": "TPU setup docs",
+    "url": "https://docs.cloud.google.com/tpu/docs/quickstart-create-tpu-instance",
+    "name": "Quickstart: Create a TPU instance",
+    "description": "Fastest current Compute Engine provisioning path, including required IAM roles and a v6e example."
+  },
+  {
+    "id": "setup_04_setup_gcp_account",
+    "category": "tpu_setup_docs",
+    "category_display": "TPU setup docs",
+    "url": "https://cloud.google.com/tpu/docs/setup-gcp-account",
+    "name": "Set up a Google Cloud project for TPUs",
+    "description": "Account/project, API enablement, IAM, and access prerequisites for TPU work."
+  },
+  {
+    "id": "setup_05_create_instance_compute",
+    "category": "tpu_setup_docs",
+    "category_display": "TPU setup docs",
+    "url": "https://docs.cloud.google.com/tpu/docs/create-instance-compute",
+    "name": "Create a Cloud TPU VM instance using Compute Engine",
+    "description": "Detailed Compute Engine creation guide for on-demand, Spot, reservation-bound, and flex-start TPU VMs."
+  },
+  {
+    "id": "setup_06_tpus_in_compute_engine",
+    "category": "tpu_setup_docs",
+    "category_display": "TPU setup docs",
+    "url": "https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine",
+    "name": "Cloud TPU resources in Compute Engine",
+    "description": "Conceptual migration guide mapping TPU VMs/slices to Compute Engine instances, MIGs, and workload policies."
+  },
+  {
+    "id": "setup_07_plan_tpus",
+    "category": "tpu_setup_docs",
+    "category_display": "TPU setup docs",
+    "url": "https://docs.cloud.google.com/tpu/docs/plan-tpus",
+    "name": "Plan your Cloud TPU resources",
+    "description": "Hardware/size and consumption planning across on-demand, Spot, reservations, and flex-start, with quota guidance."
+  },
+  {
+    "id": "setup_08_regions_zones",
+    "category": "tpu_setup_docs",
+    "category_display": "TPU setup docs",
+    "url": "https://docs.cloud.google.com/tpu/docs/regions-zones",
+    "name": "TPU regions and zones",
+    "description": "Authoritative availability matrix for TPU generations, configurations, regions, and zones."
+  },
+  {
+    "id": "setup_09_quota",
+    "category": "tpu_setup_docs",
+    "category_display": "TPU setup docs",
+    "url": "https://docs.cloud.google.com/tpu/docs/quota",
+    "name": "Cloud TPU quotas",
+    "description": "Quota names, default per-zone limits, on-demand/preemptible distinctions, and quota-request guidance."
+  },
+  {
+    "id": "setup_10_pricing",
+    "category": "tpu_setup_docs",
+    "category_display": "TPU setup docs",
+    "url": "https://cloud.google.com/tpu/pricing",
+    "name": "Cloud TPU pricing",
+    "description": "Official current price reference linked from TPU quota and regions documentation; use it to compare generation, zone, and consumption mode."
+  },
+  {
+    "id": "setup_11_runtimes",
+    "category": "tpu_setup_docs",
+    "category_display": "TPU setup docs",
+    "url": "https://cloud.google.com/tpu/docs/runtimes",
+    "name": "TPU software versions",
+    "description": "Runtime/image selection for TPU generations and PyTorch/JAX workloads."
+  },
+  {
+    "id": "setup_12_system_architecture",
+    "category": "tpu_setup_docs",
+    "category_display": "TPU setup docs",
+    "url": "https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm",
+    "name": "TPU architecture",
+    "description": "Explains TPU chips, matrix units, hosts, slices, topology, and distributed connectivity."
+  },
+  {
+    "id": "setup_13_v6e_hardware",
+    "category": "tpu_setup_docs",
+    "category_display": "TPU setup docs",
+    "url": "https://docs.cloud.google.com/tpu/docs/v6e",
+    "name": "TPU v6e hardware documentation",
+    "description": "Trillium hardware specifications, memory, and supported configurations."
+  },
+  {
+    "id": "setup_14_tpu7x_hardware",
+    "category": "tpu_setup_docs",
+    "category_display": "TPU setup docs",
+    "url": "https://docs.cloud.google.com/tpu/docs/tpu7x",
+    "name": "TPU7x Ironwood hardware documentation",
+    "description": "Hardware, topology, and supported configurations; supports PyTorch and JAX, not TensorFlow."
+  },
+  {
+    "id": "setup_15_v5e_hardware",
+    "category": "tpu_setup_docs",
+    "category_display": "TPU setup docs",
+    "url": "https://docs.cloud.google.com/tpu/docs/v5e",
+    "name": "TPU v5e hardware documentation",
+    "description": "Hardware specifications and configurations for TPU v5e."
+  },
+  {
+    "id": "setup_16_spot_compute",
+    "category": "tpu_setup_docs",
+    "category_display": "TPU setup docs",
+    "url": "https://docs.cloud.google.com/tpu/docs/spot-compute",
+    "name": "Request TPU Spot VMs",
+    "description": "Current discounted/preemptible Compute Engine TPU operation, including single VMs and MIG-backed multi-host slices."
+  },
+  {
+    "id": "setup_17_storage_buckets",
+    "category": "tpu_setup_docs",
+    "category_display": "TPU setup docs",
+    "url": "https://docs.cloud.google.com/tpu/docs/storage-buckets-compute",
+    "name": "Connect TPU VMs to Cloud Storage",
+    "description": "Access datasets and model artifacts from TPU VMs; includes Compute Engine cleanup commands."
+  },
+  {
+    "id": "setup_18_bfloat16_guide",
+    "category": "tpu_setup_docs",
+    "category_display": "TPU setup docs",
+    "url": "https://docs.cloud.google.com/tpu/docs/bfloat16",
+    "name": "Cloud TPU bfloat16 guide",
+    "description": "Precision guidance and checkpoint portability considerations for TPU workloads."
+  },
+  {
+    "id": "setup_19_storage_best_practices",
+    "category": "tpu_setup_docs",
+    "category_display": "TPU setup docs",
+    "url": "https://docs.cloud.google.com/tpu/docs/storage-best-practices",
+    "name": "Cloud TPU storage best practices",
+    "description": "Choose storage for data loading, model weights, and synchronous or asynchronous checkpoints."
+  },
+  {
+    "id": "setup_20_ironwood_performance",
+    "category": "tpu_setup_docs",
+    "category_display": "TPU setup docs",
+    "url": "https://docs.cloud.google.com/tpu/docs/ironwood-performance",
+    "name": "TPU7x performance optimizations",
+    "description": "Optimize memory movement, low-precision computation, sharding, and communication on Ironwood."
+  },
+  {
+    "id": "setup_21_troubleshooting",
+    "category": "tpu_setup_docs",
+    "category_display": "TPU setup docs",
+    "url": "https://docs.cloud.google.com/tpu/docs/troubleshooting/troubleshooting",
+    "name": "Troubleshoot your Cloud TPU workflow",
+    "description": "Operations troubleshooting using Cloud Monitoring metrics, Cloud Logging, profiling, diagnostics, and serial console output."
+  },
+  {
+    "id": "setup_22_tpu_health",
+    "category": "tpu_setup_docs",
+    "category_display": "TPU setup docs",
+    "url": "https://docs.cloud.google.com/tpu/docs/troubleshooting/tpu-health",
+    "name": "Monitor Cloud TPU health",
+    "description": "Health monitoring and unhealthy-instance detection for TPU VMs, including dashboard and metric labels."
+  },
+  {
+    "id": "setup_23_samples_and_recipes",
+    "category": "tpu_setup_docs",
+    "category_display": "TPU setup docs",
+    "url": "https://docs.cloud.google.com/tpu/docs/samples",
+    "name": "Cloud TPU samples and recipes",
+    "description": "Official index of TPU recipes, including MaxText LLM training examples and MaxDiffusion SDXL pretraining examples."
+  },
+  {
+    "id": "train_01_torchtpu_gke_quickstart",
+    "category": "training_framework_links",
+    "category_display": "Training framework links",
+    "url": "https://torchtpu.readthedocs.io/en/latest/get_started_on_gke/",
+    "name": "TorchTPU GKE quickstart",
+    "description": "Deploy TorchTPU containers on GKE for single-device, single-host, or multi-host workloads."
+  },
+  {
+    "id": "train_02_tf_distribute_tpustrategy",
+    "category": "training_framework_links",
+    "category_display": "Training framework links",
+    "url": "https://www.tensorflow.org/api_docs/python/tf/distribute/TPUStrategy",
+    "name": "TensorFlow TPUStrategy API",
+    "description": "API reference for synchronous TensorFlow training on TPUs and TPU Pods."
+  },
+  {
+    "id": "train_03_tpu7x_training",
+    "category": "training_framework_links",
+    "category_display": "Training framework links",
+    "url": "https://docs.cloud.google.com/tpu/docs/tpu7x-training",
+    "name": "Train a model on TPU7x with MaxText or TorchTitan",
+    "description": "Provision Ironwood training infrastructure and use JAX or PyTorch training recipes."
+  },
+  {
+    "id": "train_04_gke_ray_torchtpu_finetune",
+    "category": "training_framework_links",
+    "category_display": "Training framework links",
+    "url": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/train-models-tpu-ray-torchtpu",
+    "name": "Fine-tune models with Ray and TorchTPU on GKE",
+    "description": "Distributed PyTorch fine-tuning across TPU hosts using Ray and FSDP2."
+  },
+  {
+    "id": "train_05_jax_installation",
+    "category": "training_framework_links",
+    "category_display": "Training framework links",
+    "url": "https://docs.jax.dev/en/latest/installation.html",
+    "name": "JAX installation",
+    "description": "Official accelerator-specific installation, including jax[tpu] for Cloud TPU VMs."
+  },
+  {
+    "id": "train_06_thinking_in_jax",
+    "category": "training_framework_links",
+    "category_display": "Training framework links",
+    "url": "https://docs.jax.dev/en/latest/notebooks/thinking_in_jax.html",
+    "name": "Thinking in JAX",
+    "description": "JAX programming concepts for portable CPU, GPU, and TPU computation."
+  },
+  {
+    "id": "train_07_jax_ai_stack",
+    "category": "training_framework_links",
+    "category_display": "Training framework links",
+    "url": "https://docs.cloud.google.com/tpu/docs/jax-ai-stack",
+    "name": "Building production AI on Cloud TPUs with JAX",
+    "description": "Overview of the JAX AI stack and production-oriented choices; identifies MaxText for LLMs and MaxDiffusion for diffusion, alongside Flax, Optax, Orbax, Grain, Qwix, and Tunix."
+  },
+  {
+    "id": "train_08_tensorflow_tpu_guide",
+    "category": "training_framework_links",
+    "category_display": "Training framework links",
+    "url": "https://www.tensorflow.org/guide/tpu",
+    "name": "TensorFlow TPU guide",
+    "description": "Initialize TPU hardware and use tf.distribute.TPUStrategy for TensorFlow/Keras workloads."
+  },
+  {
+    "id": "train_09_torchtitan_tpu_getting_started",
+    "category": "training_framework_links",
+    "category_display": "Training framework links",
+    "url": "https://github.com/google-pytorch/torchtitan/blob/main/torchtitan/experiments/tpu/README.md",
+    "name": "TorchTitan on TPU getting started",
+    "description": "TPU-specific setup and training recipes for TorchTitan."
+  },
+  {
+    "id": "train_10_hf_keras_tf_tpu_guide",
+    "category": "training_framework_links",
+    "category_display": "Training framework links",
+    "url": "https://huggingface.co/docs/transformers/main/en/perf_train_tpu_tf",
+    "name": "Hugging Face Keras/TF TPU guide",
+    "description": "Usable Keras sequence-classification example: initialize TPUClusterResolver, TPUStrategy, load/tokenize data, create the model inside strategy.scope(), and call model.fit()."
+  },
+  {
+    "id": "train_11_mnist_tf2_keras",
+    "category": "training_framework_links",
+    "category_display": "Training framework links",
+    "url": "https://cloud.google.com/tpu/docs/tutorials/mnist-2.x",
+    "name": "Cloud TPU MNIST with TensorFlow 2.x/Keras",
+    "description": "Official end-to-end TensorFlow/Keras training recipe using TPU distribution; useful as a small migration smoke test before a larger workload."
+  },
+  {
+    "id": "train_12_keras_distributed_jax",
+    "category": "training_framework_links",
+    "category_display": "Training framework links",
+    "url": "https://keras.io/guides/distributed_training_with_jax/",
+    "name": "Keras distributed training with JAX",
+    "description": "Use JAX sharding to train Keras models across multiple GPUs or TPUs."
+  },
+  {
+    "id": "train_13_keras_distribution_guide",
+    "category": "training_framework_links",
+    "category_display": "Training framework links",
+    "url": "https://keras.io/guides/distribution/",
+    "name": "Keras 3 distribution guide",
+    "description": "Data and model distribution concepts for multi-device Keras workflows."
+  },
+  {
+    "id": "train_14_keras_sparsecore_embedding",
+    "category": "training_framework_links",
+    "category_display": "Training framework links",
+    "url": "https://keras.io/keras_rs/examples/distributed_embedding_jax/",
+    "name": "Keras SparseCore embedding example",
+    "description": "Distributed recommendation-model embeddings using JAX and TPU SparseCore."
+  },
+  {
+    "id": "train_15_hf_training_guide",
+    "category": "training_framework_links",
+    "category_display": "Training framework links",
+    "url": "https://huggingface.co/docs/transformers/training",
+    "name": "Hugging Face fine-tuning guide",
+    "description": "General model, dataset, Trainer, and checkpoint workflow; not a TPU runtime setup guide."
+  },
+  {
+    "id": "train_16_maxtext",
+    "category": "training_framework_links",
+    "category_display": "Training framework links",
+    "url": "https://github.com/google/maxtext",
+    "name": "MaxText",
+    "description": "Google AI-Hypercomputer JAX/XLA LLM training and post-training codebase for Cloud TPUs and GPUs; supports models such as Gemma, Llama, DeepSeek, Qwen, and Mistral plus SFT/GRPO/GSPO."
+  },
+  {
+    "id": "train_17_maxtext_setup_sh",
+    "category": "training_framework_links",
+    "category_display": "Training framework links",
+    "url": "https://github.com/google/maxtext/blob/main/src/dependencies/scripts/setup.sh",
+    "name": "MaxText TPU setup script",
+    "description": "Concrete MaxText dependency setup for TPU, including stable/nightly JAX, jaxlib, and libtpu selection."
+  },
+  {
+    "id": "train_18_maxtext_gemma_sft_single_host",
+    "category": "training_framework_links",
+    "category_display": "Training framework links",
+    "url": "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-sft-v6e-8-tpu-vm-maxtext",
+    "name": "MaxText single-host Gemma supervised fine-tuning",
+    "description": "Fine-tune Gemma on a v6e-8 TPU VM and convert checkpoints between Hugging Face and MaxText."
+  },
+  {
+    "id": "train_19_maxtext_gemma_sft_multihost",
+    "category": "training_framework_links",
+    "category_display": "Training framework links",
+    "url": "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-gemma4-31b-sft-maxtext",
+    "name": "MaxText multi-host Gemma SFT",
+    "description": "Multi-host v6e/GKE recipe for Gemma 4 31B SFT with MaxText, Cluster Toolkit, UltraChat, and export back to Hugging Face format."
+  },
+  {
+    "id": "train_20_gke_train_llm_jax",
+    "category": "training_framework_links",
+    "category_display": "Training framework links",
+    "url": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/train-llm-tpus-gke-jax",
+    "name": "Fine-tune an LLM on GKE with JAX",
+    "description": "Introductory distributed Gemma fine-tuning tutorial on TPUs using JAX; points production LLM fine-tuning to MaxText and diffusion work to MaxDiffusion."
+  },
+  {
+    "id": "train_21_gke_ray_train_trillium",
+    "category": "training_framework_links",
+    "category_display": "Training framework links",
+    "url": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/distributed-training-tpu",
+    "name": "Train with JAX, Ray Train, and TPU Trillium on GKE",
+    "description": "Distributed training across TPU hosts using Ray Train and JAX."
+  },
+  {
+    "id": "train_22_maxdiffusion",
+    "category": "training_framework_links",
+    "category_display": "Training framework links",
+    "url": "https://github.com/google/maxdiffusion",
+    "name": "MaxDiffusion",
+    "description": "JAX/XLA diffusion reference implementations for Cloud TPUs (and GPUs), covering Stable Diffusion, SDXL, Flux, DreamBooth, Wan and other training/inference workloads."
+  },
+  {
+    "id": "infer_01_vllm_torchtpu_repo",
+    "category": "inference_deployment_links",
+    "category_display": "Inference deployment links",
+    "url": "https://github.com/vllm-project/vllm-torchtpu",
+    "name": "vLLM-TorchTPU official repository",
+    "description": "Official PyTorch-native TPU backend for vLLM; separate out-of-tree plugin/package from vllm-tpu (JAX-native)."
+  },
+  {
+    "id": "infer_02_vllm_torchtpu_quickstart",
+    "category": "inference_deployment_links",
+    "category_display": "Inference deployment links",
+    "url": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/quickstart/",
+    "name": "vLLM-TorchTPU quickstart",
+    "description": "Ready-to-run online serving, offline inference, and multimodal examples for PyTorch-native TPU serving."
+  },
+  {
+    "id": "infer_03_vllm_torchtpu_installation",
+    "category": "inference_deployment_links",
+    "category_display": "Inference deployment links",
+    "url": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/installation/",
+    "name": "vLLM-TorchTPU installation",
+    "description": "Install the PyTorch-native vLLM TPU plugin; distinct from the vllm-tpu JAX backend."
+  },
+  {
+    "id": "infer_04_vllm_torchtpu_setup",
+    "category": "inference_deployment_links",
+    "category_display": "Inference deployment links",
+    "url": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/tpu_setup/",
+    "name": "vLLM-TorchTPU Cloud TPU setup",
+    "description": "Official provisioning and hardware guidance for the vLLM-TorchTPU stack."
+  },
+  {
+    "id": "infer_05_vllm_torchtpu_supported_models",
+    "category": "inference_deployment_links",
+    "category_display": "Inference deployment links",
+    "url": "https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/supported_models/",
+    "name": "vLLM-TorchTPU supported models and features",
+    "description": "Check validated checkpoints, attention backends, quantization, and serving feature support."
+  },
+  {
+    "id": "infer_06_vllm_torchtpu_docker",
+    "category": "inference_deployment_links",
+    "category_display": "Inference deployment links",
+    "url": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/docker/",
+    "name": "vLLM-TorchTPU Docker guide",
+    "description": "Container images and build targets for TPU inference; distinguish runtime images from CI-only images."
+  },
+  {
+    "id": "infer_07_vllm_torchtpu_compilation_cache",
+    "category": "inference_deployment_links",
+    "category_display": "Inference deployment links",
+    "url": "https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/compilation_cache/",
+    "name": "vLLM-TorchTPU compilation cache",
+    "description": "Persist compiled artifacts and reduce repeated startup compilation."
+  },
+  {
+    "id": "infer_08_llama_32_1b_instruct",
+    "category": "inference_deployment_links",
+    "category_display": "Inference deployment links",
+    "url": "https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct",
+    "name": "Llama 3.2 1B Instruct model and access",
+    "description": "Model card, license, and gated-access page for the documented vLLM-TorchTPU quickstart model."
+  },
+  {
+    "id": "infer_09_hf_cli_auth",
+    "category": "inference_deployment_links",
+    "category_display": "Inference deployment links",
+    "url": "https://huggingface.co/docs/huggingface_hub/guides/cli",
+    "name": "Hugging Face CLI authentication",
+    "description": "Authenticate to download private or gated model weights before starting the TPU serving example."
+  },
+  {
+    "id": "infer_10_sglang_torchtpu_repo",
+    "category": "inference_deployment_links",
+    "category_display": "Inference deployment links",
+    "url": "https://github.com/sgl-project/sglang-torchtpu",
+    "name": "SGLang-TorchTPU official repository",
+    "description": "Official SGLang PyTorch-native TPU backend, complementary to vLLM-TorchTPU and distinct from SGLang-JAX."
+  },
+  {
+    "id": "infer_11_tpu_inference_cloud_docs",
+    "category": "inference_deployment_links",
+    "category_display": "Inference deployment links",
+    "url": "https://docs.cloud.google.com/tpu/docs/tpu-inference",
+    "name": "Run inference on Cloud TPU",
+    "description": "Official overview of TPU inference, vLLM integration, prerequisites, and serving examples."
+  },
+  {
+    "id": "infer_12_vllm_tpu_quickstart",
+    "category": "inference_deployment_links",
+    "category_display": "Inference deployment links",
+    "url": "https://docs.vllm.ai/projects/tpu/en/latest/getting_started/quickstart/",
+    "name": "vLLM TPU quickstart",
+    "description": "Install the TPU-compatible vLLM stack and start an inference API server."
+  },
+  {
+    "id": "infer_13_vllm_tpu_installation",
+    "category": "inference_deployment_links",
+    "category_display": "Inference deployment links",
+    "url": "https://docs.vllm.ai/projects/tpu/en/latest/getting_started/installation/",
+    "name": "vLLM TPU Installation and container guide",
+    "description": "Official installation reference for the JAX-native vLLM TPU stack, including pip/uv and Docker options."
+  },
+  {
+    "id": "infer_14_vllm_tpu_recommended_models",
+    "category": "inference_deployment_links",
+    "category_display": "Inference deployment links",
+    "url": "https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/",
+    "name": "vLLM TPU recommended models",
+    "description": "Model and feature validation matrix; check release and nightly support before deploying."
+  },
+  {
+    "id": "infer_15_gke_serve_vllm_trillium",
+    "category": "inference_deployment_links",
+    "category_display": "Inference deployment links",
+    "url": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu",
+    "name": "Serve an LLM on GKE with vLLM and TPU Trillium",
+    "description": "End-to-end Kubernetes deployment tutorial for vLLM on TPU v6e."
+  },
+  {
+    "id": "infer_16_gke_ray_vllm_qwen3",
+    "category": "inference_deployment_links",
+    "category_display": "Inference deployment links",
+    "url": "https://github.com/GoogleCloudPlatform/kubernetes-engine-samples/tree/main/ai-ml/gke-ray/tpu/get-started/serve",
+    "name": "Google Kubernetes Engine Ray + vLLM TPU Qwen3 sample",
+    "description": "Official GKE production-oriented tutorial/sample using Ray Serve and vLLM-TPU to deploy an ungated small model on a TPU v6e slice."
+  },
+  {
+    "id": "infer_17_gke_online_inference_ref_arch",
+    "category": "inference_deployment_links",
+    "category_display": "Inference deployment links",
+    "url": "https://github.com/GoogleCloudPlatform/accelerated-platforms/blob/main/docs/platforms/gke/base/use-cases/inference-ref-arch/online-inference-tpu/vllm-with-hf-model.md",
+    "name": "GKE online inference TPU reference implementation (vLLM)",
+    "description": "Google Cloud Platform GKE inference reference architecture page for online vLLM serving on TPUs."
+  },
+  {
+    "id": "infer_18_gke_serve_kuberay_tpus",
+    "category": "inference_deployment_links",
+    "category_display": "Inference deployment links",
+    "url": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-llm-tpu-ray",
+    "name": "Serve LLMs with KubeRay and TPUs on GKE",
+    "description": "Deploy vLLM-based serving using the Ray Operator and supported TPU configurations."
+  },
+  {
+    "id": "mig_01_pytorch_on_tpu_overview",
+    "category": "nvidia_to_tpu_migration_docs",
+    "category_display": "Nvidia to tpu migration docs",
+    "url": "https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu",
+    "name": "PyTorch on Cloud TPU",
+    "description": "Official overview of the current PyTorch TPU stack, including TorchTPU, model serving, training, and migration from PyTorch/XLA."
+  },
+  {
+    "id": "mig_02_torchtpu_docs_hub",
+    "category": "nvidia_to_tpu_migration_docs",
+    "category_display": "Nvidia to tpu migration docs",
+    "url": "https://torchtpu.readthedocs.io/",
+    "name": "TorchTPU documentation hub",
+    "description": "Index of native PyTorch TPU quickstarts, migration APIs, examples, and performance documentation."
+  },
+  {
+    "id": "mig_03_torchtpu_vm_quickstart",
+    "category": "nvidia_to_tpu_migration_docs",
+    "category_display": "Nvidia to tpu migration docs",
+    "url": "https://torchtpu.readthedocs.io/en/latest/get_started_on_a_vm/",
+    "name": "TorchTPU VM quickstart",
+    "description": "Create a Python environment on a TPU VM, install TorchTPU, and run your first tensor operations."
+  },
+  {
+    "id": "mig_04_torchtpu_cuda_api_ref",
+    "category": "nvidia_to_tpu_migration_docs",
+    "category_display": "Nvidia to tpu migration docs",
+    "url": "https://torchtpu.readthedocs.io/en/latest/api_reference/",
+    "name": "TorchTPU CUDA-to-TPU API reference",
+    "description": "Mappings from torch.cuda to device-agnostic APIs, plus TPU runtime, precision, distributed, and profiling APIs."
+  },
+  {
+    "id": "mig_05_torchtpu_faq",
+    "category": "nvidia_to_tpu_migration_docs",
+    "category_display": "Nvidia to tpu migration docs",
+    "url": "https://torchtpu.readthedocs.io/en/latest/faq/",
+    "name": "TorchTPU FAQ",
+    "description": "Migration questions, CUDA versus TPU execution, and the replacement of PyTorch/XLA."
+  },
+  {
+    "id": "mig_06_torchtpu_feature_set",
+    "category": "nvidia_to_tpu_migration_docs",
+    "category_display": "Nvidia to tpu migration docs",
+    "url": "https://torchtpu.readthedocs.io/en/latest/feature_set/",
+    "name": "TorchTPU supported features and roadmap",
+    "description": "Check validated versus experimental hardware, operators, models, kernels, and distributed features."
+  },
+  {
+    "id": "mig_07_torchtpu_repo",
+    "category": "nvidia_to_tpu_migration_docs",
+    "category_display": "Nvidia to tpu migration docs",
+    "url": "https://github.com/google-pytorch/torch_tpu",
+    "name": "TorchTPU repository (official installation)",
+    "description": "Official source, supported Python versions, released packages, and installation instructions."
+  },
+  {
+    "id": "mig_08_torchtpu_intro",
+    "category": "nvidia_to_tpu_migration_docs",
+    "category_display": "Nvidia to tpu migration docs",
+    "url": "https://torchtpu.readthedocs.io/en/latest/intro_to_torchtpu/",
+    "name": "TorchTPU documentation: introduction and feature set",
+    "description": "Native PyTorch TPU concepts, migration changes, execution modes, and compilation."
+  },
+  {
+    "id": "mig_09_torchtpu_dynamic_shapes",
+    "category": "nvidia_to_tpu_migration_docs",
+    "category_display": "Nvidia to tpu migration docs",
+    "url": "https://torchtpu.readthedocs.io/en/latest/dynamic_shapes/",
+    "name": "TorchTPU compilation and dynamic shapes",
+    "description": "Static and bounded dynamic shapes, recompilation behavior, and current limitations."
+  },
+  {
+    "id": "mig_10_torchtpu_distributed_support",
+    "category": "nvidia_to_tpu_migration_docs",
+    "category_display": "Nvidia to tpu migration docs",
+    "url": "https://torchtpu.readthedocs.io/en/latest/distributed_support/",
+    "name": "TorchTPU distributed support",
+    "description": "Use torch.distributed with tpu_dist, DDP, FSDP, and DTensor across TPU devices."
+  },
+  {
+    "id": "mig_11_torchtpu_custom_kernels",
+    "category": "nvidia_to_tpu_migration_docs",
+    "category_display": "Nvidia to tpu migration docs",
+    "url": "https://torchtpu.readthedocs.io/en/latest/custom_kernels/",
+    "name": "TorchTPU custom kernels and API reference",
+    "description": "Integrate prebuilt Tokamax kernels, custom Pallas kernels, or experimental Helion kernels."
+  },
+  {
+    "id": "mig_12_torchtpu_numerical_precision",
+    "category": "nvidia_to_tpu_migration_docs",
+    "category_display": "Nvidia to tpu migration docs",
+    "url": "https://torchtpu.readthedocs.io/en/latest/numerical_precision/",
+    "name": "TorchTPU numerical precision",
+    "description": "Understand numerical differences from CUDA and configure TPU matrix-multiplication precision."
+  },
+  {
+    "id": "mig_13_torchtpu_memory_model",
+    "category": "nvidia_to_tpu_migration_docs",
+    "category_display": "Nvidia to tpu migration docs",
+    "url": "https://torchtpu.readthedocs.io/en/latest/torchtpu_memory_model/",
+    "name": "TorchTPU memory model",
+    "description": "Explains tensor views, layout transformations, and why CUDA-like view operations can have different TPU performance."
+  },
+  {
+    "id": "mig_14_pallas_tpu_quickstart",
+    "category": "nvidia_to_tpu_migration_docs",
+    "category_display": "Nvidia to tpu migration docs",
+    "url": "https://docs.jax.dev/en/latest/pallas/tpu/quickstart.html",
+    "name": "Pallas TPU kernel quickstart",
+    "description": "Write custom TPU kernels using Pallas; relevant when replacing CUDA-specific kernels."
+  },
+  {
+    "id": "mig_15_tokamax_kernel_lib",
+    "category": "nvidia_to_tpu_migration_docs",
+    "category_display": "Nvidia to tpu migration docs",
+    "url": "https://github.com/openxla/tokamax",
+    "name": "Tokamax TPU kernel library",
+    "description": "Prebuilt high-performance TPU kernels with PyTorch interoperability."
+  },
+  {
+    "id": "mig_16_torchtpu_xprof",
+    "category": "nvidia_to_tpu_migration_docs",
+    "category_display": "Nvidia to tpu migration docs",
+    "url": "https://torchtpu.readthedocs.io/en/latest/performance_profiling_with_xprof/",
+    "name": "TorchTPU performance profiling with XProf",
+    "description": "Capture and inspect TPU execution traces; check documented PyTorch and profiler prerequisites."
+  },
+  {
+    "id": "mig_17_tpu_agent_suite",
+    "category": "nvidia_to_tpu_migration_docs",
+    "category_display": "Nvidia to tpu migration docs",
+    "url": "https://github.com/google-pytorch/tpu-agent-suite/blob/main/docs/install.md",
+    "name": "TPU Agent Suite installation",
+    "description": "Experimental assisted onboarding and diagnostics; documents TPU environment and dependency setup."
+  },
+  {
+    "id": "mig_18_torchtpu_engineering_overview",
+    "category": "nvidia_to_tpu_migration_docs",
+    "category_display": "Nvidia to tpu migration docs",
+    "url": "https://developers.googleblog.com/torchtpu-running-pytorch-natively-on-tpus-at-google-scale/",
+    "name": "TorchTPU engineering overview",
+    "description": "Explains native PyTorch TPU execution and the engineering choices behind workload portability."
+  }
+]

@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:train_12_keras_distributed_jax",
+  "@type": "DocumentationResource",
+  "name": "Keras distributed training with JAX",
+  "canonicalUrl": "https://keras.io/guides/distributed_training_with_jax/",
+  "category": "Training framework links",
+  "categorySlug": "training_framework_links",
+  "description": "Use JAX sharding to train Keras models across multiple GPUs or TPUs.",
+  "provenance": {
+    "sourceUrl": "https://keras.io/guides/distributed_training_with_jax/",
+    "crawledAt": "2026-10-26T12:46:45.055751+00:00",
+    "extractorEngine": "DescriptorFallback",
+    "contentLengthBytes": 224
+  },
+  "triples": [
+    [
+      "Keras distributed training with JAX",
+      "documentedIn",
+      "https://keras.io/guides/distributed_training_with_jax/"
+    ],
+    [
+      "Keras distributed training with JAX",
+      "belongsToCategory",
+      "training_framework_links"
+    ],
+    [
+      "Keras distributed training with JAX",
+      "supportsWorkflow",
+      "Distributed Machine Learning Training"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Keras distributed training with JAX provides official guidance on Use JAX sharding to train Keras models across multiple GPUs or TPUs.",
+      "confidence": 1.0,
+      "source": "https://keras.io/guides/distributed_training_with_jax/",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Keras distributed training with JAX used for in Cloud TPU workflows?",
+      "answer": "Use JAX sharding to train Keras models across multiple GPUs or TPUs.",
+      "category": "training_framework_links"
+    }
+  ],
+  "contentSummary": "Use JAX sharding to train Keras models across multiple GPUs or TPUs."
+}

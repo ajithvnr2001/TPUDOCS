@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:train_13_keras_distribution_guide",
+  "@type": "DocumentationResource",
+  "name": "Keras 3 distribution guide",
+  "canonicalUrl": "https://keras.io/guides/distribution/",
+  "category": "Training framework links",
+  "categorySlug": "training_framework_links",
+  "description": "Data and model distribution concepts for multi-device Keras workflows.",
+  "provenance": {
+    "sourceUrl": "https://keras.io/guides/distribution/",
+    "crawledAt": "2026-10-26T12:47:07.500661+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 18577
+  },
+  "triples": [
+    [
+      "Keras 3 distribution guide",
+      "documentedIn",
+      "https://keras.io/guides/distribution/"
+    ],
+    [
+      "Keras 3 distribution guide",
+      "belongsToCategory",
+      "training_framework_links"
+    ],
+    [
+      "Keras 3 distribution guide",
+      "supportsWorkflow",
+      "Distributed Machine Learning Training"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Keras 3 distribution guide provides official guidance on Data and model distribution concepts for multi-device Keras workflows.",
+      "confidence": 1.0,
+      "source": "https://keras.io/guides/distribution/",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Keras 3 distribution guide used for in Cloud TPU workflows?",
+      "answer": "Data and model distribution concepts for multi-device Keras workflows.",
+      "category": "training_framework_links"
+    }
+  ],
+  "contentSummary": "Data and model distribution concepts for multi-device Keras workflows."
+}

@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:setup_15_v5e_hardware",
+  "@type": "DocumentationResource",
+  "name": "TPU v5e hardware documentation",
+  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/v5e",
+  "category": "TPU setup docs",
+  "categorySlug": "tpu_setup_docs",
+  "description": "Hardware specifications and configurations for TPU v5e.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/v5e",
+    "crawledAt": "2026-10-26T12:45:18.480392+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 26919
+  },
+  "triples": [
+    [
+      "TPU v5e hardware documentation",
+      "documentedIn",
+      "https://docs.cloud.google.com/tpu/docs/v5e"
+    ],
+    [
+      "TPU v5e hardware documentation",
+      "belongsToCategory",
+      "tpu_setup_docs"
+    ],
+    [
+      "TPU v5e hardware documentation",
+      "targetsPlatform",
+      "Google Cloud Platform"
+    ],
+    [
+      "TPU v5e hardware documentation",
+      "managesHardware",
+      "Google Cloud TPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "TPU v5e hardware documentation provides official guidance on Hardware specifications and configurations for TPU v5e.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/v5e",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is TPU v5e hardware documentation used for in Cloud TPU workflows?",
+      "answer": "Hardware specifications and configurations for TPU v5e.",
+      "category": "tpu_setup_docs"
+    }
+  ],
+  "contentSummary": "Hardware specifications and configurations for TPU v5e."
+}

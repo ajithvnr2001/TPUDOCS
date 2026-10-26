@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:infer_17_gke_online_inference_ref_arch",
+  "@type": "DocumentationResource",
+  "name": "GKE online inference TPU reference implementation (vLLM)",
+  "canonicalUrl": "https://github.com/GoogleCloudPlatform/accelerated-platforms/blob/main/docs/platforms/gke/base/use-cases/inference-ref-arch/online-inference-tpu/vllm-with-hf-model.md",
+  "category": "Inference deployment links",
+  "categorySlug": "inference_deployment_links",
+  "description": "Google Cloud Platform GKE inference reference architecture page for online vLLM serving on TPUs.",
+  "provenance": {
+    "sourceUrl": "https://github.com/GoogleCloudPlatform/accelerated-platforms/blob/main/docs/platforms/gke/base/use-cases/inference-ref-arch/online-inference-tpu/vllm-with-hf-model.md",
+    "crawledAt": "2026-10-26T12:47:46.626309+00:00",
+    "extractorEngine": "GitHubRaw",
+    "contentLengthBytes": 7917
+  },
+  "triples": [
+    [
+      "GKE online inference TPU reference implementation (vLLM)",
+      "documentedIn",
+      "https://github.com/GoogleCloudPlatform/accelerated-platforms/blob/main/docs/platforms/gke/base/use-cases/inference-ref-arch/online-inference-tpu/vllm-with-hf-model.md"
+    ],
+    [
+      "GKE online inference TPU reference implementation (vLLM)",
+      "belongsToCategory",
+      "inference_deployment_links"
+    ],
+    [
+      "GKE online inference TPU reference implementation (vLLM)",
+      "supportsWorkflow",
+      "High Throughput LLM Inference Serving"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "GKE online inference TPU reference implementation (vLLM) provides official guidance on Google Cloud Platform GKE inference reference architecture page for online vLLM serving on TPUs.",
+      "confidence": 1.0,
+      "source": "https://github.com/GoogleCloudPlatform/accelerated-platforms/blob/main/docs/platforms/gke/base/use-cases/inference-ref-arch/online-inference-tpu/vllm-with-hf-model.md",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is GKE online inference TPU reference implementation (vLLM) used for in Cloud TPU workflows?",
+      "answer": "Google Cloud Platform GKE inference reference architecture page for online vLLM serving on TPUs.",
+      "category": "inference_deployment_links"
+    }
+  ],
+  "contentSummary": "Google Cloud Platform GKE inference reference architecture page for online vLLM serving on TPUs."
+}

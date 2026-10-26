@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:train_22_maxdiffusion",
+  "@type": "DocumentationResource",
+  "name": "MaxDiffusion",
+  "canonicalUrl": "https://github.com/google/maxdiffusion",
+  "category": "Training framework links",
+  "categorySlug": "training_framework_links",
+  "description": "JAX/XLA diffusion reference implementations for Cloud TPUs (and GPUs), covering Stable Diffusion, SDXL, Flux, DreamBooth, Wan and other training/inference workloads.",
+  "provenance": {
+    "sourceUrl": "https://github.com/google/maxdiffusion",
+    "crawledAt": "2026-10-26T12:47:25.378613+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 72538
+  },
+  "triples": [
+    [
+      "MaxDiffusion",
+      "documentedIn",
+      "https://github.com/google/maxdiffusion"
+    ],
+    [
+      "MaxDiffusion",
+      "belongsToCategory",
+      "training_framework_links"
+    ],
+    [
+      "MaxDiffusion",
+      "supportsWorkflow",
+      "Distributed Machine Learning Training"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "MaxDiffusion provides official guidance on JAX/XLA diffusion reference implementations for Cloud TPUs (and GPUs), covering Stable Diffusion, SDXL, Flux, DreamBooth, Wan and other training/inference workloads.",
+      "confidence": 1.0,
+      "source": "https://github.com/google/maxdiffusion",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is MaxDiffusion used for in Cloud TPU workflows?",
+      "answer": "JAX/XLA diffusion reference implementations for Cloud TPUs (and GPUs), covering Stable Diffusion, SDXL, Flux, DreamBooth, Wan and other training/inference workloads.",
+      "category": "training_framework_links"
+    }
+  ],
+  "contentSummary": "JAX/XLA diffusion reference implementations for Cloud TPUs (and GPUs), covering Stable Diffusion, SDXL, Flux, DreamBooth, Wan and other training/inference workloads."
+}

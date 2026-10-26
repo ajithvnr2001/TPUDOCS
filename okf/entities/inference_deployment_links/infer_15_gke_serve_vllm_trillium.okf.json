@@ -1,0 +1,58 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:infer_15_gke_serve_vllm_trillium",
+  "@type": "DocumentationResource",
+  "name": "Serve an LLM on GKE with vLLM and TPU Trillium",
+  "canonicalUrl": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu",
+  "category": "Inference deployment links",
+  "categorySlug": "inference_deployment_links",
+  "description": "End-to-end Kubernetes deployment tutorial for vLLM on TPU v6e.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu",
+    "crawledAt": "2026-10-26T12:47:51.069397+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 63642
+  },
+  "triples": [
+    [
+      "Serve an LLM on GKE with vLLM and TPU Trillium",
+      "documentedIn",
+      "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu"
+    ],
+    [
+      "Serve an LLM on GKE with vLLM and TPU Trillium",
+      "belongsToCategory",
+      "inference_deployment_links"
+    ],
+    [
+      "Serve an LLM on GKE with vLLM and TPU Trillium",
+      "supportsWorkflow",
+      "High Throughput LLM Inference Serving"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Serve an LLM on GKE with vLLM and TPU Trillium provides official guidance on End-to-end Kubernetes deployment tutorial for vLLM on TPU v6e.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu",
+      "verified": true
+    },
+    {
+      "assertion": "TPU v6e (Trillium) is Google's 6th generation TPU offering high efficiency for inference and training.",
+      "confidence": 0.99,
+      "source": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Serve an LLM on GKE with vLLM and TPU Trillium used for in Cloud TPU workflows?",
+      "answer": "End-to-end Kubernetes deployment tutorial for vLLM on TPU v6e.",
+      "category": "inference_deployment_links"
+    }
+  ],
+  "contentSummary": "End-to-end Kubernetes deployment tutorial for vLLM on TPU v6e."
+}

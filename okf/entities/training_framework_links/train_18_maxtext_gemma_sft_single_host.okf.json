@@ -1,0 +1,58 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:train_18_maxtext_gemma_sft_single_host",
+  "@type": "DocumentationResource",
+  "name": "MaxText single-host Gemma supervised fine-tuning",
+  "canonicalUrl": "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-sft-v6e-8-tpu-vm-maxtext",
+  "category": "Training framework links",
+  "categorySlug": "training_framework_links",
+  "description": "Fine-tune Gemma on a v6e-8 TPU VM and convert checkpoints between Hugging Face and MaxText.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-sft-v6e-8-tpu-vm-maxtext",
+    "crawledAt": "2026-10-26T12:47:11.881220+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 38480
+  },
+  "triples": [
+    [
+      "MaxText single-host Gemma supervised fine-tuning",
+      "documentedIn",
+      "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-sft-v6e-8-tpu-vm-maxtext"
+    ],
+    [
+      "MaxText single-host Gemma supervised fine-tuning",
+      "belongsToCategory",
+      "training_framework_links"
+    ],
+    [
+      "MaxText single-host Gemma supervised fine-tuning",
+      "supportsWorkflow",
+      "Distributed Machine Learning Training"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "MaxText single-host Gemma supervised fine-tuning provides official guidance on Fine-tune Gemma on a v6e-8 TPU VM and convert checkpoints between Hugging Face and MaxText.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-sft-v6e-8-tpu-vm-maxtext",
+      "verified": true
+    },
+    {
+      "assertion": "TPU v6e (Trillium) is Google's 6th generation TPU offering high efficiency for inference and training.",
+      "confidence": 0.99,
+      "source": "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-sft-v6e-8-tpu-vm-maxtext",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is MaxText single-host Gemma supervised fine-tuning used for in Cloud TPU workflows?",
+      "answer": "Fine-tune Gemma on a v6e-8 TPU VM and convert checkpoints between Hugging Face and MaxText.",
+      "category": "training_framework_links"
+    }
+  ],
+  "contentSummary": "Fine-tune Gemma on a v6e-8 TPU VM and convert checkpoints between Hugging Face and MaxText."
+}

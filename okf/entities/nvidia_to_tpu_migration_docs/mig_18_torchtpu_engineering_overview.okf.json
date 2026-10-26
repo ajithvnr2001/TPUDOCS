@@ -1,0 +1,63 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:mig_18_torchtpu_engineering_overview",
+  "@type": "DocumentationResource",
+  "name": "TorchTPU engineering overview",
+  "canonicalUrl": "https://developers.googleblog.com/torchtpu-running-pytorch-natively-on-tpus-at-google-scale/",
+  "category": "Nvidia to tpu migration docs",
+  "categorySlug": "nvidia_to_tpu_migration_docs",
+  "description": "Explains native PyTorch TPU execution and the engineering choices behind workload portability.",
+  "provenance": {
+    "sourceUrl": "https://developers.googleblog.com/torchtpu-running-pytorch-natively-on-tpus-at-google-scale/",
+    "crawledAt": "2026-10-26T12:48:22.359073+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 16869
+  },
+  "triples": [
+    [
+      "TorchTPU engineering overview",
+      "documentedIn",
+      "https://developers.googleblog.com/torchtpu-running-pytorch-natively-on-tpus-at-google-scale/"
+    ],
+    [
+      "TorchTPU engineering overview",
+      "belongsToCategory",
+      "nvidia_to_tpu_migration_docs"
+    ],
+    [
+      "TorchTPU engineering overview",
+      "supportsWorkflow",
+      "CUDA to TPU Code Migration"
+    ],
+    [
+      "TorchTPU engineering overview",
+      "primaryFramework",
+      "TorchTPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "TorchTPU engineering overview provides official guidance on Explains native PyTorch TPU execution and the engineering choices behind workload portability.",
+      "confidence": 1.0,
+      "source": "https://developers.googleblog.com/torchtpu-running-pytorch-natively-on-tpus-at-google-scale/",
+      "verified": true
+    },
+    {
+      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
+      "confidence": 1.0,
+      "source": "https://developers.googleblog.com/torchtpu-running-pytorch-natively-on-tpus-at-google-scale/",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is TorchTPU engineering overview used for in Cloud TPU workflows?",
+      "answer": "Explains native PyTorch TPU execution and the engineering choices behind workload portability.",
+      "category": "nvidia_to_tpu_migration_docs"
+    }
+  ],
+  "contentSummary": "Explains native PyTorch TPU execution and the engineering choices behind workload portability."
+}

@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:mig_14_pallas_tpu_quickstart",
+  "@type": "DocumentationResource",
+  "name": "Pallas TPU kernel quickstart",
+  "canonicalUrl": "https://docs.jax.dev/en/latest/pallas/tpu/quickstart.html",
+  "category": "Nvidia to tpu migration docs",
+  "categorySlug": "nvidia_to_tpu_migration_docs",
+  "description": "Write custom TPU kernels using Pallas; relevant when replacing CUDA-specific kernels.",
+  "provenance": {
+    "sourceUrl": "https://docs.jax.dev/en/latest/pallas/tpu/quickstart.html",
+    "crawledAt": "2026-10-26T12:48:12.573624+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 36665
+  },
+  "triples": [
+    [
+      "Pallas TPU kernel quickstart",
+      "documentedIn",
+      "https://docs.jax.dev/en/latest/pallas/tpu/quickstart.html"
+    ],
+    [
+      "Pallas TPU kernel quickstart",
+      "belongsToCategory",
+      "nvidia_to_tpu_migration_docs"
+    ],
+    [
+      "Pallas TPU kernel quickstart",
+      "supportsWorkflow",
+      "CUDA to TPU Code Migration"
+    ],
+    [
+      "Pallas TPU kernel quickstart",
+      "primaryFramework",
+      "TorchTPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Pallas TPU kernel quickstart provides official guidance on Write custom TPU kernels using Pallas; relevant when replacing CUDA-specific kernels.",
+      "confidence": 1.0,
+      "source": "https://docs.jax.dev/en/latest/pallas/tpu/quickstart.html",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Pallas TPU kernel quickstart used for in Cloud TPU workflows?",
+      "answer": "Write custom TPU kernels using Pallas; relevant when replacing CUDA-specific kernels.",
+      "category": "nvidia_to_tpu_migration_docs"
+    }
+  ],
+  "contentSummary": "Write custom TPU kernels using Pallas; relevant when replacing CUDA-specific kernels."
+}

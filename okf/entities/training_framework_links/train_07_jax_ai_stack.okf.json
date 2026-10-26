@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:train_07_jax_ai_stack",
+  "@type": "DocumentationResource",
+  "name": "Building production AI on Cloud TPUs with JAX",
+  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/jax-ai-stack",
+  "category": "Training framework links",
+  "categorySlug": "training_framework_links",
+  "description": "Overview of the JAX AI stack and production-oriented choices; identifies MaxText for LLMs and MaxDiffusion for diffusion, alongside Flax, Optax, Orbax, Grain, Qwix, and Tunix.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/jax-ai-stack",
+    "crawledAt": "2026-10-26T12:45:43.461420+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 77888
+  },
+  "triples": [
+    [
+      "Building production AI on Cloud TPUs with JAX",
+      "documentedIn",
+      "https://docs.cloud.google.com/tpu/docs/jax-ai-stack"
+    ],
+    [
+      "Building production AI on Cloud TPUs with JAX",
+      "belongsToCategory",
+      "training_framework_links"
+    ],
+    [
+      "Building production AI on Cloud TPUs with JAX",
+      "supportsWorkflow",
+      "Distributed Machine Learning Training"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Building production AI on Cloud TPUs with JAX provides official guidance on Overview of the JAX AI stack and production-oriented choices; identifies MaxText for LLMs and MaxDiffusion for diffusion, alongside Flax, Optax, Orbax, Grain, Qwix, and Tunix.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/jax-ai-stack",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Building production AI on Cloud TPUs with JAX used for in Cloud TPU workflows?",
+      "answer": "Overview of the JAX AI stack and production-oriented choices; identifies MaxText for LLMs and MaxDiffusion for diffusion, alongside Flax, Optax, Orbax, Grain, Qwix, and Tunix.",
+      "category": "training_framework_links"
+    }
+  ],
+  "contentSummary": "Overview of the JAX AI stack and production-oriented choices; identifies MaxText for LLMs and MaxDiffusion for diffusion, alongside Flax, Optax, Orbax, Grain, Qwix, and Tunix."
+}

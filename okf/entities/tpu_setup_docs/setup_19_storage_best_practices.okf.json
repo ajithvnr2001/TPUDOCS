@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:setup_19_storage_best_practices",
+  "@type": "DocumentationResource",
+  "name": "Cloud TPU storage best practices",
+  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/storage-best-practices",
+  "category": "TPU setup docs",
+  "categorySlug": "tpu_setup_docs",
+  "description": "Choose storage for data loading, model weights, and synchronous or asynchronous checkpoints.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/storage-best-practices",
+    "crawledAt": "2026-10-26T12:45:23.516359+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 35150
+  },
+  "triples": [
+    [
+      "Cloud TPU storage best practices",
+      "documentedIn",
+      "https://docs.cloud.google.com/tpu/docs/storage-best-practices"
+    ],
+    [
+      "Cloud TPU storage best practices",
+      "belongsToCategory",
+      "tpu_setup_docs"
+    ],
+    [
+      "Cloud TPU storage best practices",
+      "targetsPlatform",
+      "Google Cloud Platform"
+    ],
+    [
+      "Cloud TPU storage best practices",
+      "managesHardware",
+      "Google Cloud TPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Cloud TPU storage best practices provides official guidance on Choose storage for data loading, model weights, and synchronous or asynchronous checkpoints.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/storage-best-practices",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Cloud TPU storage best practices used for in Cloud TPU workflows?",
+      "answer": "Choose storage for data loading, model weights, and synchronous or asynchronous checkpoints.",
+      "category": "tpu_setup_docs"
+    }
+  ],
+  "contentSummary": "Choose storage for data loading, model weights, and synchronous or asynchronous checkpoints."
+}

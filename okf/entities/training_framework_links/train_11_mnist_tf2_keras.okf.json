@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:train_11_mnist_tf2_keras",
+  "@type": "DocumentationResource",
+  "name": "Cloud TPU MNIST with TensorFlow 2.x/Keras",
+  "canonicalUrl": "https://cloud.google.com/tpu/docs/tutorials/mnist-2.x",
+  "category": "Training framework links",
+  "categorySlug": "training_framework_links",
+  "description": "Official end-to-end TensorFlow/Keras training recipe using TPU distribution; useful as a small migration smoke test before a larger workload.",
+  "provenance": {
+    "sourceUrl": "https://cloud.google.com/tpu/docs/tutorials/mnist-2.x",
+    "crawledAt": "2026-10-26T12:45:47.695635+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 44249
+  },
+  "triples": [
+    [
+      "Cloud TPU MNIST with TensorFlow 2.x/Keras",
+      "documentedIn",
+      "https://cloud.google.com/tpu/docs/tutorials/mnist-2.x"
+    ],
+    [
+      "Cloud TPU MNIST with TensorFlow 2.x/Keras",
+      "belongsToCategory",
+      "training_framework_links"
+    ],
+    [
+      "Cloud TPU MNIST with TensorFlow 2.x/Keras",
+      "supportsWorkflow",
+      "Distributed Machine Learning Training"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Cloud TPU MNIST with TensorFlow 2.x/Keras provides official guidance on Official end-to-end TensorFlow/Keras training recipe using TPU distribution; useful as a small migration smoke test before a larger workload.",
+      "confidence": 1.0,
+      "source": "https://cloud.google.com/tpu/docs/tutorials/mnist-2.x",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Cloud TPU MNIST with TensorFlow 2.x/Keras used for in Cloud TPU workflows?",
+      "answer": "Official end-to-end TensorFlow/Keras training recipe using TPU distribution; useful as a small migration smoke test before a larger workload.",
+      "category": "training_framework_links"
+    }
+  ],
+  "contentSummary": "Official end-to-end TensorFlow/Keras training recipe using TPU distribution; useful as a small migration smoke test before a larger workload."
+}

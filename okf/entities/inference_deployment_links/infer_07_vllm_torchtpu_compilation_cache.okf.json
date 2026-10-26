@@ -1,0 +1,64 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:infer_07_vllm_torchtpu_compilation_cache",
+  "@type": "DocumentationResource",
+  "name": "vLLM-TorchTPU compilation cache",
+  "canonicalUrl": "https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/compilation_cache/",
+  "category": "Inference deployment links",
+  "categorySlug": "inference_deployment_links",
+  "description": "Persist compiled artifacts and reduce repeated startup compilation.",
+  "provenance": {
+    "sourceUrl": "https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/compilation_cache/",
+    "crawledAt": "2026-10-26T12:47:33.096242+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 9378
+  },
+  "triples": [
+    [
+      "vLLM-TorchTPU compilation cache",
+      "documentedIn",
+      "https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/compilation_cache/"
+    ],
+    [
+      "vLLM-TorchTPU compilation cache",
+      "belongsToCategory",
+      "inference_deployment_links"
+    ],
+    [
+      "vLLM-TorchTPU compilation cache",
+      "supportsWorkflow",
+      "High Throughput LLM Inference Serving"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "vLLM-TorchTPU compilation cache provides official guidance on Persist compiled artifacts and reduce repeated startup compilation.",
+      "confidence": 1.0,
+      "source": "https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/compilation_cache/",
+      "verified": true
+    },
+    {
+      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
+      "confidence": 1.0,
+      "source": "https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/compilation_cache/",
+      "verified": true
+    },
+    {
+      "assertion": "vLLM-TorchTPU is the out-of-tree PyTorch-native serving backend for vLLM on TPUs, distinct from the JAX-native vllm-tpu backend.",
+      "confidence": 1.0,
+      "source": "https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/compilation_cache/",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is vLLM-TorchTPU compilation cache used for in Cloud TPU workflows?",
+      "answer": "Persist compiled artifacts and reduce repeated startup compilation.",
+      "category": "inference_deployment_links"
+    }
+  ],
+  "contentSummary": "Persist compiled artifacts and reduce repeated startup compilation."
+}

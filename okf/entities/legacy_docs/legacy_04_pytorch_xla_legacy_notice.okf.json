@@ -1,0 +1,69 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:legacy_04_pytorch_xla_legacy_notice",
+  "@type": "DocumentationResource",
+  "name": "PyTorch/XLA documentation (legacy notice)",
+  "canonicalUrl": "https://docs.pytorch.org/xla/master/index.html",
+  "category": "Legacy docs",
+  "categorySlug": "legacy_docs",
+  "description": "Retain only for migrating existing code: the documentation now labels PyTorch/XLA deprecated and replaced by TorchTPU.",
+  "provenance": {
+    "sourceUrl": "https://docs.pytorch.org/xla/master/index.html",
+    "crawledAt": "2026-10-26T12:44:56.526062+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 44249
+  },
+  "triples": [
+    [
+      "PyTorch/XLA documentation (legacy notice)",
+      "documentedIn",
+      "https://docs.pytorch.org/xla/master/index.html"
+    ],
+    [
+      "PyTorch/XLA documentation (legacy notice)",
+      "belongsToCategory",
+      "legacy_docs"
+    ],
+    [
+      "PyTorch/XLA documentation (legacy notice)",
+      "status",
+      "Deprecated/Legacy"
+    ],
+    [
+      "PyTorch/XLA documentation (legacy notice)",
+      "replacedBy",
+      "TorchTPU / Compute Engine TPU VM"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "PyTorch/XLA documentation (legacy notice) provides official guidance on Retain only for migrating existing code: the documentation now labels PyTorch/XLA deprecated and replaced by TorchTPU.",
+      "confidence": 1.0,
+      "source": "https://docs.pytorch.org/xla/master/index.html",
+      "verified": true
+    },
+    {
+      "assertion": "Resource PyTorch/XLA documentation (legacy notice) is legacy or deprecated; use Compute Engine TPU API and TorchTPU for current workloads.",
+      "confidence": 1.0,
+      "source": "https://docs.pytorch.org/xla/master/index.html",
+      "verified": true
+    },
+    {
+      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
+      "confidence": 1.0,
+      "source": "https://docs.pytorch.org/xla/master/index.html",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is PyTorch/XLA documentation (legacy notice) used for in Cloud TPU workflows?",
+      "answer": "Retain only for migrating existing code: the documentation now labels PyTorch/XLA deprecated and replaced by TorchTPU.",
+      "category": "legacy_docs"
+    }
+  ],
+  "contentSummary": "Retain only for migrating existing code: the documentation now labels PyTorch/XLA deprecated and replaced by TorchTPU."
+}

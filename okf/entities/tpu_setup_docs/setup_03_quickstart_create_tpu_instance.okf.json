@@ -1,0 +1,63 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:setup_03_quickstart_create_tpu_instance",
+  "@type": "DocumentationResource",
+  "name": "Quickstart: Create a TPU instance",
+  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/quickstart-create-tpu-instance",
+  "category": "TPU setup docs",
+  "categorySlug": "tpu_setup_docs",
+  "description": "Fastest current Compute Engine provisioning path, including required IAM roles and a v6e example.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/quickstart-create-tpu-instance",
+    "crawledAt": "2026-10-26T12:45:00.934891+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 31934
+  },
+  "triples": [
+    [
+      "Quickstart: Create a TPU instance",
+      "documentedIn",
+      "https://docs.cloud.google.com/tpu/docs/quickstart-create-tpu-instance"
+    ],
+    [
+      "Quickstart: Create a TPU instance",
+      "belongsToCategory",
+      "tpu_setup_docs"
+    ],
+    [
+      "Quickstart: Create a TPU instance",
+      "targetsPlatform",
+      "Google Cloud Platform"
+    ],
+    [
+      "Quickstart: Create a TPU instance",
+      "managesHardware",
+      "Google Cloud TPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Quickstart: Create a TPU instance provides official guidance on Fastest current Compute Engine provisioning path, including required IAM roles and a v6e example.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/quickstart-create-tpu-instance",
+      "verified": true
+    },
+    {
+      "assertion": "TPU v6e (Trillium) is Google's 6th generation TPU offering high efficiency for inference and training.",
+      "confidence": 0.99,
+      "source": "https://docs.cloud.google.com/tpu/docs/quickstart-create-tpu-instance",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Quickstart: Create a TPU instance used for in Cloud TPU workflows?",
+      "answer": "Fastest current Compute Engine provisioning path, including required IAM roles and a v6e example.",
+      "category": "tpu_setup_docs"
+    }
+  ],
+  "contentSummary": "Fastest current Compute Engine provisioning path, including required IAM roles and a v6e example."
+}

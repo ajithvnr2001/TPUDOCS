@@ -1,0 +1,63 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:legacy_02_run_calculation_jax_legacy",
+  "@type": "DocumentationResource",
+  "name": "Run JAX on a Cloud TPU VM \u2014 legacy API",
+  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/run-calculation-jax",
+  "category": "Legacy docs",
+  "categorySlug": "legacy_docs",
+  "description": "Older Cloud TPU API quickstart; use the Compute Engine quickstart for new provisioning.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/run-calculation-jax",
+    "crawledAt": "2026-10-26T12:44:51.819307+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 30483
+  },
+  "triples": [
+    [
+      "Run JAX on a Cloud TPU VM \u2014 legacy API",
+      "documentedIn",
+      "https://docs.cloud.google.com/tpu/docs/run-calculation-jax"
+    ],
+    [
+      "Run JAX on a Cloud TPU VM \u2014 legacy API",
+      "belongsToCategory",
+      "legacy_docs"
+    ],
+    [
+      "Run JAX on a Cloud TPU VM \u2014 legacy API",
+      "status",
+      "Deprecated/Legacy"
+    ],
+    [
+      "Run JAX on a Cloud TPU VM \u2014 legacy API",
+      "replacedBy",
+      "TorchTPU / Compute Engine TPU VM"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Run JAX on a Cloud TPU VM \u2014 legacy API provides official guidance on Older Cloud TPU API quickstart; use the Compute Engine quickstart for new provisioning.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/run-calculation-jax",
+      "verified": true
+    },
+    {
+      "assertion": "Resource Run JAX on a Cloud TPU VM \u2014 legacy API is legacy or deprecated; use Compute Engine TPU API and TorchTPU for current workloads.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/run-calculation-jax",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Run JAX on a Cloud TPU VM \u2014 legacy API used for in Cloud TPU workflows?",
+      "answer": "Older Cloud TPU API quickstart; use the Compute Engine quickstart for new provisioning.",
+      "category": "legacy_docs"
+    }
+  ],
+  "contentSummary": "Older Cloud TPU API quickstart; use the Compute Engine quickstart for new provisioning."
+}

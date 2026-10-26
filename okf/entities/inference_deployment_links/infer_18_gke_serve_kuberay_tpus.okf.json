@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:infer_18_gke_serve_kuberay_tpus",
+  "@type": "DocumentationResource",
+  "name": "Serve LLMs with KubeRay and TPUs on GKE",
+  "canonicalUrl": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-llm-tpu-ray",
+  "category": "Inference deployment links",
+  "categorySlug": "inference_deployment_links",
+  "description": "Deploy vLLM-based serving using the Ray Operator and supported TPU configurations.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-llm-tpu-ray",
+    "crawledAt": "2026-10-26T12:47:55.490895+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 110113
+  },
+  "triples": [
+    [
+      "Serve LLMs with KubeRay and TPUs on GKE",
+      "documentedIn",
+      "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-llm-tpu-ray"
+    ],
+    [
+      "Serve LLMs with KubeRay and TPUs on GKE",
+      "belongsToCategory",
+      "inference_deployment_links"
+    ],
+    [
+      "Serve LLMs with KubeRay and TPUs on GKE",
+      "supportsWorkflow",
+      "High Throughput LLM Inference Serving"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Serve LLMs with KubeRay and TPUs on GKE provides official guidance on Deploy vLLM-based serving using the Ray Operator and supported TPU configurations.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-llm-tpu-ray",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Serve LLMs with KubeRay and TPUs on GKE used for in Cloud TPU workflows?",
+      "answer": "Deploy vLLM-based serving using the Ray Operator and supported TPU configurations.",
+      "category": "inference_deployment_links"
+    }
+  ],
+  "contentSummary": "Deploy vLLM-based serving using the Ray Operator and supported TPU configurations."
+}

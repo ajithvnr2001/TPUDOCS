@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:setup_11_runtimes",
+  "@type": "DocumentationResource",
+  "name": "TPU software versions",
+  "canonicalUrl": "https://cloud.google.com/tpu/docs/runtimes",
+  "category": "TPU setup docs",
+  "categorySlug": "tpu_setup_docs",
+  "description": "Runtime/image selection for TPU generations and PyTorch/JAX workloads.",
+  "provenance": {
+    "sourceUrl": "https://cloud.google.com/tpu/docs/runtimes",
+    "crawledAt": "2026-10-26T12:45:09.200581+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 33305
+  },
+  "triples": [
+    [
+      "TPU software versions",
+      "documentedIn",
+      "https://cloud.google.com/tpu/docs/runtimes"
+    ],
+    [
+      "TPU software versions",
+      "belongsToCategory",
+      "tpu_setup_docs"
+    ],
+    [
+      "TPU software versions",
+      "targetsPlatform",
+      "Google Cloud Platform"
+    ],
+    [
+      "TPU software versions",
+      "managesHardware",
+      "Google Cloud TPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "TPU software versions provides official guidance on Runtime/image selection for TPU generations and PyTorch/JAX workloads.",
+      "confidence": 1.0,
+      "source": "https://cloud.google.com/tpu/docs/runtimes",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is TPU software versions used for in Cloud TPU workflows?",
+      "answer": "Runtime/image selection for TPU generations and PyTorch/JAX workloads.",
+      "category": "tpu_setup_docs"
+    }
+  ],
+  "contentSummary": "Runtime/image selection for TPU generations and PyTorch/JAX workloads."
+}

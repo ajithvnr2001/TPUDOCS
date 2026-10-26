@@ -1,0 +1,63 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:setup_13_v6e_hardware",
+  "@type": "DocumentationResource",
+  "name": "TPU v6e hardware documentation",
+  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/v6e",
+  "category": "TPU setup docs",
+  "categorySlug": "tpu_setup_docs",
+  "description": "Trillium hardware specifications, memory, and supported configurations.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/v6e",
+    "crawledAt": "2026-10-26T12:45:13.997030+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 25894
+  },
+  "triples": [
+    [
+      "TPU v6e hardware documentation",
+      "documentedIn",
+      "https://docs.cloud.google.com/tpu/docs/v6e"
+    ],
+    [
+      "TPU v6e hardware documentation",
+      "belongsToCategory",
+      "tpu_setup_docs"
+    ],
+    [
+      "TPU v6e hardware documentation",
+      "targetsPlatform",
+      "Google Cloud Platform"
+    ],
+    [
+      "TPU v6e hardware documentation",
+      "managesHardware",
+      "Google Cloud TPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "TPU v6e hardware documentation provides official guidance on Trillium hardware specifications, memory, and supported configurations.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/v6e",
+      "verified": true
+    },
+    {
+      "assertion": "TPU v6e (Trillium) is Google's 6th generation TPU offering high efficiency for inference and training.",
+      "confidence": 0.99,
+      "source": "https://docs.cloud.google.com/tpu/docs/v6e",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is TPU v6e hardware documentation used for in Cloud TPU workflows?",
+      "answer": "Trillium hardware specifications, memory, and supported configurations.",
+      "category": "tpu_setup_docs"
+    }
+  ],
+  "contentSummary": "Trillium hardware specifications, memory, and supported configurations."
+}

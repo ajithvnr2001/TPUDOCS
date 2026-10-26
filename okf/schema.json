@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GoogleOpenKnowledgeFormatTPU",
+  "type": "object",
+  "properties": {
+    "@context": {
+      "type": [
+        "string",
+        "array",
+        "object"
+      ]
+    },
+    "@id": {
+      "type": "string"
+    },
+    "@type": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "canonicalUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "category": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "triples": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "prefixItems": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "assertions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "assertion": {
+            "type": "string"
+          },
+          "confidence": {
+            "type": "number"
+          },
+          "source": {
+            "type": "string"
+          },
+          "verified": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "assertion",
+          "confidence",
+          "source",
+          "verified"
+        ]
+      }
+    },
+    "qaPairs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string"
+          },
+          "answer": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "question",
+          "answer"
+        ]
+      }
+    }
+  },
+  "required": [
+    "@id",
+    "@type",
+    "name",
+    "canonicalUrl",
+    "description"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:mig_01_pytorch_on_tpu_overview",
+  "@type": "DocumentationResource",
+  "name": "PyTorch on Cloud TPU",
+  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu",
+  "category": "Nvidia to tpu migration docs",
+  "categorySlug": "nvidia_to_tpu_migration_docs",
+  "description": "Official overview of the current PyTorch TPU stack, including TorchTPU, model serving, training, and migration from PyTorch/XLA.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu",
+    "crawledAt": "2026-10-26T12:47:54.201314+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 44249
+  },
+  "triples": [
+    [
+      "PyTorch on Cloud TPU",
+      "documentedIn",
+      "https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu"
+    ],
+    [
+      "PyTorch on Cloud TPU",
+      "belongsToCategory",
+      "nvidia_to_tpu_migration_docs"
+    ],
+    [
+      "PyTorch on Cloud TPU",
+      "supportsWorkflow",
+      "CUDA to TPU Code Migration"
+    ],
+    [
+      "PyTorch on Cloud TPU",
+      "primaryFramework",
+      "TorchTPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "PyTorch on Cloud TPU provides official guidance on Official overview of the current PyTorch TPU stack, including TorchTPU, model serving, training, and migration from PyTorch/XLA.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu",
+      "verified": true
+    },
+    {
+      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is PyTorch on Cloud TPU used for in Cloud TPU workflows?",
+      "answer": "Official overview of the current PyTorch TPU stack, including TorchTPU, model serving, training, and migration from PyTorch/XLA.",
+      "category": "nvidia_to_tpu_migration_docs"
+    }
+  ],
+  "contentSummary": "Official overview of the current PyTorch TPU stack, including TorchTPU, model serving, training, and migration from PyTorch/XLA."
+}

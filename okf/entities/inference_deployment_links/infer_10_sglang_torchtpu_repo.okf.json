@@ -1,0 +1,64 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:infer_10_sglang_torchtpu_repo",
+  "@type": "DocumentationResource",
+  "name": "SGLang-TorchTPU official repository",
+  "canonicalUrl": "https://github.com/sgl-project/sglang-torchtpu",
+  "category": "Inference deployment links",
+  "categorySlug": "inference_deployment_links",
+  "description": "Official SGLang PyTorch-native TPU backend, complementary to vLLM-TorchTPU and distinct from SGLang-JAX.",
+  "provenance": {
+    "sourceUrl": "https://github.com/sgl-project/sglang-torchtpu",
+    "crawledAt": "2026-10-26T12:47:40.828362+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 373835
+  },
+  "triples": [
+    [
+      "SGLang-TorchTPU official repository",
+      "documentedIn",
+      "https://github.com/sgl-project/sglang-torchtpu"
+    ],
+    [
+      "SGLang-TorchTPU official repository",
+      "belongsToCategory",
+      "inference_deployment_links"
+    ],
+    [
+      "SGLang-TorchTPU official repository",
+      "supportsWorkflow",
+      "High Throughput LLM Inference Serving"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "SGLang-TorchTPU official repository provides official guidance on Official SGLang PyTorch-native TPU backend, complementary to vLLM-TorchTPU and distinct from SGLang-JAX.",
+      "confidence": 1.0,
+      "source": "https://github.com/sgl-project/sglang-torchtpu",
+      "verified": true
+    },
+    {
+      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
+      "confidence": 1.0,
+      "source": "https://github.com/sgl-project/sglang-torchtpu",
+      "verified": true
+    },
+    {
+      "assertion": "vLLM-TorchTPU is the out-of-tree PyTorch-native serving backend for vLLM on TPUs, distinct from the JAX-native vllm-tpu backend.",
+      "confidence": 1.0,
+      "source": "https://github.com/sgl-project/sglang-torchtpu",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is SGLang-TorchTPU official repository used for in Cloud TPU workflows?",
+      "answer": "Official SGLang PyTorch-native TPU backend, complementary to vLLM-TorchTPU and distinct from SGLang-JAX.",
+      "category": "inference_deployment_links"
+    }
+  ],
+  "contentSummary": "Official SGLang PyTorch-native TPU backend, complementary to vLLM-TorchTPU and distinct from SGLang-JAX."
+}

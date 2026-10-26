@@ -1,0 +1,63 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:setup_02_intro_to_tpu",
+  "@type": "DocumentationResource",
+  "name": "Introduction to Cloud TPU",
+  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/intro-to-tpu",
+  "category": "TPU setup docs",
+  "categorySlug": "tpu_setup_docs",
+  "description": "Official entry point: explains service choices, hardware fit, and points to setup, planning, and provisioning. Explicitly says the Cloud TPU API is deprecated.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/intro-to-tpu",
+    "crawledAt": "2026-10-26T12:44:55.726260+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 29291
+  },
+  "triples": [
+    [
+      "Introduction to Cloud TPU",
+      "documentedIn",
+      "https://docs.cloud.google.com/tpu/docs/intro-to-tpu"
+    ],
+    [
+      "Introduction to Cloud TPU",
+      "belongsToCategory",
+      "tpu_setup_docs"
+    ],
+    [
+      "Introduction to Cloud TPU",
+      "targetsPlatform",
+      "Google Cloud Platform"
+    ],
+    [
+      "Introduction to Cloud TPU",
+      "managesHardware",
+      "Google Cloud TPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Introduction to Cloud TPU provides official guidance on Official entry point: explains service choices, hardware fit, and points to setup, planning, and provisioning. Explicitly says the Cloud TPU API is deprecated.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/intro-to-tpu",
+      "verified": true
+    },
+    {
+      "assertion": "Resource Introduction to Cloud TPU is legacy or deprecated; use Compute Engine TPU API and TorchTPU for current workloads.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/intro-to-tpu",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Introduction to Cloud TPU used for in Cloud TPU workflows?",
+      "answer": "Official entry point: explains service choices, hardware fit, and points to setup, planning, and provisioning. Explicitly says the Cloud TPU API is deprecated.",
+      "category": "tpu_setup_docs"
+    }
+  ],
+  "contentSummary": "Official entry point: explains service choices, hardware fit, and points to setup, planning, and provisioning. Explicitly says the Cloud TPU API is deprecated."
+}

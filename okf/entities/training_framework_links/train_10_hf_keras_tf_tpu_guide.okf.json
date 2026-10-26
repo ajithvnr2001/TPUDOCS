@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:train_10_hf_keras_tf_tpu_guide",
+  "@type": "DocumentationResource",
+  "name": "Hugging Face Keras/TF TPU guide",
+  "canonicalUrl": "https://huggingface.co/docs/transformers/main/en/perf_train_tpu_tf",
+  "category": "Training framework links",
+  "categorySlug": "training_framework_links",
+  "description": "Usable Keras sequence-classification example: initialize TPUClusterResolver, TPUStrategy, load/tokenize data, create the model inside strategy.scope(), and call model.fit().",
+  "provenance": {
+    "sourceUrl": "https://huggingface.co/docs/transformers/main/en/perf_train_tpu_tf",
+    "crawledAt": "2026-10-26T12:45:46.944214+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 24385
+  },
+  "triples": [
+    [
+      "Hugging Face Keras/TF TPU guide",
+      "documentedIn",
+      "https://huggingface.co/docs/transformers/main/en/perf_train_tpu_tf"
+    ],
+    [
+      "Hugging Face Keras/TF TPU guide",
+      "belongsToCategory",
+      "training_framework_links"
+    ],
+    [
+      "Hugging Face Keras/TF TPU guide",
+      "supportsWorkflow",
+      "Distributed Machine Learning Training"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Hugging Face Keras/TF TPU guide provides official guidance on Usable Keras sequence-classification example: initialize TPUClusterResolver, TPUStrategy, load/tokenize data, create the model inside strategy.scope(), and call model.fit().",
+      "confidence": 1.0,
+      "source": "https://huggingface.co/docs/transformers/main/en/perf_train_tpu_tf",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Hugging Face Keras/TF TPU guide used for in Cloud TPU workflows?",
+      "answer": "Usable Keras sequence-classification example: initialize TPUClusterResolver, TPUStrategy, load/tokenize data, create the model inside strategy.scope(), and call model.fit().",
+      "category": "training_framework_links"
+    }
+  ],
+  "contentSummary": "Usable Keras sequence-classification example: initialize TPUClusterResolver, TPUStrategy, load/tokenize data, create the model inside strategy.scope(), and call model.fit()."
+}

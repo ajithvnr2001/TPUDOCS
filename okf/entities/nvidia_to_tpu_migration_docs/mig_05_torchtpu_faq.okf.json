@@ -1,0 +1,63 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:mig_05_torchtpu_faq",
+  "@type": "DocumentationResource",
+  "name": "TorchTPU FAQ",
+  "canonicalUrl": "https://torchtpu.readthedocs.io/en/latest/faq/",
+  "category": "Nvidia to tpu migration docs",
+  "categorySlug": "nvidia_to_tpu_migration_docs",
+  "description": "Migration questions, CUDA versus TPU execution, and the replacement of PyTorch/XLA.",
+  "provenance": {
+    "sourceUrl": "https://torchtpu.readthedocs.io/en/latest/faq/",
+    "crawledAt": "2026-10-26T12:47:59.023574+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 11602
+  },
+  "triples": [
+    [
+      "TorchTPU FAQ",
+      "documentedIn",
+      "https://torchtpu.readthedocs.io/en/latest/faq/"
+    ],
+    [
+      "TorchTPU FAQ",
+      "belongsToCategory",
+      "nvidia_to_tpu_migration_docs"
+    ],
+    [
+      "TorchTPU FAQ",
+      "supportsWorkflow",
+      "CUDA to TPU Code Migration"
+    ],
+    [
+      "TorchTPU FAQ",
+      "primaryFramework",
+      "TorchTPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "TorchTPU FAQ provides official guidance on Migration questions, CUDA versus TPU execution, and the replacement of PyTorch/XLA.",
+      "confidence": 1.0,
+      "source": "https://torchtpu.readthedocs.io/en/latest/faq/",
+      "verified": true
+    },
+    {
+      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
+      "confidence": 1.0,
+      "source": "https://torchtpu.readthedocs.io/en/latest/faq/",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is TorchTPU FAQ used for in Cloud TPU workflows?",
+      "answer": "Migration questions, CUDA versus TPU execution, and the replacement of PyTorch/XLA.",
+      "category": "nvidia_to_tpu_migration_docs"
+    }
+  ],
+  "contentSummary": "Migration questions, CUDA versus TPU execution, and the replacement of PyTorch/XLA."
+}

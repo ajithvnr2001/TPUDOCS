@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:setup_22_tpu_health",
+  "@type": "DocumentationResource",
+  "name": "Monitor Cloud TPU health",
+  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/troubleshooting/tpu-health",
+  "category": "TPU setup docs",
+  "categorySlug": "tpu_setup_docs",
+  "description": "Health monitoring and unhealthy-instance detection for TPU VMs, including dashboard and metric labels.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/troubleshooting/tpu-health",
+    "crawledAt": "2026-10-26T12:45:28.102243+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 30690
+  },
+  "triples": [
+    [
+      "Monitor Cloud TPU health",
+      "documentedIn",
+      "https://docs.cloud.google.com/tpu/docs/troubleshooting/tpu-health"
+    ],
+    [
+      "Monitor Cloud TPU health",
+      "belongsToCategory",
+      "tpu_setup_docs"
+    ],
+    [
+      "Monitor Cloud TPU health",
+      "targetsPlatform",
+      "Google Cloud Platform"
+    ],
+    [
+      "Monitor Cloud TPU health",
+      "managesHardware",
+      "Google Cloud TPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Monitor Cloud TPU health provides official guidance on Health monitoring and unhealthy-instance detection for TPU VMs, including dashboard and metric labels.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/troubleshooting/tpu-health",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Monitor Cloud TPU health used for in Cloud TPU workflows?",
+      "answer": "Health monitoring and unhealthy-instance detection for TPU VMs, including dashboard and metric labels.",
+      "category": "tpu_setup_docs"
+    }
+  ],
+  "contentSummary": "Health monitoring and unhealthy-instance detection for TPU VMs, including dashboard and metric labels."
+}

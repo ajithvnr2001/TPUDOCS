@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:setup_05_create_instance_compute",
+  "@type": "DocumentationResource",
+  "name": "Create a Cloud TPU VM instance using Compute Engine",
+  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/create-instance-compute",
+  "category": "TPU setup docs",
+  "categorySlug": "tpu_setup_docs",
+  "description": "Detailed Compute Engine creation guide for on-demand, Spot, reservation-bound, and flex-start TPU VMs.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/create-instance-compute",
+    "crawledAt": "2026-10-26T12:45:01.543523+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 34760
+  },
+  "triples": [
+    [
+      "Create a Cloud TPU VM instance using Compute Engine",
+      "documentedIn",
+      "https://docs.cloud.google.com/tpu/docs/create-instance-compute"
+    ],
+    [
+      "Create a Cloud TPU VM instance using Compute Engine",
+      "belongsToCategory",
+      "tpu_setup_docs"
+    ],
+    [
+      "Create a Cloud TPU VM instance using Compute Engine",
+      "targetsPlatform",
+      "Google Cloud Platform"
+    ],
+    [
+      "Create a Cloud TPU VM instance using Compute Engine",
+      "managesHardware",
+      "Google Cloud TPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Create a Cloud TPU VM instance using Compute Engine provides official guidance on Detailed Compute Engine creation guide for on-demand, Spot, reservation-bound, and flex-start TPU VMs.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/create-instance-compute",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Create a Cloud TPU VM instance using Compute Engine used for in Cloud TPU workflows?",
+      "answer": "Detailed Compute Engine creation guide for on-demand, Spot, reservation-bound, and flex-start TPU VMs.",
+      "category": "tpu_setup_docs"
+    }
+  ],
+  "contentSummary": "Detailed Compute Engine creation guide for on-demand, Spot, reservation-bound, and flex-start TPU VMs."
+}

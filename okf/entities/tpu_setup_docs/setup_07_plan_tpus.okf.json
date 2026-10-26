@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:setup_07_plan_tpus",
+  "@type": "DocumentationResource",
+  "name": "Plan your Cloud TPU resources",
+  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/plan-tpus",
+  "category": "TPU setup docs",
+  "categorySlug": "tpu_setup_docs",
+  "description": "Hardware/size and consumption planning across on-demand, Spot, reservations, and flex-start, with quota guidance.",
+  "provenance": {
+    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/plan-tpus",
+    "crawledAt": "2026-10-26T12:45:05.228732+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 27403
+  },
+  "triples": [
+    [
+      "Plan your Cloud TPU resources",
+      "documentedIn",
+      "https://docs.cloud.google.com/tpu/docs/plan-tpus"
+    ],
+    [
+      "Plan your Cloud TPU resources",
+      "belongsToCategory",
+      "tpu_setup_docs"
+    ],
+    [
+      "Plan your Cloud TPU resources",
+      "targetsPlatform",
+      "Google Cloud Platform"
+    ],
+    [
+      "Plan your Cloud TPU resources",
+      "managesHardware",
+      "Google Cloud TPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Plan your Cloud TPU resources provides official guidance on Hardware/size and consumption planning across on-demand, Spot, reservations, and flex-start, with quota guidance.",
+      "confidence": 1.0,
+      "source": "https://docs.cloud.google.com/tpu/docs/plan-tpus",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Plan your Cloud TPU resources used for in Cloud TPU workflows?",
+      "answer": "Hardware/size and consumption planning across on-demand, Spot, reservations, and flex-start, with quota guidance.",
+      "category": "tpu_setup_docs"
+    }
+  ],
+  "contentSummary": "Hardware/size and consumption planning across on-demand, Spot, reservations, and flex-start, with quota guidance."
+}

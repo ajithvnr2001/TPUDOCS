@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:train_08_tensorflow_tpu_guide",
+  "@type": "DocumentationResource",
+  "name": "TensorFlow TPU guide",
+  "canonicalUrl": "https://www.tensorflow.org/guide/tpu",
+  "category": "Training framework links",
+  "categorySlug": "training_framework_links",
+  "description": "Initialize TPU hardware and use tf.distribute.TPUStrategy for TensorFlow/Keras workloads.",
+  "provenance": {
+    "sourceUrl": "https://www.tensorflow.org/guide/tpu",
+    "crawledAt": "2026-10-26T12:45:44.173462+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 39946
+  },
+  "triples": [
+    [
+      "TensorFlow TPU guide",
+      "documentedIn",
+      "https://www.tensorflow.org/guide/tpu"
+    ],
+    [
+      "TensorFlow TPU guide",
+      "belongsToCategory",
+      "training_framework_links"
+    ],
+    [
+      "TensorFlow TPU guide",
+      "supportsWorkflow",
+      "Distributed Machine Learning Training"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "TensorFlow TPU guide provides official guidance on Initialize TPU hardware and use tf.distribute.TPUStrategy for TensorFlow/Keras workloads.",
+      "confidence": 1.0,
+      "source": "https://www.tensorflow.org/guide/tpu",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is TensorFlow TPU guide used for in Cloud TPU workflows?",
+      "answer": "Initialize TPU hardware and use tf.distribute.TPUStrategy for TensorFlow/Keras workloads.",
+      "category": "training_framework_links"
+    }
+  ],
+  "contentSummary": "Initialize TPU hardware and use tf.distribute.TPUStrategy for TensorFlow/Keras workloads."
+}

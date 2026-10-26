@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:infer_13_vllm_tpu_installation",
+  "@type": "DocumentationResource",
+  "name": "vLLM TPU Installation and container guide",
+  "canonicalUrl": "https://docs.vllm.ai/projects/tpu/en/latest/getting_started/installation/",
+  "category": "Inference deployment links",
+  "categorySlug": "inference_deployment_links",
+  "description": "Official installation reference for the JAX-native vLLM TPU stack, including pip/uv and Docker options.",
+  "provenance": {
+    "sourceUrl": "https://docs.vllm.ai/projects/tpu/en/latest/getting_started/installation/",
+    "crawledAt": "2026-10-26T12:47:44.364745+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 7495
+  },
+  "triples": [
+    [
+      "vLLM TPU Installation and container guide",
+      "documentedIn",
+      "https://docs.vllm.ai/projects/tpu/en/latest/getting_started/installation/"
+    ],
+    [
+      "vLLM TPU Installation and container guide",
+      "belongsToCategory",
+      "inference_deployment_links"
+    ],
+    [
+      "vLLM TPU Installation and container guide",
+      "supportsWorkflow",
+      "High Throughput LLM Inference Serving"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "vLLM TPU Installation and container guide provides official guidance on Official installation reference for the JAX-native vLLM TPU stack, including pip/uv and Docker options.",
+      "confidence": 1.0,
+      "source": "https://docs.vllm.ai/projects/tpu/en/latest/getting_started/installation/",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is vLLM TPU Installation and container guide used for in Cloud TPU workflows?",
+      "answer": "Official installation reference for the JAX-native vLLM TPU stack, including pip/uv and Docker options.",
+      "category": "inference_deployment_links"
+    }
+  ],
+  "contentSummary": "Official installation reference for the JAX-native vLLM TPU stack, including pip/uv and Docker options."
+}

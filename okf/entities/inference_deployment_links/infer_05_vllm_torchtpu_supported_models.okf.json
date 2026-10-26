@@ -1,0 +1,64 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:infer_05_vllm_torchtpu_supported_models",
+  "@type": "DocumentationResource",
+  "name": "vLLM-TorchTPU supported models and features",
+  "canonicalUrl": "https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/supported_models/",
+  "category": "Inference deployment links",
+  "categorySlug": "inference_deployment_links",
+  "description": "Check validated checkpoints, attention backends, quantization, and serving feature support.",
+  "provenance": {
+    "sourceUrl": "https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/supported_models/",
+    "crawledAt": "2026-10-26T12:47:29.367424+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 23138
+  },
+  "triples": [
+    [
+      "vLLM-TorchTPU supported models and features",
+      "documentedIn",
+      "https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/supported_models/"
+    ],
+    [
+      "vLLM-TorchTPU supported models and features",
+      "belongsToCategory",
+      "inference_deployment_links"
+    ],
+    [
+      "vLLM-TorchTPU supported models and features",
+      "supportsWorkflow",
+      "High Throughput LLM Inference Serving"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "vLLM-TorchTPU supported models and features provides official guidance on Check validated checkpoints, attention backends, quantization, and serving feature support.",
+      "confidence": 1.0,
+      "source": "https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/supported_models/",
+      "verified": true
+    },
+    {
+      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
+      "confidence": 1.0,
+      "source": "https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/supported_models/",
+      "verified": true
+    },
+    {
+      "assertion": "vLLM-TorchTPU is the out-of-tree PyTorch-native serving backend for vLLM on TPUs, distinct from the JAX-native vllm-tpu backend.",
+      "confidence": 1.0,
+      "source": "https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/supported_models/",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is vLLM-TorchTPU supported models and features used for in Cloud TPU workflows?",
+      "answer": "Check validated checkpoints, attention backends, quantization, and serving feature support.",
+      "category": "inference_deployment_links"
+    }
+  ],
+  "contentSummary": "Check validated checkpoints, attention backends, quantization, and serving feature support."
+}

@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://schema.org",
+    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
+  ],
+  "@id": "okf:google:tpu:mig_15_tokamax_kernel_lib",
+  "@type": "DocumentationResource",
+  "name": "Tokamax TPU kernel library",
+  "canonicalUrl": "https://github.com/openxla/tokamax",
+  "category": "Nvidia to tpu migration docs",
+  "categorySlug": "nvidia_to_tpu_migration_docs",
+  "description": "Prebuilt high-performance TPU kernels with PyTorch interoperability.",
+  "provenance": {
+    "sourceUrl": "https://github.com/openxla/tokamax",
+    "crawledAt": "2026-10-26T12:48:16.895947+00:00",
+    "extractorEngine": "Crawl4AI",
+    "contentLengthBytes": 14172
+  },
+  "triples": [
+    [
+      "Tokamax TPU kernel library",
+      "documentedIn",
+      "https://github.com/openxla/tokamax"
+    ],
+    [
+      "Tokamax TPU kernel library",
+      "belongsToCategory",
+      "nvidia_to_tpu_migration_docs"
+    ],
+    [
+      "Tokamax TPU kernel library",
+      "supportsWorkflow",
+      "CUDA to TPU Code Migration"
+    ],
+    [
+      "Tokamax TPU kernel library",
+      "primaryFramework",
+      "TorchTPU"
+    ]
+  ],
+  "assertions": [
+    {
+      "assertion": "Tokamax TPU kernel library provides official guidance on Prebuilt high-performance TPU kernels with PyTorch interoperability.",
+      "confidence": 1.0,
+      "source": "https://github.com/openxla/tokamax",
+      "verified": true
+    }
+  ],
+  "qaPairs": [
+    {
+      "question": "What is Tokamax TPU kernel library used for in Cloud TPU workflows?",
+      "answer": "Prebuilt high-performance TPU kernels with PyTorch interoperability.",
+      "category": "nvidia_to_tpu_migration_docs"
+    }
+  ],
+  "contentSummary": "Prebuilt high-performance TPU kernels with PyTorch interoperability."
+}
