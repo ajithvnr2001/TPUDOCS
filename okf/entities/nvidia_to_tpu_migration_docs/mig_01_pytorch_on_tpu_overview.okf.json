@@ -1,63 +1,448 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:mig_01_pytorch_on_tpu_overview",
-  "@type": "DocumentationResource",
-  "name": "PyTorch on Cloud TPU",
-  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu",
-  "category": "Nvidia to tpu migration docs",
-  "categorySlug": "nvidia_to_tpu_migration_docs",
-  "description": "Official overview of the current PyTorch TPU stack, including TorchTPU, model serving, training, and migration from PyTorch/XLA.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu",
-    "crawledAt": "2026-10-26T12:47:54.201314+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 44249
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "PyTorch on Cloud TPU",
-      "documentedIn",
-      "https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu"
-    ],
-    [
-      "PyTorch on Cloud TPU",
-      "belongsToCategory",
-      "nvidia_to_tpu_migration_docs"
-    ],
-    [
-      "PyTorch on Cloud TPU",
-      "supportsWorkflow",
-      "CUDA to TPU Code Migration"
-    ],
-    [
-      "PyTorch on Cloud TPU",
-      "primaryFramework",
-      "TorchTPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "mig_01_pytorch_on_tpu_overview",
+    "name": "PyTorch on Cloud TPU",
+    "url": "https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu",
+    "category": "nvidia_to_tpu_migration_docs",
+    "description": "Official overview of the current PyTorch TPU stack, including TorchTPU, model serving, training, and migration from PyTorch/XLA.",
+    "char_count": 22857,
+    "word_count": 2609,
+    "section_count": 31,
+    "code_block_count": 2,
+    "table_count": 0,
+    "cli_command_count": 1,
+    "indexed_at": "2026-10-26T14:46:54.744615+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "schema:name",
+        "object": "PyTorch on Cloud TPU"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "schema:category",
+        "object": "nvidia_to_tpu_migration_docs"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "schema:description",
+        "object": "Official overview of the current PyTorch TPU stack, including TorchTPU, model serving, training, and migration from PyTorch/XLA."
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:TPU7x"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:vLLM-TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:SGLang-TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTitan"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:Pallas"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:Tokamax"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:XProf"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "PyTorch on Cloud TPU"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "Get started"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "TorchTPU: PyTorch-native backend for Cloud TPU"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "Motivation"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "Design"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "Key strengths"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "Production inference and serving"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "vLLM-TorchTPU and SGLang-TorchTPU: Inference engines"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "Motivation"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "Design"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "Key strengths"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "llm-d: Kubernetes-native distributed inference"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "Motivation"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "Design"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "Key strengths"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "Train, fine-tune, and domain libraries"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "TorchTitan on TPU: Large-scale training reference"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "Motivation"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "Design"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "Key strengths"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "TorchRec: Recommendation systems"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "Cluster orchestration and developer tools"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "Ray: Distributed training, serving, and RL"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "Motivation"
+      },
+      {
+        "subject": "tpu_doc:mig_01_pytorch_on_tpu_overview",
+        "predicate": "okf:hasSection",
+        "object": "Design"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "PyTorch on Cloud TPU provides official guidance on Official overview of the current PyTorch TPU stack, including TorchTPU, model serving, training, and migration from PyTorch/XLA.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu",
-      "verified": true
-    },
-    {
-      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is PyTorch on Cloud TPU used for in Cloud TPU workflows?",
-      "answer": "Official overview of the current PyTorch TPU stack, including TorchTPU, model serving, training, and migration from PyTorch/XLA.",
-      "category": "nvidia_to_tpu_migration_docs"
-    }
-  ],
-  "contentSummary": "Official overview of the current PyTorch TPU stack, including TorchTPU, model serving, training, and migration from PyTorch/XLA."
+  },
+  "structured_content": {
+    "summary": "Official overview of the current PyTorch TPU stack, including TorchTPU, model serving, training, and migration from PyTorch/XLA.",
+    "sections": [
+      {
+        "heading": "PyTorch on Cloud TPU",
+        "level": 1,
+        "content": "PyTorch on Cloud TPU lets you train, fine-tune, and serve open models on Cloud TPU hardware using standard PyTorch semantics and distributed APIs. It integrates with the ecosystem tools you already use, including Hugging Face, vLLM, SGLang, llm-d, TorchTitan, TorchRec, and Ray.\nAt the foundation of the stack is [TorchTPU](https://github.com/google-pytorch/torch_tpu), an open-source, PyTorch-native backend co-developed with the PyTorch team at Meta. TorchTPU provides libraries, frameworks, and tools for every stage of the machine learning lifecycle, from core runtime execution and custom kernels to production inference, large-scale training, and cluster orchestration.\n![TorchTPU connected to Hugging Face, TorchTitan, vLLM, SGLang, Ray, and llm-d,\nwith torch.profiler, DTensor, TorchRec, and\nPallas.](https://docs.cloud.google.com/static/tpu/docs/images/torchtpu-ecosystem.png)"
+      },
+      {
+        "heading": "Get started",
+        "level": 2,
+        "content": "* **Run PyTorch models on TPUs** : start with [TorchTPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#torchtpu) and the [TorchTPU documentation](https://torchtpu.readthedocs.io/).\n  * **Serve large language models (LLMs) and multimodal models** : use [vLLM-TorchTPU or SGLang-TorchTPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#inference-engines).\n  * **Route requests across a Kubernetes fleet** : use [llm-d](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#llm-d).\n  * **Pre-train or fine-tune foundation models** : use [TorchTitan on TPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#torchtitan) (or [TorchRec](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#torchrec) for recommendation models).\n  * **Scale data processing, training, reinforcement learning (RL), and serving pipelines** : use [Ray](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#ray).\n  * **Onboard, profile, and tune models with your coding assistant** : use the [TPU agent suite](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#tpu-agent-suite) (Preview)."
+      },
+      {
+        "heading": "TorchTPU: PyTorch-native backend for Cloud TPU",
+        "level": 2,
+        "content": "[TorchTPU](https://github.com/google-pytorch/torch_tpu) provides the device backend, graph compiler integration, and custom kernel APIs for PyTorch on Cloud TPU. Built with the PyTorch team, TorchTPU lets you debug models interactively in eager mode, compile model code with `torch.compile`, and scale across slices with `torch.distributed` (`tpu_dist`).\nTo install TorchTPU, run the following command:\n\n```\npip install torch_tpu\n\n```\n\nTo run a tensor operation on a Cloud TPU, run the following Python code:\n\n```\nimport torch\n\ndevice = torch.device(\"tpu\")\n\nx = torch.randn((4, 4), device=device)\ny = torch.ones((4, 4), device=device)\nresult = torch.matmul(x, y).cpu()\n\nprint(f\"Executed on device: {x.device}\")\nprint(f\"Result shape on CPU: {result.shape}, sum: {result.sum():.4f}\")\n\n```\n\nThe following video gives you a brief overview of TorchTPU:\nFor more information, see [TorchTPU is now open source: Run native PyTorch on TPUs](https://cloud.google.com/blog/topics/ai-infrastructure/torchtpu-is-now-open-source-run-native-pytorch-on-tpus), and see [How TorchTPU works](https://torchtpu.readthedocs.io/en/latest/how_torchtpu_works/)."
+      },
+      {
+        "heading": "Motivation",
+        "level": 3,
+        "content": "Although Cloud TPUs have historically been paired with JAX and TensorFlow, running PyTorch on TPUs previously required lazy-tensor graph recording (PyTorch/XLA), which often meant adding code to mark compilable regions. TorchTPU runs operations eagerly by default using PyTorch's standard one-process-per-device execution model, so existing workloads and libraries run without structural rewrites.\n**Note:** TorchTPU replaces PyTorch/XLA. We recommend starting new workloads with TorchTPU and migrating existing PyTorch/XLA workloads to TorchTPU."
+      },
+      {
+        "heading": "Design",
+        "level": 3,
+        "content": "TorchTPU brings PyTorch-native TPU support to PyTorch around three design goals:\n  * **Standard PyTorch semantics** : runs one process per device and preserves PyTorch tensor views and in-place mutations without a JAX runtime dependency.\n  * **Eager execution by default** : runs standard PyTorch models immediately in eager mode for interactive debugging and step-by-step inspection.\n  * **Compiler and kernel optimizations** : provides operator fusion in eager mode (in addition to operator-by-operator eager execution), `torch.compile` integration with dynamic shape bounds to reduce recompilations, and custom kernel APIs.\n\n\nFor graph compilation, `torch.compile` captures the PyTorch computation graph with TorchDynamo and compiles it into TPU machine code through OpenXLA and StableHLO. Collective operations run at the `torch.distributed` process group level (`tpu_dist`)."
+      },
+      {
+        "heading": "Key strengths",
+        "level": 3,
+        "content": "* **Operator, model, and Hugging Face support** : TorchTPU supports standard PyTorch (ATen) operators in forward and backward passes and is continuously tested against popular Hugging Face models. You can deploy models in Transformers v5 by passing `device_map=\"tpu\"`, run Diffusers pipelines with eager mode, `torch.compile`, and tensor parallelism, and profile workloads with `torch.profiler` in TensorBoard and XProf.\n  * **Single-chip to Multislice scaling** : the `tpu_dist` backend supports `DistributedDataParallel` (DDP), `FullyShardedDataParallel` (FSDP2), and `DTensor`. In addition, `torch.tpu.distributed.topology_aware_mesh` maps parallelism dimensions onto the physical TPU interconnects.\n  * **Configurable eager execution modes** : provides three eager execution modes: \n    * `Strict` (default): dispatches operators individually and asynchronously, with standard imperative PyTorch semantics.\n    * `Debug`: runs synchronously with tensor bounds checking.\n    * `DeferAndFuse`: fuses sequences of eager operators to reduce high-bandwidth memory (HBM) traffic.\n  * **Full-graph compilation and caching** : `torch.compile(backend=\"tpu\")` compiles graphs into TPU executables and caches them across processes, hosts, and job restarts.\n  * **Custom TPU kernels** : you can call custom [Pallas kernels](https://docs.jax.dev/en/latest/pallas/index.html), including kernels that communicate directly between chips, as standard PyTorch functions. You can also use prebuilt kernels from the [Tokamax](https://github.com/openxla/tokamax) library or author portable tile-based kernels with [Helion](https://pytorch.org/blog/helion-on-tpu-towards-hardware-heterogeneous-kernel-authoring/).\n\n\nFor more information, see the [TorchTPU documentation](https://torchtpu.readthedocs.io/), ask questions in the [PyTorch on TPU discussion forum](https://discuss.pytorch.org/c/tpu/45), or report issues on the [TorchTPU issue tracker](https://github.com/google-pytorch/torch_tpu/issues)."
+      },
+      {
+        "heading": "Production inference and serving",
+        "level": 2,
+        "content": "For production deployment, PyTorch on Cloud TPU integrates with open-source inference engines and Kubernetes-native distributed serving infrastructure."
+      },
+      {
+        "heading": "vLLM-TorchTPU and SGLang-TorchTPU: Inference engines",
+        "level": 3,
+        "content": "[vLLM-TorchTPU](https://github.com/vllm-project/vllm-torchtpu) and [SGLang-TorchTPU](https://github.com/sgl-project/sglang-torchtpu) are TorchTPU backends for the vLLM and SGLang inference engines. Both backends run open models such as Qwen, DeepSeek, GLM, Kimi, GPT-OSS, and Gemma 4.\nFor more information, see the [vLLM-TorchTPU documentation](https://vllm-torchtpu.readthedocs.io/en/latest/) and [Announcing new vLLM and SGLang inference engines on TPU](https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu/).\n**Note:** [vLLM-JAX](https://github.com/vllm-project/vllm-jax) and [SGLang-JAX](https://github.com/sgl-project/sglang-jax) remain maintained and supported for JAX-based serving workflows."
+      },
+      {
+        "heading": "Motivation",
+        "level": 4,
+        "content": "Serving reasoning, multimodal, and tool-using workloads often requires custom model definitions, speculative decoding methods, and quantization schemes. Building the vLLM and SGLang backends on TorchTPU lets you customize and debug your serving stack directly in PyTorch."
+      },
+      {
+        "heading": "Design",
+        "level": 4,
+        "content": "Both backends retain standard vLLM and SGLang schedulers, key-value (KV) cache managers, and API servers while using TorchTPU execution and custom Pallas operators underneath. Most models run their standard PyTorch model definitions, whereas compute-intensive blocks invoke Pallas kernels inside the compiled graph so hardware-specific kernels can be updated independently."
+      },
+      {
+        "heading": "Key strengths",
+        "level": 4,
+        "content": "* **Parallelism, quantization, and speculative decoding** : supports tensor, data, expert, pipeline, and context parallelism across hosts, along with multimodal (image and video) and embedding inputs. Supported speculative decoding methods include multi-token prediction (MTP), EAGLE-3, DFlash, DSpark, and n-gram matching. Supported quantization formats include 8-bit (FP8) KV caches and 8-bit (FP8) and 4-bit (MXFP4 and NVFP4) floating-point model checkpoints.\n  * **Two-tier prefix caching, tool calling, and structured output** : automatic prefix caching retains active prefixes in HBM and offloads older prefixes to host memory to avoid recomputation on multi-turn requests. This caching supports hybrid attention and recurrent models, and tool calling and structured output are built in.\n  * **Overlapped KV cache transfers with TPU Sync** : supports disaggregated prefill and decode serving (separating prompt processing and token generation onto distinct worker pools) across hosts and host KV offloading using [TPU Sync](https://github.com/google/tpu-sync). TPU Sync is an open-source C++ library that reads PyTorch device buffers directly on background threads without copying data through host CPU memory.\n\n\nFor more information about vLLM-TorchTPU, see the [vLLM-TorchTPU repository](https://github.com/vllm-project/vllm-torchtpu) and the [vLLM-TorchTPU recipes for TPU7x](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/vLLM-TorchTPU), ask questions in the [vLLM Slack channel](https://slack.vllm.ai/), or report issues on the [vLLM-TorchTPU issue tracker](https://github.com/vllm-project/vllm-torchtpu/issues).\nFor more information about SGLang-TorchTPU, see the [SGLang-TorchTPU repository](https://github.com/sgl-project/sglang-torchtpu) or report issues on the [SGLang-TorchTPU issue tracker](https://github.com/sgl-project/sglang-torchtpu/issues)."
+      },
+      {
+        "heading": "llm-d: Kubernetes-native distributed inference",
+        "level": 3,
+        "content": "[llm-d](https://github.com/llm-d/llm-d) is an open-source Cloud Native Computing Foundation (CNCF) sandbox framework for distributed LLM inference on Kubernetes. It is developed with Red Hat, IBM, Google Cloud, and a community of more than 500 contributors and 35 organizations."
+      },
+      {
+        "heading": "Motivation",
+        "level": 4,
+        "content": "Although single-instance inference engines manage per-replica execution, production fleets must handle traffic spikes, multi-tenant priorities, fleet-wide context sharing, and zero-downtime rollouts. llm-d provides the cluster-level routing and operations layer to coordinate a fleet of inference servers."
+      },
+      {
+        "heading": "Design",
+        "level": 4,
+        "content": "llm-d runs in front of model servers such as vLLM and SGLang on Kubernetes. llm-d provides the following:\n  * Routes requests based on prefix cache state and replica load.\n  * Coordinates disaggregated prefill and decode worker pools.\n  * Supports mixture-of-experts (MoE) sharding and asynchronous batch inference.\n  * Manages tiered KV cache offloading across device memory, host memory, and storage."
+      },
+      {
+        "heading": "Key strengths",
+        "level": 4,
+        "content": "* **Multi-turn session routing** : routes multi-turn conversations to replicas that hold their cached context. Turn-priority scheduling and stateful Responses API support let agents reuse context across turns to reduce recomputation.\n  * **Multi-tenant quality of service** : priority and fairness flow control lets latency-sensitive requests and bursty agent workloads share a fleet without resource starvation.\n  * **Fleet operations and rolling updates** : provides a v1 configuration API, router high availability, and coordinated rolling updates that manage prefill and decode replicas as a single logical unit.\n  * **Native TorchTPU serving on Google Kubernetes Engine (GKE)** : you can serve Cloud TPUs alongside other accelerators behind one llm-d endpoint and manage vLLM-TorchTPU and SGLang-TorchTPU replicas with standard Kubernetes tooling.\n\n\nFor more information, see [llm-d Router in About GKE Inference Gateway](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-gke-inference-gateway#llm-d-router) and the [llm-d GKE gateway guide](https://llm-d.ai/docs/infrastructure/gateway/gke), ask questions in the [llm-d Slack channel](https://llm-d.ai/slack), or report issues on the [llm-d issue tracker](https://github.com/llm-d/llm-d/issues)."
+      },
+      {
+        "heading": "Train, fine-tune, and domain libraries",
+        "level": 2,
+        "content": "To pre-train, fine-tune, and adapt large models, TorchTPU provides reference training recipes and domain-specific libraries tuned for TPU hardware."
+      },
+      {
+        "heading": "TorchTitan on TPU: Large-scale training reference",
+        "level": 3,
+        "content": "[TorchTitan on TPU](https://github.com/google-pytorch/torchtitan) extends [TorchTitan](https://github.com/pytorch/torchtitan), the PyTorch modular reference platform for generative AI training, with TPU sharding passes, custom kernels, and training recipes.\nFor more information, see [Integrating TorchTPU into TorchTitan and Optimizing Models for TPU](https://developers.googleblog.com/integrating-torchtpu-into-torchtitan-and-optimizing-models-for-tpu/)."
+      },
+      {
+        "heading": "Motivation",
+        "level": 4,
+        "content": "Scaling training across multi-host TPU slices requires sharding parameters across the chip interconnect and overlapping communication with computation. Google and Meta co-developed TPU sharding and compilation passes inside TorchTitan so you don't need to design custom TPU sharding strategies or manually schedule communication."
+      },
+      {
+        "heading": "Design",
+        "level": 4,
+        "content": "You write models in single-device PyTorch without accelerator-specific code. TorchTitan configures model layers from configuration files, letting you replace individual layers with custom Pallas kernels (such as Splash Attention) without editing the model definition or training loop.\nTorchTitan's `SimpleFSDP` implementation places parameter sharding operations directly inside the compiled graph so the XLA compiler can overlap device communication with computation. In addition, whole-step graph compilation captures the entire training step as a single XLA program. For Multislice runs, hybrid sharding (HSDP) shards within each slice over the inter-chip interconnect (ICI) and replicates across slices over the data center network (DCN). This layout limits cross-slice traffic to a single gradient reduction per step."
+      },
+      {
+        "heading": "Key strengths",
+        "level": 4,
+        "content": "* **Pre-training and RL post-training recipes** : includes reference recipes for dense LLMs (Llama 3, Qwen 3, and MuseGlimmer 30B), MoE models (Qwen 3 235B, validated on up to 8,192 TPU7x chips), and diffusion transformers (FLUX.1). For RL post-training (such as group relative policy optimization, or GRPO), [VeRL](https://github.com/verl-project/verl/tree/main/examples/tpu/grpo) (Preview) delegates parameter updates to TorchTitan. It then pushes updated weights to serving engines to generate training trajectories (rollouts).\n  * **Preconfigured compiler and parallelism settings** : recipe configurations include preconfigured compiler and parallelism settings so you can tune model FLOPs utilization (MFU) through configuration files rather than code changes.\n  * **Onboarding for new architectures** : the Hugging Face Transformers modeling backend runs Hugging Face Hub model checkpoints (including MoE models without expert parallelism) through the TorchTitan trainer. For full model ports, TorchTitan includes a step-by-step onboarding skill for engineers and coding agents.\n  * **Standalone component reuse** : you can adopt TorchTitan end to end or import individual modules, custom operators, and compiler flags into an existing training codebase.\n\n\nFor more information, see the [TorchTitan on TPU getting started guide](https://github.com/google-pytorch/torchtitan/blob/main/torchtitan/experiments/tpu/README.md) and the [TorchTitan Qwen3-8B training recipe for TPU7x](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/torchtitan/qwen3-8b/tpu7x-2x2x2), ask questions in the [TorchTitan discussion forum](https://discuss.pytorch.org/c/distributed/torchtitan/44), or report issues on the [TorchTitan issue tracker](https://github.com/pytorch/torchtitan/issues)."
+      },
+      {
+        "heading": "TorchRec: Recommendation systems",
+        "level": 3,
+        "content": "[TorchRec](https://github.com/meta-pytorch/torchrec) is a PyTorch domain library that provides distributed embedding tables and sharding primitives for recommendation models. On Cloud TPU, TorchRec offloads sparse embedding table lookups to dedicated TPU SparseCore processors while running dense matrix operations on the TPU TensorCores.\nFor more information about TorchRec, see the [TorchRec documentation](https://docs.pytorch.org/tutorials/intermediate/torchrec_intro_tutorial.html), ask questions in the [PyTorch on TPU discussion forum](https://discuss.pytorch.org/c/tpu/45), or report issues on the [TorchRec issue tracker](https://github.com/meta-pytorch/torchrec/issues)."
+      },
+      {
+        "heading": "Cluster orchestration and developer tools",
+        "level": 2,
+        "content": "To scale multi-node pipelines and automate model onboarding, the TorchTPU ecosystem integrates with Ray and provides coding agent extensions with access to TPU documentation."
+      },
+      {
+        "heading": "Ray: Distributed training, serving, and RL",
+        "level": 3,
+        "content": "[Ray](https://github.com/ray-project/ray) scales Python and AI workloads across clusters using Ray Train, Ray Serve, Ray Data, Ray Core, and RL frameworks such as [VeRL](https://github.com/verl-project/verl/tree/main/examples/tpu/grpo) (Preview). For more information, see [Announcing Ray support for PyTorch on Google TPUs](https://www.anyscale.com/blog/announcing-ray-support-native-pytorch-google-tpu)."
+      },
+      {
+        "heading": "Motivation",
+        "level": 4,
+        "content": "Multislice training and multi-stage pipelines (such as RL workflows that combine data preprocessing, training, and rollout generation) require automated slice provisioning, topology discovery, and fault-tolerant worker coordination. Standalone launch utilities such as `torchrun` don't provision TPU slices or coordinate multi-stage actor pipelines, so Ray manages cluster-wide scheduling and placement for TorchTPU workloads."
+      },
+      {
+        "heading": "Design",
+        "level": 4,
+        "content": "When you submit a job specifying the TPU generation, topology, and worker count, Ray's `SlicePlacementGroup` API reserves complete TPU slices so all workers in a slice are gang-scheduled together over the inter-chip interconnect (ICI). Ray isolates one logical TPU device per worker (`TPU_VISIBLE_CHIPS`) and configures TorchTPU's slice-builder addresses and mesh topology. In Ray Train, setting `use_tpu=True` in `ScalingConfig` with `TorchTrainer` initializes the `tpu` device and `tpu_dist` process group automatically across workers."
+      },
+      {
+        "heading": "Key strengths",
+        "level": 4,
+        "content": "* **Topology-matched gang scheduling** : `SlicePlacementGroup` and `TorchTrainer` match worker placement across hosts to the physical TPU generation and slice layout to prevent resource fragmentation.\n  * **Automated failure recovery** : runs distributed DDP, FSDP2, and DTensor training jobs across TPU slices on GKE with automated recovery when a worker or slice fails.\n  * **Direct-to-TPU data prefetching** : Ray Data's `iter_torch_batches` method prefetches batches as PyTorch tensors directly into TPU device memory.\n  * **Multi-host inference orchestration** : Ray Serve LLM (`LLMConfig`) reserves a `SlicePlacementGroup` per replica and deploys OpenAI-compatible vLLM-TorchTPU endpoints across single-host and multi-host TPU slices.\n\n\nTo get started on GKE, see [About Ray on GKE](https://docs.cloud.google.com/kubernetes-engine/docs/add-on/ray-on-gke/concepts/overview) and the tutorials on how to [Fine-tune models on multi-host TPUs with Ray and TorchTPU](https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/train-models-tpu-ray-torchtpu) and [Serve LLMs on multi-host TPUs with Ray and TorchTPU](https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-llm-tpu-ray-torchtpu)."
+      },
+      {
+        "heading": "TPU agent suite: Coding agents for TPU (Preview)",
+        "level": 3,
+        "content": "The [TPU agent suite](https://github.com/google-pytorch/tpu-agent-suite) is an open-source extension for coding assistants\u2014including Claude Code and Google Antigravity\u2014focused on transformer inference (dense LLMs and MoE models) on TPU v6e and TPU7x.\nFor more information, watch the open-source TPU agent suite overview:"
+      },
+      {
+        "heading": "Motivation",
+        "level": 4,
+        "content": "General-purpose coding assistants often lack current context on TPU hardware topologies, XLA compiler flags, XProf telemetry, and Pallas kernel constraints. The TPU agent suite gives your assistant access to official TPU documentation and structured workflows. This helps prevent invalid flag suggestions and automates iterative profiling and benchmarking."
+      },
+      {
+        "heading": "Design",
+        "level": 4,
+        "content": "The suite adds a TPU knowledge base and four task-specific sub-agents to your existing coding assistant. A router agent (`tpu-agent`) delegates each prompt to the appropriate sub-agent without running commands itself. Any command execution on your TPU VM or GKE cluster requires your approval, and tuning loops run a bounded number of recorded attempts before returning results."
+      },
+      {
+        "heading": "Key strengths",
+        "level": 4,
+        "content": "* **Model onboarding and accuracy verification** : the `tpu-model-onboarding` agent resolves unsupported operators and selects a serving path (vLLM-TorchTPU or standard PyTorch). It also compares layer-by-layer outputs against the CPU reference model to verify numerical accuracy.\n  * **Crash and bottleneck diagnostics** : the `tpu-diagnostics` agent analyzes crash logs, inspects XProf profiles and XLA compiler traces, and isolates runtime bottlenecks.\n  * **Custom Pallas kernel development** : the `tpu-kernel-development` agent helps write and autotune custom Pallas TPU kernels within a bounded iteration budget.\n  * **Documentation lookup with citations** : the `tpu-knowledge-base` agent answers technical questions with explicit citations to official TPU documentation and tutorials, and states when a topic isn't covered.\n\n\nFor more information, see the [TPU agent suite documentation](https://github.com/google-pytorch/tpu-agent-suite), share feedback and ask questions in [TPU agent suite GitHub Discussions](https://github.com/google-pytorch/tpu-agent-suite/discussions), or report issues on the [TPU agent suite issue tracker](https://github.com/google-pytorch/tpu-agent-suite/issues)."
+      },
+      {
+        "heading": "What's next",
+        "level": 2,
+        "content": "* Get started with the [TorchTPU documentation](https://torchtpu.readthedocs.io/).\n  * Try the [TorchTitan on TPU](https://github.com/google-pytorch/torchtitan) recipes.\n  * Deploy inference workloads with [vLLM-TorchTPU](https://github.com/vllm-project/vllm-torchtpu) and [SGLang-TorchTPU](https://github.com/sgl-project/sglang-torchtpu).\n  * Ask questions in the [PyTorch on TPU discussion forum](https://discuss.pytorch.org/c/tpu/45).\n  * To discuss a specific use case with the Google product and engineering team, send an email to torchtpu-feedback@google.com."
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "pip install torch_tpu"
+      },
+      {
+        "language": "text",
+        "code": "import torch\n\ndevice = torch.device(\"tpu\")\n\nx = torch.randn((4, 4), device=device)\ny = torch.ones((4, 4), device=device)\nresult = torch.matmul(x, y).cpu()\n\nprint(f\"Executed on device: {x.device}\")\nprint(f\"Result shape on CPU: {result.shape}, sum: {result.sum():.4f}\")"
+      }
+    ],
+    "cli_commands": [
+      "pip install torch_tpu"
+    ],
+    "environment_variables": [],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'PyTorch on Cloud TPU' (https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu)?",
+        "answer": "Official overview of the current PyTorch TPU stack, including TorchTPU, model serving, training, and migration from PyTorch/XLA."
+      },
+      {
+        "question": "How does 'PyTorch on Cloud TPU' handle: PyTorch on Cloud TPU?",
+        "answer": "PyTorch on Cloud TPU lets you train, fine-tune, and serve open models on Cloud TPU hardware using standard PyTorch semantics and distributed APIs. It integrates with the ecosystem tools you already use, including Hugging Face, vLLM, SGLang, llm-d, TorchTitan, TorchRec, and Ray.\nAt the foundation of the stack is [TorchTPU](https://github.com/google-pytorch/torch_tpu), an open-source, PyTorch-native backend co-developed with the PyTorch team at Meta. TorchTPU provides libraries, frameworks, and tools for every stage of the machine learning lifecycle, from core runtime execution and custom kernels to production inference, large-scale training, and cluster orchestration.\n![TorchTPU connected to Hugging Face, TorchTitan, vLLM, SGLang, Ray, and llm-d,\nwith torch.profiler, DTensor, TorchRec, and\nPallas.](https://docs.cloud.google.com/static/tpu/docs/images/torchtpu-ecosystem.png)"
+      },
+      {
+        "question": "How does 'PyTorch on Cloud TPU' handle: Get started?",
+        "answer": "* **Run PyTorch models on TPUs** : start with [TorchTPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#torchtpu) and the [TorchTPU documentation](https://torchtpu.readthedocs.io/).\n  * **Serve large language models (LLMs) and multimodal models** : use [vLLM-TorchTPU or SGLang-TorchTPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#inference-engines).\n  * **Route requests across a Kubernetes fleet** : use [llm-d](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#llm-d).\n  * **Pre-train or fine-tune foundation models** : use [TorchTitan on TPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#torchtitan) (or [TorchRec](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#torchrec) for recommendation models).\n  * **Scale data processing, training, reinforcement learning (RL), and serving pipelines** : use [Ray](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#ray).\n  * **Onboard, profile, and tune models with your coding assistant** : use the [TPU agent suite](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#tpu-agent-suite) (Preview)."
+      },
+      {
+        "question": "How does 'PyTorch on Cloud TPU' handle: TorchTPU: PyTorch-native backend for Cloud TPU?",
+        "answer": "[TorchTPU](https://github.com/google-pytorch/torch_tpu) provides the device backend, graph compiler integration, and custom kernel APIs for PyTorch on Cloud TPU. Built with the PyTorch team, TorchTPU lets you debug models interactively in eager mode, compile model code with `torch.compile`, and scale across slices with `torch.distributed` (`tpu_dist`).\nTo install TorchTPU, run the following command:\n\n```\npip install torch_tpu\n\n```\n\nTo run a tensor operation on a Cloud TPU, run the following Python code:\n\n```\nimport torch\n\ndevice = torch.device(\"tpu\")\n\nx = torch.randn((4, 4), device=device)\ny = torch.ones((4, 4), device=device)\nresult = torch.matmul(x, y).cpu()\n\nprint(f\"Executed on device: {x.device}\")\nprint(f\"Result shape on CPU: {result.shape}, sum: {result.sum():.4f}\")\n\n```\n\nThe following video gives you a brief overview of TorchTPU:\nFor more information, see [TorchTPU is now open source: Run native PyTorch on TPUs](https://cloud.google.com/blog/topics/ai-infrastructure/torchtpu-is-now-open-source-run-native-pytorch-on-tpus), and see [How TorchTPU works](https://torchtpu.readthedocs.io/en/latest/how_torchtpu_works/)."
+      },
+      {
+        "question": "How does 'PyTorch on Cloud TPU' handle: Motivation?",
+        "answer": "Although Cloud TPUs have historically been paired with JAX and TensorFlow, running PyTorch on TPUs previously required lazy-tensor graph recording (PyTorch/XLA), which often meant adding code to mark compilable regions. TorchTPU runs operations eagerly by default using PyTorch's standard one-process-per-device execution model, so existing workloads and libraries run without structural rewrites.\n**Note:** TorchTPU replaces PyTorch/XLA. We recommend starting new workloads with TorchTPU and migrating existing PyTorch/XLA workloads to TorchTPU."
+      },
+      {
+        "question": "How does 'PyTorch on Cloud TPU' handle: Design?",
+        "answer": "TorchTPU brings PyTorch-native TPU support to PyTorch around three design goals:\n  * **Standard PyTorch semantics** : runs one process per device and preserves PyTorch tensor views and in-place mutations without a JAX runtime dependency.\n  * **Eager execution by default** : runs standard PyTorch models immediately in eager mode for interactive debugging and step-by-step inspection.\n  * **Compiler and kernel optimizations** : provides operator fusion in eager mode (in addition to operator-by-operator eager execution), `torch.compile` integration with dynamic shape bounds to reduce recompilations, and custom kernel APIs.\n\n\nFor graph compilation, `torch.compile` captures the PyTorch computation graph with TorchDynamo and compiles it into TPU machine code through OpenXLA and StableHLO. Collective operations run at the `torch.distributed` process group level (`tpu_dist`)."
+      },
+      {
+        "question": "How does 'PyTorch on Cloud TPU' handle: Key strengths?",
+        "answer": "* **Operator, model, and Hugging Face support** : TorchTPU supports standard PyTorch (ATen) operators in forward and backward passes and is continuously tested against popular Hugging Face models. You can deploy models in Transformers v5 by passing `device_map=\"tpu\"`, run Diffusers pipelines with eager mode, `torch.compile`, and tensor parallelism, and profile workloads with `torch.profiler` in TensorBoard and XProf.\n  * **Single-chip to Multislice scaling** : the `tpu_dist` backend supports `DistributedDataParallel` (DDP), `FullyShardedDataParallel` (FSDP2), and `DTensor`. In addition, `torch.tpu.distributed.topology_aware_mesh` maps parallelism dimensions onto the physical TPU interconnects.\n  * **Configurable eager execution modes** : provides three eager execution modes: \n    * `Strict` (default): dispatches operators individually and asynchronously, with standard imperative PyTorch semantics.\n    * `Debug`: runs synchronously with tensor bounds checking.\n    * `DeferAndFuse`: fuses sequences of eager operators to reduce high-bandwidth memory (HBM) traffic.\n  * **Full-graph compilation and caching** : `torch.compile(backend=\"tpu\")` compiles graphs into TPU executables and cache"
+      },
+      {
+        "question": "How does 'PyTorch on Cloud TPU' handle: Production inference and serving?",
+        "answer": "For production deployment, PyTorch on Cloud TPU integrates with open-source inference engines and Kubernetes-native distributed serving infrastructure."
+      },
+      {
+        "question": "How does 'PyTorch on Cloud TPU' handle: vLLM-TorchTPU and SGLang-TorchTPU: Inference engines?",
+        "answer": "[vLLM-TorchTPU](https://github.com/vllm-project/vllm-torchtpu) and [SGLang-TorchTPU](https://github.com/sgl-project/sglang-torchtpu) are TorchTPU backends for the vLLM and SGLang inference engines. Both backends run open models such as Qwen, DeepSeek, GLM, Kimi, GPT-OSS, and Gemma 4.\nFor more information, see the [vLLM-TorchTPU documentation](https://vllm-torchtpu.readthedocs.io/en/latest/) and [Announcing new vLLM and SGLang inference engines on TPU](https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu/).\n**Note:** [vLLM-JAX](https://github.com/vllm-project/vllm-jax) and [SGLang-JAX](https://github.com/sgl-project/sglang-jax) remain maintained and supported for JAX-based serving workflows."
+      },
+      {
+        "question": "How does 'PyTorch on Cloud TPU' handle: Motivation?",
+        "answer": "Serving reasoning, multimodal, and tool-using workloads often requires custom model definitions, speculative decoding methods, and quantization schemes. Building the vLLM and SGLang backends on TorchTPU lets you customize and debug your serving stack directly in PyTorch."
+      }
+    ],
+    "full_markdown": "# PyTorch on Cloud TPU\nPyTorch on Cloud TPU lets you train, fine-tune, and serve open models on Cloud TPU hardware using standard PyTorch semantics and distributed APIs. It integrates with the ecosystem tools you already use, including Hugging Face, vLLM, SGLang, llm-d, TorchTitan, TorchRec, and Ray.\nAt the foundation of the stack is [TorchTPU](https://github.com/google-pytorch/torch_tpu), an open-source, PyTorch-native backend co-developed with the PyTorch team at Meta. TorchTPU provides libraries, frameworks, and tools for every stage of the machine learning lifecycle, from core runtime execution and custom kernels to production inference, large-scale training, and cluster orchestration.\n![TorchTPU connected to Hugging Face, TorchTitan, vLLM, SGLang, Ray, and llm-d,\nwith torch.profiler, DTensor, TorchRec, and\nPallas.](https://docs.cloud.google.com/static/tpu/docs/images/torchtpu-ecosystem.png)\n## Get started\n  * **Run PyTorch models on TPUs** : start with [TorchTPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#torchtpu) and the [TorchTPU documentation](https://torchtpu.readthedocs.io/).\n  * **Serve large language models (LLMs) and multimodal models** : use [vLLM-TorchTPU or SGLang-TorchTPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#inference-engines).\n  * **Route requests across a Kubernetes fleet** : use [llm-d](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#llm-d).\n  * **Pre-train or fine-tune foundation models** : use [TorchTitan on TPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#torchtitan) (or [TorchRec](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#torchrec) for recommendation models).\n  * **Scale data processing, training, reinforcement learning (RL), and serving pipelines** : use [Ray](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#ray).\n  * **Onboard, profile, and tune models with your coding assistant** : use the [TPU agent suite](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#tpu-agent-suite) (Preview).\n\n\n## TorchTPU: PyTorch-native backend for Cloud TPU\n[TorchTPU](https://github.com/google-pytorch/torch_tpu) provides the device backend, graph compiler integration, and custom kernel APIs for PyTorch on Cloud TPU. Built with the PyTorch team, TorchTPU lets you debug models interactively in eager mode, compile model code with `torch.compile`, and scale across slices with `torch.distributed` (`tpu_dist`).\nTo install TorchTPU, run the following command:\n\n```\npip install torch_tpu\n\n```\n\nTo run a tensor operation on a Cloud TPU, run the following Python code:\n\n```\nimport torch\n\ndevice = torch.device(\"tpu\")\n\nx = torch.randn((4, 4), device=device)\ny = torch.ones((4, 4), device=device)\nresult = torch.matmul(x, y).cpu()\n\nprint(f\"Executed on device: {x.device}\")\nprint(f\"Result shape on CPU: {result.shape}, sum: {result.sum():.4f}\")\n\n```\n\nThe following video gives you a brief overview of TorchTPU:\nFor more information, see [TorchTPU is now open source: Run native PyTorch on TPUs](https://cloud.google.com/blog/topics/ai-infrastructure/torchtpu-is-now-open-source-run-native-pytorch-on-tpus), and see [How TorchTPU works](https://torchtpu.readthedocs.io/en/latest/how_torchtpu_works/).\n### Motivation\nAlthough Cloud TPUs have historically been paired with JAX and TensorFlow, running PyTorch on TPUs previously required lazy-tensor graph recording (PyTorch/XLA), which often meant adding code to mark compilable regions. TorchTPU runs operations eagerly by default using PyTorch's standard one-process-per-device execution model, so existing workloads and libraries run without structural rewrites.\n**Note:** TorchTPU replaces PyTorch/XLA. We recommend starting new workloads with TorchTPU and migrating existing PyTorch/XLA workloads to TorchTPU.\n### Design\nTorchTPU brings PyTorch-native TPU support to PyTorch around three design goals:\n  * **Standard PyTorch semantics** : runs one process per device and preserves PyTorch tensor views and in-place mutations without a JAX runtime dependency.\n  * **Eager execution by default** : runs standard PyTorch models immediately in eager mode for interactive debugging and step-by-step inspection.\n  * **Compiler and kernel optimizations** : provides operator fusion in eager mode (in addition to operator-by-operator eager execution), `torch.compile` integration with dynamic shape bounds to reduce recompilations, and custom kernel APIs.\n\n\nFor graph compilation, `torch.compile` captures the PyTorch computation graph with TorchDynamo and compiles it into TPU machine code through OpenXLA and StableHLO. Collective operations run at the `torch.distributed` process group level (`tpu_dist`).\n### Key strengths\n  * **Operator, model, and Hugging Face support** : TorchTPU supports standard PyTorch (ATen) operators in forward and backward passes and is continuously tested against popular Hugging Face models. You can deploy models in Transformers v5 by passing `device_map=\"tpu\"`, run Diffusers pipelines with eager mode, `torch.compile`, and tensor parallelism, and profile workloads with `torch.profiler` in TensorBoard and XProf.\n  * **Single-chip to Multislice scaling** : the `tpu_dist` backend supports `DistributedDataParallel` (DDP), `FullyShardedDataParallel` (FSDP2), and `DTensor`. In addition, `torch.tpu.distributed.topology_aware_mesh` maps parallelism dimensions onto the physical TPU interconnects.\n  * **Configurable eager execution modes** : provides three eager execution modes: \n    * `Strict` (default): dispatches operators individually and asynchronously, with standard imperative PyTorch semantics.\n    * `Debug`: runs synchronously with tensor bounds checking.\n    * `DeferAndFuse`: fuses sequences of eager operators to reduce high-bandwidth memory (HBM) traffic.\n  * **Full-graph compilation and caching** : `torch.compile(backend=\"tpu\")` compiles graphs into TPU executables and caches them across processes, hosts, and job restarts.\n  * **Custom TPU kernels** : you can call custom [Pallas kernels](https://docs.jax.dev/en/latest/pallas/index.html), including kernels that communicate directly between chips, as standard PyTorch functions. You can also use prebuilt kernels from the [Tokamax](https://github.com/openxla/tokamax) library or author portable tile-based kernels with [Helion](https://pytorch.org/blog/helion-on-tpu-towards-hardware-heterogeneous-kernel-authoring/).\n\n\nFor more information, see the [TorchTPU documentation](https://torchtpu.readthedocs.io/), ask questions in the [PyTorch on TPU discussion forum](https://discuss.pytorch.org/c/tpu/45), or report issues on the [TorchTPU issue tracker](https://github.com/google-pytorch/torch_tpu/issues).\n## Production inference and serving\nFor production deployment, PyTorch on Cloud TPU integrates with open-source inference engines and Kubernetes-native distributed serving infrastructure.\n### vLLM-TorchTPU and SGLang-TorchTPU: Inference engines\n[vLLM-TorchTPU](https://github.com/vllm-project/vllm-torchtpu) and [SGLang-TorchTPU](https://github.com/sgl-project/sglang-torchtpu) are TorchTPU backends for the vLLM and SGLang inference engines. Both backends run open models such as Qwen, DeepSeek, GLM, Kimi, GPT-OSS, and Gemma 4.\nFor more information, see the [vLLM-TorchTPU documentation](https://vllm-torchtpu.readthedocs.io/en/latest/) and [Announcing new vLLM and SGLang inference engines on TPU](https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu/).\n**Note:** [vLLM-JAX](https://github.com/vllm-project/vllm-jax) and [SGLang-JAX](https://github.com/sgl-project/sglang-jax) remain maintained and supported for JAX-based serving workflows.\n#### Motivation\nServing reasoning, multimodal, and tool-using workloads often requires custom model definitions, speculative decoding methods, and quantization schemes. Building the vLLM and SGLang backends on TorchTPU lets you customize and debug your serving stack directly in PyTorch.\n#### Design\nBoth backends retain standard vLLM and SGLang schedulers, key-value (KV) cache managers, and API servers while using TorchTPU execution and custom Pallas operators underneath. Most models run their standard PyTorch model definitions, whereas compute-intensive blocks invoke Pallas kernels inside the compiled graph so hardware-specific kernels can be updated independently.\n#### Key strengths\n  * **Parallelism, quantization, and speculative decoding** : supports tensor, data, expert, pipeline, and context parallelism across hosts, along with multimodal (image and video) and embedding inputs. Supported speculative decoding methods include multi-token prediction (MTP), EAGLE-3, DFlash, DSpark, and n-gram matching. Supported quantization formats include 8-bit (FP8) KV caches and 8-bit (FP8) and 4-bit (MXFP4 and NVFP4) floating-point model checkpoints.\n  * **Two-tier prefix caching, tool calling, and structured output** : automatic prefix caching retains active prefixes in HBM and offloads older prefixes to host memory to avoid recomputation on multi-turn requests. This caching supports hybrid attention and recurrent models, and tool calling and structured output are built in.\n  * **Overlapped KV cache transfers with TPU Sync** : supports disaggregated prefill and decode serving (separating prompt processing and token generation onto distinct worker pools) across hosts and host KV offloading using [TPU Sync](https://github.com/google/tpu-sync). TPU Sync is an open-source C++ library that reads PyTorch device buffers directly on background threads without copying data through host CPU memory.\n\n\nFor more information about vLLM-TorchTPU, see the [vLLM-TorchTPU repository](https://github.com/vllm-project/vllm-torchtpu) and the [vLLM-TorchTPU recipes for TPU7x](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/vLLM-TorchTPU), ask questions in the [vLLM Slack channel](https://slack.vllm.ai/), or report issues on the [vLLM-TorchTPU issue tracker](https://github.com/vllm-project/vllm-torchtpu/issues).\nFor more information about SGLang-TorchTPU, see the [SGLang-TorchTPU repository](https://github.com/sgl-project/sglang-torchtpu) or report issues on the [SGLang-TorchTPU issue tracker](https://github.com/sgl-project/sglang-torchtpu/issues).\n### llm-d: Kubernetes-native distributed inference\n[llm-d](https://github.com/llm-d/llm-d) is an open-source Cloud Native Computing Foundation (CNCF) sandbox framework for distributed LLM inference on Kubernetes. It is developed with Red Hat, IBM, Google Cloud, and a community of more than 500 contributors and 35 organizations.\n#### Motivation\nAlthough single-instance inference engines manage per-replica execution, production fleets must handle traffic spikes, multi-tenant priorities, fleet-wide context sharing, and zero-downtime rollouts. llm-d provides the cluster-level routing and operations layer to coordinate a fleet of inference servers.\n#### Design\nllm-d runs in front of model servers such as vLLM and SGLang on Kubernetes. llm-d provides the following:\n  * Routes requests based on prefix cache state and replica load.\n  * Coordinates disaggregated prefill and decode worker pools.\n  * Supports mixture-of-experts (MoE) sharding and asynchronous batch inference.\n  * Manages tiered KV cache offloading across device memory, host memory, and storage.\n\n\n#### Key strengths\n  * **Multi-turn session routing** : routes multi-turn conversations to replicas that hold their cached context. Turn-priority scheduling and stateful Responses API support let agents reuse context across turns to reduce recomputation.\n  * **Multi-tenant quality of service** : priority and fairness flow control lets latency-sensitive requests and bursty agent workloads share a fleet without resource starvation.\n  * **Fleet operations and rolling updates** : provides a v1 configuration API, router high availability, and coordinated rolling updates that manage prefill and decode replicas as a single logical unit.\n  * **Native TorchTPU serving on Google Kubernetes Engine (GKE)** : you can serve Cloud TPUs alongside other accelerators behind one llm-d endpoint and manage vLLM-TorchTPU and SGLang-TorchTPU replicas with standard Kubernetes tooling.\n\n\nFor more information, see [llm-d Router in About GKE Inference Gateway](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-gke-inference-gateway#llm-d-router) and the [llm-d GKE gateway guide](https://llm-d.ai/docs/infrastructure/gateway/gke), ask questions in the [llm-d Slack channel](https://llm-d.ai/slack), or report issues on the [llm-d issue tracker](https://github.com/llm-d/llm-d/issues).\n## Train, fine-tune, and domain libraries\nTo pre-train, fine-tune, and adapt large models, TorchTPU provides reference training recipes and domain-specific libraries tuned for TPU hardware.\n### TorchTitan on TPU: Large-scale training reference\n[TorchTitan on TPU](https://github.com/google-pytorch/torchtitan) extends [TorchTitan](https://github.com/pytorch/torchtitan), the PyTorch modular reference platform for generative AI training, with TPU sharding passes, custom kernels, and training recipes.\nFor more information, see [Integrating TorchTPU into TorchTitan and Optimizing Models for TPU](https://developers.googleblog.com/integrating-torchtpu-into-torchtitan-and-optimizing-models-for-tpu/).\n#### Motivation\nScaling training across multi-host TPU slices requires sharding parameters across the chip interconnect and overlapping communication with computation. Google and Meta co-developed TPU sharding and compilation passes inside TorchTitan so you don't need to design custom TPU sharding strategies or manually schedule communication.\n#### Design\nYou write models in single-device PyTorch without accelerator-specific code. TorchTitan configures model layers from configuration files, letting you replace individual layers with custom Pallas kernels (such as Splash Attention) without editing the model definition or training loop.\nTorchTitan's `SimpleFSDP` implementation places parameter sharding operations directly inside the compiled graph so the XLA compiler can overlap device communication with computation. In addition, whole-step graph compilation captures the entire training step as a single XLA program. For Multislice runs, hybrid sharding (HSDP) shards within each slice over the inter-chip interconnect (ICI) and replicates across slices over the data center network (DCN). This layout limits cross-slice traffic to a single gradient reduction per step.\n#### Key strengths\n  * **Pre-training and RL post-training recipes** : includes reference recipes for dense LLMs (Llama 3, Qwen 3, and MuseGlimmer 30B), MoE models (Qwen 3 235B, validated on up to 8,192 TPU7x chips), and diffusion transformers (FLUX.1). For RL post-training (such as group relative policy optimization, or GRPO), [VeRL](https://github.com/verl-project/verl/tree/main/examples/tpu/grpo) (Preview) delegates parameter updates to TorchTitan. It then pushes updated weights to serving engines to generate training trajectories (rollouts).\n  * **Preconfigured compiler and parallelism settings** : recipe configurations include preconfigured compiler and parallelism settings so you can tune model FLOPs utilization (MFU) through configuration files rather than code changes.\n  * **Onboarding for new architectures** : the Hugging Face Transformers modeling backend runs Hugging Face Hub model checkpoints (including MoE models without expert parallelism) through the TorchTitan trainer. For full model ports, TorchTitan includes a step-by-step onboarding skill for engineers and coding agents.\n  * **Standalone component reuse** : you can adopt TorchTitan end to end or import individual modules, custom operators, and compiler flags into an existing training codebase.\n\n\nFor more information, see the [TorchTitan on TPU getting started guide](https://github.com/google-pytorch/torchtitan/blob/main/torchtitan/experiments/tpu/README.md) and the [TorchTitan Qwen3-8B training recipe for TPU7x](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/torchtitan/qwen3-8b/tpu7x-2x2x2), ask questions in the [TorchTitan discussion forum](https://discuss.pytorch.org/c/distributed/torchtitan/44), or report issues on the [TorchTitan issue tracker](https://github.com/pytorch/torchtitan/issues).\n### TorchRec: Recommendation systems\n[TorchRec](https://github.com/meta-pytorch/torchrec) is a PyTorch domain library that provides distributed embedding tables and sharding primitives for recommendation models. On Cloud TPU, TorchRec offloads sparse embedding table lookups to dedicated TPU SparseCore processors while running dense matrix operations on the TPU TensorCores.\nFor more information about TorchRec, see the [TorchRec documentation](https://docs.pytorch.org/tutorials/intermediate/torchrec_intro_tutorial.html), ask questions in the [PyTorch on TPU discussion forum](https://discuss.pytorch.org/c/tpu/45), or report issues on the [TorchRec issue tracker](https://github.com/meta-pytorch/torchrec/issues).\n## Cluster orchestration and developer tools\nTo scale multi-node pipelines and automate model onboarding, the TorchTPU ecosystem integrates with Ray and provides coding agent extensions with access to TPU documentation.\n### Ray: Distributed training, serving, and RL\n[Ray](https://github.com/ray-project/ray) scales Python and AI workloads across clusters using Ray Train, Ray Serve, Ray Data, Ray Core, and RL frameworks such as [VeRL](https://github.com/verl-project/verl/tree/main/examples/tpu/grpo) (Preview). For more information, see [Announcing Ray support for PyTorch on Google TPUs](https://www.anyscale.com/blog/announcing-ray-support-native-pytorch-google-tpu).\n#### Motivation\nMultislice training and multi-stage pipelines (such as RL workflows that combine data preprocessing, training, and rollout generation) require automated slice provisioning, topology discovery, and fault-tolerant worker coordination. Standalone launch utilities such as `torchrun` don't provision TPU slices or coordinate multi-stage actor pipelines, so Ray manages cluster-wide scheduling and placement for TorchTPU workloads.\n#### Design\nWhen you submit a job specifying the TPU generation, topology, and worker count, Ray's `SlicePlacementGroup` API reserves complete TPU slices so all workers in a slice are gang-scheduled together over the inter-chip interconnect (ICI). Ray isolates one logical TPU device per worker (`TPU_VISIBLE_CHIPS`) and configures TorchTPU's slice-builder addresses and mesh topology. In Ray Train, setting `use_tpu=True` in `ScalingConfig` with `TorchTrainer` initializes the `tpu` device and `tpu_dist` process group automatically across workers.\n#### Key strengths\n  * **Topology-matched gang scheduling** : `SlicePlacementGroup` and `TorchTrainer` match worker placement across hosts to the physical TPU generation and slice layout to prevent resource fragmentation.\n  * **Automated failure recovery** : runs distributed DDP, FSDP2, and DTensor training jobs across TPU slices on GKE with automated recovery when a worker or slice fails.\n  * **Direct-to-TPU data prefetching** : Ray Data's `iter_torch_batches` method prefetches batches as PyTorch tensors directly into TPU device memory.\n  * **Multi-host inference orchestration** : Ray Serve LLM (`LLMConfig`) reserves a `SlicePlacementGroup` per replica and deploys OpenAI-compatible vLLM-TorchTPU endpoints across single-host and multi-host TPU slices.\n\n\nTo get started on GKE, see [About Ray on GKE](https://docs.cloud.google.com/kubernetes-engine/docs/add-on/ray-on-gke/concepts/overview) and the tutorials on how to [Fine-tune models on multi-host TPUs with Ray and TorchTPU](https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/train-models-tpu-ray-torchtpu) and [Serve LLMs on multi-host TPUs with Ray and TorchTPU](https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-llm-tpu-ray-torchtpu).\n### TPU agent suite: Coding agents for TPU (Preview)\nThe [TPU agent suite](https://github.com/google-pytorch/tpu-agent-suite) is an open-source extension for coding assistants\u2014including Claude Code and Google Antigravity\u2014focused on transformer inference (dense LLMs and MoE models) on TPU v6e and TPU7x.\nFor more information, watch the open-source TPU agent suite overview:\n#### Motivation\nGeneral-purpose coding assistants often lack current context on TPU hardware topologies, XLA compiler flags, XProf telemetry, and Pallas kernel constraints. The TPU agent suite gives your assistant access to official TPU documentation and structured workflows. This helps prevent invalid flag suggestions and automates iterative profiling and benchmarking.\n#### Design\nThe suite adds a TPU knowledge base and four task-specific sub-agents to your existing coding assistant. A router agent (`tpu-agent`) delegates each prompt to the appropriate sub-agent without running commands itself. Any command execution on your TPU VM or GKE cluster requires your approval, and tuning loops run a bounded number of recorded attempts before returning results.\n#### Key strengths\n  * **Model onboarding and accuracy verification** : the `tpu-model-onboarding` agent resolves unsupported operators and selects a serving path (vLLM-TorchTPU or standard PyTorch). It also compares layer-by-layer outputs against the CPU reference model to verify numerical accuracy.\n  * **Crash and bottleneck diagnostics** : the `tpu-diagnostics` agent analyzes crash logs, inspects XProf profiles and XLA compiler traces, and isolates runtime bottlenecks.\n  * **Custom Pallas kernel development** : the `tpu-kernel-development` agent helps write and autotune custom Pallas TPU kernels within a bounded iteration budget.\n  * **Documentation lookup with citations** : the `tpu-knowledge-base` agent answers technical questions with explicit citations to official TPU documentation and tutorials, and states when a topic isn't covered.\n\n\nFor more information, see the [TPU agent suite documentation](https://github.com/google-pytorch/tpu-agent-suite), share feedback and ask questions in [TPU agent suite GitHub Discussions](https://github.com/google-pytorch/tpu-agent-suite/discussions), or report issues on the [TPU agent suite issue tracker](https://github.com/google-pytorch/tpu-agent-suite/issues).\n## What's next\n  * Get started with the [TorchTPU documentation](https://torchtpu.readthedocs.io/).\n  * Try the [TorchTitan on TPU](https://github.com/google-pytorch/torchtitan) recipes.\n  * Deploy inference workloads with [vLLM-TorchTPU](https://github.com/vllm-project/vllm-torchtpu) and [SGLang-TorchTPU](https://github.com/sgl-project/sglang-torchtpu).\n  * Ask questions in the [PyTorch on TPU discussion forum](https://discuss.pytorch.org/c/tpu/45).\n  * To discuss a specific use case with the Google product and engineering team, send an email to torchtpu-feedback@google.com."
+  }
 }

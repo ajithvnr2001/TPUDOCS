@@ -1,58 +1,597 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:infer_15_gke_serve_vllm_trillium",
-  "@type": "DocumentationResource",
-  "name": "Serve an LLM on GKE with vLLM and TPU Trillium",
-  "canonicalUrl": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu",
-  "category": "Inference deployment links",
-  "categorySlug": "inference_deployment_links",
-  "description": "End-to-end Kubernetes deployment tutorial for vLLM on TPU v6e.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu",
-    "crawledAt": "2026-10-26T12:47:51.069397+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 63642
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Serve an LLM on GKE with vLLM and TPU Trillium",
-      "documentedIn",
-      "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu"
-    ],
-    [
-      "Serve an LLM on GKE with vLLM and TPU Trillium",
-      "belongsToCategory",
-      "inference_deployment_links"
-    ],
-    [
-      "Serve an LLM on GKE with vLLM and TPU Trillium",
-      "supportsWorkflow",
-      "High Throughput LLM Inference Serving"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "infer_15_gke_serve_vllm_trillium",
+    "name": "Serve an LLM on GKE with vLLM and TPU Trillium",
+    "url": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu",
+    "category": "inference_deployment_links",
+    "description": "End-to-end Kubernetes deployment tutorial for vLLM on TPU v6e.",
+    "char_count": 32678,
+    "word_count": 3673,
+    "section_count": 30,
+    "code_block_count": 32,
+    "table_count": 0,
+    "cli_command_count": 40,
+    "indexed_at": "2026-10-26T14:46:54.698082+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "schema:name",
+        "object": "Serve an LLM on GKE with vLLM and TPU Trillium"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "schema:category",
+        "object": "inference_deployment_links"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "schema:description",
+        "object": "End-to-end Kubernetes deployment tutorial for vLLM on TPU v6e."
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:vLLM-TPU"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:MaxText"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Serve an LLM using TPU Trillium on GKE with vLLM"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Background"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "TPU Trillium"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "vLLM"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Supported models and features"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Cloud Storage FUSE"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Objectives"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Before you begin"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Check for the roles"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Grant the roles"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Prepare the environment"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Get access to the model"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Generate an access token"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Launch Cloud Shell"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Create a GKE cluster"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Autopilot"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Standard"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Configure kubectl to communicate with your cluster"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Create a Kubernetes Secret for Hugging Face credentials"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Create a Cloud Storage bucket"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Set up a Kubernetes ServiceAccount to access the bucket"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Deploy vLLM model server"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Serve the model"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Set up the custom autoscaler"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Create load on the vLLM endpoint"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "HF_TOKEN"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "PROJECT_ID"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "PROJECT_NUMBER"
+      },
+      {
+        "subject": "tpu_doc:infer_15_gke_serve_vllm_trillium",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "ZONE"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Serve an LLM on GKE with vLLM and TPU Trillium provides official guidance on End-to-end Kubernetes deployment tutorial for vLLM on TPU v6e.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu",
-      "verified": true
-    },
-    {
-      "assertion": "TPU v6e (Trillium) is Google's 6th generation TPU offering high efficiency for inference and training.",
-      "confidence": 0.99,
-      "source": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Serve an LLM on GKE with vLLM and TPU Trillium used for in Cloud TPU workflows?",
-      "answer": "End-to-end Kubernetes deployment tutorial for vLLM on TPU v6e.",
-      "category": "inference_deployment_links"
-    }
-  ],
-  "contentSummary": "End-to-end Kubernetes deployment tutorial for vLLM on TPU v6e."
+  },
+  "structured_content": {
+    "summary": "End-to-end Kubernetes deployment tutorial for vLLM on TPU v6e.",
+    "sections": [
+      {
+        "heading": "Serve an LLM using TPU Trillium on GKE with vLLM",
+        "level": 1,
+        "content": "[ Standard ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/choose-cluster-mode) [ Autopilot ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview)\nThis tutorial shows you how to serve large language models (LLMs) using Tensor Processing Units (TPUs) on Google Kubernetes Engine (GKE) with the [vLLM](https://docs.vllm.ai/en/latest/) serving framework. In this tutorial, you serve [Llama 3.1 70b](https://huggingface.co/meta-llama/Llama-3.1-70B), use TPU Trillium, and set up [horizontal Pod autoscaling](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/horizontalpodautoscaler) using vLLM server metrics.\nThis document is a good starting point if you need the granular control, scalability, resilience, portability, and cost-effectiveness of managed Kubernetes when you deploy and serve your AI/ML workloads."
+      },
+      {
+        "heading": "Background",
+        "level": 2,
+        "content": "By using TPU Trillium on GKE, you can implement a robust, production-ready serving solution with all the benefits of managed [Kubernetes](https://kubernetes.io/), including efficient scalability and higher availability. This section describes the key technologies used in this guide."
+      },
+      {
+        "heading": "TPU Trillium",
+        "level": 3,
+        "content": "TPUs are Google's custom-developed application-specific integrated circuits (ASICs). TPUs are used to accelerate machine learning and AI models built using frameworks such as [TensorFlow](https://www.tensorflow.org/), [PyTorch](https://pytorch.org/), and [JAX](https://github.com/google/jax). This tutorial uses TPU Trillium, which is Google's sixth generation TPU.\nBefore you use TPUs in GKE, we recommend that you complete the following learning path:\n  1. Learn about TPU Trillium [system architecture](https://docs.cloud.google.com/tpu/docs/v6e-intro).\n  2. Learn [about TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus)."
+      },
+      {
+        "heading": "vLLM",
+        "level": 3,
+        "content": "vLLM is a highly optimized, open-source framework for serving LLMs. vLLM can increase serving throughput on TPUs, with features such as the following:\n  * Optimized transformer implementation with [PagedAttention](https://huggingface.co/docs/text-generation-inference/en/conceptual/paged_attention).\n  * Continuous batching to improve the overall serving throughput.\n  * Tensor parallelism and distributed serving on multiple TPUs.\n\n\nTo learn more, refer to the [vLLM documentation](https://docs.vllm.ai/en/latest/)."
+      },
+      {
+        "heading": "Supported models and features",
+        "level": 3,
+        "content": "Before you deploy LLMs with vLLM on TPUs, we recommend that you verify model compatibility and supported features to avoid deployment issues. The [`vllm-project/tpu-inference`](https://github.com/vllm-project/tpu-inference) library provides the necessary backend for vLLM to run on TPUs.\nFor a comprehensive list of supported models and features, refer to the official documentation:\n  * [vLLM TPU Inference GitHub repository](https://github.com/vllm-project/tpu-inference)\n  * [Recommended Models and Features for vLLM on TPU](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models_features/)\n\n**Note:** This tutorial focuses on deploying vLLM in a single-host configuration, which is ideal for models that can be served from a single TPU slice, such as Llama 3.1 70b on a `ct6e-standard-8t` machine type. It's important to note that multi-host configurations are not supported when using vLLM with TPUs on GKE. The lack of multi-host support limits the use of vLLM for serving extremely large models (for example 400B+ parameters) that require the aggregated memory and compute of multiple hosts. For production systems or models that require a multi-host setup, the recommended and performance-optimized solution is to use JetStream, Google's engine for TPU inference. To get started with a multi-host deployment, see [JetStream MaxText inference on v6e TPU](https://docs.cloud.google.com/tpu/docs/tutorials/LLM/jetstream-maxtext-inference-v6e)."
+      },
+      {
+        "heading": "Cloud Storage FUSE",
+        "level": 3,
+        "content": "Cloud Storage FUSE provides access from your GKE cluster to Cloud Storage for model weights that reside in object storage buckets. In this tutorial, the created Cloud Storage bucket will initially be empty. When vLLM starts up, GKE downloads the model from Hugging Face and caches the weights to the Cloud Storage bucket. On Pod restart, or deployment scale-up, subsequent model loads will download cached data from the Cloud Storage bucket, leveraging parallel downloads for optimal performance.\nTo learn more, refer to the [Cloud Storage FUSE CSI driver documentation](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/cloud-storage-fuse-csi-driver)."
+      },
+      {
+        "heading": "Objectives",
+        "level": 2,
+        "content": "This tutorial is intended for MLOps or DevOps engineers or platform administrators who want to use GKE orchestration capabilities for serving LLMs.\nThis tutorial covers the following steps:\n  1. Create a GKE cluster with the recommended TPU Trillium topology based on the model characteristics.\n  2. Deploy the vLLM framework on a node pool in your cluster.\n  3. Use the vLLM framework to serve Llama 3.1 70b using a load balancer.\n  4. Set up horizontal Pod autoscaling using vLLM server metrics.\n  5. Serve the model."
+      },
+      {
+        "heading": "Before you begin",
+        "level": 2,
+        "content": "* Sign in to your Google Cloud account. If you're new to Google Cloud, [ create an account](https://console.cloud.google.com/freetrial) to evaluate how our products perform in real-world scenarios. New customers also get $300 in free credits to run, test, and deploy workloads. \n  * In the Google Cloud console, on the project selector page, select or create a Google Cloud project.\n**Roles required to select or create a project**\n    * **Select a project** : Selecting a project doesn't require a specific IAM role\u2014you can select any project that you've been granted a role on. \n    * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.\n[Go to project selector](https://console.cloud.google.com/projectselector2/home/dashboard)\n  * [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). \n  * Enable the required API, if it is not already enabled. \n**Roles required to enable APIs**\nTo enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n[Enable the API](https://console.cloud.google.com/apis/enableflow?apiid=container.googleapis.com)\n  * In the Google Cloud console, on the project selector page, select or create a Google Cloud project.\n**Roles required to select or create a project**\n    * **Select a project** : Selecting a project doesn't require a specific IAM role\u2014you can select any project that you've been granted a role on. \n    * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.\n[Go to project selector](https://console.cloud.google.com/projectselector2/home/dashboard)\n  * [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). \n  * Enable the required API, if it is not already enabled. \n**Roles required to enable APIs**\nTo enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n[Enable the API](https://console.cloud.google.com/apis/enableflow?apiid=container.googleapis.com)\n  * Make sure that you have the following role or roles on the project: `roles/container.admin`, `roles/iam.serviceAccountAdmin`, `roles/iam.securityAdmin`, `roles/artifactregistry.writer`, `roles/container.clusterAdmin`"
+      },
+      {
+        "heading": "Check for the roles",
+        "level": 4,
+        "content": "1. In the Google Cloud console, go to the **IAM** page. \n[Go to IAM](https://console.cloud.google.com/projectselector/iam-admin/iam?supportedpurview=project)\n    2. Select the project. \n    3. In the **Principal** column, find all rows that identify you or a group that you're included in. To learn which groups you're included in, contact your administrator. \n    4. For all rows that specify or include you, check the **Role** column to see whether the list of roles includes the required roles."
+      },
+      {
+        "heading": "Grant the roles",
+        "level": 4,
+        "content": "1. In the Google Cloud console, go to the **IAM** page. \n[Go to IAM](https://console.cloud.google.com/projectselector/iam-admin/iam?supportedpurview=project)\n    2. Select the project. \n    3. Click person_add **Grant access**. \n    4. In the **New principals** field, enter your user identifier. This is typically the email address for a Google Account.\n    5. Click **Select a role** , then search for the role. \n    6. To grant additional roles, click add **Add another role** and add each additional role. \n    7. Click **Save**. \n\n\n  * Create a [Hugging Face](https://huggingface.co/) account, if you don't already have one.\n  * [Ensure your project has sufficient quota](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/tpus#ensure-quota) for Cloud TPU in GKE."
+      },
+      {
+        "heading": "Prepare the environment",
+        "level": 2,
+        "content": "In this section, you provision the resources that you need to deploy vLLM and the model."
+      },
+      {
+        "heading": "Get access to the model",
+        "level": 3,
+        "content": "You must sign the consent agreement to use Llama 3.1 70b in the [Hugging Face repository](https://huggingface.co/meta-llama/Llama-3.1-70B)."
+      },
+      {
+        "heading": "Generate an access token",
+        "level": 3,
+        "content": "If you don't already have one, generate a new [Hugging Face token](https://huggingface.co/docs/hub/security-tokens):\n  1. Click **Your Profile > Settings > Access Tokens**.\n  2. Select **New Token**.\n  3. Specify a Name of your choice and a Role of at least `Read`.\n  4. Select **Generate a token**."
+      },
+      {
+        "heading": "Launch Cloud Shell",
+        "level": 3,
+        "content": "In this tutorial, you use [Cloud Shell](https://docs.cloud.google.com/shell) to manage resources hosted on Google Cloud. Cloud Shell comes preinstalled with the software you need for this tutorial, including [`kubectl`](https://kubernetes.io/docs/reference/kubectl/) and the [gcloud CLI](https://docs.cloud.google.com/sdk/gcloud).\nTo set up your environment with Cloud Shell, follow these steps:\n  1. In the Google Cloud console, launch a Cloud Shell session by clicking ![Cloud Shell activation icon](https://docs.cloud.google.com/static/shell/docs/images/activate_cloud_shell.svg) **Activate Cloud Shell** in the [Google Cloud console](http://console.cloud.google.com). This launches a session in the bottom pane of the Google Cloud console.\n  2. Set the default environment variables:\n\n```\ngcloud config set project PROJECT_ID && \\\ngcloud config set billing/quota_project PROJECT_ID && \\\nexport PROJECT_ID=$(gcloud config get project) && \\\nexport PROJECT_NUMBER=$(gcloud projects describe ${PROJECT_ID} --format=\"value(projectNumber)\") && \\\nexport CLUSTER_NAME=CLUSTER_NAME && \\\nexport CONTROL_PLANE_LOCATION=CONTROL_PLANE_LOCATION && \\\nexport ZONE=ZONE && \\\nexport HF_TOKEN=HUGGING_FACE_TOKEN && \\\nexport CLUSTER_VERSION=CLUSTER_VERSION && \\\nexport GSBUCKET=GSBUCKET && \\\nexport KSA_NAME=KSA_NAME && \\\nexport NAMESPACE=NAMESPACE\n\n```\n\nReplace the following values:\n     * PROJECT_ID : your Google Cloud [project ID](https://docs.cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects).\n     * CLUSTER_NAME : the name of your GKE cluster.\n     * CONTROL_PLANE_LOCATION: the Compute Engine [region](https://docs.cloud.google.com/compute/docs/regions-zones#available) of the control plane of your cluster. Provide a region that supports TPU Trillium (v6e).\n     * ZONE : a zone that supports TPU Trillium (v6e).\n     * CLUSTER_VERSION : a GKE version that supports TPU Trillium (v6e). For more information, see [Validate TPU availability in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/plan-tpus#availability).\n     * GSBUCKET : the name of the Cloud Storage bucket to use for [Cloud Storage FUSE](https://docs.cloud.google.com/storage/docs/gcs-fuse).\n     * KSA_NAME : the name of the Kubernetes ServiceAccount that's used to access Cloud Storage buckets. Bucket access is needed for Cloud Storage FUSE to work.\n     * NAMESPACE : the Kubernetes namespace where you want to deploy the vLLM assets."
+      },
+      {
+        "heading": "Create a GKE cluster",
+        "level": 3,
+        "content": "You can serve LLMs on TPUs in a GKE Autopilot or Standard cluster. We recommend that you use a Autopilot cluster for a fully managed Kubernetes experience. To choose the GKE mode of operation that's the best fit for your workloads, see [Choose a GKE mode of operation](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/choose-cluster-mode)."
+      },
+      {
+        "heading": "Autopilot",
+        "level": 3,
+        "content": "1. Create a GKE Autopilot cluster:\n\n```\ngcloud container clusters create-auto ${CLUSTER_NAME} \\\n    --cluster-version=${CLUSTER_VERSION} \\\n    --location=${CONTROL_PLANE_LOCATION}\n\n```\n**Note:** If your Cloud Shell instance disconnects throughout the tutorial execution, repeat the preceding step."
+      },
+      {
+        "heading": "Standard",
+        "level": 3,
+        "content": "1. Create a GKE Standard cluster:\n\n```\ngcloud container clusters create ${CLUSTER_NAME} \\\n    --project=${PROJECT_ID} \\\n    --location=${CONTROL_PLANE_LOCATION} \\\n    --node-locations=${ZONE} \\\n    --cluster-version=${CLUSTER_VERSION} \\\n    --workload-pool=${PROJECT_ID}.svc.id.goog \\\n    --addons GcsFuseCsiDriver\n\n```\n\nThis command creates a GKE Standard cluster, and enables [Workload Identity Federation](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/workload-identity) and the [Cloud Storage FUSE CSI driver](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/cloud-storage-fuse-csi-driver). If you are using an existing cluster, ensure that the [Cloud Storage FUSE CSI driver is enabled](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cloud-storage-fuse-csi-driver-setup#enable).\n  1. Create a TPU slice node pool:\n\n```\ngcloud container node-pools create tpunodepool \\\n    --location=${CONTROL_PLANE_LOCATION} \\\n    --node-locations=${ZONE} \\\n    --num-nodes=1 \\\n    --machine-type=ct6e-standard-8t \\\n    --cluster=${CLUSTER_NAME} \\\n    --enable-autoscaling --total-min-nodes=1 --total-max-nodes=2\n\n```\n\nGKE creates the following resources for the LLM:\n     * A GKE Standard cluster that uses [Workload Identity Federation for GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/workload-identity) and has [Cloud Storage FUSE CSI driver](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/cloud-storage-fuse-csi-driver) enabled.\n     * A TPU Trillium node pool with a `ct6e-standard-8t` machine type. This node pool has one node, eight TPU chips, and autoscaling enabled."
+      },
+      {
+        "heading": "Configure kubectl to communicate with your cluster",
+        "level": 3,
+        "content": "To configure kubectl to communicate with your cluster, run the following command:\n\n```\n  gcloud container clusters get-credentials ${CLUSTER_NAME} --location=${CONTROL_PLANE_LOCATION}\n\n```"
+      },
+      {
+        "heading": "Create a Kubernetes Secret for Hugging Face credentials",
+        "level": 3,
+        "content": "1. Create a namespace. You can skip this step if you are using the `default` namespace:\n\n```\nkubectl create namespace ${NAMESPACE}\n\n```\n\n  2. Create a Kubernetes Secret that contains the Hugging Face token, run the following command:\n\n```\nkubectl create secret generic hf-secret \\\n    --from-literal=hf_api_token=${HF_TOKEN} \\\n    --namespace ${NAMESPACE}\n\n```"
+      },
+      {
+        "heading": "Create a Cloud Storage bucket",
+        "level": 3,
+        "content": "In Cloud Shell, run the following command:\n\n```\ngcloud storage buckets create gs://${GSBUCKET} \\\n    --uniform-bucket-level-access\n\n```\n\nThis creates a Cloud Storage bucket to store the model files you download from Hugging Face."
+      },
+      {
+        "heading": "Set up a Kubernetes ServiceAccount to access the bucket",
+        "level": 3,
+        "content": "1. Create the Kubernetes ServiceAccount:\n\n```\nkubectl create serviceaccount ${KSA_NAME} --namespace ${NAMESPACE}\n\n```\n\n  2. Grant read-write access to the Kubernetes ServiceAccount in order to access the Cloud Storage bucket:\n\n```\ngcloud storage buckets add-iam-policy-binding gs://${GSBUCKET} \\\n  --member \"principal://iam.googleapis.com/projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${PROJECT_ID}.svc.id.goog/subject/ns/${NAMESPACE}/sa/${KSA_NAME}\" \\\n  --role \"roles/storage.objectUser\"\n\n```\n\n  3. Alternatively, you can grant read-write access to all Cloud Storage buckets in the project:\n\n```\ngcloud projects add-iam-policy-binding ${PROJECT_ID} \\\n--member \"principal://iam.googleapis.com/projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${PROJECT_ID}.svc.id.goog/subject/ns/${NAMESPACE}/sa/${KSA_NAME}\" \\\n--role \"roles/storage.objectUser\"\n\n```\n\nGKE creates the following resources for the LLM:\n    1. A Cloud Storage bucket to store the downloaded model and the compilation cache. A [Cloud Storage FUSE CSI driver](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/cloud-storage-fuse-csi-driver) reads the content of the bucket.\n    2. [Volumes with file caching enabled](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cloud-storage-fuse-csi-driver-perf#configure-caching) and the [parallel download](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cloud-storage-fuse-csi-driver-perf#parallel-download) feature of Cloud Storage FUSE.\n**Best practice** : \nUse a file cache backed by `tmpfs[](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir)` or `Hyperdisk / Persistent Disk[](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/gce-pd-csi-driver)` depending on the expected size of the model contents, for example, weight files. In this tutorial, you use Cloud Storage FUSE file cache backed by RAM."
+      },
+      {
+        "heading": "Deploy vLLM model server",
+        "level": 2,
+        "content": "To deploy the vLLM model server, this tutorial uses a Kubernetes Deployment. A _Deployment_ is a Kubernetes API object that lets you run multiple replicas of Pods that are distributed among the nodes in a cluster..\n  1. Inspect the following Deployment manifest saved as `vllm-llama3-70b.yaml`, that uses a single replica:\n\n```\n\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: vllm-tpu\nspec:\n  replicas: 1\n  selector:\n    matchLabels:\n      app: vllm-tpu\n  template:\n    metadata:\n      labels:\n        app: vllm-tpu\n      annotations:\n        gke-gcsfuse/volumes: \"true\"\n        gke-gcsfuse/cpu-limit: \"0\"\n        gke-gcsfuse/memory-limit: \"0\"\n        gke-gcsfuse/ephemeral-storage-limit: \"0\"\n    spec:\n      serviceAccountName: KSA_NAME\n      nodeSelector:\n        cloud.google.com/gke-tpu-topology: 2x4\n        cloud.google.com/gke-tpu-accelerator: tpu-v6e-slice\n      containers:\n      - name: vllm-tpu\n        image: vllm/vllm-tpu:latest\n        command: [\"python3\", \"-m\", \"vllm.entrypoints.openai.api_server\"]\n        args:\n        - --host=0.0.0.0\n        - --port=8000\n        - --tensor-parallel-size=8\n        - --max-model-len=4096\n        - --model=meta-llama/Llama-3.1-70B\n        - --download-dir=/data\n        - --max-num-batched-tokens=512\n        - --max-num-seqs=128\n        env: \n        - name: HUGGING_FACE_HUB_TOKEN\n          valueFrom:\n            secretKeyRef:\n              name: hf-secret\n              key: hf_api_token\n        - name: VLLM_XLA_CACHE_PATH\n          value: \"/data\"\n        - name: VLLM_USE_V1\n          value: \"1\"\n        ports:\n        - containerPort: 8000\n        resources:\n          limits:\n            google.com/tpu: 8\n        readinessProbe:\n          tcpSocket:\n            port: 8000\n          initialDelaySeconds: 15\n          periodSeconds: 10\n        volumeMounts:\n        - name: gcs-fuse-csi-ephemeral\n          mountPath: /data\n        - name: dshm\n          mountPath: /dev/shm\n      volumes:\n      - name: gke-gcsfuse-cache\n        emptyDir:\n          medium: Memory\n      - name: dshm\n        emptyDir:\n          medium: Memory\n      - name: gcs-fuse-csi-ephemeral\n        csi:\n          driver: gcsfuse.csi.storage.gke.io\n          volumeAttributes:\n            bucketName: GSBUCKET\n            mountOptions: \"implicit-dirs,file-cache:enable-parallel-downloads:true,file-cache:parallel-downloads-per-file:100,file-cache:max-parallel-downloads:-1,file-cache:download-chunk-size-mb:10,file-cache:max-size-mb:-1\"\n---\napiVersion: v1\nkind: Service\nmetadata:\n  name: vllm-service\nspec:\n  selector:\n    app: vllm-tpu\n  type: LoadBalancer\t\n  ports:\n    - name: http\n      protocol: TCP\n      port: 8000  \n      targetPort: 8000\n\n```\n\nIf you scale up the Deployment to multiple replicas, the concurrent writes to the `VLLM_XLA_CACHE_PATH` will cause the error: `RuntimeError: filesystem error: cannot create directories`. To prevent this error, you have two options:\n    1. Remove the XLA cache location by removing the following block from the Deployment YAML. This means all replicas will recompile the cache.\n\n```\n- name: VLLM_XLA_CACHE_PATH\n  value: \"/data\"\n\n```\n\n    2. Scale the Deployment to `1`, and wait for the first replica to become ready and write to the XLA cache. Then scale to additional replicas. This allows the remainder of the replicas to read the cache, without attempting to write it.\n  2. Apply the manifest by running the following command:\n\n```\nkubectl apply -f vllm-llama3-70b.yaml -n ${NAMESPACE}\n\n```\n\n  3. View the logs from the running model server:\n\n```\nkubectl logs -f -l app=vllm-tpu -n ${NAMESPACE}\n\n```\n\nThe output should look similar to the following:\n\n```\nINFO:     Started server process [1]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)\n\n```"
+      },
+      {
+        "heading": "Serve the model",
+        "level": 2,
+        "content": "1. To get the external IP address of the VLLM service, run the following command:\n\n```\nexport vllm_service=$(kubectl get service vllm-service -o jsonpath='{.status.loadBalancer.ingress[0].ip}' -n ${NAMESPACE})\n\n```\n\n  2. Interact with the model using `curl`:\n\n```\ncurl http://$vllm_service:8000/v1/completions \\\n-H \"Content-Type: application/json\" \\\n-d '{\n    \"model\": \"meta-llama/Llama-3.1-70B\",\n    \"prompt\": \"San Francisco is a\",\n    \"max_tokens\": 7,\n    \"temperature\": 0\n}'\n\n```\n\nThe output should be similar to the following:\n\n```\n{\"id\":\"cmpl-6b4bb29482494ab88408d537da1e608f\",\"object\":\"text_completion\",\"created\":1727822657,\"model\":\"meta-llama/Llama-3-8B\",\"choices\":[{\"index\":0,\"text\":\" top holiday destination featuring scenic beauty and\",\"logprobs\":null,\"finish_reason\":\"length\",\"stop_reason\":null,\"prompt_logprobs\":null}],\"usage\":{\"prompt_tokens\":5,\"total_tokens\":12,\"completion_tokens\":7}}\n\n```"
+      },
+      {
+        "heading": "Set up the custom autoscaler",
+        "level": 2,
+        "content": "In this section, you set up horizontal Pod autoscaling using custom Prometheus metrics. You use the Google Cloud Managed Service for Prometheus metrics from the vLLM server.\nTo learn more, see [Google Cloud Managed Service for Prometheus](https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/setup-managed). This should be enabled by default on the GKE cluster.\n  1. Set up the Custom Metrics Stackdriver Adapter on your cluster:\n\n```\nkubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/k8s-stackdriver/master/custom-metrics-stackdriver-adapter/deploy/production/adapter_new_resource_model.yaml\n\n```\n\n  2. Add the Monitoring Viewer role to the service account that the Custom Metrics Stackdriver Adapter uses:\n\n```\ngcloud projects add-iam-policy-binding projects/${PROJECT_ID} \\\n    --role roles/monitoring.viewer \\\n    --member=principal://iam.googleapis.com/projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${PROJECT_ID}.svc.id.goog/subject/ns/custom-metrics/sa/custom-metrics-stackdriver-adapter\n\n```\n**Note:** Ensure that the service account that your GKE cluster uses has the [Monitoring Metric Writer](https://docs.cloud.google.com/iam/docs/roles-permissions/monitoring) role. This tutorial uses the default Compute Engine service account.\n  3. Save the following manifest as `vllm_pod_monitor.yaml`:\n\n```\n\napiVersion: monitoring.googleapis.com/v1\nkind: PodMonitoring\nmetadata:\n name: vllm-pod-monitoring\nspec:\n selector:\n   matchLabels:\n     app: vllm-tpu\n endpoints:\n - path: /metrics\n   port: 8000\n   interval: 15s\n\n```\n\n  4. Apply it to the cluster:\n\n```\nkubectl apply -f vllm_pod_monitor.yaml -n ${NAMESPACE}\n\n```\n\n\n**Success:** Google Cloud Managed Service for Prometheus is now configured to scrape the vLLM server metrics and make them visible to the horizontal Pod autoscaling controller."
+      },
+      {
+        "heading": "Create load on the vLLM endpoint",
+        "level": 3,
+        "content": "Create load to the vLLM server to test how GKE autoscales with a custom vLLM metric.\n  1. Run a bash script (`load.sh`) to send `N` number of parallel requests to the vLLM endpoint:\n\n```\n#!/bin/bash\nN=PARALLEL_PROCESSES\nexport vllm_service=$(kubectl get service vllm-service -o jsonpath='{.status.loadBalancer.ingress[0].ip}' -n ${NAMESPACE})\nfor i in $(seq 1 $N); do\n  while true; do\n    curl http://$vllm_service:8000/v1/completions -H \"Content-Type: application/json\" -d '{\"model\": \"meta-llama/Llama-3.1-70B\", \"prompt\": \"Write a story about san francisco\", \"max_tokens\": 1000, \"temperature\": 0}'\n  done &  # Run in the background\ndone\nwait\n\n```\n\nReplace PARALLEL_PROCESSES with the number of parallel processes that you want to run.\n  2. Run the bash script:\n\n```\nchmod +x load.sh\nnohup ./load.sh &\n\n```"
+      },
+      {
+        "heading": "Verify that Google Cloud Managed Service for Prometheus ingests the metrics",
+        "level": 3,
+        "content": "After Google Cloud Managed Service for Prometheus scrapes the metrics and you're adding load to the vLLM endpoint, you can view metrics on Cloud Monitoring.\n  1. In the Google Cloud console, go to the **Metrics explorer** page.\n[Go to Metrics explorer](https://console.cloud.google.com/monitoring/metrics-explorer)\n  2. Click **< > PromQL**.\n  3. Enter the following query to observe traffic metrics:\n\n```\nvllm:num_requests_waiting{cluster='CLUSTER_NAME'}\n\n```\n\nA line graph shows your vLLM metric (num_requests_waiting) measured over time. The vLLM metric scales up from 0 (pre-load) to a value (post-load). This graph confirms your vLLM metrics are being ingested into Google Cloud Managed Service for Prometheus. The following example graph shows a starting pre-load value of 0, which reaches a maximum post-load value of close to 400 within one minute.\n![vllm:num_requests_waiting](https://docs.cloud.google.com/static/kubernetes-engine/images/serve-vllm-tpu-metric-validate.png)"
+      },
+      {
+        "heading": "Deploy the Horizontal Pod Autoscaler configuration",
+        "level": 3,
+        "content": "When deciding which metric to autoscale on, we recommend the following metrics for vLLM TPU:\n  * **`num_requests_waiting`**: This metric relates to the number of requests waiting in the model server's queue. This number starts to noticeably grow when the kv cache is full.\n  * **`gpu_cache_usage_perc`**: This metric relates to the kv cache utilization, which directly correlates to the number of requests being processed for a given inference cycle on the model server. Note that this metric works the same on GPUs and TPUs, though it is tied to the GPU naming schema.\n\n\nWe recommend that you use **`num_requests_waiting`**when optimizing for throughput and cost, and when your latency targets are achievable with your model server's maximum throughput.\nWe recommend that you use **`gpu_cache_usage_perc`**when you have latency-sensitive workloads where queue-based scaling isn't fast enough to meet your requirements.\nFor further explanation, check out [Best practices for autoscaling large language model (LLM) inference workloads with TPUs](https://docs.cloud.google.com/kubernetes-engine/docs/best-practices/machine-learning/inference/autoscaling-tpu).\nWhen selecting an `averageValue` target for your HPA config, you will have to determine this experimentally. Check out the [Save on GPUs: Smarter autoscaling for your GKE inferencing workloads](https://cloud.google.com/blog/products/containers-kubernetes/tuning-the-gke-hpa-to-run-inference-on-gpus) blog post for additional ideas on how to optimize this part. The [profile-generator](https://github.com/GoogleCloudPlatform/ai-on-gke/blob/main/benchmarks/benchmark/tools/profile-generator/README.md) used in this blog post works for vLLM TPU as well.\nIn the following instructions, you deploy your HPA configuration by using the **num_requests_waiting** metric. For demonstration purposes, you set the metric to a low value so that the HPA configuration scales your vLLM replicas to two. To deploy the Horizontal Pod Autoscaler configuration using **num_requests_waiting** , follow these steps:\n  1. Save the following manifest as `vllm-hpa.yaml`:\n\n```\n\napiVersion: autoscaling/v2\nkind: HorizontalPodAutoscaler\nmetadata:\n name: vllm-hpa\nspec:\n scaleTargetRef:\n   apiVersion: apps/v1\n   kind: Deployment\n   name: vllm-tpu\n minReplicas: 1\n maxReplicas: 2\n metrics:\n   - type: Pods\n     pods:\n       metric:\n         name: prometheus.googleapis.com|vllm:num_requests_waiting|gauge\n       target:\n         type: AverageValue\n         averageValue: 10\n\n```\n\nThe vLLM metrics in Google Cloud Managed Service for Prometheus follow the `vllm:metric_name` format.\n**Best practice** : \nUse `num_requests_waiting` for scaling throughput. Use `gpu_cache_usage_perc` for latency-sensitive TPU use cases.\n  2. Deploy the Horizontal Pod Autoscaler configuration:\n\n```\nkubectl apply -f vllm-hpa.yaml -n ${NAMESPACE}\n\n```\n\nGKE schedules another Pod to deploy, which triggers the node pool autoscaler to add a second node before it deploys the second vLLM replica.\n  3. Watch the progress of the Pod autoscaling:\n\n```\nkubectl get hpa --watch -n ${NAMESPACE}\n\n```\n\nThe output is similar to the following:\n\n```\nNAME       REFERENCE             TARGETS       MINPODS   MAXPODS   REPLICAS   AGE\nvllm-hpa   Deployment/vllm-tpu   <unknown>/10   1         2         0          6s\nvllm-hpa   Deployment/vllm-tpu   34972m/10      1         2         1          16s\nvllm-hpa   Deployment/vllm-tpu   25112m/10      1         2         2          31s\nvllm-hpa   Deployment/vllm-tpu   35301m/10      1         2         2          46s\nvllm-hpa   Deployment/vllm-tpu   25098m/10      1         2         2          62s\nvllm-hpa   Deployment/vllm-tpu   35348m/10      1         2         2          77s\n\n```\n**Success:** GKE scales up the vLLM server using custom Prometheus metrics.\n  4. Wait for 10 minutes and repeat the steps in the [Verify that Google Cloud Managed Service for Prometheus ingests the metrics](https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu#verify-prometheus) section. Google Cloud Managed Service for Prometheus ingests the metrics from both vLLM endpoints now."
+      },
+      {
+        "heading": "Clean up",
+        "level": 2,
+        "content": "To avoid incurring charges to your Google Cloud account for the resources used in this tutorial, either delete the project that contains the resources, or keep the project and delete the individual resources."
+      },
+      {
+        "heading": "Delete the deployed resources",
+        "level": 3,
+        "content": "To avoid incurring charges to your Google Cloud account for the resources that you created in this guide, run the following commands:\n\n```\nps -ef | grep load.sh | awk '{print $2}' | xargs -n1 kill -9\n\n```\n\n```\ngcloud container clusters delete ${CLUSTER_NAME} \\\n  --location=${CONTROL_PLANE_LOCATION}\n\n```"
+      },
+      {
+        "heading": "What's next",
+        "level": 2,
+        "content": "* Learn more about [TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus).\n  * Learn more about [the available metrics to set up your Horizontal Pod Autoscaler](https://docs.cloud.google.com/kubernetes-engine/docs/best-practices/machine-learning/inference/autoscaling-tpu).\n  * Explore the vLLM [GitHub repository](https://github.com/vllm-project/vllm) and [documentation](https://docs.vllm.ai/en/latest/)."
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "gcloud config set project PROJECT_ID && \\\ngcloud config set billing/quota_project PROJECT_ID && \\\nexport PROJECT_ID=$(gcloud config get project) && \\\nexport PROJECT_NUMBER=$(gcloud projects describe ${PROJECT_ID} --format=\"value(projectNumber)\") && \\\nexport CLUSTER_NAME=CLUSTER_NAME && \\\nexport CONTROL_PLANE_LOCATION=CONTROL_PLANE_LOCATION && \\\nexport ZONE=ZONE && \\\nexport HF_TOKEN=HUGGING_FACE_TOKEN && \\\nexport CLUSTER_VERSION=CLUSTER_VERSION && \\\nexport GSBUCKET=GSBUCKET && \\\nexport KSA_NAME=KSA_NAME && \\\nexport NAMESPACE=NAMESPACE"
+      },
+      {
+        "language": "text",
+        "code": "gcloud container clusters create-auto ${CLUSTER_NAME} \\\n    --cluster-version=${CLUSTER_VERSION} \\\n    --location=${CONTROL_PLANE_LOCATION}"
+      },
+      {
+        "language": "text",
+        "code": "gcloud container clusters create ${CLUSTER_NAME} \\\n    --project=${PROJECT_ID} \\\n    --location=${CONTROL_PLANE_LOCATION} \\\n    --node-locations=${ZONE} \\\n    --cluster-version=${CLUSTER_VERSION} \\\n    --workload-pool=${PROJECT_ID}.svc.id.goog \\\n    --addons GcsFuseCsiDriver"
+      },
+      {
+        "language": "text",
+        "code": "gcloud container node-pools create tpunodepool \\\n    --location=${CONTROL_PLANE_LOCATION} \\\n    --node-locations=${ZONE} \\\n    --num-nodes=1 \\\n    --machine-type=ct6e-standard-8t \\\n    --cluster=${CLUSTER_NAME} \\\n    --enable-autoscaling --total-min-nodes=1 --total-max-nodes=2"
+      },
+      {
+        "language": "text",
+        "code": "gcloud container clusters get-credentials ${CLUSTER_NAME} --location=${CONTROL_PLANE_LOCATION}"
+      },
+      {
+        "language": "text",
+        "code": "kubectl create namespace ${NAMESPACE}"
+      },
+      {
+        "language": "text",
+        "code": "kubectl create secret generic hf-secret \\\n    --from-literal=hf_api_token=${HF_TOKEN} \\\n    --namespace ${NAMESPACE}"
+      },
+      {
+        "language": "text",
+        "code": "gcloud storage buckets create gs://${GSBUCKET} \\\n    --uniform-bucket-level-access"
+      },
+      {
+        "language": "text",
+        "code": "kubectl create serviceaccount ${KSA_NAME} --namespace ${NAMESPACE}"
+      },
+      {
+        "language": "text",
+        "code": "gcloud storage buckets add-iam-policy-binding gs://${GSBUCKET} \\\n  --member \"principal://iam.googleapis.com/projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${PROJECT_ID}.svc.id.goog/subject/ns/${NAMESPACE}/sa/${KSA_NAME}\" \\\n  --role \"roles/storage.objectUser\""
+      },
+      {
+        "language": "text",
+        "code": "gcloud projects add-iam-policy-binding ${PROJECT_ID} \\\n--member \"principal://iam.googleapis.com/projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${PROJECT_ID}.svc.id.goog/subject/ns/${NAMESPACE}/sa/${KSA_NAME}\" \\\n--role \"roles/storage.objectUser\""
+      },
+      {
+        "language": "text",
+        "code": "apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: vllm-tpu\nspec:\n  replicas: 1\n  selector:\n    matchLabels:\n      app: vllm-tpu\n  template:\n    metadata:\n      labels:\n        app: vllm-tpu\n      annotations:\n        gke-gcsfuse/volumes: \"true\"\n        gke-gcsfuse/cpu-limit: \"0\"\n        gke-gcsfuse/memory-limit: \"0\"\n        gke-gcsfuse/ephemeral-storage-limit: \"0\"\n    spec:\n      serviceAccountName: KSA_NAME\n      nodeSelector:\n        cloud.google.com/gke-tpu-topology: 2x4\n        cloud.google.com/gke-tpu-accelerator: tpu-v6e-slice\n      containers:\n      - name: vllm-tpu\n        image: vllm/vllm-tpu:latest\n        command: [\"python3\", \"-m\", \"vllm.entrypoints.openai.api_server\"]\n        args:\n        - --host=0.0.0.0\n        - --port=8000\n        - --tensor-parallel-size=8\n        - --max-model-len=4096\n        - --model=meta-llama/Llama-3.1-70B\n        - --download-dir=/data\n        - --max-num-batched-tokens=512\n        - --max-num-seqs=128\n        env: \n        - name: HUGGING_FACE_HUB_TOKEN\n          valueFrom:\n            secretKeyRef:\n              name: hf-secret\n              key: hf_api_token\n        - name: VLLM_XLA_CACHE_PATH\n          value: \"/data\"\n        - name: VLLM_USE_V1\n          value: \"1\"\n        ports:\n        - containerPort: 8000\n        resources:\n          limits:\n            google.com/tpu: 8\n        readinessProbe:\n          tcpSocket:\n            port: 8000\n          initialDelaySeconds: 15\n          periodSeconds: 10\n        volumeMounts:\n        - name: gcs-fuse-csi-ephemeral\n          mountPath: /data\n        - name: dshm\n          mountPath: /dev/shm\n      volumes:\n      - name: gke-gcsfuse-cache\n        emptyDir:\n          medium: Memory\n      - name: dshm\n        emptyDir:\n          medium: Memory\n      - name: gcs-fuse-csi-ephemeral\n        csi:\n          driver: gcsfuse.csi.storage.gke.io\n          volumeAttributes:\n            bucketName: GSBUCKET\n            mountOptions: \"implicit-dirs,file-cache:enable-parallel-downloads:true,file-cache:parallel-downloads-per-file:100,file-cache:max-parallel-downloads:-1,file-cache:download-chunk-size-mb:10,file-cache:max-size-mb:-1\"\n---\napiVersion: v1\nkind: Service\nmetadata:\n  name: vllm-service\nspec:\n  selector:\n    app: vllm-tpu\n  type: LoadBalancer\t\n  ports:\n    - name: http\n      protocol: TCP\n      port: 8000  \n      targetPort: 8000"
+      },
+      {
+        "language": "text",
+        "code": "- name: VLLM_XLA_CACHE_PATH\n  value: \"/data\""
+      },
+      {
+        "language": "text",
+        "code": "kubectl apply -f vllm-llama3-70b.yaml -n ${NAMESPACE}"
+      },
+      {
+        "language": "text",
+        "code": "kubectl logs -f -l app=vllm-tpu -n ${NAMESPACE}"
+      },
+      {
+        "language": "text",
+        "code": "INFO:     Started server process [1]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)"
+      },
+      {
+        "language": "text",
+        "code": "export vllm_service=$(kubectl get service vllm-service -o jsonpath='{.status.loadBalancer.ingress[0].ip}' -n ${NAMESPACE})"
+      },
+      {
+        "language": "text",
+        "code": "curl http://$vllm_service:8000/v1/completions \\\n-H \"Content-Type: application/json\" \\\n-d '{\n    \"model\": \"meta-llama/Llama-3.1-70B\",\n    \"prompt\": \"San Francisco is a\",\n    \"max_tokens\": 7,\n    \"temperature\": 0\n}'"
+      },
+      {
+        "language": "text",
+        "code": "{\"id\":\"cmpl-6b4bb29482494ab88408d537da1e608f\",\"object\":\"text_completion\",\"created\":1727822657,\"model\":\"meta-llama/Llama-3-8B\",\"choices\":[{\"index\":0,\"text\":\" top holiday destination featuring scenic beauty and\",\"logprobs\":null,\"finish_reason\":\"length\",\"stop_reason\":null,\"prompt_logprobs\":null}],\"usage\":{\"prompt_tokens\":5,\"total_tokens\":12,\"completion_tokens\":7}}"
+      },
+      {
+        "language": "text",
+        "code": "kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/k8s-stackdriver/master/custom-metrics-stackdriver-adapter/deploy/production/adapter_new_resource_model.yaml"
+      },
+      {
+        "language": "text",
+        "code": "gcloud projects add-iam-policy-binding projects/${PROJECT_ID} \\\n    --role roles/monitoring.viewer \\\n    --member=principal://iam.googleapis.com/projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${PROJECT_ID}.svc.id.goog/subject/ns/custom-metrics/sa/custom-metrics-stackdriver-adapter"
+      },
+      {
+        "language": "text",
+        "code": "apiVersion: monitoring.googleapis.com/v1\nkind: PodMonitoring\nmetadata:\n name: vllm-pod-monitoring\nspec:\n selector:\n   matchLabels:\n     app: vllm-tpu\n endpoints:\n - path: /metrics\n   port: 8000\n   interval: 15s"
+      },
+      {
+        "language": "text",
+        "code": "kubectl apply -f vllm_pod_monitor.yaml -n ${NAMESPACE}"
+      },
+      {
+        "language": "text",
+        "code": "#!/bin/bash\nN=PARALLEL_PROCESSES\nexport vllm_service=$(kubectl get service vllm-service -o jsonpath='{.status.loadBalancer.ingress[0].ip}' -n ${NAMESPACE})\nfor i in $(seq 1 $N); do\n  while true; do\n    curl http://$vllm_service:8000/v1/completions -H \"Content-Type: application/json\" -d '{\"model\": \"meta-llama/Llama-3.1-70B\", \"prompt\": \"Write a story about san francisco\", \"max_tokens\": 1000, \"temperature\": 0}'\n  done &  # Run in the background\ndone\nwait"
+      },
+      {
+        "language": "text",
+        "code": "chmod +x load.sh\nnohup ./load.sh &"
+      },
+      {
+        "language": "text",
+        "code": "vllm:num_requests_waiting{cluster='CLUSTER_NAME'}"
+      },
+      {
+        "language": "text",
+        "code": "apiVersion: autoscaling/v2\nkind: HorizontalPodAutoscaler\nmetadata:\n name: vllm-hpa\nspec:\n scaleTargetRef:\n   apiVersion: apps/v1\n   kind: Deployment\n   name: vllm-tpu\n minReplicas: 1\n maxReplicas: 2\n metrics:\n   - type: Pods\n     pods:\n       metric:\n         name: prometheus.googleapis.com|vllm:num_requests_waiting|gauge\n       target:\n         type: AverageValue\n         averageValue: 10"
+      },
+      {
+        "language": "text",
+        "code": "kubectl apply -f vllm-hpa.yaml -n ${NAMESPACE}"
+      },
+      {
+        "language": "text",
+        "code": "kubectl get hpa --watch -n ${NAMESPACE}"
+      },
+      {
+        "language": "text",
+        "code": "NAME       REFERENCE             TARGETS       MINPODS   MAXPODS   REPLICAS   AGE\nvllm-hpa   Deployment/vllm-tpu   <unknown>/10   1         2         0          6s\nvllm-hpa   Deployment/vllm-tpu   34972m/10      1         2         1          16s\nvllm-hpa   Deployment/vllm-tpu   25112m/10      1         2         2          31s\nvllm-hpa   Deployment/vllm-tpu   35301m/10      1         2         2          46s\nvllm-hpa   Deployment/vllm-tpu   25098m/10      1         2         2          62s\nvllm-hpa   Deployment/vllm-tpu   35348m/10      1         2         2          77s"
+      },
+      {
+        "language": "text",
+        "code": "ps -ef | grep load.sh | awk '{print $2}' | xargs -n1 kill -9"
+      },
+      {
+        "language": "text",
+        "code": "gcloud container clusters delete ${CLUSTER_NAME} \\\n  --location=${CONTROL_PLANE_LOCATION}"
+      }
+    ],
+    "cli_commands": [
+      "gcloud config set project PROJECT_ID && \\",
+      "gcloud config set billing/quota_project PROJECT_ID && \\",
+      "export PROJECT_ID=$(gcloud config get project) && \\",
+      "export PROJECT_NUMBER=$(gcloud projects describe ${PROJECT_ID} --format=\"value(projectNumber)\") && \\",
+      "export CLUSTER_NAME=CLUSTER_NAME && \\",
+      "export CONTROL_PLANE_LOCATION=CONTROL_PLANE_LOCATION && \\",
+      "export ZONE=ZONE && \\",
+      "export HF_TOKEN=HUGGING_FACE_TOKEN && \\",
+      "export CLUSTER_VERSION=CLUSTER_VERSION && \\",
+      "export GSBUCKET=GSBUCKET && \\",
+      "export KSA_NAME=KSA_NAME && \\",
+      "export NAMESPACE=NAMESPACE",
+      "gcloud container clusters create-auto ${CLUSTER_NAME} \\",
+      "gcloud container clusters create ${CLUSTER_NAME} \\",
+      "gcloud container node-pools create tpunodepool \\",
+      "gcloud container clusters get-credentials ${CLUSTER_NAME} --location=${CONTROL_PLANE_LOCATION}",
+      "kubectl create namespace ${NAMESPACE}",
+      "kubectl create secret generic hf-secret \\",
+      "gcloud storage buckets create gs://${GSBUCKET} \\",
+      "kubectl create serviceaccount ${KSA_NAME} --namespace ${NAMESPACE}",
+      "gcloud storage buckets add-iam-policy-binding gs://${GSBUCKET} \\",
+      "gcloud projects add-iam-policy-binding ${PROJECT_ID} \\",
+      "kubectl apply -f vllm-llama3-70b.yaml -n ${NAMESPACE}",
+      "kubectl logs -f -l app=vllm-tpu -n ${NAMESPACE}",
+      "export vllm_service=$(kubectl get service vllm-service -o jsonpath='{.status.loadBalancer.ingress[0].ip}' -n ${NAMESPACE})",
+      "curl http://$vllm_service:8000/v1/completions \\",
+      "kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/k8s-stackdriver/master/custom-metrics-stackdriver-adapter/deploy/production/adapter_new_resource_model.yaml",
+      "gcloud projects add-iam-policy-binding projects/${PROJECT_ID} \\",
+      "kubectl apply -f vllm_pod_monitor.yaml -n ${NAMESPACE}",
+      "curl http://$vllm_service:8000/v1/completions -H \"Content-Type: application/json\" -d '{\"model\": \"meta-llama/Llama-3.1-70B\", \"prompt\": \"Write a story about san francisco\", \"max_tokens\": 1000, \"temperature\": 0}'",
+      "vllm:num_requests_waiting{cluster='CLUSTER_NAME'}",
+      "kubectl apply -f vllm-hpa.yaml -n ${NAMESPACE}",
+      "kubectl get hpa --watch -n ${NAMESPACE}",
+      "vllm-hpa   Deployment/vllm-tpu   <unknown>/10   1         2         0          6s",
+      "vllm-hpa   Deployment/vllm-tpu   34972m/10      1         2         1          16s",
+      "vllm-hpa   Deployment/vllm-tpu   25112m/10      1         2         2          31s",
+      "vllm-hpa   Deployment/vllm-tpu   35301m/10      1         2         2          46s",
+      "vllm-hpa   Deployment/vllm-tpu   25098m/10      1         2         2          62s",
+      "vllm-hpa   Deployment/vllm-tpu   35348m/10      1         2         2          77s",
+      "gcloud container clusters delete ${CLUSTER_NAME} \\"
+    ],
+    "environment_variables": [
+      "HF_TOKEN",
+      "PROJECT_ID",
+      "PROJECT_NUMBER",
+      "ZONE"
+    ],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Serve an LLM on GKE with vLLM and TPU Trillium' (https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu)?",
+        "answer": "End-to-end Kubernetes deployment tutorial for vLLM on TPU v6e."
+      },
+      {
+        "question": "How does 'Serve an LLM on GKE with vLLM and TPU Trillium' handle: Serve an LLM using TPU Trillium on GKE with vLLM?",
+        "answer": "[ Standard ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/choose-cluster-mode) [ Autopilot ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview)\nThis tutorial shows you how to serve large language models (LLMs) using Tensor Processing Units (TPUs) on Google Kubernetes Engine (GKE) with the [vLLM](https://docs.vllm.ai/en/latest/) serving framework. In this tutorial, you serve [Llama 3.1 70b](https://huggingface.co/meta-llama/Llama-3.1-70B), use TPU Trillium, and set up [horizontal Pod autoscaling](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/horizontalpodautoscaler) using vLLM server metrics.\nThis document is a good starting point if you need the granular control, scalability, resilience, portability, and cost-effectiveness of managed Kubernetes when you deploy and serve your AI/ML workloads."
+      },
+      {
+        "question": "How does 'Serve an LLM on GKE with vLLM and TPU Trillium' handle: Background?",
+        "answer": "By using TPU Trillium on GKE, you can implement a robust, production-ready serving solution with all the benefits of managed [Kubernetes](https://kubernetes.io/), including efficient scalability and higher availability. This section describes the key technologies used in this guide."
+      },
+      {
+        "question": "How does 'Serve an LLM on GKE with vLLM and TPU Trillium' handle: TPU Trillium?",
+        "answer": "TPUs are Google's custom-developed application-specific integrated circuits (ASICs). TPUs are used to accelerate machine learning and AI models built using frameworks such as [TensorFlow](https://www.tensorflow.org/), [PyTorch](https://pytorch.org/), and [JAX](https://github.com/google/jax). This tutorial uses TPU Trillium, which is Google's sixth generation TPU.\nBefore you use TPUs in GKE, we recommend that you complete the following learning path:\n  1. Learn about TPU Trillium [system architecture](https://docs.cloud.google.com/tpu/docs/v6e-intro).\n  2. Learn [about TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus)."
+      },
+      {
+        "question": "How does 'Serve an LLM on GKE with vLLM and TPU Trillium' handle: vLLM?",
+        "answer": "vLLM is a highly optimized, open-source framework for serving LLMs. vLLM can increase serving throughput on TPUs, with features such as the following:\n  * Optimized transformer implementation with [PagedAttention](https://huggingface.co/docs/text-generation-inference/en/conceptual/paged_attention).\n  * Continuous batching to improve the overall serving throughput.\n  * Tensor parallelism and distributed serving on multiple TPUs.\n\n\nTo learn more, refer to the [vLLM documentation](https://docs.vllm.ai/en/latest/)."
+      },
+      {
+        "question": "How does 'Serve an LLM on GKE with vLLM and TPU Trillium' handle: Supported models and features?",
+        "answer": "Before you deploy LLMs with vLLM on TPUs, we recommend that you verify model compatibility and supported features to avoid deployment issues. The [`vllm-project/tpu-inference`](https://github.com/vllm-project/tpu-inference) library provides the necessary backend for vLLM to run on TPUs.\nFor a comprehensive list of supported models and features, refer to the official documentation:\n  * [vLLM TPU Inference GitHub repository](https://github.com/vllm-project/tpu-inference)\n  * [Recommended Models and Features for vLLM on TPU](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models_features/)\n\n**Note:** This tutorial focuses on deploying vLLM in a single-host configuration, which is ideal for models that can be served from a single TPU slice, such as Llama 3.1 70b on a `ct6e-standard-8t` machine type. It's important to note that multi-host configurations are not supported when using vLLM with TPUs on GKE. The lack of multi-host support limits the use of vLLM for serving extremely large models (for example 400B+ parameters) that require the aggregated memory and compute of multiple hosts. For production systems or models that require a multi-host setup, the recommended and perform"
+      },
+      {
+        "question": "How does 'Serve an LLM on GKE with vLLM and TPU Trillium' handle: Cloud Storage FUSE?",
+        "answer": "Cloud Storage FUSE provides access from your GKE cluster to Cloud Storage for model weights that reside in object storage buckets. In this tutorial, the created Cloud Storage bucket will initially be empty. When vLLM starts up, GKE downloads the model from Hugging Face and caches the weights to the Cloud Storage bucket. On Pod restart, or deployment scale-up, subsequent model loads will download cached data from the Cloud Storage bucket, leveraging parallel downloads for optimal performance.\nTo learn more, refer to the [Cloud Storage FUSE CSI driver documentation](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/cloud-storage-fuse-csi-driver)."
+      },
+      {
+        "question": "How does 'Serve an LLM on GKE with vLLM and TPU Trillium' handle: Objectives?",
+        "answer": "This tutorial is intended for MLOps or DevOps engineers or platform administrators who want to use GKE orchestration capabilities for serving LLMs.\nThis tutorial covers the following steps:\n  1. Create a GKE cluster with the recommended TPU Trillium topology based on the model characteristics.\n  2. Deploy the vLLM framework on a node pool in your cluster.\n  3. Use the vLLM framework to serve Llama 3.1 70b using a load balancer.\n  4. Set up horizontal Pod autoscaling using vLLM server metrics.\n  5. Serve the model."
+      },
+      {
+        "question": "How does 'Serve an LLM on GKE with vLLM and TPU Trillium' handle: Before you begin?",
+        "answer": "* Sign in to your Google Cloud account. If you're new to Google Cloud, [ create an account](https://console.cloud.google.com/freetrial) to evaluate how our products perform in real-world scenarios. New customers also get $300 in free credits to run, test, and deploy workloads. \n  * In the Google Cloud console, on the project selector page, select or create a Google Cloud project.\n**Roles required to select or create a project**\n    * **Select a project** : Selecting a project doesn't require a specific IAM role\u2014you can select any project that you've been granted a role on. \n    * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.\n[Go to project selector](https://console.cloud.google.com/projectselec"
+      },
+      {
+        "question": "How does 'Serve an LLM on GKE with vLLM and TPU Trillium' handle: Check for the roles?",
+        "answer": "1. In the Google Cloud console, go to the **IAM** page. \n[Go to IAM](https://console.cloud.google.com/projectselector/iam-admin/iam?supportedpurview=project)\n    2. Select the project. \n    3. In the **Principal** column, find all rows that identify you or a group that you're included in. To learn which groups you're included in, contact your administrator. \n    4. For all rows that specify or include you, check the **Role** column to see whether the list of roles includes the required roles."
+      }
+    ],
+    "full_markdown": "#  Serve an LLM using TPU Trillium on GKE with vLLM\n[ Standard ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/choose-cluster-mode) [ Autopilot ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview)\nThis tutorial shows you how to serve large language models (LLMs) using Tensor Processing Units (TPUs) on Google Kubernetes Engine (GKE) with the [vLLM](https://docs.vllm.ai/en/latest/) serving framework. In this tutorial, you serve [Llama 3.1 70b](https://huggingface.co/meta-llama/Llama-3.1-70B), use TPU Trillium, and set up [horizontal Pod autoscaling](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/horizontalpodautoscaler) using vLLM server metrics.\nThis document is a good starting point if you need the granular control, scalability, resilience, portability, and cost-effectiveness of managed Kubernetes when you deploy and serve your AI/ML workloads.\n## Background\nBy using TPU Trillium on GKE, you can implement a robust, production-ready serving solution with all the benefits of managed [Kubernetes](https://kubernetes.io/), including efficient scalability and higher availability. This section describes the key technologies used in this guide.\n### TPU Trillium\nTPUs are Google's custom-developed application-specific integrated circuits (ASICs). TPUs are used to accelerate machine learning and AI models built using frameworks such as [TensorFlow](https://www.tensorflow.org/), [PyTorch](https://pytorch.org/), and [JAX](https://github.com/google/jax). This tutorial uses TPU Trillium, which is Google's sixth generation TPU.\nBefore you use TPUs in GKE, we recommend that you complete the following learning path:\n  1. Learn about TPU Trillium [system architecture](https://docs.cloud.google.com/tpu/docs/v6e-intro).\n  2. Learn [about TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus).\n\n\n### vLLM\nvLLM is a highly optimized, open-source framework for serving LLMs. vLLM can increase serving throughput on TPUs, with features such as the following:\n  * Optimized transformer implementation with [PagedAttention](https://huggingface.co/docs/text-generation-inference/en/conceptual/paged_attention).\n  * Continuous batching to improve the overall serving throughput.\n  * Tensor parallelism and distributed serving on multiple TPUs.\n\n\nTo learn more, refer to the [vLLM documentation](https://docs.vllm.ai/en/latest/).\n### Supported models and features\nBefore you deploy LLMs with vLLM on TPUs, we recommend that you verify model compatibility and supported features to avoid deployment issues. The [`vllm-project/tpu-inference`](https://github.com/vllm-project/tpu-inference) library provides the necessary backend for vLLM to run on TPUs.\nFor a comprehensive list of supported models and features, refer to the official documentation:\n  * [vLLM TPU Inference GitHub repository](https://github.com/vllm-project/tpu-inference)\n  * [Recommended Models and Features for vLLM on TPU](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models_features/)\n\n**Note:** This tutorial focuses on deploying vLLM in a single-host configuration, which is ideal for models that can be served from a single TPU slice, such as Llama 3.1 70b on a `ct6e-standard-8t` machine type. It's important to note that multi-host configurations are not supported when using vLLM with TPUs on GKE. The lack of multi-host support limits the use of vLLM for serving extremely large models (for example 400B+ parameters) that require the aggregated memory and compute of multiple hosts. For production systems or models that require a multi-host setup, the recommended and performance-optimized solution is to use JetStream, Google's engine for TPU inference. To get started with a multi-host deployment, see [JetStream MaxText inference on v6e TPU](https://docs.cloud.google.com/tpu/docs/tutorials/LLM/jetstream-maxtext-inference-v6e).\n### Cloud Storage FUSE\nCloud Storage FUSE provides access from your GKE cluster to Cloud Storage for model weights that reside in object storage buckets. In this tutorial, the created Cloud Storage bucket will initially be empty. When vLLM starts up, GKE downloads the model from Hugging Face and caches the weights to the Cloud Storage bucket. On Pod restart, or deployment scale-up, subsequent model loads will download cached data from the Cloud Storage bucket, leveraging parallel downloads for optimal performance.\nTo learn more, refer to the [Cloud Storage FUSE CSI driver documentation](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/cloud-storage-fuse-csi-driver).\n## Objectives\nThis tutorial is intended for MLOps or DevOps engineers or platform administrators who want to use GKE orchestration capabilities for serving LLMs.\nThis tutorial covers the following steps:\n  1. Create a GKE cluster with the recommended TPU Trillium topology based on the model characteristics.\n  2. Deploy the vLLM framework on a node pool in your cluster.\n  3. Use the vLLM framework to serve Llama 3.1 70b using a load balancer.\n  4. Set up horizontal Pod autoscaling using vLLM server metrics.\n  5. Serve the model.\n\n\n## Before you begin\n  * Sign in to your Google Cloud account. If you're new to Google Cloud, [ create an account](https://console.cloud.google.com/freetrial) to evaluate how our products perform in real-world scenarios. New customers also get $300 in free credits to run, test, and deploy workloads. \n  * In the Google Cloud console, on the project selector page, select or create a Google Cloud project.\n**Roles required to select or create a project**\n    * **Select a project** : Selecting a project doesn't require a specific IAM role\u2014you can select any project that you've been granted a role on. \n    * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.\n[Go to project selector](https://console.cloud.google.com/projectselector2/home/dashboard)\n  * [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). \n  * Enable the required API, if it is not already enabled. \n**Roles required to enable APIs**\nTo enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n[Enable the API](https://console.cloud.google.com/apis/enableflow?apiid=container.googleapis.com)\n  * In the Google Cloud console, on the project selector page, select or create a Google Cloud project.\n**Roles required to select or create a project**\n    * **Select a project** : Selecting a project doesn't require a specific IAM role\u2014you can select any project that you've been granted a role on. \n    * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.\n[Go to project selector](https://console.cloud.google.com/projectselector2/home/dashboard)\n  * [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). \n  * Enable the required API, if it is not already enabled. \n**Roles required to enable APIs**\nTo enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n[Enable the API](https://console.cloud.google.com/apis/enableflow?apiid=container.googleapis.com)\n  * Make sure that you have the following role or roles on the project: `roles/container.admin`, `roles/iam.serviceAccountAdmin`, `roles/iam.securityAdmin`, `roles/artifactregistry.writer`, `roles/container.clusterAdmin`\n#### Check for the roles\n    1. In the Google Cloud console, go to the **IAM** page. \n[Go to IAM](https://console.cloud.google.com/projectselector/iam-admin/iam?supportedpurview=project)\n    2. Select the project. \n    3. In the **Principal** column, find all rows that identify you or a group that you're included in. To learn which groups you're included in, contact your administrator. \n    4. For all rows that specify or include you, check the **Role** column to see whether the list of roles includes the required roles. \n#### Grant the roles\n    1. In the Google Cloud console, go to the **IAM** page. \n[Go to IAM](https://console.cloud.google.com/projectselector/iam-admin/iam?supportedpurview=project)\n    2. Select the project. \n    3. Click person_add **Grant access**. \n    4. In the **New principals** field, enter your user identifier. This is typically the email address for a Google Account.\n    5. Click **Select a role** , then search for the role. \n    6. To grant additional roles, click add **Add another role** and add each additional role. \n    7. Click **Save**. \n\n\n  * Create a [Hugging Face](https://huggingface.co/) account, if you don't already have one.\n  * [Ensure your project has sufficient quota](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/tpus#ensure-quota) for Cloud TPU in GKE.\n\n\n## Prepare the environment\nIn this section, you provision the resources that you need to deploy vLLM and the model.\n### Get access to the model\nYou must sign the consent agreement to use Llama 3.1 70b in the [Hugging Face repository](https://huggingface.co/meta-llama/Llama-3.1-70B).\n### Generate an access token\nIf you don't already have one, generate a new [Hugging Face token](https://huggingface.co/docs/hub/security-tokens):\n  1. Click **Your Profile > Settings > Access Tokens**.\n  2. Select **New Token**.\n  3. Specify a Name of your choice and a Role of at least `Read`.\n  4. Select **Generate a token**.\n\n\n### Launch Cloud Shell\nIn this tutorial, you use [Cloud Shell](https://docs.cloud.google.com/shell) to manage resources hosted on Google Cloud. Cloud Shell comes preinstalled with the software you need for this tutorial, including [`kubectl`](https://kubernetes.io/docs/reference/kubectl/) and the [gcloud CLI](https://docs.cloud.google.com/sdk/gcloud).\nTo set up your environment with Cloud Shell, follow these steps:\n  1. In the Google Cloud console, launch a Cloud Shell session by clicking ![Cloud Shell activation icon](https://docs.cloud.google.com/static/shell/docs/images/activate_cloud_shell.svg) **Activate Cloud Shell** in the [Google Cloud console](http://console.cloud.google.com). This launches a session in the bottom pane of the Google Cloud console.\n  2. Set the default environment variables:\n\n```\ngcloud config set project PROJECT_ID && \\\ngcloud config set billing/quota_project PROJECT_ID && \\\nexport PROJECT_ID=$(gcloud config get project) && \\\nexport PROJECT_NUMBER=$(gcloud projects describe ${PROJECT_ID} --format=\"value(projectNumber)\") && \\\nexport CLUSTER_NAME=CLUSTER_NAME && \\\nexport CONTROL_PLANE_LOCATION=CONTROL_PLANE_LOCATION && \\\nexport ZONE=ZONE && \\\nexport HF_TOKEN=HUGGING_FACE_TOKEN && \\\nexport CLUSTER_VERSION=CLUSTER_VERSION && \\\nexport GSBUCKET=GSBUCKET && \\\nexport KSA_NAME=KSA_NAME && \\\nexport NAMESPACE=NAMESPACE\n\n```\n\nReplace the following values:\n     * PROJECT_ID : your Google Cloud [project ID](https://docs.cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects).\n     * CLUSTER_NAME : the name of your GKE cluster.\n     * CONTROL_PLANE_LOCATION: the Compute Engine [region](https://docs.cloud.google.com/compute/docs/regions-zones#available) of the control plane of your cluster. Provide a region that supports TPU Trillium (v6e).\n     * ZONE : a zone that supports TPU Trillium (v6e).\n     * CLUSTER_VERSION : a GKE version that supports TPU Trillium (v6e). For more information, see [Validate TPU availability in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/plan-tpus#availability).\n     * GSBUCKET : the name of the Cloud Storage bucket to use for [Cloud Storage FUSE](https://docs.cloud.google.com/storage/docs/gcs-fuse).\n     * KSA_NAME : the name of the Kubernetes ServiceAccount that's used to access Cloud Storage buckets. Bucket access is needed for Cloud Storage FUSE to work.\n     * NAMESPACE : the Kubernetes namespace where you want to deploy the vLLM assets.\n\n\n### Create a GKE cluster\nYou can serve LLMs on TPUs in a GKE Autopilot or Standard cluster. We recommend that you use a Autopilot cluster for a fully managed Kubernetes experience. To choose the GKE mode of operation that's the best fit for your workloads, see [Choose a GKE mode of operation](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/choose-cluster-mode).\n### Autopilot\n  1. Create a GKE Autopilot cluster:\n\n```\ngcloud container clusters create-auto ${CLUSTER_NAME} \\\n    --cluster-version=${CLUSTER_VERSION} \\\n    --location=${CONTROL_PLANE_LOCATION}\n\n```\n**Note:** If your Cloud Shell instance disconnects throughout the tutorial execution, repeat the preceding step.\n\n\n### Standard\n  1. Create a GKE Standard cluster:\n\n```\ngcloud container clusters create ${CLUSTER_NAME} \\\n    --project=${PROJECT_ID} \\\n    --location=${CONTROL_PLANE_LOCATION} \\\n    --node-locations=${ZONE} \\\n    --cluster-version=${CLUSTER_VERSION} \\\n    --workload-pool=${PROJECT_ID}.svc.id.goog \\\n    --addons GcsFuseCsiDriver\n\n```\n\nThis command creates a GKE Standard cluster, and enables [Workload Identity Federation](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/workload-identity) and the [Cloud Storage FUSE CSI driver](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/cloud-storage-fuse-csi-driver). If you are using an existing cluster, ensure that the [Cloud Storage FUSE CSI driver is enabled](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cloud-storage-fuse-csi-driver-setup#enable).\n  1. Create a TPU slice node pool:\n\n```\ngcloud container node-pools create tpunodepool \\\n    --location=${CONTROL_PLANE_LOCATION} \\\n    --node-locations=${ZONE} \\\n    --num-nodes=1 \\\n    --machine-type=ct6e-standard-8t \\\n    --cluster=${CLUSTER_NAME} \\\n    --enable-autoscaling --total-min-nodes=1 --total-max-nodes=2\n\n```\n\nGKE creates the following resources for the LLM:\n     * A GKE Standard cluster that uses [Workload Identity Federation for GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/workload-identity) and has [Cloud Storage FUSE CSI driver](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/cloud-storage-fuse-csi-driver) enabled.\n     * A TPU Trillium node pool with a `ct6e-standard-8t` machine type. This node pool has one node, eight TPU chips, and autoscaling enabled.\n\n\n### Configure kubectl to communicate with your cluster\nTo configure kubectl to communicate with your cluster, run the following command:\n\n```\n  gcloud container clusters get-credentials ${CLUSTER_NAME} --location=${CONTROL_PLANE_LOCATION}\n\n```\n\n### Create a Kubernetes Secret for Hugging Face credentials\n  1. Create a namespace. You can skip this step if you are using the `default` namespace:\n\n```\nkubectl create namespace ${NAMESPACE}\n\n```\n\n  2. Create a Kubernetes Secret that contains the Hugging Face token, run the following command:\n\n```\nkubectl create secret generic hf-secret \\\n    --from-literal=hf_api_token=${HF_TOKEN} \\\n    --namespace ${NAMESPACE}\n\n```\n\n### Create a Cloud Storage bucket\nIn Cloud Shell, run the following command:\n\n```\ngcloud storage buckets create gs://${GSBUCKET} \\\n    --uniform-bucket-level-access\n\n```\n\nThis creates a Cloud Storage bucket to store the model files you download from Hugging Face.\n### Set up a Kubernetes ServiceAccount to access the bucket\n  1. Create the Kubernetes ServiceAccount:\n\n```\nkubectl create serviceaccount ${KSA_NAME} --namespace ${NAMESPACE}\n\n```\n\n  2. Grant read-write access to the Kubernetes ServiceAccount in order to access the Cloud Storage bucket:\n\n```\ngcloud storage buckets add-iam-policy-binding gs://${GSBUCKET} \\\n  --member \"principal://iam.googleapis.com/projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${PROJECT_ID}.svc.id.goog/subject/ns/${NAMESPACE}/sa/${KSA_NAME}\" \\\n  --role \"roles/storage.objectUser\"\n\n```\n\n  3. Alternatively, you can grant read-write access to all Cloud Storage buckets in the project:\n\n```\ngcloud projects add-iam-policy-binding ${PROJECT_ID} \\\n--member \"principal://iam.googleapis.com/projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${PROJECT_ID}.svc.id.goog/subject/ns/${NAMESPACE}/sa/${KSA_NAME}\" \\\n--role \"roles/storage.objectUser\"\n\n```\n\nGKE creates the following resources for the LLM:\n    1. A Cloud Storage bucket to store the downloaded model and the compilation cache. A [Cloud Storage FUSE CSI driver](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/cloud-storage-fuse-csi-driver) reads the content of the bucket.\n    2. [Volumes with file caching enabled](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cloud-storage-fuse-csi-driver-perf#configure-caching) and the [parallel download](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/cloud-storage-fuse-csi-driver-perf#parallel-download) feature of Cloud Storage FUSE.\n**Best practice** : \nUse a file cache backed by `tmpfs[](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir)` or `Hyperdisk / Persistent Disk[](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/gce-pd-csi-driver)` depending on the expected size of the model contents, for example, weight files. In this tutorial, you use Cloud Storage FUSE file cache backed by RAM.\n\n\n## Deploy vLLM model server\nTo deploy the vLLM model server, this tutorial uses a Kubernetes Deployment. A _Deployment_ is a Kubernetes API object that lets you run multiple replicas of Pods that are distributed among the nodes in a cluster..\n  1. Inspect the following Deployment manifest saved as `vllm-llama3-70b.yaml`, that uses a single replica:\n\n```\n\napiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: vllm-tpu\nspec:\n  replicas: 1\n  selector:\n    matchLabels:\n      app: vllm-tpu\n  template:\n    metadata:\n      labels:\n        app: vllm-tpu\n      annotations:\n        gke-gcsfuse/volumes: \"true\"\n        gke-gcsfuse/cpu-limit: \"0\"\n        gke-gcsfuse/memory-limit: \"0\"\n        gke-gcsfuse/ephemeral-storage-limit: \"0\"\n    spec:\n      serviceAccountName: KSA_NAME\n      nodeSelector:\n        cloud.google.com/gke-tpu-topology: 2x4\n        cloud.google.com/gke-tpu-accelerator: tpu-v6e-slice\n      containers:\n      - name: vllm-tpu\n        image: vllm/vllm-tpu:latest\n        command: [\"python3\", \"-m\", \"vllm.entrypoints.openai.api_server\"]\n        args:\n        - --host=0.0.0.0\n        - --port=8000\n        - --tensor-parallel-size=8\n        - --max-model-len=4096\n        - --model=meta-llama/Llama-3.1-70B\n        - --download-dir=/data\n        - --max-num-batched-tokens=512\n        - --max-num-seqs=128\n        env: \n        - name: HUGGING_FACE_HUB_TOKEN\n          valueFrom:\n            secretKeyRef:\n              name: hf-secret\n              key: hf_api_token\n        - name: VLLM_XLA_CACHE_PATH\n          value: \"/data\"\n        - name: VLLM_USE_V1\n          value: \"1\"\n        ports:\n        - containerPort: 8000\n        resources:\n          limits:\n            google.com/tpu: 8\n        readinessProbe:\n          tcpSocket:\n            port: 8000\n          initialDelaySeconds: 15\n          periodSeconds: 10\n        volumeMounts:\n        - name: gcs-fuse-csi-ephemeral\n          mountPath: /data\n        - name: dshm\n          mountPath: /dev/shm\n      volumes:\n      - name: gke-gcsfuse-cache\n        emptyDir:\n          medium: Memory\n      - name: dshm\n        emptyDir:\n          medium: Memory\n      - name: gcs-fuse-csi-ephemeral\n        csi:\n          driver: gcsfuse.csi.storage.gke.io\n          volumeAttributes:\n            bucketName: GSBUCKET\n            mountOptions: \"implicit-dirs,file-cache:enable-parallel-downloads:true,file-cache:parallel-downloads-per-file:100,file-cache:max-parallel-downloads:-1,file-cache:download-chunk-size-mb:10,file-cache:max-size-mb:-1\"\n---\napiVersion: v1\nkind: Service\nmetadata:\n  name: vllm-service\nspec:\n  selector:\n    app: vllm-tpu\n  type: LoadBalancer\t\n  ports:\n    - name: http\n      protocol: TCP\n      port: 8000  \n      targetPort: 8000\n\n```\n\nIf you scale up the Deployment to multiple replicas, the concurrent writes to the `VLLM_XLA_CACHE_PATH` will cause the error: `RuntimeError: filesystem error: cannot create directories`. To prevent this error, you have two options:\n    1. Remove the XLA cache location by removing the following block from the Deployment YAML. This means all replicas will recompile the cache.\n\n```\n- name: VLLM_XLA_CACHE_PATH\n  value: \"/data\"\n\n```\n\n    2. Scale the Deployment to `1`, and wait for the first replica to become ready and write to the XLA cache. Then scale to additional replicas. This allows the remainder of the replicas to read the cache, without attempting to write it.\n  2. Apply the manifest by running the following command:\n\n```\nkubectl apply -f vllm-llama3-70b.yaml -n ${NAMESPACE}\n\n```\n\n  3. View the logs from the running model server:\n\n```\nkubectl logs -f -l app=vllm-tpu -n ${NAMESPACE}\n\n```\n\nThe output should look similar to the following:\n\n```\nINFO:     Started server process [1]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)\n\n```\n\n## Serve the model\n  1. To get the external IP address of the VLLM service, run the following command:\n\n```\nexport vllm_service=$(kubectl get service vllm-service -o jsonpath='{.status.loadBalancer.ingress[0].ip}' -n ${NAMESPACE})\n\n```\n\n  2. Interact with the model using `curl`:\n\n```\ncurl http://$vllm_service:8000/v1/completions \\\n-H \"Content-Type: application/json\" \\\n-d '{\n    \"model\": \"meta-llama/Llama-3.1-70B\",\n    \"prompt\": \"San Francisco is a\",\n    \"max_tokens\": 7,\n    \"temperature\": 0\n}'\n\n```\n\nThe output should be similar to the following:\n\n```\n{\"id\":\"cmpl-6b4bb29482494ab88408d537da1e608f\",\"object\":\"text_completion\",\"created\":1727822657,\"model\":\"meta-llama/Llama-3-8B\",\"choices\":[{\"index\":0,\"text\":\" top holiday destination featuring scenic beauty and\",\"logprobs\":null,\"finish_reason\":\"length\",\"stop_reason\":null,\"prompt_logprobs\":null}],\"usage\":{\"prompt_tokens\":5,\"total_tokens\":12,\"completion_tokens\":7}}\n\n```\n\n## Set up the custom autoscaler\nIn this section, you set up horizontal Pod autoscaling using custom Prometheus metrics. You use the Google Cloud Managed Service for Prometheus metrics from the vLLM server.\nTo learn more, see [Google Cloud Managed Service for Prometheus](https://docs.cloud.google.com/stackdriver/docs/managed-prometheus/setup-managed). This should be enabled by default on the GKE cluster.\n  1. Set up the Custom Metrics Stackdriver Adapter on your cluster:\n\n```\nkubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/k8s-stackdriver/master/custom-metrics-stackdriver-adapter/deploy/production/adapter_new_resource_model.yaml\n\n```\n\n  2. Add the Monitoring Viewer role to the service account that the Custom Metrics Stackdriver Adapter uses:\n\n```\ngcloud projects add-iam-policy-binding projects/${PROJECT_ID} \\\n    --role roles/monitoring.viewer \\\n    --member=principal://iam.googleapis.com/projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${PROJECT_ID}.svc.id.goog/subject/ns/custom-metrics/sa/custom-metrics-stackdriver-adapter\n\n```\n**Note:** Ensure that the service account that your GKE cluster uses has the [Monitoring Metric Writer](https://docs.cloud.google.com/iam/docs/roles-permissions/monitoring) role. This tutorial uses the default Compute Engine service account.\n  3. Save the following manifest as `vllm_pod_monitor.yaml`:\n\n```\n\napiVersion: monitoring.googleapis.com/v1\nkind: PodMonitoring\nmetadata:\n name: vllm-pod-monitoring\nspec:\n selector:\n   matchLabels:\n     app: vllm-tpu\n endpoints:\n - path: /metrics\n   port: 8000\n   interval: 15s\n\n```\n\n  4. Apply it to the cluster:\n\n```\nkubectl apply -f vllm_pod_monitor.yaml -n ${NAMESPACE}\n\n```\n\n\n**Success:** Google Cloud Managed Service for Prometheus is now configured to scrape the vLLM server metrics and make them visible to the horizontal Pod autoscaling controller.\n### Create load on the vLLM endpoint\nCreate load to the vLLM server to test how GKE autoscales with a custom vLLM metric.\n  1. Run a bash script (`load.sh`) to send `N` number of parallel requests to the vLLM endpoint:\n\n```\n#!/bin/bash\nN=PARALLEL_PROCESSES\nexport vllm_service=$(kubectl get service vllm-service -o jsonpath='{.status.loadBalancer.ingress[0].ip}' -n ${NAMESPACE})\nfor i in $(seq 1 $N); do\n  while true; do\n    curl http://$vllm_service:8000/v1/completions -H \"Content-Type: application/json\" -d '{\"model\": \"meta-llama/Llama-3.1-70B\", \"prompt\": \"Write a story about san francisco\", \"max_tokens\": 1000, \"temperature\": 0}'\n  done &  # Run in the background\ndone\nwait\n\n```\n\nReplace PARALLEL_PROCESSES with the number of parallel processes that you want to run.\n  2. Run the bash script:\n\n```\nchmod +x load.sh\nnohup ./load.sh &\n\n```\n\n### Verify that Google Cloud Managed Service for Prometheus ingests the metrics\nAfter Google Cloud Managed Service for Prometheus scrapes the metrics and you're adding load to the vLLM endpoint, you can view metrics on Cloud Monitoring.\n  1. In the Google Cloud console, go to the **Metrics explorer** page.\n[Go to Metrics explorer](https://console.cloud.google.com/monitoring/metrics-explorer)\n  2. Click **< > PromQL**.\n  3. Enter the following query to observe traffic metrics:\n\n```\nvllm:num_requests_waiting{cluster='CLUSTER_NAME'}\n\n```\n\nA line graph shows your vLLM metric (num_requests_waiting) measured over time. The vLLM metric scales up from 0 (pre-load) to a value (post-load). This graph confirms your vLLM metrics are being ingested into Google Cloud Managed Service for Prometheus. The following example graph shows a starting pre-load value of 0, which reaches a maximum post-load value of close to 400 within one minute.\n![vllm:num_requests_waiting](https://docs.cloud.google.com/static/kubernetes-engine/images/serve-vllm-tpu-metric-validate.png)\n### Deploy the Horizontal Pod Autoscaler configuration\nWhen deciding which metric to autoscale on, we recommend the following metrics for vLLM TPU:\n  * **`num_requests_waiting`**: This metric relates to the number of requests waiting in the model server's queue. This number starts to noticeably grow when the kv cache is full.\n  * **`gpu_cache_usage_perc`**: This metric relates to the kv cache utilization, which directly correlates to the number of requests being processed for a given inference cycle on the model server. Note that this metric works the same on GPUs and TPUs, though it is tied to the GPU naming schema.\n\n\nWe recommend that you use **`num_requests_waiting`**when optimizing for throughput and cost, and when your latency targets are achievable with your model server's maximum throughput.\nWe recommend that you use **`gpu_cache_usage_perc`**when you have latency-sensitive workloads where queue-based scaling isn't fast enough to meet your requirements.\nFor further explanation, check out [Best practices for autoscaling large language model (LLM) inference workloads with TPUs](https://docs.cloud.google.com/kubernetes-engine/docs/best-practices/machine-learning/inference/autoscaling-tpu).\nWhen selecting an `averageValue` target for your HPA config, you will have to determine this experimentally. Check out the [Save on GPUs: Smarter autoscaling for your GKE inferencing workloads](https://cloud.google.com/blog/products/containers-kubernetes/tuning-the-gke-hpa-to-run-inference-on-gpus) blog post for additional ideas on how to optimize this part. The [profile-generator](https://github.com/GoogleCloudPlatform/ai-on-gke/blob/main/benchmarks/benchmark/tools/profile-generator/README.md) used in this blog post works for vLLM TPU as well.\nIn the following instructions, you deploy your HPA configuration by using the **num_requests_waiting** metric. For demonstration purposes, you set the metric to a low value so that the HPA configuration scales your vLLM replicas to two. To deploy the Horizontal Pod Autoscaler configuration using **num_requests_waiting** , follow these steps:\n  1. Save the following manifest as `vllm-hpa.yaml`:\n\n```\n\napiVersion: autoscaling/v2\nkind: HorizontalPodAutoscaler\nmetadata:\n name: vllm-hpa\nspec:\n scaleTargetRef:\n   apiVersion: apps/v1\n   kind: Deployment\n   name: vllm-tpu\n minReplicas: 1\n maxReplicas: 2\n metrics:\n   - type: Pods\n     pods:\n       metric:\n         name: prometheus.googleapis.com|vllm:num_requests_waiting|gauge\n       target:\n         type: AverageValue\n         averageValue: 10\n\n```\n\nThe vLLM metrics in Google Cloud Managed Service for Prometheus follow the `vllm:metric_name` format.\n**Best practice** : \nUse `num_requests_waiting` for scaling throughput. Use `gpu_cache_usage_perc` for latency-sensitive TPU use cases.\n  2. Deploy the Horizontal Pod Autoscaler configuration:\n\n```\nkubectl apply -f vllm-hpa.yaml -n ${NAMESPACE}\n\n```\n\nGKE schedules another Pod to deploy, which triggers the node pool autoscaler to add a second node before it deploys the second vLLM replica.\n  3. Watch the progress of the Pod autoscaling:\n\n```\nkubectl get hpa --watch -n ${NAMESPACE}\n\n```\n\nThe output is similar to the following:\n\n```\nNAME       REFERENCE             TARGETS       MINPODS   MAXPODS   REPLICAS   AGE\nvllm-hpa   Deployment/vllm-tpu   <unknown>/10   1         2         0          6s\nvllm-hpa   Deployment/vllm-tpu   34972m/10      1         2         1          16s\nvllm-hpa   Deployment/vllm-tpu   25112m/10      1         2         2          31s\nvllm-hpa   Deployment/vllm-tpu   35301m/10      1         2         2          46s\nvllm-hpa   Deployment/vllm-tpu   25098m/10      1         2         2          62s\nvllm-hpa   Deployment/vllm-tpu   35348m/10      1         2         2          77s\n\n```\n**Success:** GKE scales up the vLLM server using custom Prometheus metrics.\n  4. Wait for 10 minutes and repeat the steps in the [Verify that Google Cloud Managed Service for Prometheus ingests the metrics](https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu#verify-prometheus) section. Google Cloud Managed Service for Prometheus ingests the metrics from both vLLM endpoints now.\n\n\n## Clean up\nTo avoid incurring charges to your Google Cloud account for the resources used in this tutorial, either delete the project that contains the resources, or keep the project and delete the individual resources. \n### Delete the deployed resources\nTo avoid incurring charges to your Google Cloud account for the resources that you created in this guide, run the following commands:\n\n```\nps -ef | grep load.sh | awk '{print $2}' | xargs -n1 kill -9\n\n```\n\n```\ngcloud container clusters delete ${CLUSTER_NAME} \\\n  --location=${CONTROL_PLANE_LOCATION}\n\n```\n\n## What's next\n  * Learn more about [TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus).\n  * Learn more about [the available metrics to set up your Horizontal Pod Autoscaler](https://docs.cloud.google.com/kubernetes-engine/docs/best-practices/machine-learning/inference/autoscaling-tpu).\n  * Explore the vLLM [GitHub repository](https://github.com/vllm-project/vllm) and [documentation](https://docs.vllm.ai/en/latest/)."
+  }
 }

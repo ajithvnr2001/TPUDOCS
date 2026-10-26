@@ -1,58 +1,551 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:train_21_gke_ray_train_trillium",
-  "@type": "DocumentationResource",
-  "name": "Train with JAX, Ray Train, and TPU Trillium on GKE",
-  "canonicalUrl": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/distributed-training-tpu",
-  "category": "Training framework links",
-  "categorySlug": "training_framework_links",
-  "description": "Distributed training across TPU hosts using Ray Train and JAX.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/distributed-training-tpu",
-    "crawledAt": "2026-10-26T12:47:17.595120+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 56342
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Train with JAX, Ray Train, and TPU Trillium on GKE",
-      "documentedIn",
-      "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/distributed-training-tpu"
-    ],
-    [
-      "Train with JAX, Ray Train, and TPU Trillium on GKE",
-      "belongsToCategory",
-      "training_framework_links"
-    ],
-    [
-      "Train with JAX, Ray Train, and TPU Trillium on GKE",
-      "supportsWorkflow",
-      "Distributed Machine Learning Training"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:train_21_gke_ray_train_trillium",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "train_21_gke_ray_train_trillium",
+    "name": "Train with JAX, Ray Train, and TPU Trillium on GKE",
+    "url": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/distributed-training-tpu",
+    "category": "training_framework_links",
+    "description": "Distributed training across TPU hosts using Ray Train and JAX.",
+    "char_count": 25474,
+    "word_count": 2781,
+    "section_count": 21,
+    "code_block_count": 37,
+    "table_count": 0,
+    "cli_command_count": 35,
+    "indexed_at": "2026-10-26T14:46:54.559107+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "schema:name",
+        "object": "Train with JAX, Ray Train, and TPU Trillium on GKE"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/distributed-training-tpu"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "schema:category",
+        "object": "training_framework_links"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "schema:description",
+        "object": "Distributed training across TPU hosts using Ray Train and JAX."
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v4"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:vLLM-TPU"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:MaxText"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:KubeRay"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Train an LLM using JAX, Ray Train, and TPU Trillium on GKE"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Background"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:hasSection",
+        "object": "JAX"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:hasSection",
+        "object": "MaxText"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:hasSection",
+        "object": "TPUs"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:hasSection",
+        "object": "KubeRay"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Objectives"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Before you begin"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Prepare your environment"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Create a GKE cluster"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Autopilot"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Standard"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Configure a Cloud Storage bucket and a service account"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Create the training script"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Start from a Ray base image which includes JaxTrainer API."
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Maxtext with TPU requires Python 3.12."
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Clone the Maxtext repo and build from source, installing TPU dependencies."
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Copy the Ray Maxtext trainer to run on the remote container."
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Train the model"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:hasSection",
+        "object": "Clean up"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:hasSection",
+        "object": "What's next"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "PROJECT_ID"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "PROJECT_NUMBER"
+      },
+      {
+        "subject": "tpu_doc:train_21_gke_ray_train_trillium",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "ZONE"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Train with JAX, Ray Train, and TPU Trillium on GKE provides official guidance on Distributed training across TPU hosts using Ray Train and JAX.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/distributed-training-tpu",
-      "verified": true
-    },
-    {
-      "assertion": "TPU v6e (Trillium) is Google's 6th generation TPU offering high efficiency for inference and training.",
-      "confidence": 0.99,
-      "source": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/distributed-training-tpu",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Train with JAX, Ray Train, and TPU Trillium on GKE used for in Cloud TPU workflows?",
-      "answer": "Distributed training across TPU hosts using Ray Train and JAX.",
-      "category": "training_framework_links"
-    }
-  ],
-  "contentSummary": "Distributed training across TPU hosts using Ray Train and JAX."
+  },
+  "structured_content": {
+    "summary": "Distributed training across TPU hosts using Ray Train and JAX.",
+    "sections": [
+      {
+        "heading": "Train an LLM using JAX, Ray Train, and TPU Trillium on GKE",
+        "level": 1,
+        "content": "[ Autopilot ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview) [ Standard ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/choose-cluster-mode)\nThis tutorial shows you how to train the Llama 3 8B large language model (LLM) on Google Kubernetes Engine (GKE) using [MaxText](https://github.com/google/maxtext), [Ray Train](https://docs.ray.io/en/latest/train/train.html), and TPUs.\nThis tutorial provides a complete, end-to-end walkthrough, from configuring the necessary cloud infrastructure to submitting and successfully running the training workload on multi-host TPUs.\nThis tutorial is for Platform admins and operators and Data and AI specialists who want to learn how to train large models on a distributed, multi-host TPU slice."
+      },
+      {
+        "heading": "Background",
+        "level": 2,
+        "content": "The combination of GKE, KubeRay, MaxText, and TPUs provides a powerful and scalable platform for large-scale model training. This section describes the key technologies used in this guide:"
+      },
+      {
+        "heading": "JAX",
+        "level": 3,
+        "content": "[JAX](https://github.com/jax-ml/jax) is a Python library for accelerator-oriented array computation and program transformation, designed for high-performance numerical computing and large-scale machine learning.\nJAX provides an extensible system for transforming numerical functions like `jax.grad`, `jax.jit`, and `jax.vmap`, utilizing the XLA compiler to create highly optimized code that scales efficiently on accelerators like GPUs and TPUs. The core power of JAX lies in its composability, which allows users to combine these transformations to build complex, high-performance numerical programs for distributed execution."
+      },
+      {
+        "heading": "MaxText",
+        "level": 3,
+        "content": "[MaxText](https://github.com/google/maxtext) is a high-performance, open-source large language model (LLM) designed for scalability and customizability. MaxText is built on top of JAX and optimized to run efficiently on Cloud TPU and GPUs."
+      },
+      {
+        "heading": "TPUs",
+        "level": 3,
+        "content": "[Tensor Processing Units](https://cloud.google.com/tpu) (TPUs), are custom-designed accelerators created by Google to optimize machine learning workloads. Unlike general-purpose CPUs or parallel-processing GPUs, TPUs are highly specialized for the massive matrix and tensor computations at the foundation of deep learning, making them efficient at this specific task. The primary advantage of TPUs is performance at scale.\nThis tutorial uses TPU Trillium, which is the sixth generation of TPUs. For more information, see [Benefits of using TPU Trillium](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus#trillium-benefits)."
+      },
+      {
+        "heading": "KubeRay",
+        "level": 3,
+        "content": "[KubeRay](https://github.com/ray-project/kuberay) is a Kubernetes operator that provides a unified way to deploy, manage, and monitor Ray applications on Kubernetes. The KubeRay operator is installed and managed through the [Ray on GKE add-on](https://docs.cloud.google.com/kubernetes-engine/docs/add-on/ray-on-gke/concepts/overview), which is the recommended way to deploy and manage Ray clusters on GKE."
+      },
+      {
+        "heading": "Objectives",
+        "level": 2,
+        "content": "This tutorial shows you how to do the following:\n  1. Set up a GKE cluster with a multi-host TPU node pool.\n  2. Configure KubeRay to manage the distributed training environment.\n  3. Build a custom Docker image that contains MaxText, Ray, and JAX dependencies.\n  4. Create a Python training script that uses Ray Train's `JaxTrainer` to orchestrate the MaxText training loop across the TPU slice.\n  5. Define a [`RayCluster` custom resource](https://docs.ray.io/en/latest/cluster/kubernetes/user-guides/config.html) to provision the head and worker nodes with the necessary TPU resources.\n  6. Submit the training Job to the `RayCluster` and monitor its progress.\n  7. Use Cloud Storage to store model checkpoints."
+      },
+      {
+        "heading": "Before you begin",
+        "level": 2,
+        "content": "* Sign in to your Google Cloud account. If you're new to Google Cloud, [ create an account](https://console.cloud.google.com/freetrial) to evaluate how our products perform in real-world scenarios. New customers also get $300 in free credits to run, test, and deploy workloads. \n  * [Install](https://docs.cloud.google.com/sdk/docs/install) the Google Cloud CLI. \n**Note:** If you installed the gcloud CLI previously, make sure you have the latest version by running `gcloud components update`. \n  * If you're using an external identity provider (IdP), you must first [ sign in to the gcloud CLI with your federated identity](https://docs.cloud.google.com/iam/docs/workforce-log-in-gcloud). \n  * To [initialize](https://docs.cloud.google.com/sdk/docs/initializing) the gcloud CLI, run the following command: \n\n```\ngcloud init\n```\n\n  * [Create or select a Google Cloud project](https://cloud.google.com/resource-manager/docs/creating-managing-projects).\n**Roles required to select or create a project**\n    * **Select a project** : Selecting a project doesn't require a specific IAM role\u2014you can select any project that you've been granted a role on. \n    * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.\n    * Create a Google Cloud project:\n\n```\ngcloud projects create PROJECT_ID\n```\n\nReplace `PROJECT_ID` with a name for the Google Cloud project you are creating.\n    * Select the Google Cloud project that you created:\n\n```\ngcloud config set project PROJECT_ID\n```\n\nReplace `PROJECT_ID` with your Google Cloud project name.\n  * [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). \n  * Enable the required APIs, if any are not already enabled: \n**Roles required to enable APIs**\nTo enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n\n```\ngcloud services enable container.googleapis.com\u00a0cloudbuild.googleapis.com\n```\n\n  * [Install](https://docs.cloud.google.com/sdk/docs/install) the Google Cloud CLI. \n**Note:** If you installed the gcloud CLI previously, make sure you have the latest version by running `gcloud components update`. \n  * If you're using an external identity provider (IdP), you must first [ sign in to the gcloud CLI with your federated identity](https://docs.cloud.google.com/iam/docs/workforce-log-in-gcloud). \n  * To [initialize](https://docs.cloud.google.com/sdk/docs/initializing) the gcloud CLI, run the following command: \n\n```\ngcloud init\n```\n\n  * [Create or select a Google Cloud project](https://cloud.google.com/resource-manager/docs/creating-managing-projects).\n**Roles required to select or create a project**\n    * **Select a project** : Selecting a project doesn't require a specific IAM role\u2014you can select any project that you've been granted a role on. \n    * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.\n    * Create a Google Cloud project:\n\n```\ngcloud projects create PROJECT_ID\n```\n\nReplace `PROJECT_ID` with a name for the Google Cloud project you are creating.\n    * Select the Google Cloud project that you created:\n\n```\ngcloud config set project PROJECT_ID\n```\n\nReplace `PROJECT_ID` with your Google Cloud project name.\n  * [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). \n  * Enable the required APIs, if any are not already enabled: \n**Roles required to enable APIs**\nTo enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n\n```\ngcloud services enable container.googleapis.com\u00a0cloudbuild.googleapis.com\n```\n\n  * Grant roles to your user account. Run the following command once for each of the following IAM roles: `roles/container.admin, roles/iam.serviceAccountAdmin, roles/cloudbuild.builds.editor`\n\n```\ngcloud projects add-iam-policy-binding PROJECT_ID --member=\"user:USER_IDENTIFIER\" --role=ROLE\n```\n\nReplace the following:\n    * `PROJECT_ID`: Your project ID.\n    * `USER_IDENTIFIER`: The identifier for your user account. For example, `myemail@example.com`. \n    * `ROLE`: The IAM role that you grant to your user account.\n\n\n  * Because this tutorial utilizes TPU Trillium (v6e), select a region or zone with availability. For more information, see [Cloud TPU quotas](https://docs.cloud.google.com/tpu/docs/quota)."
+      },
+      {
+        "heading": "Prepare your environment",
+        "level": 2,
+        "content": "In this tutorial, you use [Cloud Shell](https://docs.cloud.google.com/shell). Cloud Shell comes preinstalled with the `gcloud`, `helm`, and `kubectl` command-line tools that are used in this tutorial.\n  1. Go to the [Google Cloud console](https://console.cloud.google.com/).\n  2. At the top of the Google Cloud console window, click the **Activate Cloud Shell** ![Activate Shell\nButton](https://docs.cloud.google.com/static/kubernetes-engine/images/cloud-shell.png) button.\nA Cloud Shell session opens inside a new frame in the Google Cloud console and displays a command-line prompt.\n  3. Create and activate a Python virtual environment:\n\n```\npython3 -m venv ray-env\nsource ray-env/bin/activate\n\n```\n\n  4. Install the Ray CLI and other dependencies:\n\n```\npip install \"ray[default]==2.49.1\"\n\n```\n\n  5. Set the following environment variables:\n\n```\nexport PROJECT_ID=$(gcloud config get project)\nexport PROJECT_NUMBER=$(gcloud projects describe ${PROJECT_ID} --format=\"value(projectNumber)\")\nexport GS_BUCKET=GS_BUCKET\nexport KSA_NAME=KSA_NAME\nexport NAMESPACE=default\nexport CLUSTER_NAME=CLUSTER_NAME\nexport REGION=REGION\nexport ZONE=ZONE\nexport ARTIFACT_REGISTRY=ARTIFACT_REGISTRY\n\n```\n\nReplace the following:\n     * `GS_BUCKET`: the name of the Cloud Storage bucket.\n     * `KSA_NAME`: the name of the Kubernetes Service Account.\n     * `CLUSTER_NAME`: the name of the new cluster.\n     * `REGION`: the region where your TPU Trillium capacity is available.\n     * `ZONE`: the zone where your TPU Trillium capacity is available. For more information, see [TPU availability in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/plan-tpus#availability).\n     * `ARTIFACT_REGISTRY`: the name of the Artifact Registry repository."
+      },
+      {
+        "heading": "Create a GKE cluster",
+        "level": 2,
+        "content": "You can configure KubeRay on TPUs in a GKE Autopilot or Standard cluster. We recommend that you use a Autopilot cluster for a fully managed Kubernetes experience. To choose the GKE mode of operation that's the best fit for your workloads, see [About GKE modes of operation](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/choose-cluster-mode)."
+      },
+      {
+        "heading": "Autopilot",
+        "level": 3,
+        "content": "1. In Cloud Shell, run the following command:\n\n```\ngcloud container clusters create-auto $CLUSTER_NAME \\\n    --enable-ray-operator \\\n    --machine-type=n1-standard-16 \\\n    --location=$REGION\n\n```\n\n  2. To communicate with your cluster, configure `kubectl` :\n\n```\ngcloud container clusters get-credentials CLUSTER_NAME \\\n    --location=$ZONE\n\n```"
+      },
+      {
+        "heading": "Standard",
+        "level": 3,
+        "content": "1. In Cloud Shell, create a Standard cluster that enables the [Ray operator](https://docs.cloud.google.com/kubernetes-engine/docs/add-on/ray-on-gke/concepts/overview) add-on by running the following command:\n\n```\ngcloud container clusters create $CLUSTER_NAME \\\n    --addons=RayOperator \\\n    --addons GcsFuseCsiDriver \\\n    --machine-type=n1-standard-16 \\\n    --workload-pool=$PROJECT_ID.svc.id.goog \\\n    --location=$ZONE\n\n```\n\nThis command also enables the `GcsFuseCsiDriver`, which allows Pods to mount Cloud Storage buckets as local file systems. The cluster creation might take several minutes.\n  2. To communicate with your cluster, configure `kubectl`:\n\n```\ngcloud container clusters get-credentials CLUSTER_NAME \\\n    --location=LOCATION\n\n```\n\n  3. Create a [multi-host](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus#multi-host) TPU slice node pool:\n\n```\ngcloud container node-pools create v6e-16 \\\n    --location=$ZONE \\\n    --cluster=$CLUSTER_NAME \\\n    --machine-type=ct6e-standard-4t \\\n    --threads-per-core=1 \\\n    --tpu-topology=4x4 \\\n    --num-nodes=4\n\n```\n\nGKE provisions a node pool consisting of four TPU Trillium (v6e) VMs, which are configured together as a multi-host TPU slice, with a `4x4` topology, that's ready for distributed training workloads.\nThe [Ray operator](https://docs.cloud.google.com/kubernetes-engine/docs/add-on/ray-on-gke/concepts/overview)-enabled GKE cluster automatically installs KubeRay and the [KubeRay TPU webhook](https://github.com/ai-on-gke/kuberay-tpu-webhook) in your cluster."
+      },
+      {
+        "heading": "Configure a Cloud Storage bucket and a service account",
+        "level": 2,
+        "content": "1. Create a Cloud Storage bucket for shared checkpoints between the multi-host TPU nodes.\n\n```\ngsutil mb -p ${PROJECT_ID} -c STANDARD -l ${REGION} gs://${GS_BUCKET}\n\n```\n\n  2. To enable access to the Cloud Storage bucket, create a Kubernetes Service Account:\n\n```\nkubectl create serviceaccount ${KSA_NAME} --namespace ${NAMESPACE}\n\n```\n\n  3. To enable access to the Cloud Storage bucket, add the required IAM policy bindings to the service account:\n\n```\ngcloud storage buckets add-iam-policy-binding gs://${GS_BUCKET} \\\n    --member \"principal://iam.googleapis.com/projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${PROJECT_ID}.svc.id.goog/subject/ns/${NAMESPACE}/sa/${KSA_NAME}\" \\\n    --role \"roles/storage.objectUser\"\n\n```"
+      },
+      {
+        "heading": "Create the training script",
+        "level": 2,
+        "content": "The following script uses Ray Train's `JaxTrainer` to run a distributed MaxText training job. The script configures the training environment for a multi-host TPU slice node pool and runs the MaxText training job on each worker node. The `train_loop_per_worker` function wraps the MaxText main entry point, and uses the Ray's distributed scheduler to execute the MaxText trainer on a multi-host TPU slice.\n  1. Save the following Python script as `maxtext_ray_trainer.py`:\n\n```\nimport os\nfrom absl import app\nimport logging\nfrom typing import Sequence\nimport ray\nfrom ray.train.v2.api.config import ScalingConfig, RunConfig\nfrom ray.train.v2.jax import JaxTrainer\n\ndef train_loop_per_worker(config):\n    from MaxText.train import main as maxtext_main\n\n    argv = config[\"argv\"]\n    maxtext_main(argv)\n\ndef main(argv: Sequence[str]):\n    trainer = JaxTrainer(\n        train_loop_per_worker=train_loop_per_worker,\n        train_loop_config={\"argv\": argv},\n        scaling_config=ScalingConfig(\n            use_tpu=True,\n            num_workers=4,\n            topology=\"4x4\",\n            accelerator_type=\"TPU-V6E\",\n            resources_per_worker={\"TPU\": 4},\n            placement_strategy=\"SPREAD\",\n        ),\n        run_config=RunConfig(\n            name=\"maxtext_jaxtrainer\",\n            worker_runtime_env={\n                \"env_vars\": {\n                    \"JAX_PLATFORMS\": \"tpu\",\n                    \"ENABLE_PJRT_COMPATIBILITY\": \"true\",\n                    \"TPU_SLICE_BUILDER_DUMP_CHIP_FORCE\": \"true\",\n                    \"TPU_SLICE_BUILDER_DUMP_ICI\": \"true\",\n                    \"XLA_FLAGS\": \"--xla_dump_to=/tmp/xla_dump_file --xla_dump_hlo_as_proto\",\n                }\n            },\n        ),\n    )\n    result = trainer.fit()\n    logging.info(\"Training complete!\")\n    ray.shutdown()\n\nif __name__ == \"__main__\":\n    app.run(main)\n```\n\n  2. To host the custom image, create an Artifact Registry repository:\n\n```\ngcloud artifacts repositories create ${ARTIFACT_REGISTRY} \\\n    --repository-format=docker --location=${REGION} && \\\ngcloud auth configure-docker ${REGION}-docker.pkg.dev\n\n```\n\n  3. To build an image that includes Ray and MaxText dependencies for training, create a `Dockerfile`:\n\n```"
+      },
+      {
+        "heading": "Start from a Ray base image which includes JaxTrainer API.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "Maxtext with TPU requires Python 3.12.",
+        "level": 1,
+        "content": "FROM rayproject/ray:2.49.1-py312\n\nUSER root\nRUN groupadd -r ray 2>/dev/null || true && usermod -g ray ray\n\nRUN sudo apt-get update -y \\\n  && sudo apt-get install --no-install-recommends -y git \\\n  && sudo rm -rf /var/lib/apt/lists/*\n\nWORKDIR /app"
+      },
+      {
+        "heading": "Clone the Maxtext repo and build from source, installing TPU dependencies.",
+        "level": 1,
+        "content": "RUN git clone https://github.com/AI-Hypercomputer/maxtext.git\n\nRUN pip install --no-cache-dir uv\n\nRUN cd maxtext && \\\n    uv pip install --no-cache --system -e .[tpu] --resolution=lowest && \\\n    install_maxtext_github_deps"
+      },
+      {
+        "heading": "Copy the Ray Maxtext trainer to run on the remote container.",
+        "level": 1,
+        "content": "COPY maxtext_ray_trainer.py .\n\nRUN chown -R ray:ray .\nENV PYTHONPATH=/app/maxtext/src:/app/maxtext:/app\nUSER ray\n```\n\n**Note:** This tutorial uses a custom image because the dependencies are too large to install them by using the Ray `runtime_env` command.\n  4. Build, tag, and push the Docker image to Artifact Registry:\n\n```\nexport DOCKER_IMAGE=${REGION}-docker.pkg.dev/${PROJECT_ID}/${ARTIFACT_REGISTRY}/ray-maxtext:latest\ngcloud builds submit --tag ${DOCKER_IMAGE}\n\n```"
+      },
+      {
+        "heading": "Train the model",
+        "level": 2,
+        "content": "1. Save the following sample manifest as `maxtext-tpu-cluster.yaml`:\n\n```\napiVersion: ray.io/v1\nkind: RayCluster\nmetadata:\n  name: maxtext-tpu-cluster\nspec:\n  headGroupSpec:\n    rayStartParams: {}\n    template:\n      metadata:\n        annotations:\n          gke-gcsfuse/volumes: \"true\"\n          gke-gcsfuse/cpu-limit: \"0\"\n          gke-gcsfuse/memory-limit: \"0\"\n          gke-gcsfuse/ephemeral-storage-limit: \"0\"\n      spec:\n        serviceAccountName: ${KSA_NAME}\n        containers:\n          - name: ray-head\n            image: ${DOCKER_IMAGE}\n            imagePullPolicy: IfNotPresent\n            ports:\n            - containerPort: 6379\n              name: gcs-server\n            - containerPort: 8265\n              name: dashboard\n            - containerPort: 10001\n              name: client\n            resources:\n              limits:\n                memory: \"16Gi\"\n              requests:\n                cpu: \"8\"\n                memory: \"16Gi\"\n            volumeMounts:\n            - name: gcs-fuse-csi-ephemeral\n              mountPath: /data\n            - name: dshm\n              mountPath: /dev/shm\n        volumes:\n        - name: gcs-fuse-cache\n          emptyDir:\n            medium: Memory\n        - name: dshm\n          emptyDir:\n            medium: Memory\n        - name: gcs-fuse-csi-ephemeral\n          csi:\n            driver: gcsfuse.csi.storage.gke.io\n            volumeAttributes:\n              bucketName: ${GS_BUCKET}\n              mountOptions: \"implicit-dirs\"\n  workerGroupSpecs:\n    - replicas: 1\n      numOfHosts: 4\n      groupName: tpu-group\n      rayStartParams: {}\n      template:\n        metadata:\n          annotations:\n            gke-gcsfuse/volumes: \"true\"\n            gke-gcsfuse/cpu-limit: \"0\"\n            gke-gcsfuse/memory-limit: \"0\"\n            gke-gcsfuse/ephemeral-storage-limit: \"0\"\n        spec:\n          serviceAccountName: ${KSA_NAME}\n          containers:\n            - name: ray-worker\n              image: ${DOCKER_IMAGE}\n              imagePullPolicy: IfNotPresent\n              resources:\n                limits:\n                  memory: 200G\n                  google.com/tpu: \"4\"\n                requests:\n                  cpu: \"8\"\n                  memory: 200G\n                  google.com/tpu: \"4\"\n              env:\n                - name: JAX_PLATFORMS\n                  value: tpu\n                - name: ENABLE_PJRT_COMPATIBILITY\n                  value: \"true\"\n              volumeMounts:\n              - name: gcs-fuse-csi-ephemeral\n                mountPath: /data\n              - name: dshm\n                mountPath: /dev/shm\n          volumes:\n          - name: gcs-fuse-cache\n            emptyDir:\n              medium: Memory\n          - name: dshm\n            emptyDir:\n              medium: Memory\n          - name: gcs-fuse-csi-ephemeral\n            csi:\n              driver: gcsfuse.csi.storage.gke.io\n              volumeAttributes:\n                bucketName: ${GS_BUCKET}\n                mountOptions: \"implicit-dirs\"\n          nodeSelector:\n            cloud.google.com/gke-tpu-accelerator: tpu-v6e-slice\n            cloud.google.com/gke-tpu-topology: 4x4\n```\n\nThe preceding RayCluster spec creates a TPU worker group with four workers (`numOfHosts: 4`) per replica. Each worker requests four TPU chips (`google.com/tpu: \"4\"`). The workers will be scheduled on a node that runs TPU Trillium (`tpu-v6e-slice`), and that's part of the same colocated multi-host slice. KubeRay scales all four workers atomically, and the required JAX environment variables, as well as Pod Affinities for scheduling, are bootstrapped by GKE through a mutating webhook.\n  2. To configure required values in the YAML file, create the RayCluster using `envsubst`:\n\n```\nenvsubst < maxtext-tpu-cluster.yaml | kubectl apply -f -\n\n```\n\n  3. Verify the cluster is ready and running:\n\n```\nkubectl get rayclusters maxtext-tpu-cluster\n\n```\n\nThe output should be similar to the following:\n\n```\nNAME                  DESIRED WORKERS   AVAILABLE WORKERS   CPUS   MEMORY        GPUS   STATUS   AGE\nmaxtext-tpu-cluster   4                 4                   40     798027216Ki   0      ready    11m\n\n```\n\n  4. To access the Ray Dashboard through the Ray head service, establish a port-forwarding session:\n\n```\nkubectl port-forward svc/maxtext-tpu-cluster-head-svc 8265:8265 2>&1 >/dev/null &\n\n```\n\n  5. Verify the RayCluster is reachable from your local environment:\n\n```\nray list nodes --address http://localhost:8265\n\n```\n\nThe output should be similar to the following:\n\n```\n======== List: 2025-09-13 03:53:16.988269 ========\nStats:\n------------------------------\nTotal: 5\nTable:\n------------------------------\n    NODE_ID                                                   NODE_IP    IS_HEAD_NODE    STATE    STATE_MESSAGE    NODE_NAME    RESOURCES_TOTAL                  LABELS\n0  92c79d04c34b659c1e3044f7642ad3fd47eb16f290785237149fab56  10.84.0.9\n(...)\n\n```\n\n  6. Submit the JaxTrainer script to the RayCluster and check that the RayJob completes successfully:\n\n```\nray job submit \\\n  --address http://localhost:8265 \\\n  -- python /app/maxtext_ray_trainer.py \\\n      /app/maxtext/src/MaxText/configs/base.yml \\\n       base_output_directory=/data/ \\\n      dataset_type=synthetic \\\n      per_device_batch_size=1 \\\n      max_target_length=4096 \\\n      model_name=llama3-8b \\\n      steps=100 \\\n      ici_fsdp_parallelism=4 \\\n      ici_tensor_parallelism=4 \\\n      run_name=rayjob-8b-4096-tp4-4x4\n\n```\n\nThe preceding command submits the Python script, which calls the JaxTrainer Ray code to the RayCluster. The `ray job submit` command includes some MaxText-specific arguments to pass to the model configuration. \n**Note:** It might take a couple of minutes for the script to complete.\nIn your terminal, you should see output similar to the following:\n\n```\n(RayTrainWorker pid=21663, ip=10.12.3.6) completed step: 99, seconds: 1.100, TFLOP/s/device: 179.739, Tokens/s/device: 3725.218, total_weights: 65536, loss: 0.000 [repeated 3x across cluster]\n\n------------------------------------------\nJob 'raysubmit_zCrJcWnuymMQv4C3' succeeded\n------------------------------------------\n\n```\n\n\n**Success:** You've completed training by using Ray Train's JaxTrainer and MaxText on distributed multi-host TPU node pools."
+      },
+      {
+        "heading": "Clean up",
+        "level": 2,
+        "content": "To avoid incurring charges to your Google Cloud account for the resources used in this tutorial, either delete the project that contains the resources, or keep the project and delete the individual resources.\n  1. Delete the RayCluster:\n\n```\nkubectl delete raycluster maxtext-tpu-cluster\n\n```\n\n  2. Delete the GKE cluster:\n\n```\ngcloud container clusters delete $CLUSTER_NAME --zone=$ZONE\n\n```\n\n  3. Delete the Cloud Storage bucket:\n\n```\ngsutil rm -r gs://${GS_BUCKET}\n\n```\n\n  4. Delete the Artifact Registry repository:\n\n```\ngcloud artifacts repositories delete ${ARTIFACT_REGISTRY} --location=${REGION} --quiet\n\n```"
+      },
+      {
+        "heading": "What's next",
+        "level": 2,
+        "content": "* Learn about [Ray on Kubernetes](https://docs.ray.io/en/latest/cluster/kubernetes/index.html).\n  * Learn how to [Serve vLLM on GKE with TPUs](https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu).\n  * Learn how to [Serve SDXL on GKE with TPUs](https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-sdxl-tpu).\n  * Learn more [About TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus)."
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "gcloud init"
+      },
+      {
+        "language": "text",
+        "code": "gcloud projects create PROJECT_ID"
+      },
+      {
+        "language": "text",
+        "code": "gcloud config set project PROJECT_ID"
+      },
+      {
+        "language": "text",
+        "code": "gcloud services enable container.googleapis.com\u00a0cloudbuild.googleapis.com"
+      },
+      {
+        "language": "text",
+        "code": "gcloud init"
+      },
+      {
+        "language": "text",
+        "code": "gcloud projects create PROJECT_ID"
+      },
+      {
+        "language": "text",
+        "code": "gcloud config set project PROJECT_ID"
+      },
+      {
+        "language": "text",
+        "code": "gcloud services enable container.googleapis.com\u00a0cloudbuild.googleapis.com"
+      },
+      {
+        "language": "text",
+        "code": "gcloud projects add-iam-policy-binding PROJECT_ID --member=\"user:USER_IDENTIFIER\" --role=ROLE"
+      },
+      {
+        "language": "text",
+        "code": "python3 -m venv ray-env\nsource ray-env/bin/activate"
+      },
+      {
+        "language": "text",
+        "code": "pip install \"ray[default]==2.49.1\""
+      },
+      {
+        "language": "text",
+        "code": "export PROJECT_ID=$(gcloud config get project)\nexport PROJECT_NUMBER=$(gcloud projects describe ${PROJECT_ID} --format=\"value(projectNumber)\")\nexport GS_BUCKET=GS_BUCKET\nexport KSA_NAME=KSA_NAME\nexport NAMESPACE=default\nexport CLUSTER_NAME=CLUSTER_NAME\nexport REGION=REGION\nexport ZONE=ZONE\nexport ARTIFACT_REGISTRY=ARTIFACT_REGISTRY"
+      },
+      {
+        "language": "text",
+        "code": "gcloud container clusters create-auto $CLUSTER_NAME \\\n    --enable-ray-operator \\\n    --machine-type=n1-standard-16 \\\n    --location=$REGION"
+      },
+      {
+        "language": "text",
+        "code": "gcloud container clusters get-credentials CLUSTER_NAME \\\n    --location=$ZONE"
+      },
+      {
+        "language": "text",
+        "code": "gcloud container clusters create $CLUSTER_NAME \\\n    --addons=RayOperator \\\n    --addons GcsFuseCsiDriver \\\n    --machine-type=n1-standard-16 \\\n    --workload-pool=$PROJECT_ID.svc.id.goog \\\n    --location=$ZONE"
+      },
+      {
+        "language": "text",
+        "code": "gcloud container clusters get-credentials CLUSTER_NAME \\\n    --location=LOCATION"
+      },
+      {
+        "language": "text",
+        "code": "gcloud container node-pools create v6e-16 \\\n    --location=$ZONE \\\n    --cluster=$CLUSTER_NAME \\\n    --machine-type=ct6e-standard-4t \\\n    --threads-per-core=1 \\\n    --tpu-topology=4x4 \\\n    --num-nodes=4"
+      },
+      {
+        "language": "text",
+        "code": "gsutil mb -p ${PROJECT_ID} -c STANDARD -l ${REGION} gs://${GS_BUCKET}"
+      },
+      {
+        "language": "text",
+        "code": "kubectl create serviceaccount ${KSA_NAME} --namespace ${NAMESPACE}"
+      },
+      {
+        "language": "text",
+        "code": "gcloud storage buckets add-iam-policy-binding gs://${GS_BUCKET} \\\n    --member \"principal://iam.googleapis.com/projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${PROJECT_ID}.svc.id.goog/subject/ns/${NAMESPACE}/sa/${KSA_NAME}\" \\\n    --role \"roles/storage.objectUser\""
+      },
+      {
+        "language": "text",
+        "code": "import os\nfrom absl import app\nimport logging\nfrom typing import Sequence\nimport ray\nfrom ray.train.v2.api.config import ScalingConfig, RunConfig\nfrom ray.train.v2.jax import JaxTrainer\n\ndef train_loop_per_worker(config):\n    from MaxText.train import main as maxtext_main\n\n    argv = config[\"argv\"]\n    maxtext_main(argv)\n\ndef main(argv: Sequence[str]):\n    trainer = JaxTrainer(\n        train_loop_per_worker=train_loop_per_worker,\n        train_loop_config={\"argv\": argv},\n        scaling_config=ScalingConfig(\n            use_tpu=True,\n            num_workers=4,\n            topology=\"4x4\",\n            accelerator_type=\"TPU-V6E\",\n            resources_per_worker={\"TPU\": 4},\n            placement_strategy=\"SPREAD\",\n        ),\n        run_config=RunConfig(\n            name=\"maxtext_jaxtrainer\",\n            worker_runtime_env={\n                \"env_vars\": {\n                    \"JAX_PLATFORMS\": \"tpu\",\n                    \"ENABLE_PJRT_COMPATIBILITY\": \"true\",\n                    \"TPU_SLICE_BUILDER_DUMP_CHIP_FORCE\": \"true\",\n                    \"TPU_SLICE_BUILDER_DUMP_ICI\": \"true\",\n                    \"XLA_FLAGS\": \"--xla_dump_to=/tmp/xla_dump_file --xla_dump_hlo_as_proto\",\n                }\n            },\n        ),\n    )\n    result = trainer.fit()\n    logging.info(\"Training complete!\")\n    ray.shutdown()\n\nif __name__ == \"__main__\":\n    app.run(main)"
+      },
+      {
+        "language": "text",
+        "code": "gcloud artifacts repositories create ${ARTIFACT_REGISTRY} \\\n    --repository-format=docker --location=${REGION} && \\\ngcloud auth configure-docker ${REGION}-docker.pkg.dev"
+      },
+      {
+        "language": "text",
+        "code": "# Start from a Ray base image which includes JaxTrainer API.\n# Maxtext with TPU requires Python 3.12.\nFROM rayproject/ray:2.49.1-py312\n\nUSER root\nRUN groupadd -r ray 2>/dev/null || true && usermod -g ray ray\n\nRUN sudo apt-get update -y \\\n  && sudo apt-get install --no-install-recommends -y git \\\n  && sudo rm -rf /var/lib/apt/lists/*\n\nWORKDIR /app\n\n# Clone the Maxtext repo and build from source, installing TPU dependencies.\nRUN git clone https://github.com/AI-Hypercomputer/maxtext.git\n\nRUN pip install --no-cache-dir uv\n\nRUN cd maxtext && \\\n    uv pip install --no-cache --system -e .[tpu] --resolution=lowest && \\\n    install_maxtext_github_deps\n\n# Copy the Ray Maxtext trainer to run on the remote container.\nCOPY maxtext_ray_trainer.py .\n\nRUN chown -R ray:ray .\nENV PYTHONPATH=/app/maxtext/src:/app/maxtext:/app\nUSER ray"
+      },
+      {
+        "language": "text",
+        "code": "export DOCKER_IMAGE=${REGION}-docker.pkg.dev/${PROJECT_ID}/${ARTIFACT_REGISTRY}/ray-maxtext:latest\ngcloud builds submit --tag ${DOCKER_IMAGE}"
+      },
+      {
+        "language": "text",
+        "code": "apiVersion: ray.io/v1\nkind: RayCluster\nmetadata:\n  name: maxtext-tpu-cluster\nspec:\n  headGroupSpec:\n    rayStartParams: {}\n    template:\n      metadata:\n        annotations:\n          gke-gcsfuse/volumes: \"true\"\n          gke-gcsfuse/cpu-limit: \"0\"\n          gke-gcsfuse/memory-limit: \"0\"\n          gke-gcsfuse/ephemeral-storage-limit: \"0\"\n      spec:\n        serviceAccountName: ${KSA_NAME}\n        containers:\n          - name: ray-head\n            image: ${DOCKER_IMAGE}\n            imagePullPolicy: IfNotPresent\n            ports:\n            - containerPort: 6379\n              name: gcs-server\n            - containerPort: 8265\n              name: dashboard\n            - containerPort: 10001\n              name: client\n            resources:\n              limits:\n                memory: \"16Gi\"\n              requests:\n                cpu: \"8\"\n                memory: \"16Gi\"\n            volumeMounts:\n            - name: gcs-fuse-csi-ephemeral\n              mountPath: /data\n            - name: dshm\n              mountPath: /dev/shm\n        volumes:\n        - name: gcs-fuse-cache\n          emptyDir:\n            medium: Memory\n        - name: dshm\n          emptyDir:\n            medium: Memory\n        - name: gcs-fuse-csi-ephemeral\n          csi:\n            driver: gcsfuse.csi.storage.gke.io\n            volumeAttributes:\n              bucketName: ${GS_BUCKET}\n              mountOptions: \"implicit-dirs\"\n  workerGroupSpecs:\n    - replicas: 1\n      numOfHosts: 4\n      groupName: tpu-group\n      rayStartParams: {}\n      template:\n        metadata:\n          annotations:\n            gke-gcsfuse/volumes: \"true\"\n            gke-gcsfuse/cpu-limit: \"0\"\n            gke-gcsfuse/memory-limit: \"0\"\n            gke-gcsfuse/ephemeral-storage-limit: \"0\"\n        spec:\n          serviceAccountName: ${KSA_NAME}\n          containers:\n            - name: ray-worker\n              image: ${DOCKER_IMAGE}\n              imagePullPolicy: IfNotPresent\n              resources:\n                limits:\n                  memory: 200G\n                  google.com/tpu: \"4\"\n                requests:\n                  cpu: \"8\"\n                  memory: 200G\n                  google.com/tpu: \"4\"\n              env:\n                - name: JAX_PLATFORMS\n                  value: tpu\n                - name: ENABLE_PJRT_COMPATIBILITY\n                  value: \"true\"\n              volumeMounts:\n              - name: gcs-fuse-csi-ephemeral\n                mountPath: /data\n              - name: dshm\n                mountPath: /dev/shm\n          volumes:\n          - name: gcs-fuse-cache\n            emptyDir:\n              medium: Memory\n          - name: dshm\n            emptyDir:\n              medium: Memory\n          - name: gcs-fuse-csi-ephemeral\n            csi:\n              driver: gcsfuse.csi.storage.gke.io\n              volumeAttributes:\n                bucketName: ${GS_BUCKET}\n                mountOptions: \"implicit-dirs\"\n          nodeSelector:\n            cloud.google.com/gke-tpu-accelerator: tpu-v6e-slice\n            cloud.google.com/gke-tpu-topology: 4x4"
+      },
+      {
+        "language": "text",
+        "code": "envsubst < maxtext-tpu-cluster.yaml | kubectl apply -f -"
+      },
+      {
+        "language": "text",
+        "code": "kubectl get rayclusters maxtext-tpu-cluster"
+      },
+      {
+        "language": "text",
+        "code": "NAME                  DESIRED WORKERS   AVAILABLE WORKERS   CPUS   MEMORY        GPUS   STATUS   AGE\nmaxtext-tpu-cluster   4                 4                   40     798027216Ki   0      ready    11m"
+      },
+      {
+        "language": "text",
+        "code": "kubectl port-forward svc/maxtext-tpu-cluster-head-svc 8265:8265 2>&1 >/dev/null &"
+      },
+      {
+        "language": "text",
+        "code": "ray list nodes --address http://localhost:8265"
+      },
+      {
+        "language": "text",
+        "code": "======== List: 2025-09-13 03:53:16.988269 ========\nStats:\n------------------------------\nTotal: 5\nTable:\n------------------------------\n    NODE_ID                                                   NODE_IP    IS_HEAD_NODE    STATE    STATE_MESSAGE    NODE_NAME    RESOURCES_TOTAL                  LABELS\n0  92c79d04c34b659c1e3044f7642ad3fd47eb16f290785237149fab56  10.84.0.9\n(...)"
+      },
+      {
+        "language": "text",
+        "code": "ray job submit \\\n  --address http://localhost:8265 \\\n  -- python /app/maxtext_ray_trainer.py \\\n      /app/maxtext/src/MaxText/configs/base.yml \\\n       base_output_directory=/data/ \\\n      dataset_type=synthetic \\\n      per_device_batch_size=1 \\\n      max_target_length=4096 \\\n      model_name=llama3-8b \\\n      steps=100 \\\n      ici_fsdp_parallelism=4 \\\n      ici_tensor_parallelism=4 \\\n      run_name=rayjob-8b-4096-tp4-4x4"
+      },
+      {
+        "language": "text",
+        "code": "(RayTrainWorker pid=21663, ip=10.12.3.6) completed step: 99, seconds: 1.100, TFLOP/s/device: 179.739, Tokens/s/device: 3725.218, total_weights: 65536, loss: 0.000 [repeated 3x across cluster]\n\n------------------------------------------\nJob 'raysubmit_zCrJcWnuymMQv4C3' succeeded\n------------------------------------------"
+      },
+      {
+        "language": "text",
+        "code": "kubectl delete raycluster maxtext-tpu-cluster"
+      },
+      {
+        "language": "text",
+        "code": "gcloud container clusters delete $CLUSTER_NAME --zone=$ZONE"
+      },
+      {
+        "language": "text",
+        "code": "gsutil rm -r gs://${GS_BUCKET}"
+      },
+      {
+        "language": "text",
+        "code": "gcloud artifacts repositories delete ${ARTIFACT_REGISTRY} --location=${REGION} --quiet"
+      }
+    ],
+    "cli_commands": [
+      "gcloud init",
+      "gcloud projects create PROJECT_ID",
+      "gcloud config set project PROJECT_ID",
+      "gcloud services enable container.googleapis.com\u00a0cloudbuild.googleapis.com",
+      "gcloud projects add-iam-policy-binding PROJECT_ID --member=\"user:USER_IDENTIFIER\" --role=ROLE",
+      "python3 -m venv ray-env",
+      "pip install \"ray[default]==2.49.1\"",
+      "export PROJECT_ID=$(gcloud config get project)",
+      "export PROJECT_NUMBER=$(gcloud projects describe ${PROJECT_ID} --format=\"value(projectNumber)\")",
+      "export GS_BUCKET=GS_BUCKET",
+      "export KSA_NAME=KSA_NAME",
+      "export NAMESPACE=default",
+      "export CLUSTER_NAME=CLUSTER_NAME",
+      "export REGION=REGION",
+      "export ZONE=ZONE",
+      "export ARTIFACT_REGISTRY=ARTIFACT_REGISTRY",
+      "gcloud container clusters create-auto $CLUSTER_NAME \\",
+      "gcloud container clusters get-credentials CLUSTER_NAME \\",
+      "gcloud container clusters create $CLUSTER_NAME \\",
+      "gcloud container node-pools create v6e-16 \\",
+      "kubectl create serviceaccount ${KSA_NAME} --namespace ${NAMESPACE}",
+      "gcloud storage buckets add-iam-policy-binding gs://${GS_BUCKET} \\",
+      "ray.shutdown()",
+      "gcloud artifacts repositories create ${ARTIFACT_REGISTRY} \\",
+      "gcloud auth configure-docker ${REGION}-docker.pkg.dev",
+      "uv pip install --no-cache --system -e .[tpu] --resolution=lowest && \\",
+      "export DOCKER_IMAGE=${REGION}-docker.pkg.dev/${PROJECT_ID}/${ARTIFACT_REGISTRY}/ray-maxtext:latest",
+      "gcloud builds submit --tag ${DOCKER_IMAGE}",
+      "kubectl get rayclusters maxtext-tpu-cluster",
+      "kubectl port-forward svc/maxtext-tpu-cluster-head-svc 8265:8265 2>&1 >/dev/null &",
+      "ray list nodes --address http://localhost:8265",
+      "ray job submit \\",
+      "kubectl delete raycluster maxtext-tpu-cluster",
+      "gcloud container clusters delete $CLUSTER_NAME --zone=$ZONE",
+      "gcloud artifacts repositories delete ${ARTIFACT_REGISTRY} --location=${REGION} --quiet"
+    ],
+    "environment_variables": [
+      "PROJECT_ID",
+      "PROJECT_NUMBER",
+      "ZONE"
+    ],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Train with JAX, Ray Train, and TPU Trillium on GKE' (https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/distributed-training-tpu)?",
+        "answer": "Distributed training across TPU hosts using Ray Train and JAX."
+      },
+      {
+        "question": "How does 'Train with JAX, Ray Train, and TPU Trillium on GKE' handle: Train an LLM using JAX, Ray Train, and TPU Trillium on GKE?",
+        "answer": "[ Autopilot ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview) [ Standard ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/choose-cluster-mode)\nThis tutorial shows you how to train the Llama 3 8B large language model (LLM) on Google Kubernetes Engine (GKE) using [MaxText](https://github.com/google/maxtext), [Ray Train](https://docs.ray.io/en/latest/train/train.html), and TPUs.\nThis tutorial provides a complete, end-to-end walkthrough, from configuring the necessary cloud infrastructure to submitting and successfully running the training workload on multi-host TPUs.\nThis tutorial is for Platform admins and operators and Data and AI specialists who want to learn how to train large models on a distributed, multi-host TPU slice."
+      },
+      {
+        "question": "How does 'Train with JAX, Ray Train, and TPU Trillium on GKE' handle: Background?",
+        "answer": "The combination of GKE, KubeRay, MaxText, and TPUs provides a powerful and scalable platform for large-scale model training. This section describes the key technologies used in this guide:"
+      },
+      {
+        "question": "How does 'Train with JAX, Ray Train, and TPU Trillium on GKE' handle: JAX?",
+        "answer": "[JAX](https://github.com/jax-ml/jax) is a Python library for accelerator-oriented array computation and program transformation, designed for high-performance numerical computing and large-scale machine learning.\nJAX provides an extensible system for transforming numerical functions like `jax.grad`, `jax.jit`, and `jax.vmap`, utilizing the XLA compiler to create highly optimized code that scales efficiently on accelerators like GPUs and TPUs. The core power of JAX lies in its composability, which allows users to combine these transformations to build complex, high-performance numerical programs for distributed execution."
+      },
+      {
+        "question": "How does 'Train with JAX, Ray Train, and TPU Trillium on GKE' handle: MaxText?",
+        "answer": "[MaxText](https://github.com/google/maxtext) is a high-performance, open-source large language model (LLM) designed for scalability and customizability. MaxText is built on top of JAX and optimized to run efficiently on Cloud TPU and GPUs."
+      },
+      {
+        "question": "How does 'Train with JAX, Ray Train, and TPU Trillium on GKE' handle: TPUs?",
+        "answer": "[Tensor Processing Units](https://cloud.google.com/tpu) (TPUs), are custom-designed accelerators created by Google to optimize machine learning workloads. Unlike general-purpose CPUs or parallel-processing GPUs, TPUs are highly specialized for the massive matrix and tensor computations at the foundation of deep learning, making them efficient at this specific task. The primary advantage of TPUs is performance at scale.\nThis tutorial uses TPU Trillium, which is the sixth generation of TPUs. For more information, see [Benefits of using TPU Trillium](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus#trillium-benefits)."
+      },
+      {
+        "question": "How does 'Train with JAX, Ray Train, and TPU Trillium on GKE' handle: KubeRay?",
+        "answer": "[KubeRay](https://github.com/ray-project/kuberay) is a Kubernetes operator that provides a unified way to deploy, manage, and monitor Ray applications on Kubernetes. The KubeRay operator is installed and managed through the [Ray on GKE add-on](https://docs.cloud.google.com/kubernetes-engine/docs/add-on/ray-on-gke/concepts/overview), which is the recommended way to deploy and manage Ray clusters on GKE."
+      },
+      {
+        "question": "How does 'Train with JAX, Ray Train, and TPU Trillium on GKE' handle: Objectives?",
+        "answer": "This tutorial shows you how to do the following:\n  1. Set up a GKE cluster with a multi-host TPU node pool.\n  2. Configure KubeRay to manage the distributed training environment.\n  3. Build a custom Docker image that contains MaxText, Ray, and JAX dependencies.\n  4. Create a Python training script that uses Ray Train's `JaxTrainer` to orchestrate the MaxText training loop across the TPU slice.\n  5. Define a [`RayCluster` custom resource](https://docs.ray.io/en/latest/cluster/kubernetes/user-guides/config.html) to provision the head and worker nodes with the necessary TPU resources.\n  6. Submit the training Job to the `RayCluster` and monitor its progress.\n  7. Use Cloud Storage to store model checkpoints."
+      },
+      {
+        "question": "How does 'Train with JAX, Ray Train, and TPU Trillium on GKE' handle: Before you begin?",
+        "answer": "* Sign in to your Google Cloud account. If you're new to Google Cloud, [ create an account](https://console.cloud.google.com/freetrial) to evaluate how our products perform in real-world scenarios. New customers also get $300 in free credits to run, test, and deploy workloads. \n  * [Install](https://docs.cloud.google.com/sdk/docs/install) the Google Cloud CLI. \n**Note:** If you installed the gcloud CLI previously, make sure you have the latest version by running `gcloud components update`. \n  * If you're using an external identity provider (IdP), you must first [ sign in to the gcloud CLI with your federated identity](https://docs.cloud.google.com/iam/docs/workforce-log-in-gcloud). \n  * To [initialize](https://docs.cloud.google.com/sdk/docs/initializing) the gcloud CLI, run the following command: \n\n```\ngcloud init\n```\n\n  * [Create or select a Google Cloud project](https://cloud.google.com/resource-manager/docs/creating-managing-projects).\n**Roles required to select or create a project**\n    * **Select a project** : Selecting a project doesn't require a specific IAM role\u2014you can select any project that you've been granted a role on. \n    * **Create a project** : To create a project,"
+      },
+      {
+        "question": "How does 'Train with JAX, Ray Train, and TPU Trillium on GKE' handle: Prepare your environment?",
+        "answer": "In this tutorial, you use [Cloud Shell](https://docs.cloud.google.com/shell). Cloud Shell comes preinstalled with the `gcloud`, `helm`, and `kubectl` command-line tools that are used in this tutorial.\n  1. Go to the [Google Cloud console](https://console.cloud.google.com/).\n  2. At the top of the Google Cloud console window, click the **Activate Cloud Shell** ![Activate Shell\nButton](https://docs.cloud.google.com/static/kubernetes-engine/images/cloud-shell.png) button.\nA Cloud Shell session opens inside a new frame in the Google Cloud console and displays a command-line prompt.\n  3. Create and activate a Python virtual environment:\n\n```\npython3 -m venv ray-env\nsource ray-env/bin/activate\n\n```\n\n  4. Install the Ray CLI and other dependencies:\n\n```\npip install \"ray[default]==2.49.1\"\n\n```\n\n  5. Set the following environment variables:\n\n```\nexport PROJECT_ID=$(gcloud config get project)\nexport PROJECT_NUMBER=$(gcloud projects describe ${PROJECT_ID} --format=\"value(projectNumber)\")\nexport GS_BUCKET=GS_BUCKET\nexport KSA_NAME=KSA_NAME\nexport NAMESPACE=default\nexport CLUSTER_NAME=CLUSTER_NAME\nexport REGION=REGION\nexport ZONE=ZONE\nexport ARTIFACT_REGISTRY=ARTIFACT_REGISTRY\n\n```\n\nReplace the"
+      }
+    ],
+    "full_markdown": "#  Train an LLM using JAX, Ray Train, and TPU Trillium on GKE\n[ Autopilot ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview) [ Standard ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/choose-cluster-mode)\nThis tutorial shows you how to train the Llama 3 8B large language model (LLM) on Google Kubernetes Engine (GKE) using [MaxText](https://github.com/google/maxtext), [Ray Train](https://docs.ray.io/en/latest/train/train.html), and TPUs.\nThis tutorial provides a complete, end-to-end walkthrough, from configuring the necessary cloud infrastructure to submitting and successfully running the training workload on multi-host TPUs.\nThis tutorial is for Platform admins and operators and Data and AI specialists who want to learn how to train large models on a distributed, multi-host TPU slice.\n## Background\nThe combination of GKE, KubeRay, MaxText, and TPUs provides a powerful and scalable platform for large-scale model training. This section describes the key technologies used in this guide:\n### JAX\n[JAX](https://github.com/jax-ml/jax) is a Python library for accelerator-oriented array computation and program transformation, designed for high-performance numerical computing and large-scale machine learning.\nJAX provides an extensible system for transforming numerical functions like `jax.grad`, `jax.jit`, and `jax.vmap`, utilizing the XLA compiler to create highly optimized code that scales efficiently on accelerators like GPUs and TPUs. The core power of JAX lies in its composability, which allows users to combine these transformations to build complex, high-performance numerical programs for distributed execution.\n### MaxText\n[MaxText](https://github.com/google/maxtext) is a high-performance, open-source large language model (LLM) designed for scalability and customizability. MaxText is built on top of JAX and optimized to run efficiently on Cloud TPU and GPUs.\n### TPUs\n[Tensor Processing Units](https://cloud.google.com/tpu) (TPUs), are custom-designed accelerators created by Google to optimize machine learning workloads. Unlike general-purpose CPUs or parallel-processing GPUs, TPUs are highly specialized for the massive matrix and tensor computations at the foundation of deep learning, making them efficient at this specific task. The primary advantage of TPUs is performance at scale.\nThis tutorial uses TPU Trillium, which is the sixth generation of TPUs. For more information, see [Benefits of using TPU Trillium](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus#trillium-benefits).\n### KubeRay\n[KubeRay](https://github.com/ray-project/kuberay) is a Kubernetes operator that provides a unified way to deploy, manage, and monitor Ray applications on Kubernetes. The KubeRay operator is installed and managed through the [Ray on GKE add-on](https://docs.cloud.google.com/kubernetes-engine/docs/add-on/ray-on-gke/concepts/overview), which is the recommended way to deploy and manage Ray clusters on GKE.\n## Objectives\nThis tutorial shows you how to do the following:\n  1. Set up a GKE cluster with a multi-host TPU node pool.\n  2. Configure KubeRay to manage the distributed training environment.\n  3. Build a custom Docker image that contains MaxText, Ray, and JAX dependencies.\n  4. Create a Python training script that uses Ray Train's `JaxTrainer` to orchestrate the MaxText training loop across the TPU slice.\n  5. Define a [`RayCluster` custom resource](https://docs.ray.io/en/latest/cluster/kubernetes/user-guides/config.html) to provision the head and worker nodes with the necessary TPU resources.\n  6. Submit the training Job to the `RayCluster` and monitor its progress.\n  7. Use Cloud Storage to store model checkpoints.\n\n\n## Before you begin\n  * Sign in to your Google Cloud account. If you're new to Google Cloud, [ create an account](https://console.cloud.google.com/freetrial) to evaluate how our products perform in real-world scenarios. New customers also get $300 in free credits to run, test, and deploy workloads. \n  * [Install](https://docs.cloud.google.com/sdk/docs/install) the Google Cloud CLI. \n**Note:** If you installed the gcloud CLI previously, make sure you have the latest version by running `gcloud components update`. \n  * If you're using an external identity provider (IdP), you must first [ sign in to the gcloud CLI with your federated identity](https://docs.cloud.google.com/iam/docs/workforce-log-in-gcloud). \n  * To [initialize](https://docs.cloud.google.com/sdk/docs/initializing) the gcloud CLI, run the following command: \n\n```\ngcloud init\n```\n\n  * [Create or select a Google Cloud project](https://cloud.google.com/resource-manager/docs/creating-managing-projects).\n**Roles required to select or create a project**\n    * **Select a project** : Selecting a project doesn't require a specific IAM role\u2014you can select any project that you've been granted a role on. \n    * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.\n    * Create a Google Cloud project:\n\n```\ngcloud projects create PROJECT_ID\n```\n\nReplace `PROJECT_ID` with a name for the Google Cloud project you are creating.\n    * Select the Google Cloud project that you created:\n\n```\ngcloud config set project PROJECT_ID\n```\n\nReplace `PROJECT_ID` with your Google Cloud project name.\n  * [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). \n  * Enable the required APIs, if any are not already enabled: \n**Roles required to enable APIs**\nTo enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n\n```\ngcloud services enable container.googleapis.com\u00a0cloudbuild.googleapis.com\n```\n\n  * [Install](https://docs.cloud.google.com/sdk/docs/install) the Google Cloud CLI. \n**Note:** If you installed the gcloud CLI previously, make sure you have the latest version by running `gcloud components update`. \n  * If you're using an external identity provider (IdP), you must first [ sign in to the gcloud CLI with your federated identity](https://docs.cloud.google.com/iam/docs/workforce-log-in-gcloud). \n  * To [initialize](https://docs.cloud.google.com/sdk/docs/initializing) the gcloud CLI, run the following command: \n\n```\ngcloud init\n```\n\n  * [Create or select a Google Cloud project](https://cloud.google.com/resource-manager/docs/creating-managing-projects).\n**Roles required to select or create a project**\n    * **Select a project** : Selecting a project doesn't require a specific IAM role\u2014you can select any project that you've been granted a role on. \n    * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.\n    * Create a Google Cloud project:\n\n```\ngcloud projects create PROJECT_ID\n```\n\nReplace `PROJECT_ID` with a name for the Google Cloud project you are creating.\n    * Select the Google Cloud project that you created:\n\n```\ngcloud config set project PROJECT_ID\n```\n\nReplace `PROJECT_ID` with your Google Cloud project name.\n  * [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). \n  * Enable the required APIs, if any are not already enabled: \n**Roles required to enable APIs**\nTo enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n\n```\ngcloud services enable container.googleapis.com\u00a0cloudbuild.googleapis.com\n```\n\n  * Grant roles to your user account. Run the following command once for each of the following IAM roles: `roles/container.admin, roles/iam.serviceAccountAdmin, roles/cloudbuild.builds.editor`\n\n```\ngcloud projects add-iam-policy-binding PROJECT_ID --member=\"user:USER_IDENTIFIER\" --role=ROLE\n```\n\nReplace the following:\n    * `PROJECT_ID`: Your project ID.\n    * `USER_IDENTIFIER`: The identifier for your user account. For example, `myemail@example.com`. \n    * `ROLE`: The IAM role that you grant to your user account.\n\n\n  * Because this tutorial utilizes TPU Trillium (v6e), select a region or zone with availability. For more information, see [Cloud TPU quotas](https://docs.cloud.google.com/tpu/docs/quota).\n\n\n## Prepare your environment\nIn this tutorial, you use [Cloud Shell](https://docs.cloud.google.com/shell). Cloud Shell comes preinstalled with the `gcloud`, `helm`, and `kubectl` command-line tools that are used in this tutorial.\n  1. Go to the [Google Cloud console](https://console.cloud.google.com/).\n  2. At the top of the Google Cloud console window, click the **Activate Cloud Shell** ![Activate Shell\nButton](https://docs.cloud.google.com/static/kubernetes-engine/images/cloud-shell.png) button.\nA Cloud Shell session opens inside a new frame in the Google Cloud console and displays a command-line prompt.\n  3. Create and activate a Python virtual environment:\n\n```\npython3 -m venv ray-env\nsource ray-env/bin/activate\n\n```\n\n  4. Install the Ray CLI and other dependencies:\n\n```\npip install \"ray[default]==2.49.1\"\n\n```\n\n  5. Set the following environment variables:\n\n```\nexport PROJECT_ID=$(gcloud config get project)\nexport PROJECT_NUMBER=$(gcloud projects describe ${PROJECT_ID} --format=\"value(projectNumber)\")\nexport GS_BUCKET=GS_BUCKET\nexport KSA_NAME=KSA_NAME\nexport NAMESPACE=default\nexport CLUSTER_NAME=CLUSTER_NAME\nexport REGION=REGION\nexport ZONE=ZONE\nexport ARTIFACT_REGISTRY=ARTIFACT_REGISTRY\n\n```\n\nReplace the following:\n     * `GS_BUCKET`: the name of the Cloud Storage bucket.\n     * `KSA_NAME`: the name of the Kubernetes Service Account.\n     * `CLUSTER_NAME`: the name of the new cluster.\n     * `REGION`: the region where your TPU Trillium capacity is available.\n     * `ZONE`: the zone where your TPU Trillium capacity is available. For more information, see [TPU availability in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/plan-tpus#availability).\n     * `ARTIFACT_REGISTRY`: the name of the Artifact Registry repository.\n\n\n## Create a GKE cluster\nYou can configure KubeRay on TPUs in a GKE Autopilot or Standard cluster. We recommend that you use a Autopilot cluster for a fully managed Kubernetes experience. To choose the GKE mode of operation that's the best fit for your workloads, see [About GKE modes of operation](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/choose-cluster-mode).\n### Autopilot\n  1. In Cloud Shell, run the following command:\n\n```\ngcloud container clusters create-auto $CLUSTER_NAME \\\n    --enable-ray-operator \\\n    --machine-type=n1-standard-16 \\\n    --location=$REGION\n\n```\n\n  2. To communicate with your cluster, configure `kubectl` :\n\n```\ngcloud container clusters get-credentials CLUSTER_NAME \\\n    --location=$ZONE\n\n```\n\n### Standard\n  1. In Cloud Shell, create a Standard cluster that enables the [Ray operator](https://docs.cloud.google.com/kubernetes-engine/docs/add-on/ray-on-gke/concepts/overview) add-on by running the following command:\n\n```\ngcloud container clusters create $CLUSTER_NAME \\\n    --addons=RayOperator \\\n    --addons GcsFuseCsiDriver \\\n    --machine-type=n1-standard-16 \\\n    --workload-pool=$PROJECT_ID.svc.id.goog \\\n    --location=$ZONE\n\n```\n\nThis command also enables the `GcsFuseCsiDriver`, which allows Pods to mount Cloud Storage buckets as local file systems. The cluster creation might take several minutes.\n  2. To communicate with your cluster, configure `kubectl`:\n\n```\ngcloud container clusters get-credentials CLUSTER_NAME \\\n    --location=LOCATION\n\n```\n\n  3. Create a [multi-host](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus#multi-host) TPU slice node pool:\n\n```\ngcloud container node-pools create v6e-16 \\\n    --location=$ZONE \\\n    --cluster=$CLUSTER_NAME \\\n    --machine-type=ct6e-standard-4t \\\n    --threads-per-core=1 \\\n    --tpu-topology=4x4 \\\n    --num-nodes=4\n\n```\n\nGKE provisions a node pool consisting of four TPU Trillium (v6e) VMs, which are configured together as a multi-host TPU slice, with a `4x4` topology, that's ready for distributed training workloads.\nThe [Ray operator](https://docs.cloud.google.com/kubernetes-engine/docs/add-on/ray-on-gke/concepts/overview)-enabled GKE cluster automatically installs KubeRay and the [KubeRay TPU webhook](https://github.com/ai-on-gke/kuberay-tpu-webhook) in your cluster.\n## Configure a Cloud Storage bucket and a service account\n  1. Create a Cloud Storage bucket for shared checkpoints between the multi-host TPU nodes.\n\n```\ngsutil mb -p ${PROJECT_ID} -c STANDARD -l ${REGION} gs://${GS_BUCKET}\n\n```\n\n  2. To enable access to the Cloud Storage bucket, create a Kubernetes Service Account:\n\n```\nkubectl create serviceaccount ${KSA_NAME} --namespace ${NAMESPACE}\n\n```\n\n  3. To enable access to the Cloud Storage bucket, add the required IAM policy bindings to the service account:\n\n```\ngcloud storage buckets add-iam-policy-binding gs://${GS_BUCKET} \\\n    --member \"principal://iam.googleapis.com/projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${PROJECT_ID}.svc.id.goog/subject/ns/${NAMESPACE}/sa/${KSA_NAME}\" \\\n    --role \"roles/storage.objectUser\"\n\n```\n\n## Create the training script\nThe following script uses Ray Train's `JaxTrainer` to run a distributed MaxText training job. The script configures the training environment for a multi-host TPU slice node pool and runs the MaxText training job on each worker node. The `train_loop_per_worker` function wraps the MaxText main entry point, and uses the Ray's distributed scheduler to execute the MaxText trainer on a multi-host TPU slice.\n  1. Save the following Python script as `maxtext_ray_trainer.py`:\n\n```\nimport os\nfrom absl import app\nimport logging\nfrom typing import Sequence\nimport ray\nfrom ray.train.v2.api.config import ScalingConfig, RunConfig\nfrom ray.train.v2.jax import JaxTrainer\n\ndef train_loop_per_worker(config):\n    from MaxText.train import main as maxtext_main\n\n    argv = config[\"argv\"]\n    maxtext_main(argv)\n\ndef main(argv: Sequence[str]):\n    trainer = JaxTrainer(\n        train_loop_per_worker=train_loop_per_worker,\n        train_loop_config={\"argv\": argv},\n        scaling_config=ScalingConfig(\n            use_tpu=True,\n            num_workers=4,\n            topology=\"4x4\",\n            accelerator_type=\"TPU-V6E\",\n            resources_per_worker={\"TPU\": 4},\n            placement_strategy=\"SPREAD\",\n        ),\n        run_config=RunConfig(\n            name=\"maxtext_jaxtrainer\",\n            worker_runtime_env={\n                \"env_vars\": {\n                    \"JAX_PLATFORMS\": \"tpu\",\n                    \"ENABLE_PJRT_COMPATIBILITY\": \"true\",\n                    \"TPU_SLICE_BUILDER_DUMP_CHIP_FORCE\": \"true\",\n                    \"TPU_SLICE_BUILDER_DUMP_ICI\": \"true\",\n                    \"XLA_FLAGS\": \"--xla_dump_to=/tmp/xla_dump_file --xla_dump_hlo_as_proto\",\n                }\n            },\n        ),\n    )\n    result = trainer.fit()\n    logging.info(\"Training complete!\")\n    ray.shutdown()\n\nif __name__ == \"__main__\":\n    app.run(main)\n```\n\n  2. To host the custom image, create an Artifact Registry repository:\n\n```\ngcloud artifacts repositories create ${ARTIFACT_REGISTRY} \\\n    --repository-format=docker --location=${REGION} && \\\ngcloud auth configure-docker ${REGION}-docker.pkg.dev\n\n```\n\n  3. To build an image that includes Ray and MaxText dependencies for training, create a `Dockerfile`:\n\n```\n# Start from a Ray base image which includes JaxTrainer API.\n# Maxtext with TPU requires Python 3.12.\nFROM rayproject/ray:2.49.1-py312\n\nUSER root\nRUN groupadd -r ray 2>/dev/null || true && usermod -g ray ray\n\nRUN sudo apt-get update -y \\\n  && sudo apt-get install --no-install-recommends -y git \\\n  && sudo rm -rf /var/lib/apt/lists/*\n\nWORKDIR /app\n\n# Clone the Maxtext repo and build from source, installing TPU dependencies.\nRUN git clone https://github.com/AI-Hypercomputer/maxtext.git\n\nRUN pip install --no-cache-dir uv\n\nRUN cd maxtext && \\\n    uv pip install --no-cache --system -e .[tpu] --resolution=lowest && \\\n    install_maxtext_github_deps\n\n# Copy the Ray Maxtext trainer to run on the remote container.\nCOPY maxtext_ray_trainer.py .\n\nRUN chown -R ray:ray .\nENV PYTHONPATH=/app/maxtext/src:/app/maxtext:/app\nUSER ray\n```\n\n**Note:** This tutorial uses a custom image because the dependencies are too large to install them by using the Ray `runtime_env` command.\n  4. Build, tag, and push the Docker image to Artifact Registry:\n\n```\nexport DOCKER_IMAGE=${REGION}-docker.pkg.dev/${PROJECT_ID}/${ARTIFACT_REGISTRY}/ray-maxtext:latest\ngcloud builds submit --tag ${DOCKER_IMAGE}\n\n```\n\n## Train the model\n  1. Save the following sample manifest as `maxtext-tpu-cluster.yaml`:\n\n```\napiVersion: ray.io/v1\nkind: RayCluster\nmetadata:\n  name: maxtext-tpu-cluster\nspec:\n  headGroupSpec:\n    rayStartParams: {}\n    template:\n      metadata:\n        annotations:\n          gke-gcsfuse/volumes: \"true\"\n          gke-gcsfuse/cpu-limit: \"0\"\n          gke-gcsfuse/memory-limit: \"0\"\n          gke-gcsfuse/ephemeral-storage-limit: \"0\"\n      spec:\n        serviceAccountName: ${KSA_NAME}\n        containers:\n          - name: ray-head\n            image: ${DOCKER_IMAGE}\n            imagePullPolicy: IfNotPresent\n            ports:\n            - containerPort: 6379\n              name: gcs-server\n            - containerPort: 8265\n              name: dashboard\n            - containerPort: 10001\n              name: client\n            resources:\n              limits:\n                memory: \"16Gi\"\n              requests:\n                cpu: \"8\"\n                memory: \"16Gi\"\n            volumeMounts:\n            - name: gcs-fuse-csi-ephemeral\n              mountPath: /data\n            - name: dshm\n              mountPath: /dev/shm\n        volumes:\n        - name: gcs-fuse-cache\n          emptyDir:\n            medium: Memory\n        - name: dshm\n          emptyDir:\n            medium: Memory\n        - name: gcs-fuse-csi-ephemeral\n          csi:\n            driver: gcsfuse.csi.storage.gke.io\n            volumeAttributes:\n              bucketName: ${GS_BUCKET}\n              mountOptions: \"implicit-dirs\"\n  workerGroupSpecs:\n    - replicas: 1\n      numOfHosts: 4\n      groupName: tpu-group\n      rayStartParams: {}\n      template:\n        metadata:\n          annotations:\n            gke-gcsfuse/volumes: \"true\"\n            gke-gcsfuse/cpu-limit: \"0\"\n            gke-gcsfuse/memory-limit: \"0\"\n            gke-gcsfuse/ephemeral-storage-limit: \"0\"\n        spec:\n          serviceAccountName: ${KSA_NAME}\n          containers:\n            - name: ray-worker\n              image: ${DOCKER_IMAGE}\n              imagePullPolicy: IfNotPresent\n              resources:\n                limits:\n                  memory: 200G\n                  google.com/tpu: \"4\"\n                requests:\n                  cpu: \"8\"\n                  memory: 200G\n                  google.com/tpu: \"4\"\n              env:\n                - name: JAX_PLATFORMS\n                  value: tpu\n                - name: ENABLE_PJRT_COMPATIBILITY\n                  value: \"true\"\n              volumeMounts:\n              - name: gcs-fuse-csi-ephemeral\n                mountPath: /data\n              - name: dshm\n                mountPath: /dev/shm\n          volumes:\n          - name: gcs-fuse-cache\n            emptyDir:\n              medium: Memory\n          - name: dshm\n            emptyDir:\n              medium: Memory\n          - name: gcs-fuse-csi-ephemeral\n            csi:\n              driver: gcsfuse.csi.storage.gke.io\n              volumeAttributes:\n                bucketName: ${GS_BUCKET}\n                mountOptions: \"implicit-dirs\"\n          nodeSelector:\n            cloud.google.com/gke-tpu-accelerator: tpu-v6e-slice\n            cloud.google.com/gke-tpu-topology: 4x4\n```\n\nThe preceding RayCluster spec creates a TPU worker group with four workers (`numOfHosts: 4`) per replica. Each worker requests four TPU chips (`google.com/tpu: \"4\"`). The workers will be scheduled on a node that runs TPU Trillium (`tpu-v6e-slice`), and that's part of the same colocated multi-host slice. KubeRay scales all four workers atomically, and the required JAX environment variables, as well as Pod Affinities for scheduling, are bootstrapped by GKE through a mutating webhook.\n  2. To configure required values in the YAML file, create the RayCluster using `envsubst`:\n\n```\nenvsubst < maxtext-tpu-cluster.yaml | kubectl apply -f -\n\n```\n\n  3. Verify the cluster is ready and running:\n\n```\nkubectl get rayclusters maxtext-tpu-cluster\n\n```\n\nThe output should be similar to the following:\n\n```\nNAME                  DESIRED WORKERS   AVAILABLE WORKERS   CPUS   MEMORY        GPUS   STATUS   AGE\nmaxtext-tpu-cluster   4                 4                   40     798027216Ki   0      ready    11m\n\n```\n\n  4. To access the Ray Dashboard through the Ray head service, establish a port-forwarding session:\n\n```\nkubectl port-forward svc/maxtext-tpu-cluster-head-svc 8265:8265 2>&1 >/dev/null &\n\n```\n\n  5. Verify the RayCluster is reachable from your local environment:\n\n```\nray list nodes --address http://localhost:8265\n\n```\n\nThe output should be similar to the following:\n\n```\n======== List: 2025-09-13 03:53:16.988269 ========\nStats:\n------------------------------\nTotal: 5\nTable:\n------------------------------\n    NODE_ID                                                   NODE_IP    IS_HEAD_NODE    STATE    STATE_MESSAGE    NODE_NAME    RESOURCES_TOTAL                  LABELS\n0  92c79d04c34b659c1e3044f7642ad3fd47eb16f290785237149fab56  10.84.0.9\n(...)\n\n```\n\n  6. Submit the JaxTrainer script to the RayCluster and check that the RayJob completes successfully:\n\n```\nray job submit \\\n  --address http://localhost:8265 \\\n  -- python /app/maxtext_ray_trainer.py \\\n      /app/maxtext/src/MaxText/configs/base.yml \\\n       base_output_directory=/data/ \\\n      dataset_type=synthetic \\\n      per_device_batch_size=1 \\\n      max_target_length=4096 \\\n      model_name=llama3-8b \\\n      steps=100 \\\n      ici_fsdp_parallelism=4 \\\n      ici_tensor_parallelism=4 \\\n      run_name=rayjob-8b-4096-tp4-4x4\n\n```\n\nThe preceding command submits the Python script, which calls the JaxTrainer Ray code to the RayCluster. The `ray job submit` command includes some MaxText-specific arguments to pass to the model configuration. \n**Note:** It might take a couple of minutes for the script to complete.\nIn your terminal, you should see output similar to the following:\n\n```\n(RayTrainWorker pid=21663, ip=10.12.3.6) completed step: 99, seconds: 1.100, TFLOP/s/device: 179.739, Tokens/s/device: 3725.218, total_weights: 65536, loss: 0.000 [repeated 3x across cluster]\n\n------------------------------------------\nJob 'raysubmit_zCrJcWnuymMQv4C3' succeeded\n------------------------------------------\n\n```\n\n\n**Success:** You've completed training by using Ray Train's JaxTrainer and MaxText on distributed multi-host TPU node pools.\n## Clean up\nTo avoid incurring charges to your Google Cloud account for the resources used in this tutorial, either delete the project that contains the resources, or keep the project and delete the individual resources.\n  1. Delete the RayCluster:\n\n```\nkubectl delete raycluster maxtext-tpu-cluster\n\n```\n\n  2. Delete the GKE cluster:\n\n```\ngcloud container clusters delete $CLUSTER_NAME --zone=$ZONE\n\n```\n\n  3. Delete the Cloud Storage bucket:\n\n```\ngsutil rm -r gs://${GS_BUCKET}\n\n```\n\n  4. Delete the Artifact Registry repository:\n\n```\ngcloud artifacts repositories delete ${ARTIFACT_REGISTRY} --location=${REGION} --quiet\n\n```\n\n## What's next\n  * Learn about [Ray on Kubernetes](https://docs.ray.io/en/latest/cluster/kubernetes/index.html).\n  * Learn how to [Serve vLLM on GKE with TPUs](https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu).\n  * Learn how to [Serve SDXL on GKE with TPUs](https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-sdxl-tpu).\n  * Learn more [About TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus)."
+  }
 }

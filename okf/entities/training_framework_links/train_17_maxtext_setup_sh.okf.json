@@ -1,52 +1,619 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:train_17_maxtext_setup_sh",
-  "@type": "DocumentationResource",
-  "name": "MaxText TPU setup script",
-  "canonicalUrl": "https://github.com/google/maxtext/blob/main/src/dependencies/scripts/setup.sh",
-  "category": "Training framework links",
-  "categorySlug": "training_framework_links",
-  "description": "Concrete MaxText dependency setup for TPU, including stable/nightly JAX, jaxlib, and libtpu selection.",
-  "provenance": {
-    "sourceUrl": "https://github.com/google/maxtext/blob/main/src/dependencies/scripts/setup.sh",
-    "crawledAt": "2026-10-26T12:47:08.817111+00:00",
-    "extractorEngine": "GitHubRaw",
-    "contentLengthBytes": 18710
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "MaxText TPU setup script",
-      "documentedIn",
-      "https://github.com/google/maxtext/blob/main/src/dependencies/scripts/setup.sh"
-    ],
-    [
-      "MaxText TPU setup script",
-      "belongsToCategory",
-      "training_framework_links"
-    ],
-    [
-      "MaxText TPU setup script",
-      "supportsWorkflow",
-      "Distributed Machine Learning Training"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:train_17_maxtext_setup_sh",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "train_17_maxtext_setup_sh",
+    "name": "MaxText TPU setup script",
+    "url": "https://github.com/google/maxtext/blob/main/src/dependencies/scripts/setup.sh",
+    "category": "training_framework_links",
+    "description": "Concrete MaxText dependency setup for TPU, including stable/nightly JAX, jaxlib, and libtpu selection.",
+    "char_count": 18830,
+    "word_count": 2000,
+    "section_count": 62,
+    "code_block_count": 1,
+    "table_count": 0,
+    "cli_command_count": 36,
+    "indexed_at": "2026-10-26T14:46:54.535692+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "schema:name",
+        "object": "MaxText TPU setup script"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "schema:url",
+        "object": "https://github.com/google/maxtext/blob/main/src/dependencies/scripts/setup.sh"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "schema:category",
+        "object": "training_framework_links"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "schema:description",
+        "object": "Concrete MaxText dependency setup for TPU, including stable/nightly JAX, jaxlib, and libtpu selection."
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:MaxText"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "MaxText TPU Setup Script (`src/dependencies/scripts/setup.sh`)"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "Copyright 2023\u20132025 Google LLC"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "you may not use this file except in compliance with the License."
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "You may obtain a copy of the License at"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "https://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "Unless required by applicable law or agreed to in writing, software"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied."
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "See the License for the specific language governing permissions and"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "limitations under the License."
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "=================================="
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "TPU EXAMPLES"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "=================================="
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "Install dependencies in dependencies/generated_requirements/tpu-requirements.txt"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "bash src/dependencies/scripts/setup.sh MODE=stable"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + specified jax, jaxlib, libtpu"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "bash src/dependencies/scripts/setup.sh MODE=stable JAX_VERSION=0.8.0"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + custom libtpu"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "bash src/dependencies/scripts/setup.sh MODE=stable LIBTPU_GCS_PATH=gs://my_custom_libtpu/libtpu.so"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + jax-nightly, jaxlib-nightly, libtpu-nightly"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "bash src/dependencies/scripts/setup.sh MODE=nightly"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + specified jax-nightly, jaxlib-nightly + latest libtpu-nightly"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "bash src/dependencies/scripts/setup.sh MODE=nightly JAX_VERSION=0.8.2.dev20251211"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:hasSection",
+        "object": "Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + specified jax-nightly, jaxlib-nightly + specific libtpu-nightly"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "JAX_VERSION"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "LIBTPU_GCS_PATH"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "LIBTPU_VERSION"
+      },
+      {
+        "subject": "tpu_doc:train_17_maxtext_setup_sh",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "UV_TORCH_BACKEND"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "MaxText TPU setup script provides official guidance on Concrete MaxText dependency setup for TPU, including stable/nightly JAX, jaxlib, and libtpu selection.",
-      "confidence": 1.0,
-      "source": "https://github.com/google/maxtext/blob/main/src/dependencies/scripts/setup.sh",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is MaxText TPU setup script used for in Cloud TPU workflows?",
-      "answer": "Concrete MaxText dependency setup for TPU, including stable/nightly JAX, jaxlib, and libtpu selection.",
-      "category": "training_framework_links"
-    }
-  ],
-  "contentSummary": "Concrete MaxText dependency setup for TPU, including stable/nightly JAX, jaxlib, and libtpu selection."
+  },
+  "structured_content": {
+    "summary": "Concrete MaxText dependency setup for TPU, including stable/nightly JAX, jaxlib, and libtpu selection.",
+    "sections": [
+      {
+        "heading": "MaxText TPU Setup Script (`src/dependencies/scripts/setup.sh`)",
+        "level": 1,
+        "content": "Official dependency installation script for MaxText on Cloud TPU VMs, supporting `stable` and `nightly` modes, `jax`, `jaxlib`, `libtpu`, and `tpu-info` installation.\n\n```bash\n#!/bin/bash"
+      },
+      {
+        "heading": "Copyright 2023\u20132025 Google LLC",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "Licensed under the Apache License, Version 2.0 (the \"License\");",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "you may not use this file except in compliance with the License.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "You may obtain a copy of the License at",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "https://www.apache.org/licenses/LICENSE-2.0",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "Unless required by applicable law or agreed to in writing, software",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "distributed under the License is distributed on an \"AS IS\" BASIS,",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "See the License for the specific language governing permissions and",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "limitations under the License.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "==================================",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "TPU EXAMPLES",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "==================================",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "Install dependencies in dependencies/generated_requirements/tpu-requirements.txt",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "bash src/dependencies/scripts/setup.sh MODE=stable",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "heading": "Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + specified jax, jaxlib, libtpu",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "bash src/dependencies/scripts/setup.sh MODE=stable JAX_VERSION=0.8.0",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "heading": "Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + custom libtpu",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "bash src/dependencies/scripts/setup.sh MODE=stable LIBTPU_GCS_PATH=gs://my_custom_libtpu/libtpu.so",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "heading": "Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + jax-nightly, jaxlib-nightly, libtpu-nightly",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "bash src/dependencies/scripts/setup.sh MODE=nightly",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "heading": "Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + specified jax-nightly, jaxlib-nightly + latest libtpu-nightly",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "bash src/dependencies/scripts/setup.sh MODE=nightly JAX_VERSION=0.8.2.dev20251211",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "heading": "Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + specified jax-nightly, jaxlib-nightly + specific libtpu-nightly",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "bash src/dependencies/scripts/setup.sh MODE=nightly JAX_VERSION=0.8.1 LIBTPU_VERSION=0.0.31.dev20251119+nightly",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "heading": "Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + jax-nightly, jaxlib-nightly + custom libtpu",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "bash src/dependencies/scripts/setup.sh MODE=nightly LIBTPU_GCS_PATH=gs://my_custom_libtpu/libtpu.so",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "heading": "Install custom libtpu only",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "bash src/dependencies/scripts/setup.sh MODE=libtpu-only LIBTPU_GCS_PATH=gs://my_custom_libtpu/libtpu.so",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "heading": "Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + optional TensorFlow/JetStream",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "bash src/dependencies/scripts/setup.sh MODE=stable TF=true",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "heading": "==================================",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "GPU EXAMPLES",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "==================================",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "Install dependencies in dependencies/generated_requirements/cuda12-requirements.txt",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "bash src/dependencies/scripts/setup.sh MODE=stable DEVICE=gpu",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "heading": "Install dependencies in dependencies/generated_requirements/cuda12-requirements.txt + optional TensorFlow/JetStream",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "bash src/dependencies/scripts/setup.sh MODE=stable DEVICE=gpu TF=true",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "heading": "Install dependencies in dependencies/generated_requirements/cuda12-requirements.txt + specified jax, jaxlib, jax-cuda12-plugin, jax-cuda12-pjrt",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "bash src/dependencies/scripts/setup.sh MODE=stable DEVICE=gpu JAX_VERSION=0.4.13",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "heading": "Install dependencies in dependencies/generated_requirements/cuda12-requirements.txt + jax-nightly, jaxlib-nightly",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "bash src/dependencies/scripts/setup.sh MODE=nightly DEVICE=gpu",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "heading": "Install dependencies in dependencies/generated_requirements/cuda12-requirements.txt + specified jax, jaxlib, jax-cuda12-plugin, jax-cuda12-pjrt",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "bash src/dependencies/scripts/setup.sh MODE=nightly DEVICE=gpu JAX_VERSION=0.4.36.dev20241109",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "heading": "Enable \"exit immediately if any command fails\" option",
+        "level": 1,
+        "content": "set -e\nexport DEBIAN_FRONTEND=noninteractive\nexport NEEDRESTART_SUSPEND=1\nexport NEEDRESTART_MODE=l"
+      },
+      {
+        "heading": "Directory Validation Check",
+        "level": 1,
+        "content": "echo \"Checking current directory...\"\nif [[ ! -d \"src\" || ! -d \"src/dependencies\" ]]; then\n    echo -e \"\\n\\e[31mERROR: Critical directories not found!\\e[0m\"\n    echo \"Please run this script from the root of the MaxText repository.\"\n    echo \"Expected to find './dependencies' and './src' folders.\"\n    exit 1\nfi\necho \"Directory check passed.\""
+      },
+      {
+        "heading": "Enable automatic restart of services without the need for prompting",
+        "level": 1,
+        "content": "if command -v sudo &> /dev/null && [ -f /etc/needrestart/needrestart.conf ]; then\n    sudo sed -i \"s/#\\$nrconf{restart} = 'i';/\\$nrconf{restart} = 'a';/\" /etc/needrestart/needrestart.conf\nelse\n   echo \"Skipping editing needrestart.conf\"\nfi\n\necho \"Checking Python version...\"\nPY_VERSION=$(python3 --version 2>&1)\nif [ -z \"$PY_VERSION\" ]; then\n  # shellcheck disable=SC2016\n  >&2 printf 'No python3 is installed, installing `uv` from its install script\\n'\n  curl -LsSf https://astral.sh/uv/install.sh | sh\n  PY_VERSION='Python 2.7.5'\nfi\nPY_VERSION=${PY_VERSION##* }\nPY_VERSION=${PY_VERSION%.*}"
+      },
+      {
+        "heading": "shellcheck disable=SC2072",
+        "level": 1,
+        "content": "if [[ '3.12' > \"$PY_VERSION\" ]]; then\n    echo -e \"\\n\\e[31mERROR: Outdated Python Version! You are currently using ${PY_VERSION}.*, but MaxText requires Python version 3.12 or higher.\\e[0m\"\n    # Ask the user if they want to create a virtual environment with uv\n    read -p \"Would you like to create a Python 3.12 virtual environment using uv? (y/n) \" -n 1 -r\n    echo # Move to a new line after input\n    if [[ $REPLY =~ ^[Yy]$ ]]; then\n        # Check if uv is installed first; if not, install uv\n        if ! command -v uv &> /dev/null; then\n            pip install uv\n        fi\n        # Ask for the venv name\n        read -rp \"Please enter a name for your new virtual environment (default: venv-maxtext): \" venv_name\n        # Use a default name if the user provides no input\n        if [ -z \"$venv_name\" ]; then\n            venv_name=\"$HOME\"'/venv-maxtext'\n            echo \"No name provided. Using default name: '$venv_name'\"\n        fi\n        echo \"Creating virtual environment '$venv_name' with Python 3.12...\"\n        python3 -m uv venv --python 3.12 \"$venv_name\" --seed\n        printf '%s\\n' \"$(realpath -- \"$venv_name\")\" >> /tmp/venv_created\n        echo -e \"\\n\\e[32mVirtual environment '$venv_name' created successfully!\\e[0m\"\n        echo \"To activate it, run the following command:\"\n        echo -e \"\\e[33m  source $venv_name/bin/activate\\e[0m\"\n        . \"$venv_name\"/bin/activate\n    else\n        echo \"Exiting. Please upgrade your Python environment to continue.\"\n        exit 1\n    fi\nfi\necho \"Python version check passed. Continuing with script.\"\necho \"--------------------------------------------------\"\n\napt-get update && apt-get install -y --no-install-recommends sudo\n(sudo bash || bash) <<'EOF'"
+      },
+      {
+        "heading": "sudo strips the exports set by the parent shell, so re-export them here to",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "keep apt-get non-interactive.",
+        "level": 1,
+        "content": "export DEBIAN_FRONTEND=noninteractive\nexport NEEDRESTART_SUSPEND=1\nexport NEEDRESTART_MODE=l\napt-get update && \\\napt-get upgrade -y && \\\napt-get install -y --no-install-recommends numactl lsb-release gnupg curl net-tools iproute2 procps lsof git ethtool ca-certificates && \\\nexport GCSFUSE_REPO=gcsfuse-`lsb_release -c -s`\nif [ \"$GCSFUSE_REPO\" = \"gcsfuse-trixie\" ]; then GCSFUSE_REPO=\"gcsfuse-bookworm\"; fi\ncurl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg > /tmp/apt-key.gpg && gpg --dearmor --yes -o /usr/share/keyrings/cloud.google.gpg /tmp/apt-key.gpg && rm /tmp/apt-key.gpg\necho \"deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt $GCSFUSE_REPO main\" | tee /etc/apt/sources.list.d/gcsfuse.list\napt-get update -y && apt-get -y install gcsfuse && \\\nrm -f /usr/sbin/mount.gcsfuse /usr/sbin/mount.fuse.gcsfuse /sbin/mount.gcsfuse /sbin/mount.fuse.gcsfuse && \\\n(objcopy --remove-section=.go.buildinfo /usr/bin/gcsfuse 2>/dev/null || true)\nrm -rf /var/lib/apt/lists/*\nEOF\n\npython3 -m pip install --no-cache-dir -U pip setuptools wheel uv"
+      },
+      {
+        "heading": "Set environment variables",
+        "level": 1,
+        "content": "for ARGUMENT in \"$@\"; do\n    IFS='=' read -r KEY VALUE <<< \"$ARGUMENT\"\n    export \"$KEY\"=\"$VALUE\"\ndone"
+      },
+      {
+        "heading": "Set default value for $DEVICE",
+        "level": 1,
+        "content": "if [[ -z \"$DEVICE\" ]]; then\n    export DEVICE=tpu\nfi"
+      },
+      {
+        "heading": "Set default value for $MODE",
+        "level": 1,
+        "content": "if [[ -z \"$MODE\" ]]; then\n  export MODE=stable\nfi"
+      },
+      {
+        "heading": "Set default value for $WORKFLOW",
+        "level": 1,
+        "content": "if [[ -z \"$WORKFLOW\" ]]; then\n  export WORKFLOW=pre-training\nfi"
+      },
+      {
+        "heading": "Set default value for $TF (default false for local setups; docker builds pass TF=true)",
+        "level": 1,
+        "content": "if [[ -z \"$TF\" ]]; then\n  export TF=\"${tf:-false}\"\nfi"
+      },
+      {
+        "heading": "Unset optional variables if set to NONE",
+        "level": 1,
+        "content": "unset_optional_vars() {\n    local optional_vars=(\"JAX_VERSION\" \"LIBTPU_VERSION\" \"LIBTPU_GCS_PATH\")\n    for var_name in \"${optional_vars[@]}\"; do\n        if [[ ${!var_name} == NONE ]]; then\n            unset \"$var_name\"\n        fi\n    done\n}\nunset_optional_vars\n\nversion_mismatch_warning() {\n    echo -e \"\\n\\nWARNING: You are installing a $1 version that is different from the one pinned by MaxText. This can lead to the following issues:\"\n    echo -e \"1. Compatibility: The dependencies in the requirements file are tested and compatible with the pinned $1 version. We cannot guarantee that they will work correctly with a different $1 version.\"\n    echo -e \"2. Consistency: Installing a custom $1 version can pull in different transitive dependencies over time, making the environment non-reproducible and potentially affecting performance.\\n\\n\"\n}\n\ninstall_custom_libtpu() {\n    libtpu_path=\"$HOME/custom_libtpu/libtpu.so\"\n    echo -e \"\\nInstalling libtpu.so from $LIBTPU_GCS_PATH to $libtpu_path\"\n    version_mismatch_warning \"libtpu\"\n    # Delete custom libtpu if it exists\n    if [ -e \"$libtpu_path\" ]; then\n        rm -v \"$libtpu_path\"\n    fi\n    # Install 'crcmod' to download 'libtpu.so' from GCS reliably\n    python3 -m uv pip install -U crcmod\n    # Copy libtpu.so from GCS path\n    gcloud storage cp \"$LIBTPU_GCS_PATH\" \"$libtpu_path\"\n}\n\ninstall_maxtext_package_without_deps() {\n    # The MaxText package is installed separately from its dependencies to optimize\n    # docker image rebuild times by leveraging docker's layer caching.\n    # Dependencies are installed in a separate step before MaxText code is\n    # copied. This means that if MaxText code changes, but the\n    # dependencies do not, docker can reuse the cached dependency layer, leading\n    # to significantly faster image builds.\n    if [ -f 'pyproject.toml' ]; then\n        echo \"Installing MaxText package without installing the dependencies (already installed)\"\n        python3 -m uv pip install --no-deps -e .\n    fi\n}\n\ncleanup_unneeded_build_artifacts() {\n    echo \"Cleaning up build artifacts that trigger security scanners...\"\n    local py_purelib py_platlib\n    py_purelib=$(python3 -c \"import sysconfig; print(sysconfig.get_path('purelib'))\" 2>/dev/null || true)\n    py_platlib=$(python3 -c \"import sysconfig; print(sysconfig.get_path('platlib'))\" 2>/dev/null || true)\n    # Clean up flaxlib_src Cargo.lock / unneeded source files, unused cross-language Java Ray worker JAR,\n    # and vendored third-party .dist-info metadata inside Ray's runtime_env agent\n    if [ -n \"$py_purelib\" ]; then\n        rm -rf \"$py_purelib/flaxlib_src\"\n        rm -f \"$py_purelib/ray/jars/ray_dist.jar\"\n        rm -rf \"$py_purelib\"/ray/_private/runtime_env/agent/thirdparty_files/*.dist-info\n    fi\n    if [ -n \"$py_platlib\" ] && [ \"$py_platlib\" != \"$py_purelib\" ]; then\n        rm -rf \"$py_platlib/flaxlib_src\"\n        rm -f \"$py_platlib/ray/jars/ray_dist.jar\"\n        rm -rf \"$py_platlib\"/ray/_private/runtime_env/agent/thirdparty_files/*.dist-info\n    fi\n    # Clean up embedded virtualenv seed wheels if virtualenv was installed\n    find /usr/local /root -name \"*.whl\" -path \"*/virtualenv/seed/wheels/embed/*\" -delete 2>/dev/null || true\n    # Clean up unused /etc/fstab mount helper binaries from gcsfuse, strip .go.buildinfo from /usr/bin/gcsfuse,\n    # and remove optional gcloud-crc32c Go helper and bundledpythonunix .dist-info metadata\n    rm -f /usr/sbin/mount.gcsfuse /usr/sbin/mount.fuse.gcsfuse /sbin/mount.gcsfuse /sbin/mount.fuse.gcsfuse\n    (objcopy --remove-section=.go.buildinfo /usr/bin/gcsfuse 2>/dev/null || true)\n    rm -f /usr/bin/gcloud-crc32c /usr/lib/google-cloud-sdk/bin/gcloud-crc32c /usr/local/google-cloud-sdk/bin/gcloud-crc32c\n    rm -rf /usr/lib/google-cloud-sdk/platform/bundledpythonunix/lib/python*/site-packages/*.dist-info \\\n           /usr/local/google-cloud-sdk/platform/bundledpythonunix/lib/python*/site-packages/*.dist-info\n}\n\ninstall_maxtext_with_deps() {\n    if [[ \"$DEVICE\" != \"tpu\" && \"$DEVICE\" != \"gpu\" ]]; then\n      echo -e \"\\n\\nError: DEVICE must be either 'tpu' or 'gpu'.\\n\\n\"\n      exit 1\n    fi\n    echo \"Setting up MaxText in $MODE mode for $DEVICE device\"\n    if [ \"$DEVICE\" = \"gpu\" ]; then\n        dep_name='src/dependencies/requirements/generated_requirements/cuda12-requirements.txt'\n    else\n        dep_name='src/dependencies/requirements/generated_requirements/tpu-requirements.txt'\n    fi\n    echo \"Installing requirements from $dep_name\"\n    python3 -m uv pip install --resolution=lowest -r \"$dep_name\"\n    if [[ \"$TF\" == \"true\" ]]; then\n        python3 -m src.dependencies.scripts.install_pre_train_extra_deps --with-tf\n    else\n        python3 -m src.dependencies.scripts.install_pre_train_extra_deps\n    fi\n\n    install_maxtext_package_without_deps\n    cleanup_unneeded_build_artifacts\n}\n\ninstall_post_training_deps() {\n    if [[ \"$DEVICE\" != \"tpu\" ]]; then\n      echo -e \"\\n\\nError: DEVICE must be 'tpu'.\\n\\n\"\n      exit 1\n    fi\n    echo \"Setting up MaxText post-training workflow for $DEVICE device\"\n\n    # Install build tools needed to compile vllm from source.\n    if [ -f /etc/os-release ] && grep -q \"bullseye\" /etc/os-release; then\n        echo \"deb http://deb.debian.org/debian bookworm main\" > /etc/apt/sources.list.d/bookworm.list\n        apt-get update -y && apt-get install -y --no-install-recommends -t bookworm gcc-12 g++-12 build-essential cmake ninja-build\n        export CC=gcc-12\n        export CXX=g++-12\n    else\n        apt-get update -y && apt-get install -y --no-install-recommends gcc-12 g++-12 build-essential cmake ninja-build || \\\n        apt-get install -y --no-install-recommends build-essential cmake ninja-build\n    fi\n\n    dep_name='src/dependencies/requirements/generated_requirements/tpu-post-train-requirements.txt'\n    echo \"Installing requirements from $dep_name\"\n    UV_TORCH_BACKEND=cpu python3 -m uv pip install --resolution=lowest -r \"$dep_name\"\n    python3 -m src.dependencies.scripts.install_post_train_extra_deps\n    python3 -m uv pip install --no-deps \"setuptools>=84.0.0\"\n    cleanup_unneeded_build_artifacts\n}"
+      },
+      {
+        "heading": "---------- Post-Training workflow installation ----------",
+        "level": 1,
+        "content": "if [[ \"$WORKFLOW\" == \"post-training\" ]]; then\n    install_post_training_deps\n    install_maxtext_package_without_deps\n    exit 0\nfi"
+      },
+      {
+        "heading": "---------- Pre-Training workflow installation ----------",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "stable mode installation",
+        "level": 1,
+        "content": "if [[ \"$MODE\" == \"stable\" ]]; then\n    install_maxtext_with_deps\n\n    if [[ $DEVICE == \"tpu\" ]]; then\n        if [[ -n \"$JAX_VERSION\" ]]; then\n            echo -e \"\\nInstalling stable jax, jaxlib, libtpu version ${JAX_VERSION}\"\n            version_mismatch_warning \"jax\"\n            python3 -m uv pip install -U jax[tpu]==${JAX_VERSION}\n        fi\n        if [[ -n \"$LIBTPU_GCS_PATH\" ]]; then\n            install_custom_libtpu\n        elif [[ -n \"$LIBTPU_VERSION\" ]]; then\n            echo -e \"\\nInstalling libtpu ${LIBTPU_VERSION}\"\n            version_mismatch_warning \"libtpu\"\n            python3 -m uv pip install -U --no-deps libtpu==${LIBTPU_VERSION} -f https://storage.googleapis.com/jax-releases/libtpu_releases.html\n        fi\n    elif [[ $DEVICE == \"gpu\" ]]; then\n        if [[ -n \"$JAX_VERSION\" ]]; then\n            echo -e \"\\nInstalling stable jax, jaxlib ${JAX_VERSION}\"\n            version_mismatch_warning \"jax\"\n            python3 -m uv pip install -U \"jax[cuda12]==${JAX_VERSION}\"\n        fi\n    fi\n    exit 0\nfi"
+      },
+      {
+        "heading": "nightly mode installation",
+        "level": 1,
+        "content": "if [[ $MODE == \"nightly\" ]]; then\n    install_maxtext_with_deps\n\n    # Install Flax HEAD to maintain compatibility with JAX nightly\n    python3 -m uv pip install -U --no-deps git+https://github.com/google/flax.git\n    cleanup_unneeded_build_artifacts\n\n    # Uninstall existing jax, jaxlib and libtpu\n    python3 -m uv pip show jax && python3 -m uv pip uninstall jax\n    python3 -m uv pip show jaxlib && python3 -m uv pip uninstall jaxlib\n    python3 -m uv pip show libtpu && python3 -m uv pip uninstall libtpu\n\n    if [[ $DEVICE == \"tpu\" ]]; then\n        if [[ -n \"$JAX_VERSION\" ]]; then\n            echo -e \"\\nInstalling jax-nightly, jaxlib-nightly ${JAX_VERSION}\"\n            python3 -m uv pip install -U --pre --no-deps jax==${JAX_VERSION} jaxlib==${JAX_VERSION} -i https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/\n        else\n            echo -e \"\\nInstalling the latest jax-nightly, jaxlib-nightly\"\n            python3 -m uv pip install --pre -U --no-deps jax jaxlib -i https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/\n        fi\n        if [[ -n \"$LIBTPU_GCS_PATH\" ]]; then\n            install_custom_libtpu\n        elif [[ -n \"$LIBTPU_VERSION\" ]]; then\n            echo -e \"\\nInstalling libtpu ${LIBTPU_VERSION}\"\n            version_mismatch_warning \"libtpu\"\n            python3 -m uv pip install -U --no-deps libtpu==${LIBTPU_VERSION} -f https://storage.googleapis.com/jax-releases/libtpu_releases.html\n        else\n            echo -e \"\\nInstalling the latest libtpu-nightly\"\n            python3 -m uv pip install -U --pre --no-deps libtpu -f https://storage.googleapis.com/jax-releases/libtpu_releases.html\n        fi\n    elif [[ $DEVICE == \"gpu\" ]]; then\n        if [[ -n \"$JAX_VERSION\" ]]; then\n            echo -e \"\\nInstalling jax-nightly, jaxlib-nightly ${JAX_VERSION}\"\n            python3 -m uv pip install -U --pre --no-deps jax==${JAX_VERSION} jaxlib==${JAX_VERSION} \\\n                jax-cuda12-plugin[with-cuda]==${JAX_VERSION} jax-cuda12-pjrt==${JAX_VERSION} -i https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/\n        else\n            echo -e \"\\nInstalling the latest jax-nightly, jaxlib-nightly\"\n            python3 -m uv pip install -U --pre --no-deps jax jaxlib \\\n                jax-cuda12-plugin[with-cuda] jax-cuda12-pjrt -i https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/\n        fi\n    fi\n    exit 0\nfi"
+      },
+      {
+        "heading": "libtpu-only mode installation",
+        "level": 1,
+        "content": "if [[ \"$MODE\" == \"libtpu-only\" ]]; then\n    if [[ \"$DEVICE\" != \"tpu\" ]]; then\n      echo -e \"\\n\\nError: MODE=libtpu-only is only supported for DEVICE=tpu.\\n\\n\"\n      exit 1\n    fi\n    if [[ -z \"$LIBTPU_GCS_PATH\" ]]; then\n        echo -e \"\\n\\nError: LIBTPU_GCS_PATH must be set when MODE is libtpu-only.\\n\\n\"\n        exit 1\n    fi\n    install_custom_libtpu\n    exit 0\nfi\n\necho -e \"\\n\\nError: MODE must be either 'stable', 'nightly', or 'libtpu-only'.\\n\\n\"\nexit 1\n```"
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "bash",
+        "code": "#!/bin/bash\n\n# Copyright 2023\u20132025 Google LLC\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#    https://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n\n# ==================================\n# TPU EXAMPLES\n# ==================================\n\n# Install dependencies in dependencies/generated_requirements/tpu-requirements.txt\n## bash src/dependencies/scripts/setup.sh MODE=stable\n\n# Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + specified jax, jaxlib, libtpu\n## bash src/dependencies/scripts/setup.sh MODE=stable JAX_VERSION=0.8.0\n\n# Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + custom libtpu\n## bash src/dependencies/scripts/setup.sh MODE=stable LIBTPU_GCS_PATH=gs://my_custom_libtpu/libtpu.so\n\n# Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + jax-nightly, jaxlib-nightly, libtpu-nightly\n## bash src/dependencies/scripts/setup.sh MODE=nightly\n\n# Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + specified jax-nightly, jaxlib-nightly + latest libtpu-nightly\n## bash src/dependencies/scripts/setup.sh MODE=nightly JAX_VERSION=0.8.2.dev20251211\n\n# Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + specified jax-nightly, jaxlib-nightly + specific libtpu-nightly\n## bash src/dependencies/scripts/setup.sh MODE=nightly JAX_VERSION=0.8.1 LIBTPU_VERSION=0.0.31.dev20251119+nightly\n\n# Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + jax-nightly, jaxlib-nightly + custom libtpu\n## bash src/dependencies/scripts/setup.sh MODE=nightly LIBTPU_GCS_PATH=gs://my_custom_libtpu/libtpu.so\n\n# Install custom libtpu only\n## bash src/dependencies/scripts/setup.sh MODE=libtpu-only LIBTPU_GCS_PATH=gs://my_custom_libtpu/libtpu.so\n\n# Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + optional TensorFlow/JetStream\n## bash src/dependencies/scripts/setup.sh MODE=stable TF=true\n\n# ==================================\n# GPU EXAMPLES\n# ==================================\n\n# Install dependencies in dependencies/generated_requirements/cuda12-requirements.txt\n## bash src/dependencies/scripts/setup.sh MODE=stable DEVICE=gpu\n\n# Install dependencies in dependencies/generated_requirements/cuda12-requirements.txt + optional TensorFlow/JetStream\n## bash src/dependencies/scripts/setup.sh MODE=stable DEVICE=gpu TF=true\n\n# Install dependencies in dependencies/generated_requirements/cuda12-requirements.txt + specified jax, jaxlib, jax-cuda12-plugin, jax-cuda12-pjrt\n## bash src/dependencies/scripts/setup.sh MODE=stable DEVICE=gpu JAX_VERSION=0.4.13\n\n# Install dependencies in dependencies/generated_requirements/cuda12-requirements.txt + jax-nightly, jaxlib-nightly\n## bash src/dependencies/scripts/setup.sh MODE=nightly DEVICE=gpu\n\n# Install dependencies in dependencies/generated_requirements/cuda12-requirements.txt + specified jax, jaxlib, jax-cuda12-plugin, jax-cuda12-pjrt\n## bash src/dependencies/scripts/setup.sh MODE=nightly DEVICE=gpu JAX_VERSION=0.4.36.dev20241109\n\n\n# Enable \"exit immediately if any command fails\" option\nset -e\nexport DEBIAN_FRONTEND=noninteractive\nexport NEEDRESTART_SUSPEND=1\nexport NEEDRESTART_MODE=l\n\n# Directory Validation Check\necho \"Checking current directory...\"\nif [[ ! -d \"src\" || ! -d \"src/dependencies\" ]]; then\n    echo -e \"\\n\\e[31mERROR: Critical directories not found!\\e[0m\"\n    echo \"Please run this script from the root of the MaxText repository.\"\n    echo \"Expected to find './dependencies' and './src' folders.\"\n    exit 1\nfi\necho \"Directory check passed.\"\n\n# Enable automatic restart of services without the need for prompting \nif command -v sudo &> /dev/null && [ -f /etc/needrestart/needrestart.conf ]; then\n    sudo sed -i \"s/#\\$nrconf{restart} = 'i';/\\$nrconf{restart} = 'a';/\" /etc/needrestart/needrestart.conf\nelse\n   echo \"Skipping editing needrestart.conf\"\nfi\n\necho \"Checking Python version...\"\nPY_VERSION=$(python3 --version 2>&1)\nif [ -z \"$PY_VERSION\" ]; then\n  # shellcheck disable=SC2016\n  >&2 printf 'No python3 is installed, installing `uv` from its install script\\n'\n  curl -LsSf https://astral.sh/uv/install.sh | sh\n  PY_VERSION='Python 2.7.5'\nfi\nPY_VERSION=${PY_VERSION##* }\nPY_VERSION=${PY_VERSION%.*}\n# shellcheck disable=SC2072\nif [[ '3.12' > \"$PY_VERSION\" ]]; then\n    echo -e \"\\n\\e[31mERROR: Outdated Python Version! You are currently using ${PY_VERSION}.*, but MaxText requires Python version 3.12 or higher.\\e[0m\"\n    # Ask the user if they want to create a virtual environment with uv\n    read -p \"Would you like to create a Python 3.12 virtual environment using uv? (y/n) \" -n 1 -r\n    echo # Move to a new line after input\n    if [[ $REPLY =~ ^[Yy]$ ]]; then\n        # Check if uv is installed first; if not, install uv\n        if ! command -v uv &> /dev/null; then\n            pip install uv\n        fi\n        # Ask for the venv name\n        read -rp \"Please enter a name for your new virtual environment (default: venv-maxtext): \" venv_name\n        # Use a default name if the user provides no input\n        if [ -z \"$venv_name\" ]; then\n            venv_name=\"$HOME\"'/venv-maxtext'\n            echo \"No name provided. Using default name: '$venv_name'\"\n        fi\n        echo \"Creating virtual environment '$venv_name' with Python 3.12...\"\n        python3 -m uv venv --python 3.12 \"$venv_name\" --seed\n        printf '%s\\n' \"$(realpath -- \"$venv_name\")\" >> /tmp/venv_created\n        echo -e \"\\n\\e[32mVirtual environment '$venv_name' created successfully!\\e[0m\"\n        echo \"To activate it, run the following command:\"\n        echo -e \"\\e[33m  source $venv_name/bin/activate\\e[0m\"\n        . \"$venv_name\"/bin/activate\n    else\n        echo \"Exiting. Please upgrade your Python environment to continue.\"\n        exit 1\n    fi\nfi\necho \"Python version check passed. Continuing with script.\"\necho \"--------------------------------------------------\"\n\napt-get update && apt-get install -y --no-install-recommends sudo\n(sudo bash || bash) <<'EOF'\n# sudo strips the exports set by the parent shell, so re-export them here to\n# keep apt-get non-interactive.\nexport DEBIAN_FRONTEND=noninteractive\nexport NEEDRESTART_SUSPEND=1\nexport NEEDRESTART_MODE=l\napt-get update && \\\napt-get upgrade -y && \\\napt-get install -y --no-install-recommends numactl lsb-release gnupg curl net-tools iproute2 procps lsof git ethtool ca-certificates && \\\nexport GCSFUSE_REPO=gcsfuse-`lsb_release -c -s`\nif [ \"$GCSFUSE_REPO\" = \"gcsfuse-trixie\" ]; then GCSFUSE_REPO=\"gcsfuse-bookworm\"; fi\ncurl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg > /tmp/apt-key.gpg && gpg --dearmor --yes -o /usr/share/keyrings/cloud.google.gpg /tmp/apt-key.gpg && rm /tmp/apt-key.gpg\necho \"deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt $GCSFUSE_REPO main\" | tee /etc/apt/sources.list.d/gcsfuse.list\napt-get update -y && apt-get -y install gcsfuse && \\\nrm -f /usr/sbin/mount.gcsfuse /usr/sbin/mount.fuse.gcsfuse /sbin/mount.gcsfuse /sbin/mount.fuse.gcsfuse && \\\n(objcopy --remove-section=.go.buildinfo /usr/bin/gcsfuse 2>/dev/null || true)\nrm -rf /var/lib/apt/lists/*\nEOF\n\npython3 -m pip install --no-cache-dir -U pip setuptools wheel uv\n\n# Set environment variables\nfor ARGUMENT in \"$@\"; do\n    IFS='=' read -r KEY VALUE <<< \"$ARGUMENT\"\n    export \"$KEY\"=\"$VALUE\"\ndone\n\n# Set default value for $DEVICE\nif [[ -z \"$DEVICE\" ]]; then\n    export DEVICE=tpu\nfi\n\n# Set default value for $MODE\nif [[ -z \"$MODE\" ]]; then\n  export MODE=stable\nfi\n\n# Set default value for $WORKFLOW\nif [[ -z \"$WORKFLOW\" ]]; then\n  export WORKFLOW=pre-training\nfi\n\n# Set default value for $TF (default false for local setups; docker builds pass TF=true)\nif [[ -z \"$TF\" ]]; then\n  export TF=\"${tf:-false}\"\nfi\n\n# Unset optional variables if set to NONE\nunset_optional_vars() {\n    local optional_vars=(\"JAX_VERSION\" \"LIBTPU_VERSION\" \"LIBTPU_GCS_PATH\")\n    for var_name in \"${optional_vars[@]}\"; do\n        if [[ ${!var_name} == NONE ]]; then\n            unset \"$var_name\"\n        fi\n    done\n}\nunset_optional_vars\n\nversion_mismatch_warning() {\n    echo -e \"\\n\\nWARNING: You are installing a $1 version that is different from the one pinned by MaxText. This can lead to the following issues:\"\n    echo -e \"1. Compatibility: The dependencies in the requirements file are tested and compatible with the pinned $1 version. We cannot guarantee that they will work correctly with a different $1 version.\"\n    echo -e \"2. Consistency: Installing a custom $1 version can pull in different transitive dependencies over time, making the environment non-reproducible and potentially affecting performance.\\n\\n\"\n}\n\ninstall_custom_libtpu() {\n    libtpu_path=\"$HOME/custom_libtpu/libtpu.so\"\n    echo -e \"\\nInstalling libtpu.so from $LIBTPU_GCS_PATH to $libtpu_path\"\n    version_mismatch_warning \"libtpu\"\n    # Delete custom libtpu if it exists\n    if [ -e \"$libtpu_path\" ]; then\n        rm -v \"$libtpu_path\"\n    fi\n    # Install 'crcmod' to download 'libtpu.so' from GCS reliably\n    python3 -m uv pip install -U crcmod\n    # Copy libtpu.so from GCS path\n    gcloud storage cp \"$LIBTPU_GCS_PATH\" \"$libtpu_path\"\n}\n\ninstall_maxtext_package_without_deps() {\n    # The MaxText package is installed separately from its dependencies to optimize\n    # docker image rebuild times by leveraging docker's layer caching.\n    # Dependencies are installed in a separate step before MaxText code is\n    # copied. This means that if MaxText code changes, but the\n    # dependencies do not, docker can reuse the cached dependency layer, leading\n    # to significantly faster image builds.\n    if [ -f 'pyproject.toml' ]; then\n        echo \"Installing MaxText package without installing the dependencies (already installed)\"\n        python3 -m uv pip install --no-deps -e .\n    fi\n}\n\ncleanup_unneeded_build_artifacts() {\n    echo \"Cleaning up build artifacts that trigger security scanners...\"\n    local py_purelib py_platlib\n    py_purelib=$(python3 -c \"import sysconfig; print(sysconfig.get_path('purelib'))\" 2>/dev/null || true)\n    py_platlib=$(python3 -c \"import sysconfig; print(sysconfig.get_path('platlib'))\" 2>/dev/null || true)\n    # Clean up flaxlib_src Cargo.lock / unneeded source files, unused cross-language Java Ray worker JAR,\n    # and vendored third-party .dist-info metadata inside Ray's runtime_env agent\n    if [ -n \"$py_purelib\" ]; then\n        rm -rf \"$py_purelib/flaxlib_src\"\n        rm -f \"$py_purelib/ray/jars/ray_dist.jar\"\n        rm -rf \"$py_purelib\"/ray/_private/runtime_env/agent/thirdparty_files/*.dist-info\n    fi\n    if [ -n \"$py_platlib\" ] && [ \"$py_platlib\" != \"$py_purelib\" ]; then\n        rm -rf \"$py_platlib/flaxlib_src\"\n        rm -f \"$py_platlib/ray/jars/ray_dist.jar\"\n        rm -rf \"$py_platlib\"/ray/_private/runtime_env/agent/thirdparty_files/*.dist-info\n    fi\n    # Clean up embedded virtualenv seed wheels if virtualenv was installed\n    find /usr/local /root -name \"*.whl\" -path \"*/virtualenv/seed/wheels/embed/*\" -delete 2>/dev/null || true\n    # Clean up unused /etc/fstab mount helper binaries from gcsfuse, strip .go.buildinfo from /usr/bin/gcsfuse,\n    # and remove optional gcloud-crc32c Go helper and bundledpythonunix .dist-info metadata\n    rm -f /usr/sbin/mount.gcsfuse /usr/sbin/mount.fuse.gcsfuse /sbin/mount.gcsfuse /sbin/mount.fuse.gcsfuse\n    (objcopy --remove-section=.go.buildinfo /usr/bin/gcsfuse 2>/dev/null || true)\n    rm -f /usr/bin/gcloud-crc32c /usr/lib/google-cloud-sdk/bin/gcloud-crc32c /usr/local/google-cloud-sdk/bin/gcloud-crc32c\n    rm -rf /usr/lib/google-cloud-sdk/platform/bundledpythonunix/lib/python*/site-packages/*.dist-info \\\n           /usr/local/google-cloud-sdk/platform/bundledpythonunix/lib/python*/site-packages/*.dist-info\n}\n\ninstall_maxtext_with_deps() {\n    if [[ \"$DEVICE\" != \"tpu\" && \"$DEVICE\" != \"gpu\" ]]; then\n      echo -e \"\\n\\nError: DEVICE must be either 'tpu' or 'gpu'.\\n\\n\"\n      exit 1\n    fi\n    echo \"Setting up MaxText in $MODE mode for $DEVICE device\"\n    if [ \"$DEVICE\" = \"gpu\" ]; then\n        dep_name='src/dependencies/requirements/generated_requirements/cuda12-requirements.txt'\n    else\n        dep_name='src/dependencies/requirements/generated_requirements/tpu-requirements.txt'\n    fi\n    echo \"Installing requirements from $dep_name\"\n    python3 -m uv pip install --resolution=lowest -r \"$dep_name\"\n    if [[ \"$TF\" == \"true\" ]]; then\n        python3 -m src.dependencies.scripts.install_pre_train_extra_deps --with-tf\n    else\n        python3 -m src.dependencies.scripts.install_pre_train_extra_deps\n    fi\n\n    install_maxtext_package_without_deps\n    cleanup_unneeded_build_artifacts\n}\n\ninstall_post_training_deps() {\n    if [[ \"$DEVICE\" != \"tpu\" ]]; then\n      echo -e \"\\n\\nError: DEVICE must be 'tpu'.\\n\\n\"\n      exit 1\n    fi\n    echo \"Setting up MaxText post-training workflow for $DEVICE device\"\n\n    # Install build tools needed to compile vllm from source.\n    if [ -f /etc/os-release ] && grep -q \"bullseye\" /etc/os-release; then\n        echo \"deb http://deb.debian.org/debian bookworm main\" > /etc/apt/sources.list.d/bookworm.list\n        apt-get update -y && apt-get install -y --no-install-recommends -t bookworm gcc-12 g++-12 build-essential cmake ninja-build\n        export CC=gcc-12\n        export CXX=g++-12\n    else\n        apt-get update -y && apt-get install -y --no-install-recommends gcc-12 g++-12 build-essential cmake ninja-build || \\\n        apt-get install -y --no-install-recommends build-essential cmake ninja-build\n    fi\n\n    dep_name='src/dependencies/requirements/generated_requirements/tpu-post-train-requirements.txt'\n    echo \"Installing requirements from $dep_name\"\n    UV_TORCH_BACKEND=cpu python3 -m uv pip install --resolution=lowest -r \"$dep_name\"\n    python3 -m src.dependencies.scripts.install_post_train_extra_deps\n    python3 -m uv pip install --no-deps \"setuptools>=84.0.0\"\n    cleanup_unneeded_build_artifacts\n}\n\n# ---------- Post-Training workflow installation ----------\n\nif [[ \"$WORKFLOW\" == \"post-training\" ]]; then\n    install_post_training_deps\n    install_maxtext_package_without_deps\n    exit 0\nfi\n\n# ---------- Pre-Training workflow installation ----------\n\n# stable mode installation\nif [[ \"$MODE\" == \"stable\" ]]; then\n    install_maxtext_with_deps\n\n    if [[ $DEVICE == \"tpu\" ]]; then\n        if [[ -n \"$JAX_VERSION\" ]]; then\n            echo -e \"\\nInstalling stable jax, jaxlib, libtpu version ${JAX_VERSION}\"\n            version_mismatch_warning \"jax\"\n            python3 -m uv pip install -U jax[tpu]==${JAX_VERSION}\n        fi\n        if [[ -n \"$LIBTPU_GCS_PATH\" ]]; then\n            install_custom_libtpu\n        elif [[ -n \"$LIBTPU_VERSION\" ]]; then\n            echo -e \"\\nInstalling libtpu ${LIBTPU_VERSION}\"\n            version_mismatch_warning \"libtpu\"\n            python3 -m uv pip install -U --no-deps libtpu==${LIBTPU_VERSION} -f https://storage.googleapis.com/jax-releases/libtpu_releases.html\n        fi\n    elif [[ $DEVICE == \"gpu\" ]]; then\n        if [[ -n \"$JAX_VERSION\" ]]; then\n            echo -e \"\\nInstalling stable jax, jaxlib ${JAX_VERSION}\"\n            version_mismatch_warning \"jax\"\n            python3 -m uv pip install -U \"jax[cuda12]==${JAX_VERSION}\"\n        fi\n    fi\n    exit 0\nfi\n\n# nightly mode installation\nif [[ $MODE == \"nightly\" ]]; then\n    install_maxtext_with_deps\n\n    # Install Flax HEAD to maintain compatibility with JAX nightly\n    python3 -m uv pip install -U --no-deps git+https://github.com/google/flax.git\n    cleanup_unneeded_build_artifacts\n\n    # Uninstall existing jax, jaxlib and libtpu\n    python3 -m uv pip show jax && python3 -m uv pip uninstall jax\n    python3 -m uv pip show jaxlib && python3 -m uv pip uninstall jaxlib\n    python3 -m uv pip show libtpu && python3 -m uv pip uninstall libtpu\n\n    if [[ $DEVICE == \"tpu\" ]]; then\n        if [[ -n \"$JAX_VERSION\" ]]; then\n            echo -e \"\\nInstalling jax-nightly, jaxlib-nightly ${JAX_VERSION}\"\n            python3 -m uv pip install -U --pre --no-deps jax==${JAX_VERSION} jaxlib==${JAX_VERSION} -i https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/\n        else\n            echo -e \"\\nInstalling the latest jax-nightly, jaxlib-nightly\"\n            python3 -m uv pip install --pre -U --no-deps jax jaxlib -i https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/\n        fi\n        if [[ -n \"$LIBTPU_GCS_PATH\" ]]; then\n            install_custom_libtpu\n        elif [[ -n \"$LIBTPU_VERSION\" ]]; then\n            echo -e \"\\nInstalling libtpu ${LIBTPU_VERSION}\"\n            version_mismatch_warning \"libtpu\"\n            python3 -m uv pip install -U --no-deps libtpu==${LIBTPU_VERSION} -f https://storage.googleapis.com/jax-releases/libtpu_releases.html\n        else\n            echo -e \"\\nInstalling the latest libtpu-nightly\"\n            python3 -m uv pip install -U --pre --no-deps libtpu -f https://storage.googleapis.com/jax-releases/libtpu_releases.html\n        fi\n    elif [[ $DEVICE == \"gpu\" ]]; then\n        if [[ -n \"$JAX_VERSION\" ]]; then\n            echo -e \"\\nInstalling jax-nightly, jaxlib-nightly ${JAX_VERSION}\"\n            python3 -m uv pip install -U --pre --no-deps jax==${JAX_VERSION} jaxlib==${JAX_VERSION} \\\n                jax-cuda12-plugin[with-cuda]==${JAX_VERSION} jax-cuda12-pjrt==${JAX_VERSION} -i https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/\n        else\n            echo -e \"\\nInstalling the latest jax-nightly, jaxlib-nightly\"\n            python3 -m uv pip install -U --pre --no-deps jax jaxlib \\\n                jax-cuda12-plugin[with-cuda] jax-cuda12-pjrt -i https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/\n        fi\n    fi\n    exit 0\nfi\n\n# libtpu-only mode installation\nif [[ \"$MODE\" == \"libtpu-only\" ]]; then\n    if [[ \"$DEVICE\" != \"tpu\" ]]; then\n      echo -e \"\\n\\nError: MODE=libtpu-only is only supported for DEVICE=tpu.\\n\\n\"\n      exit 1\n    fi\n    if [[ -z \"$LIBTPU_GCS_PATH\" ]]; then\n        echo -e \"\\n\\nError: LIBTPU_GCS_PATH must be set when MODE is libtpu-only.\\n\\n\"\n        exit 1\n    fi\n    install_custom_libtpu\n    exit 0\nfi\n\necho -e \"\\n\\nError: MODE must be either 'stable', 'nightly', or 'libtpu-only'.\\n\\n\"\nexit 1"
+      }
+    ],
+    "cli_commands": [
+      "export DEBIAN_FRONTEND=noninteractive",
+      "export NEEDRESTART_SUSPEND=1",
+      "export NEEDRESTART_MODE=l",
+      "curl -LsSf https://astral.sh/uv/install.sh | sh",
+      "pip install uv",
+      "python3 -m uv venv --python 3.12 \"$venv_name\" --seed",
+      "export GCSFUSE_REPO=gcsfuse-`lsb_release -c -s`",
+      "curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg > /tmp/apt-key.gpg && gpg --dearmor --yes -o /usr/share/keyrings/cloud.google.gpg /tmp/apt-key.gpg && rm /tmp/apt-key.gpg",
+      "python3 -m pip install --no-cache-dir -U pip setuptools wheel uv",
+      "export \"$KEY\"=\"$VALUE\"",
+      "export DEVICE=tpu",
+      "export MODE=stable",
+      "export WORKFLOW=pre-training",
+      "export TF=\"${tf:-false}\"",
+      "python3 -m uv pip install -U crcmod",
+      "gcloud storage cp \"$LIBTPU_GCS_PATH\" \"$libtpu_path\"",
+      "python3 -m uv pip install --no-deps -e .",
+      "python3 -m uv pip install --resolution=lowest -r \"$dep_name\"",
+      "python3 -m src.dependencies.scripts.install_pre_train_extra_deps --with-tf",
+      "python3 -m src.dependencies.scripts.install_pre_train_extra_deps",
+      "export CC=gcc-12",
+      "export CXX=g++-12",
+      "python3 -m src.dependencies.scripts.install_post_train_extra_deps",
+      "python3 -m uv pip install --no-deps \"setuptools>=84.0.0\"",
+      "python3 -m uv pip install -U jax[tpu]==${JAX_VERSION}",
+      "python3 -m uv pip install -U --no-deps libtpu==${LIBTPU_VERSION} -f https://storage.googleapis.com/jax-releases/libtpu_releases.html",
+      "python3 -m uv pip install -U \"jax[cuda12]==${JAX_VERSION}\"",
+      "python3 -m uv pip install -U --no-deps git+https://github.com/google/flax.git",
+      "python3 -m uv pip show jax && python3 -m uv pip uninstall jax",
+      "python3 -m uv pip show jaxlib && python3 -m uv pip uninstall jaxlib",
+      "python3 -m uv pip show libtpu && python3 -m uv pip uninstall libtpu",
+      "python3 -m uv pip install -U --pre --no-deps jax==${JAX_VERSION} jaxlib==${JAX_VERSION} -i https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/",
+      "python3 -m uv pip install --pre -U --no-deps jax jaxlib -i https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/",
+      "python3 -m uv pip install -U --pre --no-deps libtpu -f https://storage.googleapis.com/jax-releases/libtpu_releases.html",
+      "python3 -m uv pip install -U --pre --no-deps jax==${JAX_VERSION} jaxlib==${JAX_VERSION} \\",
+      "python3 -m uv pip install -U --pre --no-deps jax jaxlib \\"
+    ],
+    "environment_variables": [
+      "JAX_VERSION",
+      "LIBTPU_GCS_PATH",
+      "LIBTPU_VERSION",
+      "UV_TORCH_BACKEND"
+    ],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'MaxText TPU setup script' (https://github.com/google/maxtext/blob/main/src/dependencies/scripts/setup.sh)?",
+        "answer": "Concrete MaxText dependency setup for TPU, including stable/nightly JAX, jaxlib, and libtpu selection."
+      },
+      {
+        "question": "How does 'MaxText TPU setup script' handle: MaxText TPU Setup Script (`src/dependencies/scripts/setup.sh`)?",
+        "answer": "Official dependency installation script for MaxText on Cloud TPU VMs, supporting `stable` and `nightly` modes, `jax`, `jaxlib`, `libtpu`, and `tpu-info` installation.\n\n```bash\n#!/bin/bash"
+      },
+      {
+        "question": "How does 'MaxText TPU setup script' handle: Enable \"exit immediately if any command fails\" option?",
+        "answer": "set -e\nexport DEBIAN_FRONTEND=noninteractive\nexport NEEDRESTART_SUSPEND=1\nexport NEEDRESTART_MODE=l"
+      },
+      {
+        "question": "How does 'MaxText TPU setup script' handle: Directory Validation Check?",
+        "answer": "echo \"Checking current directory...\"\nif [[ ! -d \"src\" || ! -d \"src/dependencies\" ]]; then\n    echo -e \"\\n\\e[31mERROR: Critical directories not found!\\e[0m\"\n    echo \"Please run this script from the root of the MaxText repository.\"\n    echo \"Expected to find './dependencies' and './src' folders.\"\n    exit 1\nfi\necho \"Directory check passed.\""
+      },
+      {
+        "question": "How does 'MaxText TPU setup script' handle: Enable automatic restart of services without the need for prompting?",
+        "answer": "if command -v sudo &> /dev/null && [ -f /etc/needrestart/needrestart.conf ]; then\n    sudo sed -i \"s/#\\$nrconf{restart} = 'i';/\\$nrconf{restart} = 'a';/\" /etc/needrestart/needrestart.conf\nelse\n   echo \"Skipping editing needrestart.conf\"\nfi\n\necho \"Checking Python version...\"\nPY_VERSION=$(python3 --version 2>&1)\nif [ -z \"$PY_VERSION\" ]; then\n  # shellcheck disable=SC2016\n  >&2 printf 'No python3 is installed, installing `uv` from its install script\\n'\n  curl -LsSf https://astral.sh/uv/install.sh | sh\n  PY_VERSION='Python 2.7.5'\nfi\nPY_VERSION=${PY_VERSION##* }\nPY_VERSION=${PY_VERSION%.*}"
+      },
+      {
+        "question": "How does 'MaxText TPU setup script' handle: shellcheck disable=SC2072?",
+        "answer": "if [[ '3.12' > \"$PY_VERSION\" ]]; then\n    echo -e \"\\n\\e[31mERROR: Outdated Python Version! You are currently using ${PY_VERSION}.*, but MaxText requires Python version 3.12 or higher.\\e[0m\"\n    # Ask the user if they want to create a virtual environment with uv\n    read -p \"Would you like to create a Python 3.12 virtual environment using uv? (y/n) \" -n 1 -r\n    echo # Move to a new line after input\n    if [[ $REPLY =~ ^[Yy]$ ]]; then\n        # Check if uv is installed first; if not, install uv\n        if ! command -v uv &> /dev/null; then\n            pip install uv\n        fi\n        # Ask for the venv name\n        read -rp \"Please enter a name for your new virtual environment (default: venv-maxtext): \" venv_name\n        # Use a default name if the user provides no input\n        if [ -z \"$venv_name\" ]; then\n            venv_name=\"$HOME\"'/venv-maxtext'\n            echo \"No name provided. Using default name: '$venv_name'\"\n        fi\n        echo \"Creating virtual environment '$venv_name' with Python 3.12...\"\n        python3 -m uv venv --python 3.12 \"$venv_name\" --seed\n        printf '%s\\n' \"$(realpath -- \"$venv_name\")\" >> /tmp/venv_created\n        echo -e \"\\n\\e[32mVirtual environment"
+      },
+      {
+        "question": "How does 'MaxText TPU setup script' handle: keep apt-get non-interactive.?",
+        "answer": "export DEBIAN_FRONTEND=noninteractive\nexport NEEDRESTART_SUSPEND=1\nexport NEEDRESTART_MODE=l\napt-get update && \\\napt-get upgrade -y && \\\napt-get install -y --no-install-recommends numactl lsb-release gnupg curl net-tools iproute2 procps lsof git ethtool ca-certificates && \\\nexport GCSFUSE_REPO=gcsfuse-`lsb_release -c -s`\nif [ \"$GCSFUSE_REPO\" = \"gcsfuse-trixie\" ]; then GCSFUSE_REPO=\"gcsfuse-bookworm\"; fi\ncurl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg > /tmp/apt-key.gpg && gpg --dearmor --yes -o /usr/share/keyrings/cloud.google.gpg /tmp/apt-key.gpg && rm /tmp/apt-key.gpg\necho \"deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt $GCSFUSE_REPO main\" | tee /etc/apt/sources.list.d/gcsfuse.list\napt-get update -y && apt-get -y install gcsfuse && \\\nrm -f /usr/sbin/mount.gcsfuse /usr/sbin/mount.fuse.gcsfuse /sbin/mount.gcsfuse /sbin/mount.fuse.gcsfuse && \\\n(objcopy --remove-section=.go.buildinfo /usr/bin/gcsfuse 2>/dev/null || true)\nrm -rf /var/lib/apt/lists/*\nEOF\n\npython3 -m pip install --no-cache-dir -U pip setuptools wheel uv"
+      },
+      {
+        "question": "How does 'MaxText TPU setup script' handle: Set environment variables?",
+        "answer": "for ARGUMENT in \"$@\"; do\n    IFS='=' read -r KEY VALUE <<< \"$ARGUMENT\"\n    export \"$KEY\"=\"$VALUE\"\ndone"
+      },
+      {
+        "question": "How does 'MaxText TPU setup script' handle: Set default value for $WORKFLOW?",
+        "answer": "if [[ -z \"$WORKFLOW\" ]]; then\n  export WORKFLOW=pre-training\nfi"
+      },
+      {
+        "question": "How does 'MaxText TPU setup script' handle: Unset optional variables if set to NONE?",
+        "answer": "unset_optional_vars() {\n    local optional_vars=(\"JAX_VERSION\" \"LIBTPU_VERSION\" \"LIBTPU_GCS_PATH\")\n    for var_name in \"${optional_vars[@]}\"; do\n        if [[ ${!var_name} == NONE ]]; then\n            unset \"$var_name\"\n        fi\n    done\n}\nunset_optional_vars\n\nversion_mismatch_warning() {\n    echo -e \"\\n\\nWARNING: You are installing a $1 version that is different from the one pinned by MaxText. This can lead to the following issues:\"\n    echo -e \"1. Compatibility: The dependencies in the requirements file are tested and compatible with the pinned $1 version. We cannot guarantee that they will work correctly with a different $1 version.\"\n    echo -e \"2. Consistency: Installing a custom $1 version can pull in different transitive dependencies over time, making the environment non-reproducible and potentially affecting performance.\\n\\n\"\n}\n\ninstall_custom_libtpu() {\n    libtpu_path=\"$HOME/custom_libtpu/libtpu.so\"\n    echo -e \"\\nInstalling libtpu.so from $LIBTPU_GCS_PATH to $libtpu_path\"\n    version_mismatch_warning \"libtpu\"\n    # Delete custom libtpu if it exists\n    if [ -e \"$libtpu_path\" ]; then\n        rm -v \"$libtpu_path\"\n    fi\n    # Install 'crcmod' to download 'libtpu.so' from "
+      }
+    ],
+    "full_markdown": "# MaxText TPU Setup Script (`src/dependencies/scripts/setup.sh`)\n\nOfficial dependency installation script for MaxText on Cloud TPU VMs, supporting `stable` and `nightly` modes, `jax`, `jaxlib`, `libtpu`, and `tpu-info` installation.\n\n```bash\n#!/bin/bash\n\n# Copyright 2023\u20132025 Google LLC\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#    https://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n\n# ==================================\n# TPU EXAMPLES\n# ==================================\n\n# Install dependencies in dependencies/generated_requirements/tpu-requirements.txt\n## bash src/dependencies/scripts/setup.sh MODE=stable\n\n# Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + specified jax, jaxlib, libtpu\n## bash src/dependencies/scripts/setup.sh MODE=stable JAX_VERSION=0.8.0\n\n# Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + custom libtpu\n## bash src/dependencies/scripts/setup.sh MODE=stable LIBTPU_GCS_PATH=gs://my_custom_libtpu/libtpu.so\n\n# Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + jax-nightly, jaxlib-nightly, libtpu-nightly\n## bash src/dependencies/scripts/setup.sh MODE=nightly\n\n# Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + specified jax-nightly, jaxlib-nightly + latest libtpu-nightly\n## bash src/dependencies/scripts/setup.sh MODE=nightly JAX_VERSION=0.8.2.dev20251211\n\n# Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + specified jax-nightly, jaxlib-nightly + specific libtpu-nightly\n## bash src/dependencies/scripts/setup.sh MODE=nightly JAX_VERSION=0.8.1 LIBTPU_VERSION=0.0.31.dev20251119+nightly\n\n# Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + jax-nightly, jaxlib-nightly + custom libtpu\n## bash src/dependencies/scripts/setup.sh MODE=nightly LIBTPU_GCS_PATH=gs://my_custom_libtpu/libtpu.so\n\n# Install custom libtpu only\n## bash src/dependencies/scripts/setup.sh MODE=libtpu-only LIBTPU_GCS_PATH=gs://my_custom_libtpu/libtpu.so\n\n# Install dependencies in dependencies/generated_requirements/tpu-requirements.txt + optional TensorFlow/JetStream\n## bash src/dependencies/scripts/setup.sh MODE=stable TF=true\n\n# ==================================\n# GPU EXAMPLES\n# ==================================\n\n# Install dependencies in dependencies/generated_requirements/cuda12-requirements.txt\n## bash src/dependencies/scripts/setup.sh MODE=stable DEVICE=gpu\n\n# Install dependencies in dependencies/generated_requirements/cuda12-requirements.txt + optional TensorFlow/JetStream\n## bash src/dependencies/scripts/setup.sh MODE=stable DEVICE=gpu TF=true\n\n# Install dependencies in dependencies/generated_requirements/cuda12-requirements.txt + specified jax, jaxlib, jax-cuda12-plugin, jax-cuda12-pjrt\n## bash src/dependencies/scripts/setup.sh MODE=stable DEVICE=gpu JAX_VERSION=0.4.13\n\n# Install dependencies in dependencies/generated_requirements/cuda12-requirements.txt + jax-nightly, jaxlib-nightly\n## bash src/dependencies/scripts/setup.sh MODE=nightly DEVICE=gpu\n\n# Install dependencies in dependencies/generated_requirements/cuda12-requirements.txt + specified jax, jaxlib, jax-cuda12-plugin, jax-cuda12-pjrt\n## bash src/dependencies/scripts/setup.sh MODE=nightly DEVICE=gpu JAX_VERSION=0.4.36.dev20241109\n\n\n# Enable \"exit immediately if any command fails\" option\nset -e\nexport DEBIAN_FRONTEND=noninteractive\nexport NEEDRESTART_SUSPEND=1\nexport NEEDRESTART_MODE=l\n\n# Directory Validation Check\necho \"Checking current directory...\"\nif [[ ! -d \"src\" || ! -d \"src/dependencies\" ]]; then\n    echo -e \"\\n\\e[31mERROR: Critical directories not found!\\e[0m\"\n    echo \"Please run this script from the root of the MaxText repository.\"\n    echo \"Expected to find './dependencies' and './src' folders.\"\n    exit 1\nfi\necho \"Directory check passed.\"\n\n# Enable automatic restart of services without the need for prompting \nif command -v sudo &> /dev/null && [ -f /etc/needrestart/needrestart.conf ]; then\n    sudo sed -i \"s/#\\$nrconf{restart} = 'i';/\\$nrconf{restart} = 'a';/\" /etc/needrestart/needrestart.conf\nelse\n   echo \"Skipping editing needrestart.conf\"\nfi\n\necho \"Checking Python version...\"\nPY_VERSION=$(python3 --version 2>&1)\nif [ -z \"$PY_VERSION\" ]; then\n  # shellcheck disable=SC2016\n  >&2 printf 'No python3 is installed, installing `uv` from its install script\\n'\n  curl -LsSf https://astral.sh/uv/install.sh | sh\n  PY_VERSION='Python 2.7.5'\nfi\nPY_VERSION=${PY_VERSION##* }\nPY_VERSION=${PY_VERSION%.*}\n# shellcheck disable=SC2072\nif [[ '3.12' > \"$PY_VERSION\" ]]; then\n    echo -e \"\\n\\e[31mERROR: Outdated Python Version! You are currently using ${PY_VERSION}.*, but MaxText requires Python version 3.12 or higher.\\e[0m\"\n    # Ask the user if they want to create a virtual environment with uv\n    read -p \"Would you like to create a Python 3.12 virtual environment using uv? (y/n) \" -n 1 -r\n    echo # Move to a new line after input\n    if [[ $REPLY =~ ^[Yy]$ ]]; then\n        # Check if uv is installed first; if not, install uv\n        if ! command -v uv &> /dev/null; then\n            pip install uv\n        fi\n        # Ask for the venv name\n        read -rp \"Please enter a name for your new virtual environment (default: venv-maxtext): \" venv_name\n        # Use a default name if the user provides no input\n        if [ -z \"$venv_name\" ]; then\n            venv_name=\"$HOME\"'/venv-maxtext'\n            echo \"No name provided. Using default name: '$venv_name'\"\n        fi\n        echo \"Creating virtual environment '$venv_name' with Python 3.12...\"\n        python3 -m uv venv --python 3.12 \"$venv_name\" --seed\n        printf '%s\\n' \"$(realpath -- \"$venv_name\")\" >> /tmp/venv_created\n        echo -e \"\\n\\e[32mVirtual environment '$venv_name' created successfully!\\e[0m\"\n        echo \"To activate it, run the following command:\"\n        echo -e \"\\e[33m  source $venv_name/bin/activate\\e[0m\"\n        . \"$venv_name\"/bin/activate\n    else\n        echo \"Exiting. Please upgrade your Python environment to continue.\"\n        exit 1\n    fi\nfi\necho \"Python version check passed. Continuing with script.\"\necho \"--------------------------------------------------\"\n\napt-get update && apt-get install -y --no-install-recommends sudo\n(sudo bash || bash) <<'EOF'\n# sudo strips the exports set by the parent shell, so re-export them here to\n# keep apt-get non-interactive.\nexport DEBIAN_FRONTEND=noninteractive\nexport NEEDRESTART_SUSPEND=1\nexport NEEDRESTART_MODE=l\napt-get update && \\\napt-get upgrade -y && \\\napt-get install -y --no-install-recommends numactl lsb-release gnupg curl net-tools iproute2 procps lsof git ethtool ca-certificates && \\\nexport GCSFUSE_REPO=gcsfuse-`lsb_release -c -s`\nif [ \"$GCSFUSE_REPO\" = \"gcsfuse-trixie\" ]; then GCSFUSE_REPO=\"gcsfuse-bookworm\"; fi\ncurl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg > /tmp/apt-key.gpg && gpg --dearmor --yes -o /usr/share/keyrings/cloud.google.gpg /tmp/apt-key.gpg && rm /tmp/apt-key.gpg\necho \"deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt $GCSFUSE_REPO main\" | tee /etc/apt/sources.list.d/gcsfuse.list\napt-get update -y && apt-get -y install gcsfuse && \\\nrm -f /usr/sbin/mount.gcsfuse /usr/sbin/mount.fuse.gcsfuse /sbin/mount.gcsfuse /sbin/mount.fuse.gcsfuse && \\\n(objcopy --remove-section=.go.buildinfo /usr/bin/gcsfuse 2>/dev/null || true)\nrm -rf /var/lib/apt/lists/*\nEOF\n\npython3 -m pip install --no-cache-dir -U pip setuptools wheel uv\n\n# Set environment variables\nfor ARGUMENT in \"$@\"; do\n    IFS='=' read -r KEY VALUE <<< \"$ARGUMENT\"\n    export \"$KEY\"=\"$VALUE\"\ndone\n\n# Set default value for $DEVICE\nif [[ -z \"$DEVICE\" ]]; then\n    export DEVICE=tpu\nfi\n\n# Set default value for $MODE\nif [[ -z \"$MODE\" ]]; then\n  export MODE=stable\nfi\n\n# Set default value for $WORKFLOW\nif [[ -z \"$WORKFLOW\" ]]; then\n  export WORKFLOW=pre-training\nfi\n\n# Set default value for $TF (default false for local setups; docker builds pass TF=true)\nif [[ -z \"$TF\" ]]; then\n  export TF=\"${tf:-false}\"\nfi\n\n# Unset optional variables if set to NONE\nunset_optional_vars() {\n    local optional_vars=(\"JAX_VERSION\" \"LIBTPU_VERSION\" \"LIBTPU_GCS_PATH\")\n    for var_name in \"${optional_vars[@]}\"; do\n        if [[ ${!var_name} == NONE ]]; then\n            unset \"$var_name\"\n        fi\n    done\n}\nunset_optional_vars\n\nversion_mismatch_warning() {\n    echo -e \"\\n\\nWARNING: You are installing a $1 version that is different from the one pinned by MaxText. This can lead to the following issues:\"\n    echo -e \"1. Compatibility: The dependencies in the requirements file are tested and compatible with the pinned $1 version. We cannot guarantee that they will work correctly with a different $1 version.\"\n    echo -e \"2. Consistency: Installing a custom $1 version can pull in different transitive dependencies over time, making the environment non-reproducible and potentially affecting performance.\\n\\n\"\n}\n\ninstall_custom_libtpu() {\n    libtpu_path=\"$HOME/custom_libtpu/libtpu.so\"\n    echo -e \"\\nInstalling libtpu.so from $LIBTPU_GCS_PATH to $libtpu_path\"\n    version_mismatch_warning \"libtpu\"\n    # Delete custom libtpu if it exists\n    if [ -e \"$libtpu_path\" ]; then\n        rm -v \"$libtpu_path\"\n    fi\n    # Install 'crcmod' to download 'libtpu.so' from GCS reliably\n    python3 -m uv pip install -U crcmod\n    # Copy libtpu.so from GCS path\n    gcloud storage cp \"$LIBTPU_GCS_PATH\" \"$libtpu_path\"\n}\n\ninstall_maxtext_package_without_deps() {\n    # The MaxText package is installed separately from its dependencies to optimize\n    # docker image rebuild times by leveraging docker's layer caching.\n    # Dependencies are installed in a separate step before MaxText code is\n    # copied. This means that if MaxText code changes, but the\n    # dependencies do not, docker can reuse the cached dependency layer, leading\n    # to significantly faster image builds.\n    if [ -f 'pyproject.toml' ]; then\n        echo \"Installing MaxText package without installing the dependencies (already installed)\"\n        python3 -m uv pip install --no-deps -e .\n    fi\n}\n\ncleanup_unneeded_build_artifacts() {\n    echo \"Cleaning up build artifacts that trigger security scanners...\"\n    local py_purelib py_platlib\n    py_purelib=$(python3 -c \"import sysconfig; print(sysconfig.get_path('purelib'))\" 2>/dev/null || true)\n    py_platlib=$(python3 -c \"import sysconfig; print(sysconfig.get_path('platlib'))\" 2>/dev/null || true)\n    # Clean up flaxlib_src Cargo.lock / unneeded source files, unused cross-language Java Ray worker JAR,\n    # and vendored third-party .dist-info metadata inside Ray's runtime_env agent\n    if [ -n \"$py_purelib\" ]; then\n        rm -rf \"$py_purelib/flaxlib_src\"\n        rm -f \"$py_purelib/ray/jars/ray_dist.jar\"\n        rm -rf \"$py_purelib\"/ray/_private/runtime_env/agent/thirdparty_files/*.dist-info\n    fi\n    if [ -n \"$py_platlib\" ] && [ \"$py_platlib\" != \"$py_purelib\" ]; then\n        rm -rf \"$py_platlib/flaxlib_src\"\n        rm -f \"$py_platlib/ray/jars/ray_dist.jar\"\n        rm -rf \"$py_platlib\"/ray/_private/runtime_env/agent/thirdparty_files/*.dist-info\n    fi\n    # Clean up embedded virtualenv seed wheels if virtualenv was installed\n    find /usr/local /root -name \"*.whl\" -path \"*/virtualenv/seed/wheels/embed/*\" -delete 2>/dev/null || true\n    # Clean up unused /etc/fstab mount helper binaries from gcsfuse, strip .go.buildinfo from /usr/bin/gcsfuse,\n    # and remove optional gcloud-crc32c Go helper and bundledpythonunix .dist-info metadata\n    rm -f /usr/sbin/mount.gcsfuse /usr/sbin/mount.fuse.gcsfuse /sbin/mount.gcsfuse /sbin/mount.fuse.gcsfuse\n    (objcopy --remove-section=.go.buildinfo /usr/bin/gcsfuse 2>/dev/null || true)\n    rm -f /usr/bin/gcloud-crc32c /usr/lib/google-cloud-sdk/bin/gcloud-crc32c /usr/local/google-cloud-sdk/bin/gcloud-crc32c\n    rm -rf /usr/lib/google-cloud-sdk/platform/bundledpythonunix/lib/python*/site-packages/*.dist-info \\\n           /usr/local/google-cloud-sdk/platform/bundledpythonunix/lib/python*/site-packages/*.dist-info\n}\n\ninstall_maxtext_with_deps() {\n    if [[ \"$DEVICE\" != \"tpu\" && \"$DEVICE\" != \"gpu\" ]]; then\n      echo -e \"\\n\\nError: DEVICE must be either 'tpu' or 'gpu'.\\n\\n\"\n      exit 1\n    fi\n    echo \"Setting up MaxText in $MODE mode for $DEVICE device\"\n    if [ \"$DEVICE\" = \"gpu\" ]; then\n        dep_name='src/dependencies/requirements/generated_requirements/cuda12-requirements.txt'\n    else\n        dep_name='src/dependencies/requirements/generated_requirements/tpu-requirements.txt'\n    fi\n    echo \"Installing requirements from $dep_name\"\n    python3 -m uv pip install --resolution=lowest -r \"$dep_name\"\n    if [[ \"$TF\" == \"true\" ]]; then\n        python3 -m src.dependencies.scripts.install_pre_train_extra_deps --with-tf\n    else\n        python3 -m src.dependencies.scripts.install_pre_train_extra_deps\n    fi\n\n    install_maxtext_package_without_deps\n    cleanup_unneeded_build_artifacts\n}\n\ninstall_post_training_deps() {\n    if [[ \"$DEVICE\" != \"tpu\" ]]; then\n      echo -e \"\\n\\nError: DEVICE must be 'tpu'.\\n\\n\"\n      exit 1\n    fi\n    echo \"Setting up MaxText post-training workflow for $DEVICE device\"\n\n    # Install build tools needed to compile vllm from source.\n    if [ -f /etc/os-release ] && grep -q \"bullseye\" /etc/os-release; then\n        echo \"deb http://deb.debian.org/debian bookworm main\" > /etc/apt/sources.list.d/bookworm.list\n        apt-get update -y && apt-get install -y --no-install-recommends -t bookworm gcc-12 g++-12 build-essential cmake ninja-build\n        export CC=gcc-12\n        export CXX=g++-12\n    else\n        apt-get update -y && apt-get install -y --no-install-recommends gcc-12 g++-12 build-essential cmake ninja-build || \\\n        apt-get install -y --no-install-recommends build-essential cmake ninja-build\n    fi\n\n    dep_name='src/dependencies/requirements/generated_requirements/tpu-post-train-requirements.txt'\n    echo \"Installing requirements from $dep_name\"\n    UV_TORCH_BACKEND=cpu python3 -m uv pip install --resolution=lowest -r \"$dep_name\"\n    python3 -m src.dependencies.scripts.install_post_train_extra_deps\n    python3 -m uv pip install --no-deps \"setuptools>=84.0.0\"\n    cleanup_unneeded_build_artifacts\n}\n\n# ---------- Post-Training workflow installation ----------\n\nif [[ \"$WORKFLOW\" == \"post-training\" ]]; then\n    install_post_training_deps\n    install_maxtext_package_without_deps\n    exit 0\nfi\n\n# ---------- Pre-Training workflow installation ----------\n\n# stable mode installation\nif [[ \"$MODE\" == \"stable\" ]]; then\n    install_maxtext_with_deps\n\n    if [[ $DEVICE == \"tpu\" ]]; then\n        if [[ -n \"$JAX_VERSION\" ]]; then\n            echo -e \"\\nInstalling stable jax, jaxlib, libtpu version ${JAX_VERSION}\"\n            version_mismatch_warning \"jax\"\n            python3 -m uv pip install -U jax[tpu]==${JAX_VERSION}\n        fi\n        if [[ -n \"$LIBTPU_GCS_PATH\" ]]; then\n            install_custom_libtpu\n        elif [[ -n \"$LIBTPU_VERSION\" ]]; then\n            echo -e \"\\nInstalling libtpu ${LIBTPU_VERSION}\"\n            version_mismatch_warning \"libtpu\"\n            python3 -m uv pip install -U --no-deps libtpu==${LIBTPU_VERSION} -f https://storage.googleapis.com/jax-releases/libtpu_releases.html\n        fi\n    elif [[ $DEVICE == \"gpu\" ]]; then\n        if [[ -n \"$JAX_VERSION\" ]]; then\n            echo -e \"\\nInstalling stable jax, jaxlib ${JAX_VERSION}\"\n            version_mismatch_warning \"jax\"\n            python3 -m uv pip install -U \"jax[cuda12]==${JAX_VERSION}\"\n        fi\n    fi\n    exit 0\nfi\n\n# nightly mode installation\nif [[ $MODE == \"nightly\" ]]; then\n    install_maxtext_with_deps\n\n    # Install Flax HEAD to maintain compatibility with JAX nightly\n    python3 -m uv pip install -U --no-deps git+https://github.com/google/flax.git\n    cleanup_unneeded_build_artifacts\n\n    # Uninstall existing jax, jaxlib and libtpu\n    python3 -m uv pip show jax && python3 -m uv pip uninstall jax\n    python3 -m uv pip show jaxlib && python3 -m uv pip uninstall jaxlib\n    python3 -m uv pip show libtpu && python3 -m uv pip uninstall libtpu\n\n    if [[ $DEVICE == \"tpu\" ]]; then\n        if [[ -n \"$JAX_VERSION\" ]]; then\n            echo -e \"\\nInstalling jax-nightly, jaxlib-nightly ${JAX_VERSION}\"\n            python3 -m uv pip install -U --pre --no-deps jax==${JAX_VERSION} jaxlib==${JAX_VERSION} -i https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/\n        else\n            echo -e \"\\nInstalling the latest jax-nightly, jaxlib-nightly\"\n            python3 -m uv pip install --pre -U --no-deps jax jaxlib -i https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/\n        fi\n        if [[ -n \"$LIBTPU_GCS_PATH\" ]]; then\n            install_custom_libtpu\n        elif [[ -n \"$LIBTPU_VERSION\" ]]; then\n            echo -e \"\\nInstalling libtpu ${LIBTPU_VERSION}\"\n            version_mismatch_warning \"libtpu\"\n            python3 -m uv pip install -U --no-deps libtpu==${LIBTPU_VERSION} -f https://storage.googleapis.com/jax-releases/libtpu_releases.html\n        else\n            echo -e \"\\nInstalling the latest libtpu-nightly\"\n            python3 -m uv pip install -U --pre --no-deps libtpu -f https://storage.googleapis.com/jax-releases/libtpu_releases.html\n        fi\n    elif [[ $DEVICE == \"gpu\" ]]; then\n        if [[ -n \"$JAX_VERSION\" ]]; then\n            echo -e \"\\nInstalling jax-nightly, jaxlib-nightly ${JAX_VERSION}\"\n            python3 -m uv pip install -U --pre --no-deps jax==${JAX_VERSION} jaxlib==${JAX_VERSION} \\\n                jax-cuda12-plugin[with-cuda]==${JAX_VERSION} jax-cuda12-pjrt==${JAX_VERSION} -i https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/\n        else\n            echo -e \"\\nInstalling the latest jax-nightly, jaxlib-nightly\"\n            python3 -m uv pip install -U --pre --no-deps jax jaxlib \\\n                jax-cuda12-plugin[with-cuda] jax-cuda12-pjrt -i https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/\n        fi\n    fi\n    exit 0\nfi\n\n# libtpu-only mode installation\nif [[ \"$MODE\" == \"libtpu-only\" ]]; then\n    if [[ \"$DEVICE\" != \"tpu\" ]]; then\n      echo -e \"\\n\\nError: MODE=libtpu-only is only supported for DEVICE=tpu.\\n\\n\"\n      exit 1\n    fi\n    if [[ -z \"$LIBTPU_GCS_PATH\" ]]; then\n        echo -e \"\\n\\nError: LIBTPU_GCS_PATH must be set when MODE is libtpu-only.\\n\\n\"\n        exit 1\n    fi\n    install_custom_libtpu\n    exit 0\nfi\n\necho -e \"\\n\\nError: MODE must be either 'stable', 'nightly', or 'libtpu-only'.\\n\\n\"\nexit 1\n```"
+  }
 }

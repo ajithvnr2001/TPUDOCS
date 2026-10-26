@@ -1,63 +1,380 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:legacy_02_run_calculation_jax_legacy",
-  "@type": "DocumentationResource",
-  "name": "Run JAX on a Cloud TPU VM \u2014 legacy API",
-  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/run-calculation-jax",
-  "category": "Legacy docs",
-  "categorySlug": "legacy_docs",
-  "description": "Older Cloud TPU API quickstart; use the Compute Engine quickstart for new provisioning.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/run-calculation-jax",
-    "crawledAt": "2026-10-26T12:44:51.819307+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 30483
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Run JAX on a Cloud TPU VM \u2014 legacy API",
-      "documentedIn",
-      "https://docs.cloud.google.com/tpu/docs/run-calculation-jax"
-    ],
-    [
-      "Run JAX on a Cloud TPU VM \u2014 legacy API",
-      "belongsToCategory",
-      "legacy_docs"
-    ],
-    [
-      "Run JAX on a Cloud TPU VM \u2014 legacy API",
-      "status",
-      "Deprecated/Legacy"
-    ],
-    [
-      "Run JAX on a Cloud TPU VM \u2014 legacy API",
-      "replacedBy",
-      "TorchTPU / Compute Engine TPU VM"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "legacy_02_run_calculation_jax_legacy",
+    "name": "Run JAX on a Cloud TPU VM \u2014 legacy API",
+    "url": "https://docs.cloud.google.com/tpu/docs/run-calculation-jax",
+    "category": "legacy_docs",
+    "description": "Older Cloud TPU API quickstart; use the Compute Engine quickstart for new provisioning.",
+    "char_count": 9029,
+    "word_count": 1134,
+    "section_count": 16,
+    "code_block_count": 17,
+    "table_count": 0,
+    "cli_command_count": 9,
+    "indexed_at": "2026-10-26T14:46:54.347899+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "schema:name",
+        "object": "Run JAX on a Cloud TPU VM \u2014 legacy API"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/tpu/docs/run-calculation-jax"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "schema:category",
+        "object": "legacy_docs"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "schema:description",
+        "object": "Older Cloud TPU API quickstart; use the Compute Engine quickstart for new provisioning."
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:TPU7x"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5e"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "okf:hasSection",
+        "object": "Run a calculation on a Cloud TPU VM using JAX"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "okf:hasSection",
+        "object": "Before you begin"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "okf:hasSection",
+        "object": "Required roles"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "okf:hasSection",
+        "object": "Create a Cloud TPU VM using `gcloud`"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "okf:hasSection",
+        "object": "Environment variable descriptions"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "okf:hasSection",
+        "object": "Connect to your Cloud TPU VM"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "okf:hasSection",
+        "object": "Install JAX on your Cloud TPU VM"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "okf:hasSection",
+        "object": "System check"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "okf:hasSection",
+        "object": "Perform a calculation"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "okf:hasSection",
+        "object": "Exit the Python interpreter"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "okf:hasSection",
+        "object": "Running JAX code on a TPU VM"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "okf:hasSection",
+        "object": "Clean up"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "okf:hasSection",
+        "object": "Performance notes"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "okf:hasSection",
+        "object": "Padding"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "okf:hasSection",
+        "object": "bfloat16 dtype"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "okf:hasSection",
+        "object": "What's next"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "PROJECT_ID"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "TPU_NAME"
+      },
+      {
+        "subject": "tpu_doc:legacy_02_run_calculation_jax_legacy",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "ZONE"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Run JAX on a Cloud TPU VM \u2014 legacy API provides official guidance on Older Cloud TPU API quickstart; use the Compute Engine quickstart for new provisioning.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/run-calculation-jax",
-      "verified": true
-    },
-    {
-      "assertion": "Resource Run JAX on a Cloud TPU VM \u2014 legacy API is legacy or deprecated; use Compute Engine TPU API and TorchTPU for current workloads.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/run-calculation-jax",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Run JAX on a Cloud TPU VM \u2014 legacy API used for in Cloud TPU workflows?",
-      "answer": "Older Cloud TPU API quickstart; use the Compute Engine quickstart for new provisioning.",
-      "category": "legacy_docs"
-    }
-  ],
-  "contentSummary": "Older Cloud TPU API quickstart; use the Compute Engine quickstart for new provisioning."
+  },
+  "structured_content": {
+    "summary": "Older Cloud TPU API quickstart; use the Compute Engine quickstart for new provisioning.",
+    "sections": [
+      {
+        "heading": "Run a calculation on a Cloud TPU VM using JAX",
+        "level": 1,
+        "content": "**Caution:** This page applies to the Cloud TPU API, which is no longer under active development. The Cloud TPU API will receive bug fixes and security updates only. For the latest features and support for the latest TPU versions, we recommend using Compute Engine or Google Kubernetes Engine to manage TPU resources. For more information, see [TPU resources in Compute Engine](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine) and [About TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus). The Cloud TPU API is not supported on TPU7x and later TPU versions. \nThis document provides a brief introduction to working with JAX and Cloud TPU.\n**Note:** This example shows how to run code on a v5litepod-8 (v5e) TPU which is a single-host TPU. Single-host TPUs have only 1 TPU VM. To run code on TPUs with more than one TPU VM (for example, v5litepod-16 or larger), see [Run JAX code on Cloud TPU slices](https://docs.cloud.google.com/tpu/docs/jax-pods)."
+      },
+      {
+        "heading": "Before you begin",
+        "level": 2,
+        "content": "Before running the commands in this document, you must create a Google Cloud account, install the Google Cloud CLI, and configure the `gcloud` command. For more information, see [Set up the Cloud TPU environment](https://docs.cloud.google.com/tpu/docs/setup-gcp-account)."
+      },
+      {
+        "heading": "Required roles",
+        "level": 3,
+        "content": "To get the permissions that you need to create a TPU and connect to it using SSH, ask your administrator to grant you the following IAM roles on your project: \n  * [TPU Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/tpu#tpu.admin) (`roles/tpu.admin`)\n  * [Service Account User ](https://docs.cloud.google.com/iam/docs/roles-permissions/iam#iam.serviceAccountUser) (`roles/iam.serviceAccountUser`)\n  * [Compute Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/compute#compute.viewer) (`roles/compute.viewer`)\n\n\nFor more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \nYou might also be able to get the required permissions through [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined)."
+      },
+      {
+        "heading": "Create a Cloud TPU VM using `gcloud`",
+        "level": 2,
+        "content": "1. Define some environment variables to make commands easier to use.\n\n```\nexport PROJECT_ID=your-project-id\nexport TPU_NAME=your-tpu-name\nexport ZONE=us-east5-a\nexport ACCELERATOR_TYPE=v5litepod-8\nexport RUNTIME_VERSION=v2-alpha-tpuv5-lite\n```"
+      },
+      {
+        "heading": "Environment variable descriptions",
+        "level": 4,
+        "content": "* `PROJECT_ID`: Your Google Cloud project ID. Use an existing project or [create a new one.](https://docs.cloud.google.com/tpu/docs/setup-gcp-account#set-up-project)\n     * `TPU_NAME`: The name of the TPU.\n     * `ZONE`: The zone in which to create the TPU VM. For more information about supported zones, see [TPU regions and zones](https://docs.cloud.google.com/tpu/docs/regions-zones). \n     * `ACCELERATOR_TYPE`: The accelerator type specifies the version and size of the Cloud TPU you want to create. For more information about supported accelerator types for each TPU version, see [TPU versions](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#versions). \n     * `RUNTIME_VERSION`: The Cloud TPU [software version](https://docs.cloud.google.com/tpu/docs/runtimes).\n  2. Create your TPU VM by running the following command from a Cloud Shell or your computer terminal where the [Google Cloud CLI](https://docs.cloud.google.com/sdk/docs/install) is installed.\n\n```\n$ gcloud compute tpus tpu-vm create $TPU_NAME \\\n    --project=$PROJECT_ID \\\n    --zone=$ZONE \\\n    --accelerator-type=$ACCELERATOR_TYPE \\\n    --version=$RUNTIME_VERSION\n```"
+      },
+      {
+        "heading": "Connect to your Cloud TPU VM",
+        "level": 2,
+        "content": "Connect to your TPU VM over SSH by using the following command:\n\n```\n$ gcloud compute tpus tpu-vm ssh $TPU_NAME \\\n    --project=$PROJECT_ID \\\n    --zone=$ZONE\n```\n\nIf you fail to connect to a TPU VM using SSH, it might be because the TPU VM doesn't have an external IP address. To access a TPU VM without an external IP address, follow the instructions in [Connect to a TPU VM without a public IP address](https://docs.cloud.google.com/tpu/docs/tpu-iap)."
+      },
+      {
+        "heading": "Install JAX on your Cloud TPU VM",
+        "level": 2,
+        "content": "```\n(vm)$ pip install jax[tpu] -f https://storage.googleapis.com/jax-releases/libtpu_releases.html\n```"
+      },
+      {
+        "heading": "System check",
+        "level": 2,
+        "content": "Verify that JAX can access the TPU and can run basic operations:\n  1. Start the Python 3 interpreter:\n\n```\n(vm)$ python3\n```\n\n```\n>>> import jax\n```\n\n  2. Display the number of TPU cores available:\n\n```\n>>> jax.device_count()\n```\n\nThe number of TPU cores is displayed. The number of cores displayed is dependent on the TPU version you are using. For more information, see [TPU versions](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#versions)."
+      },
+      {
+        "heading": "Perform a calculation",
+        "level": 3,
+        "content": "```\n>>> jax.numpy.add(1, 1)\n```\n\nThe result of the numpy add is displayed:\nOutput from the command: \n\n```\nArray(2, dtype=int32, weak_type=True)\n```"
+      },
+      {
+        "heading": "Exit the Python interpreter",
+        "level": 3,
+        "content": "```\n>>> exit()\n```"
+      },
+      {
+        "heading": "Running JAX code on a TPU VM",
+        "level": 2,
+        "content": "You can now run any JAX code you want. The [Flax examples](https://github.com/google/flax/tree/master/examples) are a great place to start with running standard ML models in JAX. For example, to train a basic MNIST convolutional network:\n  1. Install Flax examples dependencies:\n\n```\n(vm)$ pip install --upgrade clu\n(vm)$ pip install tensorflow\n(vm)$ pip install tensorflow_datasets\n(vm)$ pip install tensorboard\n```\n\n  2. Install Flax:\n\n```\n(vm)$ git clone https://github.com/google/flax.git\n(vm)$ pip install --user flax\n```\n\n  3. Run the Flax MNIST training script:\n\n```\n(vm)$ cd flax/examples/mnist\n(vm)$ python3 main.py --workdir=/tmp/mnist \\\n    --config=configs/default.py \\\n    --config.learning_rate=0.05 \\\n    --config.num_epochs=5\n```\n\nThe script downloads the dataset and starts training. The script output should look like this:\n\n```\nI0214 18:00:50.660087 140369022753856 train.py:146] epoch:  1, train_loss: 0.2421, train_accuracy: 92.97, test_loss: 0.0615, test_accuracy: 97.88\nI0214 18:00:52.015867 140369022753856 train.py:146] epoch:  2, train_loss: 0.0594, train_accuracy: 98.16, test_loss: 0.0412, test_accuracy: 98.72\nI0214 18:00:53.377511 140369022753856 train.py:146] epoch:  3, train_loss: 0.0418, train_accuracy: 98.72, test_loss: 0.0296, test_accuracy: 99.04\nI0214 18:00:54.727168 140369022753856 train.py:146] epoch:  4, train_loss: 0.0305, train_accuracy: 99.06, test_loss: 0.0257, test_accuracy: 99.15\nI0214 18:00:56.082807 140369022753856 train.py:146] epoch:  5, train_loss: 0.0252, train_accuracy: 99.20, test_loss: 0.0263, test_accuracy: 99.18\n```"
+      },
+      {
+        "heading": "Clean up",
+        "level": 2,
+        "content": "To avoid incurring charges to your Google Cloud account for the resources used on this page, follow these steps. \nWhen you are done with your TPU VM, follow these steps to clean up your resources.\n  1. Disconnect from the Cloud TPU instance, if you have not already done so:\n\n```\n(vm)$ exit\n```\n\nYour prompt should now be username@projectname, showing you are in the Cloud Shell.\n  2. Delete your Cloud TPU:\n\n```\n$ gcloud compute tpus tpu-vm delete $TPU_NAME \\\n    --project=$PROJECT_ID \\\n    --zone=$ZONE\n```\n\n  3. Verify the resources have been deleted by running the following command. Make sure your TPU is no longer listed. The deletion might take several minutes.\n\n```\n$ gcloud compute tpus tpu-vm list \\\n    --zone=$ZONE\n```"
+      },
+      {
+        "heading": "Performance notes",
+        "level": 2,
+        "content": "Here are a few important details that are particularly relevant to using TPUs in JAX."
+      },
+      {
+        "heading": "Padding",
+        "level": 3,
+        "content": "One of the most common causes for slow performance on TPUs is introducing inadvertent padding:\n  * Arrays in the Cloud TPU are tiled. This entails padding one of the dimensions to a multiple of 8, and a different dimension to a multiple of 128. \n  * The matrix multiplication unit performs best with pairs of large matrices that minimize the need for padding."
+      },
+      {
+        "heading": "bfloat16 dtype",
+        "level": 3,
+        "content": "By default, matrix multiplication in JAX on TPUs uses [bfloat16](https://docs.cloud.google.com/tpu/docs/bfloat16) with float32 accumulation. This can be controlled with the precision argument on relevant `jax.numpy` function calls (matmul, dot, einsum, etc). In particular:\n  * `precision=jax.lax.Precision.DEFAULT`: uses mixed bfloat16 precision (fastest)\n  * `precision=jax.lax.Precision.HIGH`: uses multiple MXU passes to achieve higher precision\n  * `precision=jax.lax.Precision.HIGHEST`: uses even more MXU passes to achieve full float32 precision\n\n\nJAX also adds the bfloat16 dtype, which you can use to explicitly cast arrays to `bfloat16`. For example, `jax.numpy.array(x, dtype=jax.numpy.bfloat16)`."
+      },
+      {
+        "heading": "What's next",
+        "level": 2,
+        "content": "For more information about Cloud TPU, see:\n  * [Run JAX code on TPU slices](https://docs.cloud.google.com/tpu/docs/jax-pods)\n  * [Manage TPUs](https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm)\n  * [Cloud TPU System architecture](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm)"
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "export PROJECT_ID=your-project-id\nexport TPU_NAME=your-tpu-name\nexport ZONE=us-east5-a\nexport ACCELERATOR_TYPE=v5litepod-8\nexport RUNTIME_VERSION=v2-alpha-tpuv5-lite"
+      },
+      {
+        "language": "text",
+        "code": "$ gcloud compute tpus tpu-vm create $TPU_NAME \\\n    --project=$PROJECT_ID \\\n    --zone=$ZONE \\\n    --accelerator-type=$ACCELERATOR_TYPE \\\n    --version=$RUNTIME_VERSION"
+      },
+      {
+        "language": "text",
+        "code": "$ gcloud compute tpus tpu-vm ssh $TPU_NAME \\\n    --project=$PROJECT_ID \\\n    --zone=$ZONE"
+      },
+      {
+        "language": "text",
+        "code": "(vm)$ pip install jax[tpu] -f https://storage.googleapis.com/jax-releases/libtpu_releases.html"
+      },
+      {
+        "language": "text",
+        "code": "(vm)$ python3"
+      },
+      {
+        "language": "text",
+        "code": ">>> import jax"
+      },
+      {
+        "language": "text",
+        "code": ">>> jax.device_count()"
+      },
+      {
+        "language": "text",
+        "code": ">>> jax.numpy.add(1, 1)"
+      },
+      {
+        "language": "text",
+        "code": "Array(2, dtype=int32, weak_type=True)"
+      },
+      {
+        "language": "text",
+        "code": ">>> exit()"
+      },
+      {
+        "language": "text",
+        "code": "(vm)$ pip install --upgrade clu\n(vm)$ pip install tensorflow\n(vm)$ pip install tensorflow_datasets\n(vm)$ pip install tensorboard"
+      },
+      {
+        "language": "text",
+        "code": "(vm)$ git clone https://github.com/google/flax.git\n(vm)$ pip install --user flax"
+      },
+      {
+        "language": "text",
+        "code": "(vm)$ cd flax/examples/mnist\n(vm)$ python3 main.py --workdir=/tmp/mnist \\\n    --config=configs/default.py \\\n    --config.learning_rate=0.05 \\\n    --config.num_epochs=5"
+      },
+      {
+        "language": "text",
+        "code": "I0214 18:00:50.660087 140369022753856 train.py:146] epoch:  1, train_loss: 0.2421, train_accuracy: 92.97, test_loss: 0.0615, test_accuracy: 97.88\nI0214 18:00:52.015867 140369022753856 train.py:146] epoch:  2, train_loss: 0.0594, train_accuracy: 98.16, test_loss: 0.0412, test_accuracy: 98.72\nI0214 18:00:53.377511 140369022753856 train.py:146] epoch:  3, train_loss: 0.0418, train_accuracy: 98.72, test_loss: 0.0296, test_accuracy: 99.04\nI0214 18:00:54.727168 140369022753856 train.py:146] epoch:  4, train_loss: 0.0305, train_accuracy: 99.06, test_loss: 0.0257, test_accuracy: 99.15\nI0214 18:00:56.082807 140369022753856 train.py:146] epoch:  5, train_loss: 0.0252, train_accuracy: 99.20, test_loss: 0.0263, test_accuracy: 99.18"
+      },
+      {
+        "language": "text",
+        "code": "(vm)$ exit"
+      },
+      {
+        "language": "text",
+        "code": "$ gcloud compute tpus tpu-vm delete $TPU_NAME \\\n    --project=$PROJECT_ID \\\n    --zone=$ZONE"
+      },
+      {
+        "language": "text",
+        "code": "$ gcloud compute tpus tpu-vm list \\\n    --zone=$ZONE"
+      }
+    ],
+    "cli_commands": [
+      "export PROJECT_ID=your-project-id",
+      "export TPU_NAME=your-tpu-name",
+      "export ZONE=us-east5-a",
+      "export ACCELERATOR_TYPE=v5litepod-8",
+      "export RUNTIME_VERSION=v2-alpha-tpuv5-lite",
+      "gcloud compute tpus tpu-vm create $TPU_NAME \\",
+      "gcloud compute tpus tpu-vm ssh $TPU_NAME \\",
+      "gcloud compute tpus tpu-vm delete $TPU_NAME \\",
+      "gcloud compute tpus tpu-vm list \\"
+    ],
+    "environment_variables": [
+      "PROJECT_ID",
+      "TPU_NAME",
+      "ZONE"
+    ],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Run JAX on a Cloud TPU VM \u2014 legacy API' (https://docs.cloud.google.com/tpu/docs/run-calculation-jax)?",
+        "answer": "Older Cloud TPU API quickstart; use the Compute Engine quickstart for new provisioning."
+      },
+      {
+        "question": "How does 'Run JAX on a Cloud TPU VM \u2014 legacy API' handle: Run a calculation on a Cloud TPU VM using JAX?",
+        "answer": "**Caution:** This page applies to the Cloud TPU API, which is no longer under active development. The Cloud TPU API will receive bug fixes and security updates only. For the latest features and support for the latest TPU versions, we recommend using Compute Engine or Google Kubernetes Engine to manage TPU resources. For more information, see [TPU resources in Compute Engine](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine) and [About TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus). The Cloud TPU API is not supported on TPU7x and later TPU versions. \nThis document provides a brief introduction to working with JAX and Cloud TPU.\n**Note:** This example shows how to run code on a v5litepod-8 (v5e) TPU which is a single-host TPU. Single-host TPUs have only 1 TPU VM. To run code on TPUs with more than one TPU VM (for example, v5litepod-16 or larger), see [Run JAX code on Cloud TPU slices](https://docs.cloud.google.com/tpu/docs/jax-pods)."
+      },
+      {
+        "question": "How does 'Run JAX on a Cloud TPU VM \u2014 legacy API' handle: Before you begin?",
+        "answer": "Before running the commands in this document, you must create a Google Cloud account, install the Google Cloud CLI, and configure the `gcloud` command. For more information, see [Set up the Cloud TPU environment](https://docs.cloud.google.com/tpu/docs/setup-gcp-account)."
+      },
+      {
+        "question": "How does 'Run JAX on a Cloud TPU VM \u2014 legacy API' handle: Required roles?",
+        "answer": "To get the permissions that you need to create a TPU and connect to it using SSH, ask your administrator to grant you the following IAM roles on your project: \n  * [TPU Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/tpu#tpu.admin) (`roles/tpu.admin`)\n  * [Service Account User ](https://docs.cloud.google.com/iam/docs/roles-permissions/iam#iam.serviceAccountUser) (`roles/iam.serviceAccountUser`)\n  * [Compute Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/compute#compute.viewer) (`roles/compute.viewer`)\n\n\nFor more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \nYou might also be able to get the required permissions through [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined)."
+      },
+      {
+        "question": "How does 'Run JAX on a Cloud TPU VM \u2014 legacy API' handle: Create a Cloud TPU VM using `gcloud`?",
+        "answer": "1. Define some environment variables to make commands easier to use.\n\n```\nexport PROJECT_ID=your-project-id\nexport TPU_NAME=your-tpu-name\nexport ZONE=us-east5-a\nexport ACCELERATOR_TYPE=v5litepod-8\nexport RUNTIME_VERSION=v2-alpha-tpuv5-lite\n```"
+      },
+      {
+        "question": "How does 'Run JAX on a Cloud TPU VM \u2014 legacy API' handle: Environment variable descriptions?",
+        "answer": "* `PROJECT_ID`: Your Google Cloud project ID. Use an existing project or [create a new one.](https://docs.cloud.google.com/tpu/docs/setup-gcp-account#set-up-project)\n     * `TPU_NAME`: The name of the TPU.\n     * `ZONE`: The zone in which to create the TPU VM. For more information about supported zones, see [TPU regions and zones](https://docs.cloud.google.com/tpu/docs/regions-zones). \n     * `ACCELERATOR_TYPE`: The accelerator type specifies the version and size of the Cloud TPU you want to create. For more information about supported accelerator types for each TPU version, see [TPU versions](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#versions). \n     * `RUNTIME_VERSION`: The Cloud TPU [software version](https://docs.cloud.google.com/tpu/docs/runtimes).\n  2. Create your TPU VM by running the following command from a Cloud Shell or your computer terminal where the [Google Cloud CLI](https://docs.cloud.google.com/sdk/docs/install) is installed.\n\n```\n$ gcloud compute tpus tpu-vm create $TPU_NAME \\\n    --project=$PROJECT_ID \\\n    --zone=$ZONE \\\n    --accelerator-type=$ACCELERATOR_TYPE \\\n    --version=$RUNTIME_VERSION\n```"
+      },
+      {
+        "question": "How does 'Run JAX on a Cloud TPU VM \u2014 legacy API' handle: Connect to your Cloud TPU VM?",
+        "answer": "Connect to your TPU VM over SSH by using the following command:\n\n```\n$ gcloud compute tpus tpu-vm ssh $TPU_NAME \\\n    --project=$PROJECT_ID \\\n    --zone=$ZONE\n```\n\nIf you fail to connect to a TPU VM using SSH, it might be because the TPU VM doesn't have an external IP address. To access a TPU VM without an external IP address, follow the instructions in [Connect to a TPU VM without a public IP address](https://docs.cloud.google.com/tpu/docs/tpu-iap)."
+      },
+      {
+        "question": "How does 'Run JAX on a Cloud TPU VM \u2014 legacy API' handle: Install JAX on your Cloud TPU VM?",
+        "answer": "```\n(vm)$ pip install jax[tpu] -f https://storage.googleapis.com/jax-releases/libtpu_releases.html\n```"
+      },
+      {
+        "question": "How does 'Run JAX on a Cloud TPU VM \u2014 legacy API' handle: System check?",
+        "answer": "Verify that JAX can access the TPU and can run basic operations:\n  1. Start the Python 3 interpreter:\n\n```\n(vm)$ python3\n```\n\n```\n>>> import jax\n```\n\n  2. Display the number of TPU cores available:\n\n```\n>>> jax.device_count()\n```\n\nThe number of TPU cores is displayed. The number of cores displayed is dependent on the TPU version you are using. For more information, see [TPU versions](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#versions)."
+      },
+      {
+        "question": "How does 'Run JAX on a Cloud TPU VM \u2014 legacy API' handle: Perform a calculation?",
+        "answer": "```\n>>> jax.numpy.add(1, 1)\n```\n\nThe result of the numpy add is displayed:\nOutput from the command: \n\n```\nArray(2, dtype=int32, weak_type=True)\n```"
+      }
+    ],
+    "full_markdown": "# Run a calculation on a Cloud TPU VM using JAX\n**Caution:** This page applies to the Cloud TPU API, which is no longer under active development. The Cloud TPU API will receive bug fixes and security updates only. For the latest features and support for the latest TPU versions, we recommend using Compute Engine or Google Kubernetes Engine to manage TPU resources. For more information, see [TPU resources in Compute Engine](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine) and [About TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus). The Cloud TPU API is not supported on TPU7x and later TPU versions. \nThis document provides a brief introduction to working with JAX and Cloud TPU.\n**Note:** This example shows how to run code on a v5litepod-8 (v5e) TPU which is a single-host TPU. Single-host TPUs have only 1 TPU VM. To run code on TPUs with more than one TPU VM (for example, v5litepod-16 or larger), see [Run JAX code on Cloud TPU slices](https://docs.cloud.google.com/tpu/docs/jax-pods).\n## Before you begin\nBefore running the commands in this document, you must create a Google Cloud account, install the Google Cloud CLI, and configure the `gcloud` command. For more information, see [Set up the Cloud TPU environment](https://docs.cloud.google.com/tpu/docs/setup-gcp-account).\n### Required roles\nTo get the permissions that you need to create a TPU and connect to it using SSH, ask your administrator to grant you the following IAM roles on your project: \n  * [TPU Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/tpu#tpu.admin) (`roles/tpu.admin`)\n  * [Service Account User ](https://docs.cloud.google.com/iam/docs/roles-permissions/iam#iam.serviceAccountUser) (`roles/iam.serviceAccountUser`)\n  * [Compute Viewer ](https://docs.cloud.google.com/iam/docs/roles-permissions/compute#compute.viewer) (`roles/compute.viewer`)\n\n\nFor more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \nYou might also be able to get the required permissions through [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). \n## Create a Cloud TPU VM using `gcloud`\n  1. Define some environment variables to make commands easier to use.\n\n```\nexport PROJECT_ID=your-project-id\nexport TPU_NAME=your-tpu-name\nexport ZONE=us-east5-a\nexport ACCELERATOR_TYPE=v5litepod-8\nexport RUNTIME_VERSION=v2-alpha-tpuv5-lite\n```\n\n#### Environment variable descriptions\n     * `PROJECT_ID`: Your Google Cloud project ID. Use an existing project or [create a new one.](https://docs.cloud.google.com/tpu/docs/setup-gcp-account#set-up-project)\n     * `TPU_NAME`: The name of the TPU.\n     * `ZONE`: The zone in which to create the TPU VM. For more information about supported zones, see [TPU regions and zones](https://docs.cloud.google.com/tpu/docs/regions-zones). \n     * `ACCELERATOR_TYPE`: The accelerator type specifies the version and size of the Cloud TPU you want to create. For more information about supported accelerator types for each TPU version, see [TPU versions](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#versions). \n     * `RUNTIME_VERSION`: The Cloud TPU [software version](https://docs.cloud.google.com/tpu/docs/runtimes).\n  2. Create your TPU VM by running the following command from a Cloud Shell or your computer terminal where the [Google Cloud CLI](https://docs.cloud.google.com/sdk/docs/install) is installed.\n\n```\n$ gcloud compute tpus tpu-vm create $TPU_NAME \\\n    --project=$PROJECT_ID \\\n    --zone=$ZONE \\\n    --accelerator-type=$ACCELERATOR_TYPE \\\n    --version=$RUNTIME_VERSION\n```\n\n## Connect to your Cloud TPU VM\nConnect to your TPU VM over SSH by using the following command:\n\n```\n$ gcloud compute tpus tpu-vm ssh $TPU_NAME \\\n    --project=$PROJECT_ID \\\n    --zone=$ZONE\n```\n\nIf you fail to connect to a TPU VM using SSH, it might be because the TPU VM doesn't have an external IP address. To access a TPU VM without an external IP address, follow the instructions in [Connect to a TPU VM without a public IP address](https://docs.cloud.google.com/tpu/docs/tpu-iap).\n## Install JAX on your Cloud TPU VM\n\n```\n(vm)$ pip install jax[tpu] -f https://storage.googleapis.com/jax-releases/libtpu_releases.html\n```\n\n## System check\nVerify that JAX can access the TPU and can run basic operations:\n  1. Start the Python 3 interpreter:\n\n```\n(vm)$ python3\n```\n\n```\n>>> import jax\n```\n\n  2. Display the number of TPU cores available:\n\n```\n>>> jax.device_count()\n```\n\nThe number of TPU cores is displayed. The number of cores displayed is dependent on the TPU version you are using. For more information, see [TPU versions](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#versions).\n### Perform a calculation\n\n```\n>>> jax.numpy.add(1, 1)\n```\n\nThe result of the numpy add is displayed:\nOutput from the command: \n\n```\nArray(2, dtype=int32, weak_type=True)\n```\n\n### Exit the Python interpreter\n\n```\n>>> exit()\n```\n\n## Running JAX code on a TPU VM\nYou can now run any JAX code you want. The [Flax examples](https://github.com/google/flax/tree/master/examples) are a great place to start with running standard ML models in JAX. For example, to train a basic MNIST convolutional network:\n  1. Install Flax examples dependencies:\n\n```\n(vm)$ pip install --upgrade clu\n(vm)$ pip install tensorflow\n(vm)$ pip install tensorflow_datasets\n(vm)$ pip install tensorboard\n```\n\n  2. Install Flax:\n\n```\n(vm)$ git clone https://github.com/google/flax.git\n(vm)$ pip install --user flax\n```\n\n  3. Run the Flax MNIST training script:\n\n```\n(vm)$ cd flax/examples/mnist\n(vm)$ python3 main.py --workdir=/tmp/mnist \\\n    --config=configs/default.py \\\n    --config.learning_rate=0.05 \\\n    --config.num_epochs=5\n```\n\nThe script downloads the dataset and starts training. The script output should look like this:\n\n```\nI0214 18:00:50.660087 140369022753856 train.py:146] epoch:  1, train_loss: 0.2421, train_accuracy: 92.97, test_loss: 0.0615, test_accuracy: 97.88\nI0214 18:00:52.015867 140369022753856 train.py:146] epoch:  2, train_loss: 0.0594, train_accuracy: 98.16, test_loss: 0.0412, test_accuracy: 98.72\nI0214 18:00:53.377511 140369022753856 train.py:146] epoch:  3, train_loss: 0.0418, train_accuracy: 98.72, test_loss: 0.0296, test_accuracy: 99.04\nI0214 18:00:54.727168 140369022753856 train.py:146] epoch:  4, train_loss: 0.0305, train_accuracy: 99.06, test_loss: 0.0257, test_accuracy: 99.15\nI0214 18:00:56.082807 140369022753856 train.py:146] epoch:  5, train_loss: 0.0252, train_accuracy: 99.20, test_loss: 0.0263, test_accuracy: 99.18\n```\n\n## Clean up\nTo avoid incurring charges to your Google Cloud account for the resources used on this page, follow these steps. \nWhen you are done with your TPU VM, follow these steps to clean up your resources.\n  1. Disconnect from the Cloud TPU instance, if you have not already done so:\n\n```\n(vm)$ exit\n```\n\nYour prompt should now be username@projectname, showing you are in the Cloud Shell.\n  2. Delete your Cloud TPU:\n\n```\n$ gcloud compute tpus tpu-vm delete $TPU_NAME \\\n    --project=$PROJECT_ID \\\n    --zone=$ZONE\n```\n\n  3. Verify the resources have been deleted by running the following command. Make sure your TPU is no longer listed. The deletion might take several minutes.\n\n```\n$ gcloud compute tpus tpu-vm list \\\n    --zone=$ZONE\n```\n\n## Performance notes\nHere are a few important details that are particularly relevant to using TPUs in JAX.\n### Padding\nOne of the most common causes for slow performance on TPUs is introducing inadvertent padding:\n  * Arrays in the Cloud TPU are tiled. This entails padding one of the dimensions to a multiple of 8, and a different dimension to a multiple of 128. \n  * The matrix multiplication unit performs best with pairs of large matrices that minimize the need for padding.\n\n\n### bfloat16 dtype\nBy default, matrix multiplication in JAX on TPUs uses [bfloat16](https://docs.cloud.google.com/tpu/docs/bfloat16) with float32 accumulation. This can be controlled with the precision argument on relevant `jax.numpy` function calls (matmul, dot, einsum, etc). In particular:\n  * `precision=jax.lax.Precision.DEFAULT`: uses mixed bfloat16 precision (fastest)\n  * `precision=jax.lax.Precision.HIGH`: uses multiple MXU passes to achieve higher precision\n  * `precision=jax.lax.Precision.HIGHEST`: uses even more MXU passes to achieve full float32 precision\n\n\nJAX also adds the bfloat16 dtype, which you can use to explicitly cast arrays to `bfloat16`. For example, `jax.numpy.array(x, dtype=jax.numpy.bfloat16)`.\n## What's next\nFor more information about Cloud TPU, see:\n  * [Run JAX code on TPU slices](https://docs.cloud.google.com/tpu/docs/jax-pods)\n  * [Manage TPUs](https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm)\n  * [Cloud TPU System architecture](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm)"
+  }
 }

@@ -1,64 +1,368 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:infer_04_vllm_torchtpu_setup",
-  "@type": "DocumentationResource",
-  "name": "vLLM-TorchTPU Cloud TPU setup",
-  "canonicalUrl": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/tpu_setup/",
-  "category": "Inference deployment links",
-  "categorySlug": "inference_deployment_links",
-  "description": "Official provisioning and hardware guidance for the vLLM-TorchTPU stack.",
-  "provenance": {
-    "sourceUrl": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/tpu_setup/",
-    "crawledAt": "2026-10-26T12:47:29.602767+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 20366
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "vLLM-TorchTPU Cloud TPU setup",
-      "documentedIn",
-      "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/tpu_setup/"
-    ],
-    [
-      "vLLM-TorchTPU Cloud TPU setup",
-      "belongsToCategory",
-      "inference_deployment_links"
-    ],
-    [
-      "vLLM-TorchTPU Cloud TPU setup",
-      "supportsWorkflow",
-      "High Throughput LLM Inference Serving"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:infer_04_vllm_torchtpu_setup",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "infer_04_vllm_torchtpu_setup",
+    "name": "vLLM-TorchTPU Cloud TPU setup",
+    "url": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/tpu_setup/",
+    "category": "inference_deployment_links",
+    "description": "Official provisioning and hardware guidance for the vLLM-TorchTPU stack.",
+    "char_count": 7614,
+    "word_count": 943,
+    "section_count": 14,
+    "code_block_count": 11,
+    "table_count": 1,
+    "cli_command_count": 10,
+    "indexed_at": "2026-10-26T14:46:54.609005+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "schema:name",
+        "object": "vLLM-TorchTPU Cloud TPU setup"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "schema:url",
+        "object": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/tpu_setup/"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "schema:category",
+        "object": "inference_deployment_links"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "schema:description",
+        "object": "Official provisioning and hardware guidance for the vLLM-TorchTPU stack."
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:TPU7x"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5p"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5e"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v4"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:vLLM-TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "okf:hasSection",
+        "object": "Cloud TPU Setup"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "okf:hasSection",
+        "object": "TPU Versions and Topologies"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "okf:hasSection",
+        "object": "Recommended"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "okf:hasSection",
+        "object": "Experimental"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "okf:hasSection",
+        "object": "Prerequisites"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "okf:hasSection",
+        "object": "Provisioning Cloud TPUs"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "okf:hasSection",
+        "object": "Connecting and Checking Status"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "okf:hasSection",
+        "object": "Compute Engine (TPU v6e, v5p)"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "okf:hasSection",
+        "object": "Queued Resources (TPU v7x, v5e, v4)"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "okf:hasSection",
+        "object": "Verify TPU Devices"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "okf:hasSection",
+        "object": "Clean Up Resources"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "okf:hasSection",
+        "object": "Compute Engine (TPU v6e, v5p)"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "okf:hasSection",
+        "object": "Queued Resources (TPU v7x, v5e, v4)"
+      },
+      {
+        "subject": "tpu_doc:infer_04_vllm_torchtpu_setup",
+        "predicate": "okf:hasSection",
+        "object": "Next Steps"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "vLLM-TorchTPU Cloud TPU setup provides official guidance on Official provisioning and hardware guidance for the vLLM-TorchTPU stack.",
-      "confidence": 1.0,
-      "source": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/tpu_setup/",
-      "verified": true
-    },
-    {
-      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
-      "confidence": 1.0,
-      "source": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/tpu_setup/",
-      "verified": true
-    },
-    {
-      "assertion": "vLLM-TorchTPU is the out-of-tree PyTorch-native serving backend for vLLM on TPUs, distinct from the JAX-native vllm-tpu backend.",
-      "confidence": 1.0,
-      "source": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/tpu_setup/",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is vLLM-TorchTPU Cloud TPU setup used for in Cloud TPU workflows?",
-      "answer": "Official provisioning and hardware guidance for the vLLM-TorchTPU stack.",
-      "category": "inference_deployment_links"
-    }
-  ],
-  "contentSummary": "Official provisioning and hardware guidance for the vLLM-TorchTPU stack."
+  },
+  "structured_content": {
+    "summary": "Official provisioning and hardware guidance for the vLLM-TorchTPU stack.",
+    "sections": [
+      {
+        "heading": "Cloud TPU Setup",
+        "level": 1,
+        "content": "Running `vllm-torchtpu` requires access to Google Cloud TPUs (such as **TPU v7x / Ironwood** or **TPU v6e / Trillium**). This guide walks through choosing a TPU generation, setting up a Google Cloud project, and provisioning a TPU VM."
+      },
+      {
+        "heading": "TPU Versions and Topologies",
+        "level": 2,
+        "content": "Tensor Processing Units (TPUs) are Google's custom-developed application-specific integrated circuits (ASICs) used to accelerate machine learning workloads. TPUs are available in different versions each with different hardware specifications. For more information about TPUs, see [TPU System Architecture](https://cloud.google.com/tpu/docs/system-architecture-tpu-vm).\nThe following TPU versions are compatible with `vllm-torchtpu`. Selecting a topology allows you to configure the physical arrangements of the TPU chips, improving throughput and networking performance."
+      },
+      {
+        "heading": "Recommended",
+        "level": 3,
+        "content": "* **TPU v7x (Ironwood)**\nRecommended\nNext-generation architecture for bleeding-edge research and ultra-large models. This is the generation `vllm-torchtpu` is continuously validated on in CI.\n[View Topology Guidelines \u2192](https://cloud.google.com/tpu/docs/tpu7x)"
+      },
+      {
+        "heading": "Experimental",
+        "level": 3,
+        "content": "* **TPU v6e (Trillium)**\nExperimental\nOptimal performance for mainstream AI workloads with balanced memory and compute.\n[View Topology Guidelines \u2192](https://cloud.google.com/tpu/docs/v6e#configurations)\n  * **TPU v5e**\nExperimental\nCost-effective performance for medium-to-large scale inference and training.\n[View Topology Guidelines \u2192](https://cloud.google.com/tpu/docs/v5e#tpu-v5e-config)\n  * **TPU v5p**\nExperimental\nHigh-performance architecture optimized for peak compute and memory bandwidth.\n[View Topology Guidelines \u2192](https://cloud.google.com/tpu/docs/v5p#tpu-v5p-config)\n  * **TPU v4**\nExperimental\nPrevious generation flagship architecture for large-scale training.\n[View Topology Guidelines \u2192](https://cloud.google.com/tpu/docs/v4#tpu-v4-config)"
+      },
+      {
+        "heading": "Prerequisites",
+        "level": 2,
+        "content": "Before provisioning a TPU VM, ensure you have:\n  1. **A Google Cloud project** with billing enabled.\n  2. **The Google Cloud CLI (`gcloud`)** installed and authenticated on your workstation:\n\n```\ngcloud auth login\ngcloud config set project PROJECT_ID\n\n```\n\n  3. **The Cloud TPU and Compute Engine APIs enabled** :\n\n```\ngcloud services enable tpu.googleapis.com compute.googleapis.com\n\n```\n\n  4. **TPU quota** in your target zone. You can check it under **IAM & Admin -> Quotas & System Limits** in the Google Cloud Console. For more information, see [TPU quota](https://cloud.google.com/tpu/docs/quota#tpu_quota).\n\n\nFor TPU pricing information, see [Cloud TPU pricing](https://cloud.google.com/tpu/pricing)."
+      },
+      {
+        "heading": "Provisioning Cloud TPUs",
+        "level": 2,
+        "content": "Google Cloud supports two primary APIs for provisioning TPUs:\n  * **[Compute Engine API](https://cloud.google.com/tpu/docs/tpus-in-compute-engine) (`gcloud compute instances create`)**: Used for **TPU v6e (Trillium)** and **TPU v5p**.\n  * **[Cloud TPU API](https://cloud.google.com/tpu/docs/queued-resources) (`gcloud alpha compute tpus queued-resources create`)**: Used for **TPU v7x (Ironwood)** , **TPU v5e** , and **TPU v4**.\n\n\nYou can also choose between two capacity models:\n  * **Standard (On-Demand)** : Immediate allocation at standard pay-as-you-go rates.\n  * **Flex-start (DWS)** : Discounted capacity via Dynamic Workload Scheduler (DWS) that runs uninterrupted for up to 7 days. Flex-start is supported on **TPU v7x** , **TPU v6e** , **TPU v5p** , and **TPU v5e** (not on **TPU v4**). For more details, see [About Flex-start VMs](https://cloud.google.com/compute/docs/instances/about-flex-start-vms) and [DWS Pricing](https://cloud.google.com/products/dws/pricing#flex-start-tpu-vm-pricing).\n\n\nSelect your target TPU generation, chip count, and provisioning model below to generate the `gcloud` provisioning command. Be sure to replace placeholder variables (like `PROJECT_ID` and `ZONE`) with your own values before running.\n1. Hardware Generation\nTPU v7x (Ironwood) TPU v6e (Trillium) TPU v5p TPU v5e TPU v4\n2. Chip Count\n1 Chip 4 Chips 8 Chips 16 Chips 32 Chips 64 Chips\n3. Provisioning Model\nStandard / Reserved Flex-start (DWS)\nProvision a standard **4-chip TPU V7X (8 TensorCores)** using the legacy Queued Resources API. Replace `PROJECT_ID` and `ZONE` with your values. `--service-account` is optional; remove it to use the Compute Engine default service account.\n\n```\ngcloud alpha compute tpus queued-resources create my-queued-resource \\\n  --node-id my-tpu-name \\\n  --project PROJECT_ID \\\n  --zone ZONE \\\n  --accelerator-type tpu7x-8 \\\n  --runtime-version v2-alpha-tpuv7x \\\n  --service-account SERVICE_ACCOUNT\n```\n  \n| Parameter  | Description  |  \n| --- | --- |  \n| `PROJECT_ID`  | Your Google Cloud project ID.  |  \n| `ZONE`  | The Google Cloud zone where you have TPU quota (e.g., `us-central1-c`, `us-east5-a`, `europe-west4-a`, `us-central2-b`). See [TPU regions and zones](https://cloud.google.com/tpu/docs/regions-zones) for availability.  |  \n| `SERVICE_ACCOUNT`  | The email address for your service account, found in the Cloud Console under IAM Service Accounts (e.g., `tpu-service-account@<your_project_ID>.iam.gserviceaccount.com`). Optional for Cloud TPU API (queued resources) commands; if you omit `--service-account`, the Compute Engine default service account is used.  |  \n| `RUNTIME_VERSION`  | Automatically populated by the generator above based on your selected TPU hardware generation.  |  \nTPU v7x dual-core architecture\nEach physical **TPU v7x (Ironwood)** chip exposes **2 logical TensorCore devices** to PyTorch and JAX. A single 4-chip TPU v7x host (`tpu7x-8`) provides **8 logical TPU devices** (`--tensor-parallel-size=8`) and 768 GB of total HBM."
+      },
+      {
+        "heading": "Connecting and Checking Status",
+        "level": 2,
+        "content": "Once your queued resource or GCE instance reaches the `ACTIVE` / `RUNNING` state, SSH into the host."
+      },
+      {
+        "heading": "Compute Engine (TPU v6e, v5p)",
+        "level": 3,
+        "content": "Check the status of your instance:\n\n```\ngcloud compute instances describe my-tpu-vm \\\n  --project=PROJECT_ID \\\n  --zone=ZONE\n\n```\n\nConnect using SSH:\n\n```\ngcloud compute ssh my-tpu-vm \\\n  --project=PROJECT_ID \\\n  --zone=ZONE\n\n```"
+      },
+      {
+        "heading": "Queued Resources (TPU v7x, v5e, v4)",
+        "level": 3,
+        "content": "Check the status of your queued resource:\n\n```\ngcloud alpha compute tpus queued-resources describe my-queued-resource \\\n  --project=PROJECT_ID \\\n  --zone=ZONE\n\n```\n\nConnect to worker 0 using SSH:\n\n```\ngcloud compute tpus tpu-vm ssh my-tpu-name \\\n  --project=PROJECT_ID \\\n  --zone=ZONE \\\n  --worker=0\n\n```"
+      },
+      {
+        "heading": "Verify TPU Devices",
+        "level": 2,
+        "content": "Inside the TPU VM, verify that the accelerator devices are visible before installing `vllm-torchtpu`:\n\n```\nls /dev/vfio/\n\n```\n\nOnce `vllm-torchtpu` is installed (which includes `tpu-info`), you can inspect chip utilization and HBM memory usage at any time with:\n\n```\ntpu-info\n\n```"
+      },
+      {
+        "heading": "Clean Up Resources",
+        "level": 2,
+        "content": "To avoid incurring unnecessary charges when you are finished, delete your TPU resources:"
+      },
+      {
+        "heading": "Compute Engine (TPU v6e, v5p)",
+        "level": 3,
+        "content": "```\ngcloud compute instances delete my-tpu-vm \\\n  --project=PROJECT_ID \\\n  --zone=ZONE\n\n```"
+      },
+      {
+        "heading": "Queued Resources (TPU v7x, v5e, v4)",
+        "level": 3,
+        "content": "```\ngcloud alpha compute tpus queued-resources delete my-queued-resource \\\n  --project=PROJECT_ID \\\n  --zone=ZONE \\\n  --force\n\n```"
+      },
+      {
+        "heading": "Next Steps",
+        "level": 2,
+        "content": "Once your TPU VM is running, follow the [installation and quickstart instructions](https://github.com/vllm-project/vllm-torchtpu#readme) to install `vllm-torchtpu` and serve your first model.\n[**Reach the right audience** on a privacy-first ad network only for software devs:**EthicalAds**](https://server.ethicalads.io/proxy/click/8176/01a17840-4c1d-7f02-ae98-1b21ea1b8b33/)\n[Ads by EthicalAds](https://www.ethicalads.io/advertisers/topics/data-science/?ref=ea-text)"
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "gcloud auth login\ngcloud config set project PROJECT_ID"
+      },
+      {
+        "language": "text",
+        "code": "gcloud services enable tpu.googleapis.com compute.googleapis.com"
+      },
+      {
+        "language": "text",
+        "code": "gcloud alpha compute tpus queued-resources create my-queued-resource \\\n  --node-id my-tpu-name \\\n  --project PROJECT_ID \\\n  --zone ZONE \\\n  --accelerator-type tpu7x-8 \\\n  --runtime-version v2-alpha-tpuv7x \\\n  --service-account SERVICE_ACCOUNT"
+      },
+      {
+        "language": "text",
+        "code": "gcloud compute instances describe my-tpu-vm \\\n  --project=PROJECT_ID \\\n  --zone=ZONE"
+      },
+      {
+        "language": "text",
+        "code": "gcloud compute ssh my-tpu-vm \\\n  --project=PROJECT_ID \\\n  --zone=ZONE"
+      },
+      {
+        "language": "text",
+        "code": "gcloud alpha compute tpus queued-resources describe my-queued-resource \\\n  --project=PROJECT_ID \\\n  --zone=ZONE"
+      },
+      {
+        "language": "text",
+        "code": "gcloud compute tpus tpu-vm ssh my-tpu-name \\\n  --project=PROJECT_ID \\\n  --zone=ZONE \\\n  --worker=0"
+      },
+      {
+        "language": "text",
+        "code": "ls /dev/vfio/"
+      },
+      {
+        "language": "text",
+        "code": "tpu-info"
+      },
+      {
+        "language": "text",
+        "code": "gcloud compute instances delete my-tpu-vm \\\n  --project=PROJECT_ID \\\n  --zone=ZONE"
+      },
+      {
+        "language": "text",
+        "code": "gcloud alpha compute tpus queued-resources delete my-queued-resource \\\n  --project=PROJECT_ID \\\n  --zone=ZONE \\\n  --force"
+      }
+    ],
+    "cli_commands": [
+      "gcloud auth login",
+      "gcloud config set project PROJECT_ID",
+      "gcloud services enable tpu.googleapis.com compute.googleapis.com",
+      "gcloud alpha compute tpus queued-resources create my-queued-resource \\",
+      "gcloud compute instances describe my-tpu-vm \\",
+      "gcloud compute ssh my-tpu-vm \\",
+      "gcloud alpha compute tpus queued-resources describe my-queued-resource \\",
+      "gcloud compute tpus tpu-vm ssh my-tpu-name \\",
+      "gcloud compute instances delete my-tpu-vm \\",
+      "gcloud alpha compute tpus queued-resources delete my-queued-resource \\"
+    ],
+    "environment_variables": [],
+    "tables": [
+      {
+        "headers": [
+          "Parameter",
+          "Description"
+        ],
+        "rows": [
+          [
+            "`PROJECT_ID`",
+            "Your Google Cloud project ID."
+          ],
+          [
+            "`ZONE`",
+            "The Google Cloud zone where you have TPU quota (e.g., `us-central1-c`, `us-east5-a`, `europe-west4-a`, `us-central2-b`). See [TPU regions and zones](https://cloud.google.com/tpu/docs/regions-zones) for availability."
+          ],
+          [
+            "`SERVICE_ACCOUNT`",
+            "The email address for your service account, found in the Cloud Console under IAM Service Accounts (e.g., `tpu-service-account@<your_project_ID>.iam.gserviceaccount.com`). Optional for Cloud TPU API (queued resources) commands; if you omit `--service-account`, the Compute Engine default service account is used."
+          ],
+          [
+            "`RUNTIME_VERSION`",
+            "Automatically populated by the generator above based on your selected TPU hardware generation."
+          ]
+        ]
+      }
+    ],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'vLLM-TorchTPU Cloud TPU setup' (https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/tpu_setup/)?",
+        "answer": "Official provisioning and hardware guidance for the vLLM-TorchTPU stack."
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU Cloud TPU setup' handle: Cloud TPU Setup?",
+        "answer": "Running `vllm-torchtpu` requires access to Google Cloud TPUs (such as **TPU v7x / Ironwood** or **TPU v6e / Trillium**). This guide walks through choosing a TPU generation, setting up a Google Cloud project, and provisioning a TPU VM."
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU Cloud TPU setup' handle: TPU Versions and Topologies?",
+        "answer": "Tensor Processing Units (TPUs) are Google's custom-developed application-specific integrated circuits (ASICs) used to accelerate machine learning workloads. TPUs are available in different versions each with different hardware specifications. For more information about TPUs, see [TPU System Architecture](https://cloud.google.com/tpu/docs/system-architecture-tpu-vm).\nThe following TPU versions are compatible with `vllm-torchtpu`. Selecting a topology allows you to configure the physical arrangements of the TPU chips, improving throughput and networking performance."
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU Cloud TPU setup' handle: Recommended?",
+        "answer": "* **TPU v7x (Ironwood)**\nRecommended\nNext-generation architecture for bleeding-edge research and ultra-large models. This is the generation `vllm-torchtpu` is continuously validated on in CI.\n[View Topology Guidelines \u2192](https://cloud.google.com/tpu/docs/tpu7x)"
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU Cloud TPU setup' handle: Experimental?",
+        "answer": "* **TPU v6e (Trillium)**\nExperimental\nOptimal performance for mainstream AI workloads with balanced memory and compute.\n[View Topology Guidelines \u2192](https://cloud.google.com/tpu/docs/v6e#configurations)\n  * **TPU v5e**\nExperimental\nCost-effective performance for medium-to-large scale inference and training.\n[View Topology Guidelines \u2192](https://cloud.google.com/tpu/docs/v5e#tpu-v5e-config)\n  * **TPU v5p**\nExperimental\nHigh-performance architecture optimized for peak compute and memory bandwidth.\n[View Topology Guidelines \u2192](https://cloud.google.com/tpu/docs/v5p#tpu-v5p-config)\n  * **TPU v4**\nExperimental\nPrevious generation flagship architecture for large-scale training.\n[View Topology Guidelines \u2192](https://cloud.google.com/tpu/docs/v4#tpu-v4-config)"
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU Cloud TPU setup' handle: Prerequisites?",
+        "answer": "Before provisioning a TPU VM, ensure you have:\n  1. **A Google Cloud project** with billing enabled.\n  2. **The Google Cloud CLI (`gcloud`)** installed and authenticated on your workstation:\n\n```\ngcloud auth login\ngcloud config set project PROJECT_ID\n\n```\n\n  3. **The Cloud TPU and Compute Engine APIs enabled** :\n\n```\ngcloud services enable tpu.googleapis.com compute.googleapis.com\n\n```\n\n  4. **TPU quota** in your target zone. You can check it under **IAM & Admin -> Quotas & System Limits** in the Google Cloud Console. For more information, see [TPU quota](https://cloud.google.com/tpu/docs/quota#tpu_quota).\n\n\nFor TPU pricing information, see [Cloud TPU pricing](https://cloud.google.com/tpu/pricing)."
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU Cloud TPU setup' handle: Provisioning Cloud TPUs?",
+        "answer": "Google Cloud supports two primary APIs for provisioning TPUs:\n  * **[Compute Engine API](https://cloud.google.com/tpu/docs/tpus-in-compute-engine) (`gcloud compute instances create`)**: Used for **TPU v6e (Trillium)** and **TPU v5p**.\n  * **[Cloud TPU API](https://cloud.google.com/tpu/docs/queued-resources) (`gcloud alpha compute tpus queued-resources create`)**: Used for **TPU v7x (Ironwood)** , **TPU v5e** , and **TPU v4**.\n\n\nYou can also choose between two capacity models:\n  * **Standard (On-Demand)** : Immediate allocation at standard pay-as-you-go rates.\n  * **Flex-start (DWS)** : Discounted capacity via Dynamic Workload Scheduler (DWS) that runs uninterrupted for up to 7 days. Flex-start is supported on **TPU v7x** , **TPU v6e** , **TPU v5p** , and **TPU v5e** (not on **TPU v4**). For more details, see [About Flex-start VMs](https://cloud.google.com/compute/docs/instances/about-flex-start-vms) and [DWS Pricing](https://cloud.google.com/products/dws/pricing#flex-start-tpu-vm-pricing).\n\n\nSelect your target TPU generation, chip count, and provisioning model below to generate the `gcloud` provisioning command. Be sure to replace placeholder variables (like `PROJECT_ID` and `ZONE`"
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU Cloud TPU setup' handle: Connecting and Checking Status?",
+        "answer": "Once your queued resource or GCE instance reaches the `ACTIVE` / `RUNNING` state, SSH into the host."
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU Cloud TPU setup' handle: Compute Engine (TPU v6e, v5p)?",
+        "answer": "Check the status of your instance:\n\n```\ngcloud compute instances describe my-tpu-vm \\\n  --project=PROJECT_ID \\\n  --zone=ZONE\n\n```\n\nConnect using SSH:\n\n```\ngcloud compute ssh my-tpu-vm \\\n  --project=PROJECT_ID \\\n  --zone=ZONE\n\n```"
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU Cloud TPU setup' handle: Queued Resources (TPU v7x, v5e, v4)?",
+        "answer": "Check the status of your queued resource:\n\n```\ngcloud alpha compute tpus queued-resources describe my-queued-resource \\\n  --project=PROJECT_ID \\\n  --zone=ZONE\n\n```\n\nConnect to worker 0 using SSH:\n\n```\ngcloud compute tpus tpu-vm ssh my-tpu-name \\\n  --project=PROJECT_ID \\\n  --zone=ZONE \\\n  --worker=0\n\n```"
+      }
+    ],
+    "full_markdown": "# Cloud TPU Setup\nRunning `vllm-torchtpu` requires access to Google Cloud TPUs (such as **TPU v7x / Ironwood** or **TPU v6e / Trillium**). This guide walks through choosing a TPU generation, setting up a Google Cloud project, and provisioning a TPU VM.\n## TPU Versions and Topologies\nTensor Processing Units (TPUs) are Google's custom-developed application-specific integrated circuits (ASICs) used to accelerate machine learning workloads. TPUs are available in different versions each with different hardware specifications. For more information about TPUs, see [TPU System Architecture](https://cloud.google.com/tpu/docs/system-architecture-tpu-vm).\nThe following TPU versions are compatible with `vllm-torchtpu`. Selecting a topology allows you to configure the physical arrangements of the TPU chips, improving throughput and networking performance.\n### Recommended\n  * **TPU v7x (Ironwood)**\nRecommended\nNext-generation architecture for bleeding-edge research and ultra-large models. This is the generation `vllm-torchtpu` is continuously validated on in CI.\n[View Topology Guidelines \u2192](https://cloud.google.com/tpu/docs/tpu7x)\n\n\n### Experimental\n  * **TPU v6e (Trillium)**\nExperimental\nOptimal performance for mainstream AI workloads with balanced memory and compute.\n[View Topology Guidelines \u2192](https://cloud.google.com/tpu/docs/v6e#configurations)\n  * **TPU v5e**\nExperimental\nCost-effective performance for medium-to-large scale inference and training.\n[View Topology Guidelines \u2192](https://cloud.google.com/tpu/docs/v5e#tpu-v5e-config)\n  * **TPU v5p**\nExperimental\nHigh-performance architecture optimized for peak compute and memory bandwidth.\n[View Topology Guidelines \u2192](https://cloud.google.com/tpu/docs/v5p#tpu-v5p-config)\n  * **TPU v4**\nExperimental\nPrevious generation flagship architecture for large-scale training.\n[View Topology Guidelines \u2192](https://cloud.google.com/tpu/docs/v4#tpu-v4-config)\n\n\n## Prerequisites\nBefore provisioning a TPU VM, ensure you have:\n  1. **A Google Cloud project** with billing enabled.\n  2. **The Google Cloud CLI (`gcloud`)** installed and authenticated on your workstation:\n\n```\ngcloud auth login\ngcloud config set project PROJECT_ID\n\n```\n\n  3. **The Cloud TPU and Compute Engine APIs enabled** :\n\n```\ngcloud services enable tpu.googleapis.com compute.googleapis.com\n\n```\n\n  4. **TPU quota** in your target zone. You can check it under **IAM & Admin -> Quotas & System Limits** in the Google Cloud Console. For more information, see [TPU quota](https://cloud.google.com/tpu/docs/quota#tpu_quota).\n\n\nFor TPU pricing information, see [Cloud TPU pricing](https://cloud.google.com/tpu/pricing).\n## Provisioning Cloud TPUs\nGoogle Cloud supports two primary APIs for provisioning TPUs:\n  * **[Compute Engine API](https://cloud.google.com/tpu/docs/tpus-in-compute-engine) (`gcloud compute instances create`)**: Used for **TPU v6e (Trillium)** and **TPU v5p**.\n  * **[Cloud TPU API](https://cloud.google.com/tpu/docs/queued-resources) (`gcloud alpha compute tpus queued-resources create`)**: Used for **TPU v7x (Ironwood)** , **TPU v5e** , and **TPU v4**.\n\n\nYou can also choose between two capacity models:\n  * **Standard (On-Demand)** : Immediate allocation at standard pay-as-you-go rates.\n  * **Flex-start (DWS)** : Discounted capacity via Dynamic Workload Scheduler (DWS) that runs uninterrupted for up to 7 days. Flex-start is supported on **TPU v7x** , **TPU v6e** , **TPU v5p** , and **TPU v5e** (not on **TPU v4**). For more details, see [About Flex-start VMs](https://cloud.google.com/compute/docs/instances/about-flex-start-vms) and [DWS Pricing](https://cloud.google.com/products/dws/pricing#flex-start-tpu-vm-pricing).\n\n\nSelect your target TPU generation, chip count, and provisioning model below to generate the `gcloud` provisioning command. Be sure to replace placeholder variables (like `PROJECT_ID` and `ZONE`) with your own values before running.\n1. Hardware Generation\nTPU v7x (Ironwood) TPU v6e (Trillium) TPU v5p TPU v5e TPU v4\n2. Chip Count\n1 Chip 4 Chips 8 Chips 16 Chips 32 Chips 64 Chips\n3. Provisioning Model\nStandard / Reserved Flex-start (DWS)\nProvision a standard **4-chip TPU V7X (8 TensorCores)** using the legacy Queued Resources API. Replace `PROJECT_ID` and `ZONE` with your values. `--service-account` is optional; remove it to use the Compute Engine default service account.\n\n```\ngcloud alpha compute tpus queued-resources create my-queued-resource \\\n  --node-id my-tpu-name \\\n  --project PROJECT_ID \\\n  --zone ZONE \\\n  --accelerator-type tpu7x-8 \\\n  --runtime-version v2-alpha-tpuv7x \\\n  --service-account SERVICE_ACCOUNT\n```\n  \n| Parameter  | Description  |  \n| --- | --- |  \n| `PROJECT_ID`  | Your Google Cloud project ID.  |  \n| `ZONE`  | The Google Cloud zone where you have TPU quota (e.g., `us-central1-c`, `us-east5-a`, `europe-west4-a`, `us-central2-b`). See [TPU regions and zones](https://cloud.google.com/tpu/docs/regions-zones) for availability.  |  \n| `SERVICE_ACCOUNT`  | The email address for your service account, found in the Cloud Console under IAM Service Accounts (e.g., `tpu-service-account@<your_project_ID>.iam.gserviceaccount.com`). Optional for Cloud TPU API (queued resources) commands; if you omit `--service-account`, the Compute Engine default service account is used.  |  \n| `RUNTIME_VERSION`  | Automatically populated by the generator above based on your selected TPU hardware generation.  |  \nTPU v7x dual-core architecture\nEach physical **TPU v7x (Ironwood)** chip exposes **2 logical TensorCore devices** to PyTorch and JAX. A single 4-chip TPU v7x host (`tpu7x-8`) provides **8 logical TPU devices** (`--tensor-parallel-size=8`) and 768 GB of total HBM.\n## Connecting and Checking Status\nOnce your queued resource or GCE instance reaches the `ACTIVE` / `RUNNING` state, SSH into the host.\n### Compute Engine (TPU v6e, v5p)\nCheck the status of your instance:\n\n```\ngcloud compute instances describe my-tpu-vm \\\n  --project=PROJECT_ID \\\n  --zone=ZONE\n\n```\n\nConnect using SSH:\n\n```\ngcloud compute ssh my-tpu-vm \\\n  --project=PROJECT_ID \\\n  --zone=ZONE\n\n```\n\n### Queued Resources (TPU v7x, v5e, v4)\nCheck the status of your queued resource:\n\n```\ngcloud alpha compute tpus queued-resources describe my-queued-resource \\\n  --project=PROJECT_ID \\\n  --zone=ZONE\n\n```\n\nConnect to worker 0 using SSH:\n\n```\ngcloud compute tpus tpu-vm ssh my-tpu-name \\\n  --project=PROJECT_ID \\\n  --zone=ZONE \\\n  --worker=0\n\n```\n\n## Verify TPU Devices\nInside the TPU VM, verify that the accelerator devices are visible before installing `vllm-torchtpu`:\n\n```\nls /dev/vfio/\n\n```\n\nOnce `vllm-torchtpu` is installed (which includes `tpu-info`), you can inspect chip utilization and HBM memory usage at any time with:\n\n```\ntpu-info\n\n```\n\n## Clean Up Resources\nTo avoid incurring unnecessary charges when you are finished, delete your TPU resources:\n### Compute Engine (TPU v6e, v5p)\n\n```\ngcloud compute instances delete my-tpu-vm \\\n  --project=PROJECT_ID \\\n  --zone=ZONE\n\n```\n\n### Queued Resources (TPU v7x, v5e, v4)\n\n```\ngcloud alpha compute tpus queued-resources delete my-queued-resource \\\n  --project=PROJECT_ID \\\n  --zone=ZONE \\\n  --force\n\n```\n\n## Next Steps\nOnce your TPU VM is running, follow the [installation and quickstart instructions](https://github.com/vllm-project/vllm-torchtpu#readme) to install `vllm-torchtpu` and serve your first model.\n[**Reach the right audience** on a privacy-first ad network only for software devs:**EthicalAds**](https://server.ethicalads.io/proxy/click/8176/01a17840-4c1d-7f02-ae98-1b21ea1b8b33/)\n[Ads by EthicalAds](https://www.ethicalads.io/advertisers/topics/data-science/?ref=ea-text)"
+  }
 }

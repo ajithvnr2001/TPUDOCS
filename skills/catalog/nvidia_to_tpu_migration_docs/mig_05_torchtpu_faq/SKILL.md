@@ -1,0 +1,57 @@
+---
+name: mig-05-torchtpu-faq
+description: "TorchTPU FAQ \u2014 Migration questions, CUDA versus TPU execution, and the replacement of PyTorch/XLA."
+source_url: "https://torchtpu.readthedocs.io/en/latest/faq/"
+category: "nvidia_to_tpu_migration_docs"
+---
+
+# Agent Skill: TorchTPU FAQ
+
+- **Official Source**: [https://torchtpu.readthedocs.io/en/latest/faq/](https://torchtpu.readthedocs.io/en/latest/faq/)
+- **Category**: `nvidia_to_tpu_migration_docs`
+- **Resource ID**: `mig_05_torchtpu_faq`
+- **When to Activate**: Migration questions, CUDA versus TPU execution, and the replacement of PyTorch/XLA.
+
+## Document Sections
+
+  - **What is the difference between PyTorch/XLA and TorchTPU?**
+  - **What is the difference between TorchAX and TorchTPU?**
+  - **What is happening to PyTorch/XLA?**
+  - **Is TorchTPU replacing JAX?**
+  - **What is the best way for me to connect with TorchTPU developers?**
+  - **Will there be any community engagement forums?**
+  - **What support does TorchTPU provide for kernel development?**
+  - **Which TPU generations are actively supported? What's the plan for future hardware support?**
+  - **Where can we find TorchTPU's supported features & future roadmap?**
+  - **Is there an agent to make my onboarding easier?**
+  - **Can I use TorchTPU with our custom serving solution?**
+
+## Complete Technical Reference
+
+# TorchTPU FAQ
+## What is the difference between PyTorch/XLA and TorchTPU?
+Pytorch/XLA historically served as a bridging framework, heavily dependent on JAX runtime components and specialized APIs. TorchTPU offers a native Pytorch backend for [Google Cloud TPUs](https://cloud.google.com/tpu) and zero JAX runtime dependencies, and existing PyTorch workloads run out of the box with trivial code changes (e.g., `.to("cuda")` → `.to("tpu")`)
+## What is the difference between TorchAX and TorchTPU?
+TorchAX (also known as torch_xla2) is an implementation that intercepts PyTorch operations at the Python level and lowers them into XLA (often via JAX). While TorchAX has been used heavily for inference benchmarking and prototyping, TorchTPU is the new official standard for a drop-in, PyTorch-native experience on TPUs.
+## What is happening to PyTorch/XLA?
+PyTorch/XLA is deprecated and replaced by [TorchTPU](https://github.com/google-pytorch/torch_tpu), which is now public.
+## Is TorchTPU replacing JAX?
+No. TorchTPU is designed to complement the TPU ecosystem by providing a native PyTorch entry point to Cloud TPUs. It allows developers with existing PyTorch codebases to run directly on TPUs with zero or minimal rewrites, eliminating the need to rewrite models in JAX or manage separate codebases for GPU and TPU infrastructure.
+  * **When to think of TorchTPU?** If you have existing PyTorch codebase, want multi-hardware portability (GPU/TPU) without refactoring, using PyTorch-native frameworks (e.g., TorchTitan, vLLM, SGLang, Hugging Face), or wants rapid GPU-to-TPU migration.
+
+
+## What is the best way for me to connect with TorchTPU developers?
+You can share feedback by emailing torchtpu-feedback@google.com and we welcome contributions directly to the repo: <https://github.com/google-pytorch/torch_tpu>. You can also use the tag "TPU" at [discuss.pytorch.org](https://discuss.pytorch.org/).
+## Will there be any community engagement forums?
+Yes, community engagement is extremely important for us, and we'll be sharing details for such forums. Additionally, we plan to host monthly office hours.
+## What support does TorchTPU provide for kernel development?
+Refer to [TorchTPU Custom Kernel support](https://torchtpu.readthedocs.io/en/latest/custom_kernels/).
+## Which TPU generations are actively supported? What's the plan for future hardware support?
+TorchTPU actively supports v5e, v5p, Trillium (TPU v6e) and Ironwood (TPU v7x). Validation and optimization for TPU v8 and future chips is ongoing as part of our roadmap.
+## Where can we find TorchTPU's supported features & future roadmap?
+See [Supported features](https://torchtpu.readthedocs.io/en/latest/feature_set/) for the current feature set and planned upcoming feature set.
+## Is there an agent to make my onboarding easier?
+Check out the TPU agent suite (Experimental): <https://github.com/google-pytorch/tpu-agent-suite>
+The TPU Agent Suite is an open-source plugin delivering specialized sub-agents to automate onboarding, diagnostics, and inference performance tuning for PyTorch models on Cloud TPU v6e and v7x.
+## Can I use TorchTPU with our custom serving solution?
+Yes. While TorchTPU offers out-of-the-box integration with industry-standard serving engines like vLLM and SGLang, custom or in-house serving solutions can integrate with TorchTPU via native PyTorch execution APIs and lower-level compiler backends. For advanced orchestration, customers can also deploy custom serving setups on GKE with llm-d.

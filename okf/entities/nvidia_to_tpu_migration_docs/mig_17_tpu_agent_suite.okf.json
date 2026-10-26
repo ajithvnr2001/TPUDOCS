@@ -1,57 +1,750 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:mig_17_tpu_agent_suite",
-  "@type": "DocumentationResource",
-  "name": "TPU Agent Suite installation",
-  "canonicalUrl": "https://github.com/google-pytorch/tpu-agent-suite/blob/main/docs/install.md",
-  "category": "Nvidia to tpu migration docs",
-  "categorySlug": "nvidia_to_tpu_migration_docs",
-  "description": "Experimental assisted onboarding and diagnostics; documents TPU environment and dependency setup.",
-  "provenance": {
-    "sourceUrl": "https://github.com/google-pytorch/tpu-agent-suite/blob/main/docs/install.md",
-    "crawledAt": "2026-10-26T12:48:13.577696+00:00",
-    "extractorEngine": "GitHubRaw",
-    "contentLengthBytes": 29790
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "TPU Agent Suite installation",
-      "documentedIn",
-      "https://github.com/google-pytorch/tpu-agent-suite/blob/main/docs/install.md"
-    ],
-    [
-      "TPU Agent Suite installation",
-      "belongsToCategory",
-      "nvidia_to_tpu_migration_docs"
-    ],
-    [
-      "TPU Agent Suite installation",
-      "supportsWorkflow",
-      "CUDA to TPU Code Migration"
-    ],
-    [
-      "TPU Agent Suite installation",
-      "primaryFramework",
-      "TorchTPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:mig_17_tpu_agent_suite",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "mig_17_tpu_agent_suite",
+    "name": "TPU Agent Suite installation",
+    "url": "https://github.com/google-pytorch/tpu-agent-suite/blob/main/docs/install.md",
+    "category": "nvidia_to_tpu_migration_docs",
+    "description": "Experimental assisted onboarding and diagnostics; documents TPU environment and dependency setup.",
+    "char_count": 36255,
+    "word_count": 4709,
+    "section_count": 40,
+    "code_block_count": 28,
+    "table_count": 4,
+    "cli_command_count": 23,
+    "indexed_at": "2026-10-26T14:46:54.789445+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "schema:name",
+        "object": "TPU Agent Suite installation"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "schema:url",
+        "object": "https://github.com/google-pytorch/tpu-agent-suite/blob/main/docs/install.md"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "schema:category",
+        "object": "nvidia_to_tpu_migration_docs"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "schema:description",
+        "object": "Experimental assisted onboarding and diagnostics; documents TPU environment and dependency setup."
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:TPU7x"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:vLLM-TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:Pallas"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:XProf"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "Installing TPU agent suite"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "1. Host prerequisites"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "2. Install from release archive"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "Download"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "Install"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "Upgrade"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "Uninstall"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "3. Create a package"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "The experimental package (`tpu-agent-suite-experimental`)"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "4. Environment configuration"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "Headless installs (CI, containers)"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "Changing your answers later"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "5. What gets installed"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "6. Set up the compute target"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "Cloud TPU VM (`local` and `gce_tpu_vm`)"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "On the TPU VM (for gce_tpu_vm, first: gcloud compute tpus tpu-vm ssh <TPU_NAME> --zone=<ZONE>)"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "1. Install torch_tpu (PyTorch installs automatically; do NOT install torch manually)"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "2. Install remaining TPU workload dependencies and utilities"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "3. Verify TPU hardware and driver visibility"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "4. Verify native PyTorch can allocate on the TPU device"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "Container image (`gke_job`, `gke_pod`, `gke_xpk`)"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "Large files on `gke_job`: the staging bucket"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "On a cluster with Workload Identity: no signing"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "Shared model cache on `gke_job`: `hf_cache_pvc`"
+      },
+      {
+        "subject": "tpu_doc:mig_17_tpu_agent_suite",
+        "predicate": "okf:hasSection",
+        "object": "Check the setup"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "TPU Agent Suite installation provides official guidance on Experimental assisted onboarding and diagnostics; documents TPU environment and dependency setup.",
-      "confidence": 1.0,
-      "source": "https://github.com/google-pytorch/tpu-agent-suite/blob/main/docs/install.md",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is TPU Agent Suite installation used for in Cloud TPU workflows?",
-      "answer": "Experimental assisted onboarding and diagnostics; documents TPU environment and dependency setup.",
-      "category": "nvidia_to_tpu_migration_docs"
-    }
-  ],
-  "contentSummary": "Experimental assisted onboarding and diagnostics; documents TPU environment and dependency setup."
+  },
+  "structured_content": {
+    "summary": "Experimental assisted onboarding and diagnostics; documents TPU environment and dependency setup.",
+    "sections": [
+      {
+        "heading": "Installing TPU agent suite",
+        "level": 1,
+        "content": "This guide covers setting up TPU agent suite in your workspace and configuring\nTPU hardware compute targets. It covers both:\n- **Installing from release archives (Recommended for users)**: download pre-built\n  distribution archives without needing to clone or build.\n- **Creating packages from source (Maintainers & contributors)**: package distributions directly\n  from a repository clone.\n\nFor what the agents do once installed, see [using.md](using.md). For the\nframework internals behind these commands, see\n[`README.md`](../README.md) and\n[`framework/README.md`](../framework/README.md).\n\n---"
+      },
+      {
+        "heading": "1. Host prerequisites",
+        "level": 2,
+        "content": "The host is the machine your harness (Claude Code, Codex, Antigravity, or\nCursor) runs on: a workstation or the TPU VM itself.\n\n1. **Python 3.12+**: `python3 --version`.\n2. **Build dependency**: `pip install pyyaml` is all the compiler and installer\n   need.\n3. **Host-side agent dependencies**: install the required dependencies by\n   creating a [virtual environment](https://docs.python.org/3/library/venv.html)\n   and running `python3 -m pip install -r requirements-client.txt` (or\n   `package/requirements-client.txt` from a repository clone). Ensure your\n   environment is activated whenever you install or use this agentic suite.\n\n4. **Standalone CLI tools** (backend-dependent):\n   - **`gcloud`** ([Google Cloud CLI](https://cloud.google.com/sdk/docs/install)):\n     Required for `gce_tpu_vm` (to SSH/SCP into TPU VMs), `gke_xpk` (to stage\n     data in GCS), and whenever accessing GKE clusters or Google Cloud APIs\n     (Vertex AI, BigQuery). Authenticate with:\n\n     ```bash\n     gcloud auth login\n     gcloud auth application-default login\n     ```\n\n   - **`kubectl`** ([Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/))\n     and **`gke-gcloud-auth-plugin`**, which kubectl needs to authenticate to\n     GKE (`gcloud components install gke-gcloud-auth-plugin`): required for\n     `gke_job`, `gke_pod` and `gke_xpk` to dispatch Jobs, exec into pods, and\n     inspect TPU cluster nodes. If using GKE, configure cluster credentials\n     with:\n\n     ```bash\n     gcloud container clusters get-credentials <CLUSTER_NAME> --region=<REGION>\n     ```\n\n     This makes the cluster kubectl's current context. Setup suggests it as\n     the profile's `kube_context`, so a later `kubectl config use-context`\n     does not move `gke_job` or `gke_pod` work to another cluster.\n\n   - **`xpk`** ([Accelerated Processing Kit](https://github.com/google/xpk)):\n     Required if using the `gke_xpk` backend to schedule and manage multi-node cluster workloads.\n     Follow the [xpk installation instructions](https://github.com/google/xpk)\n     (e.g. `pip install xpk`).\n\nThe installer checks only the host-side packages above. The first session\nsets up your backend and checks its tools, credentials and target; see\n[Check the setup](#check-the-setup).\n\n---"
+      },
+      {
+        "heading": "2. Install from release archive",
+        "level": 2,
+        "content": "End users do not need to clone the git repository. They download their harness-specific archive from GitHub Releases.\n\nSupported harnesses: `antigravity`, `claude-code`, `codex`, `cursor`."
+      },
+      {
+        "heading": "Download",
+        "level": 3,
+        "content": "Download the release archive for your harness from GitHub Releases in this repository."
+      },
+      {
+        "heading": "Install",
+        "level": 3,
+        "content": "With your virtual environment activated, extract the downloaded archive and run the self-contained installer:\n\n```bash\ntar -xzf tpu-agent-suite-<harness>-<version>.tar.gz\npython3 tpu-agent-suite-<harness>-<version>/framework/installer.py install --destination /path/to/project\n```\n\n*To install globally across all projects for that harness, omit `--destination` and pass `--scope user`.*\n\nThe installer will not overwrite unmanaged existing files or files modified locally by the user unless `--force` is specified."
+      },
+      {
+        "heading": "Upgrade",
+        "level": 3,
+        "content": "Download the new release archive and pass `--upgrade`:\n\n```bash\ntar -xzf tpu-agent-suite-<harness>-<new-version>.tar.gz\npython3 tpu-agent-suite-<harness>-<new-version>/framework/installer.py install --upgrade --destination /path/to/project\n```\n\nRunning `installer.py install` on an existing install upgrades in place and retains existing `environment.json` configuration without wiping run history.\n\n> **Upgrading from a release that kept its files in\n> `.tpu-agent-suite/tpu-agent-suite/`:** uninstall with that release's installer\n> first, then install the new one. The new installer does not read the old\n> layout.\n\nA workspace holds one package at a time, and so does the user scope: installing\na different package where one is already installed fails until you uninstall\nthe first."
+      },
+      {
+        "heading": "Uninstall",
+        "level": 3,
+        "content": "Every install keeps a copy of its installer in the central store, so you do not\nneed the distribution to remove it:\n\n```bash\npython3 ~/.tpu-agent-suite/packages/tpu-agent-suite@<version>/framework/installer.py uninstall --destination /path/to/project\n```\n\n*(If uninstalling a user-wide installation, pass `--scope user` instead of\n`--destination`).* The installer in the extracted distribution works the same\nway. A package's installer removes only that package: if the workspace holds\nanother one, it stops. Whichever installer you run, the installed version's own\ninstaller does the uninstall.\n\nRunning `installer.py uninstall` performs a clean rollback of all installed files, configuration merges, and managed instruction blocks based on `ownership.json`.\n\n---"
+      },
+      {
+        "heading": "3. Create a package",
+        "level": 2,
+        "content": "To build the distribution for a specific harness, run:\n\n```bash\npython3 framework/compiler.py translate package --harness <harness> --output dist/<harness>/tpu-agent-suite\n```\n\n*(Replace `<harness>` with `claude-code`, `codex`, `antigravity`, or `cursor`).*\n\nThe compiled distribution directory bundles translated skills, compiled agent prompts, harness configuration, lifecycle hooks, the runtime and installer (in `framework/`), dependency manifests, and a README.\n\nIf you also want to package that single distribution into an archive (`.tar.gz`):\n\n```bash\npython3 framework/compiler.py archive --dist-dir dist --output dist/archives --harness <harness>\n```"
+      },
+      {
+        "heading": "The experimental package (`tpu-agent-suite-experimental`)",
+        "level": 3,
+        "content": "`package/package.experimental.json` builds `tpu-agent-suite-experimental`, a package for testing. It releases everything `tpu-agent-suite` releases, plus the vLLM optimization skills (`close-gaps`, `decompose-optimization`, `write-tpu-kernels` and others).\n\nIt is a complete package, not an add-on. It has its own runtime, compute environment and hooks, and it builds every agent its skills use. A workspace holds one package at a time, so **install either `tpu-agent-suite` or `tpu-agent-suite-experimental`, not both**. To switch, uninstall the installed package first.\n\n```bash\nmake build-experimental\npython3 dist/<harness>/tpu-agent-suite-experimental/framework/installer.py install --destination /path/to/project\n```\n\nBoth packages are built from the same files in `package/`. `--manifest` selects the manifest file, and works with `compose`, `verify`, `lint` and `translate`. It defaults to `package.release.json`.\n\n`package.experimental.json` declares `\"extends\": \"package.release.json\"`. It takes every field of `package.release.json`, replaces `name`, `display_name` and `description`, and lists only the skills it adds under `add_skills`. A change to `package.release.json`, such as a new hook or a version bump, therefore reaches both packages. Only one level of `extends` is supported.\n\n---"
+      },
+      {
+        "heading": "4. Environment configuration",
+        "level": 2,
+        "content": "The installer asks no questions about compute. A fresh install writes an\n`environment.json` with no profiles to\n`<workspace>/.tpu-agent-suite/environment.json` (or, for user scope,\n`~/.tpu-agent-suite/environment.json`, the only copy):\n\n```json\n{\"revision\": 1, \"default\": null, \"profiles\": {}}\n```\n\nThe first session sets compute up: the agent asks which backend you use, then\nonly what that backend needs, suggests answers where it can find them, checks\nthe target, and saves the result as a named profile. A reinstall or upgrade\nkeeps your profiles and settings.\n\n| Backend | Meaning | Backend-specific parameters |\n| :--- | :--- | :--- |\n| `local` | The harness is running on the TPU VM; workloads run in-process. | *(none)* |\n| `gce_tpu_vm` | Reach a Cloud TPU VM over `gcloud ... ssh`. | `tpu_name`, `zone`, `project` |\n| `gke_pod` | `kubectl exec` into an already-running TPU pod. | `namespace`, `pod`, optional `container`/`kube_context` |\n| `gke_job` | Dispatch a single-host TPU Job via `kubectl`, optionally through Kueue. | `namespace`, `image`, `tpu_accelerator`, `tpu_topology`, optional `staging_bucket`/`pod_service_account`/`staging_service_account`/`staging_service_account_key`/`hf_cache_pvc`/`queue`/`priority`/`declared_duration_minutes`/`kubeconfig`/`kube_context` |\n| `gke_xpk` | Multi-node workloads on a GKE cluster via `xpk`. | `cluster_name`, `zone`, `project`, optional `gcs_bucket` |\n\nTrajectory sharing does not depend on where workloads run, and it is off\nuntil you turn it on. The first time you run\n`/tpu-agent-export-trajectory`, the agent asks whether and where to share,\nand saves your answer with `config set ... --user-confirmed`. A \"no\" is saved\nas `trajectory_enabled=false`, so you are not asked again; the export then\nrefuses until you ask to share. The settings:\n\n- `trajectory_enabled`: share session trajectories via\n  `/tpu-agent-export-trajectory` (default: no). Turning it off also\n  removes the sink, bucket and org below.\n- `trajectory_sink` (only if enabled): `gcs` saves to a bucket **you own**;\n  `harbor` uploads to the Harbor hub, which renders the session as a browsable\n  trajectory (default: `gcs`).\n- `trajectory_bucket` (only for `gcs`): e.g. `gs://my-bucket`. Without one,\n  the export reports that no destination is configured and saves nothing.\n- `trajectory_share_org` (only for `harbor`): Harbor organization to share\n  uploads with; blank keeps the upload private. When a new name is saved\n  with `config set`, it is checked with Harbor, and one that doesn't exist is\n  refused\n  (`harbor auth org list` shows yours); if it can't check (not logged in,\n  offline), it keeps the name and warns.\n\nEvery profile can also set `python_interpreter`, and `xprof_interpreter` is a\nsetting of its own:\n- `python_interpreter`: Path to the Python interpreter running workloads on the target (e.g. `~/tpu_venv/bin/python3` on a TPU VM, or `/opt/conda/bin/python` in a container). If omitted, defaults to the target's ambient `python3` (or `sys.executable` for `local`).\n- `xprof_interpreter`: Separate Python interpreter for XProf analysis when it does not share the workload's environment (e.g. a dedicated venv for `xprof`)."
+      },
+      {
+        "heading": "Headless installs (CI, containers)",
+        "level": 3,
+        "content": "In CI, a container, or an IDE/agent shell without a terminal, pass\n`--non-interactive`: the installer then fails instead of asking before it\noverwrites changed files or purges run data. Without a terminal and without\n`--non-interactive` or `--force`, the installer refuses to start rather than\nwait on stdin.\n\nThe installer sets up no compute. To have a profile ready before the first\nsession, create it with the runtime after the install, the same way a session\ndoes:\n\n```bash\npython3 tpu-agent-suite-<harness>-<version>/framework/installer.py install \\\n    --destination /path/to/project --non-interactive\ncd /path/to/project\npython3 ~/.tpu-agent-suite/packages/tpu-agent-suite@<version>/framework/runtime.py \\\n    compute --package tpu-agent-suite@<version> setup apply \\\n    --profile default --answers answers.json\n```\n\n`answers.json` is a flat object keyed by the question names above (not the\nnested `environment.json` path). A missing required field or an invalid value\nis reported as INCOMPLETE, exit status 1, and nothing is written; a field with\na default (such as `gke_job`'s `image`) takes it when left out. The first\nprofile saved becomes the default. `setup apply` does not check the target;\n`compute setup verify` does, and sessions check the profile before TPU work.\nThe full list of questions is in\n[`package/environment/questions.json`](../package/environment/questions.json).\nExample per backend:\n\n```jsonc\n// local\n{\"backend\": \"local\"}\n\n// gce_tpu_vm\n{\"backend\": \"gce_tpu_vm\", \"tpu_name\": \"my-tpu-vm\", \"zone\": \"us-central2-b\", \"project\": \"my-project\", \"python_interpreter\": \"~/tpu_venv/bin/python3\"}\n\n// gke_pod\n{\"backend\": \"gke_pod\", \"namespace\": \"default\", \"pod\": \"my-tpu-pod\"}\n\n// gke_job (add \"queue\"/\"priority\" to admit through Kueue; leave out \"image\"\n// to use the default nexus-tpu image, see \"Container image\" below)\n{\"backend\": \"gke_job\", \"namespace\": \"default\",\n \"tpu_accelerator\": \"tpu-v6e-slice\", \"tpu_topology\": \"2x2\"}\n\n// gke_xpk\n{\"backend\": \"gke_xpk\", \"cluster_name\": \"my-cluster\", \"zone\": \"us-central2-b\", \"project\": \"my-project\"}\n```\n\nTo opt in to trajectory sharing, set it with `config` (whoever runs it agrees\non the user's behalf):\n\n```bash\npython3 .../runtime.py config --package tpu-agent-suite@<version> set \\\n    trajectory_enabled=true trajectory_sink=gcs trajectory_bucket=gs://my-bucket \\\n    --user-confirmed\n```"
+      },
+      {
+        "heading": "Changing your answers later",
+        "level": 3,
+        "content": "Ask the agent, or use `runtime config set` and `runtime compute setup apply`.\nUse these rather than editing `environment.json` by hand: they check a change\nthe same way setup does. After a change, the next\ncompute command in a session checks the profile again (see\n[Check the setup](#check-the-setup)), or run `compute setup verify`. The shape\nthe runtime reads is:\n\n```json\n{\"revision\": 1, \"default\": \"default\", \"profiles\": {\"default\": {\"backend\": \"gce_tpu_vm\", \"params\": {\"tpu_name\": \"my-tpu-vm\", \"zone\": \"us-central2-b\", \"project\": \"my-project\", \"python_interpreter\": \"~/tpu_venv/bin/python3\"}}}, \"trajectory\": {\"params\": {\"enabled\": true, \"sink\": \"gcs\", \"bucket\": \"gs://my-bucket\"}}}\n```\n\nThe export uses these settings only while `trajectory.params.enabled` is\n`true`.\n\n---"
+      },
+      {
+        "heading": "5. What gets installed",
+        "level": 2,
+        "content": "For Claude Code at project scope:\n\n```\n.claude/skills/tpu-agent/SKILL.md      # the skill the harness activates\n.claude/skills/tpu-agent-export-trajectory/SKILL.md   # see using.md\n.claude/agents/*.md                       # one compiled prompt per agent\n.claude/settings.json                     # subagent limits + pre-authorized ~/.tpu-agent-suite path\nCLAUDE.md                                 # managed block with package-wide instructions\n.tpu-agent-suite/\n    environment.json                      # your compute profiles\n    ownership.json                        # ledger of installed files\n\n~/.tpu-agent-suite/packages/tpu-agent-suite@<version>/   # framework (runtime, installer), schemas, scripts, data\n~/.tpu-agent-suite/runs/<run_id>/artifacts/              # outputs from each agent run\n```\n\nCodex and Antigravity write `AGENTS.md` instead of `CLAUDE.md`. Pass\n`--no-workspace-memory` to skip the managed memory block.\n\n> **Antigravity:** this harness has no config file the installer can\n> pre-authorize, so the first time an agent reads `~/.tpu-agent-suite` the harness\n> asks for permission. Grant it permanently once.\n\n---"
+      },
+      {
+        "heading": "6. Set up the compute target",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "heading": "Cloud TPU VM (`local` and `gce_tpu_vm`)",
+        "level": 3,
+        "content": "For `local` and `gce_tpu_vm`, the TPU VM needs a Python 3.12 environment with `torch_tpu`\nand the TPU workload dependencies.\n\n> **Important**: `torch_tpu` is published on [PyPI](https://pypi.org/project/torch-tpu/)\n> and installs a compatible PyTorch build. Do **not** install PyTorch manually\n> prior to `torch_tpu`.\n\n```bash"
+      },
+      {
+        "heading": "On the TPU VM (for gce_tpu_vm, first: gcloud compute tpus tpu-vm ssh <TPU_NAME> --zone=<ZONE>)",
+        "level": 1,
+        "content": "sudo apt update && sudo apt install -y python3.12 python3.12-venv\npython3.12 -m venv ~/tpu_venv && source ~/tpu_venv/bin/activate\npip install --upgrade pip"
+      },
+      {
+        "heading": "1. Install torch_tpu (PyTorch installs automatically; do NOT install torch manually)",
+        "level": 1,
+        "content": "pip install torch_tpu"
+      },
+      {
+        "heading": "2. Install remaining TPU workload dependencies and utilities",
+        "level": 1,
+        "content": "pip install -r package/requirements-tpu.txt\npip install portpicker marimo scikit-learn pandas tensorboard"
+      },
+      {
+        "heading": "3. Verify TPU hardware and driver visibility",
+        "level": 1,
+        "content": "tpu-info"
+      },
+      {
+        "heading": "4. Verify native PyTorch can allocate on the TPU device",
+        "level": 1,
+        "content": "python3 -c \"import torch, torch_tpu; torch.zeros(1, device='tpu'); print('TPU Device OK:', torch.device('tpu'))\"\n```\n\nThen point the profile at that interpreter: answer `python_interpreter` with\n`~/tpu_venv/bin/python3` when the agent sets up compute, or run\n`config set python_interpreter=~/tpu_venv/bin/python3`.\n\n**vLLM serving** (optional): use a pre-configured vLLM TPU image, or install\n`vllm-torchtpu` into `~/tpu_venv` (from `vllm-project/vllm-torchtpu`). Native\nPyTorch serving (`custom_fastapi`) needs nothing extra.\n\n**Disk space for model weights.** Models are downloaded to\n`~/.cache/huggingface/hub` on the VM, for the user the agent connects as, and\nstay there between runs, so each model downloads once. Size the VM's disk for\nthe models you plan to use: large models take tens of GB each, and nothing\ndeletes them for you. See [Model weights](using.md#model-weights)."
+      },
+      {
+        "heading": "Container image (`gke_job`, `gke_pod`, `gke_xpk`)",
+        "level": 3,
+        "content": "For containerized backends (`gke_job`, `gke_pod`, and `gke_xpk`), workloads execute\ninside a container image pre-baked with Python 3.12, `torch_tpu`, and the workload\ndependencies:\n\n- **Image requirements**: The image must contain Python 3.12, `torch_tpu`\n  (installed via Google Cloud Artifact Registry alongside its compatible PyTorch\n  build), and the dependencies declared in `package/requirements-tpu.txt`.\n- **Interpreter configuration**: If your container uses a custom virtualenv or\n  conda environment (e.g. `/opt/venv/bin/python3`), set `python_interpreter` to\n  that path.\n- **Filesystem layout**: The `gke_job` driver mounts workload execution scripts\n  under `/app`, leaving `/workspace` free.\n\nThe default answer to `image` is a `nexus-tpu` image that meets these\nrequirements. The `nexus-tpu` image is generated nightly, but the default image\nis pinned to a specific version rather than the absolute latest nightly to avoid\nscenarios where the image version silently changes and hinders reproducibility.\n\nThe default version is:\n\n```\nus-docker.pkg.dev/tpu-nexus-767207/nexus-dev/nexus-tpu@sha256:a13cfe0129b78c7752289c1a26b4e55cd2cb4ced3373dc524cf0332e8726e7ee\n```\n\nThe `nexus-tpu` image is built nightly with two tags: `dev<YYYYMMDD-HHMM>`,\nwhich names that one build, and `latest`, which always refers to the newest build.\n\nTo see which different nightlies are available, list the builds with:\n\n```\ngcloud artifacts docker images list \\\n  us-docker.pkg.dev/tpu-nexus-767207/nexus-dev/nexus-tpu --include-tags\n```\n\nTo use a version other than the default one, simply respond to the `gke_job` container\n`image` question with the name of the desired image. I.e.,\n\n```\nus-docker.pkg.dev/tpu-nexus-767207/nexus-dev/nexus-tpu@sha256:<desired_image_id>\n```\n\nTo simply use the absolute latest nightly, you can respond with:\n\n```\nus-docker.pkg.dev/tpu-nexus-767207/nexus-dev/nexus-tpu:latest\n```\n\nFor example, these answers set up a `tpu7x` cluster that admits work through\nthe Kueue LocalQueue `default`:\n\n| Question | Answer |\n| :--- | :--- |\n| `backend` | `gke_job` |\n| `namespace` | *(blank: `default`)* |\n| `image` | *(blank: the image above)* |\n| `tpu_accelerator` | `tpu7x` |\n| `tpu_topology` | `2x2x1` |\n| `queue` | `default` |\n| `kube_context` | *(suggested: the current kubectl context)* |\n| `priority`, `declared_duration_minutes`, `kubeconfig` | *(blank)* |\n| `staging_bucket` and the service-account questions after it | *(blank, unless inputs exceed 900 KiB or outputs 1 MiB; see below)* |\n| `python_interpreter`, `xprof_interpreter` | *(blank: the image's `python3` has `torch_tpu`)* |"
+      },
+      {
+        "heading": "Large files on `gke_job`: the staging bucket",
+        "level": 3,
+        "content": "Inputs over 900 KiB and outputs over 1 MiB travel through a GCS bucket\n(`staging_bucket`) on signed URLs, so the TPU pod needs no Google credentials\nof its own. Smaller files don't need a bucket.\n\nOnly a service account can sign those URLs. Your personal login can't, so set\n**`staging_service_account`** to a service account for staging to act as:\n\n```json\n\"staging_bucket\": \"gs://my-staging-bucket\",\n\"staging_service_account\": \"stager@my-project.iam.gserviceaccount.com\"\n```\n\n- You need `roles/iam.serviceAccountTokenCreator` on that service account, and\n  it needs `roles/storage.objectAdmin` on the bucket.\n- Only staging acts as it. `kubectl` keeps running as you.\n- With no personal login (for example in CI), set\n  **`staging_service_account_key`** to the account's key file instead. Set one\n  or the other, not both.\n- **Don't** point `GOOGLE_APPLICATION_CREDENTIALS` at a key to fix signing:\n  `kubectl` reads that variable too, so it would run as the service account and\n  usually fail with a 403 \"forbidden\"."
+      },
+      {
+        "heading": "On a cluster with Workload Identity: no signing",
+        "level": 4,
+        "content": "If the cluster has [Workload Identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity),\nlet the pod move staged files with its own token instead. Nothing is signed,\nso no service account or key is needed, and your own login is enough for\nthe host's side (it needs `roles/storage.objectUser` or `objectAdmin` on the\nbucket):\n\n```json\n\"staging_bucket\": \"gs://my-staging-bucket\",\n\"pod_service_account\": \"tpu-staging-pod\"\n```\n\nOne-time setup:\n\n1. Workload Identity is on for the cluster (`--workload-pool=<project>.svc.id.goog`).\n2. The TPU node pool runs the GKE metadata server\n   (`--workload-metadata=GKE_METADATA`). Pods are scheduled only onto nodes\n   that have it; `preflight` names the TPU node pools that don't.\n3. Create the Kubernetes service account in the job's namespace:\n   `kubectl create serviceaccount tpu-staging-pod -n <namespace>`.\n4. Give it `roles/storage.objectAdmin` on the bucket, as the principal\n   `principal://iam.googleapis.com/projects/<project-number>/locations/global/workloadIdentityPools/<project>.svc.id.goog/subject/ns/<namespace>/sa/tpu-staging-pod`.\n   (Or annotate it with `iam.gke.io/gcp-service-account` to act as a Google\n   service account that holds the role.)"
+      },
+      {
+        "heading": "Shared model cache on `gke_job`: `hf_cache_pvc`",
+        "level": 3,
+        "content": "Every `gke_job` pod starts with an empty filesystem, so without a shared cache\neach Job that loads a model downloads it again: the parity captures, the\nserver, every restart. Set **`hf_cache_pvc`** to a ReadWriteMany\nPersistentVolumeClaim in the Job's namespace, and every pod mounts it at\n`/hf-cache` with `HF_HUB_CACHE` pointing there, so a model downloads once.\nWithout it, each pod downloads into, and keeps its compile caches on, its\nmemory-backed `/dev/shm`, not its own disk, which on a TPU node can hold less\nthan one model; raise `shm_size_gb` (128 GiB by default) above the largest\nmodel's weights plus its compile cache. The size is a cap, not a\nreservation: the node's memory backs what the pod writes there, until it\nis deleted, so keep it below the node's memory. This applies to every\n`gke_job` pod, not only those that load a model: all of a pod's caches\n(`HF_HUB_CACHE`, `VLLM_CACHE_ROOT`, `XDG_CACHE_HOME`,\n`TORCHINDUCTOR_CACHE_DIR`) and its temporary files (`TMPDIR`) count against\n`shm_size_gb`, and are node memory.\nEach is a default the pod sets only when the image and the recipe have not:\nan image that sets its own, or `HF_HOME`, keeps it.\nCompute setup asks for the claim's name (leave it blank if there is none).\nTo add or change it on an existing profile, set it yourself, then run\n`compute setup verify`:\n\n```bash\npython3 .../runtime.py config --package tpu-agent-suite@<version> set hf_cache_pvc=hf-cache\n```\n\nA cluster admin creates the claim once; nothing in the package creates\nstorage. On a cluster with the Filestore CSI driver, for example:\n\n```yaml\napiVersion: v1\nkind: PersistentVolumeClaim\nmetadata:\n  name: hf-cache\n  namespace: default\nspec:\n  accessModes: [ReadWriteMany]\n  storageClassName: standard-rwx   # a ReadWriteMany Filestore class\n  resources:\n    requests:\n      storage: 1Ti\n```\n\n- It must be **ReadWriteMany**: a server and its parity check run on\n  different nodes at once, and with ReadWriteOnce the second stays Pending.\n  `preflight` fails a claim that is missing or not ReadWriteMany, and warns\n  while one is Pending under a class that binds on first use (the first Job\n  creates the volume, which for Filestore takes several minutes).\n- Bucket-backed claims (GCS FUSE) are not supported yet: GKE mounts them only\n  in pods annotated `gke-gcsfuse/volumes: \"true\"`, which the driver does not\n  add.\n- **Every Job in the namespace can write to it, and later pods load what is\n  there**, including model code run with `trust_remote_code`. Share a claim\n  only among people who trust each other's Jobs, as you would a shared home\n  directory; give each team its own namespace and claim otherwise.\n- **Models are never pruned.** Size it for the models you use, and have its\n  owner delete unused `models--*` folders when it fills. A Job that runs out of\n  space logs `No space left on device`, which `compute job wait` reports as a\n  failure. The benchmark scripts never delete models from it: they only\n  clean up a cache that is private to the pod.\n- **It also holds compiled programs.** Every pod keeps vLLM's and torch_tpu's\n  compile caches (`VLLM_CACHE_ROOT`, `TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT`\n  and `TORCH_TPU_INTERNAL_TIER3_COMPILATION_CACHE_ROOT`) in the claim's\n  `compile-cache/<accelerator>-<topology>/<image key>/{vllm,torch_tpu}` folder,\n  so a restart on the same image skips most of compiling (on Qwen3-0.6B, vLLM's\n  torch.compile went from 15 s to 2 s and XLA compile from 16 s to 3 s). An\n  image that sets these variables itself keeps its own values. A vLLM server\n  patched with `apply_vllm_patch.sh` keeps the image key, so `serve_vllm.sh`\n  moves its caches to `-patch-<key>` folders next to `vllm` and `torch_tpu`.\n- **Old compile caches are pruned.** Each pod touches a `.last_used` file in\n  its `<image key>` folder at start, then, in the background, removes the other\n  `compile-cache/*/<image key>` folders in which no file (`.last_used`\n  included) changed in `compile_cache_max_age_days`\n  (`--compile-cache-max-age-days`, default 14; 0 turns pruning off), so\n  folders from before this existed age out too. It never removes the folder it\n  uses, and a failure is only logged. A pod that starts with the volume over\n  90% full keeps its compile caches in `/dev/shm` instead, and logs why.\n- **Tip:** pin the KV cache size of a server you restart\n  (`--num-gpu-blocks-override` or `--kv-cache-memory-bytes`). Left unpinned, it\n  can come out different on each start, and a new size compiles again and adds\n  to the cache; pinned, a restart reuses it (torch.compile went from 285 s to\n  8 s)."
+      },
+      {
+        "heading": "Check the setup",
+        "level": 3,
+        "content": "`compute setup verify` checks a profile: the tools it needs are installed,\nyou have credentials, and the TPU VM, pod or cluster answers. On `local`,\n`gce_tpu_vm` and `gke_pod`, where running something takes seconds, it also\nruns the software check (`framework/compute/env_check.py`) on the target, which\nchecks Python, `torch_tpu` and every package in `requirements-tpu.txt`\nagainst its version bounds. On `local` it does so only when\n`python_interpreter` is set, so that it checks the workload's Python rather\nthan the runtime's.\n\nOn `gke_job`, where running something means scheduling a Job, it can also\nsubmit a smoke-test Job that runs the same software check in your `image`:\nwith `--smoke-test`, which the agent asks you about first. That is the one\ncheck that shows\nthe nodes can pull the image and that it has `torch_tpu` and the packages\nthe agents need; it can take several minutes while a TPU node scales up. A\nJob whose image pulls have kept failing for a minute fails with the\nregistry's reason, rather than waiting out the timeout; a Job still\nqueued at the timeout leaves the image unverified rather than failed.\nPreflight also checks that an Artifact Registry `image` exists, as your\naccount.\n\nEach check prints one line, with how to fix a failure: a command, or the\nsection of this guide that covers it. Commands are filled in where the\ncluster is known: from a `gke_<project>_<location>_<cluster>` kubectl\ncontext, or else `GKE_CLUSTER` / `GKE_LOCATION` / `GKE_PROJECT`.\n\nThe installer checks only this machine: `python3`, the interpreter the\nagents' runtime uses, and the packages in `requirements-client.txt`. It\nwarns about what is missing and goes on. `--skip-host-check` skips this\ncheck.\n\nEach session starts by telling the agent whether the run's compute profile is\nset up, verified, failing or ready (checking a ready one again), and the next\ncompute command checks the target again after `environment.json` changes, so\nthe agent finds out about a broken setup before it tries to use it.\n\nOn `gke_pod` and `gke_job`, a cluster that refuses your gcloud account (403)\nis tried again with application default credentials\n(`gcloud auth application-default login`): a token from\n`gcloud auth application-default print-access-token`, passed to gcloud as\n`CLOUDSDK_AUTH_ACCESS_TOKEN`. If ADC is let in, compute commands use it\nand the checks say so; if it is refused too, you get an error naming both\nidentities and the commands that fix it.\n\nTo run the compute checks yourself, use `compute preflight` (`--json` for a\nmachine-readable report). It exits 1 when a check fails:\n\n```bash\npython3 ~/.tpu-agent-suite/packages/tpu-agent-suite@<version>/framework/runtime.py \\\n    compute --package tpu-agent-suite@<version> preflight\n```\n\nTo run the software check yourself -- on a `gke_xpk` image, say:\n\n```bash\npython3 framework/compute/env_check.py \\\n    --requirements package/requirements-tpu.txt\n```\n\nand on this machine:\n\n```bash\npython3 framework/compute/env_check.py --host \\\n    --requirements package/requirements-client.txt\n```\n\n---"
+      },
+      {
+        "heading": "Repository Overview (`README.md`)",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "heading": "TPU agent suite",
+        "level": 1,
+        "content": "Autonomous TPU development and onboarding agents for Google Cloud TPUs.\n\nThis repository builds and distributes **TPU agent suite packages**: declarative bundles of multi-agent skills, routing protocols, and tools that compile and install natively across major agent harnesses\u2014including **Claude Code** and **Antigravity**, with **Codex** and **Cursor** coming soon.\n\n---"
+      },
+      {
+        "heading": "Architecture",
+        "level": 2,
+        "content": "| Component | Path | Description |\n| :--- | :--- | :--- |\n| **Framework** | [`framework/`](framework/) | Compiler, installer, runtime and compute access layer. Lets us develop agents that run on multiple harnesses. |\n| **Package** | [`package/`](package/) | The TPU agent suite, released as `tpu-agent-suite`. |\n| **Evaluations** | [`eval/`](eval/) | Harbor suites and configs that score the package. |\n\nUsers talk to the **`tpu-agent`** skill. It routes each request to a\nspecialist: onboarding, profiling, a hardware check, cited\nTPU facts, and kernels. See the [design docs](docs/design/README.md) for how the framework\nand the suite are built.\n\n---"
+      },
+      {
+        "heading": "Quickstart",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "heading": "1. Prerequisites",
+        "level": 3,
+        "content": "- Python 3.12+ and the host-side packages the agents run with, XProf among\n  them, in a virtualenv (`pip install -r package/requirements-client.txt`;\n  see [docs/install.md](docs/install.md#1-host-prerequisites)). PyYAML alone\n  builds and installs the package, but leaves the agents without XProf.\n- Standalone CLI tools (backend-dependent):\n  - **`gcloud`** ([Google Cloud CLI](https://cloud.google.com/sdk/docs/install)) for Cloud TPU VMs, GCS staging, and GCP credentials (`gcloud auth login && gcloud auth application-default login`)\n  - **`kubectl`** ([Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/)) and **`gke-gcloud-auth-plugin`** (`gcloud components install gke-gcloud-auth-plugin`) for GKE Pod, Job and XPK workloads (`gcloud container clusters get-credentials <CLUSTER_NAME> --region=<REGION>`)\n  - **`xpk`** ([Accelerated Processing Kit](https://github.com/google/xpk)) for multi-node GKE cluster workloads\n\nThe installer checks only the host-side Python packages. The first session\nsets up your backend and checks its tools, credentials and target (see\n[docs/install.md](docs/install.md#check-the-setup))."
+      },
+      {
+        "heading": "2. Build",
+        "level": 3,
+        "content": "Compile the canonical agent package into native distributions for every supported harness:\n\n```bash\nmake build\n```\n\nThis writes `dist/<harness>/tpu-agent-suite/` for `claude-code` and `antigravity`."
+      },
+      {
+        "heading": "3. Install",
+        "level": 3,
+        "content": "See [`docs/install.md`](docs/install.md) ([headless / CI](docs/install.md#headless-installs-ci-containers))."
+      },
+      {
+        "heading": "4. Use",
+        "level": 3,
+        "content": "Ensure your [virtual environment](docs/install.md#1-host-prerequisites) is activated whenever you use this agentic suite. Once inside the session, the `tpu-agent` skill is activated by any relevant natural language request, so no explicit invocation is needed. For example:\n\n- **Onboarding & Benchmarking**:\n  > *\"Onboard Qwen/Qwen3.8-27B to run as a vLLM inference server on Cloud TPU using the torch_tpu backend. Send it a test completion request, then benchmark it and report TTFT, ITL and throughput in a table.\"*\n\n- **Profiling**:\n  > *\"Analyze the XProf profile at /path/to/profile and identify memory bottlenecks and TPU compute utilization.\"*\n\n- **Kernel Optimization**:\n  > *\"Optimize this custom Pallas flash-attention kernel for TPU v6e and run a self-refinement benchmark loop.\"*\n\nWhat each request routes to, where workloads run, and where outputs land are in [`docs/using.md`](docs/using.md).\n\n---"
+      },
+      {
+        "heading": "Documentation",
+        "level": 2,
+        "content": "| Guide | For |\n| :--- | :--- |\n| [`docs/install.md`](docs/install.md) | Host and TPU prerequisites, build, install scopes and backends, upgrade/uninstall |\n| [`docs/using.md`](docs/using.md) | What `tpu-agent` does with a request, and where its outputs go |\n| [`docs/developing.md`](docs/developing.md) | Dev environment, `make` loop, CI gates, adding agents, tpu-knowledge-base sources and eval contributions |\n| [`docs/design/`](docs/design/README.md) | How the framework and the suite are designed |\n| [`framework/README.md`](framework/README.md) | Compiler, installer, hooks, and runtime reference |\n| [`framework/compute/README.md`](framework/compute/README.md) | Compute CLI and backend drivers |\n| [`package/README.md`](package/README.md) | Converting an existing skill into a TPU agent suite package, step by step |\n| [`eval/README.md`](eval/README.md) | Running evaluations |\n| [`docs/using.md`](docs/using.md)  | Golden Prompts |\n\n---"
+      },
+      {
+        "heading": "Running Evaluations",
+        "level": 2,
+        "content": "Evaluations are orchestrated using [Harbor](https://github.com/harbor-framework/harbor) and configured under [`eval/`](eval/):\n\n```bash"
+      },
+      {
+        "heading": "Set up evaluation virtual environment",
+        "level": 1,
+        "content": "./eval/setup.sh\nsource eval/.venv/bin/activate"
+      },
+      {
+        "heading": "Verify evaluation configuration and dataset schemas",
+        "level": 1,
+        "content": "./eval/verify.sh smoke-check"
+      },
+      {
+        "heading": "Run evaluation with Harbor",
+        "level": 1,
+        "content": "export GEMINI_API_KEY=\"your-api-key\"\n./eval/run.py --config claude-code/agent-suite --dataset tpu-hello-world\n```\n\n> **Automated PR Evaluations**: Evaluations are automatically triggered via GitHub Actions whenever a pull request is opened or updated that modifies relevant parts of the agent packages or evaluation datasets.\n\nFor the full list of configs, credentials, and the interactive sandbox, see [`eval/README.md`](eval/README.md).\n\n---"
+      },
+      {
+        "heading": "Contribution & Code Review Policy",
+        "level": 2,
+        "content": "All code contributions, tests, and agent packages live in this repository. Every pull request runs the following GitHub Actions workflows (defined in `.github/workflows/`):\n\n- **`make verify`**: manifest, delegation graph, schema, and knowledge base checks.\n- **`make test`**: framework and package test suites (translation parity per harness).\n- **`make build`**: distributions for all harnesses compile cleanly.\n- **`make lint`**: advisory content checks, reported as annotations.\n- **pre-commit**: formatting and static checks (`.pre-commit-config.yaml`).\n\nLocal setup for these checks, and the short path for common contributions, is in [`docs/developing.md`](docs/developing.md). Note that external contributions are not being accepted at this time (see [`CONTRIBUTING.md`](CONTRIBUTING.md)).\n\n---"
+      },
+      {
+        "heading": "Security",
+        "level": 2,
+        "content": "This project is eligible for the [Google Open Source Software Vulnerability Rewards Program (OSS VRP)](https://bughunters.google.com/about/rules/6521337925468160/google-open-source-software-vulnerability-reward-program-rules).\n\nIf you suspect a security vulnerability in this project, please report it via [g.co/vulnz](https://g.co/vulnz). Please do not report security vulnerabilities through public GitHub issues."
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "bash",
+        "code": "gcloud auth login\n     gcloud auth application-default login"
+      },
+      {
+        "language": "bash",
+        "code": "gcloud container clusters get-credentials <CLUSTER_NAME> --region=<REGION>"
+      },
+      {
+        "language": "bash",
+        "code": "tar -xzf tpu-agent-suite-<harness>-<version>.tar.gz\npython3 tpu-agent-suite-<harness>-<version>/framework/installer.py install --destination /path/to/project"
+      },
+      {
+        "language": "bash",
+        "code": "tar -xzf tpu-agent-suite-<harness>-<new-version>.tar.gz\npython3 tpu-agent-suite-<harness>-<new-version>/framework/installer.py install --upgrade --destination /path/to/project"
+      },
+      {
+        "language": "bash",
+        "code": "python3 ~/.tpu-agent-suite/packages/tpu-agent-suite@<version>/framework/installer.py uninstall --destination /path/to/project"
+      },
+      {
+        "language": "bash",
+        "code": "python3 framework/compiler.py translate package --harness <harness> --output dist/<harness>/tpu-agent-suite"
+      },
+      {
+        "language": "bash",
+        "code": "python3 framework/compiler.py archive --dist-dir dist --output dist/archives --harness <harness>"
+      },
+      {
+        "language": "bash",
+        "code": "make build-experimental\npython3 dist/<harness>/tpu-agent-suite-experimental/framework/installer.py install --destination /path/to/project"
+      },
+      {
+        "language": "json",
+        "code": "{\"revision\": 1, \"default\": null, \"profiles\": {}}"
+      },
+      {
+        "language": "bash",
+        "code": "python3 tpu-agent-suite-<harness>-<version>/framework/installer.py install \\\n    --destination /path/to/project --non-interactive\ncd /path/to/project\npython3 ~/.tpu-agent-suite/packages/tpu-agent-suite@<version>/framework/runtime.py \\\n    compute --package tpu-agent-suite@<version> setup apply \\\n    --profile default --answers answers.json"
+      },
+      {
+        "language": "jsonc",
+        "code": "// local\n{\"backend\": \"local\"}\n\n// gce_tpu_vm\n{\"backend\": \"gce_tpu_vm\", \"tpu_name\": \"my-tpu-vm\", \"zone\": \"us-central2-b\", \"project\": \"my-project\", \"python_interpreter\": \"~/tpu_venv/bin/python3\"}\n\n// gke_pod\n{\"backend\": \"gke_pod\", \"namespace\": \"default\", \"pod\": \"my-tpu-pod\"}\n\n// gke_job (add \"queue\"/\"priority\" to admit through Kueue; leave out \"image\"\n// to use the default nexus-tpu image, see \"Container image\" below)\n{\"backend\": \"gke_job\", \"namespace\": \"default\",\n \"tpu_accelerator\": \"tpu-v6e-slice\", \"tpu_topology\": \"2x2\"}\n\n// gke_xpk\n{\"backend\": \"gke_xpk\", \"cluster_name\": \"my-cluster\", \"zone\": \"us-central2-b\", \"project\": \"my-project\"}"
+      },
+      {
+        "language": "bash",
+        "code": "python3 .../runtime.py config --package tpu-agent-suite@<version> set \\\n    trajectory_enabled=true trajectory_sink=gcs trajectory_bucket=gs://my-bucket \\\n    --user-confirmed"
+      },
+      {
+        "language": "json",
+        "code": "{\"revision\": 1, \"default\": \"default\", \"profiles\": {\"default\": {\"backend\": \"gce_tpu_vm\", \"params\": {\"tpu_name\": \"my-tpu-vm\", \"zone\": \"us-central2-b\", \"project\": \"my-project\", \"python_interpreter\": \"~/tpu_venv/bin/python3\"}}}, \"trajectory\": {\"params\": {\"enabled\": true, \"sink\": \"gcs\", \"bucket\": \"gs://my-bucket\"}}}"
+      },
+      {
+        "language": "text",
+        "code": ".claude/skills/tpu-agent/SKILL.md      # the skill the harness activates\n.claude/skills/tpu-agent-export-trajectory/SKILL.md   # see using.md\n.claude/agents/*.md                       # one compiled prompt per agent\n.claude/settings.json                     # subagent limits + pre-authorized ~/.tpu-agent-suite path\nCLAUDE.md                                 # managed block with package-wide instructions\n.tpu-agent-suite/\n    environment.json                      # your compute profiles\n    ownership.json                        # ledger of installed files\n\n~/.tpu-agent-suite/packages/tpu-agent-suite@<version>/   # framework (runtime, installer), schemas, scripts, data\n~/.tpu-agent-suite/runs/<run_id>/artifacts/              # outputs from each agent run"
+      },
+      {
+        "language": "bash",
+        "code": "# On the TPU VM (for gce_tpu_vm, first: gcloud compute tpus tpu-vm ssh <TPU_NAME> --zone=<ZONE>)\nsudo apt update && sudo apt install -y python3.12 python3.12-venv\npython3.12 -m venv ~/tpu_venv && source ~/tpu_venv/bin/activate\npip install --upgrade pip\n\n# 1. Install torch_tpu (PyTorch installs automatically; do NOT install torch manually)\npip install torch_tpu\n\n# 2. Install remaining TPU workload dependencies and utilities\npip install -r package/requirements-tpu.txt\npip install portpicker marimo scikit-learn pandas tensorboard\n\n# 3. Verify TPU hardware and driver visibility\ntpu-info\n\n# 4. Verify native PyTorch can allocate on the TPU device\npython3 -c \"import torch, torch_tpu; torch.zeros(1, device='tpu'); print('TPU Device OK:', torch.device('tpu'))\""
+      },
+      {
+        "language": "text",
+        "code": "us-docker.pkg.dev/tpu-nexus-767207/nexus-dev/nexus-tpu@sha256:a13cfe0129b78c7752289c1a26b4e55cd2cb4ced3373dc524cf0332e8726e7ee"
+      },
+      {
+        "language": "text",
+        "code": "gcloud artifacts docker images list \\\n  us-docker.pkg.dev/tpu-nexus-767207/nexus-dev/nexus-tpu --include-tags"
+      },
+      {
+        "language": "text",
+        "code": "us-docker.pkg.dev/tpu-nexus-767207/nexus-dev/nexus-tpu@sha256:<desired_image_id>"
+      },
+      {
+        "language": "text",
+        "code": "us-docker.pkg.dev/tpu-nexus-767207/nexus-dev/nexus-tpu:latest"
+      },
+      {
+        "language": "json",
+        "code": "\"staging_bucket\": \"gs://my-staging-bucket\",\n\"staging_service_account\": \"stager@my-project.iam.gserviceaccount.com\""
+      },
+      {
+        "language": "json",
+        "code": "\"staging_bucket\": \"gs://my-staging-bucket\",\n\"pod_service_account\": \"tpu-staging-pod\""
+      },
+      {
+        "language": "bash",
+        "code": "python3 .../runtime.py config --package tpu-agent-suite@<version> set hf_cache_pvc=hf-cache"
+      },
+      {
+        "language": "yaml",
+        "code": "apiVersion: v1\nkind: PersistentVolumeClaim\nmetadata:\n  name: hf-cache\n  namespace: default\nspec:\n  accessModes: [ReadWriteMany]\n  storageClassName: standard-rwx   # a ReadWriteMany Filestore class\n  resources:\n    requests:\n      storage: 1Ti"
+      },
+      {
+        "language": "bash",
+        "code": "python3 ~/.tpu-agent-suite/packages/tpu-agent-suite@<version>/framework/runtime.py \\\n    compute --package tpu-agent-suite@<version> preflight"
+      },
+      {
+        "language": "bash",
+        "code": "python3 framework/compute/env_check.py \\\n    --requirements package/requirements-tpu.txt"
+      },
+      {
+        "language": "bash",
+        "code": "python3 framework/compute/env_check.py --host \\\n    --requirements package/requirements-client.txt"
+      },
+      {
+        "language": "bash",
+        "code": "make build"
+      },
+      {
+        "language": "bash",
+        "code": "# Set up evaluation virtual environment\n./eval/setup.sh\nsource eval/.venv/bin/activate\n\n# Verify evaluation configuration and dataset schemas\n./eval/verify.sh smoke-check\n\n# Run evaluation with Harbor\nexport GEMINI_API_KEY=\"your-api-key\"\n./eval/run.py --config claude-code/agent-suite --dataset tpu-hello-world"
+      }
+    ],
+    "cli_commands": [
+      "gcloud auth login",
+      "gcloud auth application-default login",
+      "gcloud container clusters get-credentials <CLUSTER_NAME> --region=<REGION>",
+      "python3 tpu-agent-suite-<harness>-<version>/framework/installer.py install --destination /path/to/project",
+      "python3 tpu-agent-suite-<harness>-<new-version>/framework/installer.py install --upgrade --destination /path/to/project",
+      "python3 ~/.tpu-agent-suite/packages/tpu-agent-suite@<version>/framework/installer.py uninstall --destination /path/to/project",
+      "python3 framework/compiler.py translate package --harness <harness> --output dist/<harness>/tpu-agent-suite",
+      "python3 framework/compiler.py archive --dist-dir dist --output dist/archives --harness <harness>",
+      "python3 dist/<harness>/tpu-agent-suite-experimental/framework/installer.py install --destination /path/to/project",
+      "python3 tpu-agent-suite-<harness>-<version>/framework/installer.py install \\",
+      "python3 ~/.tpu-agent-suite/packages/tpu-agent-suite@<version>/framework/runtime.py \\",
+      "python3 .../runtime.py config --package tpu-agent-suite@<version> set \\",
+      "python3.12 -m venv ~/tpu_venv && source ~/tpu_venv/bin/activate",
+      "pip install --upgrade pip",
+      "pip install torch_tpu",
+      "pip install -r package/requirements-tpu.txt",
+      "pip install portpicker marimo scikit-learn pandas tensorboard",
+      "python3 -c \"import torch, torch_tpu; torch.zeros(1, device='tpu'); print('TPU Device OK:', torch.device('tpu'))\"",
+      "gcloud artifacts docker images list \\",
+      "python3 .../runtime.py config --package tpu-agent-suite@<version> set hf_cache_pvc=hf-cache",
+      "python3 framework/compute/env_check.py \\",
+      "python3 framework/compute/env_check.py --host \\",
+      "export GEMINI_API_KEY=\"your-api-key\""
+    ],
+    "environment_variables": [],
+    "tables": [
+      {
+        "headers": [
+          "Backend",
+          "Meaning",
+          "Backend-specific parameters"
+        ],
+        "rows": [
+          [
+            "`local`",
+            "The harness is running on the TPU VM; workloads run in-process.",
+            "*(none)*"
+          ],
+          [
+            "`gce_tpu_vm`",
+            "Reach a Cloud TPU VM over `gcloud ... ssh`.",
+            "`tpu_name`, `zone`, `project`"
+          ],
+          [
+            "`gke_pod`",
+            "`kubectl exec` into an already-running TPU pod.",
+            "`namespace`, `pod`, optional `container`/`kube_context`"
+          ],
+          [
+            "`gke_job`",
+            "Dispatch a single-host TPU Job via `kubectl`, optionally through Kueue.",
+            "`namespace`, `image`, `tpu_accelerator`, `tpu_topology`, optional `staging_bucket`/`pod_service_account`/`staging_service_account`/`staging_service_account_key`/`hf_cache_pvc`/`queue`/`priority`/`declared_duration_minutes`/`kubeconfig`/`kube_context`"
+          ],
+          [
+            "`gke_xpk`",
+            "Multi-node workloads on a GKE cluster via `xpk`.",
+            "`cluster_name`, `zone`, `project`, optional `gcs_bucket`"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "Question",
+          "Answer"
+        ],
+        "rows": [
+          [
+            "`backend`",
+            "`gke_job`"
+          ],
+          [
+            "`namespace`",
+            "*(blank: `default`)*"
+          ],
+          [
+            "`image`",
+            "*(blank: the image above)*"
+          ],
+          [
+            "`tpu_accelerator`",
+            "`tpu7x`"
+          ],
+          [
+            "`tpu_topology`",
+            "`2x2x1`"
+          ],
+          [
+            "`queue`",
+            "`default`"
+          ],
+          [
+            "`kube_context`",
+            "*(suggested: the current kubectl context)*"
+          ],
+          [
+            "`priority`, `declared_duration_minutes`, `kubeconfig`",
+            "*(blank)*"
+          ],
+          [
+            "`staging_bucket` and the service-account questions after it",
+            "*(blank, unless inputs exceed 900 KiB or outputs 1 MiB; see below)*"
+          ],
+          [
+            "`python_interpreter`, `xprof_interpreter`",
+            "*(blank: the image's `python3` has `torch_tpu`)*"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "Component",
+          "Path",
+          "Description"
+        ],
+        "rows": [
+          [
+            "**Framework**",
+            "[`framework/`](framework/)",
+            "Compiler, installer, runtime and compute access layer. Lets us develop agents that run on multiple harnesses."
+          ],
+          [
+            "**Package**",
+            "[`package/`](package/)",
+            "The TPU agent suite, released as `tpu-agent-suite`."
+          ],
+          [
+            "**Evaluations**",
+            "[`eval/`](eval/)",
+            "Harbor suites and configs that score the package."
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "Guide",
+          "For"
+        ],
+        "rows": [
+          [
+            "[`docs/install.md`](docs/install.md)",
+            "Host and TPU prerequisites, build, install scopes and backends, upgrade/uninstall"
+          ],
+          [
+            "[`docs/using.md`](docs/using.md)",
+            "What `tpu-agent` does with a request, and where its outputs go"
+          ],
+          [
+            "[`docs/developing.md`](docs/developing.md)",
+            "Dev environment, `make` loop, CI gates, adding agents, tpu-knowledge-base sources and eval contributions"
+          ],
+          [
+            "[`docs/design/`](docs/design/README.md)",
+            "How the framework and the suite are designed"
+          ],
+          [
+            "[`framework/README.md`](framework/README.md)",
+            "Compiler, installer, hooks, and runtime reference"
+          ],
+          [
+            "[`framework/compute/README.md`](framework/compute/README.md)",
+            "Compute CLI and backend drivers"
+          ],
+          [
+            "[`package/README.md`](package/README.md)",
+            "Converting an existing skill into a TPU agent suite package, step by step"
+          ],
+          [
+            "[`eval/README.md`](eval/README.md)",
+            "Running evaluations"
+          ],
+          [
+            "[`docs/using.md`](docs/using.md)",
+            "Golden Prompts"
+          ]
+        ]
+      }
+    ],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'TPU Agent Suite installation' (https://github.com/google-pytorch/tpu-agent-suite/blob/main/docs/install.md)?",
+        "answer": "Experimental assisted onboarding and diagnostics; documents TPU environment and dependency setup."
+      },
+      {
+        "question": "How does 'TPU Agent Suite installation' handle: Installing TPU agent suite?",
+        "answer": "This guide covers setting up TPU agent suite in your workspace and configuring\nTPU hardware compute targets. It covers both:\n- **Installing from release archives (Recommended for users)**: download pre-built\n  distribution archives without needing to clone or build.\n- **Creating packages from source (Maintainers & contributors)**: package distributions directly\n  from a repository clone.\n\nFor what the agents do once installed, see [using.md](using.md). For the\nframework internals behind these commands, see\n[`README.md`](../README.md) and\n[`framework/README.md`](../framework/README.md).\n\n---"
+      },
+      {
+        "question": "How does 'TPU Agent Suite installation' handle: 1. Host prerequisites?",
+        "answer": "The host is the machine your harness (Claude Code, Codex, Antigravity, or\nCursor) runs on: a workstation or the TPU VM itself.\n\n1. **Python 3.12+**: `python3 --version`.\n2. **Build dependency**: `pip install pyyaml` is all the compiler and installer\n   need.\n3. **Host-side agent dependencies**: install the required dependencies by\n   creating a [virtual environment](https://docs.python.org/3/library/venv.html)\n   and running `python3 -m pip install -r requirements-client.txt` (or\n   `package/requirements-client.txt` from a repository clone). Ensure your\n   environment is activated whenever you install or use this agentic suite.\n\n4. **Standalone CLI tools** (backend-dependent):\n   - **`gcloud`** ([Google Cloud CLI](https://cloud.google.com/sdk/docs/install)):\n     Required for `gce_tpu_vm` (to SSH/SCP into TPU VMs), `gke_xpk` (to stage\n     data in GCS), and whenever accessing GKE clusters or Google Cloud APIs\n     (Vertex AI, BigQuery). Authenticate with:\n\n     ```bash\n     gcloud auth login\n     gcloud auth application-default login\n     ```\n\n   - **`kubectl`** ([Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/))\n     and **`gke-gcloud-auth-plugin`**, which kubectl needs to"
+      },
+      {
+        "question": "How does 'TPU Agent Suite installation' handle: 2. Install from release archive?",
+        "answer": "End users do not need to clone the git repository. They download their harness-specific archive from GitHub Releases.\n\nSupported harnesses: `antigravity`, `claude-code`, `codex`, `cursor`."
+      },
+      {
+        "question": "How does 'TPU Agent Suite installation' handle: Download?",
+        "answer": "Download the release archive for your harness from GitHub Releases in this repository."
+      },
+      {
+        "question": "How does 'TPU Agent Suite installation' handle: Install?",
+        "answer": "With your virtual environment activated, extract the downloaded archive and run the self-contained installer:\n\n```bash\ntar -xzf tpu-agent-suite-<harness>-<version>.tar.gz\npython3 tpu-agent-suite-<harness>-<version>/framework/installer.py install --destination /path/to/project\n```\n\n*To install globally across all projects for that harness, omit `--destination` and pass `--scope user`.*\n\nThe installer will not overwrite unmanaged existing files or files modified locally by the user unless `--force` is specified."
+      },
+      {
+        "question": "How does 'TPU Agent Suite installation' handle: Upgrade?",
+        "answer": "Download the new release archive and pass `--upgrade`:\n\n```bash\ntar -xzf tpu-agent-suite-<harness>-<new-version>.tar.gz\npython3 tpu-agent-suite-<harness>-<new-version>/framework/installer.py install --upgrade --destination /path/to/project\n```\n\nRunning `installer.py install` on an existing install upgrades in place and retains existing `environment.json` configuration without wiping run history.\n\n> **Upgrading from a release that kept its files in\n> `.tpu-agent-suite/tpu-agent-suite/`:** uninstall with that release's installer\n> first, then install the new one. The new installer does not read the old\n> layout.\n\nA workspace holds one package at a time, and so does the user scope: installing\na different package where one is already installed fails until you uninstall\nthe first."
+      },
+      {
+        "question": "How does 'TPU Agent Suite installation' handle: Uninstall?",
+        "answer": "Every install keeps a copy of its installer in the central store, so you do not\nneed the distribution to remove it:\n\n```bash\npython3 ~/.tpu-agent-suite/packages/tpu-agent-suite@<version>/framework/installer.py uninstall --destination /path/to/project\n```\n\n*(If uninstalling a user-wide installation, pass `--scope user` instead of\n`--destination`).* The installer in the extracted distribution works the same\nway. A package's installer removes only that package: if the workspace holds\nanother one, it stops. Whichever installer you run, the installed version's own\ninstaller does the uninstall.\n\nRunning `installer.py uninstall` performs a clean rollback of all installed files, configuration merges, and managed instruction blocks based on `ownership.json`.\n\n---"
+      },
+      {
+        "question": "How does 'TPU Agent Suite installation' handle: 3. Create a package?",
+        "answer": "To build the distribution for a specific harness, run:\n\n```bash\npython3 framework/compiler.py translate package --harness <harness> --output dist/<harness>/tpu-agent-suite\n```\n\n*(Replace `<harness>` with `claude-code`, `codex`, `antigravity`, or `cursor`).*\n\nThe compiled distribution directory bundles translated skills, compiled agent prompts, harness configuration, lifecycle hooks, the runtime and installer (in `framework/`), dependency manifests, and a README.\n\nIf you also want to package that single distribution into an archive (`.tar.gz`):\n\n```bash\npython3 framework/compiler.py archive --dist-dir dist --output dist/archives --harness <harness>\n```"
+      },
+      {
+        "question": "How does 'TPU Agent Suite installation' handle: The experimental package (`tpu-agent-suite-experimental`)?",
+        "answer": "`package/package.experimental.json` builds `tpu-agent-suite-experimental`, a package for testing. It releases everything `tpu-agent-suite` releases, plus the vLLM optimization skills (`close-gaps`, `decompose-optimization`, `write-tpu-kernels` and others).\n\nIt is a complete package, not an add-on. It has its own runtime, compute environment and hooks, and it builds every agent its skills use. A workspace holds one package at a time, so **install either `tpu-agent-suite` or `tpu-agent-suite-experimental`, not both**. To switch, uninstall the installed package first.\n\n```bash\nmake build-experimental\npython3 dist/<harness>/tpu-agent-suite-experimental/framework/installer.py install --destination /path/to/project\n```\n\nBoth packages are built from the same files in `package/`. `--manifest` selects the manifest file, and works with `compose`, `verify`, `lint` and `translate`. It defaults to `package.release.json`.\n\n`package.experimental.json` declares `\"extends\": \"package.release.json\"`. It takes every field of `package.release.json`, replaces `name`, `display_name` and `description`, and lists only the skills it adds under `add_skills`. A change to `package.release.json`, such as a new "
+      }
+    ],
+    "full_markdown": "# Installing TPU agent suite\n\nThis guide covers setting up TPU agent suite in your workspace and configuring\nTPU hardware compute targets. It covers both:\n- **Installing from release archives (Recommended for users)**: download pre-built\n  distribution archives without needing to clone or build.\n- **Creating packages from source (Maintainers & contributors)**: package distributions directly\n  from a repository clone.\n\nFor what the agents do once installed, see [using.md](using.md). For the\nframework internals behind these commands, see\n[`README.md`](../README.md) and\n[`framework/README.md`](../framework/README.md).\n\n---\n\n## 1. Host prerequisites\n\nThe host is the machine your harness (Claude Code, Codex, Antigravity, or\nCursor) runs on: a workstation or the TPU VM itself.\n\n1. **Python 3.12+**: `python3 --version`.\n2. **Build dependency**: `pip install pyyaml` is all the compiler and installer\n   need.\n3. **Host-side agent dependencies**: install the required dependencies by\n   creating a [virtual environment](https://docs.python.org/3/library/venv.html)\n   and running `python3 -m pip install -r requirements-client.txt` (or\n   `package/requirements-client.txt` from a repository clone). Ensure your\n   environment is activated whenever you install or use this agentic suite.\n\n4. **Standalone CLI tools** (backend-dependent):\n   - **`gcloud`** ([Google Cloud CLI](https://cloud.google.com/sdk/docs/install)):\n     Required for `gce_tpu_vm` (to SSH/SCP into TPU VMs), `gke_xpk` (to stage\n     data in GCS), and whenever accessing GKE clusters or Google Cloud APIs\n     (Vertex AI, BigQuery). Authenticate with:\n\n     ```bash\n     gcloud auth login\n     gcloud auth application-default login\n     ```\n\n   - **`kubectl`** ([Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/))\n     and **`gke-gcloud-auth-plugin`**, which kubectl needs to authenticate to\n     GKE (`gcloud components install gke-gcloud-auth-plugin`): required for\n     `gke_job`, `gke_pod` and `gke_xpk` to dispatch Jobs, exec into pods, and\n     inspect TPU cluster nodes. If using GKE, configure cluster credentials\n     with:\n\n     ```bash\n     gcloud container clusters get-credentials <CLUSTER_NAME> --region=<REGION>\n     ```\n\n     This makes the cluster kubectl's current context. Setup suggests it as\n     the profile's `kube_context`, so a later `kubectl config use-context`\n     does not move `gke_job` or `gke_pod` work to another cluster.\n\n   - **`xpk`** ([Accelerated Processing Kit](https://github.com/google/xpk)):\n     Required if using the `gke_xpk` backend to schedule and manage multi-node cluster workloads.\n     Follow the [xpk installation instructions](https://github.com/google/xpk)\n     (e.g. `pip install xpk`).\n\nThe installer checks only the host-side packages above. The first session\nsets up your backend and checks its tools, credentials and target; see\n[Check the setup](#check-the-setup).\n\n---\n\n## 2. Install from release archive\n\nEnd users do not need to clone the git repository. They download their harness-specific archive from GitHub Releases.\n\nSupported harnesses: `antigravity`, `claude-code`, `codex`, `cursor`.\n\n### Download\nDownload the release archive for your harness from GitHub Releases in this repository.\n\n### Install\nWith your virtual environment activated, extract the downloaded archive and run the self-contained installer:\n\n```bash\ntar -xzf tpu-agent-suite-<harness>-<version>.tar.gz\npython3 tpu-agent-suite-<harness>-<version>/framework/installer.py install --destination /path/to/project\n```\n\n*To install globally across all projects for that harness, omit `--destination` and pass `--scope user`.*\n\nThe installer will not overwrite unmanaged existing files or files modified locally by the user unless `--force` is specified.\n\n### Upgrade\nDownload the new release archive and pass `--upgrade`:\n\n```bash\ntar -xzf tpu-agent-suite-<harness>-<new-version>.tar.gz\npython3 tpu-agent-suite-<harness>-<new-version>/framework/installer.py install --upgrade --destination /path/to/project\n```\n\nRunning `installer.py install` on an existing install upgrades in place and retains existing `environment.json` configuration without wiping run history.\n\n> **Upgrading from a release that kept its files in\n> `.tpu-agent-suite/tpu-agent-suite/`:** uninstall with that release's installer\n> first, then install the new one. The new installer does not read the old\n> layout.\n\nA workspace holds one package at a time, and so does the user scope: installing\na different package where one is already installed fails until you uninstall\nthe first.\n\n### Uninstall\nEvery install keeps a copy of its installer in the central store, so you do not\nneed the distribution to remove it:\n\n```bash\npython3 ~/.tpu-agent-suite/packages/tpu-agent-suite@<version>/framework/installer.py uninstall --destination /path/to/project\n```\n\n*(If uninstalling a user-wide installation, pass `--scope user` instead of\n`--destination`).* The installer in the extracted distribution works the same\nway. A package's installer removes only that package: if the workspace holds\nanother one, it stops. Whichever installer you run, the installed version's own\ninstaller does the uninstall.\n\nRunning `installer.py uninstall` performs a clean rollback of all installed files, configuration merges, and managed instruction blocks based on `ownership.json`.\n\n---\n\n## 3. Create a package\n\nTo build the distribution for a specific harness, run:\n\n```bash\npython3 framework/compiler.py translate package --harness <harness> --output dist/<harness>/tpu-agent-suite\n```\n\n*(Replace `<harness>` with `claude-code`, `codex`, `antigravity`, or `cursor`).*\n\nThe compiled distribution directory bundles translated skills, compiled agent prompts, harness configuration, lifecycle hooks, the runtime and installer (in `framework/`), dependency manifests, and a README.\n\nIf you also want to package that single distribution into an archive (`.tar.gz`):\n\n```bash\npython3 framework/compiler.py archive --dist-dir dist --output dist/archives --harness <harness>\n```\n\n### The experimental package (`tpu-agent-suite-experimental`)\n\n`package/package.experimental.json` builds `tpu-agent-suite-experimental`, a package for testing. It releases everything `tpu-agent-suite` releases, plus the vLLM optimization skills (`close-gaps`, `decompose-optimization`, `write-tpu-kernels` and others).\n\nIt is a complete package, not an add-on. It has its own runtime, compute environment and hooks, and it builds every agent its skills use. A workspace holds one package at a time, so **install either `tpu-agent-suite` or `tpu-agent-suite-experimental`, not both**. To switch, uninstall the installed package first.\n\n```bash\nmake build-experimental\npython3 dist/<harness>/tpu-agent-suite-experimental/framework/installer.py install --destination /path/to/project\n```\n\nBoth packages are built from the same files in `package/`. `--manifest` selects the manifest file, and works with `compose`, `verify`, `lint` and `translate`. It defaults to `package.release.json`.\n\n`package.experimental.json` declares `\"extends\": \"package.release.json\"`. It takes every field of `package.release.json`, replaces `name`, `display_name` and `description`, and lists only the skills it adds under `add_skills`. A change to `package.release.json`, such as a new hook or a version bump, therefore reaches both packages. Only one level of `extends` is supported.\n\n---\n\n## 4. Environment configuration\n\nThe installer asks no questions about compute. A fresh install writes an\n`environment.json` with no profiles to\n`<workspace>/.tpu-agent-suite/environment.json` (or, for user scope,\n`~/.tpu-agent-suite/environment.json`, the only copy):\n\n```json\n{\"revision\": 1, \"default\": null, \"profiles\": {}}\n```\n\nThe first session sets compute up: the agent asks which backend you use, then\nonly what that backend needs, suggests answers where it can find them, checks\nthe target, and saves the result as a named profile. A reinstall or upgrade\nkeeps your profiles and settings.\n\n| Backend | Meaning | Backend-specific parameters |\n| :--- | :--- | :--- |\n| `local` | The harness is running on the TPU VM; workloads run in-process. | *(none)* |\n| `gce_tpu_vm` | Reach a Cloud TPU VM over `gcloud ... ssh`. | `tpu_name`, `zone`, `project` |\n| `gke_pod` | `kubectl exec` into an already-running TPU pod. | `namespace`, `pod`, optional `container`/`kube_context` |\n| `gke_job` | Dispatch a single-host TPU Job via `kubectl`, optionally through Kueue. | `namespace`, `image`, `tpu_accelerator`, `tpu_topology`, optional `staging_bucket`/`pod_service_account`/`staging_service_account`/`staging_service_account_key`/`hf_cache_pvc`/`queue`/`priority`/`declared_duration_minutes`/`kubeconfig`/`kube_context` |\n| `gke_xpk` | Multi-node workloads on a GKE cluster via `xpk`. | `cluster_name`, `zone`, `project`, optional `gcs_bucket` |\n\nTrajectory sharing does not depend on where workloads run, and it is off\nuntil you turn it on. The first time you run\n`/tpu-agent-export-trajectory`, the agent asks whether and where to share,\nand saves your answer with `config set ... --user-confirmed`. A \"no\" is saved\nas `trajectory_enabled=false`, so you are not asked again; the export then\nrefuses until you ask to share. The settings:\n\n- `trajectory_enabled`: share session trajectories via\n  `/tpu-agent-export-trajectory` (default: no). Turning it off also\n  removes the sink, bucket and org below.\n- `trajectory_sink` (only if enabled): `gcs` saves to a bucket **you own**;\n  `harbor` uploads to the Harbor hub, which renders the session as a browsable\n  trajectory (default: `gcs`).\n- `trajectory_bucket` (only for `gcs`): e.g. `gs://my-bucket`. Without one,\n  the export reports that no destination is configured and saves nothing.\n- `trajectory_share_org` (only for `harbor`): Harbor organization to share\n  uploads with; blank keeps the upload private. When a new name is saved\n  with `config set`, it is checked with Harbor, and one that doesn't exist is\n  refused\n  (`harbor auth org list` shows yours); if it can't check (not logged in,\n  offline), it keeps the name and warns.\n\nEvery profile can also set `python_interpreter`, and `xprof_interpreter` is a\nsetting of its own:\n- `python_interpreter`: Path to the Python interpreter running workloads on the target (e.g. `~/tpu_venv/bin/python3` on a TPU VM, or `/opt/conda/bin/python` in a container). If omitted, defaults to the target's ambient `python3` (or `sys.executable` for `local`).\n- `xprof_interpreter`: Separate Python interpreter for XProf analysis when it does not share the workload's environment (e.g. a dedicated venv for `xprof`).\n\n### Headless installs (CI, containers)\n\nIn CI, a container, or an IDE/agent shell without a terminal, pass\n`--non-interactive`: the installer then fails instead of asking before it\noverwrites changed files or purges run data. Without a terminal and without\n`--non-interactive` or `--force`, the installer refuses to start rather than\nwait on stdin.\n\nThe installer sets up no compute. To have a profile ready before the first\nsession, create it with the runtime after the install, the same way a session\ndoes:\n\n```bash\npython3 tpu-agent-suite-<harness>-<version>/framework/installer.py install \\\n    --destination /path/to/project --non-interactive\ncd /path/to/project\npython3 ~/.tpu-agent-suite/packages/tpu-agent-suite@<version>/framework/runtime.py \\\n    compute --package tpu-agent-suite@<version> setup apply \\\n    --profile default --answers answers.json\n```\n\n`answers.json` is a flat object keyed by the question names above (not the\nnested `environment.json` path). A missing required field or an invalid value\nis reported as INCOMPLETE, exit status 1, and nothing is written; a field with\na default (such as `gke_job`'s `image`) takes it when left out. The first\nprofile saved becomes the default. `setup apply` does not check the target;\n`compute setup verify` does, and sessions check the profile before TPU work.\nThe full list of questions is in\n[`package/environment/questions.json`](../package/environment/questions.json).\nExample per backend:\n\n```jsonc\n// local\n{\"backend\": \"local\"}\n\n// gce_tpu_vm\n{\"backend\": \"gce_tpu_vm\", \"tpu_name\": \"my-tpu-vm\", \"zone\": \"us-central2-b\", \"project\": \"my-project\", \"python_interpreter\": \"~/tpu_venv/bin/python3\"}\n\n// gke_pod\n{\"backend\": \"gke_pod\", \"namespace\": \"default\", \"pod\": \"my-tpu-pod\"}\n\n// gke_job (add \"queue\"/\"priority\" to admit through Kueue; leave out \"image\"\n// to use the default nexus-tpu image, see \"Container image\" below)\n{\"backend\": \"gke_job\", \"namespace\": \"default\",\n \"tpu_accelerator\": \"tpu-v6e-slice\", \"tpu_topology\": \"2x2\"}\n\n// gke_xpk\n{\"backend\": \"gke_xpk\", \"cluster_name\": \"my-cluster\", \"zone\": \"us-central2-b\", \"project\": \"my-project\"}\n```\n\nTo opt in to trajectory sharing, set it with `config` (whoever runs it agrees\non the user's behalf):\n\n```bash\npython3 .../runtime.py config --package tpu-agent-suite@<version> set \\\n    trajectory_enabled=true trajectory_sink=gcs trajectory_bucket=gs://my-bucket \\\n    --user-confirmed\n```\n\n### Changing your answers later\n\nAsk the agent, or use `runtime config set` and `runtime compute setup apply`.\nUse these rather than editing `environment.json` by hand: they check a change\nthe same way setup does. After a change, the next\ncompute command in a session checks the profile again (see\n[Check the setup](#check-the-setup)), or run `compute setup verify`. The shape\nthe runtime reads is:\n\n```json\n{\"revision\": 1, \"default\": \"default\", \"profiles\": {\"default\": {\"backend\": \"gce_tpu_vm\", \"params\": {\"tpu_name\": \"my-tpu-vm\", \"zone\": \"us-central2-b\", \"project\": \"my-project\", \"python_interpreter\": \"~/tpu_venv/bin/python3\"}}}, \"trajectory\": {\"params\": {\"enabled\": true, \"sink\": \"gcs\", \"bucket\": \"gs://my-bucket\"}}}\n```\n\nThe export uses these settings only while `trajectory.params.enabled` is\n`true`.\n\n---\n\n## 5. What gets installed\n\nFor Claude Code at project scope:\n\n```\n.claude/skills/tpu-agent/SKILL.md      # the skill the harness activates\n.claude/skills/tpu-agent-export-trajectory/SKILL.md   # see using.md\n.claude/agents/*.md                       # one compiled prompt per agent\n.claude/settings.json                     # subagent limits + pre-authorized ~/.tpu-agent-suite path\nCLAUDE.md                                 # managed block with package-wide instructions\n.tpu-agent-suite/\n    environment.json                      # your compute profiles\n    ownership.json                        # ledger of installed files\n\n~/.tpu-agent-suite/packages/tpu-agent-suite@<version>/   # framework (runtime, installer), schemas, scripts, data\n~/.tpu-agent-suite/runs/<run_id>/artifacts/              # outputs from each agent run\n```\n\nCodex and Antigravity write `AGENTS.md` instead of `CLAUDE.md`. Pass\n`--no-workspace-memory` to skip the managed memory block.\n\n> **Antigravity:** this harness has no config file the installer can\n> pre-authorize, so the first time an agent reads `~/.tpu-agent-suite` the harness\n> asks for permission. Grant it permanently once.\n\n---\n\n## 6. Set up the compute target\n\n### Cloud TPU VM (`local` and `gce_tpu_vm`)\n\nFor `local` and `gce_tpu_vm`, the TPU VM needs a Python 3.12 environment with `torch_tpu`\nand the TPU workload dependencies.\n\n> **Important**: `torch_tpu` is published on [PyPI](https://pypi.org/project/torch-tpu/)\n> and installs a compatible PyTorch build. Do **not** install PyTorch manually\n> prior to `torch_tpu`.\n\n```bash\n# On the TPU VM (for gce_tpu_vm, first: gcloud compute tpus tpu-vm ssh <TPU_NAME> --zone=<ZONE>)\nsudo apt update && sudo apt install -y python3.12 python3.12-venv\npython3.12 -m venv ~/tpu_venv && source ~/tpu_venv/bin/activate\npip install --upgrade pip\n\n# 1. Install torch_tpu (PyTorch installs automatically; do NOT install torch manually)\npip install torch_tpu\n\n# 2. Install remaining TPU workload dependencies and utilities\npip install -r package/requirements-tpu.txt\npip install portpicker marimo scikit-learn pandas tensorboard\n\n# 3. Verify TPU hardware and driver visibility\ntpu-info\n\n# 4. Verify native PyTorch can allocate on the TPU device\npython3 -c \"import torch, torch_tpu; torch.zeros(1, device='tpu'); print('TPU Device OK:', torch.device('tpu'))\"\n```\n\nThen point the profile at that interpreter: answer `python_interpreter` with\n`~/tpu_venv/bin/python3` when the agent sets up compute, or run\n`config set python_interpreter=~/tpu_venv/bin/python3`.\n\n**vLLM serving** (optional): use a pre-configured vLLM TPU image, or install\n`vllm-torchtpu` into `~/tpu_venv` (from `vllm-project/vllm-torchtpu`). Native\nPyTorch serving (`custom_fastapi`) needs nothing extra.\n\n**Disk space for model weights.** Models are downloaded to\n`~/.cache/huggingface/hub` on the VM, for the user the agent connects as, and\nstay there between runs, so each model downloads once. Size the VM's disk for\nthe models you plan to use: large models take tens of GB each, and nothing\ndeletes them for you. See [Model weights](using.md#model-weights).\n\n### Container image (`gke_job`, `gke_pod`, `gke_xpk`)\n\nFor containerized backends (`gke_job`, `gke_pod`, and `gke_xpk`), workloads execute\ninside a container image pre-baked with Python 3.12, `torch_tpu`, and the workload\ndependencies:\n\n- **Image requirements**: The image must contain Python 3.12, `torch_tpu`\n  (installed via Google Cloud Artifact Registry alongside its compatible PyTorch\n  build), and the dependencies declared in `package/requirements-tpu.txt`.\n- **Interpreter configuration**: If your container uses a custom virtualenv or\n  conda environment (e.g. `/opt/venv/bin/python3`), set `python_interpreter` to\n  that path.\n- **Filesystem layout**: The `gke_job` driver mounts workload execution scripts\n  under `/app`, leaving `/workspace` free.\n\nThe default answer to `image` is a `nexus-tpu` image that meets these\nrequirements. The `nexus-tpu` image is generated nightly, but the default image\nis pinned to a specific version rather than the absolute latest nightly to avoid\nscenarios where the image version silently changes and hinders reproducibility.\n\nThe default version is:\n\n```\nus-docker.pkg.dev/tpu-nexus-767207/nexus-dev/nexus-tpu@sha256:a13cfe0129b78c7752289c1a26b4e55cd2cb4ced3373dc524cf0332e8726e7ee\n```\n\nThe `nexus-tpu` image is built nightly with two tags: `dev<YYYYMMDD-HHMM>`,\nwhich names that one build, and `latest`, which always refers to the newest build.\n\nTo see which different nightlies are available, list the builds with:\n\n```\ngcloud artifacts docker images list \\\n  us-docker.pkg.dev/tpu-nexus-767207/nexus-dev/nexus-tpu --include-tags\n```\n\nTo use a version other than the default one, simply respond to the `gke_job` container\n`image` question with the name of the desired image. I.e.,\n\n```\nus-docker.pkg.dev/tpu-nexus-767207/nexus-dev/nexus-tpu@sha256:<desired_image_id>\n```\n\nTo simply use the absolute latest nightly, you can respond with:\n\n```\nus-docker.pkg.dev/tpu-nexus-767207/nexus-dev/nexus-tpu:latest\n```\n\nFor example, these answers set up a `tpu7x` cluster that admits work through\nthe Kueue LocalQueue `default`:\n\n| Question | Answer |\n| :--- | :--- |\n| `backend` | `gke_job` |\n| `namespace` | *(blank: `default`)* |\n| `image` | *(blank: the image above)* |\n| `tpu_accelerator` | `tpu7x` |\n| `tpu_topology` | `2x2x1` |\n| `queue` | `default` |\n| `kube_context` | *(suggested: the current kubectl context)* |\n| `priority`, `declared_duration_minutes`, `kubeconfig` | *(blank)* |\n| `staging_bucket` and the service-account questions after it | *(blank, unless inputs exceed 900 KiB or outputs 1 MiB; see below)* |\n| `python_interpreter`, `xprof_interpreter` | *(blank: the image's `python3` has `torch_tpu`)* |\n\n### Large files on `gke_job`: the staging bucket\n\nInputs over 900 KiB and outputs over 1 MiB travel through a GCS bucket\n(`staging_bucket`) on signed URLs, so the TPU pod needs no Google credentials\nof its own. Smaller files don't need a bucket.\n\nOnly a service account can sign those URLs. Your personal login can't, so set\n**`staging_service_account`** to a service account for staging to act as:\n\n```json\n\"staging_bucket\": \"gs://my-staging-bucket\",\n\"staging_service_account\": \"stager@my-project.iam.gserviceaccount.com\"\n```\n\n- You need `roles/iam.serviceAccountTokenCreator` on that service account, and\n  it needs `roles/storage.objectAdmin` on the bucket.\n- Only staging acts as it. `kubectl` keeps running as you.\n- With no personal login (for example in CI), set\n  **`staging_service_account_key`** to the account's key file instead. Set one\n  or the other, not both.\n- **Don't** point `GOOGLE_APPLICATION_CREDENTIALS` at a key to fix signing:\n  `kubectl` reads that variable too, so it would run as the service account and\n  usually fail with a 403 \"forbidden\".\n\n#### On a cluster with Workload Identity: no signing\n\nIf the cluster has [Workload Identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity),\nlet the pod move staged files with its own token instead. Nothing is signed,\nso no service account or key is needed, and your own login is enough for\nthe host's side (it needs `roles/storage.objectUser` or `objectAdmin` on the\nbucket):\n\n```json\n\"staging_bucket\": \"gs://my-staging-bucket\",\n\"pod_service_account\": \"tpu-staging-pod\"\n```\n\nOne-time setup:\n\n1. Workload Identity is on for the cluster (`--workload-pool=<project>.svc.id.goog`).\n2. The TPU node pool runs the GKE metadata server\n   (`--workload-metadata=GKE_METADATA`). Pods are scheduled only onto nodes\n   that have it; `preflight` names the TPU node pools that don't.\n3. Create the Kubernetes service account in the job's namespace:\n   `kubectl create serviceaccount tpu-staging-pod -n <namespace>`.\n4. Give it `roles/storage.objectAdmin` on the bucket, as the principal\n   `principal://iam.googleapis.com/projects/<project-number>/locations/global/workloadIdentityPools/<project>.svc.id.goog/subject/ns/<namespace>/sa/tpu-staging-pod`.\n   (Or annotate it with `iam.gke.io/gcp-service-account` to act as a Google\n   service account that holds the role.)\n\n### Shared model cache on `gke_job`: `hf_cache_pvc`\n\nEvery `gke_job` pod starts with an empty filesystem, so without a shared cache\neach Job that loads a model downloads it again: the parity captures, the\nserver, every restart. Set **`hf_cache_pvc`** to a ReadWriteMany\nPersistentVolumeClaim in the Job's namespace, and every pod mounts it at\n`/hf-cache` with `HF_HUB_CACHE` pointing there, so a model downloads once.\nWithout it, each pod downloads into, and keeps its compile caches on, its\nmemory-backed `/dev/shm`, not its own disk, which on a TPU node can hold less\nthan one model; raise `shm_size_gb` (128 GiB by default) above the largest\nmodel's weights plus its compile cache. The size is a cap, not a\nreservation: the node's memory backs what the pod writes there, until it\nis deleted, so keep it below the node's memory. This applies to every\n`gke_job` pod, not only those that load a model: all of a pod's caches\n(`HF_HUB_CACHE`, `VLLM_CACHE_ROOT`, `XDG_CACHE_HOME`,\n`TORCHINDUCTOR_CACHE_DIR`) and its temporary files (`TMPDIR`) count against\n`shm_size_gb`, and are node memory.\nEach is a default the pod sets only when the image and the recipe have not:\nan image that sets its own, or `HF_HOME`, keeps it.\nCompute setup asks for the claim's name (leave it blank if there is none).\nTo add or change it on an existing profile, set it yourself, then run\n`compute setup verify`:\n\n```bash\npython3 .../runtime.py config --package tpu-agent-suite@<version> set hf_cache_pvc=hf-cache\n```\n\nA cluster admin creates the claim once; nothing in the package creates\nstorage. On a cluster with the Filestore CSI driver, for example:\n\n```yaml\napiVersion: v1\nkind: PersistentVolumeClaim\nmetadata:\n  name: hf-cache\n  namespace: default\nspec:\n  accessModes: [ReadWriteMany]\n  storageClassName: standard-rwx   # a ReadWriteMany Filestore class\n  resources:\n    requests:\n      storage: 1Ti\n```\n\n- It must be **ReadWriteMany**: a server and its parity check run on\n  different nodes at once, and with ReadWriteOnce the second stays Pending.\n  `preflight` fails a claim that is missing or not ReadWriteMany, and warns\n  while one is Pending under a class that binds on first use (the first Job\n  creates the volume, which for Filestore takes several minutes).\n- Bucket-backed claims (GCS FUSE) are not supported yet: GKE mounts them only\n  in pods annotated `gke-gcsfuse/volumes: \"true\"`, which the driver does not\n  add.\n- **Every Job in the namespace can write to it, and later pods load what is\n  there**, including model code run with `trust_remote_code`. Share a claim\n  only among people who trust each other's Jobs, as you would a shared home\n  directory; give each team its own namespace and claim otherwise.\n- **Models are never pruned.** Size it for the models you use, and have its\n  owner delete unused `models--*` folders when it fills. A Job that runs out of\n  space logs `No space left on device`, which `compute job wait` reports as a\n  failure. The benchmark scripts never delete models from it: they only\n  clean up a cache that is private to the pod.\n- **It also holds compiled programs.** Every pod keeps vLLM's and torch_tpu's\n  compile caches (`VLLM_CACHE_ROOT`, `TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT`\n  and `TORCH_TPU_INTERNAL_TIER3_COMPILATION_CACHE_ROOT`) in the claim's\n  `compile-cache/<accelerator>-<topology>/<image key>/{vllm,torch_tpu}` folder,\n  so a restart on the same image skips most of compiling (on Qwen3-0.6B, vLLM's\n  torch.compile went from 15 s to 2 s and XLA compile from 16 s to 3 s). An\n  image that sets these variables itself keeps its own values. A vLLM server\n  patched with `apply_vllm_patch.sh` keeps the image key, so `serve_vllm.sh`\n  moves its caches to `-patch-<key>` folders next to `vllm` and `torch_tpu`.\n- **Old compile caches are pruned.** Each pod touches a `.last_used` file in\n  its `<image key>` folder at start, then, in the background, removes the other\n  `compile-cache/*/<image key>` folders in which no file (`.last_used`\n  included) changed in `compile_cache_max_age_days`\n  (`--compile-cache-max-age-days`, default 14; 0 turns pruning off), so\n  folders from before this existed age out too. It never removes the folder it\n  uses, and a failure is only logged. A pod that starts with the volume over\n  90% full keeps its compile caches in `/dev/shm` instead, and logs why.\n- **Tip:** pin the KV cache size of a server you restart\n  (`--num-gpu-blocks-override` or `--kv-cache-memory-bytes`). Left unpinned, it\n  can come out different on each start, and a new size compiles again and adds\n  to the cache; pinned, a restart reuses it (torch.compile went from 285 s to\n  8 s).\n\n### Check the setup\n\n`compute setup verify` checks a profile: the tools it needs are installed,\nyou have credentials, and the TPU VM, pod or cluster answers. On `local`,\n`gce_tpu_vm` and `gke_pod`, where running something takes seconds, it also\nruns the software check (`framework/compute/env_check.py`) on the target, which\nchecks Python, `torch_tpu` and every package in `requirements-tpu.txt`\nagainst its version bounds. On `local` it does so only when\n`python_interpreter` is set, so that it checks the workload's Python rather\nthan the runtime's.\n\nOn `gke_job`, where running something means scheduling a Job, it can also\nsubmit a smoke-test Job that runs the same software check in your `image`:\nwith `--smoke-test`, which the agent asks you about first. That is the one\ncheck that shows\nthe nodes can pull the image and that it has `torch_tpu` and the packages\nthe agents need; it can take several minutes while a TPU node scales up. A\nJob whose image pulls have kept failing for a minute fails with the\nregistry's reason, rather than waiting out the timeout; a Job still\nqueued at the timeout leaves the image unverified rather than failed.\nPreflight also checks that an Artifact Registry `image` exists, as your\naccount.\n\nEach check prints one line, with how to fix a failure: a command, or the\nsection of this guide that covers it. Commands are filled in where the\ncluster is known: from a `gke_<project>_<location>_<cluster>` kubectl\ncontext, or else `GKE_CLUSTER` / `GKE_LOCATION` / `GKE_PROJECT`.\n\nThe installer checks only this machine: `python3`, the interpreter the\nagents' runtime uses, and the packages in `requirements-client.txt`. It\nwarns about what is missing and goes on. `--skip-host-check` skips this\ncheck.\n\nEach session starts by telling the agent whether the run's compute profile is\nset up, verified, failing or ready (checking a ready one again), and the next\ncompute command checks the target again after `environment.json` changes, so\nthe agent finds out about a broken setup before it tries to use it.\n\nOn `gke_pod` and `gke_job`, a cluster that refuses your gcloud account (403)\nis tried again with application default credentials\n(`gcloud auth application-default login`): a token from\n`gcloud auth application-default print-access-token`, passed to gcloud as\n`CLOUDSDK_AUTH_ACCESS_TOKEN`. If ADC is let in, compute commands use it\nand the checks say so; if it is refused too, you get an error naming both\nidentities and the commands that fix it.\n\nTo run the compute checks yourself, use `compute preflight` (`--json` for a\nmachine-readable report). It exits 1 when a check fails:\n\n```bash\npython3 ~/.tpu-agent-suite/packages/tpu-agent-suite@<version>/framework/runtime.py \\\n    compute --package tpu-agent-suite@<version> preflight\n```\n\nTo run the software check yourself -- on a `gke_xpk` image, say:\n\n```bash\npython3 framework/compute/env_check.py \\\n    --requirements package/requirements-tpu.txt\n```\n\nand on this machine:\n\n```bash\npython3 framework/compute/env_check.py --host \\\n    --requirements package/requirements-client.txt\n```\n\n---\n\n## Repository Overview (`README.md`)\n\n# TPU agent suite\n\nAutonomous TPU development and onboarding agents for Google Cloud TPUs.\n\nThis repository builds and distributes **TPU agent suite packages**: declarative bundles of multi-agent skills, routing protocols, and tools that compile and install natively across major agent harnesses\u2014including **Claude Code** and **Antigravity**, with **Codex** and **Cursor** coming soon.\n\n---\n\n## Architecture\n\n| Component | Path | Description |\n| :--- | :--- | :--- |\n| **Framework** | [`framework/`](framework/) | Compiler, installer, runtime and compute access layer. Lets us develop agents that run on multiple harnesses. |\n| **Package** | [`package/`](package/) | The TPU agent suite, released as `tpu-agent-suite`. |\n| **Evaluations** | [`eval/`](eval/) | Harbor suites and configs that score the package. |\n\nUsers talk to the **`tpu-agent`** skill. It routes each request to a\nspecialist: onboarding, profiling, a hardware check, cited\nTPU facts, and kernels. See the [design docs](docs/design/README.md) for how the framework\nand the suite are built.\n\n---\n\n## Quickstart\n\n### 1. Prerequisites\n\n- Python 3.12+ and the host-side packages the agents run with, XProf among\n  them, in a virtualenv (`pip install -r package/requirements-client.txt`;\n  see [docs/install.md](docs/install.md#1-host-prerequisites)). PyYAML alone\n  builds and installs the package, but leaves the agents without XProf.\n- Standalone CLI tools (backend-dependent):\n  - **`gcloud`** ([Google Cloud CLI](https://cloud.google.com/sdk/docs/install)) for Cloud TPU VMs, GCS staging, and GCP credentials (`gcloud auth login && gcloud auth application-default login`)\n  - **`kubectl`** ([Kubernetes CLI](https://kubernetes.io/docs/tasks/tools/)) and **`gke-gcloud-auth-plugin`** (`gcloud components install gke-gcloud-auth-plugin`) for GKE Pod, Job and XPK workloads (`gcloud container clusters get-credentials <CLUSTER_NAME> --region=<REGION>`)\n  - **`xpk`** ([Accelerated Processing Kit](https://github.com/google/xpk)) for multi-node GKE cluster workloads\n\nThe installer checks only the host-side Python packages. The first session\nsets up your backend and checks its tools, credentials and target (see\n[docs/install.md](docs/install.md#check-the-setup)).\n\n### 2. Build\n\nCompile the canonical agent package into native distributions for every supported harness:\n\n```bash\nmake build\n```\n\nThis writes `dist/<harness>/tpu-agent-suite/` for `claude-code` and `antigravity`.\n\n### 3. Install\n\nSee [`docs/install.md`](docs/install.md) ([headless / CI](docs/install.md#headless-installs-ci-containers)).\n\n### 4. Use\n\nEnsure your [virtual environment](docs/install.md#1-host-prerequisites) is activated whenever you use this agentic suite. Once inside the session, the `tpu-agent` skill is activated by any relevant natural language request, so no explicit invocation is needed. For example:\n\n- **Onboarding & Benchmarking**:\n  > *\"Onboard Qwen/Qwen3.8-27B to run as a vLLM inference server on Cloud TPU using the torch_tpu backend. Send it a test completion request, then benchmark it and report TTFT, ITL and throughput in a table.\"*\n\n- **Profiling**:\n  > *\"Analyze the XProf profile at /path/to/profile and identify memory bottlenecks and TPU compute utilization.\"*\n\n- **Kernel Optimization**:\n  > *\"Optimize this custom Pallas flash-attention kernel for TPU v6e and run a self-refinement benchmark loop.\"*\n\nWhat each request routes to, where workloads run, and where outputs land are in [`docs/using.md`](docs/using.md).\n\n---\n\n## Documentation\n\n| Guide | For |\n| :--- | :--- |\n| [`docs/install.md`](docs/install.md) | Host and TPU prerequisites, build, install scopes and backends, upgrade/uninstall |\n| [`docs/using.md`](docs/using.md) | What `tpu-agent` does with a request, and where its outputs go |\n| [`docs/developing.md`](docs/developing.md) | Dev environment, `make` loop, CI gates, adding agents, tpu-knowledge-base sources and eval contributions |\n| [`docs/design/`](docs/design/README.md) | How the framework and the suite are designed |\n| [`framework/README.md`](framework/README.md) | Compiler, installer, hooks, and runtime reference |\n| [`framework/compute/README.md`](framework/compute/README.md) | Compute CLI and backend drivers |\n| [`package/README.md`](package/README.md) | Converting an existing skill into a TPU agent suite package, step by step |\n| [`eval/README.md`](eval/README.md) | Running evaluations |\n| [`docs/using.md`](docs/using.md)  | Golden Prompts |\n\n---\n\n## Running Evaluations\n\nEvaluations are orchestrated using [Harbor](https://github.com/harbor-framework/harbor) and configured under [`eval/`](eval/):\n\n```bash\n# Set up evaluation virtual environment\n./eval/setup.sh\nsource eval/.venv/bin/activate\n\n# Verify evaluation configuration and dataset schemas\n./eval/verify.sh smoke-check\n\n# Run evaluation with Harbor\nexport GEMINI_API_KEY=\"your-api-key\"\n./eval/run.py --config claude-code/agent-suite --dataset tpu-hello-world\n```\n\n> **Automated PR Evaluations**: Evaluations are automatically triggered via GitHub Actions whenever a pull request is opened or updated that modifies relevant parts of the agent packages or evaluation datasets.\n\nFor the full list of configs, credentials, and the interactive sandbox, see [`eval/README.md`](eval/README.md).\n\n---\n\n## Contribution & Code Review Policy\n\nAll code contributions, tests, and agent packages live in this repository. Every pull request runs the following GitHub Actions workflows (defined in `.github/workflows/`):\n\n- **`make verify`**: manifest, delegation graph, schema, and knowledge base checks.\n- **`make test`**: framework and package test suites (translation parity per harness).\n- **`make build`**: distributions for all harnesses compile cleanly.\n- **`make lint`**: advisory content checks, reported as annotations.\n- **pre-commit**: formatting and static checks (`.pre-commit-config.yaml`).\n\nLocal setup for these checks, and the short path for common contributions, is in [`docs/developing.md`](docs/developing.md). Note that external contributions are not being accepted at this time (see [`CONTRIBUTING.md`](CONTRIBUTING.md)).\n\n---\n\n## Security\n\nThis project is eligible for the [Google Open Source Software Vulnerability Rewards Program (OSS VRP)](https://bughunters.google.com/about/rules/6521337925468160/google-open-source-software-vulnerability-reward-program-rules).\n\nIf you suspect a security vulnerability in this project, please report it via [g.co/vulnz](https://g.co/vulnz). Please do not report security vulnerabilities through public GitHub issues."
+  }
 }

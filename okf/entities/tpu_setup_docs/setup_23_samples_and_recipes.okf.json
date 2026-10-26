@@ -1,57 +1,182 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:setup_23_samples_and_recipes",
-  "@type": "DocumentationResource",
-  "name": "Cloud TPU samples and recipes",
-  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/samples",
-  "category": "TPU setup docs",
-  "categorySlug": "tpu_setup_docs",
-  "description": "Official index of TPU recipes, including MaxText LLM training examples and MaxDiffusion SDXL pretraining examples.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/samples",
-    "crawledAt": "2026-10-26T12:45:26.985891+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 20973
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Cloud TPU samples and recipes",
-      "documentedIn",
-      "https://docs.cloud.google.com/tpu/docs/samples"
-    ],
-    [
-      "Cloud TPU samples and recipes",
-      "belongsToCategory",
-      "tpu_setup_docs"
-    ],
-    [
-      "Cloud TPU samples and recipes",
-      "targetsPlatform",
-      "Google Cloud Platform"
-    ],
-    [
-      "Cloud TPU samples and recipes",
-      "managesHardware",
-      "Google Cloud TPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:setup_23_samples_and_recipes",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "setup_23_samples_and_recipes",
+    "name": "Cloud TPU samples and recipes",
+    "url": "https://docs.cloud.google.com/tpu/docs/samples",
+    "category": "tpu_setup_docs",
+    "description": "Official index of TPU recipes, including MaxText LLM training examples and MaxDiffusion SDXL pretraining examples.",
+    "char_count": 10419,
+    "word_count": 1014,
+    "section_count": 4,
+    "code_block_count": 0,
+    "table_count": 0,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.419797+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:setup_23_samples_and_recipes",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:setup_23_samples_and_recipes",
+        "predicate": "schema:name",
+        "object": "Cloud TPU samples and recipes"
+      },
+      {
+        "subject": "tpu_doc:setup_23_samples_and_recipes",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/tpu/docs/samples"
+      },
+      {
+        "subject": "tpu_doc:setup_23_samples_and_recipes",
+        "predicate": "schema:category",
+        "object": "tpu_setup_docs"
+      },
+      {
+        "subject": "tpu_doc:setup_23_samples_and_recipes",
+        "predicate": "schema:description",
+        "object": "Official index of TPU recipes, including MaxText LLM training examples and MaxDiffusion SDXL pretraining examples."
+      },
+      {
+        "subject": "tpu_doc:setup_23_samples_and_recipes",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:TPU7x"
+      },
+      {
+        "subject": "tpu_doc:setup_23_samples_and_recipes",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:setup_23_samples_and_recipes",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5p"
+      },
+      {
+        "subject": "tpu_doc:setup_23_samples_and_recipes",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:setup_23_samples_and_recipes",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:vLLM-TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:setup_23_samples_and_recipes",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:vLLM-TPU"
+      },
+      {
+        "subject": "tpu_doc:setup_23_samples_and_recipes",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:setup_23_samples_and_recipes",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:MaxText"
+      },
+      {
+        "subject": "tpu_doc:setup_23_samples_and_recipes",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:MaxDiffusion"
+      },
+      {
+        "subject": "tpu_doc:setup_23_samples_and_recipes",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTitan"
+      },
+      {
+        "subject": "tpu_doc:setup_23_samples_and_recipes",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:KubeRay"
+      },
+      {
+        "subject": "tpu_doc:setup_23_samples_and_recipes",
+        "predicate": "okf:hasSection",
+        "object": "Training with JAX"
+      },
+      {
+        "subject": "tpu_doc:setup_23_samples_and_recipes",
+        "predicate": "okf:hasSection",
+        "object": "Training with PyTorch"
+      },
+      {
+        "subject": "tpu_doc:setup_23_samples_and_recipes",
+        "predicate": "okf:hasSection",
+        "object": "Inference with JAX"
+      },
+      {
+        "subject": "tpu_doc:setup_23_samples_and_recipes",
+        "predicate": "okf:hasSection",
+        "object": "Inference with PyTorch"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Cloud TPU samples and recipes provides official guidance on Official index of TPU recipes, including MaxText LLM training examples and MaxDiffusion SDXL pretraining examples.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/samples",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Cloud TPU samples and recipes used for in Cloud TPU workflows?",
-      "answer": "Official index of TPU recipes, including MaxText LLM training examples and MaxDiffusion SDXL pretraining examples.",
-      "category": "tpu_setup_docs"
-    }
-  ],
-  "contentSummary": "Official index of TPU recipes, including MaxText LLM training examples and MaxDiffusion SDXL pretraining examples."
+  },
+  "structured_content": {
+    "summary": "Official index of TPU recipes, including MaxText LLM training examples and MaxDiffusion SDXL pretraining examples.",
+    "sections": [
+      {
+        "heading": "Training with JAX",
+        "level": 2,
+        "content": "* ### [Train Llama 3-8B using JAX, Ray, and GKE on Trillium Perform distributed training of the Llama 3-8B model on GKE using JAX, Ray Train, and TPU v6e (Trillium) with MaxText for optimized multi-host scaling.  ](https://cloud.google.com/kubernetes-engine/docs/tutorials/distributed-training-tpu)\n  * ### [Pretrain Llama 3.1-70B using GKE clusters on Ironwood Train the Llama 3.1-70B model on TPU7x (Ironwood) using the MaxText framework. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/llama3.1-70b)\n  * ### [Pretrain DeepSeek 3-671B using GKE clusters on Ironwood Train the DeepSeek 3-671B model on TPU7x using optimized recipes for large-scale Mixture-of-Experts (MoE) architectures. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/deepseek3-671b)\n  * ### [Pretrain GPT OSS-120B using GKE clusters on Ironwood Train the GPT OSS-120B reasoning model on TPU7x using optimized recipes for large-scale distributed training. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/gpt-oss-120b)\n  * ### [Pretrain Qwen 3-235B using GKE clusters on Ironwood Train the Qwen 3-235B-A22B MoE model on TPU7x using optimized recipes for high-performance reasoning. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/qwen3-235b-a22b)\n  * ### [Pretrain Wan 2.1-14B using GKE clusters on Ironwood Train the Wan 2.1-14B video generation model on TPU7x using optimized recipes for high-performance video synthesis. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/wan2.1-14b)\n  * ### [Pretrain GPT3-175B using GKE clusters on Trillium Train the GPT3-175B model on TPU v6e using MaxText and optimized recipes for large-scale, cost-effective performance. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/GPT3-175B-MaxText)\n  * ### [Pretrain Gemma3-12B using GKE clusters on Trillium Train the Gemma3-12B model on TPU v6e using MaxText and optimized recipes for high-performance open-model development. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Gemma3-12B-MaxText)\n  * ### [Pretrain Llama 3.1-70B using GKE clusters on Trillium Train Llama 3.1-70B on TPU v6e using MaxText and optimized recipes for high-throughput, large-scale model training. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Llama3.1-70B-MaxText)\n  * ### [Pretrain Llama 3.1-8B using GKE clusters on Trillium Train Llama 3.1-8B using MaxText on TPU v6e with this optimized recipe for scalable and high-performance pre-training. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Llama3.1-8B-MaxText)\n  * ### [Pretrain Mixtral-8x22B using GKE clusters on Trillium Train Mixtral-8x22B on TPU v6e using MaxText for optimized performance and efficiency. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Mixtral-8x22B-MaxText)\n  * ### [Pretrain Mixtral-8x7B using GKE clusters on Trillium Train Mixtral-8x7B using MaxText on TPU v6e with optimized configurations for high-throughput MoE performance on Google Cloud. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Mixtral-8x7B-MaxText)\n  * ### [Pretrain DeepSeek 3-671B using GKE clusters on v5p Train and deploy the DeepSeek 3-671B model on TPU v5p using MaxText for optimized large-scale performance. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/v5p/DeepSeek3-671B-MaxText)\n  * ### [Pretrain GPT3-175B using GKE clusters on v5p Train the GPT3-175B model on TPU v5p using MaxText with optimized configurations for large-scale distributed training. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/v5p/GPT3-175B-MaxText)\n  * ### [Pretrain Mixtral-8x7B using GKE clusters on v5p Train Mixtral-8x7B on TPU v5p using MaxText with optimized configurations for high-performance MoE workloads. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/v5p/Mixtral-8X7B-Maxtext)\n  * ### [Pretrain SDXL using GKE clusters on v5p Train and scale Stable Diffusion XL (SDXL) on TPU v5p using MaxDiffusion for high-performance generative AI workloads. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/v5p/SDXL-MaxDiffusion)"
+      },
+      {
+        "heading": "Training with PyTorch",
+        "level": 2,
+        "content": "* ### [Pretrain Qwen 3-32B with TorchTitan using GKE clusters on Ironwood Train the Qwen 3-32B model on TPU7x (Ironwood) using PyTorch, TorchTPU, and the TorchTitan framework. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/torchtitan/qwen3-32b/tpu7x-4x4x4/cluster_toolkit)\n  * ### [Pretrain Qwen 3-30B-A3B with TorchTitan using GKE clusters on Ironwood Train the Qwen 3-30B-A3B Mixture-of-Experts (MoE) model on TPU7x using PyTorch, TorchTPU, and TorchTitan. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/torchtitan/qwen3-30b-a3b/tpu7x-4x4x4/cluster_toolkit)\n  * ### [Pretrain Qwen 3-8B with TorchTitan using GKE clusters on Ironwood Train the Qwen 3-8B model on TPU7x using PyTorch, TorchTPU, and TorchTitan for scalable distributed training. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/torchtitan/qwen3-8b/tpu7x-2x2x2/cluster_toolkit)\n  * ### [Pretrain Muse Glimmer 30B with TorchTitan using GKE clusters on Ironwood Train the Muse Glimmer 30B model on TPU7x using PyTorch, TorchTPU, and TorchTitan. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/torchtitan/muse_glimmer_30b/tpu7x-4x4x4/cluster_toolkit)\n  * ### [Pretrain Llama 3-70B with TorchTitan on Ironwood Train the Llama 3-70B model on TPU7x (Ironwood) using PyTorch, TorchTPU, and TorchTitan. ](https://github.com/google-pytorch/torchtitan/tree/main/torchtitan/experiments/tpu/recipes/ironwood/llama3-70b/tpu7x-64)\n  * ### [Pretrain Llama 3-8B with TorchTitan on Trillium Train the Llama 3-8B model on TPU v6e (Trillium) using PyTorch, TorchTPU, and TorchTitan. ](https://github.com/google-pytorch/torchtitan/tree/main/torchtitan/experiments/tpu/recipes/trillium/llama3-8b/v6e-8)"
+      },
+      {
+        "heading": "Inference with JAX",
+        "level": 2,
+        "content": "* ### [Serve Llama 3.1-70B using GKE and vLLM on Trillium Serve LLMs on GKE using TPU v6e and vLLM, featuring optimized autoscaling and high-performance model serving on Google Cloud.  ](https://cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu)\n  * ### [Serve LLMs using GKE with KubeRay Serve an LLM using TPUs on GKE with the Ray Operator add-on and the vLLM serving framework.  ](https://cloud.google.com/kubernetes-engine/docs/tutorials/serve-llm-tpu-ray)\n  * ### [Serve open LLMs using GKE with Terraform Provision a GKE inference environment and deploy open LLMs using TPUs and a pre-configured Terraform architecture.  ](https://cloud.google.com/kubernetes-engine/docs/tutorials/serve-open-models-tpu-terraform)\n  * ### [Serve Stable Diffusion XL (SDXL) using GKE Serve Stable Diffusion XL (SDXL) on GKE using Cloud TPUs and the MaxDiffusion framework for high-performance image generation.  ](https://cloud.google.com/kubernetes-engine/docs/tutorials/serve-sdxl-tpu)\n  * ### [Serve GPT OSS-120B with vLLM using GKE clusters on Ironwood Run high-performance inference for GPT-OSS models on TPU7x using vLLM for optimized throughput and low-latency serving on Google Cloud. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/GPT-OSS)\n  * ### [Serve Qwen3-Coder-480B with vLLM using GKE clusters on Ironwood Serve Qwen3-Coder-480B-A35B on TPU7x using vLLM for optimized, high-throughput code generation and inference. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/Qwen3-Coder-480B-A35B)\n  * ### [Serve Llama 3.1-8B with v\ufeffLLM on Trillium Serve Llama 3.1-8B on TPU v6e using vLLM for optimized, low-latency inference and high-throughput serving. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/Llama3.x)\n  * ### [Serve Qwen 3 with vLLM on Trillium Serve Qwen 3 models on TPU v6e using vLLM for high-performance, scalable inference and optimized throughput. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/Qwen3)\n  * ### [Serve Qwen2.5-32B with vLLM on Trillium Serve the Qwen2.5-32B model on TPU v6e using vLLM for optimized, high-throughput inference. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/Qwen2.5-32B)\n  * ### [Serve Qwen2.5-VL with v\ufeffLLM on Trillium Serve Qwen2.5-VL vision-language models on TPU v6e using vLLM for optimized, high-performance multimodal inference. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/Qwen2.5-VL)"
+      },
+      {
+        "heading": "Inference with PyTorch",
+        "level": 2,
+        "content": "* ### [Serve Qwen 3.5-397B with vLLM-TorchTPU using GKE clusters on Ironwood Serve the Qwen 3.5-397B model on TPU7x using PyTorch and vLLM-TorchTPU for multi-host distributed inference. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/vLLM-TorchTPU/Qwen3.5-397B/multi-host)\n  * ### [Serve Gemma 4-26B with vLLM-TorchTPU on Ironwood Serve the Gemma 4-26B model on TPU7x using PyTorch and the vLLM-TorchTPU backend for high-throughput inference. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/vLLM-TorchTPU/Gemma4-26B)\n  * ### [Serve GLM-5.2 with vLLM-TorchTPU on Ironwood Serve the GLM-5.2 model on TPU7x using PyTorch and the vLLM-TorchTPU backend. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/vLLM-TorchTPU/GLM-5.2)\n  * ### [Serve Qwen 3-32B with vLLM-TorchTPU on Trillium Serve the Qwen 3-32B model on TPU v6e (Trillium) using PyTorch and the vLLM-TorchTPU backend. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/vLLM-TorchTPU/Qwen3-32B/single-host)\n  * ### [Serve Qwen 3.5-35B-A3B with vLLM-TorchTPU on Trillium Serve the Qwen 3.5-35B-A3B Mixture-of-Experts (MoE) model on TPU v6e using PyTorch and the vLLM-TorchTPU backend. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/vLLM-TorchTPU/Qwen3.5-35B-A3B/single-host)\n  * ### [Serve Gemma 4-26B with vLLM-TorchTPU on Trillium Serve the Gemma 4-26B model on TPU v6e using PyTorch and the vLLM-TorchTPU backend. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/vLLM-TorchTPU/Gemma4-26B)"
+      }
+    ],
+    "code_examples": [],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Cloud TPU samples and recipes' (https://docs.cloud.google.com/tpu/docs/samples)?",
+        "answer": "Official index of TPU recipes, including MaxText LLM training examples and MaxDiffusion SDXL pretraining examples."
+      },
+      {
+        "question": "How does 'Cloud TPU samples and recipes' handle: Training with JAX?",
+        "answer": "* ### [Train Llama 3-8B using JAX, Ray, and GKE on Trillium Perform distributed training of the Llama 3-8B model on GKE using JAX, Ray Train, and TPU v6e (Trillium) with MaxText for optimized multi-host scaling.  ](https://cloud.google.com/kubernetes-engine/docs/tutorials/distributed-training-tpu)\n  * ### [Pretrain Llama 3.1-70B using GKE clusters on Ironwood Train the Llama 3.1-70B model on TPU7x (Ironwood) using the MaxText framework. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/llama3.1-70b)\n  * ### [Pretrain DeepSeek 3-671B using GKE clusters on Ironwood Train the DeepSeek 3-671B model on TPU7x using optimized recipes for large-scale Mixture-of-Experts (MoE) architectures. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/deepseek3-671b)\n  * ### [Pretrain GPT OSS-120B using GKE clusters on Ironwood Train the GPT OSS-120B reasoning model on TPU7x using optimized recipes for large-scale distributed training. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/gpt-oss-120b)\n  * ### [Pretrain Qwen 3-235B using GKE clusters on Ironwood Train the Qwen 3-235B-A22B MoE model on TPU7x using optimized "
+      },
+      {
+        "question": "How does 'Cloud TPU samples and recipes' handle: Training with PyTorch?",
+        "answer": "* ### [Pretrain Qwen 3-32B with TorchTitan using GKE clusters on Ironwood Train the Qwen 3-32B model on TPU7x (Ironwood) using PyTorch, TorchTPU, and the TorchTitan framework. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/torchtitan/qwen3-32b/tpu7x-4x4x4/cluster_toolkit)\n  * ### [Pretrain Qwen 3-30B-A3B with TorchTitan using GKE clusters on Ironwood Train the Qwen 3-30B-A3B Mixture-of-Experts (MoE) model on TPU7x using PyTorch, TorchTPU, and TorchTitan. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/torchtitan/qwen3-30b-a3b/tpu7x-4x4x4/cluster_toolkit)\n  * ### [Pretrain Qwen 3-8B with TorchTitan using GKE clusters on Ironwood Train the Qwen 3-8B model on TPU7x using PyTorch, TorchTPU, and TorchTitan for scalable distributed training. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/torchtitan/qwen3-8b/tpu7x-2x2x2/cluster_toolkit)\n  * ### [Pretrain Muse Glimmer 30B with TorchTitan using GKE clusters on Ironwood Train the Muse Glimmer 30B model on TPU7x using PyTorch, TorchTPU, and TorchTitan. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/torchtitan/muse_glimmer"
+      },
+      {
+        "question": "How does 'Cloud TPU samples and recipes' handle: Inference with JAX?",
+        "answer": "* ### [Serve Llama 3.1-70B using GKE and vLLM on Trillium Serve LLMs on GKE using TPU v6e and vLLM, featuring optimized autoscaling and high-performance model serving on Google Cloud.  ](https://cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu)\n  * ### [Serve LLMs using GKE with KubeRay Serve an LLM using TPUs on GKE with the Ray Operator add-on and the vLLM serving framework.  ](https://cloud.google.com/kubernetes-engine/docs/tutorials/serve-llm-tpu-ray)\n  * ### [Serve open LLMs using GKE with Terraform Provision a GKE inference environment and deploy open LLMs using TPUs and a pre-configured Terraform architecture.  ](https://cloud.google.com/kubernetes-engine/docs/tutorials/serve-open-models-tpu-terraform)\n  * ### [Serve Stable Diffusion XL (SDXL) using GKE Serve Stable Diffusion XL (SDXL) on GKE using Cloud TPUs and the MaxDiffusion framework for high-performance image generation.  ](https://cloud.google.com/kubernetes-engine/docs/tutorials/serve-sdxl-tpu)\n  * ### [Serve GPT OSS-120B with vLLM using GKE clusters on Ironwood Run high-performance inference for GPT-OSS models on TPU7x using vLLM for optimized throughput and low-latency serving on Google Cloud. ](ht"
+      },
+      {
+        "question": "How does 'Cloud TPU samples and recipes' handle: Inference with PyTorch?",
+        "answer": "* ### [Serve Qwen 3.5-397B with vLLM-TorchTPU using GKE clusters on Ironwood Serve the Qwen 3.5-397B model on TPU7x using PyTorch and vLLM-TorchTPU for multi-host distributed inference. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/vLLM-TorchTPU/Qwen3.5-397B/multi-host)\n  * ### [Serve Gemma 4-26B with vLLM-TorchTPU on Ironwood Serve the Gemma 4-26B model on TPU7x using PyTorch and the vLLM-TorchTPU backend for high-throughput inference. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/vLLM-TorchTPU/Gemma4-26B)\n  * ### [Serve GLM-5.2 with vLLM-TorchTPU on Ironwood Serve the GLM-5.2 model on TPU7x using PyTorch and the vLLM-TorchTPU backend. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/vLLM-TorchTPU/GLM-5.2)\n  * ### [Serve Qwen 3-32B with vLLM-TorchTPU on Trillium Serve the Qwen 3-32B model on TPU v6e (Trillium) using PyTorch and the vLLM-TorchTPU backend. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/vLLM-TorchTPU/Qwen3-32B/single-host)\n  * ### [Serve Qwen 3.5-35B-A3B with vLLM-TorchTPU on Trillium Serve the Qwen 3.5-35B-A3B Mixture-of"
+      }
+    ],
+    "full_markdown": "#  Samples\n## Training with JAX\n  * ### [Train Llama 3-8B using JAX, Ray, and GKE on Trillium Perform distributed training of the Llama 3-8B model on GKE using JAX, Ray Train, and TPU v6e (Trillium) with MaxText for optimized multi-host scaling.  ](https://cloud.google.com/kubernetes-engine/docs/tutorials/distributed-training-tpu)\n  * ### [Pretrain Llama 3.1-70B using GKE clusters on Ironwood Train the Llama 3.1-70B model on TPU7x (Ironwood) using the MaxText framework. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/llama3.1-70b)\n  * ### [Pretrain DeepSeek 3-671B using GKE clusters on Ironwood Train the DeepSeek 3-671B model on TPU7x using optimized recipes for large-scale Mixture-of-Experts (MoE) architectures. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/deepseek3-671b)\n  * ### [Pretrain GPT OSS-120B using GKE clusters on Ironwood Train the GPT OSS-120B reasoning model on TPU7x using optimized recipes for large-scale distributed training. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/gpt-oss-120b)\n  * ### [Pretrain Qwen 3-235B using GKE clusters on Ironwood Train the Qwen 3-235B-A22B MoE model on TPU7x using optimized recipes for high-performance reasoning. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/qwen3-235b-a22b)\n  * ### [Pretrain Wan 2.1-14B using GKE clusters on Ironwood Train the Wan 2.1-14B video generation model on TPU7x using optimized recipes for high-performance video synthesis. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/wan2.1-14b)\n  * ### [Pretrain GPT3-175B using GKE clusters on Trillium Train the GPT3-175B model on TPU v6e using MaxText and optimized recipes for large-scale, cost-effective performance. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/GPT3-175B-MaxText)\n  * ### [Pretrain Gemma3-12B using GKE clusters on Trillium Train the Gemma3-12B model on TPU v6e using MaxText and optimized recipes for high-performance open-model development. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Gemma3-12B-MaxText)\n  * ### [Pretrain Llama 3.1-70B using GKE clusters on Trillium Train Llama 3.1-70B on TPU v6e using MaxText and optimized recipes for high-throughput, large-scale model training. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Llama3.1-70B-MaxText)\n  * ### [Pretrain Llama 3.1-8B using GKE clusters on Trillium Train Llama 3.1-8B using MaxText on TPU v6e with this optimized recipe for scalable and high-performance pre-training. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Llama3.1-8B-MaxText)\n  * ### [Pretrain Mixtral-8x22B using GKE clusters on Trillium Train Mixtral-8x22B on TPU v6e using MaxText for optimized performance and efficiency. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Mixtral-8x22B-MaxText)\n  * ### [Pretrain Mixtral-8x7B using GKE clusters on Trillium Train Mixtral-8x7B using MaxText on TPU v6e with optimized configurations for high-throughput MoE performance on Google Cloud. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/trillium/Mixtral-8x7B-MaxText)\n  * ### [Pretrain DeepSeek 3-671B using GKE clusters on v5p Train and deploy the DeepSeek 3-671B model on TPU v5p using MaxText for optimized large-scale performance. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/v5p/DeepSeek3-671B-MaxText)\n  * ### [Pretrain GPT3-175B using GKE clusters on v5p Train the GPT3-175B model on TPU v5p using MaxText with optimized configurations for large-scale distributed training. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/v5p/GPT3-175B-MaxText)\n  * ### [Pretrain Mixtral-8x7B using GKE clusters on v5p Train Mixtral-8x7B on TPU v5p using MaxText with optimized configurations for high-performance MoE workloads. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/v5p/Mixtral-8X7B-Maxtext)\n  * ### [Pretrain SDXL using GKE clusters on v5p Train and scale Stable Diffusion XL (SDXL) on TPU v5p using MaxDiffusion for high-performance generative AI workloads. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/v5p/SDXL-MaxDiffusion)\n\n\n## Training with PyTorch\n  * ### [Pretrain Qwen 3-32B with TorchTitan using GKE clusters on Ironwood Train the Qwen 3-32B model on TPU7x (Ironwood) using PyTorch, TorchTPU, and the TorchTitan framework. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/torchtitan/qwen3-32b/tpu7x-4x4x4/cluster_toolkit)\n  * ### [Pretrain Qwen 3-30B-A3B with TorchTitan using GKE clusters on Ironwood Train the Qwen 3-30B-A3B Mixture-of-Experts (MoE) model on TPU7x using PyTorch, TorchTPU, and TorchTitan. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/torchtitan/qwen3-30b-a3b/tpu7x-4x4x4/cluster_toolkit)\n  * ### [Pretrain Qwen 3-8B with TorchTitan using GKE clusters on Ironwood Train the Qwen 3-8B model on TPU7x using PyTorch, TorchTPU, and TorchTitan for scalable distributed training. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/torchtitan/qwen3-8b/tpu7x-2x2x2/cluster_toolkit)\n  * ### [Pretrain Muse Glimmer 30B with TorchTitan using GKE clusters on Ironwood Train the Muse Glimmer 30B model on TPU7x using PyTorch, TorchTPU, and TorchTitan. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/torchtitan/muse_glimmer_30b/tpu7x-4x4x4/cluster_toolkit)\n  * ### [Pretrain Llama 3-70B with TorchTitan on Ironwood Train the Llama 3-70B model on TPU7x (Ironwood) using PyTorch, TorchTPU, and TorchTitan. ](https://github.com/google-pytorch/torchtitan/tree/main/torchtitan/experiments/tpu/recipes/ironwood/llama3-70b/tpu7x-64)\n  * ### [Pretrain Llama 3-8B with TorchTitan on Trillium Train the Llama 3-8B model on TPU v6e (Trillium) using PyTorch, TorchTPU, and TorchTitan. ](https://github.com/google-pytorch/torchtitan/tree/main/torchtitan/experiments/tpu/recipes/trillium/llama3-8b/v6e-8)\n\n\n## Inference with JAX\n  * ### [Serve Llama 3.1-70B using GKE and vLLM on Trillium Serve LLMs on GKE using TPU v6e and vLLM, featuring optimized autoscaling and high-performance model serving on Google Cloud.  ](https://cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu)\n  * ### [Serve LLMs using GKE with KubeRay Serve an LLM using TPUs on GKE with the Ray Operator add-on and the vLLM serving framework.  ](https://cloud.google.com/kubernetes-engine/docs/tutorials/serve-llm-tpu-ray)\n  * ### [Serve open LLMs using GKE with Terraform Provision a GKE inference environment and deploy open LLMs using TPUs and a pre-configured Terraform architecture.  ](https://cloud.google.com/kubernetes-engine/docs/tutorials/serve-open-models-tpu-terraform)\n  * ### [Serve Stable Diffusion XL (SDXL) using GKE Serve Stable Diffusion XL (SDXL) on GKE using Cloud TPUs and the MaxDiffusion framework for high-performance image generation.  ](https://cloud.google.com/kubernetes-engine/docs/tutorials/serve-sdxl-tpu)\n  * ### [Serve GPT OSS-120B with vLLM using GKE clusters on Ironwood Run high-performance inference for GPT-OSS models on TPU7x using vLLM for optimized throughput and low-latency serving on Google Cloud. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/GPT-OSS)\n  * ### [Serve Qwen3-Coder-480B with vLLM using GKE clusters on Ironwood Serve Qwen3-Coder-480B-A35B on TPU7x using vLLM for optimized, high-throughput code generation and inference. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/Qwen3-Coder-480B-A35B)\n  * ### [Serve Llama 3.1-8B with v\ufeffLLM on Trillium Serve Llama 3.1-8B on TPU v6e using vLLM for optimized, low-latency inference and high-throughput serving. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/Llama3.x)\n  * ### [Serve Qwen 3 with vLLM on Trillium Serve Qwen 3 models on TPU v6e using vLLM for high-performance, scalable inference and optimized throughput. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/Qwen3)\n  * ### [Serve Qwen2.5-32B with vLLM on Trillium Serve the Qwen2.5-32B model on TPU v6e using vLLM for optimized, high-throughput inference. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/Qwen2.5-32B)\n  * ### [Serve Qwen2.5-VL with v\ufeffLLM on Trillium Serve Qwen2.5-VL vision-language models on TPU v6e using vLLM for optimized, high-performance multimodal inference. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/Qwen2.5-VL)\n\n\n## Inference with PyTorch\n  * ### [Serve Qwen 3.5-397B with vLLM-TorchTPU using GKE clusters on Ironwood Serve the Qwen 3.5-397B model on TPU7x using PyTorch and vLLM-TorchTPU for multi-host distributed inference. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/vLLM-TorchTPU/Qwen3.5-397B/multi-host)\n  * ### [Serve Gemma 4-26B with vLLM-TorchTPU on Ironwood Serve the Gemma 4-26B model on TPU7x using PyTorch and the vLLM-TorchTPU backend for high-throughput inference. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/vLLM-TorchTPU/Gemma4-26B)\n  * ### [Serve GLM-5.2 with vLLM-TorchTPU on Ironwood Serve the GLM-5.2 model on TPU7x using PyTorch and the vLLM-TorchTPU backend. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/vLLM-TorchTPU/GLM-5.2)\n  * ### [Serve Qwen 3-32B with vLLM-TorchTPU on Trillium Serve the Qwen 3-32B model on TPU v6e (Trillium) using PyTorch and the vLLM-TorchTPU backend. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/vLLM-TorchTPU/Qwen3-32B/single-host)\n  * ### [Serve Qwen 3.5-35B-A3B with vLLM-TorchTPU on Trillium Serve the Qwen 3.5-35B-A3B Mixture-of-Experts (MoE) model on TPU v6e using PyTorch and the vLLM-TorchTPU backend. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/vLLM-TorchTPU/Qwen3.5-35B-A3B/single-host)\n  * ### [Serve Gemma 4-26B with vLLM-TorchTPU on Trillium Serve the Gemma 4-26B model on TPU v6e using PyTorch and the vLLM-TorchTPU backend. ](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM/vLLM-TorchTPU/Gemma4-26B)"
+  }
 }

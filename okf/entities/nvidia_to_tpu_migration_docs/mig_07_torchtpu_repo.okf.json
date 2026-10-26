@@ -1,63 +1,326 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:mig_07_torchtpu_repo",
-  "@type": "DocumentationResource",
-  "name": "TorchTPU repository (official installation)",
-  "canonicalUrl": "https://github.com/google-pytorch/torch_tpu",
-  "category": "Nvidia to tpu migration docs",
-  "categorySlug": "nvidia_to_tpu_migration_docs",
-  "description": "Official source, supported Python versions, released packages, and installation instructions.",
-  "provenance": {
-    "sourceUrl": "https://github.com/google-pytorch/torch_tpu",
-    "crawledAt": "2026-10-26T12:48:04.797846+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 27700
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "TorchTPU repository (official installation)",
-      "documentedIn",
-      "https://github.com/google-pytorch/torch_tpu"
-    ],
-    [
-      "TorchTPU repository (official installation)",
-      "belongsToCategory",
-      "nvidia_to_tpu_migration_docs"
-    ],
-    [
-      "TorchTPU repository (official installation)",
-      "supportsWorkflow",
-      "CUDA to TPU Code Migration"
-    ],
-    [
-      "TorchTPU repository (official installation)",
-      "primaryFramework",
-      "TorchTPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:mig_07_torchtpu_repo",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "mig_07_torchtpu_repo",
+    "name": "TorchTPU repository (official installation)",
+    "url": "https://github.com/google-pytorch/torch_tpu",
+    "category": "nvidia_to_tpu_migration_docs",
+    "description": "Official source, supported Python versions, released packages, and installation instructions.",
+    "char_count": 7900,
+    "word_count": 934,
+    "section_count": 15,
+    "code_block_count": 13,
+    "table_count": 0,
+    "cli_command_count": 5,
+    "indexed_at": "2026-10-26T14:46:54.754325+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:mig_07_torchtpu_repo",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:mig_07_torchtpu_repo",
+        "predicate": "schema:name",
+        "object": "TorchTPU repository (official installation)"
+      },
+      {
+        "subject": "tpu_doc:mig_07_torchtpu_repo",
+        "predicate": "schema:url",
+        "object": "https://github.com/google-pytorch/torch_tpu"
+      },
+      {
+        "subject": "tpu_doc:mig_07_torchtpu_repo",
+        "predicate": "schema:category",
+        "object": "nvidia_to_tpu_migration_docs"
+      },
+      {
+        "subject": "tpu_doc:mig_07_torchtpu_repo",
+        "predicate": "schema:description",
+        "object": "Official source, supported Python versions, released packages, and installation instructions."
+      },
+      {
+        "subject": "tpu_doc:mig_07_torchtpu_repo",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:mig_07_torchtpu_repo",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:mig_07_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "TorchTPU (`google-pytorch/torch_tpu`)"
+      },
+      {
+        "subject": "tpu_doc:mig_07_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "Description"
+      },
+      {
+        "subject": "tpu_doc:mig_07_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "Features"
+      },
+      {
+        "subject": "tpu_doc:mig_07_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "User Guide and Interactive Notebooks"
+      },
+      {
+        "subject": "tpu_doc:mig_07_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "Installation"
+      },
+      {
+        "subject": "tpu_doc:mig_07_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "Install via pip"
+      },
+      {
+        "subject": "tpu_doc:mig_07_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "Build from source"
+      },
+      {
+        "subject": "tpu_doc:mig_07_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "The extra-index-url provides the CPU version of torch rather than the default CUDA build."
+      },
+      {
+        "subject": "tpu_doc:mig_07_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "Getting Started"
+      },
+      {
+        "subject": "tpu_doc:mig_07_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "Dependencies"
+      },
+      {
+        "subject": "tpu_doc:mig_07_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "Bazel setup"
+      },
+      {
+        "subject": "tpu_doc:mig_07_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "VSCode `clangd` Setup"
+      },
+      {
+        "subject": "tpu_doc:mig_07_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "Contributing"
+      },
+      {
+        "subject": "tpu_doc:mig_07_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "Star History"
+      },
+      {
+        "subject": "tpu_doc:mig_07_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "License"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "TorchTPU repository (official installation) provides official guidance on Official source, supported Python versions, released packages, and installation instructions.",
-      "confidence": 1.0,
-      "source": "https://github.com/google-pytorch/torch_tpu",
-      "verified": true
-    },
-    {
-      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
-      "confidence": 1.0,
-      "source": "https://github.com/google-pytorch/torch_tpu",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is TorchTPU repository (official installation) used for in Cloud TPU workflows?",
-      "answer": "Official source, supported Python versions, released packages, and installation instructions.",
-      "category": "nvidia_to_tpu_migration_docs"
-    }
-  ],
-  "contentSummary": "Official source, supported Python versions, released packages, and installation instructions."
+  },
+  "structured_content": {
+    "summary": "Official source, supported Python versions, released packages, and installation instructions.",
+    "sections": [
+      {
+        "heading": "TorchTPU (`google-pytorch/torch_tpu`)",
+        "level": 1,
+        "content": "<img src=\"docs/images/torchtpu_logo.avif\" alt=\"TorchTPU Logo\" style=\"width: 60%;\">"
+      },
+      {
+        "heading": "Description",
+        "level": 2,
+        "content": "This project provides a PyTorch backend for Google's Tensor Processing Units\n(TPUs), enabling users to run PyTorch models and operations on TPU devices. It\nincludes custom ATen kernels for various PyTorch operations, a compilation cache\nfor optimizing execution, and examples for distributed training and model\ninference."
+      },
+      {
+        "heading": "Features",
+        "level": 2,
+        "content": "*   PyTorch ATen kernel implementation for TPU.\n*   Compilation cache for optimized execution of XLA computations.\n*   Support for distributed training (Data Parallelism, Tensor Parallelism).\n*   Examples for various models (Llama, Qwen, ResNet, DLRM, minGPT, UNet).\n*   Integration with `torch.compile()` for graph mode execution.\n*   Utilities for debugging and benchmarking."
+      },
+      {
+        "heading": "User Guide and Interactive Notebooks",
+        "level": 2,
+        "content": "A user guide is available at\n[https://torchtpu.readthedocs.io/](https://torchtpu.readthedocs.io/). This is a\nstatic version of the interactive notebooks. They are available in the docs\nfolder.\n\nThe notebooks are Marimo (similar to Jupyter). They can be run with `marimo edit\nfile.py` and then you can access them in your browser. You will need to be\nrunning this from a TPU VM, a v6e GCE instance is easiest."
+      },
+      {
+        "heading": "Installation",
+        "level": 2,
+        "content": "The same instructions are available in the user guide linked above.\n\n\n\nTorchTPU's Python version support policy matches\n[PyTorch's Release Compatibility Matrix](https://github.com/pytorch/pytorch/blob/main/RELEASE.md#release-compatibility-matrix).\nCurrently, **Python 3.11+** is supported. See the\n[Python Version Support Policy](docs/developers/python_support_policy.md) for\nmore details.\n\n\n\nFirst create a Python virtual environment:\n\n```bash\npython -m venv .venv\nsource .venv/bin/activate\n```\n\nor, with `uv`\n\n```bash\nuv venv .venv\nsource .venv/bin/activate\n```"
+      },
+      {
+        "heading": "Install via pip",
+        "level": 3,
+        "content": "Install the latest public release\n([0.2.0 on PyPI](https://pypi.org/project/torch-tpu/0.2.0/)) (for `uv` prepend\n`uv` to all `pip` commands):\n\n```bash\npip install torch_tpu==0.2.0 --extra-index-url https://download.pytorch.org/whl/cpu\n```"
+      },
+      {
+        "heading": "Build from source",
+        "level": 3,
+        "content": "Wheels can be built via:\n\n```bash\nbazel build --config=wheel_common //ci/wheel:torch_tpu_wheel\n```\n\nAll OSS Bazel builds default to optimized mode (`-c opt`) automatically via\n`.bazelrc`. Unoptimized builds (`-c fastbuild`, `-c dbg`) can degrade\nperformance and are not used for wheel builds. If you are developing or\ndebugging C++ code and explicitly want an unoptimized wheel, pass\n`--//:allow_unoptimized_wheel=True`:\n\n```bash\nbazel build -c dbg --config=wheel_common //ci/wheel:torch_tpu_wheel \\\n    --//:allow_unoptimized_wheel=True\n```\n\n`--config=wheel_common` is required, and the build fails at build time without\nit. The config sets `--//:wheel_build=True`, which routes the shared XLA/MLIR\nbackend through the `torch_version`-reset transition so that pywrap factors it\ninto a single `libxla_base.so`; built without the flag, every per-version common\nships its own copy of the backend and the resulting wheel aborts on `import\ntorch` with duplicate static registrations.\n\n`wheel_common` also turns on the Remote Build Execution (RBE) remote cache and\nremote executor. If you do not have RBE credentials, append `--config=no_rbe` to\nstrip those flags back out:\n\n```bash\nbazel build --config=wheel_common //ci/wheel:torch_tpu_wheel --config=no_rbe\n```\n\nThe order matters here: `--config=no_rbe` has to come after\n`--config=wheel_common`, because the later config is the one that wins for the\nremote-cache and remote-executor flags they both set.\n\nInstall wheel via:\n\n```bash\ncd <path_to_repo>\npython -m venv .venv; source .venv/bin/activate"
+      },
+      {
+        "heading": "The extra-index-url provides the CPU version of torch rather than the default CUDA build.",
+        "level": 1,
+        "content": "pip install ../bazel-bin/ci/wheel/*.whl --extra-index-url https://download.pytorch.org/whl/cpu\n```\n\nNote that installing without `--extra-index-url\nhttps://download.pytorch.org/whl/cpu` will install the CUDA version of `torch`;\npass `--extra-index-url` as shown above or install the CPU build separately."
+      },
+      {
+        "heading": "Getting Started",
+        "level": 2,
+        "content": "Some pointers to get you started:\n\n*   [PyTorch: Official PyTorch documentation](https://github.com/pytorch/pytorch)\n*   [Tutorials and examples: easy to understand PyTorch code using TorchTPU](https://torchtpu.readthedocs.io/)\n*   [Public APIs: the TorchTPU APIs that you can use](./docs/public_apis.md)"
+      },
+      {
+        "heading": "Dependencies",
+        "level": 2,
+        "content": "The project uses Bazel for dependency management. Key Python dependencies are:\n\nTBD"
+      },
+      {
+        "heading": "Bazel setup",
+        "level": 2,
+        "content": "This project uses Bazel for building and dependency management.\n\nTo install Bazel, we actually install Bazelisk, which is a transparent wrapper\nthat handles downloading and installing Bazel itself.\n\nThere are several ways to install Bazelisk. Here are some common ways:\n\n*   If you have Go installed:\n\n    ```\n    go install github.com/bazelbuild/bazelisk@latest\n    ```\n\n*   Download the binary directly:\n\n    ```\n    wget -O ~/bin/bazel https://github.com/bazelbuild/bazelisk/releases/download/v1.27.0/bazelisk-linux-amd64\n    ```\n\nSee the\n[Bazelisk README](https://github.com/bazelbuild/bazelisk/blob/master/README.md)\nfor more install instructions\n\nHowever you install it, add it's location to `PATH`.\n\nTo verify the install, run `bazel info` in the repo's root directory:\n\n```\nbazel info\n```\n\nIt should print information about the repo without errors."
+      },
+      {
+        "heading": "VSCode `clangd` Setup",
+        "level": 2,
+        "content": "For C++ code navigation, it is recommended to use VSCode with\n[`clangd` extension](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd).\nRelying on a\n[compilation database](https://clang.llvm.org/docs/JSONCompilationDatabase.html)\ngenerated from Bazel action graph, [clangd](https://clangd.llvm.org/) is able to\nenrich the editor with various smart features, including code completions, go-to\ndefinitions, *etc.*\n\n1.  Generate the initial `compile_commands.json`:\n\n    ```sh\n    tools/setup_clangd.py\n    ```\n\n    If the VSCode `code` CLI is on `PATH`, the script also installs the `clangd`\n    extension automatically. Otherwise, install the extension via the editor UI.\n\n1.  Uninstall the Microsoft C++ extension, which interferes with `clangd`:\n\n    ```sh\n    code --uninstall-extension ms-vscode.cpptools\n    ```\n\nIt may take a while (> 30 minutes) for the first run to make a full build, but\nreruns will be incremental and cheap. If you have run `bazel build` recently,\ngenerated files already exist so you can pass `--no-build` to skip waiting for\nheavy builds (note that on a fresh workspace, skipping the build may prevent\n`clangd` from resolving generated files). See more options in the\n[script](tools/setup_clangd.py) file-level comments.\n\nAlternatively, you can invoke the script via `nox` (arguments after `--` are\nforwarded):\n\n```sh\nnox -s refresh_compile_commands -- --no-build\nnox -s refresh_compile_commands -- //src/torch_tpu/ops/...\n```"
+      },
+      {
+        "heading": "Contributing",
+        "level": 2,
+        "content": "We welcome contributions to the PyTorch on TPU project! Please see our\n[CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute,\nincluding signing our Contributor License Agreement (CLA) and code review\nprocesses."
+      },
+      {
+        "heading": "Star History",
+        "level": 2,
+        "content": "<a href=\"https://www.star-history.com/?repos=google-pytorch%2Ftorch_tpu&type=date&legend=top-left\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://api.star-history.com/chart?repos=google-pytorch/torch_tpu&type=date&theme=dark&legend=top-left\" />\n    <source media=\"(prefers-color-scheme: light)\" srcset=\"https://api.star-history.com/chart?repos=google-pytorch/torch_tpu&type=date&legend=top-left\" />\n    <img alt=\"Star History Chart\" src=\"https://api.star-history.com/chart?repos=google-pytorch/torch_tpu&type=date&legend=top-left\" />\n  </picture>\n</a>"
+      },
+      {
+        "heading": "License",
+        "level": 2,
+        "content": "This project is licensed under the Apache 2.0 License. See the\n[LICENSE](LICENSE) file for details."
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "bash",
+        "code": "python -m venv .venv\nsource .venv/bin/activate"
+      },
+      {
+        "language": "bash",
+        "code": "uv venv .venv\nsource .venv/bin/activate"
+      },
+      {
+        "language": "bash",
+        "code": "pip install torch_tpu==0.2.0 --extra-index-url https://download.pytorch.org/whl/cpu"
+      },
+      {
+        "language": "bash",
+        "code": "bazel build --config=wheel_common //ci/wheel:torch_tpu_wheel"
+      },
+      {
+        "language": "bash",
+        "code": "bazel build -c dbg --config=wheel_common //ci/wheel:torch_tpu_wheel \\\n    --//:allow_unoptimized_wheel=True"
+      },
+      {
+        "language": "bash",
+        "code": "bazel build --config=wheel_common //ci/wheel:torch_tpu_wheel --config=no_rbe"
+      },
+      {
+        "language": "bash",
+        "code": "cd <path_to_repo>\npython -m venv .venv; source .venv/bin/activate\n# The extra-index-url provides the CPU version of torch rather than the default CUDA build.\npip install ../bazel-bin/ci/wheel/*.whl --extra-index-url https://download.pytorch.org/whl/cpu"
+      },
+      {
+        "language": "text",
+        "code": "go install github.com/bazelbuild/bazelisk@latest"
+      },
+      {
+        "language": "text",
+        "code": "wget -O ~/bin/bazel https://github.com/bazelbuild/bazelisk/releases/download/v1.27.0/bazelisk-linux-amd64"
+      },
+      {
+        "language": "text",
+        "code": "bazel info"
+      },
+      {
+        "language": "sh",
+        "code": "tools/setup_clangd.py"
+      },
+      {
+        "language": "sh",
+        "code": "code --uninstall-extension ms-vscode.cpptools"
+      },
+      {
+        "language": "sh",
+        "code": "nox -s refresh_compile_commands -- --no-build\nnox -s refresh_compile_commands -- //src/torch_tpu/ops/..."
+      }
+    ],
+    "cli_commands": [
+      "python -m venv .venv",
+      "uv venv .venv",
+      "pip install torch_tpu==0.2.0 --extra-index-url https://download.pytorch.org/whl/cpu",
+      "python -m venv .venv; source .venv/bin/activate",
+      "pip install ../bazel-bin/ci/wheel/*.whl --extra-index-url https://download.pytorch.org/whl/cpu"
+    ],
+    "environment_variables": [],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'TorchTPU repository (official installation)' (https://github.com/google-pytorch/torch_tpu)?",
+        "answer": "Official source, supported Python versions, released packages, and installation instructions."
+      },
+      {
+        "question": "How does 'TorchTPU repository (official installation)' handle: TorchTPU (`google-pytorch/torch_tpu`)?",
+        "answer": "<img src=\"docs/images/torchtpu_logo.avif\" alt=\"TorchTPU Logo\" style=\"width: 60%;\">"
+      },
+      {
+        "question": "How does 'TorchTPU repository (official installation)' handle: Description?",
+        "answer": "This project provides a PyTorch backend for Google's Tensor Processing Units\n(TPUs), enabling users to run PyTorch models and operations on TPU devices. It\nincludes custom ATen kernels for various PyTorch operations, a compilation cache\nfor optimizing execution, and examples for distributed training and model\ninference."
+      },
+      {
+        "question": "How does 'TorchTPU repository (official installation)' handle: Features?",
+        "answer": "*   PyTorch ATen kernel implementation for TPU.\n*   Compilation cache for optimized execution of XLA computations.\n*   Support for distributed training (Data Parallelism, Tensor Parallelism).\n*   Examples for various models (Llama, Qwen, ResNet, DLRM, minGPT, UNet).\n*   Integration with `torch.compile()` for graph mode execution.\n*   Utilities for debugging and benchmarking."
+      },
+      {
+        "question": "How does 'TorchTPU repository (official installation)' handle: User Guide and Interactive Notebooks?",
+        "answer": "A user guide is available at\n[https://torchtpu.readthedocs.io/](https://torchtpu.readthedocs.io/). This is a\nstatic version of the interactive notebooks. They are available in the docs\nfolder.\n\nThe notebooks are Marimo (similar to Jupyter). They can be run with `marimo edit\nfile.py` and then you can access them in your browser. You will need to be\nrunning this from a TPU VM, a v6e GCE instance is easiest."
+      },
+      {
+        "question": "How does 'TorchTPU repository (official installation)' handle: Installation?",
+        "answer": "The same instructions are available in the user guide linked above.\n\n\n\nTorchTPU's Python version support policy matches\n[PyTorch's Release Compatibility Matrix](https://github.com/pytorch/pytorch/blob/main/RELEASE.md#release-compatibility-matrix).\nCurrently, **Python 3.11+** is supported. See the\n[Python Version Support Policy](docs/developers/python_support_policy.md) for\nmore details.\n\n\n\nFirst create a Python virtual environment:\n\n```bash\npython -m venv .venv\nsource .venv/bin/activate\n```\n\nor, with `uv`\n\n```bash\nuv venv .venv\nsource .venv/bin/activate\n```"
+      },
+      {
+        "question": "How does 'TorchTPU repository (official installation)' handle: Install via pip?",
+        "answer": "Install the latest public release\n([0.2.0 on PyPI](https://pypi.org/project/torch-tpu/0.2.0/)) (for `uv` prepend\n`uv` to all `pip` commands):\n\n```bash\npip install torch_tpu==0.2.0 --extra-index-url https://download.pytorch.org/whl/cpu\n```"
+      },
+      {
+        "question": "How does 'TorchTPU repository (official installation)' handle: Build from source?",
+        "answer": "Wheels can be built via:\n\n```bash\nbazel build --config=wheel_common //ci/wheel:torch_tpu_wheel\n```\n\nAll OSS Bazel builds default to optimized mode (`-c opt`) automatically via\n`.bazelrc`. Unoptimized builds (`-c fastbuild`, `-c dbg`) can degrade\nperformance and are not used for wheel builds. If you are developing or\ndebugging C++ code and explicitly want an unoptimized wheel, pass\n`--//:allow_unoptimized_wheel=True`:\n\n```bash\nbazel build -c dbg --config=wheel_common //ci/wheel:torch_tpu_wheel \\\n    --//:allow_unoptimized_wheel=True\n```\n\n`--config=wheel_common` is required, and the build fails at build time without\nit. The config sets `--//:wheel_build=True`, which routes the shared XLA/MLIR\nbackend through the `torch_version`-reset transition so that pywrap factors it\ninto a single `libxla_base.so`; built without the flag, every per-version common\nships its own copy of the backend and the resulting wheel aborts on `import\ntorch` with duplicate static registrations.\n\n`wheel_common` also turns on the Remote Build Execution (RBE) remote cache and\nremote executor. If you do not have RBE credentials, append `--config=no_rbe` to\nstrip those flags back out:\n\n```bash\nbazel build --config=w"
+      },
+      {
+        "question": "How does 'TorchTPU repository (official installation)' handle: The extra-index-url provides the CPU version of torch rather than the default CUDA build.?",
+        "answer": "pip install ../bazel-bin/ci/wheel/*.whl --extra-index-url https://download.pytorch.org/whl/cpu\n```\n\nNote that installing without `--extra-index-url\nhttps://download.pytorch.org/whl/cpu` will install the CUDA version of `torch`;\npass `--extra-index-url` as shown above or install the CPU build separately."
+      },
+      {
+        "question": "How does 'TorchTPU repository (official installation)' handle: Getting Started?",
+        "answer": "Some pointers to get you started:\n\n*   [PyTorch: Official PyTorch documentation](https://github.com/pytorch/pytorch)\n*   [Tutorials and examples: easy to understand PyTorch code using TorchTPU](https://torchtpu.readthedocs.io/)\n*   [Public APIs: the TorchTPU APIs that you can use](./docs/public_apis.md)"
+      }
+    ],
+    "full_markdown": "# TorchTPU (`google-pytorch/torch_tpu`)\n\n<img src=\"docs/images/torchtpu_logo.avif\" alt=\"TorchTPU Logo\" style=\"width: 60%;\">\n\n## Description\n\nThis project provides a PyTorch backend for Google's Tensor Processing Units\n(TPUs), enabling users to run PyTorch models and operations on TPU devices. It\nincludes custom ATen kernels for various PyTorch operations, a compilation cache\nfor optimizing execution, and examples for distributed training and model\ninference.\n\n## Features\n\n*   PyTorch ATen kernel implementation for TPU.\n*   Compilation cache for optimized execution of XLA computations.\n*   Support for distributed training (Data Parallelism, Tensor Parallelism).\n*   Examples for various models (Llama, Qwen, ResNet, DLRM, minGPT, UNet).\n*   Integration with `torch.compile()` for graph mode execution.\n*   Utilities for debugging and benchmarking.\n\n## User Guide and Interactive Notebooks\n\nA user guide is available at\n[https://torchtpu.readthedocs.io/](https://torchtpu.readthedocs.io/). This is a\nstatic version of the interactive notebooks. They are available in the docs\nfolder.\n\nThe notebooks are Marimo (similar to Jupyter). They can be run with `marimo edit\nfile.py` and then you can access them in your browser. You will need to be\nrunning this from a TPU VM, a v6e GCE instance is easiest.\n\n## Installation\n\nThe same instructions are available in the user guide linked above.\n\n\n\nTorchTPU's Python version support policy matches\n[PyTorch's Release Compatibility Matrix](https://github.com/pytorch/pytorch/blob/main/RELEASE.md#release-compatibility-matrix).\nCurrently, **Python 3.11+** is supported. See the\n[Python Version Support Policy](docs/developers/python_support_policy.md) for\nmore details.\n\n\n\nFirst create a Python virtual environment:\n\n```bash\npython -m venv .venv\nsource .venv/bin/activate\n```\n\nor, with `uv`\n\n```bash\nuv venv .venv\nsource .venv/bin/activate\n```\n\n### Install via pip\n\nInstall the latest public release\n([0.2.0 on PyPI](https://pypi.org/project/torch-tpu/0.2.0/)) (for `uv` prepend\n`uv` to all `pip` commands):\n\n```bash\npip install torch_tpu==0.2.0 --extra-index-url https://download.pytorch.org/whl/cpu\n```\n\n### Build from source\n\nWheels can be built via:\n\n```bash\nbazel build --config=wheel_common //ci/wheel:torch_tpu_wheel\n```\n\nAll OSS Bazel builds default to optimized mode (`-c opt`) automatically via\n`.bazelrc`. Unoptimized builds (`-c fastbuild`, `-c dbg`) can degrade\nperformance and are not used for wheel builds. If you are developing or\ndebugging C++ code and explicitly want an unoptimized wheel, pass\n`--//:allow_unoptimized_wheel=True`:\n\n```bash\nbazel build -c dbg --config=wheel_common //ci/wheel:torch_tpu_wheel \\\n    --//:allow_unoptimized_wheel=True\n```\n\n`--config=wheel_common` is required, and the build fails at build time without\nit. The config sets `--//:wheel_build=True`, which routes the shared XLA/MLIR\nbackend through the `torch_version`-reset transition so that pywrap factors it\ninto a single `libxla_base.so`; built without the flag, every per-version common\nships its own copy of the backend and the resulting wheel aborts on `import\ntorch` with duplicate static registrations.\n\n`wheel_common` also turns on the Remote Build Execution (RBE) remote cache and\nremote executor. If you do not have RBE credentials, append `--config=no_rbe` to\nstrip those flags back out:\n\n```bash\nbazel build --config=wheel_common //ci/wheel:torch_tpu_wheel --config=no_rbe\n```\n\nThe order matters here: `--config=no_rbe` has to come after\n`--config=wheel_common`, because the later config is the one that wins for the\nremote-cache and remote-executor flags they both set.\n\nInstall wheel via:\n\n```bash\ncd <path_to_repo>\npython -m venv .venv; source .venv/bin/activate\n# The extra-index-url provides the CPU version of torch rather than the default CUDA build.\npip install ../bazel-bin/ci/wheel/*.whl --extra-index-url https://download.pytorch.org/whl/cpu\n```\n\nNote that installing without `--extra-index-url\nhttps://download.pytorch.org/whl/cpu` will install the CUDA version of `torch`;\npass `--extra-index-url` as shown above or install the CPU build separately.\n\n## Getting Started\n\nSome pointers to get you started:\n\n*   [PyTorch: Official PyTorch documentation](https://github.com/pytorch/pytorch)\n*   [Tutorials and examples: easy to understand PyTorch code using TorchTPU](https://torchtpu.readthedocs.io/)\n*   [Public APIs: the TorchTPU APIs that you can use](./docs/public_apis.md)\n\n## Dependencies\n\nThe project uses Bazel for dependency management. Key Python dependencies are:\n\nTBD\n\n## Bazel setup\n\nThis project uses Bazel for building and dependency management.\n\nTo install Bazel, we actually install Bazelisk, which is a transparent wrapper\nthat handles downloading and installing Bazel itself.\n\nThere are several ways to install Bazelisk. Here are some common ways:\n\n*   If you have Go installed:\n\n    ```\n    go install github.com/bazelbuild/bazelisk@latest\n    ```\n\n*   Download the binary directly:\n\n    ```\n    wget -O ~/bin/bazel https://github.com/bazelbuild/bazelisk/releases/download/v1.27.0/bazelisk-linux-amd64\n    ```\n\nSee the\n[Bazelisk README](https://github.com/bazelbuild/bazelisk/blob/master/README.md)\nfor more install instructions\n\nHowever you install it, add it's location to `PATH`.\n\nTo verify the install, run `bazel info` in the repo's root directory:\n\n```\nbazel info\n```\n\nIt should print information about the repo without errors.\n\n## VSCode `clangd` Setup\n\nFor C++ code navigation, it is recommended to use VSCode with\n[`clangd` extension](https://marketplace.visualstudio.com/items?itemName=llvm-vs-code-extensions.vscode-clangd).\nRelying on a\n[compilation database](https://clang.llvm.org/docs/JSONCompilationDatabase.html)\ngenerated from Bazel action graph, [clangd](https://clangd.llvm.org/) is able to\nenrich the editor with various smart features, including code completions, go-to\ndefinitions, *etc.*\n\n1.  Generate the initial `compile_commands.json`:\n\n    ```sh\n    tools/setup_clangd.py\n    ```\n\n    If the VSCode `code` CLI is on `PATH`, the script also installs the `clangd`\n    extension automatically. Otherwise, install the extension via the editor UI.\n\n1.  Uninstall the Microsoft C++ extension, which interferes with `clangd`:\n\n    ```sh\n    code --uninstall-extension ms-vscode.cpptools\n    ```\n\nIt may take a while (> 30 minutes) for the first run to make a full build, but\nreruns will be incremental and cheap. If you have run `bazel build` recently,\ngenerated files already exist so you can pass `--no-build` to skip waiting for\nheavy builds (note that on a fresh workspace, skipping the build may prevent\n`clangd` from resolving generated files). See more options in the\n[script](tools/setup_clangd.py) file-level comments.\n\nAlternatively, you can invoke the script via `nox` (arguments after `--` are\nforwarded):\n\n```sh\nnox -s refresh_compile_commands -- --no-build\nnox -s refresh_compile_commands -- //src/torch_tpu/ops/...\n```\n\n## Contributing\n\nWe welcome contributions to the PyTorch on TPU project! Please see our\n[CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute,\nincluding signing our Contributor License Agreement (CLA) and code review\nprocesses.\n\n## Star History\n\n<a href=\"https://www.star-history.com/?repos=google-pytorch%2Ftorch_tpu&type=date&legend=top-left\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://api.star-history.com/chart?repos=google-pytorch/torch_tpu&type=date&theme=dark&legend=top-left\" />\n    <source media=\"(prefers-color-scheme: light)\" srcset=\"https://api.star-history.com/chart?repos=google-pytorch/torch_tpu&type=date&legend=top-left\" />\n    <img alt=\"Star History Chart\" src=\"https://api.star-history.com/chart?repos=google-pytorch/torch_tpu&type=date&legend=top-left\" />\n  </picture>\n</a>\n\n## License\n\nThis project is licensed under the Apache 2.0 License. See the\n[LICENSE](LICENSE) file for details."
+  }
 }

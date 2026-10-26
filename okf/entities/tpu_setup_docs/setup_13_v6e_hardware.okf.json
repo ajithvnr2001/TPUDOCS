@@ -1,63 +1,340 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:setup_13_v6e_hardware",
-  "@type": "DocumentationResource",
-  "name": "TPU v6e hardware documentation",
-  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/v6e",
-  "category": "TPU setup docs",
-  "categorySlug": "tpu_setup_docs",
-  "description": "Trillium hardware specifications, memory, and supported configurations.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/v6e",
-    "crawledAt": "2026-10-26T12:45:13.997030+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 25894
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "TPU v6e hardware documentation",
-      "documentedIn",
-      "https://docs.cloud.google.com/tpu/docs/v6e"
-    ],
-    [
-      "TPU v6e hardware documentation",
-      "belongsToCategory",
-      "tpu_setup_docs"
-    ],
-    [
-      "TPU v6e hardware documentation",
-      "targetsPlatform",
-      "Google Cloud Platform"
-    ],
-    [
-      "TPU v6e hardware documentation",
-      "managesHardware",
-      "Google Cloud TPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:setup_13_v6e_hardware",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "setup_13_v6e_hardware",
+    "name": "TPU v6e hardware documentation",
+    "url": "https://docs.cloud.google.com/tpu/docs/v6e",
+    "category": "tpu_setup_docs",
+    "description": "Trillium hardware specifications, memory, and supported configurations.",
+    "char_count": 4472,
+    "word_count": 729,
+    "section_count": 5,
+    "code_block_count": 0,
+    "table_count": 3,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.394042+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:setup_13_v6e_hardware",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:setup_13_v6e_hardware",
+        "predicate": "schema:name",
+        "object": "TPU v6e hardware documentation"
+      },
+      {
+        "subject": "tpu_doc:setup_13_v6e_hardware",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/tpu/docs/v6e"
+      },
+      {
+        "subject": "tpu_doc:setup_13_v6e_hardware",
+        "predicate": "schema:category",
+        "object": "tpu_setup_docs"
+      },
+      {
+        "subject": "tpu_doc:setup_13_v6e_hardware",
+        "predicate": "schema:description",
+        "object": "Trillium hardware specifications, memory, and supported configurations."
+      },
+      {
+        "subject": "tpu_doc:setup_13_v6e_hardware",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:setup_13_v6e_hardware",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5e"
+      },
+      {
+        "subject": "tpu_doc:setup_13_v6e_hardware",
+        "predicate": "okf:hasSection",
+        "object": "TPU v6e"
+      },
+      {
+        "subject": "tpu_doc:setup_13_v6e_hardware",
+        "predicate": "okf:hasSection",
+        "object": "System architecture"
+      },
+      {
+        "subject": "tpu_doc:setup_13_v6e_hardware",
+        "predicate": "okf:hasSection",
+        "object": "Supported configurations"
+      },
+      {
+        "subject": "tpu_doc:setup_13_v6e_hardware",
+        "predicate": "okf:hasSection",
+        "object": "VM types"
+      },
+      {
+        "subject": "tpu_doc:setup_13_v6e_hardware",
+        "predicate": "okf:hasSection",
+        "object": "What's next"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "TPU v6e hardware documentation provides official guidance on Trillium hardware specifications, memory, and supported configurations.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/v6e",
-      "verified": true
-    },
-    {
-      "assertion": "TPU v6e (Trillium) is Google's 6th generation TPU offering high efficiency for inference and training.",
-      "confidence": 0.99,
-      "source": "https://docs.cloud.google.com/tpu/docs/v6e",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is TPU v6e hardware documentation used for in Cloud TPU workflows?",
-      "answer": "Trillium hardware specifications, memory, and supported configurations.",
-      "category": "tpu_setup_docs"
-    }
-  ],
-  "contentSummary": "Trillium hardware specifications, memory, and supported configurations."
+  },
+  "structured_content": {
+    "summary": "Trillium hardware specifications, memory, and supported configurations.",
+    "sections": [
+      {
+        "heading": "TPU v6e",
+        "level": 1,
+        "content": "This document describes the architecture and supported configurations of Cloud TPU v6e (Trillium). On all technical surfaces, such as the API and logs, and throughout this document, Trillium will be referred to as v6e.\nWith a 256-chip footprint per Pod, v6e shares many similarities with [v5e](https://docs.cloud.google.com/tpu/docs/v5e). This system is optimized for transformer, text-to-image, and convolutional neural network (CNN) training, fine-tuning, and serving."
+      },
+      {
+        "heading": "System architecture",
+        "level": 2,
+        "content": "Each v6e chip contains one TensorCore. Each TensorCore has 2 matrix-multiply units (MXU), a vector unit, and a scalar unit. The following table shows the key specifications and their values for TPU v6e.  \n| Specification  | Values  |  \n| --- | --- |  \n| Performance/total cost of ownership (TCO) (expected)  | 1  |  \n| Peak compute per chip (bf16)  | 918 TFLOPs  |  \n| Peak compute per chip (Int8)  | 1836 TOPs  |  \n| HBM capacity per chip  | 32 GB  |  \n| HBM bandwidth per chip  | 1638 GBps  |  \n| Bidirectional inter-chip interconnect (ICI) bandwidth (per chip)  | 800 GBps  |  \n| ICI ports per chip  | 4  |  \n| DRAM per host  | 1536 GiB  |  \n| Chips per host   | 8  |  \n| TPU Pod size  | 256 chips  |  \n| Interconnect topology  | 2D torus  |  \n| BF16 peak compute per Pod  | 234.9 PFLOPs  |  \n| All-reduce bandwidth per Pod  | 102.4 TB/s  |  \n| Bisection bandwidth per Pod  | 3.2 TB/s  |  \n| Per-host NIC configuration  | 4 x 200 Gbps NIC  |  \n| Data center network bandwidth per Pod   | 25.6 Tbps  |  \n| Special features  | [SparseCore](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#sparsecore)  |"
+      },
+      {
+        "heading": "Supported configurations",
+        "level": 2,
+        "content": "**Note:** Use the [TPU topology visualizer](https://tpu-visualizer.uc.r.appspot.com/) to view 3D renderings of different TPU configurations. \nThe following table shows the 2D slice shapes that are supported for v6e:  \n| Topology  | TPU chips  | Hosts  | VMs  | Machine type  | Scope  |  \n| --- | --- | --- | --- | --- | --- |  \n| 1x1  | 1  | 1/8  | 1  | `ct6e-standard-1t`  | Sub-host  |  \n| 2x2  | 4  | 1/2  | 1  | `ct6e-standard-4t`  | Sub-host  |  \n| 2x4  | 8  | 1  | 1  | `ct6e-standard-8t`  | Single-host  |  \n| 2x4  | 8  | 1  | 2  | `ct6e-standard-4t`  | Multi-host  |  \n| 4x4  | 16  | 2  | 4  | `ct6e-standard-4t`  | Multi-host  |  \n| 4x8  | 32  | 4  | 8  | `ct6e-standard-4t`  | Multi-host  |  \n| 8x8  | 64  | 8  | 16  | `ct6e-standard-4t`  | Multi-host  |  \n| 8x16  | 128  | 16  | 32  | `ct6e-standard-4t`  | Multi-host  |  \n| 16x16  | 256  | 32  | 64  | `ct6e-standard-4t`  | Multi-host  |  \n**Note:** The 8-chip (`2x4`) multi-host configuration attached to two `ct6e-standard-4t` VMs is supported when you provision TPUs with GKE or Compute Engine, and isn't supported when you use the Cloud TPU API.\nSlices with 8 chips (`v6e-8`) attached to a single VM are optimized for inference, allowing all 8 chips to be used in a single serving workload. You can perform multi-host inference using Pathways on Cloud. For more information, see [Perform multihost inference using Pathways](https://docs.cloud.google.com/ai-hypercomputer/docs/workloads/pathways-on-cloud/multihost-inference).\nFor information about the number of VMs for each topology, see [VM Types](https://docs.cloud.google.com/tpu/docs/v6e#vm-types)."
+      },
+      {
+        "heading": "VM types",
+        "level": 3,
+        "content": "Each TPU v6e VM can contain 1, 4, or 8 chips. 4-chip and smaller slices have the same non-uniform memory access (NUMA) node. For more information about NUMA nodes, see [Non-uniform memory access](https://en.wikipedia.org/wiki/Non-uniform_memory_access) on Wikipedia.\n![Diagram of a v6e host](https://docs.cloud.google.com/static/tpu/docs/images/v6e-tpu-host.png)\nv6e slices are created using half-host VMs, each with 4 TPU chips. There are two exceptions to this rule:\n  * `v6e-1`: A VM with only a single chip, primarily intended for testing\n  * `v6e-8`: A full-host VM that has been optimized for an inference use case with all 8 chips attached to a single VM.\n\n\nThe following table shows a comparison of TPU v6e VM types:  \n| VM type  | Number of vCPUs per VM  | RAM (GB) per VM  | Number of NUMA nodes per VM  |  \n| --- | --- | --- | --- |  \n| 1-chip VM  | 44  | 176  | 1  |  \n| 4-chip VM  | 180  | 720  | 1  |  \n| 8-chip VM  | 360  | 1440  | 2  |  \n**Note:** We don't recommend using a full-host VM (`v6e-8` with one VM) for dual networks due to performance impacts."
+      },
+      {
+        "heading": "What's next",
+        "level": 2,
+        "content": "* Run [training and inference using TPU v6e](https://docs.cloud.google.com/tpu/docs/v6e-intro)"
+      }
+    ],
+    "code_examples": [],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [
+      {
+        "headers": [
+          "Specification",
+          "Values"
+        ],
+        "rows": [
+          [
+            "Performance/total cost of ownership (TCO) (expected)",
+            "1"
+          ],
+          [
+            "Peak compute per chip (bf16)",
+            "918 TFLOPs"
+          ],
+          [
+            "Peak compute per chip (Int8)",
+            "1836 TOPs"
+          ],
+          [
+            "HBM capacity per chip",
+            "32 GB"
+          ],
+          [
+            "HBM bandwidth per chip",
+            "1638 GBps"
+          ],
+          [
+            "Bidirectional inter-chip interconnect (ICI) bandwidth (per chip)",
+            "800 GBps"
+          ],
+          [
+            "ICI ports per chip",
+            "4"
+          ],
+          [
+            "DRAM per host",
+            "1536 GiB"
+          ],
+          [
+            "Chips per host",
+            "8"
+          ],
+          [
+            "TPU Pod size",
+            "256 chips"
+          ],
+          [
+            "Interconnect topology",
+            "2D torus"
+          ],
+          [
+            "BF16 peak compute per Pod",
+            "234.9 PFLOPs"
+          ],
+          [
+            "All-reduce bandwidth per Pod",
+            "102.4 TB/s"
+          ],
+          [
+            "Bisection bandwidth per Pod",
+            "3.2 TB/s"
+          ],
+          [
+            "Per-host NIC configuration",
+            "4 x 200 Gbps NIC"
+          ],
+          [
+            "Data center network bandwidth per Pod",
+            "25.6 Tbps"
+          ],
+          [
+            "Special features",
+            "[SparseCore](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#sparsecore)"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "Topology",
+          "TPU chips",
+          "Hosts",
+          "VMs",
+          "Machine type",
+          "Scope"
+        ],
+        "rows": [
+          [
+            "1x1",
+            "1",
+            "1/8",
+            "1",
+            "`ct6e-standard-1t`",
+            "Sub-host"
+          ],
+          [
+            "2x2",
+            "4",
+            "1/2",
+            "1",
+            "`ct6e-standard-4t`",
+            "Sub-host"
+          ],
+          [
+            "2x4",
+            "8",
+            "1",
+            "1",
+            "`ct6e-standard-8t`",
+            "Single-host"
+          ],
+          [
+            "2x4",
+            "8",
+            "1",
+            "2",
+            "`ct6e-standard-4t`",
+            "Multi-host"
+          ],
+          [
+            "4x4",
+            "16",
+            "2",
+            "4",
+            "`ct6e-standard-4t`",
+            "Multi-host"
+          ],
+          [
+            "4x8",
+            "32",
+            "4",
+            "8",
+            "`ct6e-standard-4t`",
+            "Multi-host"
+          ],
+          [
+            "8x8",
+            "64",
+            "8",
+            "16",
+            "`ct6e-standard-4t`",
+            "Multi-host"
+          ],
+          [
+            "8x16",
+            "128",
+            "16",
+            "32",
+            "`ct6e-standard-4t`",
+            "Multi-host"
+          ],
+          [
+            "16x16",
+            "256",
+            "32",
+            "64",
+            "`ct6e-standard-4t`",
+            "Multi-host"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "VM type",
+          "Number of vCPUs per VM",
+          "RAM (GB) per VM",
+          "Number of NUMA nodes per VM"
+        ],
+        "rows": [
+          [
+            "1-chip VM",
+            "44",
+            "176",
+            "1"
+          ],
+          [
+            "4-chip VM",
+            "180",
+            "720",
+            "1"
+          ],
+          [
+            "8-chip VM",
+            "360",
+            "1440",
+            "2"
+          ]
+        ]
+      }
+    ],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'TPU v6e hardware documentation' (https://docs.cloud.google.com/tpu/docs/v6e)?",
+        "answer": "Trillium hardware specifications, memory, and supported configurations."
+      },
+      {
+        "question": "How does 'TPU v6e hardware documentation' handle: TPU v6e?",
+        "answer": "This document describes the architecture and supported configurations of Cloud TPU v6e (Trillium). On all technical surfaces, such as the API and logs, and throughout this document, Trillium will be referred to as v6e.\nWith a 256-chip footprint per Pod, v6e shares many similarities with [v5e](https://docs.cloud.google.com/tpu/docs/v5e). This system is optimized for transformer, text-to-image, and convolutional neural network (CNN) training, fine-tuning, and serving."
+      },
+      {
+        "question": "How does 'TPU v6e hardware documentation' handle: System architecture?",
+        "answer": "Each v6e chip contains one TensorCore. Each TensorCore has 2 matrix-multiply units (MXU), a vector unit, and a scalar unit. The following table shows the key specifications and their values for TPU v6e.  \n| Specification  | Values  |  \n| --- | --- |  \n| Performance/total cost of ownership (TCO) (expected)  | 1  |  \n| Peak compute per chip (bf16)  | 918 TFLOPs  |  \n| Peak compute per chip (Int8)  | 1836 TOPs  |  \n| HBM capacity per chip  | 32 GB  |  \n| HBM bandwidth per chip  | 1638 GBps  |  \n| Bidirectional inter-chip interconnect (ICI) bandwidth (per chip)  | 800 GBps  |  \n| ICI ports per chip  | 4  |  \n| DRAM per host  | 1536 GiB  |  \n| Chips per host   | 8  |  \n| TPU Pod size  | 256 chips  |  \n| Interconnect topology  | 2D torus  |  \n| BF16 peak compute per Pod  | 234.9 PFLOPs  |  \n| All-reduce bandwidth per Pod  | 102.4 TB/s  |  \n| Bisection bandwidth per Pod  | 3.2 TB/s  |  \n| Per-host NIC configuration  | 4 x 200 Gbps NIC  |  \n| Data center network bandwidth per Pod   | 25.6 Tbps  |  \n| Special features  | [SparseCore](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#sparsecore)  |"
+      },
+      {
+        "question": "How does 'TPU v6e hardware documentation' handle: Supported configurations?",
+        "answer": "**Note:** Use the [TPU topology visualizer](https://tpu-visualizer.uc.r.appspot.com/) to view 3D renderings of different TPU configurations. \nThe following table shows the 2D slice shapes that are supported for v6e:  \n| Topology  | TPU chips  | Hosts  | VMs  | Machine type  | Scope  |  \n| --- | --- | --- | --- | --- | --- |  \n| 1x1  | 1  | 1/8  | 1  | `ct6e-standard-1t`  | Sub-host  |  \n| 2x2  | 4  | 1/2  | 1  | `ct6e-standard-4t`  | Sub-host  |  \n| 2x4  | 8  | 1  | 1  | `ct6e-standard-8t`  | Single-host  |  \n| 2x4  | 8  | 1  | 2  | `ct6e-standard-4t`  | Multi-host  |  \n| 4x4  | 16  | 2  | 4  | `ct6e-standard-4t`  | Multi-host  |  \n| 4x8  | 32  | 4  | 8  | `ct6e-standard-4t`  | Multi-host  |  \n| 8x8  | 64  | 8  | 16  | `ct6e-standard-4t`  | Multi-host  |  \n| 8x16  | 128  | 16  | 32  | `ct6e-standard-4t`  | Multi-host  |  \n| 16x16  | 256  | 32  | 64  | `ct6e-standard-4t`  | Multi-host  |  \n**Note:** The 8-chip (`2x4`) multi-host configuration attached to two `ct6e-standard-4t` VMs is supported when you provision TPUs with GKE or Compute Engine, and isn't supported when you use the Cloud TPU API.\nSlices with 8 chips (`v6e-8`) attached to a single VM are optimized for inference, allow"
+      },
+      {
+        "question": "How does 'TPU v6e hardware documentation' handle: VM types?",
+        "answer": "Each TPU v6e VM can contain 1, 4, or 8 chips. 4-chip and smaller slices have the same non-uniform memory access (NUMA) node. For more information about NUMA nodes, see [Non-uniform memory access](https://en.wikipedia.org/wiki/Non-uniform_memory_access) on Wikipedia.\n![Diagram of a v6e host](https://docs.cloud.google.com/static/tpu/docs/images/v6e-tpu-host.png)\nv6e slices are created using half-host VMs, each with 4 TPU chips. There are two exceptions to this rule:\n  * `v6e-1`: A VM with only a single chip, primarily intended for testing\n  * `v6e-8`: A full-host VM that has been optimized for an inference use case with all 8 chips attached to a single VM.\n\n\nThe following table shows a comparison of TPU v6e VM types:  \n| VM type  | Number of vCPUs per VM  | RAM (GB) per VM  | Number of NUMA nodes per VM  |  \n| --- | --- | --- | --- |  \n| 1-chip VM  | 44  | 176  | 1  |  \n| 4-chip VM  | 180  | 720  | 1  |  \n| 8-chip VM  | 360  | 1440  | 2  |  \n**Note:** We don't recommend using a full-host VM (`v6e-8` with one VM) for dual networks due to performance impacts."
+      },
+      {
+        "question": "How does 'TPU v6e hardware documentation' handle: What's next?",
+        "answer": "* Run [training and inference using TPU v6e](https://docs.cloud.google.com/tpu/docs/v6e-intro)"
+      }
+    ],
+    "full_markdown": "# TPU v6e\nThis document describes the architecture and supported configurations of Cloud TPU v6e (Trillium). On all technical surfaces, such as the API and logs, and throughout this document, Trillium will be referred to as v6e.\nWith a 256-chip footprint per Pod, v6e shares many similarities with [v5e](https://docs.cloud.google.com/tpu/docs/v5e). This system is optimized for transformer, text-to-image, and convolutional neural network (CNN) training, fine-tuning, and serving.\n## System architecture\nEach v6e chip contains one TensorCore. Each TensorCore has 2 matrix-multiply units (MXU), a vector unit, and a scalar unit. The following table shows the key specifications and their values for TPU v6e.  \n| Specification  | Values  |  \n| --- | --- |  \n| Performance/total cost of ownership (TCO) (expected)  | 1  |  \n| Peak compute per chip (bf16)  | 918 TFLOPs  |  \n| Peak compute per chip (Int8)  | 1836 TOPs  |  \n| HBM capacity per chip  | 32 GB  |  \n| HBM bandwidth per chip  | 1638 GBps  |  \n| Bidirectional inter-chip interconnect (ICI) bandwidth (per chip)  | 800 GBps  |  \n| ICI ports per chip  | 4  |  \n| DRAM per host  | 1536 GiB  |  \n| Chips per host   | 8  |  \n| TPU Pod size  | 256 chips  |  \n| Interconnect topology  | 2D torus  |  \n| BF16 peak compute per Pod  | 234.9 PFLOPs  |  \n| All-reduce bandwidth per Pod  | 102.4 TB/s  |  \n| Bisection bandwidth per Pod  | 3.2 TB/s  |  \n| Per-host NIC configuration  | 4 x 200 Gbps NIC  |  \n| Data center network bandwidth per Pod   | 25.6 Tbps  |  \n| Special features  | [SparseCore](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#sparsecore)  |  \n## Supported configurations\n**Note:** Use the [TPU topology visualizer](https://tpu-visualizer.uc.r.appspot.com/) to view 3D renderings of different TPU configurations. \nThe following table shows the 2D slice shapes that are supported for v6e:  \n| Topology  | TPU chips  | Hosts  | VMs  | Machine type  | Scope  |  \n| --- | --- | --- | --- | --- | --- |  \n| 1x1  | 1  | 1/8  | 1  | `ct6e-standard-1t`  | Sub-host  |  \n| 2x2  | 4  | 1/2  | 1  | `ct6e-standard-4t`  | Sub-host  |  \n| 2x4  | 8  | 1  | 1  | `ct6e-standard-8t`  | Single-host  |  \n| 2x4  | 8  | 1  | 2  | `ct6e-standard-4t`  | Multi-host  |  \n| 4x4  | 16  | 2  | 4  | `ct6e-standard-4t`  | Multi-host  |  \n| 4x8  | 32  | 4  | 8  | `ct6e-standard-4t`  | Multi-host  |  \n| 8x8  | 64  | 8  | 16  | `ct6e-standard-4t`  | Multi-host  |  \n| 8x16  | 128  | 16  | 32  | `ct6e-standard-4t`  | Multi-host  |  \n| 16x16  | 256  | 32  | 64  | `ct6e-standard-4t`  | Multi-host  |  \n**Note:** The 8-chip (`2x4`) multi-host configuration attached to two `ct6e-standard-4t` VMs is supported when you provision TPUs with GKE or Compute Engine, and isn't supported when you use the Cloud TPU API.\nSlices with 8 chips (`v6e-8`) attached to a single VM are optimized for inference, allowing all 8 chips to be used in a single serving workload. You can perform multi-host inference using Pathways on Cloud. For more information, see [Perform multihost inference using Pathways](https://docs.cloud.google.com/ai-hypercomputer/docs/workloads/pathways-on-cloud/multihost-inference).\nFor information about the number of VMs for each topology, see [VM Types](https://docs.cloud.google.com/tpu/docs/v6e#vm-types).\n### VM types\nEach TPU v6e VM can contain 1, 4, or 8 chips. 4-chip and smaller slices have the same non-uniform memory access (NUMA) node. For more information about NUMA nodes, see [Non-uniform memory access](https://en.wikipedia.org/wiki/Non-uniform_memory_access) on Wikipedia.\n![Diagram of a v6e host](https://docs.cloud.google.com/static/tpu/docs/images/v6e-tpu-host.png)\nv6e slices are created using half-host VMs, each with 4 TPU chips. There are two exceptions to this rule:\n  * `v6e-1`: A VM with only a single chip, primarily intended for testing\n  * `v6e-8`: A full-host VM that has been optimized for an inference use case with all 8 chips attached to a single VM.\n\n\nThe following table shows a comparison of TPU v6e VM types:  \n| VM type  | Number of vCPUs per VM  | RAM (GB) per VM  | Number of NUMA nodes per VM  |  \n| --- | --- | --- | --- |  \n| 1-chip VM  | 44  | 176  | 1  |  \n| 4-chip VM  | 180  | 720  | 1  |  \n| 8-chip VM  | 360  | 1440  | 2  |  \n**Note:** We don't recommend using a full-host VM (`v6e-8` with one VM) for dual networks due to performance impacts.\n## What's next\n  * Run [training and inference using TPU v6e](https://docs.cloud.google.com/tpu/docs/v6e-intro)"
+  }
 }

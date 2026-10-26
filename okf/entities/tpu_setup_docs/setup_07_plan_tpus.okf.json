@@ -1,57 +1,211 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:setup_07_plan_tpus",
-  "@type": "DocumentationResource",
-  "name": "Plan your Cloud TPU resources",
-  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/plan-tpus",
-  "category": "TPU setup docs",
-  "categorySlug": "tpu_setup_docs",
-  "description": "Hardware/size and consumption planning across on-demand, Spot, reservations, and flex-start, with quota guidance.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/plan-tpus",
-    "crawledAt": "2026-10-26T12:45:05.228732+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 27403
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Plan your Cloud TPU resources",
-      "documentedIn",
-      "https://docs.cloud.google.com/tpu/docs/plan-tpus"
-    ],
-    [
-      "Plan your Cloud TPU resources",
-      "belongsToCategory",
-      "tpu_setup_docs"
-    ],
-    [
-      "Plan your Cloud TPU resources",
-      "targetsPlatform",
-      "Google Cloud Platform"
-    ],
-    [
-      "Plan your Cloud TPU resources",
-      "managesHardware",
-      "Google Cloud TPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:setup_07_plan_tpus",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "setup_07_plan_tpus",
+    "name": "Plan your Cloud TPU resources",
+    "url": "https://docs.cloud.google.com/tpu/docs/plan-tpus",
+    "category": "tpu_setup_docs",
+    "description": "Hardware/size and consumption planning across on-demand, Spot, reservations, and flex-start, with quota guidance.",
+    "char_count": 6025,
+    "word_count": 839,
+    "section_count": 6,
+    "code_block_count": 0,
+    "table_count": 1,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.378152+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:setup_07_plan_tpus",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:setup_07_plan_tpus",
+        "predicate": "schema:name",
+        "object": "Plan your Cloud TPU resources"
+      },
+      {
+        "subject": "tpu_doc:setup_07_plan_tpus",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/tpu/docs/plan-tpus"
+      },
+      {
+        "subject": "tpu_doc:setup_07_plan_tpus",
+        "predicate": "schema:category",
+        "object": "tpu_setup_docs"
+      },
+      {
+        "subject": "tpu_doc:setup_07_plan_tpus",
+        "predicate": "schema:description",
+        "object": "Hardware/size and consumption planning across on-demand, Spot, reservations, and flex-start, with quota guidance."
+      },
+      {
+        "subject": "tpu_doc:setup_07_plan_tpus",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:TPU7x"
+      },
+      {
+        "subject": "tpu_doc:setup_07_plan_tpus",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:setup_07_plan_tpus",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5p"
+      },
+      {
+        "subject": "tpu_doc:setup_07_plan_tpus",
+        "predicate": "okf:hasSection",
+        "object": "Plan your Cloud TPU resources"
+      },
+      {
+        "subject": "tpu_doc:setup_07_plan_tpus",
+        "predicate": "okf:hasSection",
+        "object": "Choose a consumption option"
+      },
+      {
+        "subject": "tpu_doc:setup_07_plan_tpus",
+        "predicate": "okf:hasSection",
+        "object": "Choose a TPU capacity mode"
+      },
+      {
+        "subject": "tpu_doc:setup_07_plan_tpus",
+        "predicate": "okf:hasSection",
+        "object": "Choose TPU version"
+      },
+      {
+        "subject": "tpu_doc:setup_07_plan_tpus",
+        "predicate": "okf:hasSection",
+        "object": "Request TPU quota"
+      },
+      {
+        "subject": "tpu_doc:setup_07_plan_tpus",
+        "predicate": "okf:hasSection",
+        "object": "What's next"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Plan your Cloud TPU resources provides official guidance on Hardware/size and consumption planning across on-demand, Spot, reservations, and flex-start, with quota guidance.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/plan-tpus",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Plan your Cloud TPU resources used for in Cloud TPU workflows?",
-      "answer": "Hardware/size and consumption planning across on-demand, Spot, reservations, and flex-start, with quota guidance.",
-      "category": "tpu_setup_docs"
-    }
-  ],
-  "contentSummary": "Hardware/size and consumption planning across on-demand, Spot, reservations, and flex-start, with quota guidance."
+  },
+  "structured_content": {
+    "summary": "Hardware/size and consumption planning across on-demand, Spot, reservations, and flex-start, with quota guidance.",
+    "sections": [
+      {
+        "heading": "Plan your Cloud TPU resources",
+        "level": 1,
+        "content": "This page describes how to plan your Tensor Processing Unit (TPU) usage."
+      },
+      {
+        "heading": "Choose a consumption option",
+        "level": 2,
+        "content": "Consumption options refers to the ways to get and use compute resources. You can request Cloud TPU VM capacity based on your needs for speed, duration, cost, and preemption tolerance. Options include:\n  * **On-demand:** Standard pay-as-you-go instances.\n  * **Spot VMs:** Lower-cost, preemptible instances. Uses preemptible quota.\n  * **Flex-start VMs:** Reserve capacity as needed, for up to 7 days, without long-term reservations or complex quota management.\n  * **Reservations:** Reserve capacity for a specific duration (up to 90 days or 1 year+), guaranteeing availability. Uses on-demand quota.\n\n\nThe following table compares TPU consumption options based on how they work, their ideal use cases, and supported TPU versions.  \n| Consumption option  | How it works  | Best used for  | Supported TPU versions  |  \n| --- | --- | --- | --- |  \n| Future reservations for one year or longer  |  You request TPU resources for one year or longer in advance. These resources are reserved for your exclusive use during that time. Reservations provide the highest level of assurance for capacity and provide a lower price than on-demand resources. Future TPU reservations include a committed use discount (CUD) CUDs provide discounted prices when you purchase a committed use contract. For more information, see [ Future reservations for one year or longer](https://docs.cloud.google.com/tpu/docs/long-term-reservation)  | Future reservations for one year or longer are ideal for long-running training jobs and inference workloads.  | All TPU versions  |  \n| Future reservations for up to 90 days (calendar mode)  |  You request TPU resources for a specific start time and duration, between one and 90 days. These resources are reserved for your exclusive use during that time. For more information, see [Future reservations for up to 90 days (in calendar mode)](https://docs.cloud.google.com/tpu/docs/calendar-mode-reservation) Reservations provide the highest level of assurance for capacity and provide a lower price than on-demand resources.  | Future reservations in calendar mode are a good fit for training and experimentation workloads that require precise start times and have a defined duration.  | TPU7x, TPU v6e, and TPU v5p  |  \n| On-demand  |  You request TPU resources for immediate use, for as long as you need them. On-demand provides significant flexibility. On-demand resources aren't preempted, but there's no guarantee that there are enough available TPU resources to satisfy your request. On-demand is the default option when you create TPU resources. For more information about creating and using on-demand TPUs, see [Create TPU VMs](https://docs.cloud.google.com/tpu/docs/create-instance-compute).  | On-demand is a good fit for urgent jobs and workloads that require a flexible end time.  | All TPU versions  |  \n| Flex-start ([Preview](https://cloud.google.com/products#product-launch-stages))  |  You request TPU resources for a specific amount of time, up to seven days, without reserving capacity in advance. TPU Flex-start VMs are delivered from a dedicated pool of capacity, so the availability of these resources is higher than on-demand. For more information, see [Request TPU Flex-start VMs](https://docs.cloud.google.com/tpu/docs/create-flex-start-compute).  For more information about using TPU Flex-start VMs with Google Kubernetes Engine (GKE), see [ About GPU and TPU provisioning with flex-start provisioning mode](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/dws).  | Flex-start is ideal for experimentation, small-scale testing, dynamic provisioning of TPUs for inference workloads, model fine-tuning, and workload runs that take less than seven days.  | TPU7x, TPU v6e, and TPU v5p  |  \n| Spot  |  You request TPU resources that can be preempted. Spot VMs are available at a significantly lower price than on-demand resources. Spot VMs are often easier to obtain than on-demand resources but can be preempted (shut down) at any time. There is no limit on runtime duration. For more information about TPU Spot VMs, see [ Manage TPU Spot VMs](https://docs.cloud.google.com/tpu/docs/spot-compute).  | Spot is a good fit for scheduling lower priority workloads like model pre-training, model fine-tuning, and simulation jobs that are tolerant to availability disruptions.  | All TPU versions  |"
+      },
+      {
+        "heading": "Choose a TPU capacity mode",
+        "level": 2,
+        "content": "By default, TPU capacity operates on Google-managed infrastructure. If you have a reservation, you can choose to use All Capacity mode for TPU v6e (Trillium) and TPU7x (Ironwood). All Capacity mode gives you access to 100% of your reserved capacity and provides full topology visibility. However, you are responsible for managing hardware maintenance and failure recovery.\nFor a detailed comparison between default Google-managed infrastructure and All Capacity mode, see [TPU capacity modes](https://docs.cloud.google.com/tpu/docs/capacity-modes)."
+      },
+      {
+        "heading": "Choose TPU version",
+        "level": 2,
+        "content": "Select the TPU version, for example, v5p, v6e, or TPU7x (Ironwood) based on your model's training or inference needs. For more information, see [TPU versions](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#versions)."
+      },
+      {
+        "heading": "Request TPU quota",
+        "level": 2,
+        "content": "To use TPU VMs, regardless of the consumption option, you need either on-demand or preemptible quota for Cloud TPU resources. Make sure you have enough quota for your chosen option, TPU version, size, and zone. Quotas are specific to each TPU version and differ for on-demand versus preemptible use. Some TPU versions have default quotas; for others, you must request quota. For more information, see [Compute Engine quotas](https://docs.cloud.google.com/compute/quotas-limits)."
+      },
+      {
+        "heading": "What's next",
+        "level": 2,
+        "content": "* Learn how to [create TPU VMs](https://docs.cloud.google.com/tpu/docs/create-tpu-vm-compute)\n  * Learn how to [manage TPUs](https://docs.cloud.google.com/tpu/docs/managing-tpus-compute)"
+      }
+    ],
+    "code_examples": [],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [
+      {
+        "headers": [
+          "Consumption option",
+          "How it works",
+          "Best used for",
+          "Supported TPU versions"
+        ],
+        "rows": [
+          [
+            "Future reservations for one year or longer",
+            "You request TPU resources for one year or longer in advance. These resources are reserved for your exclusive use during that time. Reservations provide the highest level of assurance for capacity and provide a lower price than on-demand resources. Future TPU reservations include a committed use discount (CUD) CUDs provide discounted prices when you purchase a committed use contract. For more information, see [ Future reservations for one year or longer](https://docs.cloud.google.com/tpu/docs/long-term-reservation)",
+            "Future reservations for one year or longer are ideal for long-running training jobs and inference workloads.",
+            "All TPU versions"
+          ],
+          [
+            "Future reservations for up to 90 days (calendar mode)",
+            "You request TPU resources for a specific start time and duration, between one and 90 days. These resources are reserved for your exclusive use during that time. For more information, see [Future reservations for up to 90 days (in calendar mode)](https://docs.cloud.google.com/tpu/docs/calendar-mode-reservation) Reservations provide the highest level of assurance for capacity and provide a lower price than on-demand resources.",
+            "Future reservations in calendar mode are a good fit for training and experimentation workloads that require precise start times and have a defined duration.",
+            "TPU7x, TPU v6e, and TPU v5p"
+          ],
+          [
+            "On-demand",
+            "You request TPU resources for immediate use, for as long as you need them. On-demand provides significant flexibility. On-demand resources aren't preempted, but there's no guarantee that there are enough available TPU resources to satisfy your request. On-demand is the default option when you create TPU resources. For more information about creating and using on-demand TPUs, see [Create TPU VMs](https://docs.cloud.google.com/tpu/docs/create-instance-compute).",
+            "On-demand is a good fit for urgent jobs and workloads that require a flexible end time.",
+            "All TPU versions"
+          ],
+          [
+            "Flex-start ([Preview](https://cloud.google.com/products#product-launch-stages))",
+            "You request TPU resources for a specific amount of time, up to seven days, without reserving capacity in advance. TPU Flex-start VMs are delivered from a dedicated pool of capacity, so the availability of these resources is higher than on-demand. For more information, see [Request TPU Flex-start VMs](https://docs.cloud.google.com/tpu/docs/create-flex-start-compute).  For more information about using TPU Flex-start VMs with Google Kubernetes Engine (GKE), see [ About GPU and TPU provisioning with flex-start provisioning mode](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/dws).",
+            "Flex-start is ideal for experimentation, small-scale testing, dynamic provisioning of TPUs for inference workloads, model fine-tuning, and workload runs that take less than seven days.",
+            "TPU7x, TPU v6e, and TPU v5p"
+          ],
+          [
+            "Spot",
+            "You request TPU resources that can be preempted. Spot VMs are available at a significantly lower price than on-demand resources. Spot VMs are often easier to obtain than on-demand resources but can be preempted (shut down) at any time. There is no limit on runtime duration. For more information about TPU Spot VMs, see [ Manage TPU Spot VMs](https://docs.cloud.google.com/tpu/docs/spot-compute).",
+            "Spot is a good fit for scheduling lower priority workloads like model pre-training, model fine-tuning, and simulation jobs that are tolerant to availability disruptions.",
+            "All TPU versions"
+          ]
+        ]
+      }
+    ],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Plan your Cloud TPU resources' (https://docs.cloud.google.com/tpu/docs/plan-tpus)?",
+        "answer": "Hardware/size and consumption planning across on-demand, Spot, reservations, and flex-start, with quota guidance."
+      },
+      {
+        "question": "How does 'Plan your Cloud TPU resources' handle: Plan your Cloud TPU resources?",
+        "answer": "This page describes how to plan your Tensor Processing Unit (TPU) usage."
+      },
+      {
+        "question": "How does 'Plan your Cloud TPU resources' handle: Choose a consumption option?",
+        "answer": "Consumption options refers to the ways to get and use compute resources. You can request Cloud TPU VM capacity based on your needs for speed, duration, cost, and preemption tolerance. Options include:\n  * **On-demand:** Standard pay-as-you-go instances.\n  * **Spot VMs:** Lower-cost, preemptible instances. Uses preemptible quota.\n  * **Flex-start VMs:** Reserve capacity as needed, for up to 7 days, without long-term reservations or complex quota management.\n  * **Reservations:** Reserve capacity for a specific duration (up to 90 days or 1 year+), guaranteeing availability. Uses on-demand quota.\n\n\nThe following table compares TPU consumption options based on how they work, their ideal use cases, and supported TPU versions.  \n| Consumption option  | How it works  | Best used for  | Supported TPU versions  |  \n| --- | --- | --- | --- |  \n| Future reservations for one year or longer  |  You request TPU resources for one year or longer in advance. These resources are reserved for your exclusive use during that time. Reservations provide the highest level of assurance for capacity and provide a lower price than on-demand resources. Future TPU reservations include a committed use discount "
+      },
+      {
+        "question": "How does 'Plan your Cloud TPU resources' handle: Choose a TPU capacity mode?",
+        "answer": "By default, TPU capacity operates on Google-managed infrastructure. If you have a reservation, you can choose to use All Capacity mode for TPU v6e (Trillium) and TPU7x (Ironwood). All Capacity mode gives you access to 100% of your reserved capacity and provides full topology visibility. However, you are responsible for managing hardware maintenance and failure recovery.\nFor a detailed comparison between default Google-managed infrastructure and All Capacity mode, see [TPU capacity modes](https://docs.cloud.google.com/tpu/docs/capacity-modes)."
+      },
+      {
+        "question": "How does 'Plan your Cloud TPU resources' handle: Choose TPU version?",
+        "answer": "Select the TPU version, for example, v5p, v6e, or TPU7x (Ironwood) based on your model's training or inference needs. For more information, see [TPU versions](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#versions)."
+      },
+      {
+        "question": "How does 'Plan your Cloud TPU resources' handle: Request TPU quota?",
+        "answer": "To use TPU VMs, regardless of the consumption option, you need either on-demand or preemptible quota for Cloud TPU resources. Make sure you have enough quota for your chosen option, TPU version, size, and zone. Quotas are specific to each TPU version and differ for on-demand versus preemptible use. Some TPU versions have default quotas; for others, you must request quota. For more information, see [Compute Engine quotas](https://docs.cloud.google.com/compute/quotas-limits)."
+      },
+      {
+        "question": "How does 'Plan your Cloud TPU resources' handle: What's next?",
+        "answer": "* Learn how to [create TPU VMs](https://docs.cloud.google.com/tpu/docs/create-tpu-vm-compute)\n  * Learn how to [manage TPUs](https://docs.cloud.google.com/tpu/docs/managing-tpus-compute)"
+      }
+    ],
+    "full_markdown": "# Plan your Cloud TPU resources \nThis page describes how to plan your Tensor Processing Unit (TPU) usage.\n## Choose a consumption option\nConsumption options refers to the ways to get and use compute resources. You can request Cloud TPU VM capacity based on your needs for speed, duration, cost, and preemption tolerance. Options include:\n  * **On-demand:** Standard pay-as-you-go instances.\n  * **Spot VMs:** Lower-cost, preemptible instances. Uses preemptible quota.\n  * **Flex-start VMs:** Reserve capacity as needed, for up to 7 days, without long-term reservations or complex quota management.\n  * **Reservations:** Reserve capacity for a specific duration (up to 90 days or 1 year+), guaranteeing availability. Uses on-demand quota.\n\n\nThe following table compares TPU consumption options based on how they work, their ideal use cases, and supported TPU versions.  \n| Consumption option  | How it works  | Best used for  | Supported TPU versions  |  \n| --- | --- | --- | --- |  \n| Future reservations for one year or longer  |  You request TPU resources for one year or longer in advance. These resources are reserved for your exclusive use during that time. Reservations provide the highest level of assurance for capacity and provide a lower price than on-demand resources. Future TPU reservations include a committed use discount (CUD) CUDs provide discounted prices when you purchase a committed use contract. For more information, see [ Future reservations for one year or longer](https://docs.cloud.google.com/tpu/docs/long-term-reservation)  | Future reservations for one year or longer are ideal for long-running training jobs and inference workloads.  | All TPU versions  |  \n| Future reservations for up to 90 days (calendar mode)  |  You request TPU resources for a specific start time and duration, between one and 90 days. These resources are reserved for your exclusive use during that time. For more information, see [Future reservations for up to 90 days (in calendar mode)](https://docs.cloud.google.com/tpu/docs/calendar-mode-reservation) Reservations provide the highest level of assurance for capacity and provide a lower price than on-demand resources.  | Future reservations in calendar mode are a good fit for training and experimentation workloads that require precise start times and have a defined duration.  | TPU7x, TPU v6e, and TPU v5p  |  \n| On-demand  |  You request TPU resources for immediate use, for as long as you need them. On-demand provides significant flexibility. On-demand resources aren't preempted, but there's no guarantee that there are enough available TPU resources to satisfy your request. On-demand is the default option when you create TPU resources. For more information about creating and using on-demand TPUs, see [Create TPU VMs](https://docs.cloud.google.com/tpu/docs/create-instance-compute).  | On-demand is a good fit for urgent jobs and workloads that require a flexible end time.  | All TPU versions  |  \n| Flex-start ([Preview](https://cloud.google.com/products#product-launch-stages))  |  You request TPU resources for a specific amount of time, up to seven days, without reserving capacity in advance. TPU Flex-start VMs are delivered from a dedicated pool of capacity, so the availability of these resources is higher than on-demand. For more information, see [Request TPU Flex-start VMs](https://docs.cloud.google.com/tpu/docs/create-flex-start-compute).  For more information about using TPU Flex-start VMs with Google Kubernetes Engine (GKE), see [ About GPU and TPU provisioning with flex-start provisioning mode](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/dws).  | Flex-start is ideal for experimentation, small-scale testing, dynamic provisioning of TPUs for inference workloads, model fine-tuning, and workload runs that take less than seven days.  | TPU7x, TPU v6e, and TPU v5p  |  \n| Spot  |  You request TPU resources that can be preempted. Spot VMs are available at a significantly lower price than on-demand resources. Spot VMs are often easier to obtain than on-demand resources but can be preempted (shut down) at any time. There is no limit on runtime duration. For more information about TPU Spot VMs, see [ Manage TPU Spot VMs](https://docs.cloud.google.com/tpu/docs/spot-compute).  | Spot is a good fit for scheduling lower priority workloads like model pre-training, model fine-tuning, and simulation jobs that are tolerant to availability disruptions.  | All TPU versions  |  \n## Choose a TPU capacity mode\nBy default, TPU capacity operates on Google-managed infrastructure. If you have a reservation, you can choose to use All Capacity mode for TPU v6e (Trillium) and TPU7x (Ironwood). All Capacity mode gives you access to 100% of your reserved capacity and provides full topology visibility. However, you are responsible for managing hardware maintenance and failure recovery.\nFor a detailed comparison between default Google-managed infrastructure and All Capacity mode, see [TPU capacity modes](https://docs.cloud.google.com/tpu/docs/capacity-modes).\n## Choose TPU version\nSelect the TPU version, for example, v5p, v6e, or TPU7x (Ironwood) based on your model's training or inference needs. For more information, see [TPU versions](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#versions).\n## Request TPU quota\nTo use TPU VMs, regardless of the consumption option, you need either on-demand or preemptible quota for Cloud TPU resources. Make sure you have enough quota for your chosen option, TPU version, size, and zone. Quotas are specific to each TPU version and differ for on-demand versus preemptible use. Some TPU versions have default quotas; for others, you must request quota. For more information, see [Compute Engine quotas](https://docs.cloud.google.com/compute/quotas-limits).\n## What's next\n  * Learn how to [create TPU VMs](https://docs.cloud.google.com/tpu/docs/create-tpu-vm-compute)\n  * Learn how to [manage TPUs](https://docs.cloud.google.com/tpu/docs/managing-tpus-compute)"
+  }
 }

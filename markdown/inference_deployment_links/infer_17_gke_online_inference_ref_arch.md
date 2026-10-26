@@ -2,15 +2,11 @@
 id: "infer_17_gke_online_inference_ref_arch"
 title: "GKE online inference TPU reference implementation (vLLM)"
 url: "https://github.com/GoogleCloudPlatform/accelerated-platforms/blob/main/docs/platforms/gke/base/use-cases/inference-ref-arch/online-inference-tpu/vllm-with-hf-model.md"
-category: "Inference deployment links"
+category: "inference_deployment_links"
 description: "Google Cloud Platform GKE inference reference architecture page for online vLLM serving on TPUs."
-crawled_at: "2026-10-26T12:47:46.626309+00:00"
-crawler_engine: "GitHubRaw"
+crawled_at: "2026-10-26T14:44:03.191289+00:00"
+crawler_engine: "GitHub-Raw-API+Scrapling"
 ---
-
-# GKE online inference TPU reference implementation (vLLM)
-
-Source: https://github.com/GoogleCloudPlatform/accelerated-platforms/blob/main/docs/platforms/gke/base/use-cases/inference-ref-arch/online-inference-tpu/vllm-with-hf-model.md
 
 # Online inference using vLLM with TPUs on Google Kubernetes Engine (GKE)
 

@@ -2,17 +2,17 @@
 id: "train_17_maxtext_setup_sh"
 title: "MaxText TPU setup script"
 url: "https://github.com/google/maxtext/blob/main/src/dependencies/scripts/setup.sh"
-category: "Training framework links"
+category: "training_framework_links"
 description: "Concrete MaxText dependency setup for TPU, including stable/nightly JAX, jaxlib, and libtpu selection."
-crawled_at: "2026-10-26T12:47:08.817111+00:00"
-crawler_engine: "GitHubRaw"
+crawled_at: "2026-10-26T14:43:54.471483+00:00"
+crawler_engine: "GitHub-Raw-API+Scrapling"
 ---
 
-# MaxText TPU setup script
+# MaxText TPU Setup Script (`src/dependencies/scripts/setup.sh`)
 
-Source: https://github.com/google/maxtext/blob/main/src/dependencies/scripts/setup.sh
+Official dependency installation script for MaxText on Cloud TPU VMs, supporting `stable` and `nightly` modes, `jax`, `jaxlib`, `libtpu`, and `tpu-info` installation.
 
-```
+```bash
 #!/bin/bash
 
 # Copyright 2023–2025 Google LLC
@@ -413,5 +413,4 @@ fi
 
 echo -e "\n\nError: MODE must be either 'stable', 'nightly', or 'libtpu-only'.\n\n"
 exit 1
-
 ```

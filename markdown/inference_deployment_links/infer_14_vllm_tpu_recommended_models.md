@@ -2,65 +2,13 @@
 id: "infer_14_vllm_tpu_recommended_models"
 title: "vLLM TPU recommended models"
 url: "https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/"
-category: "Inference deployment links"
+category: "inference_deployment_links"
 description: "Model and feature validation matrix; check release and nightly support before deploying."
-crawled_at: "2026-10-26T12:47:44.915019+00:00"
-crawler_engine: "Crawl4AI"
+crawled_at: "2026-10-26T14:43:58.832315+00:00"
+crawler_engine: "Crawl4AI+MkDocsSphinxCleaner"
 ---
 
-[ Skip to content ](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#recommended-models)
-[ ![vLLM logo](https://docs.vllm.ai/projects/tpu/en/latest/assets/logos/vllm-logo-only-light.png) + ![JAX logo](https://docs.vllm.ai/projects/tpu/en/latest/assets/logos/jax-logo.svg) ](https://docs.vllm.ai/projects/tpu/en/latest/ "vLLM JAX")
-vLLM JAX 
-Recommended Models 
-[ ](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/?q= "Share")
-Type to start searching
-[ GitHub 
-  * v0.32.0
-  * 467
-  * 349
-
-](https://github.com/vllm-project/tpu-inference "Go to repository")
-[ ![vLLM logo](https://docs.vllm.ai/projects/tpu/en/latest/assets/logos/vllm-logo-only-light.png) + ![JAX logo](https://docs.vllm.ai/projects/tpu/en/latest/assets/logos/jax-logo.svg) ](https://docs.vllm.ai/projects/tpu/en/latest/ "vLLM JAX") vLLM JAX 
-[ GitHub 
-  * v0.32.0
-  * 467
-  * 349
-
-](https://github.com/vllm-project/tpu-inference "Go to repository")
-  * [ Home  ](https://docs.vllm.ai/projects/tpu/en/latest/)
-  * Getting Started  Getting Started 
-    * [ TPU Setup  ](https://docs.vllm.ai/projects/tpu/en/latest/getting_started/tpu_setup/)
-    * [ Installation  ](https://docs.vllm.ai/projects/tpu/en/latest/getting_started/installation/)
-    * [ Quickstart  ](https://docs.vllm.ai/projects/tpu/en/latest/getting_started/quickstart/)
-  * Features & Usage  Features & Usage 
-    * Recommended Models  [ Recommended Models  ](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/) Table of contents 
-      * [ Recommended Models  ](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#recommended-models_1)
-        * [ Models  ](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#models)
-        * [ Embedding Models  ](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#embedding-models)
-    * [ Feature Matrix  ](https://docs.vllm.ai/projects/tpu/en/latest/features/)
-    * Deployment Recipes  Deployment Recipes 
-      * [ v7x Recipes (Ironwood)  ](https://docs.vllm.ai/projects/tpu/en/latest/deployment_guides/ironwood/)
-      * [ v6e Recipes (Trillium)  ](https://docs.vllm.ai/projects/tpu/en/latest/deployment_guides/trillium/)
-    * Code Examples  Code Examples 
-      * [ Multi Modal Inference  ](https://docs.vllm.ai/projects/tpu/en/latest/api_and_code_examples/multi_modal_inference/)
-      * [ Offline LoRA  ](https://docs.vllm.ai/projects/tpu/en/latest/api_and_code_examples/offline_lora_inference/)
-    * [ Out-of-Tree Usage  ](https://docs.vllm.ai/projects/tpu/en/latest/getting_started/out-of-tree/)
-  * Developers Guides  Developers Guides 
-    * [ Contributing to vLLM JAX  ](https://docs.vllm.ai/projects/tpu/en/latest/developers_guide/contributing/)
-    * [ Adding a New Model to CI  ](https://docs.vllm.ai/projects/tpu/en/latest/developers_guide/buildkite/)
-    * [ JAX Model Development  ](https://docs.vllm.ai/projects/tpu/en/latest/developers_guide/jax_model_development/)
-    * [ Torchax Model Development  ](https://docs.vllm.ai/projects/tpu/en/latest/developers_guide/torchax_model_development/)
-    * [ Profiling  ](https://docs.vllm.ai/projects/tpu/en/latest/developers_guide/profiling/)
-
-
-Table of contents 
-  * [ Recommended Models  ](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#recommended-models_1)
-    * [ Models  ](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#models)
-    * [ Embedding Models  ](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#embedding-models)
-
-
-[ ](https://github.com/vllm-project/tpu-inference/edit/main/docs/recommended_models.md "Edit this page")
-# Recommended Models[¶](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#recommended-models "Permanent link")
+# Recommended Models
 Although vLLM JAX’s new unified backend makes out-of-the-box high performance serving possible with any model supported in vLLM, the reality is that we're still in the process of implementing a few core components. For this reason, until we land more capabilities, we recommend starting from this list of stress tested models and features below.
 We are still landing components in vllm-jax that will improve performance for larger scale, higher complexity models (XL MoE, +vision encoders, MLA, etc.).
 If you’d like us to prioritize something specific, please submit a GitHub feature request [here](https://github.com/vllm-project/tpu-inference/issues/new/choose).
@@ -73,9 +21,9 @@ If you’d like us to prioritize something specific, please submit a GitHub feat
 >   * ❓ **Untested:** The functionality exists but has not been recently or thoroughly verified.
 > 
 
-## Recommended Models[¶](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#recommended-models_1 "Permanent link")
+## Recommended Models
 These tables show the models currently tested for accuracy and performance.
-### Models[¶](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#models "Permanent link")
+### Models
 [Release](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#release)[Nightly](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#nightly)  
 | Model  | Type  | Unit Test  | Correctness Test  | Performance Test  |  
 | --- | --- | --- | --- | --- |  
@@ -141,7 +89,7 @@ These tables show the models currently tested for accuracy and performance.
 | [moonshotai/Kimi-K2-Thinking](https://huggingface.co/moonshotai/Kimi-K2-Thinking)  | Text  | ❓  | ❓  | ❓  |  
 | [openai/gpt-oss-20b](https://huggingface.co/openai/gpt-oss-20b)  | Text  | ❓  | ❓  | ❓  |  
 | [zai-org/GLM-5](https://huggingface.co/zai-org/GLM-5)  | Text  | ❓  | ❓  | ❓  |  
-### Embedding Models[¶](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#embedding-models "Permanent link")
+### Embedding Models
 [v7x](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#v7x)[v6e](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#v6e)  
 | Model  | Type  | UnitTest  | Accuracy/Correctness  | Benchmark  |  
 | --- | --- | --- | --- | --- |  
@@ -208,6 +156,4 @@ These tables show the models currently tested for accuracy and performance.
 | moonshotai/Kimi-K2.6  | Text  | not enough HBM  | not enough HBM  | ❓ Untested  |  
 | openai/gpt-oss-120b  | Text  | not enough HBM  | not enough HBM  | ❓ Untested  |  
 | openai/gpt-oss-20b  | Text  | ❓ Untested  | ❓ Untested  | ❓ Untested  |  
-| zai-org/GLM-5  | Text  | ❓ Untested  | ❓ Untested  | ❓ Untested  |  
-Back to top 
-Made with [ Material for MkDocs ](https://squidfunk.github.io/mkdocs-material/)
+| zai-org/GLM-5  | Text  | ❓ Untested  | ❓ Untested  | ❓ Untested  |

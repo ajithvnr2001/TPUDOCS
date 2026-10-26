@@ -1,52 +1,273 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:infer_12_vllm_tpu_quickstart",
-  "@type": "DocumentationResource",
-  "name": "vLLM TPU quickstart",
-  "canonicalUrl": "https://docs.vllm.ai/projects/tpu/en/latest/getting_started/quickstart/",
-  "category": "Inference deployment links",
-  "categorySlug": "inference_deployment_links",
-  "description": "Install the TPU-compatible vLLM stack and start an inference API server.",
-  "provenance": {
-    "sourceUrl": "https://docs.vllm.ai/projects/tpu/en/latest/getting_started/quickstart/",
-    "crawledAt": "2026-10-26T12:47:44.623882+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 11560
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "vLLM TPU quickstart",
-      "documentedIn",
-      "https://docs.vllm.ai/projects/tpu/en/latest/getting_started/quickstart/"
-    ],
-    [
-      "vLLM TPU quickstart",
-      "belongsToCategory",
-      "inference_deployment_links"
-    ],
-    [
-      "vLLM TPU quickstart",
-      "supportsWorkflow",
-      "High Throughput LLM Inference Serving"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:infer_12_vllm_tpu_quickstart",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "infer_12_vllm_tpu_quickstart",
+    "name": "vLLM TPU quickstart",
+    "url": "https://docs.vllm.ai/projects/tpu/en/latest/getting_started/quickstart/",
+    "category": "inference_deployment_links",
+    "description": "Install the TPU-compatible vLLM stack and start an inference API server.",
+    "char_count": 3267,
+    "word_count": 343,
+    "section_count": 12,
+    "code_block_count": 5,
+    "table_count": 0,
+    "cli_command_count": 7,
+    "indexed_at": "2026-10-26T14:46:54.689820+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:infer_12_vllm_tpu_quickstart",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:infer_12_vllm_tpu_quickstart",
+        "predicate": "schema:name",
+        "object": "vLLM TPU quickstart"
+      },
+      {
+        "subject": "tpu_doc:infer_12_vllm_tpu_quickstart",
+        "predicate": "schema:url",
+        "object": "https://docs.vllm.ai/projects/tpu/en/latest/getting_started/quickstart/"
+      },
+      {
+        "subject": "tpu_doc:infer_12_vllm_tpu_quickstart",
+        "predicate": "schema:category",
+        "object": "inference_deployment_links"
+      },
+      {
+        "subject": "tpu_doc:infer_12_vllm_tpu_quickstart",
+        "predicate": "schema:description",
+        "object": "Install the TPU-compatible vLLM stack and start an inference API server."
+      },
+      {
+        "subject": "tpu_doc:infer_12_vllm_tpu_quickstart",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:TPU7x"
+      },
+      {
+        "subject": "tpu_doc:infer_12_vllm_tpu_quickstart",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:infer_12_vllm_tpu_quickstart",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5e"
+      },
+      {
+        "subject": "tpu_doc:infer_12_vllm_tpu_quickstart",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:vLLM-TPU"
+      },
+      {
+        "subject": "tpu_doc:infer_12_vllm_tpu_quickstart",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:infer_12_vllm_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "Get started with vLLM JAX"
+      },
+      {
+        "subject": "tpu_doc:infer_12_vllm_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "Requirements"
+      },
+      {
+        "subject": "tpu_doc:infer_12_vllm_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "Installation"
+      },
+      {
+        "subject": "tpu_doc:infer_12_vllm_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "Verify Installation"
+      },
+      {
+        "subject": "tpu_doc:infer_12_vllm_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "Expected output:"
+      },
+      {
+        "subject": "tpu_doc:infer_12_vllm_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "vllm version: 0.x.x"
+      },
+      {
+        "subject": "tpu_doc:infer_12_vllm_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "tpu_inference version: 0.x.x"
+      },
+      {
+        "subject": "tpu_doc:infer_12_vllm_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "vllm platform: TPU V6E (or your specific TPU architecture)"
+      },
+      {
+        "subject": "tpu_doc:infer_12_vllm_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "jax backends: [TpuDevice(id=0, process_index=0, coords=(0,0,0), core_on_chip=0), ...]"
+      },
+      {
+        "subject": "tpu_doc:infer_12_vllm_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "Run the vLLM Server"
+      },
+      {
+        "subject": "tpu_doc:infer_12_vllm_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "Next steps:"
+      },
+      {
+        "subject": "tpu_doc:infer_12_vllm_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "For further reading"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "vLLM TPU quickstart provides official guidance on Install the TPU-compatible vLLM stack and start an inference API server.",
-      "confidence": 1.0,
-      "source": "https://docs.vllm.ai/projects/tpu/en/latest/getting_started/quickstart/",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is vLLM TPU quickstart used for in Cloud TPU workflows?",
-      "answer": "Install the TPU-compatible vLLM stack and start an inference API server.",
-      "category": "inference_deployment_links"
-    }
-  ],
-  "contentSummary": "Install the TPU-compatible vLLM stack and start an inference API server."
+  },
+  "structured_content": {
+    "summary": "Install the TPU-compatible vLLM stack and start an inference API server.",
+    "sections": [
+      {
+        "heading": "Get started with vLLM JAX",
+        "level": 1,
+        "content": "Google Cloud TPUs (Tensor Processing Units) accelerate machine learning workloads. vLLM supports TPU v6e and v5e. For architecture, supported topologies, and more, see [TPU System Architecture](https://cloud.google.com/tpu/docs/system-architecture) and specific TPU version pages ([v5e](https://cloud.google.com/tpu/docs/v5e) and [v6e](https://cloud.google.com/tpu/docs/v6e)).\n* * *"
+      },
+      {
+        "heading": "Requirements",
+        "level": 2,
+        "content": "* **Google Cloud TPU VM:** Access to a TPU VM. For setup instructions, see the [Cloud TPU Setup guide](https://docs.vllm.ai/projects/tpu/en/latest/getting_started/tpu_setup/).\n  * **TPU versions:** v7x, v6e, v5e\n  * **Python:** 3.11 or newer (3.12 used in examples).\n\n\n* * *"
+      },
+      {
+        "heading": "Installation",
+        "level": 2,
+        "content": "For detailed steps on installing `vllm-tpu` with `pip` or running it as a Docker image, please see the [**Installation Guide**](https://docs.vllm.ai/projects/tpu/en/latest/getting_started/installation/).\nWe recommend using [uv](https://docs.astral.sh/uv/) (`uv pip install`) instead of standard `pip` as it improves installation speed.\n\n```\nuv pip install vllm-tpu\n\n```"
+      },
+      {
+        "heading": "Verify Installation",
+        "level": 2,
+        "content": "To quickly verify that the installation was successful and `vllm-tpu` is correctly configured:\n\n```\npython -c '\nimport jax\nimport vllm\nimport importlib.metadata\nfrom vllm.platforms import current_platform\n\ntpu_version = importlib.metadata.version(\"tpu_inference\")\nprint(f\"vllm version: {vllm.__version__}\")\nprint(f\"tpu_inference version: {tpu_version}\")\nprint(f\"vllm platform: {current_platform.get_device_name()}\")\nprint(f\"jax backends: {jax.devices()}\")\n'"
+      },
+      {
+        "heading": "Expected output:",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "vllm version: 0.x.x",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "tpu_inference version: 0.x.x",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "vllm platform: TPU V6E (or your specific TPU architecture)",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "jax backends: [TpuDevice(id=0, process_index=0, coords=(0,0,0), core_on_chip=0), ...]",
+        "level": 1,
+        "content": "```"
+      },
+      {
+        "heading": "Run the vLLM Server",
+        "level": 2,
+        "content": "After installing `vllm-tpu`, you can start the API server.\n  1. **Log in to Hugging Face:** You'll need a Hugging Face token to download models.\n\n```\nexport TOKEN=YOUR_TOKEN\ngit config --global credential.helper store\nhuggingface-cli login --token $TOKEN\n\n```\n\n  1. **Launch the Server:** The following command starts the server with the Llama-3.1-8B model.\n\n```\nvllm serve \"meta-llama/Llama-3.1-8B\" \\\n    --download_dir /tmp \\\n    --tensor_parallel_size=1 \\\n    --max-model-len=2048\n\n```\n\n  1. **Send a Request:**\n\n\nOnce the server is running, you can send it a request using `curl`:\n\n```\ncurl http://localhost:8000/v1/completions \\\n    -H \"Content-Type: application/json\" \\\n    -d '{\n        \"model\": \"meta-llama/Llama-3.1-8B\",\n        \"prompt\": \"Hello, my name is\",\n        \"max_tokens\": 20,\n        \"temperature\": 0.7\n    }'\n\n```"
+      },
+      {
+        "heading": "Next steps:",
+        "level": 2,
+        "content": "Check out complete, end-to-end example recipes in the [tpu-recipes repository](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM)"
+      },
+      {
+        "heading": "For further reading",
+        "level": 2,
+        "content": "* [Examples](https://github.com/vllm-project/tpu-inference/tree/main/examples)\n  * [v7x (Ironwood) Recipes](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM)\n  * [v6e (Trillium) Recipes](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM)\n  * [GKE serving with vLLM TPU](https://cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu)"
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "uv pip install vllm-tpu"
+      },
+      {
+        "language": "text",
+        "code": "python -c '\nimport jax\nimport vllm\nimport importlib.metadata\nfrom vllm.platforms import current_platform\n\ntpu_version = importlib.metadata.version(\"tpu_inference\")\nprint(f\"vllm version: {vllm.__version__}\")\nprint(f\"tpu_inference version: {tpu_version}\")\nprint(f\"vllm platform: {current_platform.get_device_name()}\")\nprint(f\"jax backends: {jax.devices()}\")\n'\n# Expected output:\n# vllm version: 0.x.x\n# tpu_inference version: 0.x.x\n# vllm platform: TPU V6E (or your specific TPU architecture)\n# jax backends: [TpuDevice(id=0, process_index=0, coords=(0,0,0), core_on_chip=0), ...]"
+      },
+      {
+        "language": "text",
+        "code": "export TOKEN=YOUR_TOKEN\ngit config --global credential.helper store\nhuggingface-cli login --token $TOKEN"
+      },
+      {
+        "language": "text",
+        "code": "vllm serve \"meta-llama/Llama-3.1-8B\" \\\n    --download_dir /tmp \\\n    --tensor_parallel_size=1 \\\n    --max-model-len=2048"
+      },
+      {
+        "language": "text",
+        "code": "curl http://localhost:8000/v1/completions \\\n    -H \"Content-Type: application/json\" \\\n    -d '{\n        \"model\": \"meta-llama/Llama-3.1-8B\",\n        \"prompt\": \"Hello, my name is\",\n        \"max_tokens\": 20,\n        \"temperature\": 0.7\n    }'"
+      }
+    ],
+    "cli_commands": [
+      "uv pip install vllm-tpu",
+      "python -c '",
+      "export TOKEN=YOUR_TOKEN",
+      "git config --global credential.helper store",
+      "huggingface-cli login --token $TOKEN",
+      "vllm serve \"meta-llama/Llama-3.1-8B\" \\",
+      "curl http://localhost:8000/v1/completions \\"
+    ],
+    "environment_variables": [],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'vLLM TPU quickstart' (https://docs.vllm.ai/projects/tpu/en/latest/getting_started/quickstart/)?",
+        "answer": "Install the TPU-compatible vLLM stack and start an inference API server."
+      },
+      {
+        "question": "How does 'vLLM TPU quickstart' handle: Get started with vLLM JAX?",
+        "answer": "Google Cloud TPUs (Tensor Processing Units) accelerate machine learning workloads. vLLM supports TPU v6e and v5e. For architecture, supported topologies, and more, see [TPU System Architecture](https://cloud.google.com/tpu/docs/system-architecture) and specific TPU version pages ([v5e](https://cloud.google.com/tpu/docs/v5e) and [v6e](https://cloud.google.com/tpu/docs/v6e)).\n* * *"
+      },
+      {
+        "question": "How does 'vLLM TPU quickstart' handle: Requirements?",
+        "answer": "* **Google Cloud TPU VM:** Access to a TPU VM. For setup instructions, see the [Cloud TPU Setup guide](https://docs.vllm.ai/projects/tpu/en/latest/getting_started/tpu_setup/).\n  * **TPU versions:** v7x, v6e, v5e\n  * **Python:** 3.11 or newer (3.12 used in examples).\n\n\n* * *"
+      },
+      {
+        "question": "How does 'vLLM TPU quickstart' handle: Installation?",
+        "answer": "For detailed steps on installing `vllm-tpu` with `pip` or running it as a Docker image, please see the [**Installation Guide**](https://docs.vllm.ai/projects/tpu/en/latest/getting_started/installation/).\nWe recommend using [uv](https://docs.astral.sh/uv/) (`uv pip install`) instead of standard `pip` as it improves installation speed.\n\n```\nuv pip install vllm-tpu\n\n```"
+      },
+      {
+        "question": "How does 'vLLM TPU quickstart' handle: Verify Installation?",
+        "answer": "To quickly verify that the installation was successful and `vllm-tpu` is correctly configured:\n\n```\npython -c '\nimport jax\nimport vllm\nimport importlib.metadata\nfrom vllm.platforms import current_platform\n\ntpu_version = importlib.metadata.version(\"tpu_inference\")\nprint(f\"vllm version: {vllm.__version__}\")\nprint(f\"tpu_inference version: {tpu_version}\")\nprint(f\"vllm platform: {current_platform.get_device_name()}\")\nprint(f\"jax backends: {jax.devices()}\")\n'"
+      },
+      {
+        "question": "How does 'vLLM TPU quickstart' handle: Run the vLLM Server?",
+        "answer": "After installing `vllm-tpu`, you can start the API server.\n  1. **Log in to Hugging Face:** You'll need a Hugging Face token to download models.\n\n```\nexport TOKEN=YOUR_TOKEN\ngit config --global credential.helper store\nhuggingface-cli login --token $TOKEN\n\n```\n\n  1. **Launch the Server:** The following command starts the server with the Llama-3.1-8B model.\n\n```\nvllm serve \"meta-llama/Llama-3.1-8B\" \\\n    --download_dir /tmp \\\n    --tensor_parallel_size=1 \\\n    --max-model-len=2048\n\n```\n\n  1. **Send a Request:**\n\n\nOnce the server is running, you can send it a request using `curl`:\n\n```\ncurl http://localhost:8000/v1/completions \\\n    -H \"Content-Type: application/json\" \\\n    -d '{\n        \"model\": \"meta-llama/Llama-3.1-8B\",\n        \"prompt\": \"Hello, my name is\",\n        \"max_tokens\": 20,\n        \"temperature\": 0.7\n    }'\n\n```"
+      },
+      {
+        "question": "How does 'vLLM TPU quickstart' handle: Next steps:?",
+        "answer": "Check out complete, end-to-end example recipes in the [tpu-recipes repository](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM)"
+      },
+      {
+        "question": "How does 'vLLM TPU quickstart' handle: For further reading?",
+        "answer": "* [Examples](https://github.com/vllm-project/tpu-inference/tree/main/examples)\n  * [v7x (Ironwood) Recipes](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM)\n  * [v6e (Trillium) Recipes](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM)\n  * [GKE serving with vLLM TPU](https://cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu)"
+      }
+    ],
+    "full_markdown": "# Get started with vLLM JAX\nGoogle Cloud TPUs (Tensor Processing Units) accelerate machine learning workloads. vLLM supports TPU v6e and v5e. For architecture, supported topologies, and more, see [TPU System Architecture](https://cloud.google.com/tpu/docs/system-architecture) and specific TPU version pages ([v5e](https://cloud.google.com/tpu/docs/v5e) and [v6e](https://cloud.google.com/tpu/docs/v6e)).\n* * *\n## Requirements\n  * **Google Cloud TPU VM:** Access to a TPU VM. For setup instructions, see the [Cloud TPU Setup guide](https://docs.vllm.ai/projects/tpu/en/latest/getting_started/tpu_setup/).\n  * **TPU versions:** v7x, v6e, v5e\n  * **Python:** 3.11 or newer (3.12 used in examples).\n\n\n* * *\n## Installation\nFor detailed steps on installing `vllm-tpu` with `pip` or running it as a Docker image, please see the [**Installation Guide**](https://docs.vllm.ai/projects/tpu/en/latest/getting_started/installation/).\nWe recommend using [uv](https://docs.astral.sh/uv/) (`uv pip install`) instead of standard `pip` as it improves installation speed.\n\n```\nuv pip install vllm-tpu\n\n```\n\n## Verify Installation\nTo quickly verify that the installation was successful and `vllm-tpu` is correctly configured:\n\n```\npython -c '\nimport jax\nimport vllm\nimport importlib.metadata\nfrom vllm.platforms import current_platform\n\ntpu_version = importlib.metadata.version(\"tpu_inference\")\nprint(f\"vllm version: {vllm.__version__}\")\nprint(f\"tpu_inference version: {tpu_version}\")\nprint(f\"vllm platform: {current_platform.get_device_name()}\")\nprint(f\"jax backends: {jax.devices()}\")\n'\n# Expected output:\n# vllm version: 0.x.x\n# tpu_inference version: 0.x.x\n# vllm platform: TPU V6E (or your specific TPU architecture)\n# jax backends: [TpuDevice(id=0, process_index=0, coords=(0,0,0), core_on_chip=0), ...]\n\n```\n\n## Run the vLLM Server\nAfter installing `vllm-tpu`, you can start the API server.\n  1. **Log in to Hugging Face:** You'll need a Hugging Face token to download models.\n\n```\nexport TOKEN=YOUR_TOKEN\ngit config --global credential.helper store\nhuggingface-cli login --token $TOKEN\n\n```\n\n  1. **Launch the Server:** The following command starts the server with the Llama-3.1-8B model.\n\n```\nvllm serve \"meta-llama/Llama-3.1-8B\" \\\n    --download_dir /tmp \\\n    --tensor_parallel_size=1 \\\n    --max-model-len=2048\n\n```\n\n  1. **Send a Request:**\n\n\nOnce the server is running, you can send it a request using `curl`:\n\n```\ncurl http://localhost:8000/v1/completions \\\n    -H \"Content-Type: application/json\" \\\n    -d '{\n        \"model\": \"meta-llama/Llama-3.1-8B\",\n        \"prompt\": \"Hello, my name is\",\n        \"max_tokens\": 20,\n        \"temperature\": 0.7\n    }'\n\n```\n\n## Next steps:\nCheck out complete, end-to-end example recipes in the [tpu-recipes repository](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM)\n## For further reading\n  * [Examples](https://github.com/vllm-project/tpu-inference/tree/main/examples)\n  * [v7x (Ironwood) Recipes](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM)\n  * [v6e (Trillium) Recipes](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM)\n  * [GKE serving with vLLM TPU](https://cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu)"
+  }
 }

@@ -1,63 +1,204 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:mig_18_torchtpu_engineering_overview",
-  "@type": "DocumentationResource",
-  "name": "TorchTPU engineering overview",
-  "canonicalUrl": "https://developers.googleblog.com/torchtpu-running-pytorch-natively-on-tpus-at-google-scale/",
-  "category": "Nvidia to tpu migration docs",
-  "categorySlug": "nvidia_to_tpu_migration_docs",
-  "description": "Explains native PyTorch TPU execution and the engineering choices behind workload portability.",
-  "provenance": {
-    "sourceUrl": "https://developers.googleblog.com/torchtpu-running-pytorch-natively-on-tpus-at-google-scale/",
-    "crawledAt": "2026-10-26T12:48:22.359073+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 16869
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "TorchTPU engineering overview",
-      "documentedIn",
-      "https://developers.googleblog.com/torchtpu-running-pytorch-natively-on-tpus-at-google-scale/"
-    ],
-    [
-      "TorchTPU engineering overview",
-      "belongsToCategory",
-      "nvidia_to_tpu_migration_docs"
-    ],
-    [
-      "TorchTPU engineering overview",
-      "supportsWorkflow",
-      "CUDA to TPU Code Migration"
-    ],
-    [
-      "TorchTPU engineering overview",
-      "primaryFramework",
-      "TorchTPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:mig_18_torchtpu_engineering_overview",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "mig_18_torchtpu_engineering_overview",
+    "name": "TorchTPU engineering overview",
+    "url": "https://developers.googleblog.com/torchtpu-running-pytorch-natively-on-tpus-at-google-scale/",
+    "category": "nvidia_to_tpu_migration_docs",
+    "description": "Explains native PyTorch TPU execution and the engineering choices behind workload portability.",
+    "char_count": 14098,
+    "word_count": 1707,
+    "section_count": 8,
+    "code_block_count": 0,
+    "table_count": 0,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.795218+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:mig_18_torchtpu_engineering_overview",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:mig_18_torchtpu_engineering_overview",
+        "predicate": "schema:name",
+        "object": "TorchTPU engineering overview"
+      },
+      {
+        "subject": "tpu_doc:mig_18_torchtpu_engineering_overview",
+        "predicate": "schema:url",
+        "object": "https://developers.googleblog.com/torchtpu-running-pytorch-natively-on-tpus-at-google-scale/"
+      },
+      {
+        "subject": "tpu_doc:mig_18_torchtpu_engineering_overview",
+        "predicate": "schema:category",
+        "object": "nvidia_to_tpu_migration_docs"
+      },
+      {
+        "subject": "tpu_doc:mig_18_torchtpu_engineering_overview",
+        "predicate": "schema:description",
+        "object": "Explains native PyTorch TPU execution and the engineering choices behind workload portability."
+      },
+      {
+        "subject": "tpu_doc:mig_18_torchtpu_engineering_overview",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:TPU7x"
+      },
+      {
+        "subject": "tpu_doc:mig_18_torchtpu_engineering_overview",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:mig_18_torchtpu_engineering_overview",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:mig_18_torchtpu_engineering_overview",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTitan"
+      },
+      {
+        "subject": "tpu_doc:mig_18_torchtpu_engineering_overview",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:Pallas"
+      },
+      {
+        "subject": "tpu_doc:mig_18_torchtpu_engineering_overview",
+        "predicate": "okf:hasSection",
+        "object": "TorchTPU: Running PyTorch Natively on TPUs at Google Scale"
+      },
+      {
+        "subject": "tpu_doc:mig_18_torchtpu_engineering_overview",
+        "predicate": "okf:hasSection",
+        "object": "**Architecting for Usability, Portability, and Performance**"
+      },
+      {
+        "subject": "tpu_doc:mig_18_torchtpu_engineering_overview",
+        "predicate": "okf:hasSection",
+        "object": "**Engineering the TorchTPU Stack: The Technical Reality**"
+      },
+      {
+        "subject": "tpu_doc:mig_18_torchtpu_engineering_overview",
+        "predicate": "okf:hasSection",
+        "object": "**Eager First: Flexibility Without Compromise**"
+      },
+      {
+        "subject": "tpu_doc:mig_18_torchtpu_engineering_overview",
+        "predicate": "okf:hasSection",
+        "object": "**Static Compilation: Dynamo, XLA, and StableHLO**"
+      },
+      {
+        "subject": "tpu_doc:mig_18_torchtpu_engineering_overview",
+        "predicate": "okf:hasSection",
+        "object": "**Distributed Training and the MPMD Challenge**"
+      },
+      {
+        "subject": "tpu_doc:mig_18_torchtpu_engineering_overview",
+        "predicate": "okf:hasSection",
+        "object": "**TPU Hardware Awareness**"
+      },
+      {
+        "subject": "tpu_doc:mig_18_torchtpu_engineering_overview",
+        "predicate": "okf:hasSection",
+        "object": "**The Road Ahead: 2026 and Beyond**"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "TorchTPU engineering overview provides official guidance on Explains native PyTorch TPU execution and the engineering choices behind workload portability.",
-      "confidence": 1.0,
-      "source": "https://developers.googleblog.com/torchtpu-running-pytorch-natively-on-tpus-at-google-scale/",
-      "verified": true
-    },
-    {
-      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
-      "confidence": 1.0,
-      "source": "https://developers.googleblog.com/torchtpu-running-pytorch-natively-on-tpus-at-google-scale/",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is TorchTPU engineering overview used for in Cloud TPU workflows?",
-      "answer": "Explains native PyTorch TPU execution and the engineering choices behind workload portability.",
-      "category": "nvidia_to_tpu_migration_docs"
-    }
-  ],
-  "contentSummary": "Explains native PyTorch TPU execution and the engineering choices behind workload portability."
+  },
+  "structured_content": {
+    "summary": "Explains native PyTorch TPU execution and the engineering choices behind workload portability.",
+    "sections": [
+      {
+        "heading": "TorchTPU: Running PyTorch Natively on TPUs at Google Scale",
+        "level": 1,
+        "content": "APRIL 7, 2026\n[Claudio Basile](https://developers.googleblog.com/search/?author=Claudio+Basile) Technical Lead Torch TPU\n[Kat Ko](https://developers.googleblog.com/search/?author=Kat+Ko) Engineering Lead TorchTPU\n[Ben Wilson](https://developers.googleblog.com/search/?author=Ben+Wilson) Software Engineer Torch TPU\n[Lee Howes](https://developers.googleblog.com/search/?author=Lee+Howes) Engineering Lead Torch TPU\n[Bill Jia](https://developers.googleblog.com/search/?author=Bill+Jia) VP, Engineering Core ML\n[Joe Pamer](https://developers.googleblog.com/search/?author=Joe+Pamer) Senior Director Engineering Core ML\n[Michael Voznesensky](https://developers.googleblog.com/search/?author=Michael+Voznesensky) Engineer Lead Torch TPU\n[Robert Hundt](https://developers.googleblog.com/search/?author=Robert+Hundt) Distinguished Engineer Core ML\nShare\n  * [ Facebook ](https://www.facebook.com/sharer/sharer.php?u={url} \"Share on Facebook\")\n  * [ Twitter ](https://twitter.com/intent/tweet?text={url} \"Share on Twitter\")\n  * [ LinkedIn ](https://www.linkedin.com/shareArticle?url={url}&mini=true \"Share on LinkedIn\")\n  * Mail\n  * [ ](https://developers.googleblog.com/torchtpu-running-pytorch-natively-on-tpus-at-google-scale/ \"Get shareable link\")\n\n\n![Blog-A](https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Blog-A.original.png)\nThe challenges of building for modern AI infrastructure have fundamentally shifted. The modern frontier of machine learning now requires leveraging distributed systems, spanning thousands of accelerators. As models scale to run on clusters of O(100,000) chips, the software that powers these models must meet new demands for performance, hardware portability, and reliability.\nAt Google, our Tensor Processing Units (TPUs) are foundational to our supercomputing infrastructure. These custom ASICs power training and serving for both Google\u2019s own AI platforms, like Gemini and Veo, and the massive workloads of our Cloud customers. The entire AI community should be able to easily access the full capabilities of TPUs, and because many of these potential users build models in PyTorch, an integration that allows PyTorch to work natively and efficiently on the TPU is crucial.\n**Enter TorchTPU.** As an engineering team, our mandate was to build a stack that leads with usability, portability, and excellent performance. We wanted to enable developers to migrate existing PyTorch workloads with minimal code changes while giving them the APIs and the tools to extract every ounce of compute from our hardware. Here is a look under the hood at the engineering principles driving TorchTPU, the technical architecture we\u2019ve built, and our roadmap for 2026."
+      },
+      {
+        "heading": "**Architecting for Usability, Portability, and Performance**",
+        "level": 2,
+        "content": "To understand TorchTPU, you first have to understand the hardware it targets.\nA TPU system is not just a chip; it is [an integrated network](https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/ironwood-tpu-age-of-inference/). A host is attached to multiple chips, and each chip connects to the host and to other chips via our Inter-Chip Interconnect (ICI). This ICI links the chips into a highly efficient 2D or 3D Torus topology, allowing for massive scale-up without traditional networking bottlenecks. Within each chip, execution is divided between TensorCores and SparseCores. TensorCores are single-threaded units dedicated to dense matrix math, while SparseCores handle irregular memory access patterns like embeddings, gather/scatter operations, and offloading collectives.\nThese features mean TPUs are a powerful tool for machine learning; and our goal is to provide the specialized support needed to fully leverage these unique capabilities. This is where PyTorch comes in: the PyTorch toolchain already creates a consistent, widely-used interface over other device types.\nOur core principle for usability is simple:**it should feel like PyTorch**. A developer should be able to take an existing PyTorch script, change their initialization to \u201ctpu\u201d, and run their training loop without modifying a single line of core logic.\nAchieving this required an entirely new approach to how PyTorch interacts with the TPU compiler and runtime stack."
+      },
+      {
+        "heading": "**Engineering the TorchTPU Stack: The Technical Reality**",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "heading": "**Eager First: Flexibility Without Compromise**",
+        "level": 3,
+        "content": "Moving from concept to a native PyTorch experience on TPU meant rethinking the execution stack. We established an \"Eager First\" philosophy. Instead of requiring developers into static graph compilation immediately, we implemented TorchTPU using PyTorch\u2019s \u201cPrivateUse1\u201d interface. No subclasses, no wrappers; just ordinary, familiar PyTorch Tensors on a TPU. By integrating at this deep level, we are able to fully prioritize the eager execution experience developers expect from PyTorch.\nWe engineered three distinct eager modes to support the development lifecycle.\nThe first eager mode is Debug Eager, which dispatches one operation at a time and synchronizes with the CPU after every execution. It is inherently slow, but invaluable for tracking down shape mismatches, NaN values, and out-of-memory crashes.\nThe second is Strict Eager, which maintains single-op dispatch, but executes asynchronously, with the intent of mirroring the default PyTorch experience. This allows both the CPU and TPU to execute simultaneously, until a synchronization point is reached in the user\u2019s script.\nThe breakthrough, however, is our Fused Eager mode. Using automated reflection on the stream of operations, TorchTPU fuses steps on the fly into larger, computationally dense chunks before handing them to the TPU. By maximizing TensorCore utilization and minimizing memory bandwidth overhead, Fused Eager consistently delivers a 50% to 100+% performance increase over Strict Eager, with no setup required by the user.\nAll three modes are backed by a shared Compilation Cache that can operate on a single host, or be configured as persistent across multi-host setups. This means that as TorchTPU learns your workload, you spend less time compiling, and more time running."
+      },
+      {
+        "heading": "**Static Compilation: Dynamo, XLA, and StableHLO**",
+        "level": 3,
+        "content": "For users who want to unlock peak performance on the TPU, TorchTPU integrates natively with the torch.compile interface for full-graph compilation. We start by capturing the FX graph using Torch Dynamo. However, rather than routing through Torch Inductor, we utilize XLA as our primary backend compiler.\nThis was a highly deliberate architectural decision. XLA is rigorously battle-tested for TPU topologies. More importantly, it natively understands how to optimize the critical overlap between dense computation and collective communications across the ICI. Our translation layer maps PyTorch's operators directly into [StableHLO](https://openxla.org/stablehlo), XLA\u2019s primary Intermediate Representation (IR) for tensor math. This creates a direct connection from PyTorch into XLA\u2019s core lowering path, allowing us to generate highly optimized TPU binaries while reusing the execution paths established by our eager modes.\nFor developers writing custom operators, we ensure extensibility doesn't break performance. TorchTPU natively supports custom kernels written in [Pallas](https://docs.jax.dev/en/latest/jax.experimental.pallas.tpu.html) and JAX. By decorating a JAX function with @torch_tpu.pallas.custom_jax_kernel, engineers can write low-level hardware instructions that interface directly with our lowering path. Work is ongoing to also support [Helion](https://github.com/pytorch/helion) kernels."
+      },
+      {
+        "heading": "**Distributed Training and the MPMD Challenge**",
+        "level": 3,
+        "content": "To preserve the flexibility and usability of eager and compiled modes at scale, we focused heavily on PyTorch's distributed APIs. Today, TorchTPU supports Distributed Data Parallel (DDP), Fully Sharded Data Parallel v2 (FSDPv2), and PyTorch\u2019s DTensor out of the box. We've validated that many third-party libraries that build on PyTorch's distributed APIs work unchanged on TorchTPU.\nOne major limitation of PyTorch/XLA (a predecessor to TorchTPU) was that it only supported pure SPMD code. The reality of PyTorch inputs is that there is frequently slight divergence in the code running on different ranks: for instance, it is common for the \u201crank 0\u201d process to do a little extra work for logging or analytics. This kind of input represents a challenge for the TPU stack, which is heavily optimized for SPMD optimization. XLA works best with a global view of code running on the system, but working around it adds overhead to the developer who has to carefully remove impure behavior.\nTorchTPU is architected to carefully support divergent executions (MPMD), and will isolate communication primitives where necessary to preserve correctness, at minimal cost. This approach helps ensure that the experience of using PyTorch on the TPU is as natural as possible to existing PyTorch developers, while preserving XLA\u2019s ability to overlap communication and computation with a global view of a distributed TPU deployment wherever possible."
+      },
+      {
+        "heading": "**TPU Hardware Awareness**",
+        "level": 3,
+        "content": "The TPU can achieve very high performance and efficiency, but optimal model design may differ slightly from other hardware. For example, we frequently see models hardcoding attention head dimensions to 64, while current-generation TPUs achieve peak matrix multiplication efficiency at dimensions of 128 or 256. Modifying the model to target 128 or 256 dimensions better utilizes the large, dense and efficient tensor cores on the TPU chip.\nPortability doesn't eliminate hardware realities, so TorchTPU facilitates a tiered workflow: establish correct execution first, then use our upcoming deep-dive guidelines to identify and refactor suboptimal architectures, or to inject custom kernels, for optimal hardware utilization."
+      },
+      {
+        "heading": "**The Road Ahead: 2026 and Beyond**",
+        "level": 2,
+        "content": "We have laid a rock-solid foundation across training and serving support today, and we are actively tackling several open challenges to make TorchTPU a frictionless backend in the PyTorch ecosystem.\nA primary focus for our compiler team is reducing recompilations triggered by dynamic sequence lengths and batch sizes. By implementing advanced bounded dynamism within XLA, we aim to handle shape changes without incurring compilation overhead. This can be an important feature for certain workloads, such as iterative next-token prediction.\nWe are also building out a comprehensive library of precompiled TPU kernels for standard operations to drastically reduce the latency of the first execution iteration.\nLooking through the rest of 2026, we are working on:\n  * The launch of our public GitHub repository, complete with extensive documentation and reproducible architectural tutorials.\n  * Integration with PyTorch\u2019s Helion DSL to further expand our custom kernel capabilities.\n  * First-class support for dynamic shapes directly through torch.compile.\n  * Native multi-queue support to ease migration of heavily asynchronous codebases with decoupled memory and compute streams.\n  * Deep integrations with ecosystem pillars like vLLM and TorchTitan, alongside validated linear scaling up to full Pod-size infrastructure.\n\n\nTorchTPU represents our dedicated engineering effort to provide a seamless, high-performance PyTorch experience on TPU hardware. We are breaking down obstacles and removing friction between the framework you love and the TPU supercomputing hardware required for the next generation of AI.\n_To stay informed on the latest TorchTPU updates, please visit the_ [_TPU Developer Hub_](https://cloud.google.com/products/tpu/tpu-developer) _._\nposted in: \n  * [AI](https://developers.googleblog.com/search/?technology_categories=AI)\n  * [Cloud](https://developers.googleblog.com/search/?technology_categories=Cloud)\n  * [Announcements](https://developers.googleblog.com/search/?content_type_categories=Announcements)\n  * [Influence](https://developers.googleblog.com/search/?tag=Influence)\n  * [Learn](https://developers.googleblog.com/search/?tag=Learn)\n\n\n[ ](https://developers.googleblog.com/a2ui-v0-9-generative-ui/) Previous\nNext [ ](https://developers.googleblog.com/speeding-up-ai-bringing-google-colossus-to-pytorch-via-gcsfs-and-rapid-bucket/)\nRelated Posts\n[ ![Architecting Governed, Self-Evolving AI Agents on Google Cloud](https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Gemini_Generated_Image_g9d0nag9d0n.2e16d0ba.fill-800x400.jpg) AI Cloud Tutorials Industry Trends Architecting Governed, Self-Evolving AI Agents on Google Cloud OCT. 22, 2026 ](https://developers.googleblog.com/architecting-governed-self-evolving-ai-agents-on-gemini-agent-platform/) [ ![Integrating TorchTPU into TorchTitan and Optimizing Models for TPU](https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Torch_Titan_Header_Image.2e16d0ba.fill-800x400.jpg) AI Cloud Announcements Best Practices Integrating TorchTPU into TorchTitan and Optimizing Models for TPU OCT. 20, 2026 ](https://developers.googleblog.com/integrating-torchtpu-into-torchtitan-and-optimizing-models-for-tpu/) [ ![Streaming comes to API Gateway: real-time and AI-ready APIs, without changing your spec](https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Streaming_feature_in__API_Gateway_.2e16d0ba.fill-800x400.jpg) Cloud Announcements Events Streaming comes to API Gateway: real-time and AI-ready APIs, without changing your spec OCT. 22, 2026 ](https://developers.googleblog.com/streaming-comes-to-api-gateway-real-time-and-ai-ready-apis-without-changing-your-spec/) [ ![Powering the Agent Development Lifecycle with any framework, from ADK to LangChain and beyond](https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/1_2.2e16d0ba.fill-800x400.png) AI Cloud Tutorials Influence Powering the Agent Development Lifecycle with any framework, from ADK to LangChain and beyond OCT. 21, 2026 ](https://developers.googleblog.com/powering-the-agent-development-lifecycle-with-any-framework-from-adk-to-langchain-and-beyond/)\n  * Connect"
+      }
+    ],
+    "code_examples": [],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'TorchTPU engineering overview' (https://developers.googleblog.com/torchtpu-running-pytorch-natively-on-tpus-at-google-scale/)?",
+        "answer": "Explains native PyTorch TPU execution and the engineering choices behind workload portability."
+      },
+      {
+        "question": "How does 'TorchTPU engineering overview' handle: TorchTPU: Running PyTorch Natively on TPUs at Google Scale?",
+        "answer": "APRIL 7, 2026\n[Claudio Basile](https://developers.googleblog.com/search/?author=Claudio+Basile) Technical Lead Torch TPU\n[Kat Ko](https://developers.googleblog.com/search/?author=Kat+Ko) Engineering Lead TorchTPU\n[Ben Wilson](https://developers.googleblog.com/search/?author=Ben+Wilson) Software Engineer Torch TPU\n[Lee Howes](https://developers.googleblog.com/search/?author=Lee+Howes) Engineering Lead Torch TPU\n[Bill Jia](https://developers.googleblog.com/search/?author=Bill+Jia) VP, Engineering Core ML\n[Joe Pamer](https://developers.googleblog.com/search/?author=Joe+Pamer) Senior Director Engineering Core ML\n[Michael Voznesensky](https://developers.googleblog.com/search/?author=Michael+Voznesensky) Engineer Lead Torch TPU\n[Robert Hundt](https://developers.googleblog.com/search/?author=Robert+Hundt) Distinguished Engineer Core ML\nShare\n  * [ Facebook ](https://www.facebook.com/sharer/sharer.php?u={url} \"Share on Facebook\")\n  * [ Twitter ](https://twitter.com/intent/tweet?text={url} \"Share on Twitter\")\n  * [ LinkedIn ](https://www.linkedin.com/shareArticle?url={url}&mini=true \"Share on LinkedIn\")\n  * Mail\n  * [ ](https://developers.googleblog.com/torchtpu-running-pytorch-natively-on-"
+      },
+      {
+        "question": "How does 'TorchTPU engineering overview' handle: **Architecting for Usability, Portability, and Performance**?",
+        "answer": "To understand TorchTPU, you first have to understand the hardware it targets.\nA TPU system is not just a chip; it is [an integrated network](https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/ironwood-tpu-age-of-inference/). A host is attached to multiple chips, and each chip connects to the host and to other chips via our Inter-Chip Interconnect (ICI). This ICI links the chips into a highly efficient 2D or 3D Torus topology, allowing for massive scale-up without traditional networking bottlenecks. Within each chip, execution is divided between TensorCores and SparseCores. TensorCores are single-threaded units dedicated to dense matrix math, while SparseCores handle irregular memory access patterns like embeddings, gather/scatter operations, and offloading collectives.\nThese features mean TPUs are a powerful tool for machine learning; and our goal is to provide the specialized support needed to fully leverage these unique capabilities. This is where PyTorch comes in: the PyTorch toolchain already creates a consistent, widely-used interface over other device types.\nOur core principle for usability is simple:**it should feel like PyTorch**. A developer should"
+      },
+      {
+        "question": "How does 'TorchTPU engineering overview' handle: **Eager First: Flexibility Without Compromise**?",
+        "answer": "Moving from concept to a native PyTorch experience on TPU meant rethinking the execution stack. We established an \"Eager First\" philosophy. Instead of requiring developers into static graph compilation immediately, we implemented TorchTPU using PyTorch\u2019s \u201cPrivateUse1\u201d interface. No subclasses, no wrappers; just ordinary, familiar PyTorch Tensors on a TPU. By integrating at this deep level, we are able to fully prioritize the eager execution experience developers expect from PyTorch.\nWe engineered three distinct eager modes to support the development lifecycle.\nThe first eager mode is Debug Eager, which dispatches one operation at a time and synchronizes with the CPU after every execution. It is inherently slow, but invaluable for tracking down shape mismatches, NaN values, and out-of-memory crashes.\nThe second is Strict Eager, which maintains single-op dispatch, but executes asynchronously, with the intent of mirroring the default PyTorch experience. This allows both the CPU and TPU to execute simultaneously, until a synchronization point is reached in the user\u2019s script.\nThe breakthrough, however, is our Fused Eager mode. Using automated reflection on the stream of operations, Torc"
+      },
+      {
+        "question": "How does 'TorchTPU engineering overview' handle: **Static Compilation: Dynamo, XLA, and StableHLO**?",
+        "answer": "For users who want to unlock peak performance on the TPU, TorchTPU integrates natively with the torch.compile interface for full-graph compilation. We start by capturing the FX graph using Torch Dynamo. However, rather than routing through Torch Inductor, we utilize XLA as our primary backend compiler.\nThis was a highly deliberate architectural decision. XLA is rigorously battle-tested for TPU topologies. More importantly, it natively understands how to optimize the critical overlap between dense computation and collective communications across the ICI. Our translation layer maps PyTorch's operators directly into [StableHLO](https://openxla.org/stablehlo), XLA\u2019s primary Intermediate Representation (IR) for tensor math. This creates a direct connection from PyTorch into XLA\u2019s core lowering path, allowing us to generate highly optimized TPU binaries while reusing the execution paths established by our eager modes.\nFor developers writing custom operators, we ensure extensibility doesn't break performance. TorchTPU natively supports custom kernels written in [Pallas](https://docs.jax.dev/en/latest/jax.experimental.pallas.tpu.html) and JAX. By decorating a JAX function with @torch_tpu.p"
+      },
+      {
+        "question": "How does 'TorchTPU engineering overview' handle: **Distributed Training and the MPMD Challenge**?",
+        "answer": "To preserve the flexibility and usability of eager and compiled modes at scale, we focused heavily on PyTorch's distributed APIs. Today, TorchTPU supports Distributed Data Parallel (DDP), Fully Sharded Data Parallel v2 (FSDPv2), and PyTorch\u2019s DTensor out of the box. We've validated that many third-party libraries that build on PyTorch's distributed APIs work unchanged on TorchTPU.\nOne major limitation of PyTorch/XLA (a predecessor to TorchTPU) was that it only supported pure SPMD code. The reality of PyTorch inputs is that there is frequently slight divergence in the code running on different ranks: for instance, it is common for the \u201crank 0\u201d process to do a little extra work for logging or analytics. This kind of input represents a challenge for the TPU stack, which is heavily optimized for SPMD optimization. XLA works best with a global view of code running on the system, but working around it adds overhead to the developer who has to carefully remove impure behavior.\nTorchTPU is architected to carefully support divergent executions (MPMD), and will isolate communication primitives where necessary to preserve correctness, at minimal cost. This approach helps ensure that the exper"
+      },
+      {
+        "question": "How does 'TorchTPU engineering overview' handle: **TPU Hardware Awareness**?",
+        "answer": "The TPU can achieve very high performance and efficiency, but optimal model design may differ slightly from other hardware. For example, we frequently see models hardcoding attention head dimensions to 64, while current-generation TPUs achieve peak matrix multiplication efficiency at dimensions of 128 or 256. Modifying the model to target 128 or 256 dimensions better utilizes the large, dense and efficient tensor cores on the TPU chip.\nPortability doesn't eliminate hardware realities, so TorchTPU facilitates a tiered workflow: establish correct execution first, then use our upcoming deep-dive guidelines to identify and refactor suboptimal architectures, or to inject custom kernels, for optimal hardware utilization."
+      },
+      {
+        "question": "How does 'TorchTPU engineering overview' handle: **The Road Ahead: 2026 and Beyond**?",
+        "answer": "We have laid a rock-solid foundation across training and serving support today, and we are actively tackling several open challenges to make TorchTPU a frictionless backend in the PyTorch ecosystem.\nA primary focus for our compiler team is reducing recompilations triggered by dynamic sequence lengths and batch sizes. By implementing advanced bounded dynamism within XLA, we aim to handle shape changes without incurring compilation overhead. This can be an important feature for certain workloads, such as iterative next-token prediction.\nWe are also building out a comprehensive library of precompiled TPU kernels for standard operations to drastically reduce the latency of the first execution iteration.\nLooking through the rest of 2026, we are working on:\n  * The launch of our public GitHub repository, complete with extensive documentation and reproducible architectural tutorials.\n  * Integration with PyTorch\u2019s Helion DSL to further expand our custom kernel capabilities.\n  * First-class support for dynamic shapes directly through torch.compile.\n  * Native multi-queue support to ease migration of heavily asynchronous codebases with decoupled memory and compute streams.\n  * Deep integrat"
+      }
+    ],
+    "full_markdown": "# TorchTPU: Running PyTorch Natively on TPUs at Google Scale\nAPRIL 7, 2026\n[Claudio Basile](https://developers.googleblog.com/search/?author=Claudio+Basile) Technical Lead Torch TPU\n[Kat Ko](https://developers.googleblog.com/search/?author=Kat+Ko) Engineering Lead TorchTPU\n[Ben Wilson](https://developers.googleblog.com/search/?author=Ben+Wilson) Software Engineer Torch TPU\n[Lee Howes](https://developers.googleblog.com/search/?author=Lee+Howes) Engineering Lead Torch TPU\n[Bill Jia](https://developers.googleblog.com/search/?author=Bill+Jia) VP, Engineering Core ML\n[Joe Pamer](https://developers.googleblog.com/search/?author=Joe+Pamer) Senior Director Engineering Core ML\n[Michael Voznesensky](https://developers.googleblog.com/search/?author=Michael+Voznesensky) Engineer Lead Torch TPU\n[Robert Hundt](https://developers.googleblog.com/search/?author=Robert+Hundt) Distinguished Engineer Core ML\nShare\n  * [ Facebook ](https://www.facebook.com/sharer/sharer.php?u={url} \"Share on Facebook\")\n  * [ Twitter ](https://twitter.com/intent/tweet?text={url} \"Share on Twitter\")\n  * [ LinkedIn ](https://www.linkedin.com/shareArticle?url={url}&mini=true \"Share on LinkedIn\")\n  * Mail\n  * [ ](https://developers.googleblog.com/torchtpu-running-pytorch-natively-on-tpus-at-google-scale/ \"Get shareable link\")\n\n\n![Blog-A](https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Blog-A.original.png)\nThe challenges of building for modern AI infrastructure have fundamentally shifted. The modern frontier of machine learning now requires leveraging distributed systems, spanning thousands of accelerators. As models scale to run on clusters of O(100,000) chips, the software that powers these models must meet new demands for performance, hardware portability, and reliability.\nAt Google, our Tensor Processing Units (TPUs) are foundational to our supercomputing infrastructure. These custom ASICs power training and serving for both Google\u2019s own AI platforms, like Gemini and Veo, and the massive workloads of our Cloud customers. The entire AI community should be able to easily access the full capabilities of TPUs, and because many of these potential users build models in PyTorch, an integration that allows PyTorch to work natively and efficiently on the TPU is crucial.\n**Enter TorchTPU.** As an engineering team, our mandate was to build a stack that leads with usability, portability, and excellent performance. We wanted to enable developers to migrate existing PyTorch workloads with minimal code changes while giving them the APIs and the tools to extract every ounce of compute from our hardware. Here is a look under the hood at the engineering principles driving TorchTPU, the technical architecture we\u2019ve built, and our roadmap for 2026.\n## **Architecting for Usability, Portability, and Performance**\nTo understand TorchTPU, you first have to understand the hardware it targets.\nA TPU system is not just a chip; it is [an integrated network](https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/ironwood-tpu-age-of-inference/). A host is attached to multiple chips, and each chip connects to the host and to other chips via our Inter-Chip Interconnect (ICI). This ICI links the chips into a highly efficient 2D or 3D Torus topology, allowing for massive scale-up without traditional networking bottlenecks. Within each chip, execution is divided between TensorCores and SparseCores. TensorCores are single-threaded units dedicated to dense matrix math, while SparseCores handle irregular memory access patterns like embeddings, gather/scatter operations, and offloading collectives.\nThese features mean TPUs are a powerful tool for machine learning; and our goal is to provide the specialized support needed to fully leverage these unique capabilities. This is where PyTorch comes in: the PyTorch toolchain already creates a consistent, widely-used interface over other device types.\nOur core principle for usability is simple:**it should feel like PyTorch**. A developer should be able to take an existing PyTorch script, change their initialization to \u201ctpu\u201d, and run their training loop without modifying a single line of core logic.\nAchieving this required an entirely new approach to how PyTorch interacts with the TPU compiler and runtime stack.\n## **Engineering the TorchTPU Stack: The Technical Reality**\n### **Eager First: Flexibility Without Compromise**\nMoving from concept to a native PyTorch experience on TPU meant rethinking the execution stack. We established an \"Eager First\" philosophy. Instead of requiring developers into static graph compilation immediately, we implemented TorchTPU using PyTorch\u2019s \u201cPrivateUse1\u201d interface. No subclasses, no wrappers; just ordinary, familiar PyTorch Tensors on a TPU. By integrating at this deep level, we are able to fully prioritize the eager execution experience developers expect from PyTorch.\nWe engineered three distinct eager modes to support the development lifecycle.\nThe first eager mode is Debug Eager, which dispatches one operation at a time and synchronizes with the CPU after every execution. It is inherently slow, but invaluable for tracking down shape mismatches, NaN values, and out-of-memory crashes.\nThe second is Strict Eager, which maintains single-op dispatch, but executes asynchronously, with the intent of mirroring the default PyTorch experience. This allows both the CPU and TPU to execute simultaneously, until a synchronization point is reached in the user\u2019s script.\nThe breakthrough, however, is our Fused Eager mode. Using automated reflection on the stream of operations, TorchTPU fuses steps on the fly into larger, computationally dense chunks before handing them to the TPU. By maximizing TensorCore utilization and minimizing memory bandwidth overhead, Fused Eager consistently delivers a 50% to 100+% performance increase over Strict Eager, with no setup required by the user.\nAll three modes are backed by a shared Compilation Cache that can operate on a single host, or be configured as persistent across multi-host setups. This means that as TorchTPU learns your workload, you spend less time compiling, and more time running.\n### **Static Compilation: Dynamo, XLA, and StableHLO**\nFor users who want to unlock peak performance on the TPU, TorchTPU integrates natively with the torch.compile interface for full-graph compilation. We start by capturing the FX graph using Torch Dynamo. However, rather than routing through Torch Inductor, we utilize XLA as our primary backend compiler.\nThis was a highly deliberate architectural decision. XLA is rigorously battle-tested for TPU topologies. More importantly, it natively understands how to optimize the critical overlap between dense computation and collective communications across the ICI. Our translation layer maps PyTorch's operators directly into [StableHLO](https://openxla.org/stablehlo), XLA\u2019s primary Intermediate Representation (IR) for tensor math. This creates a direct connection from PyTorch into XLA\u2019s core lowering path, allowing us to generate highly optimized TPU binaries while reusing the execution paths established by our eager modes.\nFor developers writing custom operators, we ensure extensibility doesn't break performance. TorchTPU natively supports custom kernels written in [Pallas](https://docs.jax.dev/en/latest/jax.experimental.pallas.tpu.html) and JAX. By decorating a JAX function with @torch_tpu.pallas.custom_jax_kernel, engineers can write low-level hardware instructions that interface directly with our lowering path. Work is ongoing to also support [Helion](https://github.com/pytorch/helion) kernels.\n### **Distributed Training and the MPMD Challenge**\nTo preserve the flexibility and usability of eager and compiled modes at scale, we focused heavily on PyTorch's distributed APIs. Today, TorchTPU supports Distributed Data Parallel (DDP), Fully Sharded Data Parallel v2 (FSDPv2), and PyTorch\u2019s DTensor out of the box. We've validated that many third-party libraries that build on PyTorch's distributed APIs work unchanged on TorchTPU.\nOne major limitation of PyTorch/XLA (a predecessor to TorchTPU) was that it only supported pure SPMD code. The reality of PyTorch inputs is that there is frequently slight divergence in the code running on different ranks: for instance, it is common for the \u201crank 0\u201d process to do a little extra work for logging or analytics. This kind of input represents a challenge for the TPU stack, which is heavily optimized for SPMD optimization. XLA works best with a global view of code running on the system, but working around it adds overhead to the developer who has to carefully remove impure behavior.\nTorchTPU is architected to carefully support divergent executions (MPMD), and will isolate communication primitives where necessary to preserve correctness, at minimal cost. This approach helps ensure that the experience of using PyTorch on the TPU is as natural as possible to existing PyTorch developers, while preserving XLA\u2019s ability to overlap communication and computation with a global view of a distributed TPU deployment wherever possible.\n### **TPU Hardware Awareness**\nThe TPU can achieve very high performance and efficiency, but optimal model design may differ slightly from other hardware. For example, we frequently see models hardcoding attention head dimensions to 64, while current-generation TPUs achieve peak matrix multiplication efficiency at dimensions of 128 or 256. Modifying the model to target 128 or 256 dimensions better utilizes the large, dense and efficient tensor cores on the TPU chip.\nPortability doesn't eliminate hardware realities, so TorchTPU facilitates a tiered workflow: establish correct execution first, then use our upcoming deep-dive guidelines to identify and refactor suboptimal architectures, or to inject custom kernels, for optimal hardware utilization.\n## **The Road Ahead: 2026 and Beyond**\nWe have laid a rock-solid foundation across training and serving support today, and we are actively tackling several open challenges to make TorchTPU a frictionless backend in the PyTorch ecosystem.\nA primary focus for our compiler team is reducing recompilations triggered by dynamic sequence lengths and batch sizes. By implementing advanced bounded dynamism within XLA, we aim to handle shape changes without incurring compilation overhead. This can be an important feature for certain workloads, such as iterative next-token prediction.\nWe are also building out a comprehensive library of precompiled TPU kernels for standard operations to drastically reduce the latency of the first execution iteration.\nLooking through the rest of 2026, we are working on:\n  * The launch of our public GitHub repository, complete with extensive documentation and reproducible architectural tutorials.\n  * Integration with PyTorch\u2019s Helion DSL to further expand our custom kernel capabilities.\n  * First-class support for dynamic shapes directly through torch.compile.\n  * Native multi-queue support to ease migration of heavily asynchronous codebases with decoupled memory and compute streams.\n  * Deep integrations with ecosystem pillars like vLLM and TorchTitan, alongside validated linear scaling up to full Pod-size infrastructure.\n\n\nTorchTPU represents our dedicated engineering effort to provide a seamless, high-performance PyTorch experience on TPU hardware. We are breaking down obstacles and removing friction between the framework you love and the TPU supercomputing hardware required for the next generation of AI.\n_To stay informed on the latest TorchTPU updates, please visit the_ [_TPU Developer Hub_](https://cloud.google.com/products/tpu/tpu-developer) _._\nposted in: \n  * [AI](https://developers.googleblog.com/search/?technology_categories=AI)\n  * [Cloud](https://developers.googleblog.com/search/?technology_categories=Cloud)\n  * [Announcements](https://developers.googleblog.com/search/?content_type_categories=Announcements)\n  * [Influence](https://developers.googleblog.com/search/?tag=Influence)\n  * [Learn](https://developers.googleblog.com/search/?tag=Learn)\n\n\n[ ](https://developers.googleblog.com/a2ui-v0-9-generative-ui/) Previous\nNext [ ](https://developers.googleblog.com/speeding-up-ai-bringing-google-colossus-to-pytorch-via-gcsfs-and-rapid-bucket/)\nRelated Posts\n[ ![Architecting Governed, Self-Evolving AI Agents on Google Cloud](https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Gemini_Generated_Image_g9d0nag9d0n.2e16d0ba.fill-800x400.jpg) AI Cloud Tutorials Industry Trends Architecting Governed, Self-Evolving AI Agents on Google Cloud OCT. 22, 2026 ](https://developers.googleblog.com/architecting-governed-self-evolving-ai-agents-on-gemini-agent-platform/) [ ![Integrating TorchTPU into TorchTitan and Optimizing Models for TPU](https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Torch_Titan_Header_Image.2e16d0ba.fill-800x400.jpg) AI Cloud Announcements Best Practices Integrating TorchTPU into TorchTitan and Optimizing Models for TPU OCT. 20, 2026 ](https://developers.googleblog.com/integrating-torchtpu-into-torchtitan-and-optimizing-models-for-tpu/) [ ![Streaming comes to API Gateway: real-time and AI-ready APIs, without changing your spec](https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Streaming_feature_in__API_Gateway_.2e16d0ba.fill-800x400.jpg) Cloud Announcements Events Streaming comes to API Gateway: real-time and AI-ready APIs, without changing your spec OCT. 22, 2026 ](https://developers.googleblog.com/streaming-comes-to-api-gateway-real-time-and-ai-ready-apis-without-changing-your-spec/) [ ![Powering the Agent Development Lifecycle with any framework, from ADK to LangChain and beyond](https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/1_2.2e16d0ba.fill-800x400.png) AI Cloud Tutorials Influence Powering the Agent Development Lifecycle with any framework, from ADK to LangChain and beyond OCT. 21, 2026 ](https://developers.googleblog.com/powering-the-agent-development-lifecycle-with-any-framework-from-adk-to-langchain-and-beyond/)\n  * Connect"
+  }
 }

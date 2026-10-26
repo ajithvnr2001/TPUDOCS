@@ -1,63 +1,123 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:mig_02_torchtpu_docs_hub",
-  "@type": "DocumentationResource",
-  "name": "TorchTPU documentation hub",
-  "canonicalUrl": "https://torchtpu.readthedocs.io/",
-  "category": "Nvidia to tpu migration docs",
-  "categorySlug": "nvidia_to_tpu_migration_docs",
-  "description": "Index of native PyTorch TPU quickstarts, migration APIs, examples, and performance documentation.",
-  "provenance": {
-    "sourceUrl": "https://torchtpu.readthedocs.io/",
-    "crawledAt": "2026-10-26T12:47:55.691382+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 7367
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "TorchTPU documentation hub",
-      "documentedIn",
-      "https://torchtpu.readthedocs.io/"
-    ],
-    [
-      "TorchTPU documentation hub",
-      "belongsToCategory",
-      "nvidia_to_tpu_migration_docs"
-    ],
-    [
-      "TorchTPU documentation hub",
-      "supportsWorkflow",
-      "CUDA to TPU Code Migration"
-    ],
-    [
-      "TorchTPU documentation hub",
-      "primaryFramework",
-      "TorchTPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:mig_02_torchtpu_docs_hub",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "mig_02_torchtpu_docs_hub",
+    "name": "TorchTPU documentation hub",
+    "url": "https://torchtpu.readthedocs.io/",
+    "category": "nvidia_to_tpu_migration_docs",
+    "description": "Index of native PyTorch TPU quickstarts, migration APIs, examples, and performance documentation.",
+    "char_count": 3867,
+    "word_count": 375,
+    "section_count": 3,
+    "code_block_count": 0,
+    "table_count": 0,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.746540+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:mig_02_torchtpu_docs_hub",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:mig_02_torchtpu_docs_hub",
+        "predicate": "schema:name",
+        "object": "TorchTPU documentation hub"
+      },
+      {
+        "subject": "tpu_doc:mig_02_torchtpu_docs_hub",
+        "predicate": "schema:url",
+        "object": "https://torchtpu.readthedocs.io/"
+      },
+      {
+        "subject": "tpu_doc:mig_02_torchtpu_docs_hub",
+        "predicate": "schema:category",
+        "object": "nvidia_to_tpu_migration_docs"
+      },
+      {
+        "subject": "tpu_doc:mig_02_torchtpu_docs_hub",
+        "predicate": "schema:description",
+        "object": "Index of native PyTorch TPU quickstarts, migration APIs, examples, and performance documentation."
+      },
+      {
+        "subject": "tpu_doc:mig_02_torchtpu_docs_hub",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:mig_02_torchtpu_docs_hub",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:XProf"
+      },
+      {
+        "subject": "tpu_doc:mig_02_torchtpu_docs_hub",
+        "predicate": "okf:hasSection",
+        "object": "Home"
+      },
+      {
+        "subject": "tpu_doc:mig_02_torchtpu_docs_hub",
+        "predicate": "okf:hasSection",
+        "object": "About"
+      },
+      {
+        "subject": "tpu_doc:mig_02_torchtpu_docs_hub",
+        "predicate": "okf:hasSection",
+        "object": "What are you trying to do today?"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "TorchTPU documentation hub provides official guidance on Index of native PyTorch TPU quickstarts, migration APIs, examples, and performance documentation.",
-      "confidence": 1.0,
-      "source": "https://torchtpu.readthedocs.io/",
-      "verified": true
-    },
-    {
-      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
-      "confidence": 1.0,
-      "source": "https://torchtpu.readthedocs.io/",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is TorchTPU documentation hub used for in Cloud TPU workflows?",
-      "answer": "Index of native PyTorch TPU quickstarts, migration APIs, examples, and performance documentation.",
-      "category": "nvidia_to_tpu_migration_docs"
-    }
-  ],
-  "contentSummary": "Index of native PyTorch TPU quickstarts, migration APIs, examples, and performance documentation."
+  },
+  "structured_content": {
+    "summary": "Index of native PyTorch TPU quickstarts, migration APIs, examples, and performance documentation.",
+    "sections": [
+      {
+        "heading": "Home",
+        "level": 1,
+        "content": "[![TorchTPU](https://torchtpu.readthedocs.io/en/0.2.0/images/torchtpu_banner.png)](https://torchtpu.readthedocs.io/en/0.2.0/images/torchtpu_banner.png)\n[**GitHub**](https://github.com/google-pytorch/torch_tpu) | [**Discussion Forum**](https://discuss.pytorch.org/c/tpu/45) | [**PyTorch on TPU**](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu)"
+      },
+      {
+        "heading": "About",
+        "level": 2,
+        "content": "TorchTPU is an open-source, native PyTorch backend for Google Cloud TPUs, developed in collaboration between Google and Meta. With TorchTPU, you can run existing PyTorch models on TPU hardware with minimal code changes and scale training and inference workloads from a single chip to multi-slice TPU pods."
+      },
+      {
+        "heading": "What are you trying to do today?",
+        "level": 2,
+        "content": "* **Get started**\nProvision environments, understand fundamental architectures, and run your first workloads.\n    * [ Introduction to TorchTPU](https://torchtpu.readthedocs.io/en/0.2.0/intro_to_torchtpu/): Why TorchTPU was created, what it provides, and how it can help you.\n    * [ Get started with TorchTPU on a VM](https://torchtpu.readthedocs.io/en/0.2.0/get_started_on_a_vm/): Setup TorchTPU on a TPU VM.\n    * [ Get started with TorchTPU on GKE](https://torchtpu.readthedocs.io/en/0.2.0/get_started_on_gke/): Use TorchTPU through GKE.\n    * [ Supported feature set and roadmap](https://torchtpu.readthedocs.io/en/0.2.0/feature_set/): Currently supported features and plans for future releases.\n    * [ API reference](https://torchtpu.readthedocs.io/en/0.2.0/api_reference/): The TorchTPU API and environment variables for the current release.\n    * [ TorchTPU FAQ](https://torchtpu.readthedocs.io/en/0.2.0/faq/): Frequently asked questions about TorchTPU.\n  * **In-depth architecture & core concepts**\nDeep-dive into the mechanics of memory layouts, execution engines, and distributed execution.\n    * [ How TorchTPU works](https://torchtpu.readthedocs.io/en/0.2.0/how_torchtpu_works/): How TorchTPU integrates with PyTorch and the TPU hardware from top to bottom.\n    * [ The TorchTPU execution model](https://torchtpu.readthedocs.io/en/0.2.0/torchtpu_execution_model/): In depth detail of how TorchTPU executes PyTorch code and the different execution modes it supports.\n    * [ The TorchTPU memory model](https://torchtpu.readthedocs.io/en/0.2.0/torchtpu_memory_model/): How TorchTPU handles the way the TPU and XLA compiler deal with memory.\n    * [ Distributed support](https://torchtpu.readthedocs.io/en/0.2.0/distributed_support/): How TorchTPU supports distributed workloads.\n    * [ Custom kernel support](https://torchtpu.readthedocs.io/en/0.2.0/custom_kernels/): How to write custom kernels for TorchTPU.\n    * [ Dynamic shapes](https://torchtpu.readthedocs.io/en/0.2.0/dynamic_shapes/): Support for dynamic tensor shapes.\n  * **Case studies**\nExplore practical examples of how to use TorchTPU to solve real-world problems.\n    * [ FLUX Optimization](https://torchtpu.readthedocs.io/en/0.2.0/case_studies_flux/): Example demonstrating how to identify and apply multiple optimizations on FLUX.\n    * [ Muse Glimmer 30B inference](https://torchtpu.readthedocs.io/en/0.2.0/case_studies_muse_glimmer_30b_inference/): Example of iterative decoding using real weights with static/dynamic KV cache.\n    * [ Muse Glimmer 30B training](https://torchtpu.readthedocs.io/en/0.2.0/case_studies_muse_glimmer_30b_training/): A training loop on a standalone implementation of Muse Glimmer 30B.\n    * [ Using FSDP](https://torchtpu.readthedocs.io/en/0.2.0/case_studies_fsdp/): The recommended approach to using FSDP for TorchTPU.\n  * **Analyze your workload**\n    * [ Numerical precision and parity](https://torchtpu.readthedocs.io/en/0.2.0/numerical_precision/): Controlling precision in TorchTPU.\n    * [ Profile performance with XProf](https://torchtpu.readthedocs.io/en/0.2.0/performance_profiling_with_xprof/): How to use XProf as a TorchTPU profiler."
+      }
+    ],
+    "code_examples": [],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'TorchTPU documentation hub' (https://torchtpu.readthedocs.io/)?",
+        "answer": "Index of native PyTorch TPU quickstarts, migration APIs, examples, and performance documentation."
+      },
+      {
+        "question": "How does 'TorchTPU documentation hub' handle: Home?",
+        "answer": "[![TorchTPU](https://torchtpu.readthedocs.io/en/0.2.0/images/torchtpu_banner.png)](https://torchtpu.readthedocs.io/en/0.2.0/images/torchtpu_banner.png)\n[**GitHub**](https://github.com/google-pytorch/torch_tpu) | [**Discussion Forum**](https://discuss.pytorch.org/c/tpu/45) | [**PyTorch on TPU**](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu)"
+      },
+      {
+        "question": "How does 'TorchTPU documentation hub' handle: About?",
+        "answer": "TorchTPU is an open-source, native PyTorch backend for Google Cloud TPUs, developed in collaboration between Google and Meta. With TorchTPU, you can run existing PyTorch models on TPU hardware with minimal code changes and scale training and inference workloads from a single chip to multi-slice TPU pods."
+      },
+      {
+        "question": "How does 'TorchTPU documentation hub' handle: What are you trying to do today??",
+        "answer": "* **Get started**\nProvision environments, understand fundamental architectures, and run your first workloads.\n    * [ Introduction to TorchTPU](https://torchtpu.readthedocs.io/en/0.2.0/intro_to_torchtpu/): Why TorchTPU was created, what it provides, and how it can help you.\n    * [ Get started with TorchTPU on a VM](https://torchtpu.readthedocs.io/en/0.2.0/get_started_on_a_vm/): Setup TorchTPU on a TPU VM.\n    * [ Get started with TorchTPU on GKE](https://torchtpu.readthedocs.io/en/0.2.0/get_started_on_gke/): Use TorchTPU through GKE.\n    * [ Supported feature set and roadmap](https://torchtpu.readthedocs.io/en/0.2.0/feature_set/): Currently supported features and plans for future releases.\n    * [ API reference](https://torchtpu.readthedocs.io/en/0.2.0/api_reference/): The TorchTPU API and environment variables for the current release.\n    * [ TorchTPU FAQ](https://torchtpu.readthedocs.io/en/0.2.0/faq/): Frequently asked questions about TorchTPU.\n  * **In-depth architecture & core concepts**\nDeep-dive into the mechanics of memory layouts, execution engines, and distributed execution.\n    * [ How TorchTPU works](https://torchtpu.readthedocs.io/en/0.2.0/how_torchtpu_works/): How Tor"
+      }
+    ],
+    "full_markdown": "# Home\n[![TorchTPU](https://torchtpu.readthedocs.io/en/0.2.0/images/torchtpu_banner.png)](https://torchtpu.readthedocs.io/en/0.2.0/images/torchtpu_banner.png)\n[**GitHub**](https://github.com/google-pytorch/torch_tpu) | [**Discussion Forum**](https://discuss.pytorch.org/c/tpu/45) | [**PyTorch on TPU**](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu)\n## About\nTorchTPU is an open-source, native PyTorch backend for Google Cloud TPUs, developed in collaboration between Google and Meta. With TorchTPU, you can run existing PyTorch models on TPU hardware with minimal code changes and scale training and inference workloads from a single chip to multi-slice TPU pods.\n## What are you trying to do today?\n  * **Get started**\nProvision environments, understand fundamental architectures, and run your first workloads.\n    * [ Introduction to TorchTPU](https://torchtpu.readthedocs.io/en/0.2.0/intro_to_torchtpu/): Why TorchTPU was created, what it provides, and how it can help you.\n    * [ Get started with TorchTPU on a VM](https://torchtpu.readthedocs.io/en/0.2.0/get_started_on_a_vm/): Setup TorchTPU on a TPU VM.\n    * [ Get started with TorchTPU on GKE](https://torchtpu.readthedocs.io/en/0.2.0/get_started_on_gke/): Use TorchTPU through GKE.\n    * [ Supported feature set and roadmap](https://torchtpu.readthedocs.io/en/0.2.0/feature_set/): Currently supported features and plans for future releases.\n    * [ API reference](https://torchtpu.readthedocs.io/en/0.2.0/api_reference/): The TorchTPU API and environment variables for the current release.\n    * [ TorchTPU FAQ](https://torchtpu.readthedocs.io/en/0.2.0/faq/): Frequently asked questions about TorchTPU.\n  * **In-depth architecture & core concepts**\nDeep-dive into the mechanics of memory layouts, execution engines, and distributed execution.\n    * [ How TorchTPU works](https://torchtpu.readthedocs.io/en/0.2.0/how_torchtpu_works/): How TorchTPU integrates with PyTorch and the TPU hardware from top to bottom.\n    * [ The TorchTPU execution model](https://torchtpu.readthedocs.io/en/0.2.0/torchtpu_execution_model/): In depth detail of how TorchTPU executes PyTorch code and the different execution modes it supports.\n    * [ The TorchTPU memory model](https://torchtpu.readthedocs.io/en/0.2.0/torchtpu_memory_model/): How TorchTPU handles the way the TPU and XLA compiler deal with memory.\n    * [ Distributed support](https://torchtpu.readthedocs.io/en/0.2.0/distributed_support/): How TorchTPU supports distributed workloads.\n    * [ Custom kernel support](https://torchtpu.readthedocs.io/en/0.2.0/custom_kernels/): How to write custom kernels for TorchTPU.\n    * [ Dynamic shapes](https://torchtpu.readthedocs.io/en/0.2.0/dynamic_shapes/): Support for dynamic tensor shapes.\n  * **Case studies**\nExplore practical examples of how to use TorchTPU to solve real-world problems.\n    * [ FLUX Optimization](https://torchtpu.readthedocs.io/en/0.2.0/case_studies_flux/): Example demonstrating how to identify and apply multiple optimizations on FLUX.\n    * [ Muse Glimmer 30B inference](https://torchtpu.readthedocs.io/en/0.2.0/case_studies_muse_glimmer_30b_inference/): Example of iterative decoding using real weights with static/dynamic KV cache.\n    * [ Muse Glimmer 30B training](https://torchtpu.readthedocs.io/en/0.2.0/case_studies_muse_glimmer_30b_training/): A training loop on a standalone implementation of Muse Glimmer 30B.\n    * [ Using FSDP](https://torchtpu.readthedocs.io/en/0.2.0/case_studies_fsdp/): The recommended approach to using FSDP for TorchTPU.\n  * **Analyze your workload**\n    * [ Numerical precision and parity](https://torchtpu.readthedocs.io/en/0.2.0/numerical_precision/): Controlling precision in TorchTPU.\n    * [ Profile performance with XProf](https://torchtpu.readthedocs.io/en/0.2.0/performance_profiling_with_xprof/): How to use XProf as a TorchTPU profiler."
+  }
 }

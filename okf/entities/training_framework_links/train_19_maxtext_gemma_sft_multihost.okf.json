@@ -1,58 +1,537 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:train_19_maxtext_gemma_sft_multihost",
-  "@type": "DocumentationResource",
-  "name": "MaxText multi-host Gemma SFT",
-  "canonicalUrl": "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-gemma4-31b-sft-maxtext",
-  "category": "Training framework links",
-  "categorySlug": "training_framework_links",
-  "description": "Multi-host v6e/GKE recipe for Gemma 4 31B SFT with MaxText, Cluster Toolkit, UltraChat, and export back to Hugging Face format.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-gemma4-31b-sft-maxtext",
-    "crawledAt": "2026-10-26T12:47:17.390435+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 46098
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "MaxText multi-host Gemma SFT",
-      "documentedIn",
-      "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-gemma4-31b-sft-maxtext"
-    ],
-    [
-      "MaxText multi-host Gemma SFT",
-      "belongsToCategory",
-      "training_framework_links"
-    ],
-    [
-      "MaxText multi-host Gemma SFT",
-      "supportsWorkflow",
-      "Distributed Machine Learning Training"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "train_19_maxtext_gemma_sft_multihost",
+    "name": "MaxText multi-host Gemma SFT",
+    "url": "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-gemma4-31b-sft-maxtext",
+    "category": "training_framework_links",
+    "description": "Multi-host v6e/GKE recipe for Gemma 4 31B SFT with MaxText, Cluster Toolkit, UltraChat, and export back to Hugging Face format.",
+    "char_count": 18993,
+    "word_count": 2100,
+    "section_count": 27,
+    "code_block_count": 18,
+    "table_count": 0,
+    "cli_command_count": 26,
+    "indexed_at": "2026-10-26T14:46:54.543727+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "schema:name",
+        "object": "MaxText multi-host Gemma SFT"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-gemma4-31b-sft-maxtext"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "schema:category",
+        "object": "training_framework_links"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "schema:description",
+        "object": "Multi-host v6e/GKE recipe for Gemma 4 31B SFT with MaxText, Cluster Toolkit, UltraChat, and export back to Hugging Face format."
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:MaxText"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Run SFT for Gemma 4 31B on multi-host TPU v6e"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Workload summary"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Objectives"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Costs"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Before you begin"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Set up your environment variables"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Install Cluster Toolkit dependencies"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Install Cluster Toolkit"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Authenticate your environment"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Create your Cluster Toolkit cluster"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Grant the GKE Node Pool Service Account storage.admin access for checkpoint writes"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Change n2-standard-8 to e2-standard-8 to avoid GCE_STOCKOUT in some regions"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Pin system node pool to a single zone to avoid cross-zone stockouts"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Convert the model to MaxText format"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Configure gcluster Defaults"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Use the list command to check status"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Check progress of the job (--main-only targets the coordinator pod (Job Index 0, Pod Index 0) to avoid duplicate logs from other workers)"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Start the training workload"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Use the list command to check status"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Check progress of the job (--main-only targets the coordinator pod (Job Index 0, Pod Index 0) to avoid duplicate logs from other workers)"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Convert the trained model back into Hugging Face format"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Use the list command to check status"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Check progress of the job (--main-only targets the coordinator pod (Job Index 0, Pod Index 0) to avoid duplicate logs from other workers)"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "The trained model is now available in gs://${GCS_BUCKET}/${MODEL_NAME}/hf-trained/"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:hasSection",
+        "object": "Clean up"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "ENABLE_PJRT_COMPATIBILITY"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "HF_TOKEN"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "JAX_PLATFORMS"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "JAX_TRACEBACK_FILTERING"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "LIBTPU_INIT_ARGS"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "MODEL_NAME"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "PROJECT"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "TPU_TYPE"
+      },
+      {
+        "subject": "tpu_doc:train_19_maxtext_gemma_sft_multihost",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "ZONE"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "MaxText multi-host Gemma SFT provides official guidance on Multi-host v6e/GKE recipe for Gemma 4 31B SFT with MaxText, Cluster Toolkit, UltraChat, and export back to Hugging Face format.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-gemma4-31b-sft-maxtext",
-      "verified": true
-    },
-    {
-      "assertion": "TPU v6e (Trillium) is Google's 6th generation TPU offering high efficiency for inference and training.",
-      "confidence": 0.99,
-      "source": "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-gemma4-31b-sft-maxtext",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is MaxText multi-host Gemma SFT used for in Cloud TPU workflows?",
-      "answer": "Multi-host v6e/GKE recipe for Gemma 4 31B SFT with MaxText, Cluster Toolkit, UltraChat, and export back to Hugging Face format.",
-      "category": "training_framework_links"
-    }
-  ],
-  "contentSummary": "Multi-host v6e/GKE recipe for Gemma 4 31B SFT with MaxText, Cluster Toolkit, UltraChat, and export back to Hugging Face format."
+  },
+  "structured_content": {
+    "summary": "Multi-host v6e/GKE recipe for Gemma 4 31B SFT with MaxText, Cluster Toolkit, UltraChat, and export back to Hugging Face format.",
+    "sections": [
+      {
+        "heading": "Run SFT for Gemma 4 31B on multi-host TPU v6e",
+        "level": 1,
+        "content": "This tutorial shows you how to run supervised fine-tuning (SFT) on a multi-host Tensor Processing Unit (TPU) v6e cluster by using MaxText and Cluster Toolkit. You use Cluster Toolkit to execute a multi-host training workload and export the results back to Hugging Face format for serving."
+      },
+      {
+        "heading": "Workload summary",
+        "level": 2,
+        "content": "Running this SFT workload on Cloud TPU and GKE involves the following components:\n  * **Model:** Gemma 4 31B (`google/gemma-4-31b-it`), an advanced open-weights model. In this tutorial, the model weights are downloaded from Hugging Face, converted into MaxText-compatible format, and deployed on a GKE cluster with Cloud TPU v6e (`v6e-32`) infrastructure.\n  * **Training method:** SFT using MaxText. The workload executes a scalable fine-tuning pipeline on Cloud TPU v6e using JAX. It optimizes model parameters over 1000 steps using MaxText's built-in SFT trainer (`maxtext.trainers.post_train.sft.train_sft`) and instruction-tuning datasets.\n  * **Dataset and template:** UltraChat 200k (`HuggingFaceH4/ultrachat_200k`), a large-scale, high-quality multi-turn dialogue dataset. The workload uses this dataset to fine-tune the model and improve its conversational and instruction-following capabilities.\n  * **Infrastructure and framework:** GKE, managed using Cluster Toolkit, on Cloud TPU v6e (`v6e-32`, with a `4x8` topology). The framework is MaxText (`tpu_post_training:0.2.4`) with a JAX backend."
+      },
+      {
+        "heading": "Objectives",
+        "level": 2,
+        "content": "* Install Cluster Toolkit and its dependencies.\n  * Deploy a Cluster Toolkit cluster.\n  * Convert a Hugging Face model to MaxText format.\n  * Run an SFT training workload on the TPU.\n  * Convert the fine-tuned model back to Hugging Face format for serving."
+      },
+      {
+        "heading": "Costs",
+        "level": 2,
+        "content": "In this document, you use the following billable components of Google Cloud: \n  * [ Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/pricing)\n  * [ Cloud TPU](https://cloud.google.com/tpu/pricing)\n  * [ Cloud Storage](https://cloud.google.com/storage/pricing)\n  * [ Compute Engine](https://cloud.google.com/compute/all-pricing)\n\n\nTo generate a cost estimate based on your projected usage, use the [pricing calculator](https://docs.cloud.google.com/products/calculator). \nNew Google Cloud users might be eligible for a [free trial](https://docs.cloud.google.com/free). \nWhen you finish the tasks that are described in this document, you can avoid continued billing by deleting the resources that you created. For more information, see [Clean up](https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-gemma4-31b-sft-maxtext#clean-up).\n**Important:** To complete this tutorial, you must have access to `v6e-32` TPUs. This tutorial assumes that you already have a reservation for these TPUs in your Google Cloud project to ensure that you have the capacity available when you need it. To learn more about your options for reserving Cloud TPU capacity for a future date and time, see [About Cloud TPU reservations](https://docs.cloud.google.com/tpu/docs/about-tpu-reservations)."
+      },
+      {
+        "heading": "Before you begin",
+        "level": 2,
+        "content": "* You need a Hugging Face access token to use this tutorial. You can sign up for a free account at [Hugging Face](http://huggingface.co/login). After you have an account, generate an access token:\n    1. On the [Welcome to Hugging Face](https://huggingface.co/welcome) page, click your account avatar and select **Access tokens**.\n    2. On the **Access tokens** page, click **Create new token**.\n    3. Select the **Read** token type and enter a name for your token.\n    4. Your access token is displayed. Save the token in a safe place.\n\n\n  * On the [`google/gemma-4-31b-it` model card on Hugging Face](https://huggingface.co/google/gemma-4-31b-it), accept the license agreement for the model.\n\n\nTo get the permissions that you need to complete this tutorial, ask your administrator to grant you the following IAM roles on your project: \n  * To complete this tutorial: \n    * [TPU Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/tpu#tpu.admin) (`roles/tpu.admin`)\n    * [Service Account User ](https://docs.cloud.google.com/iam/docs/roles-permissions/iam#iam.serviceAccountUser) (`roles/iam.serviceAccountUser`)\n    * [Compute Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/compute#compute.admin) (`roles/compute.admin`)\n    * [Storage Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/storage#storage.admin) (`roles/storage.admin`)\n    * [Kubernetes Engine Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/container#container.admin) (`roles/container.admin`)\n    * [Service Account Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/iam#iam.serviceAccountAdmin) (`roles/iam.serviceAccountAdmin`)\n    * [Project IAM Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/resourcemanager#resourcemanager.projectIamAdmin) (`roles/resourcemanager.projectIamAdmin`)\n    * [Service Usage Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/serviceusage#serviceusage.serviceUsageAdmin) (`roles/serviceusage.serviceUsageAdmin`)\n\n\nFor more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \nYou might also be able to get the required permissions through [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined)."
+      },
+      {
+        "heading": "Set up your environment variables",
+        "level": 2,
+        "content": "Set up your environment variables:\n\n```\nexport PROJECT=\"YOUR_PROJECT_ID\"\nexport REGION=\"YOUR_REGION\"\nexport ZONE=\"YOUR_ZONE\"\nexport CLUSTER_NAME=\"YOUR_CLUSTER_NAME\"\nexport GCS_BUCKET=\"YOUR_BUCKET_NAME\"\nexport CLOUD_IMAGE_NAME=\"us-docker.pkg.dev/cloud-tpu-images/maxtext-images/tpu_post_training:0.2.4\"\nexport TPU_TYPE=\"v6e-32\"\nexport RESERVATION=\"YOUR_RESERVATION_NAME\"\nexport HF_TOKEN=\"YOUR_HF_TOKEN\"\nexport MODEL_NAME=\"gemma4-31b\"\nexport CLUSTER_TOOLKIT_VERSION=\"v1.103.0\"\n```\n\nReplace the following:\n  * `YOUR_PROJECT_ID`: the ID of your Google Cloud project.\n  * `YOUR_REGION`: the region where your TPU reservation is located and where you deploy your cluster.\n  * `YOUR_ZONE`: the zone where your TPU reservation is located and where you deploy your cluster.\n  * `YOUR_BUCKET_NAME`: a globally unique name for a Cloud Storage bucket.\n  * `YOUR_RESERVATION_NAME`: the name of your TPU v6e reservation.\n  * `YOUR_HF_TOKEN`: your Hugging Face access token.\n\n\nBy default, the script sets `MODEL_NAME` to `gemma4-31b` (the MaxText model name for `google/gemma-4-31b-it`) and `CLUSTER_NAME` to `gke-tpu-v6e`. If you customize `CLUSTER_NAME`, the name must start with a lowercase letter, contain only lowercase letters, numbers, and hyphens, and be 20 characters or fewer so that generated service account IDs stay within the 30-character limit."
+      },
+      {
+        "heading": "Install Cluster Toolkit dependencies",
+        "level": 2,
+        "content": "To complete this tutorial from a Linux or macOS client or workstation, follow the relevant steps in [Install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies) in the Cluster Toolkit documentation.\nIf you're using Cloud Shell, then you can skip this section."
+      },
+      {
+        "heading": "Install Cluster Toolkit",
+        "level": 2,
+        "content": "Download and extract the prebuilt bundle for the specific version of Cluster Toolkit defined in `CLUSTER_TOOLKIT_VERSION` (`v1.103.0`) into your current working directory:\n\n```\ncase \"$(uname -s)-$(uname -m)\" in\n  Linux-x86_64)              BUNDLE=\"gcluster_bundle_linux_amd64.tgz\" ;;\n  Linux-aarch64|Linux-arm64) BUNDLE=\"gcluster_bundle_linux_arm64.tgz\" ;;\n  Darwin-x86_64)             BUNDLE=\"gcluster_bundle_mac_amd64.tgz\" ;;\n  Darwin-arm64)              BUNDLE=\"gcluster_bundle_mac_arm64.tgz\" ;;\n  *) BUNDLE=\"\"; echo \"Unsupported platform: $(uname -s)-$(uname -m)\" >&2 ;;\nesac\nmkdir -p cluster-toolkit\ncurl -fsSL \"https://github.com/GoogleCloudPlatform/cluster-toolkit/releases/download/${CLUSTER_TOOLKIT_VERSION:?}/${BUNDLE:?}\" \\\n  | tar -xz -C cluster-toolkit\ncd cluster-toolkit\n```\n\n**Note:** The [Install Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/setup/configure-environment#install-bundle) documentation describes how to download the latest release into a `cluster-toolkit` directory. However, because blueprint variables can differ across Cluster Toolkit versions, for this tutorial you must install the exact version specified in `CLUSTER_TOOLKIT_VERSION` (`v1.103.0`) rather than the latest release. Extracting the bundle provides the `gcluster` binary and the `examples/` blueprints that you use in the steps that follow. If you extracted the bundle into a `cluster-toolkit` directory, make sure that you change to that directory (`cd cluster-toolkit`) before running the subsequent commands."
+      },
+      {
+        "heading": "Authenticate your environment",
+        "level": 2,
+        "content": "To ensure that Cluster Toolkit can provision resources and push images to Artifact Registry on your behalf, authenticate the Google Cloud CLI and set your Application Default Credentials:\n\n```\ngcloud auth login\ngcloud auth application-default login --no-launch-browser\ngcloud config set project \"${PROJECT:?}\"\ngcloud auth application-default set-quota-project \"${PROJECT:?}\"\n\ngcloud auth configure-docker gcr.io --quiet\ngcloud auth configure-docker \"${REGION:?}-docker.pkg.dev\" --quiet\n```"
+      },
+      {
+        "heading": "Create your Cluster Toolkit cluster",
+        "level": 2,
+        "content": "To create and deploy a Cluster Toolkit cluster with 32 `v6e` TPU chips, complete the following steps:\n  1. Create a Cloud Storage bucket:\n\n```\ngcloud storage buckets create \"gs://${GCS_BUCKET:?}\" --project=\"${PROJECT:?}\" --location=\"${REGION:?}\" || true\n```\n\n  2. Stage the blueprint configuration and copy the example deployment blueprint to an isolated working directory:\n\n```\nmkdir -p tmp\ncp examples/gke-tpu-v6e/gke-tpu-v6e-advanced.yaml tmp/\n```\n\n  3. Update `tmp/gke-tpu-v6e-advanced.yaml` to grant your cluster node pool service account (`gke-np-sa`) the Storage Admin role (`roles/storage.admin`) for writing checkpoints to your Cloud Storage bucket, switch the system node pool machine type to `e2-standard-8`, and pin the system node pool to your target zone to avoid regional machine-type stockouts:\n\n```"
+      },
+      {
+        "heading": "Grant the GKE Node Pool Service Account storage.admin access for checkpoint writes",
+        "level": 1,
+        "content": "sed -i \"s/- storage.objectViewer/- storage.admin/\" tmp/gke-tpu-v6e-advanced.yaml"
+      },
+      {
+        "heading": "Change n2-standard-8 to e2-standard-8 to avoid GCE_STOCKOUT in some regions",
+        "level": 1,
+        "content": "sed -i \"s/n2-standard-8/e2-standard-8/\" tmp/gke-tpu-v6e-advanced.yaml"
+      },
+      {
+        "heading": "Pin system node pool to a single zone to avoid cross-zone stockouts",
+        "level": 1,
+        "content": "sed -i '/system_node_pool_machine_type/a \\      system_node_pool_zones: [$(vars.zone)]' tmp/gke-tpu-v6e-advanced.yaml\n```\n\n  4. Use the [`gcluster deploy` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-deploy) to deploy your Cluster Toolkit cluster by using the blueprint `tmp/gke-tpu-v6e-advanced.yaml` and passing the required variables by using the `--vars` flag:\n\n```\n./gcluster deploy tmp/gke-tpu-v6e-advanced.yaml \\\n    --vars \"project_id=${PROJECT:?},deployment_name=${CLUSTER_NAME:?},region=${REGION:?},zone=${ZONE:?},num_slices=1,tpu_topology=4x8,authorized_cidr=0.0.0.0/0,reservation=${RESERVATION:-}\" \\\n    --download-dependencies \\\n    -l IGNORE \\\n    --auto-approve -w\n```"
+      },
+      {
+        "heading": "Convert the model to MaxText format",
+        "level": 2,
+        "content": "To train the model in MaxText format, you must convert it from Hugging Face format to MaxText format.\n  1. To simplify subsequent commands, use the [`gcluster job config` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-job-config) to configure your default project, cluster, and location:\n\n```"
+      },
+      {
+        "heading": "Configure gcluster Defaults",
+        "level": 1,
+        "content": "./gcluster job config set project \"${PROJECT:?}\"\n./gcluster job config set cluster \"${CLUSTER_NAME:?}\"\n./gcluster job config set location \"${REGION:?}\"\n```\n\n  2. Use the [`gcluster job submit` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-job-submit) to convert the model from Hugging Face format to MaxText format and store it in your Cloud Storage bucket:\n\n```\n./gcluster job submit --name hf-to-mt \\\n    --compute-type \"${TPU_TYPE:?}\" \\\n    --num-slices 1 \\\n    --image \"${CLOUD_IMAGE_NAME:?}\" \\\n    --await-job-completion \\\n    --command \"[ \\\"\\$JOB_COMPLETION_INDEX\\\" != \\\"0\\\" ] || \\\n      python3 -m maxtext.checkpoint_conversion.to_maxtext \\\n        model_name=${MODEL_NAME:?} \\\n        hf_access_token=${HF_TOKEN:?} \\\n        base_output_directory=gs://${GCS_BUCKET:?}/${MODEL_NAME}/max-text-format/ \\\n        scan_layers=True \\\n        use_multimodal=False \\\n        skip_jax_distributed_system=true \\\n        checkpoint_storage_use_zarr3=0 \\\n        checkpoint_storage_use_ocdbt=0 \\\n        hardware=cpu \\\n        --lazy_load_tensors=True\"\n```\n\nThe command includes the `--await-job-completion` flag, which means that it waits in your current terminal until the conversion finishes.\n  3. Optional: To stream the conversion logs while the job is running, open a separate terminal in the working directory where you extracted `gcluster`, and run the [`gcluster job logs` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-job-logs):\n\n```"
+      },
+      {
+        "heading": "Use the list command to check status",
+        "level": 1,
+        "content": "./gcluster job list"
+      },
+      {
+        "heading": "Check progress of the job (--main-only targets the coordinator pod (Job Index 0, Pod Index 0) to avoid duplicate logs from other workers)",
+        "level": 1,
+        "content": "./gcluster job logs hf-to-mt --main-only -f\n```\n\n  4. In your original terminal, verify that the converted model files are available in your Cloud Storage bucket:\n\n```\ngcloud storage ls \"gs://${GCS_BUCKET:?}/${MODEL_NAME:?}/max-text-format/\"\n```"
+      },
+      {
+        "heading": "Start the training workload",
+        "level": 2,
+        "content": "1. After the conversion process has completed, start the SFT workload:\n\n```\n./gcluster job submit --name sft \\\n    --compute-type \"${TPU_TYPE:?}\" \\\n    --num-slices 1 \\\n    --image \"${CLOUD_IMAGE_NAME:?}\" \\\n    --await-job-completion \\\n    --command \"JAX_PLATFORMS=tpu,cpu ENABLE_PJRT_COMPATIBILITY=true JAX_TRACEBACK_FILTERING=off LIBTPU_INIT_ARGS=' --xla_tpu_scoped_vmem_limit_kib=61440 --xla_tpu_bf16_emission_mode=NATIVE_EMISSION --xla_tpu_enable_sparse_core_collective_offload_all_reduce=true --xla_tpu_use_single_sparse_core_for_all_gather_offload=true ' \\\n      python3 -m maxtext.trainers.post_train.sft.train_sft \\\n      run_name=sft \\\n      base_output_directory=gs://${GCS_BUCKET:?}/${MODEL_NAME:?}/trained/ \\\n      model_name=${MODEL_NAME} \\\n      load_parameters_path=gs://${GCS_BUCKET}/${MODEL_NAME}/max-text-format/0/items/ \\\n      hf_access_token=${HF_TOKEN:?} \\\n      dataset_type=hf \\\n      hf_path=HuggingFaceH4/ultrachat_200k \\\n      per_device_batch_size=1 steps=1000 \\\n      profiler=xplane \\\n      checkpoint_storage_use_zarr3=0 \\\n      checkpoint_storage_use_ocdbt=0 \\\n      skip_jax_distributed_system=False\"\n```\n\nThe command includes the `--await-job-completion` flag, which means that it waits in your current terminal until the training job finishes.\n  2. Optional: To stream the live training logs while the job is running, open a separate terminal in the working directory where you extracted `gcluster`, and run the `gcluster job logs` command:\n\n```"
+      },
+      {
+        "heading": "Use the list command to check status",
+        "level": 1,
+        "content": "./gcluster job list"
+      },
+      {
+        "heading": "Check progress of the job (--main-only targets the coordinator pod (Job Index 0, Pod Index 0) to avoid duplicate logs from other workers)",
+        "level": 1,
+        "content": "./gcluster job logs sft --main-only -f\n```\n\nAfter initial XLA compilation completes, the coordinator logs output progress for each step across the 1000-step run in the format `completed step: <step>, seconds: ..., TFLOP/s/device: ..., loss: ...`, with the training loss decreasing from approximately `1.57` at step 5 to approximately `0.82` at step 1000. Before you proceed to the next section, wait until step 1000 finishes and the output from the `./gcluster job list` command shows the status of `sft` as `Succeeded`.\n**Note:** Completed JobSets on GKE are automatically cleaned up after their configured time to live (TTL) expires, which is one hour by default (`--gke-ttl-after-finished=1h`). Completed workloads are not listed in the output of the `./gcluster job list` command after their TTL expires; however, all checkpoints and model weights are stored in your Cloud Storage bucket.\n  3. In your original terminal, verify that the SFT training checkpoints are generated in your Cloud Storage bucket:\n\n```\ngcloud storage ls \"gs://${GCS_BUCKET:?}/${MODEL_NAME:?}/trained/sft/checkpoints/1000/model_params/\"\n```"
+      },
+      {
+        "heading": "Convert the trained model back into Hugging Face format",
+        "level": 2,
+        "content": "1. After the training workload has completed, convert the model back to Hugging Face format:\n\n```\n./gcluster job submit --name mt-to-hf \\\n    --compute-type \"${TPU_TYPE:?}\" \\\n    --num-slices 1 \\\n    --image \"${CLOUD_IMAGE_NAME:?}\" \\\n    --await-job-completion \\\n    --command \"[ \\\"\\$JOB_COMPLETION_INDEX\\\" != \\\"0\\\" ] || \\\n      python3 -m maxtext.checkpoint_conversion.to_huggingface \\\n        model_name=${MODEL_NAME:?} \\\n        hf_access_token=${HF_TOKEN:?} \\\n        load_parameters_path=gs://${GCS_BUCKET:?}/${MODEL_NAME}/trained/sft/checkpoints/1000/model_params/ \\\n        base_output_directory=gs://${GCS_BUCKET}/${MODEL_NAME}/hf-trained/ \\\n        skip_jax_distributed_system=true \\\n        hardware=cpu \\\n        scan_layers=True \\\n        use_multimodal=False \\\n        weight_dtype=bfloat16 \\\n        --override_model_architecture\"\n```\n\nThe command includes the `--await-job-completion` flag, which means that it waits in your current terminal until the conversion finishes.\n  2. Optional: To stream the live conversion logs while the job is running, open a separate terminal in the working directory where you extracted `gcluster`, and run the `gcluster job logs` command:\n\n```"
+      },
+      {
+        "heading": "Use the list command to check status",
+        "level": 1,
+        "content": "./gcluster job list"
+      },
+      {
+        "heading": "Check progress of the job (--main-only targets the coordinator pod (Job Index 0, Pod Index 0) to avoid duplicate logs from other workers)",
+        "level": 1,
+        "content": "./gcluster job logs mt-to-hf --main-only -f"
+      },
+      {
+        "heading": "The trained model is now available in gs://${GCS_BUCKET}/${MODEL_NAME}/hf-trained/",
+        "level": 1,
+        "content": "```\n\n  3. In your original terminal, verify that the final Hugging Face Safetensors weights are generated in your Cloud Storage bucket:\n\n```\ngcloud storage ls -l --readable-sizes \"gs://${GCS_BUCKET:?}/${MODEL_NAME:?}/hf-trained/\"\n```"
+      },
+      {
+        "heading": "Clean up",
+        "level": 2,
+        "content": "To avoid incurring additional charges, use the [`gcluster destroy` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-destroy) to delete the resources created during this tutorial:\n\n```\n./gcluster destroy \"${CLUSTER_NAME:?}\" --robust --auto-approve\ngcloud storage rm -r \"gs://${GCS_BUCKET:?}\""
+      },
+      {
+        "heading": "To delete the local deployment folder and staged blueprint",
+        "level": 1,
+        "content": "rm -rf .ghpc \"${CLUSTER_NAME:?}\" tmp\n```"
+      },
+      {
+        "heading": "What's next",
+        "level": 2,
+        "content": "* For more information about Cloud TPU, see [Introduction to Cloud TPU](https://docs.cloud.google.com/tpu/docs/intro-to-tpu).\n  * For architecture and configuration details for the `v6e-32` TPU, see [TPU v6e](https://docs.cloud.google.com/tpu/docs/v6e)."
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "export PROJECT=\"YOUR_PROJECT_ID\"\nexport REGION=\"YOUR_REGION\"\nexport ZONE=\"YOUR_ZONE\"\nexport CLUSTER_NAME=\"YOUR_CLUSTER_NAME\"\nexport GCS_BUCKET=\"YOUR_BUCKET_NAME\"\nexport CLOUD_IMAGE_NAME=\"us-docker.pkg.dev/cloud-tpu-images/maxtext-images/tpu_post_training:0.2.4\"\nexport TPU_TYPE=\"v6e-32\"\nexport RESERVATION=\"YOUR_RESERVATION_NAME\"\nexport HF_TOKEN=\"YOUR_HF_TOKEN\"\nexport MODEL_NAME=\"gemma4-31b\"\nexport CLUSTER_TOOLKIT_VERSION=\"v1.103.0\""
+      },
+      {
+        "language": "text",
+        "code": "case \"$(uname -s)-$(uname -m)\" in\n  Linux-x86_64)              BUNDLE=\"gcluster_bundle_linux_amd64.tgz\" ;;\n  Linux-aarch64|Linux-arm64) BUNDLE=\"gcluster_bundle_linux_arm64.tgz\" ;;\n  Darwin-x86_64)             BUNDLE=\"gcluster_bundle_mac_amd64.tgz\" ;;\n  Darwin-arm64)              BUNDLE=\"gcluster_bundle_mac_arm64.tgz\" ;;\n  *) BUNDLE=\"\"; echo \"Unsupported platform: $(uname -s)-$(uname -m)\" >&2 ;;\nesac\nmkdir -p cluster-toolkit\ncurl -fsSL \"https://github.com/GoogleCloudPlatform/cluster-toolkit/releases/download/${CLUSTER_TOOLKIT_VERSION:?}/${BUNDLE:?}\" \\\n  | tar -xz -C cluster-toolkit\ncd cluster-toolkit"
+      },
+      {
+        "language": "text",
+        "code": "gcloud auth login\ngcloud auth application-default login --no-launch-browser\ngcloud config set project \"${PROJECT:?}\"\ngcloud auth application-default set-quota-project \"${PROJECT:?}\"\n\ngcloud auth configure-docker gcr.io --quiet\ngcloud auth configure-docker \"${REGION:?}-docker.pkg.dev\" --quiet"
+      },
+      {
+        "language": "text",
+        "code": "gcloud storage buckets create \"gs://${GCS_BUCKET:?}\" --project=\"${PROJECT:?}\" --location=\"${REGION:?}\" || true"
+      },
+      {
+        "language": "text",
+        "code": "mkdir -p tmp\ncp examples/gke-tpu-v6e/gke-tpu-v6e-advanced.yaml tmp/"
+      },
+      {
+        "language": "text",
+        "code": "# Grant the GKE Node Pool Service Account storage.admin access for checkpoint writes\nsed -i \"s/- storage.objectViewer/- storage.admin/\" tmp/gke-tpu-v6e-advanced.yaml\n# Change n2-standard-8 to e2-standard-8 to avoid GCE_STOCKOUT in some regions\nsed -i \"s/n2-standard-8/e2-standard-8/\" tmp/gke-tpu-v6e-advanced.yaml\n# Pin system node pool to a single zone to avoid cross-zone stockouts\nsed -i '/system_node_pool_machine_type/a \\      system_node_pool_zones: [$(vars.zone)]' tmp/gke-tpu-v6e-advanced.yaml"
+      },
+      {
+        "language": "text",
+        "code": "./gcluster deploy tmp/gke-tpu-v6e-advanced.yaml \\\n    --vars \"project_id=${PROJECT:?},deployment_name=${CLUSTER_NAME:?},region=${REGION:?},zone=${ZONE:?},num_slices=1,tpu_topology=4x8,authorized_cidr=0.0.0.0/0,reservation=${RESERVATION:-}\" \\\n    --download-dependencies \\\n    -l IGNORE \\\n    --auto-approve -w"
+      },
+      {
+        "language": "text",
+        "code": "# Configure gcluster Defaults\n./gcluster job config set project \"${PROJECT:?}\"\n./gcluster job config set cluster \"${CLUSTER_NAME:?}\"\n./gcluster job config set location \"${REGION:?}\""
+      },
+      {
+        "language": "text",
+        "code": "./gcluster job submit --name hf-to-mt \\\n    --compute-type \"${TPU_TYPE:?}\" \\\n    --num-slices 1 \\\n    --image \"${CLOUD_IMAGE_NAME:?}\" \\\n    --await-job-completion \\\n    --command \"[ \\\"\\$JOB_COMPLETION_INDEX\\\" != \\\"0\\\" ] || \\\n      python3 -m maxtext.checkpoint_conversion.to_maxtext \\\n        model_name=${MODEL_NAME:?} \\\n        hf_access_token=${HF_TOKEN:?} \\\n        base_output_directory=gs://${GCS_BUCKET:?}/${MODEL_NAME}/max-text-format/ \\\n        scan_layers=True \\\n        use_multimodal=False \\\n        skip_jax_distributed_system=true \\\n        checkpoint_storage_use_zarr3=0 \\\n        checkpoint_storage_use_ocdbt=0 \\\n        hardware=cpu \\\n        --lazy_load_tensors=True\""
+      },
+      {
+        "language": "text",
+        "code": "# Use the list command to check status\n./gcluster job list\n\n# Check progress of the job (--main-only targets the coordinator pod (Job Index 0, Pod Index 0) to avoid duplicate logs from other workers)\n./gcluster job logs hf-to-mt --main-only -f"
+      },
+      {
+        "language": "text",
+        "code": "gcloud storage ls \"gs://${GCS_BUCKET:?}/${MODEL_NAME:?}/max-text-format/\""
+      },
+      {
+        "language": "text",
+        "code": "./gcluster job submit --name sft \\\n    --compute-type \"${TPU_TYPE:?}\" \\\n    --num-slices 1 \\\n    --image \"${CLOUD_IMAGE_NAME:?}\" \\\n    --await-job-completion \\\n    --command \"JAX_PLATFORMS=tpu,cpu ENABLE_PJRT_COMPATIBILITY=true JAX_TRACEBACK_FILTERING=off LIBTPU_INIT_ARGS=' --xla_tpu_scoped_vmem_limit_kib=61440 --xla_tpu_bf16_emission_mode=NATIVE_EMISSION --xla_tpu_enable_sparse_core_collective_offload_all_reduce=true --xla_tpu_use_single_sparse_core_for_all_gather_offload=true ' \\\n      python3 -m maxtext.trainers.post_train.sft.train_sft \\\n      run_name=sft \\\n      base_output_directory=gs://${GCS_BUCKET:?}/${MODEL_NAME:?}/trained/ \\\n      model_name=${MODEL_NAME} \\\n      load_parameters_path=gs://${GCS_BUCKET}/${MODEL_NAME}/max-text-format/0/items/ \\\n      hf_access_token=${HF_TOKEN:?} \\\n      dataset_type=hf \\\n      hf_path=HuggingFaceH4/ultrachat_200k \\\n      per_device_batch_size=1 steps=1000 \\\n      profiler=xplane \\\n      checkpoint_storage_use_zarr3=0 \\\n      checkpoint_storage_use_ocdbt=0 \\\n      skip_jax_distributed_system=False\""
+      },
+      {
+        "language": "text",
+        "code": "# Use the list command to check status\n./gcluster job list\n\n# Check progress of the job (--main-only targets the coordinator pod (Job Index 0, Pod Index 0) to avoid duplicate logs from other workers)\n./gcluster job logs sft --main-only -f"
+      },
+      {
+        "language": "text",
+        "code": "gcloud storage ls \"gs://${GCS_BUCKET:?}/${MODEL_NAME:?}/trained/sft/checkpoints/1000/model_params/\""
+      },
+      {
+        "language": "text",
+        "code": "./gcluster job submit --name mt-to-hf \\\n    --compute-type \"${TPU_TYPE:?}\" \\\n    --num-slices 1 \\\n    --image \"${CLOUD_IMAGE_NAME:?}\" \\\n    --await-job-completion \\\n    --command \"[ \\\"\\$JOB_COMPLETION_INDEX\\\" != \\\"0\\\" ] || \\\n      python3 -m maxtext.checkpoint_conversion.to_huggingface \\\n        model_name=${MODEL_NAME:?} \\\n        hf_access_token=${HF_TOKEN:?} \\\n        load_parameters_path=gs://${GCS_BUCKET:?}/${MODEL_NAME}/trained/sft/checkpoints/1000/model_params/ \\\n        base_output_directory=gs://${GCS_BUCKET}/${MODEL_NAME}/hf-trained/ \\\n        skip_jax_distributed_system=true \\\n        hardware=cpu \\\n        scan_layers=True \\\n        use_multimodal=False \\\n        weight_dtype=bfloat16 \\\n        --override_model_architecture\""
+      },
+      {
+        "language": "text",
+        "code": "# Use the list command to check status\n./gcluster job list\n\n# Check progress of the job (--main-only targets the coordinator pod (Job Index 0, Pod Index 0) to avoid duplicate logs from other workers)\n./gcluster job logs mt-to-hf --main-only -f\n\n# The trained model is now available in gs://${GCS_BUCKET}/${MODEL_NAME}/hf-trained/"
+      },
+      {
+        "language": "text",
+        "code": "gcloud storage ls -l --readable-sizes \"gs://${GCS_BUCKET:?}/${MODEL_NAME:?}/hf-trained/\""
+      },
+      {
+        "language": "text",
+        "code": "./gcluster destroy \"${CLUSTER_NAME:?}\" --robust --auto-approve\ngcloud storage rm -r \"gs://${GCS_BUCKET:?}\"\n\n# To delete the local deployment folder and staged blueprint\nrm -rf .ghpc \"${CLUSTER_NAME:?}\" tmp"
+      }
+    ],
+    "cli_commands": [
+      "export PROJECT=\"YOUR_PROJECT_ID\"",
+      "export REGION=\"YOUR_REGION\"",
+      "export ZONE=\"YOUR_ZONE\"",
+      "export CLUSTER_NAME=\"YOUR_CLUSTER_NAME\"",
+      "export GCS_BUCKET=\"YOUR_BUCKET_NAME\"",
+      "export CLOUD_IMAGE_NAME=\"us-docker.pkg.dev/cloud-tpu-images/maxtext-images/tpu_post_training:0.2.4\"",
+      "export TPU_TYPE=\"v6e-32\"",
+      "export RESERVATION=\"YOUR_RESERVATION_NAME\"",
+      "export HF_TOKEN=\"YOUR_HF_TOKEN\"",
+      "export MODEL_NAME=\"gemma4-31b\"",
+      "export CLUSTER_TOOLKIT_VERSION=\"v1.103.0\"",
+      "curl -fsSL \"https://github.com/GoogleCloudPlatform/cluster-toolkit/releases/download/${CLUSTER_TOOLKIT_VERSION:?}/${BUNDLE:?}\" \\",
+      "gcloud auth login",
+      "gcloud auth application-default login --no-launch-browser",
+      "gcloud config set project \"${PROJECT:?}\"",
+      "gcloud auth application-default set-quota-project \"${PROJECT:?}\"",
+      "gcloud auth configure-docker gcr.io --quiet",
+      "gcloud auth configure-docker \"${REGION:?}-docker.pkg.dev\" --quiet",
+      "gcloud storage buckets create \"gs://${GCS_BUCKET:?}\" --project=\"${PROJECT:?}\" --location=\"${REGION:?}\" || true",
+      "python3 -m maxtext.checkpoint_conversion.to_maxtext \\",
+      "gcloud storage ls \"gs://${GCS_BUCKET:?}/${MODEL_NAME:?}/max-text-format/\"",
+      "python3 -m maxtext.trainers.post_train.sft.train_sft \\",
+      "gcloud storage ls \"gs://${GCS_BUCKET:?}/${MODEL_NAME:?}/trained/sft/checkpoints/1000/model_params/\"",
+      "python3 -m maxtext.checkpoint_conversion.to_huggingface \\",
+      "gcloud storage ls -l --readable-sizes \"gs://${GCS_BUCKET:?}/${MODEL_NAME:?}/hf-trained/\"",
+      "gcloud storage rm -r \"gs://${GCS_BUCKET:?}\""
+    ],
+    "environment_variables": [
+      "ENABLE_PJRT_COMPATIBILITY",
+      "HF_TOKEN",
+      "JAX_PLATFORMS",
+      "JAX_TRACEBACK_FILTERING",
+      "LIBTPU_INIT_ARGS",
+      "MODEL_NAME",
+      "PROJECT",
+      "TPU_TYPE",
+      "ZONE"
+    ],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'MaxText multi-host Gemma SFT' (https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-gemma4-31b-sft-maxtext)?",
+        "answer": "Multi-host v6e/GKE recipe for Gemma 4 31B SFT with MaxText, Cluster Toolkit, UltraChat, and export back to Hugging Face format."
+      },
+      {
+        "question": "How does 'MaxText multi-host Gemma SFT' handle: Run SFT for Gemma 4 31B on multi-host TPU v6e?",
+        "answer": "This tutorial shows you how to run supervised fine-tuning (SFT) on a multi-host Tensor Processing Unit (TPU) v6e cluster by using MaxText and Cluster Toolkit. You use Cluster Toolkit to execute a multi-host training workload and export the results back to Hugging Face format for serving."
+      },
+      {
+        "question": "How does 'MaxText multi-host Gemma SFT' handle: Workload summary?",
+        "answer": "Running this SFT workload on Cloud TPU and GKE involves the following components:\n  * **Model:** Gemma 4 31B (`google/gemma-4-31b-it`), an advanced open-weights model. In this tutorial, the model weights are downloaded from Hugging Face, converted into MaxText-compatible format, and deployed on a GKE cluster with Cloud TPU v6e (`v6e-32`) infrastructure.\n  * **Training method:** SFT using MaxText. The workload executes a scalable fine-tuning pipeline on Cloud TPU v6e using JAX. It optimizes model parameters over 1000 steps using MaxText's built-in SFT trainer (`maxtext.trainers.post_train.sft.train_sft`) and instruction-tuning datasets.\n  * **Dataset and template:** UltraChat 200k (`HuggingFaceH4/ultrachat_200k`), a large-scale, high-quality multi-turn dialogue dataset. The workload uses this dataset to fine-tune the model and improve its conversational and instruction-following capabilities.\n  * **Infrastructure and framework:** GKE, managed using Cluster Toolkit, on Cloud TPU v6e (`v6e-32`, with a `4x8` topology). The framework is MaxText (`tpu_post_training:0.2.4`) with a JAX backend."
+      },
+      {
+        "question": "How does 'MaxText multi-host Gemma SFT' handle: Objectives?",
+        "answer": "* Install Cluster Toolkit and its dependencies.\n  * Deploy a Cluster Toolkit cluster.\n  * Convert a Hugging Face model to MaxText format.\n  * Run an SFT training workload on the TPU.\n  * Convert the fine-tuned model back to Hugging Face format for serving."
+      },
+      {
+        "question": "How does 'MaxText multi-host Gemma SFT' handle: Costs?",
+        "answer": "In this document, you use the following billable components of Google Cloud: \n  * [ Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/pricing)\n  * [ Cloud TPU](https://cloud.google.com/tpu/pricing)\n  * [ Cloud Storage](https://cloud.google.com/storage/pricing)\n  * [ Compute Engine](https://cloud.google.com/compute/all-pricing)\n\n\nTo generate a cost estimate based on your projected usage, use the [pricing calculator](https://docs.cloud.google.com/products/calculator). \nNew Google Cloud users might be eligible for a [free trial](https://docs.cloud.google.com/free). \nWhen you finish the tasks that are described in this document, you can avoid continued billing by deleting the resources that you created. For more information, see [Clean up](https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-gemma4-31b-sft-maxtext#clean-up).\n**Important:** To complete this tutorial, you must have access to `v6e-32` TPUs. This tutorial assumes that you already have a reservation for these TPUs in your Google Cloud project to ensure that you have the capacity available when you need it. To learn more about your options for reserving Cloud TPU capacity for a future date"
+      },
+      {
+        "question": "How does 'MaxText multi-host Gemma SFT' handle: Before you begin?",
+        "answer": "* You need a Hugging Face access token to use this tutorial. You can sign up for a free account at [Hugging Face](http://huggingface.co/login). After you have an account, generate an access token:\n    1. On the [Welcome to Hugging Face](https://huggingface.co/welcome) page, click your account avatar and select **Access tokens**.\n    2. On the **Access tokens** page, click **Create new token**.\n    3. Select the **Read** token type and enter a name for your token.\n    4. Your access token is displayed. Save the token in a safe place.\n\n\n  * On the [`google/gemma-4-31b-it` model card on Hugging Face](https://huggingface.co/google/gemma-4-31b-it), accept the license agreement for the model.\n\n\nTo get the permissions that you need to complete this tutorial, ask your administrator to grant you the following IAM roles on your project: \n  * To complete this tutorial: \n    * [TPU Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/tpu#tpu.admin) (`roles/tpu.admin`)\n    * [Service Account User ](https://docs.cloud.google.com/iam/docs/roles-permissions/iam#iam.serviceAccountUser) (`roles/iam.serviceAccountUser`)\n    * [Compute Admin ](https://docs.cloud.google.com/iam/docs/roles-p"
+      },
+      {
+        "question": "How does 'MaxText multi-host Gemma SFT' handle: Set up your environment variables?",
+        "answer": "Set up your environment variables:\n\n```\nexport PROJECT=\"YOUR_PROJECT_ID\"\nexport REGION=\"YOUR_REGION\"\nexport ZONE=\"YOUR_ZONE\"\nexport CLUSTER_NAME=\"YOUR_CLUSTER_NAME\"\nexport GCS_BUCKET=\"YOUR_BUCKET_NAME\"\nexport CLOUD_IMAGE_NAME=\"us-docker.pkg.dev/cloud-tpu-images/maxtext-images/tpu_post_training:0.2.4\"\nexport TPU_TYPE=\"v6e-32\"\nexport RESERVATION=\"YOUR_RESERVATION_NAME\"\nexport HF_TOKEN=\"YOUR_HF_TOKEN\"\nexport MODEL_NAME=\"gemma4-31b\"\nexport CLUSTER_TOOLKIT_VERSION=\"v1.103.0\"\n```\n\nReplace the following:\n  * `YOUR_PROJECT_ID`: the ID of your Google Cloud project.\n  * `YOUR_REGION`: the region where your TPU reservation is located and where you deploy your cluster.\n  * `YOUR_ZONE`: the zone where your TPU reservation is located and where you deploy your cluster.\n  * `YOUR_BUCKET_NAME`: a globally unique name for a Cloud Storage bucket.\n  * `YOUR_RESERVATION_NAME`: the name of your TPU v6e reservation.\n  * `YOUR_HF_TOKEN`: your Hugging Face access token.\n\n\nBy default, the script sets `MODEL_NAME` to `gemma4-31b` (the MaxText model name for `google/gemma-4-31b-it`) and `CLUSTER_NAME` to `gke-tpu-v6e`. If you customize `CLUSTER_NAME`, the name must start with a lowercase letter, contain only "
+      },
+      {
+        "question": "How does 'MaxText multi-host Gemma SFT' handle: Install Cluster Toolkit dependencies?",
+        "answer": "To complete this tutorial from a Linux or macOS client or workstation, follow the relevant steps in [Install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies) in the Cluster Toolkit documentation.\nIf you're using Cloud Shell, then you can skip this section."
+      },
+      {
+        "question": "How does 'MaxText multi-host Gemma SFT' handle: Install Cluster Toolkit?",
+        "answer": "Download and extract the prebuilt bundle for the specific version of Cluster Toolkit defined in `CLUSTER_TOOLKIT_VERSION` (`v1.103.0`) into your current working directory:\n\n```\ncase \"$(uname -s)-$(uname -m)\" in\n  Linux-x86_64)              BUNDLE=\"gcluster_bundle_linux_amd64.tgz\" ;;\n  Linux-aarch64|Linux-arm64) BUNDLE=\"gcluster_bundle_linux_arm64.tgz\" ;;\n  Darwin-x86_64)             BUNDLE=\"gcluster_bundle_mac_amd64.tgz\" ;;\n  Darwin-arm64)              BUNDLE=\"gcluster_bundle_mac_arm64.tgz\" ;;\n  *) BUNDLE=\"\"; echo \"Unsupported platform: $(uname -s)-$(uname -m)\" >&2 ;;\nesac\nmkdir -p cluster-toolkit\ncurl -fsSL \"https://github.com/GoogleCloudPlatform/cluster-toolkit/releases/download/${CLUSTER_TOOLKIT_VERSION:?}/${BUNDLE:?}\" \\\n  | tar -xz -C cluster-toolkit\ncd cluster-toolkit\n```\n\n**Note:** The [Install Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/setup/configure-environment#install-bundle) documentation describes how to download the latest release into a `cluster-toolkit` directory. However, because blueprint variables can differ across Cluster Toolkit versions, for this tutorial you must install the exact version specified in `CLUSTER_TOOLKIT_VERSION` (`v1.103"
+      },
+      {
+        "question": "How does 'MaxText multi-host Gemma SFT' handle: Authenticate your environment?",
+        "answer": "To ensure that Cluster Toolkit can provision resources and push images to Artifact Registry on your behalf, authenticate the Google Cloud CLI and set your Application Default Credentials:\n\n```\ngcloud auth login\ngcloud auth application-default login --no-launch-browser\ngcloud config set project \"${PROJECT:?}\"\ngcloud auth application-default set-quota-project \"${PROJECT:?}\"\n\ngcloud auth configure-docker gcr.io --quiet\ngcloud auth configure-docker \"${REGION:?}-docker.pkg.dev\" --quiet\n```"
+      }
+    ],
+    "full_markdown": "#  Run SFT for Gemma 4 31B on multi-host TPU v6e\nThis tutorial shows you how to run supervised fine-tuning (SFT) on a multi-host Tensor Processing Unit (TPU) v6e cluster by using MaxText and Cluster Toolkit. You use Cluster Toolkit to execute a multi-host training workload and export the results back to Hugging Face format for serving.\n## Workload summary\nRunning this SFT workload on Cloud TPU and GKE involves the following components:\n  * **Model:** Gemma 4 31B (`google/gemma-4-31b-it`), an advanced open-weights model. In this tutorial, the model weights are downloaded from Hugging Face, converted into MaxText-compatible format, and deployed on a GKE cluster with Cloud TPU v6e (`v6e-32`) infrastructure.\n  * **Training method:** SFT using MaxText. The workload executes a scalable fine-tuning pipeline on Cloud TPU v6e using JAX. It optimizes model parameters over 1000 steps using MaxText's built-in SFT trainer (`maxtext.trainers.post_train.sft.train_sft`) and instruction-tuning datasets.\n  * **Dataset and template:** UltraChat 200k (`HuggingFaceH4/ultrachat_200k`), a large-scale, high-quality multi-turn dialogue dataset. The workload uses this dataset to fine-tune the model and improve its conversational and instruction-following capabilities.\n  * **Infrastructure and framework:** GKE, managed using Cluster Toolkit, on Cloud TPU v6e (`v6e-32`, with a `4x8` topology). The framework is MaxText (`tpu_post_training:0.2.4`) with a JAX backend.\n\n\n## Objectives\n  * Install Cluster Toolkit and its dependencies.\n  * Deploy a Cluster Toolkit cluster.\n  * Convert a Hugging Face model to MaxText format.\n  * Run an SFT training workload on the TPU.\n  * Convert the fine-tuned model back to Hugging Face format for serving.\n\n\n## Costs\nIn this document, you use the following billable components of Google Cloud: \n  * [ Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/pricing)\n  * [ Cloud TPU](https://cloud.google.com/tpu/pricing)\n  * [ Cloud Storage](https://cloud.google.com/storage/pricing)\n  * [ Compute Engine](https://cloud.google.com/compute/all-pricing)\n\n\nTo generate a cost estimate based on your projected usage, use the [pricing calculator](https://docs.cloud.google.com/products/calculator). \nNew Google Cloud users might be eligible for a [free trial](https://docs.cloud.google.com/free). \nWhen you finish the tasks that are described in this document, you can avoid continued billing by deleting the resources that you created. For more information, see [Clean up](https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-gemma4-31b-sft-maxtext#clean-up).\n**Important:** To complete this tutorial, you must have access to `v6e-32` TPUs. This tutorial assumes that you already have a reservation for these TPUs in your Google Cloud project to ensure that you have the capacity available when you need it. To learn more about your options for reserving Cloud TPU capacity for a future date and time, see [About Cloud TPU reservations](https://docs.cloud.google.com/tpu/docs/about-tpu-reservations).\n## Before you begin\n  * You need a Hugging Face access token to use this tutorial. You can sign up for a free account at [Hugging Face](http://huggingface.co/login). After you have an account, generate an access token:\n    1. On the [Welcome to Hugging Face](https://huggingface.co/welcome) page, click your account avatar and select **Access tokens**.\n    2. On the **Access tokens** page, click **Create new token**.\n    3. Select the **Read** token type and enter a name for your token.\n    4. Your access token is displayed. Save the token in a safe place.\n\n\n  * On the [`google/gemma-4-31b-it` model card on Hugging Face](https://huggingface.co/google/gemma-4-31b-it), accept the license agreement for the model.\n\n\nTo get the permissions that you need to complete this tutorial, ask your administrator to grant you the following IAM roles on your project: \n  * To complete this tutorial: \n    * [TPU Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/tpu#tpu.admin) (`roles/tpu.admin`)\n    * [Service Account User ](https://docs.cloud.google.com/iam/docs/roles-permissions/iam#iam.serviceAccountUser) (`roles/iam.serviceAccountUser`)\n    * [Compute Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/compute#compute.admin) (`roles/compute.admin`)\n    * [Storage Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/storage#storage.admin) (`roles/storage.admin`)\n    * [Kubernetes Engine Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/container#container.admin) (`roles/container.admin`)\n    * [Service Account Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/iam#iam.serviceAccountAdmin) (`roles/iam.serviceAccountAdmin`)\n    * [Project IAM Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/resourcemanager#resourcemanager.projectIamAdmin) (`roles/resourcemanager.projectIamAdmin`)\n    * [Service Usage Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/serviceusage#serviceusage.serviceUsageAdmin) (`roles/serviceusage.serviceUsageAdmin`)\n\n\nFor more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \nYou might also be able to get the required permissions through [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). \n## Set up your environment variables\nSet up your environment variables:\n\n```\nexport PROJECT=\"YOUR_PROJECT_ID\"\nexport REGION=\"YOUR_REGION\"\nexport ZONE=\"YOUR_ZONE\"\nexport CLUSTER_NAME=\"YOUR_CLUSTER_NAME\"\nexport GCS_BUCKET=\"YOUR_BUCKET_NAME\"\nexport CLOUD_IMAGE_NAME=\"us-docker.pkg.dev/cloud-tpu-images/maxtext-images/tpu_post_training:0.2.4\"\nexport TPU_TYPE=\"v6e-32\"\nexport RESERVATION=\"YOUR_RESERVATION_NAME\"\nexport HF_TOKEN=\"YOUR_HF_TOKEN\"\nexport MODEL_NAME=\"gemma4-31b\"\nexport CLUSTER_TOOLKIT_VERSION=\"v1.103.0\"\n```\n\nReplace the following:\n  * `YOUR_PROJECT_ID`: the ID of your Google Cloud project.\n  * `YOUR_REGION`: the region where your TPU reservation is located and where you deploy your cluster.\n  * `YOUR_ZONE`: the zone where your TPU reservation is located and where you deploy your cluster.\n  * `YOUR_BUCKET_NAME`: a globally unique name for a Cloud Storage bucket.\n  * `YOUR_RESERVATION_NAME`: the name of your TPU v6e reservation.\n  * `YOUR_HF_TOKEN`: your Hugging Face access token.\n\n\nBy default, the script sets `MODEL_NAME` to `gemma4-31b` (the MaxText model name for `google/gemma-4-31b-it`) and `CLUSTER_NAME` to `gke-tpu-v6e`. If you customize `CLUSTER_NAME`, the name must start with a lowercase letter, contain only lowercase letters, numbers, and hyphens, and be 20 characters or fewer so that generated service account IDs stay within the 30-character limit.\n## Install Cluster Toolkit dependencies\nTo complete this tutorial from a Linux or macOS client or workstation, follow the relevant steps in [Install dependencies](https://docs.cloud.google.com/cluster-toolkit/docs/setup/install-dependencies) in the Cluster Toolkit documentation.\nIf you're using Cloud Shell, then you can skip this section.\n## Install Cluster Toolkit\nDownload and extract the prebuilt bundle for the specific version of Cluster Toolkit defined in `CLUSTER_TOOLKIT_VERSION` (`v1.103.0`) into your current working directory:\n\n```\ncase \"$(uname -s)-$(uname -m)\" in\n  Linux-x86_64)              BUNDLE=\"gcluster_bundle_linux_amd64.tgz\" ;;\n  Linux-aarch64|Linux-arm64) BUNDLE=\"gcluster_bundle_linux_arm64.tgz\" ;;\n  Darwin-x86_64)             BUNDLE=\"gcluster_bundle_mac_amd64.tgz\" ;;\n  Darwin-arm64)              BUNDLE=\"gcluster_bundle_mac_arm64.tgz\" ;;\n  *) BUNDLE=\"\"; echo \"Unsupported platform: $(uname -s)-$(uname -m)\" >&2 ;;\nesac\nmkdir -p cluster-toolkit\ncurl -fsSL \"https://github.com/GoogleCloudPlatform/cluster-toolkit/releases/download/${CLUSTER_TOOLKIT_VERSION:?}/${BUNDLE:?}\" \\\n  | tar -xz -C cluster-toolkit\ncd cluster-toolkit\n```\n\n**Note:** The [Install Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/setup/configure-environment#install-bundle) documentation describes how to download the latest release into a `cluster-toolkit` directory. However, because blueprint variables can differ across Cluster Toolkit versions, for this tutorial you must install the exact version specified in `CLUSTER_TOOLKIT_VERSION` (`v1.103.0`) rather than the latest release. Extracting the bundle provides the `gcluster` binary and the `examples/` blueprints that you use in the steps that follow. If you extracted the bundle into a `cluster-toolkit` directory, make sure that you change to that directory (`cd cluster-toolkit`) before running the subsequent commands.\n## Authenticate your environment\nTo ensure that Cluster Toolkit can provision resources and push images to Artifact Registry on your behalf, authenticate the Google Cloud CLI and set your Application Default Credentials:\n\n```\ngcloud auth login\ngcloud auth application-default login --no-launch-browser\ngcloud config set project \"${PROJECT:?}\"\ngcloud auth application-default set-quota-project \"${PROJECT:?}\"\n\ngcloud auth configure-docker gcr.io --quiet\ngcloud auth configure-docker \"${REGION:?}-docker.pkg.dev\" --quiet\n```\n\n## Create your Cluster Toolkit cluster\nTo create and deploy a Cluster Toolkit cluster with 32 `v6e` TPU chips, complete the following steps:\n  1. Create a Cloud Storage bucket:\n\n```\ngcloud storage buckets create \"gs://${GCS_BUCKET:?}\" --project=\"${PROJECT:?}\" --location=\"${REGION:?}\" || true\n```\n\n  2. Stage the blueprint configuration and copy the example deployment blueprint to an isolated working directory:\n\n```\nmkdir -p tmp\ncp examples/gke-tpu-v6e/gke-tpu-v6e-advanced.yaml tmp/\n```\n\n  3. Update `tmp/gke-tpu-v6e-advanced.yaml` to grant your cluster node pool service account (`gke-np-sa`) the Storage Admin role (`roles/storage.admin`) for writing checkpoints to your Cloud Storage bucket, switch the system node pool machine type to `e2-standard-8`, and pin the system node pool to your target zone to avoid regional machine-type stockouts:\n\n```\n# Grant the GKE Node Pool Service Account storage.admin access for checkpoint writes\nsed -i \"s/- storage.objectViewer/- storage.admin/\" tmp/gke-tpu-v6e-advanced.yaml\n# Change n2-standard-8 to e2-standard-8 to avoid GCE_STOCKOUT in some regions\nsed -i \"s/n2-standard-8/e2-standard-8/\" tmp/gke-tpu-v6e-advanced.yaml\n# Pin system node pool to a single zone to avoid cross-zone stockouts\nsed -i '/system_node_pool_machine_type/a \\      system_node_pool_zones: [$(vars.zone)]' tmp/gke-tpu-v6e-advanced.yaml\n```\n\n  4. Use the [`gcluster deploy` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-deploy) to deploy your Cluster Toolkit cluster by using the blueprint `tmp/gke-tpu-v6e-advanced.yaml` and passing the required variables by using the `--vars` flag:\n\n```\n./gcluster deploy tmp/gke-tpu-v6e-advanced.yaml \\\n    --vars \"project_id=${PROJECT:?},deployment_name=${CLUSTER_NAME:?},region=${REGION:?},zone=${ZONE:?},num_slices=1,tpu_topology=4x8,authorized_cidr=0.0.0.0/0,reservation=${RESERVATION:-}\" \\\n    --download-dependencies \\\n    -l IGNORE \\\n    --auto-approve -w\n```\n\n## Convert the model to MaxText format\nTo train the model in MaxText format, you must convert it from Hugging Face format to MaxText format.\n  1. To simplify subsequent commands, use the [`gcluster job config` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-job-config) to configure your default project, cluster, and location:\n\n```\n# Configure gcluster Defaults\n./gcluster job config set project \"${PROJECT:?}\"\n./gcluster job config set cluster \"${CLUSTER_NAME:?}\"\n./gcluster job config set location \"${REGION:?}\"\n```\n\n  2. Use the [`gcluster job submit` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-job-submit) to convert the model from Hugging Face format to MaxText format and store it in your Cloud Storage bucket:\n\n```\n./gcluster job submit --name hf-to-mt \\\n    --compute-type \"${TPU_TYPE:?}\" \\\n    --num-slices 1 \\\n    --image \"${CLOUD_IMAGE_NAME:?}\" \\\n    --await-job-completion \\\n    --command \"[ \\\"\\$JOB_COMPLETION_INDEX\\\" != \\\"0\\\" ] || \\\n      python3 -m maxtext.checkpoint_conversion.to_maxtext \\\n        model_name=${MODEL_NAME:?} \\\n        hf_access_token=${HF_TOKEN:?} \\\n        base_output_directory=gs://${GCS_BUCKET:?}/${MODEL_NAME}/max-text-format/ \\\n        scan_layers=True \\\n        use_multimodal=False \\\n        skip_jax_distributed_system=true \\\n        checkpoint_storage_use_zarr3=0 \\\n        checkpoint_storage_use_ocdbt=0 \\\n        hardware=cpu \\\n        --lazy_load_tensors=True\"\n```\n\nThe command includes the `--await-job-completion` flag, which means that it waits in your current terminal until the conversion finishes.\n  3. Optional: To stream the conversion logs while the job is running, open a separate terminal in the working directory where you extracted `gcluster`, and run the [`gcluster job logs` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-job-logs):\n\n```\n# Use the list command to check status\n./gcluster job list\n\n# Check progress of the job (--main-only targets the coordinator pod (Job Index 0, Pod Index 0) to avoid duplicate logs from other workers)\n./gcluster job logs hf-to-mt --main-only -f\n```\n\n  4. In your original terminal, verify that the converted model files are available in your Cloud Storage bucket:\n\n```\ngcloud storage ls \"gs://${GCS_BUCKET:?}/${MODEL_NAME:?}/max-text-format/\"\n```\n\n## Start the training workload\n  1. After the conversion process has completed, start the SFT workload:\n\n```\n./gcluster job submit --name sft \\\n    --compute-type \"${TPU_TYPE:?}\" \\\n    --num-slices 1 \\\n    --image \"${CLOUD_IMAGE_NAME:?}\" \\\n    --await-job-completion \\\n    --command \"JAX_PLATFORMS=tpu,cpu ENABLE_PJRT_COMPATIBILITY=true JAX_TRACEBACK_FILTERING=off LIBTPU_INIT_ARGS=' --xla_tpu_scoped_vmem_limit_kib=61440 --xla_tpu_bf16_emission_mode=NATIVE_EMISSION --xla_tpu_enable_sparse_core_collective_offload_all_reduce=true --xla_tpu_use_single_sparse_core_for_all_gather_offload=true ' \\\n      python3 -m maxtext.trainers.post_train.sft.train_sft \\\n      run_name=sft \\\n      base_output_directory=gs://${GCS_BUCKET:?}/${MODEL_NAME:?}/trained/ \\\n      model_name=${MODEL_NAME} \\\n      load_parameters_path=gs://${GCS_BUCKET}/${MODEL_NAME}/max-text-format/0/items/ \\\n      hf_access_token=${HF_TOKEN:?} \\\n      dataset_type=hf \\\n      hf_path=HuggingFaceH4/ultrachat_200k \\\n      per_device_batch_size=1 steps=1000 \\\n      profiler=xplane \\\n      checkpoint_storage_use_zarr3=0 \\\n      checkpoint_storage_use_ocdbt=0 \\\n      skip_jax_distributed_system=False\"\n```\n\nThe command includes the `--await-job-completion` flag, which means that it waits in your current terminal until the training job finishes.\n  2. Optional: To stream the live training logs while the job is running, open a separate terminal in the working directory where you extracted `gcluster`, and run the `gcluster job logs` command:\n\n```\n# Use the list command to check status\n./gcluster job list\n\n# Check progress of the job (--main-only targets the coordinator pod (Job Index 0, Pod Index 0) to avoid duplicate logs from other workers)\n./gcluster job logs sft --main-only -f\n```\n\nAfter initial XLA compilation completes, the coordinator logs output progress for each step across the 1000-step run in the format `completed step: <step>, seconds: ..., TFLOP/s/device: ..., loss: ...`, with the training loss decreasing from approximately `1.57` at step 5 to approximately `0.82` at step 1000. Before you proceed to the next section, wait until step 1000 finishes and the output from the `./gcluster job list` command shows the status of `sft` as `Succeeded`.\n**Note:** Completed JobSets on GKE are automatically cleaned up after their configured time to live (TTL) expires, which is one hour by default (`--gke-ttl-after-finished=1h`). Completed workloads are not listed in the output of the `./gcluster job list` command after their TTL expires; however, all checkpoints and model weights are stored in your Cloud Storage bucket.\n  3. In your original terminal, verify that the SFT training checkpoints are generated in your Cloud Storage bucket:\n\n```\ngcloud storage ls \"gs://${GCS_BUCKET:?}/${MODEL_NAME:?}/trained/sft/checkpoints/1000/model_params/\"\n```\n\n## Convert the trained model back into Hugging Face format\n  1. After the training workload has completed, convert the model back to Hugging Face format:\n\n```\n./gcluster job submit --name mt-to-hf \\\n    --compute-type \"${TPU_TYPE:?}\" \\\n    --num-slices 1 \\\n    --image \"${CLOUD_IMAGE_NAME:?}\" \\\n    --await-job-completion \\\n    --command \"[ \\\"\\$JOB_COMPLETION_INDEX\\\" != \\\"0\\\" ] || \\\n      python3 -m maxtext.checkpoint_conversion.to_huggingface \\\n        model_name=${MODEL_NAME:?} \\\n        hf_access_token=${HF_TOKEN:?} \\\n        load_parameters_path=gs://${GCS_BUCKET:?}/${MODEL_NAME}/trained/sft/checkpoints/1000/model_params/ \\\n        base_output_directory=gs://${GCS_BUCKET}/${MODEL_NAME}/hf-trained/ \\\n        skip_jax_distributed_system=true \\\n        hardware=cpu \\\n        scan_layers=True \\\n        use_multimodal=False \\\n        weight_dtype=bfloat16 \\\n        --override_model_architecture\"\n```\n\nThe command includes the `--await-job-completion` flag, which means that it waits in your current terminal until the conversion finishes.\n  2. Optional: To stream the live conversion logs while the job is running, open a separate terminal in the working directory where you extracted `gcluster`, and run the `gcluster job logs` command:\n\n```\n# Use the list command to check status\n./gcluster job list\n\n# Check progress of the job (--main-only targets the coordinator pod (Job Index 0, Pod Index 0) to avoid duplicate logs from other workers)\n./gcluster job logs mt-to-hf --main-only -f\n\n# The trained model is now available in gs://${GCS_BUCKET}/${MODEL_NAME}/hf-trained/ \n```\n\n  3. In your original terminal, verify that the final Hugging Face Safetensors weights are generated in your Cloud Storage bucket:\n\n```\ngcloud storage ls -l --readable-sizes \"gs://${GCS_BUCKET:?}/${MODEL_NAME:?}/hf-trained/\"\n```\n\n## Clean up\nTo avoid incurring additional charges, use the [`gcluster destroy` command](https://docs.cloud.google.com/cluster-toolkit/docs/reference/gcluster-destroy) to delete the resources created during this tutorial:\n\n```\n./gcluster destroy \"${CLUSTER_NAME:?}\" --robust --auto-approve\ngcloud storage rm -r \"gs://${GCS_BUCKET:?}\"\n\n# To delete the local deployment folder and staged blueprint\nrm -rf .ghpc \"${CLUSTER_NAME:?}\" tmp\n```\n\n## What's next\n  * For more information about Cloud TPU, see [Introduction to Cloud TPU](https://docs.cloud.google.com/tpu/docs/intro-to-tpu).\n  * For architecture and configuration details for the `v6e-32` TPU, see [TPU v6e](https://docs.cloud.google.com/tpu/docs/v6e)."
+  }
 }

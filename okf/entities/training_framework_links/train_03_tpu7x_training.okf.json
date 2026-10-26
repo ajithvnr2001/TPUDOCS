@@ -1,58 +1,313 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:train_03_tpu7x_training",
-  "@type": "DocumentationResource",
-  "name": "Train a model on TPU7x with MaxText or TorchTitan",
-  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/tpu7x-training",
-  "category": "Training framework links",
-  "categorySlug": "training_framework_links",
-  "description": "Provision Ironwood training infrastructure and use JAX or PyTorch training recipes.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/tpu7x-training",
-    "crawledAt": "2026-10-26T12:45:30.592286+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 27145
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Train a model on TPU7x with MaxText or TorchTitan",
-      "documentedIn",
-      "https://docs.cloud.google.com/tpu/docs/tpu7x-training"
-    ],
-    [
-      "Train a model on TPU7x with MaxText or TorchTitan",
-      "belongsToCategory",
-      "training_framework_links"
-    ],
-    [
-      "Train a model on TPU7x with MaxText or TorchTitan",
-      "supportsWorkflow",
-      "Distributed Machine Learning Training"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:train_03_tpu7x_training",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "train_03_tpu7x_training",
+    "name": "Train a model on TPU7x with MaxText or TorchTitan",
+    "url": "https://docs.cloud.google.com/tpu/docs/tpu7x-training",
+    "category": "training_framework_links",
+    "description": "Provision Ironwood training infrastructure and use JAX or PyTorch training recipes.",
+    "char_count": 5701,
+    "word_count": 558,
+    "section_count": 11,
+    "code_block_count": 5,
+    "table_count": 0,
+    "cli_command_count": 12,
+    "indexed_at": "2026-10-26T14:46:54.437802+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "schema:name",
+        "object": "Train a model on TPU7x with MaxText or TorchTitan"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/tpu/docs/tpu7x-training"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "schema:category",
+        "object": "training_framework_links"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "schema:description",
+        "object": "Provision Ironwood training infrastructure and use JAX or PyTorch training recipes."
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:TPU7x"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:MaxText"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTitan"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "okf:hasSection",
+        "object": "Train a model using TPU7x (Ironwood)"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "okf:hasSection",
+        "object": "Before you begin"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "okf:hasSection",
+        "object": "Deploy the TPU7x (Ironwood) cluster"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "okf:hasSection",
+        "object": "Deploy a training workload with MaxText"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "okf:hasSection",
+        "object": "Build and upload the MaxText Docker image"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "okf:hasSection",
+        "object": "Clone MaxText"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "okf:hasSection",
+        "object": "Build the Docker image"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "okf:hasSection",
+        "object": "Define the MaxText training command"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "okf:hasSection",
+        "object": "Submit the MaxText training job"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "okf:hasSection",
+        "object": "Deploy a training workload with TorchTitan"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "okf:hasSection",
+        "object": "What's next"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "BASE_OUTPUT_DIR"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "ENABLE_PJRT_COMPATIBILITY"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "JAX_PLATFORMS"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "JAX_VERSION"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "PROJECT_ID"
+      },
+      {
+        "subject": "tpu_doc:train_03_tpu7x_training",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "ZONE"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Train a model on TPU7x with MaxText or TorchTitan provides official guidance on Provision Ironwood training infrastructure and use JAX or PyTorch training recipes.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/tpu7x-training",
-      "verified": true
-    },
-    {
-      "assertion": "TPU7x (Ironwood) supports PyTorch and JAX, but explicitly does NOT support TensorFlow.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/tpu7x-training",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Train a model on TPU7x with MaxText or TorchTitan used for in Cloud TPU workflows?",
-      "answer": "Provision Ironwood training infrastructure and use JAX or PyTorch training recipes.",
-      "category": "training_framework_links"
-    }
-  ],
-  "contentSummary": "Provision Ironwood training infrastructure and use JAX or PyTorch training recipes."
+  },
+  "structured_content": {
+    "summary": "Provision Ironwood training infrastructure and use JAX or PyTorch training recipes.",
+    "sections": [
+      {
+        "heading": "Train a model using TPU7x (Ironwood)",
+        "level": 1,
+        "content": "This document describes how to provision TPU7x resources with [Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/overview) and deploy a training workload using either [MaxText](https://github.com/AI-Hypercomputer/maxtext) (JAX) or [TorchTitan on TPU](https://github.com/google-pytorch/torchtitan) (PyTorch).\nTPU7x is the first release within the Ironwood family, Google Cloud's seventh generation TPU. The Ironwood generation is designed for large-scale AI training and inference. For more information, see [TPU7x](https://docs.cloud.google.com/tpu/docs/tpu7x).\nFor more examples optimized for TPU7x, see the following repositories on GitHub:\n  * [Training recipes for Ironwood TPU](https://github.com/AI-Hypercomputer/tpu-recipes/blob/main/training/ironwood/README.md)\n  * [TorchTitan Ironwood recipes](https://github.com/google-pytorch/torchtitan/tree/main/torchtitan/experiments/tpu/recipes/ironwood)"
+      },
+      {
+        "heading": "Before you begin",
+        "level": 2,
+        "content": "Before you start, make sure you meet the following requirements:\n  * You have a Google Cloud project with billing enabled.\n  * You have [installed and initialized the Google Cloud CLI](https://docs.cloud.google.com/sdk/docs/install).\n  * You have [installed Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/setup/configure-environment).\n\n\nThen complete the following setup steps:\n  1. Set the environment variables for your project and cluster:\n\n```\nexport PROJECT_ID=YOUR_PROJECT_ID\nexport ZONE=YOUR_ZONE\nexport CLUSTER_NAME=YOUR_CLUSTER_NAME\nexport BASE_OUTPUT_DIR=\"gs://YOUR_BUCKET_NAME\"\n```\n\nReplace the following:\n     * YOUR_PROJECT_ID: Your Google Cloud project ID.\n     * YOUR_ZONE: The zone in which to create the cluster.\n     * YOUR_CLUSTER_NAME: The name of the new cluster.\n     * YOUR_BUCKET_NAME: The name of your Cloud Storage bucket for training output.\n  2. If you don't have an existing Cloud Storage bucket, create one:\n\n```\ngcloud storage buckets create ${BASE_OUTPUT_DIR} \\\n    --project=${PROJECT_ID} \\\n    --location=US \\\n    --default-storage-class=STANDARD \\\n    --uniform-bucket-level-access\n\n```"
+      },
+      {
+        "heading": "Deploy the TPU7x (Ironwood) cluster",
+        "level": 2,
+        "content": "Deploy a Google Kubernetes Engine (GKE) TPU7x cluster by following the instructions in [Deploy a GKE TPU 7x cluster](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-tpu-7x). Ensure that your cluster node pool topology matches your training workload requirements, such as `4x4x8` for the MaxText example or `2x2x4` for the TorchTitan example."
+      },
+      {
+        "heading": "Deploy a training workload with MaxText",
+        "level": 2,
+        "content": "The following sections show how to build a container image and submit a [MaxText](https://github.com/AI-Hypercomputer/maxtext) training job with Cluster Toolkit."
+      },
+      {
+        "heading": "Build and upload the MaxText Docker image",
+        "level": 3,
+        "content": "**Note:** MaxText supports **Python 3.12 only**. Build your virtual environment with Python 3.12 to install the required dependencies.\nBuild and push the MaxText Docker image:\n\n```"
+      },
+      {
+        "heading": "Clone MaxText",
+        "level": 1,
+        "content": "git clone https://github.com/AI-Hypercomputer/maxtext.git\ncd maxtext\ngit checkout maxtext-tutorial-v1.0.0"
+      },
+      {
+        "heading": "Build the Docker image",
+        "level": 1,
+        "content": "bash docker_build_dependency_image.sh MODE=stable JAX_VERSION=0.8.2\n\nexport CLOUD_IMAGE_NAME=\"${USER}-maxtext-runner\"\nbash docker_upload_runner.sh CLOUD_IMAGE_NAME=${CLOUD_IMAGE_NAME}\n\n```"
+      },
+      {
+        "heading": "Define the MaxText training command",
+        "level": 3,
+        "content": "Prepare the command to run your training script inside the Docker container.\nThe MaxText 1B model configuration trains a language model with approximately 1 billion parameters. Use this model to test small chip scales. Performance is not optimized.\n\n```\nexport MAXTEXT_COMMAND=\"JAX_PLATFORMS=tpu,cpu \\\n    ENABLE_PJRT_COMPATIBILITY=true \\\n    python3 src/MaxText/train.py src/MaxText/configs/base.yml \\\n        base_output_directory=${BASE_OUTPUT_DIR} \\\n        dataset_type=synthetic \\\n        per_device_batch_size=2 \\\n        enable_checkpointing=false \\\n        gcs_metrics=true \\\n        run_name=maxtext_training \\\n        steps=30\"\n\n```"
+      },
+      {
+        "heading": "Submit the MaxText training job",
+        "level": 3,
+        "content": "Submit your training job using `gcluster job submit`. For details on job submission options, see the [Cluster Toolkit Job Guide](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/docs/gcluster_job_guide.md):\n\n```\ngcluster job submit \\\n    --name=\"maxtext-1b-$(date +%H%M)\" \\\n    --cluster=${CLUSTER_NAME} \\\n    --project=${PROJECT_ID} \\\n    --location=${ZONE} \\\n    --compute-type=tpu7x-standard-4t \\\n    --topology=4x4x8 \\\n    --image=\"gcr.io/${PROJECT_ID}/${CLOUD_IMAGE_NAME}\" \\\n    --command=\"${MAXTEXT_COMMAND}\"\n\n```\n\nWorkload names must be unique within the cluster. This example appends `$(date +%H%M)` to the workload name."
+      },
+      {
+        "heading": "Deploy a training workload with TorchTitan",
+        "level": 2,
+        "content": "TorchTitan uses [TorchTPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu) to run distributed PyTorch training on Cloud TPU. For more information, see the [TorchTitan on TPU README](https://github.com/google-pytorch/torchtitan/blob/main/torchtitan/experiments/tpu/README.md)."
+      },
+      {
+        "heading": "What's next",
+        "level": 2,
+        "content": "* [Learn about PyTorch on Cloud TPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu)\n  * [Use the Google Cloud ML Diagnostics platform to optimize and diagnose your workloads](https://github.com/AI-Hypercomputer/google-cloud-mldiagnostics)\n  * [Run a training workload using a recipe optimized for TPU7x](https://github.com/AI-Hypercomputer/tpu-recipes/blob/main/training/ironwood/README.md)\n  * [Explore TorchTitan Ironwood recipes](https://github.com/google-pytorch/torchtitan/tree/main/torchtitan/experiments/tpu/recipes/ironwood)\n  * [Run a TPU7x microbenchmark](https://github.com/AI-Hypercomputer/accelerator-microbenchmarks/blob/main/Ironwood/Ironwood_Microbenchmarks_readme.md)"
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "export PROJECT_ID=YOUR_PROJECT_ID\nexport ZONE=YOUR_ZONE\nexport CLUSTER_NAME=YOUR_CLUSTER_NAME\nexport BASE_OUTPUT_DIR=\"gs://YOUR_BUCKET_NAME\""
+      },
+      {
+        "language": "text",
+        "code": "gcloud storage buckets create ${BASE_OUTPUT_DIR} \\\n    --project=${PROJECT_ID} \\\n    --location=US \\\n    --default-storage-class=STANDARD \\\n    --uniform-bucket-level-access"
+      },
+      {
+        "language": "text",
+        "code": "# Clone MaxText\ngit clone https://github.com/AI-Hypercomputer/maxtext.git\ncd maxtext\ngit checkout maxtext-tutorial-v1.0.0\n\n# Build the Docker image\nbash docker_build_dependency_image.sh MODE=stable JAX_VERSION=0.8.2\n\nexport CLOUD_IMAGE_NAME=\"${USER}-maxtext-runner\"\nbash docker_upload_runner.sh CLOUD_IMAGE_NAME=${CLOUD_IMAGE_NAME}"
+      },
+      {
+        "language": "text",
+        "code": "export MAXTEXT_COMMAND=\"JAX_PLATFORMS=tpu,cpu \\\n    ENABLE_PJRT_COMPATIBILITY=true \\\n    python3 src/MaxText/train.py src/MaxText/configs/base.yml \\\n        base_output_directory=${BASE_OUTPUT_DIR} \\\n        dataset_type=synthetic \\\n        per_device_batch_size=2 \\\n        enable_checkpointing=false \\\n        gcs_metrics=true \\\n        run_name=maxtext_training \\\n        steps=30\""
+      },
+      {
+        "language": "text",
+        "code": "gcluster job submit \\\n    --name=\"maxtext-1b-$(date +%H%M)\" \\\n    --cluster=${CLUSTER_NAME} \\\n    --project=${PROJECT_ID} \\\n    --location=${ZONE} \\\n    --compute-type=tpu7x-standard-4t \\\n    --topology=4x4x8 \\\n    --image=\"gcr.io/${PROJECT_ID}/${CLOUD_IMAGE_NAME}\" \\\n    --command=\"${MAXTEXT_COMMAND}\""
+      }
+    ],
+    "cli_commands": [
+      "export PROJECT_ID=YOUR_PROJECT_ID",
+      "export ZONE=YOUR_ZONE",
+      "export CLUSTER_NAME=YOUR_CLUSTER_NAME",
+      "export BASE_OUTPUT_DIR=\"gs://YOUR_BUCKET_NAME\"",
+      "gcloud storage buckets create ${BASE_OUTPUT_DIR} \\",
+      "git clone https://github.com/AI-Hypercomputer/maxtext.git",
+      "git checkout maxtext-tutorial-v1.0.0",
+      "bash docker_build_dependency_image.sh MODE=stable JAX_VERSION=0.8.2",
+      "export CLOUD_IMAGE_NAME=\"${USER}-maxtext-runner\"",
+      "bash docker_upload_runner.sh CLOUD_IMAGE_NAME=${CLOUD_IMAGE_NAME}",
+      "export MAXTEXT_COMMAND=\"JAX_PLATFORMS=tpu,cpu \\",
+      "python3 src/MaxText/train.py src/MaxText/configs/base.yml \\"
+    ],
+    "environment_variables": [
+      "BASE_OUTPUT_DIR",
+      "ENABLE_PJRT_COMPATIBILITY",
+      "JAX_PLATFORMS",
+      "JAX_VERSION",
+      "PROJECT_ID",
+      "ZONE"
+    ],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Train a model on TPU7x with MaxText or TorchTitan' (https://docs.cloud.google.com/tpu/docs/tpu7x-training)?",
+        "answer": "Provision Ironwood training infrastructure and use JAX or PyTorch training recipes."
+      },
+      {
+        "question": "How does 'Train a model on TPU7x with MaxText or TorchTitan' handle: Train a model using TPU7x (Ironwood)?",
+        "answer": "This document describes how to provision TPU7x resources with [Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/overview) and deploy a training workload using either [MaxText](https://github.com/AI-Hypercomputer/maxtext) (JAX) or [TorchTitan on TPU](https://github.com/google-pytorch/torchtitan) (PyTorch).\nTPU7x is the first release within the Ironwood family, Google Cloud's seventh generation TPU. The Ironwood generation is designed for large-scale AI training and inference. For more information, see [TPU7x](https://docs.cloud.google.com/tpu/docs/tpu7x).\nFor more examples optimized for TPU7x, see the following repositories on GitHub:\n  * [Training recipes for Ironwood TPU](https://github.com/AI-Hypercomputer/tpu-recipes/blob/main/training/ironwood/README.md)\n  * [TorchTitan Ironwood recipes](https://github.com/google-pytorch/torchtitan/tree/main/torchtitan/experiments/tpu/recipes/ironwood)"
+      },
+      {
+        "question": "How does 'Train a model on TPU7x with MaxText or TorchTitan' handle: Before you begin?",
+        "answer": "Before you start, make sure you meet the following requirements:\n  * You have a Google Cloud project with billing enabled.\n  * You have [installed and initialized the Google Cloud CLI](https://docs.cloud.google.com/sdk/docs/install).\n  * You have [installed Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/setup/configure-environment).\n\n\nThen complete the following setup steps:\n  1. Set the environment variables for your project and cluster:\n\n```\nexport PROJECT_ID=YOUR_PROJECT_ID\nexport ZONE=YOUR_ZONE\nexport CLUSTER_NAME=YOUR_CLUSTER_NAME\nexport BASE_OUTPUT_DIR=\"gs://YOUR_BUCKET_NAME\"\n```\n\nReplace the following:\n     * YOUR_PROJECT_ID: Your Google Cloud project ID.\n     * YOUR_ZONE: The zone in which to create the cluster.\n     * YOUR_CLUSTER_NAME: The name of the new cluster.\n     * YOUR_BUCKET_NAME: The name of your Cloud Storage bucket for training output.\n  2. If you don't have an existing Cloud Storage bucket, create one:\n\n```\ngcloud storage buckets create ${BASE_OUTPUT_DIR} \\\n    --project=${PROJECT_ID} \\\n    --location=US \\\n    --default-storage-class=STANDARD \\\n    --uniform-bucket-level-access\n\n```"
+      },
+      {
+        "question": "How does 'Train a model on TPU7x with MaxText or TorchTitan' handle: Deploy the TPU7x (Ironwood) cluster?",
+        "answer": "Deploy a Google Kubernetes Engine (GKE) TPU7x cluster by following the instructions in [Deploy a GKE TPU 7x cluster](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-tpu-7x). Ensure that your cluster node pool topology matches your training workload requirements, such as `4x4x8` for the MaxText example or `2x2x4` for the TorchTitan example."
+      },
+      {
+        "question": "How does 'Train a model on TPU7x with MaxText or TorchTitan' handle: Deploy a training workload with MaxText?",
+        "answer": "The following sections show how to build a container image and submit a [MaxText](https://github.com/AI-Hypercomputer/maxtext) training job with Cluster Toolkit."
+      },
+      {
+        "question": "How does 'Train a model on TPU7x with MaxText or TorchTitan' handle: Build and upload the MaxText Docker image?",
+        "answer": "**Note:** MaxText supports **Python 3.12 only**. Build your virtual environment with Python 3.12 to install the required dependencies.\nBuild and push the MaxText Docker image:\n\n```"
+      },
+      {
+        "question": "How does 'Train a model on TPU7x with MaxText or TorchTitan' handle: Clone MaxText?",
+        "answer": "git clone https://github.com/AI-Hypercomputer/maxtext.git\ncd maxtext\ngit checkout maxtext-tutorial-v1.0.0"
+      },
+      {
+        "question": "How does 'Train a model on TPU7x with MaxText or TorchTitan' handle: Build the Docker image?",
+        "answer": "bash docker_build_dependency_image.sh MODE=stable JAX_VERSION=0.8.2\n\nexport CLOUD_IMAGE_NAME=\"${USER}-maxtext-runner\"\nbash docker_upload_runner.sh CLOUD_IMAGE_NAME=${CLOUD_IMAGE_NAME}\n\n```"
+      },
+      {
+        "question": "How does 'Train a model on TPU7x with MaxText or TorchTitan' handle: Define the MaxText training command?",
+        "answer": "Prepare the command to run your training script inside the Docker container.\nThe MaxText 1B model configuration trains a language model with approximately 1 billion parameters. Use this model to test small chip scales. Performance is not optimized.\n\n```\nexport MAXTEXT_COMMAND=\"JAX_PLATFORMS=tpu,cpu \\\n    ENABLE_PJRT_COMPATIBILITY=true \\\n    python3 src/MaxText/train.py src/MaxText/configs/base.yml \\\n        base_output_directory=${BASE_OUTPUT_DIR} \\\n        dataset_type=synthetic \\\n        per_device_batch_size=2 \\\n        enable_checkpointing=false \\\n        gcs_metrics=true \\\n        run_name=maxtext_training \\\n        steps=30\"\n\n```"
+      },
+      {
+        "question": "How does 'Train a model on TPU7x with MaxText or TorchTitan' handle: Submit the MaxText training job?",
+        "answer": "Submit your training job using `gcluster job submit`. For details on job submission options, see the [Cluster Toolkit Job Guide](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/docs/gcluster_job_guide.md):\n\n```\ngcluster job submit \\\n    --name=\"maxtext-1b-$(date +%H%M)\" \\\n    --cluster=${CLUSTER_NAME} \\\n    --project=${PROJECT_ID} \\\n    --location=${ZONE} \\\n    --compute-type=tpu7x-standard-4t \\\n    --topology=4x4x8 \\\n    --image=\"gcr.io/${PROJECT_ID}/${CLOUD_IMAGE_NAME}\" \\\n    --command=\"${MAXTEXT_COMMAND}\"\n\n```\n\nWorkload names must be unique within the cluster. This example appends `$(date +%H%M)` to the workload name."
+      }
+    ],
+    "full_markdown": "# Train a model using TPU7x (Ironwood)\nThis document describes how to provision TPU7x resources with [Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/overview) and deploy a training workload using either [MaxText](https://github.com/AI-Hypercomputer/maxtext) (JAX) or [TorchTitan on TPU](https://github.com/google-pytorch/torchtitan) (PyTorch).\nTPU7x is the first release within the Ironwood family, Google Cloud's seventh generation TPU. The Ironwood generation is designed for large-scale AI training and inference. For more information, see [TPU7x](https://docs.cloud.google.com/tpu/docs/tpu7x).\nFor more examples optimized for TPU7x, see the following repositories on GitHub:\n  * [Training recipes for Ironwood TPU](https://github.com/AI-Hypercomputer/tpu-recipes/blob/main/training/ironwood/README.md)\n  * [TorchTitan Ironwood recipes](https://github.com/google-pytorch/torchtitan/tree/main/torchtitan/experiments/tpu/recipes/ironwood)\n\n\n## Before you begin\nBefore you start, make sure you meet the following requirements:\n  * You have a Google Cloud project with billing enabled.\n  * You have [installed and initialized the Google Cloud CLI](https://docs.cloud.google.com/sdk/docs/install).\n  * You have [installed Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/setup/configure-environment).\n\n\nThen complete the following setup steps:\n  1. Set the environment variables for your project and cluster:\n\n```\nexport PROJECT_ID=YOUR_PROJECT_ID\nexport ZONE=YOUR_ZONE\nexport CLUSTER_NAME=YOUR_CLUSTER_NAME\nexport BASE_OUTPUT_DIR=\"gs://YOUR_BUCKET_NAME\"\n```\n\nReplace the following:\n     * YOUR_PROJECT_ID: Your Google Cloud project ID.\n     * YOUR_ZONE: The zone in which to create the cluster.\n     * YOUR_CLUSTER_NAME: The name of the new cluster.\n     * YOUR_BUCKET_NAME: The name of your Cloud Storage bucket for training output.\n  2. If you don't have an existing Cloud Storage bucket, create one:\n\n```\ngcloud storage buckets create ${BASE_OUTPUT_DIR} \\\n    --project=${PROJECT_ID} \\\n    --location=US \\\n    --default-storage-class=STANDARD \\\n    --uniform-bucket-level-access\n\n```\n\n## Deploy the TPU7x (Ironwood) cluster\nDeploy a Google Kubernetes Engine (GKE) TPU7x cluster by following the instructions in [Deploy a GKE TPU 7x cluster](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-tpu-7x). Ensure that your cluster node pool topology matches your training workload requirements, such as `4x4x8` for the MaxText example or `2x2x4` for the TorchTitan example.\n## Deploy a training workload with MaxText\nThe following sections show how to build a container image and submit a [MaxText](https://github.com/AI-Hypercomputer/maxtext) training job with Cluster Toolkit.\n### Build and upload the MaxText Docker image\n**Note:** MaxText supports **Python 3.12 only**. Build your virtual environment with Python 3.12 to install the required dependencies.\nBuild and push the MaxText Docker image:\n\n```\n# Clone MaxText\ngit clone https://github.com/AI-Hypercomputer/maxtext.git\ncd maxtext\ngit checkout maxtext-tutorial-v1.0.0\n\n# Build the Docker image\nbash docker_build_dependency_image.sh MODE=stable JAX_VERSION=0.8.2\n\nexport CLOUD_IMAGE_NAME=\"${USER}-maxtext-runner\"\nbash docker_upload_runner.sh CLOUD_IMAGE_NAME=${CLOUD_IMAGE_NAME}\n\n```\n\n### Define the MaxText training command\nPrepare the command to run your training script inside the Docker container.\nThe MaxText 1B model configuration trains a language model with approximately 1 billion parameters. Use this model to test small chip scales. Performance is not optimized.\n\n```\nexport MAXTEXT_COMMAND=\"JAX_PLATFORMS=tpu,cpu \\\n    ENABLE_PJRT_COMPATIBILITY=true \\\n    python3 src/MaxText/train.py src/MaxText/configs/base.yml \\\n        base_output_directory=${BASE_OUTPUT_DIR} \\\n        dataset_type=synthetic \\\n        per_device_batch_size=2 \\\n        enable_checkpointing=false \\\n        gcs_metrics=true \\\n        run_name=maxtext_training \\\n        steps=30\"\n\n```\n\n### Submit the MaxText training job\nSubmit your training job using `gcluster job submit`. For details on job submission options, see the [Cluster Toolkit Job Guide](https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/docs/gcluster_job_guide.md):\n\n```\ngcluster job submit \\\n    --name=\"maxtext-1b-$(date +%H%M)\" \\\n    --cluster=${CLUSTER_NAME} \\\n    --project=${PROJECT_ID} \\\n    --location=${ZONE} \\\n    --compute-type=tpu7x-standard-4t \\\n    --topology=4x4x8 \\\n    --image=\"gcr.io/${PROJECT_ID}/${CLOUD_IMAGE_NAME}\" \\\n    --command=\"${MAXTEXT_COMMAND}\"\n\n```\n\nWorkload names must be unique within the cluster. This example appends `$(date +%H%M)` to the workload name.\n## Deploy a training workload with TorchTitan\nTorchTitan uses [TorchTPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu) to run distributed PyTorch training on Cloud TPU. For more information, see the [TorchTitan on TPU README](https://github.com/google-pytorch/torchtitan/blob/main/torchtitan/experiments/tpu/README.md).\n## What's next\n  * [Learn about PyTorch on Cloud TPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu)\n  * [Use the Google Cloud ML Diagnostics platform to optimize and diagnose your workloads](https://github.com/AI-Hypercomputer/google-cloud-mldiagnostics)\n  * [Run a training workload using a recipe optimized for TPU7x](https://github.com/AI-Hypercomputer/tpu-recipes/blob/main/training/ironwood/README.md)\n  * [Explore TorchTitan Ironwood recipes](https://github.com/google-pytorch/torchtitan/tree/main/torchtitan/experiments/tpu/recipes/ironwood)\n  * [Run a TPU7x microbenchmark](https://github.com/AI-Hypercomputer/accelerator-microbenchmarks/blob/main/Ironwood/Ironwood_Microbenchmarks_readme.md)"
+  }
 }

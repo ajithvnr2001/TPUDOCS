@@ -1,52 +1,246 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:infer_13_vllm_tpu_installation",
-  "@type": "DocumentationResource",
-  "name": "vLLM TPU Installation and container guide",
-  "canonicalUrl": "https://docs.vllm.ai/projects/tpu/en/latest/getting_started/installation/",
-  "category": "Inference deployment links",
-  "categorySlug": "inference_deployment_links",
-  "description": "Official installation reference for the JAX-native vLLM TPU stack, including pip/uv and Docker options.",
-  "provenance": {
-    "sourceUrl": "https://docs.vllm.ai/projects/tpu/en/latest/getting_started/installation/",
-    "crawledAt": "2026-10-26T12:47:44.364745+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 7495
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "vLLM TPU Installation and container guide",
-      "documentedIn",
-      "https://docs.vllm.ai/projects/tpu/en/latest/getting_started/installation/"
-    ],
-    [
-      "vLLM TPU Installation and container guide",
-      "belongsToCategory",
-      "inference_deployment_links"
-    ],
-    [
-      "vLLM TPU Installation and container guide",
-      "supportsWorkflow",
-      "High Throughput LLM Inference Serving"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:infer_13_vllm_tpu_installation",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "infer_13_vllm_tpu_installation",
+    "name": "vLLM TPU Installation and container guide",
+    "url": "https://docs.vllm.ai/projects/tpu/en/latest/getting_started/installation/",
+    "category": "inference_deployment_links",
+    "description": "Official installation reference for the JAX-native vLLM TPU stack, including pip/uv and Docker options.",
+    "char_count": 1968,
+    "word_count": 260,
+    "section_count": 13,
+    "code_block_count": 2,
+    "table_count": 0,
+    "cli_command_count": 4,
+    "indexed_at": "2026-10-26T14:46:54.691457+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:infer_13_vllm_tpu_installation",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:infer_13_vllm_tpu_installation",
+        "predicate": "schema:name",
+        "object": "vLLM TPU Installation and container guide"
+      },
+      {
+        "subject": "tpu_doc:infer_13_vllm_tpu_installation",
+        "predicate": "schema:url",
+        "object": "https://docs.vllm.ai/projects/tpu/en/latest/getting_started/installation/"
+      },
+      {
+        "subject": "tpu_doc:infer_13_vllm_tpu_installation",
+        "predicate": "schema:category",
+        "object": "inference_deployment_links"
+      },
+      {
+        "subject": "tpu_doc:infer_13_vllm_tpu_installation",
+        "predicate": "schema:description",
+        "object": "Official installation reference for the JAX-native vLLM TPU stack, including pip/uv and Docker options."
+      },
+      {
+        "subject": "tpu_doc:infer_13_vllm_tpu_installation",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:infer_13_vllm_tpu_installation",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:vLLM-TPU"
+      },
+      {
+        "subject": "tpu_doc:infer_13_vllm_tpu_installation",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:infer_13_vllm_tpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "Installation"
+      },
+      {
+        "subject": "tpu_doc:infer_13_vllm_tpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "Installation Commands"
+      },
+      {
+        "subject": "tpu_doc:infer_13_vllm_tpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "1. Create a working directory:"
+      },
+      {
+        "subject": "tpu_doc:infer_13_vllm_tpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "2. Install uv and set up a Python virtual environment:"
+      },
+      {
+        "subject": "tpu_doc:infer_13_vllm_tpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "If you prefer standard pip, simply use `python3.12 -m venv vllm_env`"
+      },
+      {
+        "subject": "tpu_doc:infer_13_vllm_tpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "3. Use the following command to install vllm-tpu using uv or pip:"
+      },
+      {
+        "subject": "tpu_doc:infer_13_vllm_tpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "Or instead: pip install vllm-tpu"
+      },
+      {
+        "subject": "tpu_doc:infer_13_vllm_tpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "Verify Installation"
+      },
+      {
+        "subject": "tpu_doc:infer_13_vllm_tpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "Expected output:"
+      },
+      {
+        "subject": "tpu_doc:infer_13_vllm_tpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "vllm version: 0.x.x"
+      },
+      {
+        "subject": "tpu_doc:infer_13_vllm_tpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "tpu_inference version: 0.x.x"
+      },
+      {
+        "subject": "tpu_doc:infer_13_vllm_tpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "vllm platform: TPU V6E (or your specific TPU architecture)"
+      },
+      {
+        "subject": "tpu_doc:infer_13_vllm_tpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "jax backends: [TpuDevice(id=0, process_index=0, coords=(0,0,0), core_on_chip=0), ...]"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "vLLM TPU Installation and container guide provides official guidance on Official installation reference for the JAX-native vLLM TPU stack, including pip/uv and Docker options.",
-      "confidence": 1.0,
-      "source": "https://docs.vllm.ai/projects/tpu/en/latest/getting_started/installation/",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is vLLM TPU Installation and container guide used for in Cloud TPU workflows?",
-      "answer": "Official installation reference for the JAX-native vLLM TPU stack, including pip/uv and Docker options.",
-      "category": "inference_deployment_links"
-    }
-  ],
-  "contentSummary": "Official installation reference for the JAX-native vLLM TPU stack, including pip/uv and Docker options."
+  },
+  "structured_content": {
+    "summary": "Official installation reference for the JAX-native vLLM TPU stack, including pip/uv and Docker options.",
+    "sections": [
+      {
+        "heading": "Installation",
+        "level": 1,
+        "content": "This guide provides instructions for installing and running `vllm-jax`.\nThere are three ways to install `vllm-jax`:\n  * **uv pip** (Recommended): Fast installation of official stable releases into a Python virtual environment. Best for standard inference and serving.\n  * **Docker** : Pre-built containers with shared memory configured. Best for reproducible environments and Kubernetes (GKE).\n  * **Source** : Build directly from the repository. Best for debugging, contributors, and custom kernel development."
+      },
+      {
+        "heading": "Installation Commands",
+        "level": 2,
+        "content": "Select your preferred installation method to generate the exact setup command.\nMethod uv pip Docker Source\nImage Release (latest) Nightly\nInstall the latest official release using uv pip for any supported TPU.\n\n```"
+      },
+      {
+        "heading": "1. Create a working directory:",
+        "level": 1,
+        "content": "mkdir ~/work-dir\ncd ~/work-dir"
+      },
+      {
+        "heading": "2. Install uv and set up a Python virtual environment:",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "If you prefer standard pip, simply use `python3.12 -m venv vllm_env`",
+        "level": 1,
+        "content": "curl -LsSf https://astral.sh/uv/install.sh | sh\nsource $HOME/.local/bin/env\nuv venv vllm_env --python 3.12\nsource vllm_env/bin/activate"
+      },
+      {
+        "heading": "3. Use the following command to install vllm-tpu using uv or pip:",
+        "level": 1,
+        "content": "uv pip install vllm-tpu"
+      },
+      {
+        "heading": "Or instead: pip install vllm-tpu",
+        "level": 1,
+        "content": "```"
+      },
+      {
+        "heading": "Verify Installation",
+        "level": 2,
+        "content": "To quickly verify that the installation was successful under any of the above methods and `vllm-tpu` is correctly configured:\n\n```\npython -c '\nimport jax\nimport vllm\nimport importlib.metadata\nfrom vllm.platforms import current_platform\n\ntpu_version = importlib.metadata.version(\"tpu_inference\")\nprint(f\"vllm version: {vllm.__version__}\")\nprint(f\"tpu_inference version: {tpu_version}\")\nprint(f\"vllm platform: {current_platform.get_device_name()}\")\nprint(f\"jax backends: {jax.devices()}\")\n'"
+      },
+      {
+        "heading": "Expected output:",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "vllm version: 0.x.x",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "tpu_inference version: 0.x.x",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "vllm platform: TPU V6E (or your specific TPU architecture)",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "jax backends: [TpuDevice(id=0, process_index=0, coords=(0,0,0), core_on_chip=0), ...]",
+        "level": 1,
+        "content": "```"
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "# 1. Create a working directory:\nmkdir ~/work-dir\ncd ~/work-dir\n\n# 2. Install uv and set up a Python virtual environment:\n# If you prefer standard pip, simply use `python3.12 -m venv vllm_env`\ncurl -LsSf https://astral.sh/uv/install.sh | sh\nsource $HOME/.local/bin/env\nuv venv vllm_env --python 3.12\nsource vllm_env/bin/activate\n\n# 3. Use the following command to install vllm-tpu using uv or pip:\nuv pip install vllm-tpu\n# Or instead: pip install vllm-tpu"
+      },
+      {
+        "language": "text",
+        "code": "python -c '\nimport jax\nimport vllm\nimport importlib.metadata\nfrom vllm.platforms import current_platform\n\ntpu_version = importlib.metadata.version(\"tpu_inference\")\nprint(f\"vllm version: {vllm.__version__}\")\nprint(f\"tpu_inference version: {tpu_version}\")\nprint(f\"vllm platform: {current_platform.get_device_name()}\")\nprint(f\"jax backends: {jax.devices()}\")\n'\n# Expected output:\n# vllm version: 0.x.x\n# tpu_inference version: 0.x.x\n# vllm platform: TPU V6E (or your specific TPU architecture)\n# jax backends: [TpuDevice(id=0, process_index=0, coords=(0,0,0), core_on_chip=0), ...]"
+      }
+    ],
+    "cli_commands": [
+      "curl -LsSf https://astral.sh/uv/install.sh | sh",
+      "uv venv vllm_env --python 3.12",
+      "uv pip install vllm-tpu",
+      "python -c '"
+    ],
+    "environment_variables": [],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'vLLM TPU Installation and container guide' (https://docs.vllm.ai/projects/tpu/en/latest/getting_started/installation/)?",
+        "answer": "Official installation reference for the JAX-native vLLM TPU stack, including pip/uv and Docker options."
+      },
+      {
+        "question": "How does 'vLLM TPU Installation and container guide' handle: Installation?",
+        "answer": "This guide provides instructions for installing and running `vllm-jax`.\nThere are three ways to install `vllm-jax`:\n  * **uv pip** (Recommended): Fast installation of official stable releases into a Python virtual environment. Best for standard inference and serving.\n  * **Docker** : Pre-built containers with shared memory configured. Best for reproducible environments and Kubernetes (GKE).\n  * **Source** : Build directly from the repository. Best for debugging, contributors, and custom kernel development."
+      },
+      {
+        "question": "How does 'vLLM TPU Installation and container guide' handle: Installation Commands?",
+        "answer": "Select your preferred installation method to generate the exact setup command.\nMethod uv pip Docker Source\nImage Release (latest) Nightly\nInstall the latest official release using uv pip for any supported TPU.\n\n```"
+      },
+      {
+        "question": "How does 'vLLM TPU Installation and container guide' handle: If you prefer standard pip, simply use `python3.12 -m venv vllm_env`?",
+        "answer": "curl -LsSf https://astral.sh/uv/install.sh | sh\nsource $HOME/.local/bin/env\nuv venv vllm_env --python 3.12\nsource vllm_env/bin/activate"
+      },
+      {
+        "question": "How does 'vLLM TPU Installation and container guide' handle: Verify Installation?",
+        "answer": "To quickly verify that the installation was successful under any of the above methods and `vllm-tpu` is correctly configured:\n\n```\npython -c '\nimport jax\nimport vllm\nimport importlib.metadata\nfrom vllm.platforms import current_platform\n\ntpu_version = importlib.metadata.version(\"tpu_inference\")\nprint(f\"vllm version: {vllm.__version__}\")\nprint(f\"tpu_inference version: {tpu_version}\")\nprint(f\"vllm platform: {current_platform.get_device_name()}\")\nprint(f\"jax backends: {jax.devices()}\")\n'"
+      }
+    ],
+    "full_markdown": "# Installation\nThis guide provides instructions for installing and running `vllm-jax`.\nThere are three ways to install `vllm-jax`:\n  * **uv pip** (Recommended): Fast installation of official stable releases into a Python virtual environment. Best for standard inference and serving.\n  * **Docker** : Pre-built containers with shared memory configured. Best for reproducible environments and Kubernetes (GKE).\n  * **Source** : Build directly from the repository. Best for debugging, contributors, and custom kernel development.\n\n\n## Installation Commands\nSelect your preferred installation method to generate the exact setup command.\nMethod uv pip Docker Source\nImage Release (latest) Nightly\nInstall the latest official release using uv pip for any supported TPU.\n\n```\n# 1. Create a working directory:\nmkdir ~/work-dir\ncd ~/work-dir\n\n# 2. Install uv and set up a Python virtual environment:\n# If you prefer standard pip, simply use `python3.12 -m venv vllm_env`\ncurl -LsSf https://astral.sh/uv/install.sh | sh\nsource $HOME/.local/bin/env\nuv venv vllm_env --python 3.12\nsource vllm_env/bin/activate\n\n# 3. Use the following command to install vllm-tpu using uv or pip:\nuv pip install vllm-tpu\n# Or instead: pip install vllm-tpu\n```\n\n## Verify Installation\nTo quickly verify that the installation was successful under any of the above methods and `vllm-tpu` is correctly configured:\n\n```\npython -c '\nimport jax\nimport vllm\nimport importlib.metadata\nfrom vllm.platforms import current_platform\n\ntpu_version = importlib.metadata.version(\"tpu_inference\")\nprint(f\"vllm version: {vllm.__version__}\")\nprint(f\"tpu_inference version: {tpu_version}\")\nprint(f\"vllm platform: {current_platform.get_device_name()}\")\nprint(f\"jax backends: {jax.devices()}\")\n'\n# Expected output:\n# vllm version: 0.x.x\n# tpu_inference version: 0.x.x\n# vllm platform: TPU V6E (or your specific TPU architecture)\n# jax backends: [TpuDevice(id=0, process_index=0, coords=(0,0,0), core_on_chip=0), ...]\n\n```"
+  }
 }

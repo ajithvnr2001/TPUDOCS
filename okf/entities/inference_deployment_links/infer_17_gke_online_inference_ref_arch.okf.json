@@ -1,52 +1,345 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:infer_17_gke_online_inference_ref_arch",
-  "@type": "DocumentationResource",
-  "name": "GKE online inference TPU reference implementation (vLLM)",
-  "canonicalUrl": "https://github.com/GoogleCloudPlatform/accelerated-platforms/blob/main/docs/platforms/gke/base/use-cases/inference-ref-arch/online-inference-tpu/vllm-with-hf-model.md",
-  "category": "Inference deployment links",
-  "categorySlug": "inference_deployment_links",
-  "description": "Google Cloud Platform GKE inference reference architecture page for online vLLM serving on TPUs.",
-  "provenance": {
-    "sourceUrl": "https://github.com/GoogleCloudPlatform/accelerated-platforms/blob/main/docs/platforms/gke/base/use-cases/inference-ref-arch/online-inference-tpu/vllm-with-hf-model.md",
-    "crawledAt": "2026-10-26T12:47:46.626309+00:00",
-    "extractorEngine": "GitHubRaw",
-    "contentLengthBytes": 7917
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "GKE online inference TPU reference implementation (vLLM)",
-      "documentedIn",
-      "https://github.com/GoogleCloudPlatform/accelerated-platforms/blob/main/docs/platforms/gke/base/use-cases/inference-ref-arch/online-inference-tpu/vllm-with-hf-model.md"
-    ],
-    [
-      "GKE online inference TPU reference implementation (vLLM)",
-      "belongsToCategory",
-      "inference_deployment_links"
-    ],
-    [
-      "GKE online inference TPU reference implementation (vLLM)",
-      "supportsWorkflow",
-      "High Throughput LLM Inference Serving"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:infer_17_gke_online_inference_ref_arch",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "infer_17_gke_online_inference_ref_arch",
+    "name": "GKE online inference TPU reference implementation (vLLM)",
+    "url": "https://github.com/GoogleCloudPlatform/accelerated-platforms/blob/main/docs/platforms/gke/base/use-cases/inference-ref-arch/online-inference-tpu/vllm-with-hf-model.md",
+    "category": "inference_deployment_links",
+    "description": "Google Cloud Platform GKE inference reference architecture page for online vLLM serving on TPUs.",
+    "char_count": 7657,
+    "word_count": 694,
+    "section_count": 6,
+    "code_block_count": 25,
+    "table_count": 1,
+    "cli_command_count": 19,
+    "indexed_at": "2026-10-26T14:46:54.708080+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:infer_17_gke_online_inference_ref_arch",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:infer_17_gke_online_inference_ref_arch",
+        "predicate": "schema:name",
+        "object": "GKE online inference TPU reference implementation (vLLM)"
+      },
+      {
+        "subject": "tpu_doc:infer_17_gke_online_inference_ref_arch",
+        "predicate": "schema:url",
+        "object": "https://github.com/GoogleCloudPlatform/accelerated-platforms/blob/main/docs/platforms/gke/base/use-cases/inference-ref-arch/online-inference-tpu/vllm-with-hf-model.md"
+      },
+      {
+        "subject": "tpu_doc:infer_17_gke_online_inference_ref_arch",
+        "predicate": "schema:category",
+        "object": "inference_deployment_links"
+      },
+      {
+        "subject": "tpu_doc:infer_17_gke_online_inference_ref_arch",
+        "predicate": "schema:description",
+        "object": "Google Cloud Platform GKE inference reference architecture page for online vLLM serving on TPUs."
+      },
+      {
+        "subject": "tpu_doc:infer_17_gke_online_inference_ref_arch",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:infer_17_gke_online_inference_ref_arch",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5e"
+      },
+      {
+        "subject": "tpu_doc:infer_17_gke_online_inference_ref_arch",
+        "predicate": "okf:hasSection",
+        "object": "Online inference using vLLM with TPUs on Google Kubernetes Engine (GKE)"
+      },
+      {
+        "subject": "tpu_doc:infer_17_gke_online_inference_ref_arch",
+        "predicate": "okf:hasSection",
+        "object": "Before you begin"
+      },
+      {
+        "subject": "tpu_doc:infer_17_gke_online_inference_ref_arch",
+        "predicate": "okf:hasSection",
+        "object": "Create and configure the Google Cloud resources"
+      },
+      {
+        "subject": "tpu_doc:infer_17_gke_online_inference_ref_arch",
+        "predicate": "okf:hasSection",
+        "object": "Download the model to Cloud Storage"
+      },
+      {
+        "subject": "tpu_doc:infer_17_gke_online_inference_ref_arch",
+        "predicate": "okf:hasSection",
+        "object": "Deploy the inference workload"
+      },
+      {
+        "subject": "tpu_doc:infer_17_gke_online_inference_ref_arch",
+        "predicate": "okf:hasSection",
+        "object": "Clean up"
+      },
+      {
+        "subject": "tpu_doc:infer_17_gke_online_inference_ref_arch",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "HF_MODEL_ID"
+      },
+      {
+        "subject": "tpu_doc:infer_17_gke_online_inference_ref_arch",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "HF_MODEL_NAME"
+      },
+      {
+        "subject": "tpu_doc:infer_17_gke_online_inference_ref_arch",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "TF_PLUGIN_CACHE_DIR"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "GKE online inference TPU reference implementation (vLLM) provides official guidance on Google Cloud Platform GKE inference reference architecture page for online vLLM serving on TPUs.",
-      "confidence": 1.0,
-      "source": "https://github.com/GoogleCloudPlatform/accelerated-platforms/blob/main/docs/platforms/gke/base/use-cases/inference-ref-arch/online-inference-tpu/vllm-with-hf-model.md",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is GKE online inference TPU reference implementation (vLLM) used for in Cloud TPU workflows?",
-      "answer": "Google Cloud Platform GKE inference reference architecture page for online vLLM serving on TPUs.",
-      "category": "inference_deployment_links"
-    }
-  ],
-  "contentSummary": "Google Cloud Platform GKE inference reference architecture page for online vLLM serving on TPUs."
+  },
+  "structured_content": {
+    "summary": "Google Cloud Platform GKE inference reference architecture page for online vLLM serving on TPUs.",
+    "sections": [
+      {
+        "heading": "Online inference using vLLM with TPUs on Google Kubernetes Engine (GKE)",
+        "level": 1,
+        "content": "This example implements online inference using TPUs on Google Kubernetes Engine\n(GKE)\n\nThis example is built on top of the\n[GKE Inference reference architecture](/docs/platforms/gke/base/use-cases/inference-ref-arch/README.md)."
+      },
+      {
+        "heading": "Before you begin",
+        "level": 2,
+        "content": "- The\n  [GKE Inference reference implementation](/platforms/gke/base/use-cases/inference-ref-arch/terraform/README.md)\n  is deployed and configured.\n\n- Get access to the models.\n\n  - For Gemma:\n    - Consented to the license on [Kaggle](https://www.kaggle.com/) using a\n      Hugging Face account.\n      - [**google/gemma**](https://www.kaggle.com/models/google/gemma).\n\n- Ensure your\n  [Hugging Face Hub **Read** access token](/platforms/gke/base/core/huggingface/initialize/README.md)\n  has been added to Secret Manager."
+      },
+      {
+        "heading": "Create and configure the Google Cloud resources",
+        "level": 2,
+        "content": "- Deploy the online TPU resources.\n\n  ```shell\n  export TF_PLUGIN_CACHE_DIR=\"${ACP_REPO_DIR}/.terraform.d/plugin-cache\"\n  cd ${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/terraform/online_tpu && \\\n  rm -rf .terraform/ terraform.tfstate* && \\\n  terraform init && \\\n  terraform plan -input=false -out=tfplan && \\\n  terraform apply -input=false tfplan && \\\n  rm tfplan\n  ```"
+      },
+      {
+        "heading": "Download the model to Cloud Storage",
+        "level": 2,
+        "content": "- Choose the model ID.\n\n  - **Gemma 4 26B A4B Instruction-Tuned**:\n\n    ```shell\n    export HF_MODEL_ID=\"google/gemma-4-26B-A4B-it\"\n    ```\n\n  - **Gemma 4 31B Instruction-Tuned**:\n\n    ```shell\n    export HF_MODEL_ID=\"google/gemma-4-31b-it\"\n    ```\n\n  - **Gemma 3 1B Instruction-Tuned**:\n\n    ```shell\n    export HF_MODEL_ID=\"google/gemma-3-1b-it\"\n    ```\n\n  - **Gemma 3 4B Instruction-Tuned**:\n\n    ```shell\n    export HF_MODEL_ID=\"google/gemma-3-4b-it\"\n    ```\n\n  - **Gemma 3 27B Instruction-Tuned**:\n\n    ```shell\n    export HF_MODEL_ID=\"google/gemma-3-27b-it\"\n    ```\n\n  - **Qwen 3 32B**:\n\n    ```shell\n    export HF_MODEL_ID=\"qwen/qwen3-32b\"\n    ```\n\n- Source the environment configuration.\n\n  ```shell\n  source \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/terraform/_shared_config/scripts/set_environment_variables.sh\"\n  ```\n\n- Configure the model download job.\n\n  ```shell\n  \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/model-download/configure_huggingface.sh\"\n  ```\n\n- Deploy the model download job.\n\n  ```shell\n  kubectl apply --kustomize \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/model-download/huggingface\"\n  ```\n\n- Watch the model download job until it is complete.\n\n  ```shell\n  watch --color --interval 5 --no-title \\\n  \"kubectl --namespace=${huggingface_hub_downloader_kubernetes_namespace_name} get job/${HF_MODEL_ID_HASH}-hf-model-to-gcs | GREP_COLORS='mt=01;92' egrep --color=always -e '^' -e 'Complete'\n  echo '\\nLogs(last 10 lines):'\n  kubectl --namespace=${huggingface_hub_downloader_kubernetes_namespace_name} logs job/${HF_MODEL_ID_HASH}-hf-model-to-gcs --all-containers --tail 10\"\n  ```\n\n  When the job is complete, you will see the following:\n\n  ```text\n  NAME                       STATUS     COMPLETIONS   DURATION   AGE\n  XXXXXXXX-hf-model-to-gcs   Complete   1/1           ###        ###\n  ```\n\n  You can press `CTRL`+`c` to terminate the watch.\n\n- Delete the model download job.\n\n  ```shell\n  kubectl delete --ignore-not-found --kustomize \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/model-download/huggingface\"\n  ```"
+      },
+      {
+        "heading": "Deploy the inference workload",
+        "level": 2,
+        "content": "- Source the environment configuration.\n\n  ```shell\n  source \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/terraform/_shared_config/scripts/set_environment_variables.sh\"\n  ```\n\n- Configure the deployment.\n\n  ```shell\n  \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/online-inference-tpu/vllm/configure_vllm.sh\"\n  ```\n\n- Set the environment variables for the workload.\n\n  - Check the model name.\n\n    ```shell\n    echo \"HF_MODEL_NAME=${HF_MODEL_NAME}\"\n    ```\n\n    > If the `HF_MODEL_NAME` variable is not set, ensure that `HF_MODEL_ID` is\n    > set and source the `set_environment_variables.sh` script:\n    >\n    > ```shell\n    > source \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/terraform/_shared_config/scripts/set_environment_variables.sh\"\n    > ```\n\n  - Select an accelerator.\n\n    | Model              | v5e | v6e |\n    | ------------------ | --- | --- |\n    | gemma-4-26b-a4b-it | \u274c  | \u2705  |\n    | gemma-4-31b-it     | \u274c  | \u2705  |\n    | gemma-3-1b-it      | \u2705  | \u274c  |\n    | gemma-3-4b-it      | \u2705  | \u274c  |\n    | gemma-3-27b-it     | \u2705  | \u2705  |\n    | qwen3-32b          | \u2705  | \u2705  |\n\n    - **v5e**:\n\n      ```shell\n      export ACCELERATOR_TYPE=\"v5e\"\n      ```\n\n    - **v6e**:\n\n      ```shell\n      export ACCELERATOR_TYPE=\"v6e\"\n      ```\n\n    Ensure that you have enough quota in your project to provision the selected\n    accelerator type. For more information, see about viewing TPU quotas, see\n    [Ensure that you have TPU quota](https://cloud.google.com/kubernetes-engine/docs/how-to/tpus#ensure-quota).\n\n- Deploy the inference workload.\n\n```shell\nkubectl apply --kustomize \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/online-inference-tpu/vllm/${ACCELERATOR_TYPE}-${HF_MODEL_NAME}\"\n```\n\nThe Kubernetes manifests are based on the\n[Inference Quickstart recommendations](https://cloud.google.com/kubernetes-engine/docs/how-to/machine-learning/inference-quickstart).\n\n- Watch the deployment until it is ready.\n\n  ```shell\n  watch --color --interval 5 --no-title \\\n  \"kubectl --namespace=${ira_online_tpu_kubernetes_namespace_name} get deployment/vllm-${ACCELERATOR_TYPE}-${HF_MODEL_NAME} | GREP_COLORS='mt=01;92' egrep --color=always -e '^' -e '1/1     1            1'\n  echo '\\nLogs(last 10 lines):'\n  kubectl --namespace=${ira_online_tpu_kubernetes_namespace_name} logs deployment/vllm-${ACCELERATOR_TYPE}-${HF_MODEL_NAME} --all-containers --tail 10\"\n  ```\n\n  When the deployment is ready, you will see the following:\n\n  ```text\n  NAME                                      READY   UP-TO-DATE   AVAILABLE   AGE\n  vllm-<ACCELERATOR_TYPE>-<HF_MODEL_NAME>   1/1     1            1           ###\n  ```\n\n  You can press `CTRL`+`c` to terminate the watch.\n\n- Send a test request.\n\n  ```shell\n  kubectl --namespace=${ira_online_tpu_kubernetes_namespace_name} port-forward service/vllm-${ACCELERATOR_TYPE}-${HF_MODEL_NAME} 8000:8000 >/dev/null &\n  PF_PID=$!\n  while ! echo -e '\\x1dclose\\x0d' | telnet localhost 8000 >/dev/null 2>&1; do\n    sleep 0.1\n  done\n  echo \"/v1/models:\"\n  curl --request GET --show-error --silent http:/127.0.0.1:8000/v1/models | jq\n  sleep 1\n  echo \"/v1/chat/completions:\"\n  curl http://127.0.0.1:8000/v1/chat/completions \\\n  --data '{\n    \"model\": \"/gcs/'${HF_MODEL_ID}'\",\n    \"messages\": [ { \"role\": \"user\", \"content\": \"Why is the sky blue?\" } ]\n    }' \\\n  --header \"Content-Type: application/json\" \\\n  --request POST \\\n  --show-error \\\n  --silent | jq\n  kill -9 ${PF_PID}\n  ```\n\n- Delete the workload.\n\n  ```shell\n  kubectl delete --ignore-not-found --kustomize \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/online-inference-tpu/vllm/${ACCELERATOR_TYPE}-${HF_MODEL_NAME}\"\n  ```"
+      },
+      {
+        "heading": "Clean up",
+        "level": 2,
+        "content": "- Destroy the online TPU resources.\n\n  ```shell\n  export TF_PLUGIN_CACHE_DIR=\"${ACP_REPO_DIR}/.terraform.d/plugin-cache\"\n  cd ${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/terraform/online_tpu && \\\n  rm -rf .terraform/ terraform.tfstate* && \\\n  terraform init &&\n  terraform destroy -auto-approve\n  ```"
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "shell",
+        "code": "export TF_PLUGIN_CACHE_DIR=\"${ACP_REPO_DIR}/.terraform.d/plugin-cache\"\n  cd ${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/terraform/online_tpu && \\\n  rm -rf .terraform/ terraform.tfstate* && \\\n  terraform init && \\\n  terraform plan -input=false -out=tfplan && \\\n  terraform apply -input=false tfplan && \\\n  rm tfplan"
+      },
+      {
+        "language": "shell",
+        "code": "export HF_MODEL_ID=\"google/gemma-4-26B-A4B-it\""
+      },
+      {
+        "language": "shell",
+        "code": "export HF_MODEL_ID=\"google/gemma-4-31b-it\""
+      },
+      {
+        "language": "shell",
+        "code": "export HF_MODEL_ID=\"google/gemma-3-1b-it\""
+      },
+      {
+        "language": "shell",
+        "code": "export HF_MODEL_ID=\"google/gemma-3-4b-it\""
+      },
+      {
+        "language": "shell",
+        "code": "export HF_MODEL_ID=\"google/gemma-3-27b-it\""
+      },
+      {
+        "language": "shell",
+        "code": "export HF_MODEL_ID=\"qwen/qwen3-32b\""
+      },
+      {
+        "language": "shell",
+        "code": "source \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/terraform/_shared_config/scripts/set_environment_variables.sh\""
+      },
+      {
+        "language": "shell",
+        "code": "\"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/model-download/configure_huggingface.sh\""
+      },
+      {
+        "language": "shell",
+        "code": "kubectl apply --kustomize \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/model-download/huggingface\""
+      },
+      {
+        "language": "shell",
+        "code": "watch --color --interval 5 --no-title \\\n  \"kubectl --namespace=${huggingface_hub_downloader_kubernetes_namespace_name} get job/${HF_MODEL_ID_HASH}-hf-model-to-gcs | GREP_COLORS='mt=01;92' egrep --color=always -e '^' -e 'Complete'\n  echo '\\nLogs(last 10 lines):'\n  kubectl --namespace=${huggingface_hub_downloader_kubernetes_namespace_name} logs job/${HF_MODEL_ID_HASH}-hf-model-to-gcs --all-containers --tail 10\""
+      },
+      {
+        "language": "text",
+        "code": "NAME                       STATUS     COMPLETIONS   DURATION   AGE\n  XXXXXXXX-hf-model-to-gcs   Complete   1/1           ###        ###"
+      },
+      {
+        "language": "shell",
+        "code": "kubectl delete --ignore-not-found --kustomize \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/model-download/huggingface\""
+      },
+      {
+        "language": "shell",
+        "code": "source \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/terraform/_shared_config/scripts/set_environment_variables.sh\""
+      },
+      {
+        "language": "shell",
+        "code": "\"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/online-inference-tpu/vllm/configure_vllm.sh\""
+      },
+      {
+        "language": "shell",
+        "code": "echo \"HF_MODEL_NAME=${HF_MODEL_NAME}\""
+      },
+      {
+        "language": "shell",
+        "code": "> source \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/terraform/_shared_config/scripts/set_environment_variables.sh\"\n    >"
+      },
+      {
+        "language": "shell",
+        "code": "export ACCELERATOR_TYPE=\"v5e\""
+      },
+      {
+        "language": "shell",
+        "code": "export ACCELERATOR_TYPE=\"v6e\""
+      },
+      {
+        "language": "shell",
+        "code": "kubectl apply --kustomize \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/online-inference-tpu/vllm/${ACCELERATOR_TYPE}-${HF_MODEL_NAME}\""
+      },
+      {
+        "language": "shell",
+        "code": "watch --color --interval 5 --no-title \\\n  \"kubectl --namespace=${ira_online_tpu_kubernetes_namespace_name} get deployment/vllm-${ACCELERATOR_TYPE}-${HF_MODEL_NAME} | GREP_COLORS='mt=01;92' egrep --color=always -e '^' -e '1/1     1            1'\n  echo '\\nLogs(last 10 lines):'\n  kubectl --namespace=${ira_online_tpu_kubernetes_namespace_name} logs deployment/vllm-${ACCELERATOR_TYPE}-${HF_MODEL_NAME} --all-containers --tail 10\""
+      },
+      {
+        "language": "text",
+        "code": "NAME                                      READY   UP-TO-DATE   AVAILABLE   AGE\n  vllm-<ACCELERATOR_TYPE>-<HF_MODEL_NAME>   1/1     1            1           ###"
+      },
+      {
+        "language": "shell",
+        "code": "kubectl --namespace=${ira_online_tpu_kubernetes_namespace_name} port-forward service/vllm-${ACCELERATOR_TYPE}-${HF_MODEL_NAME} 8000:8000 >/dev/null &\n  PF_PID=$!\n  while ! echo -e '\\x1dclose\\x0d' | telnet localhost 8000 >/dev/null 2>&1; do\n    sleep 0.1\n  done\n  echo \"/v1/models:\"\n  curl --request GET --show-error --silent http:/127.0.0.1:8000/v1/models | jq\n  sleep 1\n  echo \"/v1/chat/completions:\"\n  curl http://127.0.0.1:8000/v1/chat/completions \\\n  --data '{\n    \"model\": \"/gcs/'${HF_MODEL_ID}'\",\n    \"messages\": [ { \"role\": \"user\", \"content\": \"Why is the sky blue?\" } ]\n    }' \\\n  --header \"Content-Type: application/json\" \\\n  --request POST \\\n  --show-error \\\n  --silent | jq\n  kill -9 ${PF_PID}"
+      },
+      {
+        "language": "shell",
+        "code": "kubectl delete --ignore-not-found --kustomize \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/online-inference-tpu/vllm/${ACCELERATOR_TYPE}-${HF_MODEL_NAME}\""
+      },
+      {
+        "language": "shell",
+        "code": "export TF_PLUGIN_CACHE_DIR=\"${ACP_REPO_DIR}/.terraform.d/plugin-cache\"\n  cd ${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/terraform/online_tpu && \\\n  rm -rf .terraform/ terraform.tfstate* && \\\n  terraform init &&\n  terraform destroy -auto-approve"
+      }
+    ],
+    "cli_commands": [
+      "export TF_PLUGIN_CACHE_DIR=\"${ACP_REPO_DIR}/.terraform.d/plugin-cache\"",
+      "export HF_MODEL_ID=\"google/gemma-4-26B-A4B-it\"",
+      "export HF_MODEL_ID=\"google/gemma-4-31b-it\"",
+      "export HF_MODEL_ID=\"google/gemma-3-1b-it\"",
+      "export HF_MODEL_ID=\"google/gemma-3-4b-it\"",
+      "export HF_MODEL_ID=\"google/gemma-3-27b-it\"",
+      "export HF_MODEL_ID=\"qwen/qwen3-32b\"",
+      "kubectl apply --kustomize \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/model-download/huggingface\"",
+      "kubectl --namespace=${huggingface_hub_downloader_kubernetes_namespace_name} logs job/${HF_MODEL_ID_HASH}-hf-model-to-gcs --all-containers --tail 10\"",
+      "kubectl delete --ignore-not-found --kustomize \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/model-download/huggingface\"",
+      "export ACCELERATOR_TYPE=\"v5e\"",
+      "export ACCELERATOR_TYPE=\"v6e\"",
+      "kubectl apply --kustomize \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/online-inference-tpu/vllm/${ACCELERATOR_TYPE}-${HF_MODEL_NAME}\"",
+      "kubectl --namespace=${ira_online_tpu_kubernetes_namespace_name} logs deployment/vllm-${ACCELERATOR_TYPE}-${HF_MODEL_NAME} --all-containers --tail 10\"",
+      "vllm-<ACCELERATOR_TYPE>-<HF_MODEL_NAME>   1/1     1            1           ###",
+      "kubectl --namespace=${ira_online_tpu_kubernetes_namespace_name} port-forward service/vllm-${ACCELERATOR_TYPE}-${HF_MODEL_NAME} 8000:8000 >/dev/null &",
+      "curl --request GET --show-error --silent http:/127.0.0.1:8000/v1/models | jq",
+      "curl http://127.0.0.1:8000/v1/chat/completions \\",
+      "kubectl delete --ignore-not-found --kustomize \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/online-inference-tpu/vllm/${ACCELERATOR_TYPE}-${HF_MODEL_NAME}\""
+    ],
+    "environment_variables": [
+      "HF_MODEL_ID",
+      "HF_MODEL_NAME",
+      "TF_PLUGIN_CACHE_DIR"
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Model",
+          "v5e",
+          "v6e"
+        ],
+        "rows": [
+          [
+            "gemma-4-26b-a4b-it",
+            "\u274c",
+            "\u2705"
+          ],
+          [
+            "gemma-4-31b-it",
+            "\u274c",
+            "\u2705"
+          ],
+          [
+            "gemma-3-1b-it",
+            "\u2705",
+            "\u274c"
+          ],
+          [
+            "gemma-3-4b-it",
+            "\u2705",
+            "\u274c"
+          ],
+          [
+            "gemma-3-27b-it",
+            "\u2705",
+            "\u2705"
+          ],
+          [
+            "qwen3-32b",
+            "\u2705",
+            "\u2705"
+          ]
+        ]
+      }
+    ],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'GKE online inference TPU reference implementation (vLLM)' (https://github.com/GoogleCloudPlatform/accelerated-platforms/blob/main/docs/platforms/gke/base/use-cases/inference-ref-arch/online-inference-tpu/vllm-with-hf-model.md)?",
+        "answer": "Google Cloud Platform GKE inference reference architecture page for online vLLM serving on TPUs."
+      },
+      {
+        "question": "How does 'GKE online inference TPU reference implementation (vLLM)' handle: Online inference using vLLM with TPUs on Google Kubernetes Engine (GKE)?",
+        "answer": "This example implements online inference using TPUs on Google Kubernetes Engine\n(GKE)\n\nThis example is built on top of the\n[GKE Inference reference architecture](/docs/platforms/gke/base/use-cases/inference-ref-arch/README.md)."
+      },
+      {
+        "question": "How does 'GKE online inference TPU reference implementation (vLLM)' handle: Before you begin?",
+        "answer": "- The\n  [GKE Inference reference implementation](/platforms/gke/base/use-cases/inference-ref-arch/terraform/README.md)\n  is deployed and configured.\n\n- Get access to the models.\n\n  - For Gemma:\n    - Consented to the license on [Kaggle](https://www.kaggle.com/) using a\n      Hugging Face account.\n      - [**google/gemma**](https://www.kaggle.com/models/google/gemma).\n\n- Ensure your\n  [Hugging Face Hub **Read** access token](/platforms/gke/base/core/huggingface/initialize/README.md)\n  has been added to Secret Manager."
+      },
+      {
+        "question": "How does 'GKE online inference TPU reference implementation (vLLM)' handle: Create and configure the Google Cloud resources?",
+        "answer": "- Deploy the online TPU resources.\n\n  ```shell\n  export TF_PLUGIN_CACHE_DIR=\"${ACP_REPO_DIR}/.terraform.d/plugin-cache\"\n  cd ${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/terraform/online_tpu && \\\n  rm -rf .terraform/ terraform.tfstate* && \\\n  terraform init && \\\n  terraform plan -input=false -out=tfplan && \\\n  terraform apply -input=false tfplan && \\\n  rm tfplan\n  ```"
+      },
+      {
+        "question": "How does 'GKE online inference TPU reference implementation (vLLM)' handle: Download the model to Cloud Storage?",
+        "answer": "- Choose the model ID.\n\n  - **Gemma 4 26B A4B Instruction-Tuned**:\n\n    ```shell\n    export HF_MODEL_ID=\"google/gemma-4-26B-A4B-it\"\n    ```\n\n  - **Gemma 4 31B Instruction-Tuned**:\n\n    ```shell\n    export HF_MODEL_ID=\"google/gemma-4-31b-it\"\n    ```\n\n  - **Gemma 3 1B Instruction-Tuned**:\n\n    ```shell\n    export HF_MODEL_ID=\"google/gemma-3-1b-it\"\n    ```\n\n  - **Gemma 3 4B Instruction-Tuned**:\n\n    ```shell\n    export HF_MODEL_ID=\"google/gemma-3-4b-it\"\n    ```\n\n  - **Gemma 3 27B Instruction-Tuned**:\n\n    ```shell\n    export HF_MODEL_ID=\"google/gemma-3-27b-it\"\n    ```\n\n  - **Qwen 3 32B**:\n\n    ```shell\n    export HF_MODEL_ID=\"qwen/qwen3-32b\"\n    ```\n\n- Source the environment configuration.\n\n  ```shell\n  source \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/terraform/_shared_config/scripts/set_environment_variables.sh\"\n  ```\n\n- Configure the model download job.\n\n  ```shell\n  \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/model-download/configure_huggingface.sh\"\n  ```\n\n- Deploy the model download job.\n\n  ```shell\n  kubectl apply --kustomize \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/model"
+      },
+      {
+        "question": "How does 'GKE online inference TPU reference implementation (vLLM)' handle: Deploy the inference workload?",
+        "answer": "- Source the environment configuration.\n\n  ```shell\n  source \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/terraform/_shared_config/scripts/set_environment_variables.sh\"\n  ```\n\n- Configure the deployment.\n\n  ```shell\n  \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/online-inference-tpu/vllm/configure_vllm.sh\"\n  ```\n\n- Set the environment variables for the workload.\n\n  - Check the model name.\n\n    ```shell\n    echo \"HF_MODEL_NAME=${HF_MODEL_NAME}\"\n    ```\n\n    > If the `HF_MODEL_NAME` variable is not set, ensure that `HF_MODEL_ID` is\n    > set and source the `set_environment_variables.sh` script:\n    >\n    > ```shell\n    > source \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/terraform/_shared_config/scripts/set_environment_variables.sh\"\n    > ```\n\n  - Select an accelerator.\n\n    | Model              | v5e | v6e |\n    | ------------------ | --- | --- |\n    | gemma-4-26b-a4b-it | \u274c  | \u2705  |\n    | gemma-4-31b-it     | \u274c  | \u2705  |\n    | gemma-3-1b-it      | \u2705  | \u274c  |\n    | gemma-3-4b-it      | \u2705  | \u274c  |\n    | gemma-3-27b-it     | \u2705  | \u2705  |\n    | qwen3-32b          | \u2705  | \u2705  |\n\n    - **v5e**:\n\n      ```shell\n      "
+      },
+      {
+        "question": "How does 'GKE online inference TPU reference implementation (vLLM)' handle: Clean up?",
+        "answer": "- Destroy the online TPU resources.\n\n  ```shell\n  export TF_PLUGIN_CACHE_DIR=\"${ACP_REPO_DIR}/.terraform.d/plugin-cache\"\n  cd ${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/terraform/online_tpu && \\\n  rm -rf .terraform/ terraform.tfstate* && \\\n  terraform init &&\n  terraform destroy -auto-approve\n  ```"
+      }
+    ],
+    "full_markdown": "# Online inference using vLLM with TPUs on Google Kubernetes Engine (GKE)\n\nThis example implements online inference using TPUs on Google Kubernetes Engine\n(GKE)\n\nThis example is built on top of the\n[GKE Inference reference architecture](/docs/platforms/gke/base/use-cases/inference-ref-arch/README.md).\n\n## Before you begin\n\n- The\n  [GKE Inference reference implementation](/platforms/gke/base/use-cases/inference-ref-arch/terraform/README.md)\n  is deployed and configured.\n\n- Get access to the models.\n\n  - For Gemma:\n    - Consented to the license on [Kaggle](https://www.kaggle.com/) using a\n      Hugging Face account.\n      - [**google/gemma**](https://www.kaggle.com/models/google/gemma).\n\n- Ensure your\n  [Hugging Face Hub **Read** access token](/platforms/gke/base/core/huggingface/initialize/README.md)\n  has been added to Secret Manager.\n\n## Create and configure the Google Cloud resources\n\n- Deploy the online TPU resources.\n\n  ```shell\n  export TF_PLUGIN_CACHE_DIR=\"${ACP_REPO_DIR}/.terraform.d/plugin-cache\"\n  cd ${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/terraform/online_tpu && \\\n  rm -rf .terraform/ terraform.tfstate* && \\\n  terraform init && \\\n  terraform plan -input=false -out=tfplan && \\\n  terraform apply -input=false tfplan && \\\n  rm tfplan\n  ```\n\n## Download the model to Cloud Storage\n\n- Choose the model ID.\n\n  - **Gemma 4 26B A4B Instruction-Tuned**:\n\n    ```shell\n    export HF_MODEL_ID=\"google/gemma-4-26B-A4B-it\"\n    ```\n\n  - **Gemma 4 31B Instruction-Tuned**:\n\n    ```shell\n    export HF_MODEL_ID=\"google/gemma-4-31b-it\"\n    ```\n\n  - **Gemma 3 1B Instruction-Tuned**:\n\n    ```shell\n    export HF_MODEL_ID=\"google/gemma-3-1b-it\"\n    ```\n\n  - **Gemma 3 4B Instruction-Tuned**:\n\n    ```shell\n    export HF_MODEL_ID=\"google/gemma-3-4b-it\"\n    ```\n\n  - **Gemma 3 27B Instruction-Tuned**:\n\n    ```shell\n    export HF_MODEL_ID=\"google/gemma-3-27b-it\"\n    ```\n\n  - **Qwen 3 32B**:\n\n    ```shell\n    export HF_MODEL_ID=\"qwen/qwen3-32b\"\n    ```\n\n- Source the environment configuration.\n\n  ```shell\n  source \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/terraform/_shared_config/scripts/set_environment_variables.sh\"\n  ```\n\n- Configure the model download job.\n\n  ```shell\n  \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/model-download/configure_huggingface.sh\"\n  ```\n\n- Deploy the model download job.\n\n  ```shell\n  kubectl apply --kustomize \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/model-download/huggingface\"\n  ```\n\n- Watch the model download job until it is complete.\n\n  ```shell\n  watch --color --interval 5 --no-title \\\n  \"kubectl --namespace=${huggingface_hub_downloader_kubernetes_namespace_name} get job/${HF_MODEL_ID_HASH}-hf-model-to-gcs | GREP_COLORS='mt=01;92' egrep --color=always -e '^' -e 'Complete'\n  echo '\\nLogs(last 10 lines):'\n  kubectl --namespace=${huggingface_hub_downloader_kubernetes_namespace_name} logs job/${HF_MODEL_ID_HASH}-hf-model-to-gcs --all-containers --tail 10\"\n  ```\n\n  When the job is complete, you will see the following:\n\n  ```text\n  NAME                       STATUS     COMPLETIONS   DURATION   AGE\n  XXXXXXXX-hf-model-to-gcs   Complete   1/1           ###        ###\n  ```\n\n  You can press `CTRL`+`c` to terminate the watch.\n\n- Delete the model download job.\n\n  ```shell\n  kubectl delete --ignore-not-found --kustomize \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/model-download/huggingface\"\n  ```\n\n## Deploy the inference workload\n\n- Source the environment configuration.\n\n  ```shell\n  source \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/terraform/_shared_config/scripts/set_environment_variables.sh\"\n  ```\n\n- Configure the deployment.\n\n  ```shell\n  \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/online-inference-tpu/vllm/configure_vllm.sh\"\n  ```\n\n- Set the environment variables for the workload.\n\n  - Check the model name.\n\n    ```shell\n    echo \"HF_MODEL_NAME=${HF_MODEL_NAME}\"\n    ```\n\n    > If the `HF_MODEL_NAME` variable is not set, ensure that `HF_MODEL_ID` is\n    > set and source the `set_environment_variables.sh` script:\n    >\n    > ```shell\n    > source \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/terraform/_shared_config/scripts/set_environment_variables.sh\"\n    > ```\n\n  - Select an accelerator.\n\n    | Model              | v5e | v6e |\n    | ------------------ | --- | --- |\n    | gemma-4-26b-a4b-it | \u274c  | \u2705  |\n    | gemma-4-31b-it     | \u274c  | \u2705  |\n    | gemma-3-1b-it      | \u2705  | \u274c  |\n    | gemma-3-4b-it      | \u2705  | \u274c  |\n    | gemma-3-27b-it     | \u2705  | \u2705  |\n    | qwen3-32b          | \u2705  | \u2705  |\n\n    - **v5e**:\n\n      ```shell\n      export ACCELERATOR_TYPE=\"v5e\"\n      ```\n\n    - **v6e**:\n\n      ```shell\n      export ACCELERATOR_TYPE=\"v6e\"\n      ```\n\n    Ensure that you have enough quota in your project to provision the selected\n    accelerator type. For more information, see about viewing TPU quotas, see\n    [Ensure that you have TPU quota](https://cloud.google.com/kubernetes-engine/docs/how-to/tpus#ensure-quota).\n\n- Deploy the inference workload.\n\n```shell\nkubectl apply --kustomize \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/online-inference-tpu/vllm/${ACCELERATOR_TYPE}-${HF_MODEL_NAME}\"\n```\n\nThe Kubernetes manifests are based on the\n[Inference Quickstart recommendations](https://cloud.google.com/kubernetes-engine/docs/how-to/machine-learning/inference-quickstart).\n\n- Watch the deployment until it is ready.\n\n  ```shell\n  watch --color --interval 5 --no-title \\\n  \"kubectl --namespace=${ira_online_tpu_kubernetes_namespace_name} get deployment/vllm-${ACCELERATOR_TYPE}-${HF_MODEL_NAME} | GREP_COLORS='mt=01;92' egrep --color=always -e '^' -e '1/1     1            1'\n  echo '\\nLogs(last 10 lines):'\n  kubectl --namespace=${ira_online_tpu_kubernetes_namespace_name} logs deployment/vllm-${ACCELERATOR_TYPE}-${HF_MODEL_NAME} --all-containers --tail 10\"\n  ```\n\n  When the deployment is ready, you will see the following:\n\n  ```text\n  NAME                                      READY   UP-TO-DATE   AVAILABLE   AGE\n  vllm-<ACCELERATOR_TYPE>-<HF_MODEL_NAME>   1/1     1            1           ###\n  ```\n\n  You can press `CTRL`+`c` to terminate the watch.\n\n- Send a test request.\n\n  ```shell\n  kubectl --namespace=${ira_online_tpu_kubernetes_namespace_name} port-forward service/vllm-${ACCELERATOR_TYPE}-${HF_MODEL_NAME} 8000:8000 >/dev/null &\n  PF_PID=$!\n  while ! echo -e '\\x1dclose\\x0d' | telnet localhost 8000 >/dev/null 2>&1; do\n    sleep 0.1\n  done\n  echo \"/v1/models:\"\n  curl --request GET --show-error --silent http:/127.0.0.1:8000/v1/models | jq\n  sleep 1\n  echo \"/v1/chat/completions:\"\n  curl http://127.0.0.1:8000/v1/chat/completions \\\n  --data '{\n    \"model\": \"/gcs/'${HF_MODEL_ID}'\",\n    \"messages\": [ { \"role\": \"user\", \"content\": \"Why is the sky blue?\" } ]\n    }' \\\n  --header \"Content-Type: application/json\" \\\n  --request POST \\\n  --show-error \\\n  --silent | jq\n  kill -9 ${PF_PID}\n  ```\n\n- Delete the workload.\n\n  ```shell\n  kubectl delete --ignore-not-found --kustomize \"${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/kubernetes-manifests/online-inference-tpu/vllm/${ACCELERATOR_TYPE}-${HF_MODEL_NAME}\"\n  ```\n\n## Clean up\n\n- Destroy the online TPU resources.\n\n  ```shell\n  export TF_PLUGIN_CACHE_DIR=\"${ACP_REPO_DIR}/.terraform.d/plugin-cache\"\n  cd ${ACP_REPO_DIR}/platforms/gke/base/use-cases/inference-ref-arch/terraform/online_tpu && \\\n  rm -rf .terraform/ terraform.tfstate* && \\\n  terraform init &&\n  terraform destroy -auto-approve\n  ```"
+  }
 }

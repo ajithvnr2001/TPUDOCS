@@ -1,63 +1,281 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:mig_03_torchtpu_vm_quickstart",
-  "@type": "DocumentationResource",
-  "name": "TorchTPU VM quickstart",
-  "canonicalUrl": "https://torchtpu.readthedocs.io/en/latest/get_started_on_a_vm/",
-  "category": "Nvidia to tpu migration docs",
-  "categorySlug": "nvidia_to_tpu_migration_docs",
-  "description": "Create a Python environment on a TPU VM, install TorchTPU, and run your first tensor operations.",
-  "provenance": {
-    "sourceUrl": "https://torchtpu.readthedocs.io/en/latest/get_started_on_a_vm/",
-    "crawledAt": "2026-10-26T12:47:59.499851+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 11428
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "TorchTPU VM quickstart",
-      "documentedIn",
-      "https://torchtpu.readthedocs.io/en/latest/get_started_on_a_vm/"
-    ],
-    [
-      "TorchTPU VM quickstart",
-      "belongsToCategory",
-      "nvidia_to_tpu_migration_docs"
-    ],
-    [
-      "TorchTPU VM quickstart",
-      "supportsWorkflow",
-      "CUDA to TPU Code Migration"
-    ],
-    [
-      "TorchTPU VM quickstart",
-      "primaryFramework",
-      "TorchTPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:mig_03_torchtpu_vm_quickstart",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "mig_03_torchtpu_vm_quickstart",
+    "name": "TorchTPU VM quickstart",
+    "url": "https://torchtpu.readthedocs.io/en/latest/get_started_on_a_vm/",
+    "category": "nvidia_to_tpu_migration_docs",
+    "description": "Create a Python environment on a TPU VM, install TorchTPU, and run your first tensor operations.",
+    "char_count": 3003,
+    "word_count": 434,
+    "section_count": 14,
+    "code_block_count": 5,
+    "table_count": 0,
+    "cli_command_count": 2,
+    "indexed_at": "2026-10-26T14:46:54.747329+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:mig_03_torchtpu_vm_quickstart",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:mig_03_torchtpu_vm_quickstart",
+        "predicate": "schema:name",
+        "object": "TorchTPU VM quickstart"
+      },
+      {
+        "subject": "tpu_doc:mig_03_torchtpu_vm_quickstart",
+        "predicate": "schema:url",
+        "object": "https://torchtpu.readthedocs.io/en/latest/get_started_on_a_vm/"
+      },
+      {
+        "subject": "tpu_doc:mig_03_torchtpu_vm_quickstart",
+        "predicate": "schema:category",
+        "object": "nvidia_to_tpu_migration_docs"
+      },
+      {
+        "subject": "tpu_doc:mig_03_torchtpu_vm_quickstart",
+        "predicate": "schema:description",
+        "object": "Create a Python environment on a TPU VM, install TorchTPU, and run your first tensor operations."
+      },
+      {
+        "subject": "tpu_doc:mig_03_torchtpu_vm_quickstart",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:mig_03_torchtpu_vm_quickstart",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:mig_03_torchtpu_vm_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "Get started with TorchTPU on a TPU VM"
+      },
+      {
+        "subject": "tpu_doc:mig_03_torchtpu_vm_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "1. Install and set up"
+      },
+      {
+        "subject": "tpu_doc:mig_03_torchtpu_vm_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "Step 1: Initialize Python 3.12"
+      },
+      {
+        "subject": "tpu_doc:mig_03_torchtpu_vm_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "Step 2: Install TorchTPU and dependencies"
+      },
+      {
+        "subject": "tpu_doc:mig_03_torchtpu_vm_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "2. Initialize the hardware"
+      },
+      {
+        "subject": "tpu_doc:mig_03_torchtpu_vm_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "3. Work with tensors"
+      },
+      {
+        "subject": "tpu_doc:mig_03_torchtpu_vm_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "1. Create a tensor on the CPU"
+      },
+      {
+        "subject": "tpu_doc:mig_03_torchtpu_vm_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "2. Move it to the TPU"
+      },
+      {
+        "subject": "tpu_doc:mig_03_torchtpu_vm_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "OR"
+      },
+      {
+        "subject": "tpu_doc:mig_03_torchtpu_vm_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "3. Create a tensor directly on the TPU"
+      },
+      {
+        "subject": "tpu_doc:mig_03_torchtpu_vm_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "4. Compute and materialize results"
+      },
+      {
+        "subject": "tpu_doc:mig_03_torchtpu_vm_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "Perform a simple operation on the TPU"
+      },
+      {
+        "subject": "tpu_doc:mig_03_torchtpu_vm_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "Bring the result back to the CPU to print or use in other libraries"
+      },
+      {
+        "subject": "tpu_doc:mig_03_torchtpu_vm_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "\ud83c\udf89 Success!"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "TorchTPU VM quickstart provides official guidance on Create a Python environment on a TPU VM, install TorchTPU, and run your first tensor operations.",
-      "confidence": 1.0,
-      "source": "https://torchtpu.readthedocs.io/en/latest/get_started_on_a_vm/",
-      "verified": true
-    },
-    {
-      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
-      "confidence": 1.0,
-      "source": "https://torchtpu.readthedocs.io/en/latest/get_started_on_a_vm/",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is TorchTPU VM quickstart used for in Cloud TPU workflows?",
-      "answer": "Create a Python environment on a TPU VM, install TorchTPU, and run your first tensor operations.",
-      "category": "nvidia_to_tpu_migration_docs"
-    }
-  ],
-  "contentSummary": "Create a Python environment on a TPU VM, install TorchTPU, and run your first tensor operations."
+  },
+  "structured_content": {
+    "summary": "Create a Python environment on a TPU VM, install TorchTPU, and run your first tensor operations.",
+    "sections": [
+      {
+        "heading": "Get started with TorchTPU on a TPU VM",
+        "level": 1,
+        "content": "[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-pytorch/torch_tpu/blob/0.2.0-docs/docs/notebooks/get_started_on_a_vm.ipynb)\nThe simplest way to use TorchTPU is on a TPU VM. In this example we will run a simple tensor parallel example. We do not focus on the example, just the setup code to get running on a VM. In the following tutorial, we will see how to achieve something similar through GKE, which is necessary to access recent TPU hardware."
+      },
+      {
+        "heading": "1. Install and set up",
+        "level": 2,
+        "content": "Before running this notebook, ensure you are running on a [Google Cloud TPU VM](https://docs.cloud.google.com/tpu/docs/intro-to-tpu?hl=en) (e.g., v6e).\nInstall TorchTPU and its dependencies on your TPU VM. Components must be installed in this order to ensure the PyTorch dispatcher and TPU drivers align correctly."
+      },
+      {
+        "heading": "Step 1: Initialize Python 3.12",
+        "level": 3,
+        "content": "```\nsudo apt update && sudo apt install -y python3.12 python3.12-venv\npython3.12 -m venv env\nsource env/bin/activate\n\n```"
+      },
+      {
+        "heading": "Step 2: Install TorchTPU and dependencies",
+        "level": 3,
+        "content": "```\npip install torch_tpu\n\n```"
+      },
+      {
+        "heading": "2. Initialize the hardware",
+        "level": 2,
+        "content": "Similar to a CPU or GPU, the TPU backend must be explicitly initialized. This registers the \"tpu\" device string with PyTorch.\n\n```\nimport torch\n\ndevice = torch.device(\"tpu\")  # Change from cuda to tpu\n\nprint(f\"TPU Initialization complete. Primary device: {device}\")\n\n```"
+      },
+      {
+        "heading": "3. Work with tensors",
+        "level": 2,
+        "content": "Once initialized, you can interact with the TPU much like you would with a GPU. You can move existing CPU tensors to the TPU or create new tensors directly on the hardware.\nYou have two standard ways to specify the TPU device:\n  1. Using the `device` object returned by `torch.device()`.\n  2. Using the `\"tpu\"` string identifier.\n\n```"
+      },
+      {
+        "heading": "1. Create a tensor on the CPU",
+        "level": 1,
+        "content": "cpu_tensor = torch.ones((5, 5))"
+      },
+      {
+        "heading": "2. Move it to the TPU",
+        "level": 1,
+        "content": "tpu_tensor = cpu_tensor.to(device)  # Using the device object"
+      },
+      {
+        "heading": "OR",
+        "level": 1,
+        "content": "tpu_tensor_alt = cpu_tensor.to(\"tpu\")  # Using the \"tpu\" string"
+      },
+      {
+        "heading": "3. Create a tensor directly on the TPU",
+        "level": 1,
+        "content": "direct_tpu_tensor = torch.randn((5, 5), device=\"tpu\")\n\nprint(f\"cpu_tensor is on: {cpu_tensor.device}\")\nprint(f\"tpu_tensor is on: {tpu_tensor.device}\")\nprint(f\"direct_tpu_tensor is on: {direct_tpu_tensor.device}\")\n\n```"
+      },
+      {
+        "heading": "4. Compute and materialize results",
+        "level": 2,
+        "content": "Performing math on the TPU is seamless. When you perform operations on TPU tensors, the computation happens on the hardware. To retrieve the data back to the CPU for printing or interaction with standard Python libraries, use the `.cpu()` method.\n\n```"
+      },
+      {
+        "heading": "Perform a simple operation on the TPU",
+        "level": 1,
+        "content": "result_on_tpu = tpu_tensor + direct_tpu_tensor"
+      },
+      {
+        "heading": "Bring the result back to the CPU to print or use in other libraries",
+        "level": 1,
+        "content": "result_on_cpu = result_on_tpu.cpu()\n\nprint(\"Computation complete.\")\nprint(f\"Result Checksum (Sum): {result_on_cpu.sum():.4f}\")\n\n```"
+      },
+      {
+        "heading": "\ud83c\udf89 Success!",
+        "level": 3,
+        "content": "You have successfully initialized the TPU, mapped tensors to the device, performed a calculation, and retrieved the results."
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "sudo apt update && sudo apt install -y python3.12 python3.12-venv\npython3.12 -m venv env\nsource env/bin/activate"
+      },
+      {
+        "language": "text",
+        "code": "pip install torch_tpu"
+      },
+      {
+        "language": "text",
+        "code": "import torch\n\ndevice = torch.device(\"tpu\")  # Change from cuda to tpu\n\nprint(f\"TPU Initialization complete. Primary device: {device}\")"
+      },
+      {
+        "language": "text",
+        "code": "# 1. Create a tensor on the CPU\ncpu_tensor = torch.ones((5, 5))\n\n# 2. Move it to the TPU\ntpu_tensor = cpu_tensor.to(device)  # Using the device object\n# OR\ntpu_tensor_alt = cpu_tensor.to(\"tpu\")  # Using the \"tpu\" string\n\n# 3. Create a tensor directly on the TPU\ndirect_tpu_tensor = torch.randn((5, 5), device=\"tpu\")\n\nprint(f\"cpu_tensor is on: {cpu_tensor.device}\")\nprint(f\"tpu_tensor is on: {tpu_tensor.device}\")\nprint(f\"direct_tpu_tensor is on: {direct_tpu_tensor.device}\")"
+      },
+      {
+        "language": "text",
+        "code": "# Perform a simple operation on the TPU\nresult_on_tpu = tpu_tensor + direct_tpu_tensor\n\n# Bring the result back to the CPU to print or use in other libraries\nresult_on_cpu = result_on_tpu.cpu()\n\nprint(\"Computation complete.\")\nprint(f\"Result Checksum (Sum): {result_on_cpu.sum():.4f}\")"
+      }
+    ],
+    "cli_commands": [
+      "python3.12 -m venv env",
+      "pip install torch_tpu"
+    ],
+    "environment_variables": [],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'TorchTPU VM quickstart' (https://torchtpu.readthedocs.io/en/latest/get_started_on_a_vm/)?",
+        "answer": "Create a Python environment on a TPU VM, install TorchTPU, and run your first tensor operations."
+      },
+      {
+        "question": "How does 'TorchTPU VM quickstart' handle: Get started with TorchTPU on a TPU VM?",
+        "answer": "[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-pytorch/torch_tpu/blob/0.2.0-docs/docs/notebooks/get_started_on_a_vm.ipynb)\nThe simplest way to use TorchTPU is on a TPU VM. In this example we will run a simple tensor parallel example. We do not focus on the example, just the setup code to get running on a VM. In the following tutorial, we will see how to achieve something similar through GKE, which is necessary to access recent TPU hardware."
+      },
+      {
+        "question": "How does 'TorchTPU VM quickstart' handle: 1. Install and set up?",
+        "answer": "Before running this notebook, ensure you are running on a [Google Cloud TPU VM](https://docs.cloud.google.com/tpu/docs/intro-to-tpu?hl=en) (e.g., v6e).\nInstall TorchTPU and its dependencies on your TPU VM. Components must be installed in this order to ensure the PyTorch dispatcher and TPU drivers align correctly."
+      },
+      {
+        "question": "How does 'TorchTPU VM quickstart' handle: Step 1: Initialize Python 3.12?",
+        "answer": "```\nsudo apt update && sudo apt install -y python3.12 python3.12-venv\npython3.12 -m venv env\nsource env/bin/activate\n\n```"
+      },
+      {
+        "question": "How does 'TorchTPU VM quickstart' handle: 2. Initialize the hardware?",
+        "answer": "Similar to a CPU or GPU, the TPU backend must be explicitly initialized. This registers the \"tpu\" device string with PyTorch.\n\n```\nimport torch\n\ndevice = torch.device(\"tpu\")  # Change from cuda to tpu\n\nprint(f\"TPU Initialization complete. Primary device: {device}\")\n\n```"
+      },
+      {
+        "question": "How does 'TorchTPU VM quickstart' handle: 3. Work with tensors?",
+        "answer": "Once initialized, you can interact with the TPU much like you would with a GPU. You can move existing CPU tensors to the TPU or create new tensors directly on the hardware.\nYou have two standard ways to specify the TPU device:\n  1. Using the `device` object returned by `torch.device()`.\n  2. Using the `\"tpu\"` string identifier.\n\n```"
+      },
+      {
+        "question": "How does 'TorchTPU VM quickstart' handle: 2. Move it to the TPU?",
+        "answer": "tpu_tensor = cpu_tensor.to(device)  # Using the device object"
+      },
+      {
+        "question": "How does 'TorchTPU VM quickstart' handle: OR?",
+        "answer": "tpu_tensor_alt = cpu_tensor.to(\"tpu\")  # Using the \"tpu\" string"
+      },
+      {
+        "question": "How does 'TorchTPU VM quickstart' handle: 3. Create a tensor directly on the TPU?",
+        "answer": "direct_tpu_tensor = torch.randn((5, 5), device=\"tpu\")\n\nprint(f\"cpu_tensor is on: {cpu_tensor.device}\")\nprint(f\"tpu_tensor is on: {tpu_tensor.device}\")\nprint(f\"direct_tpu_tensor is on: {direct_tpu_tensor.device}\")\n\n```"
+      },
+      {
+        "question": "How does 'TorchTPU VM quickstart' handle: 4. Compute and materialize results?",
+        "answer": "Performing math on the TPU is seamless. When you perform operations on TPU tensors, the computation happens on the hardware. To retrieve the data back to the CPU for printing or interaction with standard Python libraries, use the `.cpu()` method.\n\n```"
+      }
+    ],
+    "full_markdown": "# Get started with TorchTPU on a TPU VM\n[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-pytorch/torch_tpu/blob/0.2.0-docs/docs/notebooks/get_started_on_a_vm.ipynb)\nThe simplest way to use TorchTPU is on a TPU VM. In this example we will run a simple tensor parallel example. We do not focus on the example, just the setup code to get running on a VM. In the following tutorial, we will see how to achieve something similar through GKE, which is necessary to access recent TPU hardware.\n## 1. Install and set up\nBefore running this notebook, ensure you are running on a [Google Cloud TPU VM](https://docs.cloud.google.com/tpu/docs/intro-to-tpu?hl=en) (e.g., v6e).\nInstall TorchTPU and its dependencies on your TPU VM. Components must be installed in this order to ensure the PyTorch dispatcher and TPU drivers align correctly.\n### Step 1: Initialize Python 3.12\n\n```\nsudo apt update && sudo apt install -y python3.12 python3.12-venv\npython3.12 -m venv env\nsource env/bin/activate\n\n```\n\n### Step 2: Install TorchTPU and dependencies\n\n```\npip install torch_tpu\n\n```\n\n## 2. Initialize the hardware\nSimilar to a CPU or GPU, the TPU backend must be explicitly initialized. This registers the \"tpu\" device string with PyTorch.\n\n```\nimport torch\n\ndevice = torch.device(\"tpu\")  # Change from cuda to tpu\n\nprint(f\"TPU Initialization complete. Primary device: {device}\")\n\n```\n\n## 3. Work with tensors\nOnce initialized, you can interact with the TPU much like you would with a GPU. You can move existing CPU tensors to the TPU or create new tensors directly on the hardware.\nYou have two standard ways to specify the TPU device:\n  1. Using the `device` object returned by `torch.device()`.\n  2. Using the `\"tpu\"` string identifier.\n\n```\n# 1. Create a tensor on the CPU\ncpu_tensor = torch.ones((5, 5))\n\n# 2. Move it to the TPU\ntpu_tensor = cpu_tensor.to(device)  # Using the device object\n# OR\ntpu_tensor_alt = cpu_tensor.to(\"tpu\")  # Using the \"tpu\" string\n\n# 3. Create a tensor directly on the TPU\ndirect_tpu_tensor = torch.randn((5, 5), device=\"tpu\")\n\nprint(f\"cpu_tensor is on: {cpu_tensor.device}\")\nprint(f\"tpu_tensor is on: {tpu_tensor.device}\")\nprint(f\"direct_tpu_tensor is on: {direct_tpu_tensor.device}\")\n\n```\n\n## 4. Compute and materialize results\nPerforming math on the TPU is seamless. When you perform operations on TPU tensors, the computation happens on the hardware. To retrieve the data back to the CPU for printing or interaction with standard Python libraries, use the `.cpu()` method.\n\n```\n# Perform a simple operation on the TPU\nresult_on_tpu = tpu_tensor + direct_tpu_tensor\n\n# Bring the result back to the CPU to print or use in other libraries\nresult_on_cpu = result_on_tpu.cpu()\n\nprint(\"Computation complete.\")\nprint(f\"Result Checksum (Sum): {result_on_cpu.sum():.4f}\")\n\n```\n\n### \ud83c\udf89 Success!\nYou have successfully initialized the TPU, mapped tensors to the device, performed a calculation, and retrieved the results."
+  }
 }

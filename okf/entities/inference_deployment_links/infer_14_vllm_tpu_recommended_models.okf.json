@@ -1,52 +1,860 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:infer_14_vllm_tpu_recommended_models",
-  "@type": "DocumentationResource",
-  "name": "vLLM TPU recommended models",
-  "canonicalUrl": "https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/",
-  "category": "Inference deployment links",
-  "categorySlug": "inference_deployment_links",
-  "description": "Model and feature validation matrix; check release and nightly support before deploying.",
-  "provenance": {
-    "sourceUrl": "https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/",
-    "crawledAt": "2026-10-26T12:47:44.915019+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 18646
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "vLLM TPU recommended models",
-      "documentedIn",
-      "https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/"
-    ],
-    [
-      "vLLM TPU recommended models",
-      "belongsToCategory",
-      "inference_deployment_links"
-    ],
-    [
-      "vLLM TPU recommended models",
-      "supportsWorkflow",
-      "High Throughput LLM Inference Serving"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:infer_14_vllm_tpu_recommended_models",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "infer_14_vllm_tpu_recommended_models",
+    "name": "vLLM TPU recommended models",
+    "url": "https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/",
+    "category": "inference_deployment_links",
+    "description": "Model and feature validation matrix; check release and nightly support before deploying.",
+    "char_count": 13820,
+    "word_count": 1837,
+    "section_count": 4,
+    "code_block_count": 0,
+    "table_count": 2,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.693850+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:infer_14_vllm_tpu_recommended_models",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:infer_14_vllm_tpu_recommended_models",
+        "predicate": "schema:name",
+        "object": "vLLM TPU recommended models"
+      },
+      {
+        "subject": "tpu_doc:infer_14_vllm_tpu_recommended_models",
+        "predicate": "schema:url",
+        "object": "https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/"
+      },
+      {
+        "subject": "tpu_doc:infer_14_vllm_tpu_recommended_models",
+        "predicate": "schema:category",
+        "object": "inference_deployment_links"
+      },
+      {
+        "subject": "tpu_doc:infer_14_vllm_tpu_recommended_models",
+        "predicate": "schema:description",
+        "object": "Model and feature validation matrix; check release and nightly support before deploying."
+      },
+      {
+        "subject": "tpu_doc:infer_14_vllm_tpu_recommended_models",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:infer_14_vllm_tpu_recommended_models",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:infer_14_vllm_tpu_recommended_models",
+        "predicate": "okf:hasSection",
+        "object": "Recommended Models"
+      },
+      {
+        "subject": "tpu_doc:infer_14_vllm_tpu_recommended_models",
+        "predicate": "okf:hasSection",
+        "object": "Recommended Models"
+      },
+      {
+        "subject": "tpu_doc:infer_14_vllm_tpu_recommended_models",
+        "predicate": "okf:hasSection",
+        "object": "Models"
+      },
+      {
+        "subject": "tpu_doc:infer_14_vllm_tpu_recommended_models",
+        "predicate": "okf:hasSection",
+        "object": "Embedding Models"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "vLLM TPU recommended models provides official guidance on Model and feature validation matrix; check release and nightly support before deploying.",
-      "confidence": 1.0,
-      "source": "https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is vLLM TPU recommended models used for in Cloud TPU workflows?",
-      "answer": "Model and feature validation matrix; check release and nightly support before deploying.",
-      "category": "inference_deployment_links"
-    }
-  ],
-  "contentSummary": "Model and feature validation matrix; check release and nightly support before deploying."
+  },
+  "structured_content": {
+    "summary": "Model and feature validation matrix; check release and nightly support before deploying.",
+    "sections": [
+      {
+        "heading": "Recommended Models",
+        "level": 1,
+        "content": "Although vLLM JAX\u2019s new unified backend makes out-of-the-box high performance serving possible with any model supported in vLLM, the reality is that we're still in the process of implementing a few core components. For this reason, until we land more capabilities, we recommend starting from this list of stress tested models and features below.\nWe are still landing components in vllm-jax that will improve performance for larger scale, higher complexity models (XL MoE, +vision encoders, MLA, etc.).\nIf you\u2019d like us to prioritize something specific, please submit a GitHub feature request [here](https://github.com/vllm-project/tpu-inference/issues/new/choose).\n**\ud83d\udea6 _Status Legend_ **\n>   * \u2705 **Passing:** Tested and works as expected. Ready for use.\n>   * \u274c **Failing:** Known to be broken or not functional. Help is wanted to fix this!\n>   * \ud83e\uddea **Experimental:** Works, but unoptimized or pending community validation.\n>   * \ud83d\udcdd **Planned:** Not yet implemented, but on the official roadmap.\n>   * \u26d4\ufe0f **Unplanned:** There is no benefit to adding this.\n>   * \u2753 **Untested:** The functionality exists but has not been recently or thoroughly verified.\n>"
+      },
+      {
+        "heading": "Recommended Models",
+        "level": 2,
+        "content": "These tables show the models currently tested for accuracy and performance."
+      },
+      {
+        "heading": "Models",
+        "level": 3,
+        "content": "[Release](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#release)[Nightly](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#nightly)  \n| Model  | Type  | Unit Test  | Correctness Test  | Performance Test  |  \n| --- | --- | --- | --- | --- |  \n| [google/gemma-4-26B-A4B-it](https://huggingface.co/google/gemma-4-26B-A4B-it)  | Multimodal  | \u2705  | \u2705  | \u2705  |  \n| [google/gemma-4-31B-it](https://huggingface.co/google/gemma-4-31B-it)  | Multimodal  | \u2705  | \u2705  | \u2705  |  \n| [google/gemma-4-E2B-it](https://huggingface.co/google/gemma-4-E2B-it)  | Multimodal  | \u2705  | \u2705  | \u2705  |  \n| [google/gemma-4-E4B-it](https://huggingface.co/google/gemma-4-E4B-it)  | Multimodal  | \u2705  | \u2705  | \u2705  |  \n| [google/gemma-3-27b-it](https://huggingface.co/google/gemma-3-27b-it)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [meta-llama/Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [meta-llama/Llama-3.3-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen3-30B-A3B](https://huggingface.co/Qwen/Qwen3-30B-A3B)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen3-32B](https://huggingface.co/Qwen/Qwen3-32B)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen3-4B](https://huggingface.co/Qwen/Qwen3-4B)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen3-Coder-480B-A35B-Instruct](https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen3.5-397B-A17B](https://huggingface.co/Qwen/Qwen3.5-397B-A17B)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen3-Embedding-8B](https://huggingface.co/Qwen/Qwen3-Embedding-8B)  | Embedding  | \u2705  | \u2705  | \u2753  |  \n| [Qwen/Qwen2.5-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct)  | Multimodal  | \u2705  | \u2705  | \u2753  |  \n| [deepseek-ai/DeepSeek-R1](https://huggingface.co/deepseek-ai/DeepSeek-R1)  | Text  | \u2705  | \u2705  | \u2753  |  \n| [moonshotai/Kimi-K2.6](https://huggingface.co/moonshotai/Kimi-K2.6)  | Text  | \u2705  | \u2705  | \u2753  |  \n| [openai/gpt-oss-120b](https://huggingface.co/openai/gpt-oss-120b)  | Text  | \u2705  | \u2705  | \u2753  |  \n| [deepseek-ai/DeepSeek-OCR](https://huggingface.co/deepseek-ai/DeepSeek-OCR)  | Multimodal  | \u2753  | \u2753  | \u2753  |  \n| [meta-llama/Llama-4-Maverick-17B-128E-Instruct/multimodal](https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct/multimodal)  | Multimodal  | \u2753  | \u2753  | \u2753  |  \n| [Qwen/Qwen3-Omni-30B-A3B-Instruct](https://huggingface.co/Qwen/Qwen3-Omni-30B-A3B-Instruct)  | Multimodal  | \u2753  | \u2753  | \u2753  |  \n| [Qwen/Qwen3-VL-8B-Instruct](https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct)  | Multimodal  | \u2753  | \u2753  | \u2753  |  \n| [Qwen/Qwen3.5-9B](https://huggingface.co/Qwen/Qwen3.5-9B)  | Multimodal  | \u2753  | \u2753  | \u2753  |  \n| [deepseek-ai/DeepSeek-Math-V2](https://huggingface.co/deepseek-ai/DeepSeek-Math-V2)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [deepseek-ai/DeepSeek-V3.1](https://huggingface.co/deepseek-ai/DeepSeek-V3.1)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [deepseek-ai/DeepSeek-V3.2](https://huggingface.co/deepseek-ai/DeepSeek-V3.2)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [deepseek-ai/DeepSeek-V3.2-Speciale](https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Speciale)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [MiniMaxAI/MiniMax-M2.5](https://huggingface.co/MiniMaxAI/MiniMax-M2.5)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [mistralai/Mistral-Small-4-119B-2603/text-only](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603/text-only)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [moonshotai/Kimi-K2-Thinking](https://huggingface.co/moonshotai/Kimi-K2-Thinking)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [openai/gpt-oss-20b](https://huggingface.co/openai/gpt-oss-20b)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [zai-org/GLM-5](https://huggingface.co/zai-org/GLM-5)  | Text  | \u2753  | \u2753  | \u2753  |  \n| Model  | Type  | Unit Test  | Correctness Test  | Performance Test  |  \n| --- | --- | --- | --- | --- |  \n| [google/gemma-4-26B-A4B-it](https://huggingface.co/google/gemma-4-26B-A4B-it)  | Multimodal  | \u2705  | \u2705  | \u2705  |  \n| [google/gemma-4-31B-it](https://huggingface.co/google/gemma-4-31B-it)  | Multimodal  | \u2705  | \u2705  | \u2705  |  \n| [google/gemma-3-27b-it](https://huggingface.co/google/gemma-3-27b-it)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [meta-llama/Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [meta-llama/Llama-3.3-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen3-30B-A3B](https://huggingface.co/Qwen/Qwen3-30B-A3B)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen3-4B](https://huggingface.co/Qwen/Qwen3-4B)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen3-Coder-480B-A35B-Instruct](https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen3.5-397B-A17B](https://huggingface.co/Qwen/Qwen3.5-397B-A17B)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen2.5-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct)  | Multimodal  | \u2705  | \u2705  | \u274c  |  \n| [Qwen/Qwen3-Embedding-8B](https://huggingface.co/Qwen/Qwen3-Embedding-8B)  | Embedding  | \u2705  | \u2705  | \u2753  |  \n| [deepseek-ai/DeepSeek-R1](https://huggingface.co/deepseek-ai/DeepSeek-R1)  | Text  | \u2705  | \u2705  | \u2753  |  \n| [moonshotai/Kimi-K2.6](https://huggingface.co/moonshotai/Kimi-K2.6)  | Text  | \u2705  | \u2705  | \u2753  |  \n| [openai/gpt-oss-120b](https://huggingface.co/openai/gpt-oss-120b)  | Text  | \u2705  | \u2705  | \u2753  |  \n| [google/gemma-4-E2B-it](https://huggingface.co/google/gemma-4-E2B-it)  | Multimodal  | \u2705  | \u274c  | \u2753  |  \n| [google/gemma-4-E4B-it](https://huggingface.co/google/gemma-4-E4B-it)  | Multimodal  | \u2705  | \u274c  | \u2753  |  \n| [Qwen/Qwen3-32B](https://huggingface.co/Qwen/Qwen3-32B)  | Text  | \u274c  | \u2753  | \u2753  |  \n| [deepseek-ai/DeepSeek-OCR](https://huggingface.co/deepseek-ai/DeepSeek-OCR)  | Multimodal  | \u2753  | \u2753  | \u2753  |  \n| [Qwen/Qwen3-Omni-30B-A3B-Instruct](https://huggingface.co/Qwen/Qwen3-Omni-30B-A3B-Instruct)  | Multimodal  | \u2753  | \u2753  | \u2753  |  \n| [Qwen/Qwen3-VL-8B-Instruct](https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct)  | Multimodal  | \u2753  | \u2753  | \u2753  |  \n| [Qwen/Qwen3.5-9B](https://huggingface.co/Qwen/Qwen3.5-9B)  | Multimodal  | \u2753  | \u2753  | \u2753  |  \n| [deepseek-ai/DeepSeek-Math-V2](https://huggingface.co/deepseek-ai/DeepSeek-Math-V2)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [deepseek-ai/DeepSeek-V3.1](https://huggingface.co/deepseek-ai/DeepSeek-V3.1)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [deepseek-ai/DeepSeek-V3.2](https://huggingface.co/deepseek-ai/DeepSeek-V3.2)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [deepseek-ai/DeepSeek-V3.2-Speciale](https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Speciale)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [MiniMaxAI/MiniMax-M2.5](https://huggingface.co/MiniMaxAI/MiniMax-M2.5)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [moonshotai/Kimi-K2-Thinking](https://huggingface.co/moonshotai/Kimi-K2-Thinking)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [openai/gpt-oss-20b](https://huggingface.co/openai/gpt-oss-20b)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [zai-org/GLM-5](https://huggingface.co/zai-org/GLM-5)  | Text  | \u2753  | \u2753  | \u2753  |"
+      },
+      {
+        "heading": "Embedding Models",
+        "level": 3,
+        "content": "[v7x](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#v7x)[v6e](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#v6e)  \n| Model  | Type  | UnitTest  | Accuracy/Correctness  | Benchmark  |  \n| --- | --- | --- | --- | --- |  \n| Qwen/Qwen3-Embedding-8B  | Embedding  | \u2705 Passing  | \u2705 Passing  | \u2753 Untested  |  \n| Qwen/Qwen2.5-VL-7B-Instruct  | Multimodal  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| Qwen/Qwen3-Omni-30B-A3B-Instruct  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| Qwen/Qwen3-VL-8B-Instruct  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| Qwen/Qwen3.5-9B  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| deepseek-ai/DeepSeek-OCR  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| google/gemma-4-26B-A4B-it  | Multimodal  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| google/gemma-4-31B-it  | Multimodal  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| google/gemma-4-E2B-it  | Multimodal  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| google/gemma-4-E4B-it  | Multimodal  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| meta-llama/Llama-4-Maverick-17B-128E-Instruct/multimodal  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| MiniMaxAI/MiniMax-M2.5  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| Qwen/Qwen3-30B-A3B  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| Qwen/Qwen3-32B  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| Qwen/Qwen3-4B  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| Qwen/Qwen3-Coder-480B-A35B-Instruct  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| Qwen/Qwen3.5-397B-A17B  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| deepseek-ai/DeepSeek-Math-V2  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| deepseek-ai/DeepSeek-R1  | Text  | \u2705 Passing  | \u2705 Passing  | \u2753 Untested  |  \n| deepseek-ai/DeepSeek-V3.1  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| deepseek-ai/DeepSeek-V3.2  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| deepseek-ai/DeepSeek-V3.2-Speciale  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| google/gemma-3-27b-it  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| meta-llama/Llama-3.1-8B-Instruct  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| meta-llama/Llama-3.3-70B-Instruct  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| mistralai/Mistral-Small-4-119B-2603/text-only  | Text  | \u2753 Untested  | \u2705 Passing  | \u2753 Untested  |  \n| moonshotai/Kimi-K2-Thinking  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| moonshotai/Kimi-K2.6  | Text  | \u2705 Passing  | \u2705 Passing  | \u2753 Untested  |  \n| openai/gpt-oss-120b  | Text  | \u2705 Passing  | \u2705 Passing  | \u2753 Untested  |  \n| openai/gpt-oss-20b  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| zai-org/GLM-5  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| Model  | Type  | UnitTest  | Accuracy/Correctness  | Benchmark  |  \n| --- | --- | --- | --- | --- |  \n| Qwen/Qwen3-Embedding-8B  | Embedding  | \u2705 Passing  | \u2705 Passing  | \u2753 Untested  |  \n| Qwen/Qwen2.5-VL-7B-Instruct  | Multimodal  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| Qwen/Qwen3-Omni-30B-A3B-Instruct  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| Qwen/Qwen3-VL-8B-Instruct  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| Qwen/Qwen3.5-9B  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| deepseek-ai/DeepSeek-OCR  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| google/gemma-4-26B-A4B-it  | Multimodal  | not enough HBM  | not enough HBM  | not enough HBM  |  \n| google/gemma-4-31B-it  | Multimodal  | \u2705 Passing  | \u2705 Passing  | not enough HBM  |  \n| google/gemma-4-E2B-it  | Multimodal  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| google/gemma-4-E4B-it  | Multimodal  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| meta-llama/Llama-4-Maverick-17B-128E-Instruct/multimodal  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| MiniMaxAI/MiniMax-M2.5  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| Qwen/Qwen3-30B-A3B  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| Qwen/Qwen3-32B  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| Qwen/Qwen3-4B  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| Qwen/Qwen3-Coder-480B-A35B-Instruct  | Text  | not enough HBM  | not enough HBM  | not enough HBM  |  \n| Qwen/Qwen3.5-397B-A17B  | Text  | not enough HBM  | not enough HBM  | not enough HBM  |  \n| deepseek-ai/DeepSeek-Math-V2  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| deepseek-ai/DeepSeek-R1  | Text  | not enough HBM  | not enough HBM  | \u2753 Untested  |  \n| deepseek-ai/DeepSeek-V3.1  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| deepseek-ai/DeepSeek-V3.2  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| deepseek-ai/DeepSeek-V3.2-Speciale  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| google/gemma-3-27b-it  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| meta-llama/Llama-3.1-8B-Instruct  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| meta-llama/Llama-3.3-70B-Instruct  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| mistralai/Mistral-Small-4-119B-2603/text-only  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| moonshotai/Kimi-K2-Thinking  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| moonshotai/Kimi-K2.6  | Text  | not enough HBM  | not enough HBM  | \u2753 Untested  |  \n| openai/gpt-oss-120b  | Text  | not enough HBM  | not enough HBM  | \u2753 Untested  |  \n| openai/gpt-oss-20b  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| zai-org/GLM-5  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |"
+      }
+    ],
+    "code_examples": [],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [
+      {
+        "headers": [
+          "Model",
+          "Type",
+          "Unit Test",
+          "Correctness Test",
+          "Performance Test"
+        ],
+        "rows": [
+          [
+            "[google/gemma-4-26B-A4B-it](https://huggingface.co/google/gemma-4-26B-A4B-it)",
+            "Multimodal",
+            "\u2705",
+            "\u2705",
+            "\u2705"
+          ],
+          [
+            "[google/gemma-4-31B-it](https://huggingface.co/google/gemma-4-31B-it)",
+            "Multimodal",
+            "\u2705",
+            "\u2705",
+            "\u2705"
+          ],
+          [
+            "[google/gemma-4-E2B-it](https://huggingface.co/google/gemma-4-E2B-it)",
+            "Multimodal",
+            "\u2705",
+            "\u2705",
+            "\u2705"
+          ],
+          [
+            "[google/gemma-4-E4B-it](https://huggingface.co/google/gemma-4-E4B-it)",
+            "Multimodal",
+            "\u2705",
+            "\u2705",
+            "\u2705"
+          ],
+          [
+            "[google/gemma-3-27b-it](https://huggingface.co/google/gemma-3-27b-it)",
+            "Text",
+            "\u2705",
+            "\u2705",
+            "\u2705"
+          ],
+          [
+            "[meta-llama/Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)",
+            "Text",
+            "\u2705",
+            "\u2705",
+            "\u2705"
+          ],
+          [
+            "[meta-llama/Llama-3.3-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct)",
+            "Text",
+            "\u2705",
+            "\u2705",
+            "\u2705"
+          ],
+          [
+            "[Qwen/Qwen3-30B-A3B](https://huggingface.co/Qwen/Qwen3-30B-A3B)",
+            "Text",
+            "\u2705",
+            "\u2705",
+            "\u2705"
+          ],
+          [
+            "[Qwen/Qwen3-32B](https://huggingface.co/Qwen/Qwen3-32B)",
+            "Text",
+            "\u2705",
+            "\u2705",
+            "\u2705"
+          ],
+          [
+            "[Qwen/Qwen3-4B](https://huggingface.co/Qwen/Qwen3-4B)",
+            "Text",
+            "\u2705",
+            "\u2705",
+            "\u2705"
+          ],
+          [
+            "[Qwen/Qwen3-Coder-480B-A35B-Instruct](https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct)",
+            "Text",
+            "\u2705",
+            "\u2705",
+            "\u2705"
+          ],
+          [
+            "[Qwen/Qwen3.5-397B-A17B](https://huggingface.co/Qwen/Qwen3.5-397B-A17B)",
+            "Text",
+            "\u2705",
+            "\u2705",
+            "\u2705"
+          ],
+          [
+            "[Qwen/Qwen3-Embedding-8B](https://huggingface.co/Qwen/Qwen3-Embedding-8B)",
+            "Embedding",
+            "\u2705",
+            "\u2705",
+            "\u2753"
+          ],
+          [
+            "[Qwen/Qwen2.5-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct)",
+            "Multimodal",
+            "\u2705",
+            "\u2705",
+            "\u2753"
+          ],
+          [
+            "[deepseek-ai/DeepSeek-R1](https://huggingface.co/deepseek-ai/DeepSeek-R1)",
+            "Text",
+            "\u2705",
+            "\u2705",
+            "\u2753"
+          ],
+          [
+            "[moonshotai/Kimi-K2.6](https://huggingface.co/moonshotai/Kimi-K2.6)",
+            "Text",
+            "\u2705",
+            "\u2705",
+            "\u2753"
+          ],
+          [
+            "[openai/gpt-oss-120b](https://huggingface.co/openai/gpt-oss-120b)",
+            "Text",
+            "\u2705",
+            "\u2705",
+            "\u2753"
+          ],
+          [
+            "[deepseek-ai/DeepSeek-OCR](https://huggingface.co/deepseek-ai/DeepSeek-OCR)",
+            "Multimodal",
+            "\u2753",
+            "\u2753",
+            "\u2753"
+          ],
+          [
+            "[meta-llama/Llama-4-Maverick-17B-128E-Instruct/multimodal](https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct/multimodal)",
+            "Multimodal",
+            "\u2753",
+            "\u2753",
+            "\u2753"
+          ],
+          [
+            "[Qwen/Qwen3-Omni-30B-A3B-Instruct](https://huggingface.co/Qwen/Qwen3-Omni-30B-A3B-Instruct)",
+            "Multimodal",
+            "\u2753",
+            "\u2753",
+            "\u2753"
+          ],
+          [
+            "[Qwen/Qwen3-VL-8B-Instruct](https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct)",
+            "Multimodal",
+            "\u2753",
+            "\u2753",
+            "\u2753"
+          ],
+          [
+            "[Qwen/Qwen3.5-9B](https://huggingface.co/Qwen/Qwen3.5-9B)",
+            "Multimodal",
+            "\u2753",
+            "\u2753",
+            "\u2753"
+          ],
+          [
+            "[deepseek-ai/DeepSeek-Math-V2](https://huggingface.co/deepseek-ai/DeepSeek-Math-V2)",
+            "Text",
+            "\u2753",
+            "\u2753",
+            "\u2753"
+          ],
+          [
+            "[deepseek-ai/DeepSeek-V3.1](https://huggingface.co/deepseek-ai/DeepSeek-V3.1)",
+            "Text",
+            "\u2753",
+            "\u2753",
+            "\u2753"
+          ],
+          [
+            "[deepseek-ai/DeepSeek-V3.2](https://huggingface.co/deepseek-ai/DeepSeek-V3.2)",
+            "Text",
+            "\u2753",
+            "\u2753",
+            "\u2753"
+          ],
+          [
+            "[deepseek-ai/DeepSeek-V3.2-Speciale](https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Speciale)",
+            "Text",
+            "\u2753",
+            "\u2753",
+            "\u2753"
+          ],
+          [
+            "[MiniMaxAI/MiniMax-M2.5](https://huggingface.co/MiniMaxAI/MiniMax-M2.5)",
+            "Text",
+            "\u2753",
+            "\u2753",
+            "\u2753"
+          ],
+          [
+            "[mistralai/Mistral-Small-4-119B-2603/text-only](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603/text-only)",
+            "Text",
+            "\u2753",
+            "\u2753",
+            "\u2753"
+          ],
+          [
+            "[moonshotai/Kimi-K2-Thinking](https://huggingface.co/moonshotai/Kimi-K2-Thinking)",
+            "Text",
+            "\u2753",
+            "\u2753",
+            "\u2753"
+          ],
+          [
+            "[openai/gpt-oss-20b](https://huggingface.co/openai/gpt-oss-20b)",
+            "Text",
+            "\u2753",
+            "\u2753",
+            "\u2753"
+          ],
+          [
+            "[zai-org/GLM-5](https://huggingface.co/zai-org/GLM-5)",
+            "Text",
+            "\u2753",
+            "\u2753",
+            "\u2753"
+          ],
+          [
+            "Model",
+            "Type",
+            "Unit Test",
+            "Correctness Test",
+            "Performance Test"
+          ],
+          [
+            "---",
+            "---",
+            "---",
+            "---",
+            "---"
+          ],
+          [
+            "[google/gemma-4-26B-A4B-it](https://huggingface.co/google/gemma-4-26B-A4B-it)",
+            "Multimodal",
+            "\u2705",
+            "\u2705",
+            "\u2705"
+          ],
+          [
+            "[google/gemma-4-31B-it](https://huggingface.co/google/gemma-4-31B-it)",
+            "Multimodal",
+            "\u2705",
+            "\u2705",
+            "\u2705"
+          ],
+          [
+            "[google/gemma-3-27b-it](https://huggingface.co/google/gemma-3-27b-it)",
+            "Text",
+            "\u2705",
+            "\u2705",
+            "\u2705"
+          ],
+          [
+            "[meta-llama/Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)",
+            "Text",
+            "\u2705",
+            "\u2705",
+            "\u2705"
+          ],
+          [
+            "[meta-llama/Llama-3.3-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct)",
+            "Text",
+            "\u2705",
+            "\u2705",
+            "\u2705"
+          ],
+          [
+            "[Qwen/Qwen3-30B-A3B](https://huggingface.co/Qwen/Qwen3-30B-A3B)",
+            "Text",
+            "\u2705",
+            "\u2705",
+            "\u2705"
+          ],
+          [
+            "[Qwen/Qwen3-4B](https://huggingface.co/Qwen/Qwen3-4B)",
+            "Text",
+            "\u2705",
+            "\u2705",
+            "\u2705"
+          ],
+          [
+            "[Qwen/Qwen3-Coder-480B-A35B-Instruct](https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct)",
+            "Text",
+            "\u2705",
+            "\u2705",
+            "\u2705"
+          ],
+          [
+            "[Qwen/Qwen3.5-397B-A17B](https://huggingface.co/Qwen/Qwen3.5-397B-A17B)",
+            "Text",
+            "\u2705",
+            "\u2705",
+            "\u2705"
+          ],
+          [
+            "[Qwen/Qwen2.5-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct)",
+            "Multimodal",
+            "\u2705",
+            "\u2705",
+            "\u274c"
+          ],
+          [
+            "[Qwen/Qwen3-Embedding-8B](https://huggingface.co/Qwen/Qwen3-Embedding-8B)",
+            "Embedding",
+            "\u2705",
+            "\u2705",
+            "\u2753"
+          ],
+          [
+            "[deepseek-ai/DeepSeek-R1](https://huggingface.co/deepseek-ai/DeepSeek-R1)",
+            "Text",
+            "\u2705",
+            "\u2705",
+            "\u2753"
+          ],
+          [
+            "[moonshotai/Kimi-K2.6](https://huggingface.co/moonshotai/Kimi-K2.6)",
+            "Text",
+            "\u2705",
+            "\u2705",
+            "\u2753"
+          ],
+          [
+            "[openai/gpt-oss-120b](https://huggingface.co/openai/gpt-oss-120b)",
+            "Text",
+            "\u2705",
+            "\u2705",
+            "\u2753"
+          ],
+          [
+            "[google/gemma-4-E2B-it](https://huggingface.co/google/gemma-4-E2B-it)",
+            "Multimodal",
+            "\u2705",
+            "\u274c",
+            "\u2753"
+          ],
+          [
+            "[google/gemma-4-E4B-it](https://huggingface.co/google/gemma-4-E4B-it)",
+            "Multimodal",
+            "\u2705",
+            "\u274c",
+            "\u2753"
+          ],
+          [
+            "[Qwen/Qwen3-32B](https://huggingface.co/Qwen/Qwen3-32B)",
+            "Text",
+            "\u274c",
+            "\u2753",
+            "\u2753"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "Model",
+          "Type",
+          "UnitTest",
+          "Accuracy/Correctness",
+          "Benchmark"
+        ],
+        "rows": [
+          [
+            "Qwen/Qwen3-Embedding-8B",
+            "Embedding",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2753 Untested"
+          ],
+          [
+            "Qwen/Qwen2.5-VL-7B-Instruct",
+            "Multimodal",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2705 Passing"
+          ],
+          [
+            "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+            "Multimodal",
+            "\u2753 Untested",
+            "\u2753 Untested",
+            "\u2753 Untested"
+          ],
+          [
+            "Qwen/Qwen3-VL-8B-Instruct",
+            "Multimodal",
+            "\u2753 Untested",
+            "\u2753 Untested",
+            "\u2753 Untested"
+          ],
+          [
+            "Qwen/Qwen3.5-9B",
+            "Multimodal",
+            "\u2753 Untested",
+            "\u2753 Untested",
+            "\u2753 Untested"
+          ],
+          [
+            "deepseek-ai/DeepSeek-OCR",
+            "Multimodal",
+            "\u2753 Untested",
+            "\u2753 Untested",
+            "\u2753 Untested"
+          ],
+          [
+            "google/gemma-4-26B-A4B-it",
+            "Multimodal",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2705 Passing"
+          ],
+          [
+            "google/gemma-4-31B-it",
+            "Multimodal",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2705 Passing"
+          ],
+          [
+            "google/gemma-4-E2B-it",
+            "Multimodal",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2705 Passing"
+          ],
+          [
+            "google/gemma-4-E4B-it",
+            "Multimodal",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2705 Passing"
+          ],
+          [
+            "meta-llama/Llama-4-Maverick-17B-128E-Instruct/multimodal",
+            "Multimodal",
+            "\u2753 Untested",
+            "\u2753 Untested",
+            "\u2753 Untested"
+          ],
+          [
+            "MiniMaxAI/MiniMax-M2.5",
+            "Text",
+            "\u2753 Untested",
+            "\u2753 Untested",
+            "\u2753 Untested"
+          ],
+          [
+            "Qwen/Qwen3-30B-A3B",
+            "Text",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2705 Passing"
+          ],
+          [
+            "Qwen/Qwen3-32B",
+            "Text",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2705 Passing"
+          ],
+          [
+            "Qwen/Qwen3-4B",
+            "Text",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2705 Passing"
+          ],
+          [
+            "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+            "Text",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2705 Passing"
+          ],
+          [
+            "Qwen/Qwen3.5-397B-A17B",
+            "Text",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2705 Passing"
+          ],
+          [
+            "deepseek-ai/DeepSeek-Math-V2",
+            "Text",
+            "\u2753 Untested",
+            "\u2753 Untested",
+            "\u2753 Untested"
+          ],
+          [
+            "deepseek-ai/DeepSeek-R1",
+            "Text",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2753 Untested"
+          ],
+          [
+            "deepseek-ai/DeepSeek-V3.1",
+            "Text",
+            "\u2753 Untested",
+            "\u2753 Untested",
+            "\u2753 Untested"
+          ],
+          [
+            "deepseek-ai/DeepSeek-V3.2",
+            "Text",
+            "\u2753 Untested",
+            "\u2753 Untested",
+            "\u2753 Untested"
+          ],
+          [
+            "deepseek-ai/DeepSeek-V3.2-Speciale",
+            "Text",
+            "\u2753 Untested",
+            "\u2753 Untested",
+            "\u2753 Untested"
+          ],
+          [
+            "google/gemma-3-27b-it",
+            "Text",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2705 Passing"
+          ],
+          [
+            "meta-llama/Llama-3.1-8B-Instruct",
+            "Text",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2705 Passing"
+          ],
+          [
+            "meta-llama/Llama-3.3-70B-Instruct",
+            "Text",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2705 Passing"
+          ],
+          [
+            "mistralai/Mistral-Small-4-119B-2603/text-only",
+            "Text",
+            "\u2753 Untested",
+            "\u2705 Passing",
+            "\u2753 Untested"
+          ],
+          [
+            "moonshotai/Kimi-K2-Thinking",
+            "Text",
+            "\u2753 Untested",
+            "\u2753 Untested",
+            "\u2753 Untested"
+          ],
+          [
+            "moonshotai/Kimi-K2.6",
+            "Text",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2753 Untested"
+          ],
+          [
+            "openai/gpt-oss-120b",
+            "Text",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2753 Untested"
+          ],
+          [
+            "openai/gpt-oss-20b",
+            "Text",
+            "\u2753 Untested",
+            "\u2753 Untested",
+            "\u2753 Untested"
+          ],
+          [
+            "zai-org/GLM-5",
+            "Text",
+            "\u2753 Untested",
+            "\u2753 Untested",
+            "\u2753 Untested"
+          ],
+          [
+            "Model",
+            "Type",
+            "UnitTest",
+            "Accuracy/Correctness",
+            "Benchmark"
+          ],
+          [
+            "---",
+            "---",
+            "---",
+            "---",
+            "---"
+          ],
+          [
+            "Qwen/Qwen3-Embedding-8B",
+            "Embedding",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2753 Untested"
+          ],
+          [
+            "Qwen/Qwen2.5-VL-7B-Instruct",
+            "Multimodal",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2705 Passing"
+          ],
+          [
+            "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+            "Multimodal",
+            "\u2753 Untested",
+            "\u2753 Untested",
+            "\u2753 Untested"
+          ],
+          [
+            "Qwen/Qwen3-VL-8B-Instruct",
+            "Multimodal",
+            "\u2753 Untested",
+            "\u2753 Untested",
+            "\u2753 Untested"
+          ],
+          [
+            "Qwen/Qwen3.5-9B",
+            "Multimodal",
+            "\u2753 Untested",
+            "\u2753 Untested",
+            "\u2753 Untested"
+          ],
+          [
+            "deepseek-ai/DeepSeek-OCR",
+            "Multimodal",
+            "\u2753 Untested",
+            "\u2753 Untested",
+            "\u2753 Untested"
+          ],
+          [
+            "google/gemma-4-26B-A4B-it",
+            "Multimodal",
+            "not enough HBM",
+            "not enough HBM",
+            "not enough HBM"
+          ],
+          [
+            "google/gemma-4-31B-it",
+            "Multimodal",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "not enough HBM"
+          ],
+          [
+            "google/gemma-4-E2B-it",
+            "Multimodal",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2705 Passing"
+          ],
+          [
+            "google/gemma-4-E4B-it",
+            "Multimodal",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2705 Passing"
+          ],
+          [
+            "meta-llama/Llama-4-Maverick-17B-128E-Instruct/multimodal",
+            "Multimodal",
+            "\u2753 Untested",
+            "\u2753 Untested",
+            "\u2753 Untested"
+          ],
+          [
+            "MiniMaxAI/MiniMax-M2.5",
+            "Text",
+            "\u2753 Untested",
+            "\u2753 Untested",
+            "\u2753 Untested"
+          ],
+          [
+            "Qwen/Qwen3-30B-A3B",
+            "Text",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2705 Passing"
+          ],
+          [
+            "Qwen/Qwen3-32B",
+            "Text",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2705 Passing"
+          ],
+          [
+            "Qwen/Qwen3-4B",
+            "Text",
+            "\u2705 Passing",
+            "\u2705 Passing",
+            "\u2705 Passing"
+          ],
+          [
+            "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+            "Text",
+            "not enough HBM",
+            "not enough HBM",
+            "not enough HBM"
+          ],
+          [
+            "Qwen/Qwen3.5-397B-A17B",
+            "Text",
+            "not enough HBM",
+            "not enough HBM",
+            "not enough HBM"
+          ]
+        ]
+      }
+    ],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'vLLM TPU recommended models' (https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/)?",
+        "answer": "Model and feature validation matrix; check release and nightly support before deploying."
+      },
+      {
+        "question": "How does 'vLLM TPU recommended models' handle: Recommended Models?",
+        "answer": "Although vLLM JAX\u2019s new unified backend makes out-of-the-box high performance serving possible with any model supported in vLLM, the reality is that we're still in the process of implementing a few core components. For this reason, until we land more capabilities, we recommend starting from this list of stress tested models and features below.\nWe are still landing components in vllm-jax that will improve performance for larger scale, higher complexity models (XL MoE, +vision encoders, MLA, etc.).\nIf you\u2019d like us to prioritize something specific, please submit a GitHub feature request [here](https://github.com/vllm-project/tpu-inference/issues/new/choose).\n**\ud83d\udea6 _Status Legend_ **\n>   * \u2705 **Passing:** Tested and works as expected. Ready for use.\n>   * \u274c **Failing:** Known to be broken or not functional. Help is wanted to fix this!\n>   * \ud83e\uddea **Experimental:** Works, but unoptimized or pending community validation.\n>   * \ud83d\udcdd **Planned:** Not yet implemented, but on the official roadmap.\n>   * \u26d4\ufe0f **Unplanned:** There is no benefit to adding this.\n>   * \u2753 **Untested:** The functionality exists but has not been recently or thoroughly verified.\n>"
+      },
+      {
+        "question": "How does 'vLLM TPU recommended models' handle: Recommended Models?",
+        "answer": "These tables show the models currently tested for accuracy and performance."
+      },
+      {
+        "question": "How does 'vLLM TPU recommended models' handle: Models?",
+        "answer": "[Release](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#release)[Nightly](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#nightly)  \n| Model  | Type  | Unit Test  | Correctness Test  | Performance Test  |  \n| --- | --- | --- | --- | --- |  \n| [google/gemma-4-26B-A4B-it](https://huggingface.co/google/gemma-4-26B-A4B-it)  | Multimodal  | \u2705  | \u2705  | \u2705  |  \n| [google/gemma-4-31B-it](https://huggingface.co/google/gemma-4-31B-it)  | Multimodal  | \u2705  | \u2705  | \u2705  |  \n| [google/gemma-4-E2B-it](https://huggingface.co/google/gemma-4-E2B-it)  | Multimodal  | \u2705  | \u2705  | \u2705  |  \n| [google/gemma-4-E4B-it](https://huggingface.co/google/gemma-4-E4B-it)  | Multimodal  | \u2705  | \u2705  | \u2705  |  \n| [google/gemma-3-27b-it](https://huggingface.co/google/gemma-3-27b-it)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [meta-llama/Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [meta-llama/Llama-3.3-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen3-30B-A3B](https://huggingface.co/Qwen/Qwen3-30B-A3B)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen3-32B](https://huggingface.co/Qwen/Qwen3-"
+      },
+      {
+        "question": "How does 'vLLM TPU recommended models' handle: Embedding Models?",
+        "answer": "[v7x](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#v7x)[v6e](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#v6e)  \n| Model  | Type  | UnitTest  | Accuracy/Correctness  | Benchmark  |  \n| --- | --- | --- | --- | --- |  \n| Qwen/Qwen3-Embedding-8B  | Embedding  | \u2705 Passing  | \u2705 Passing  | \u2753 Untested  |  \n| Qwen/Qwen2.5-VL-7B-Instruct  | Multimodal  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| Qwen/Qwen3-Omni-30B-A3B-Instruct  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| Qwen/Qwen3-VL-8B-Instruct  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| Qwen/Qwen3.5-9B  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| deepseek-ai/DeepSeek-OCR  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| google/gemma-4-26B-A4B-it  | Multimodal  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| google/gemma-4-31B-it  | Multimodal  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| google/gemma-4-E2B-it  | Multimodal  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| google/gemma-4-E4B-it  | Multimodal  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| meta-llama/Llama-4-Maverick-17B-128E-Instruct/multimodal  | Multimodal  | \u2753 Untested  |"
+      }
+    ],
+    "full_markdown": "# Recommended Models\nAlthough vLLM JAX\u2019s new unified backend makes out-of-the-box high performance serving possible with any model supported in vLLM, the reality is that we're still in the process of implementing a few core components. For this reason, until we land more capabilities, we recommend starting from this list of stress tested models and features below.\nWe are still landing components in vllm-jax that will improve performance for larger scale, higher complexity models (XL MoE, +vision encoders, MLA, etc.).\nIf you\u2019d like us to prioritize something specific, please submit a GitHub feature request [here](https://github.com/vllm-project/tpu-inference/issues/new/choose).\n**\ud83d\udea6 _Status Legend_ **\n>   * \u2705 **Passing:** Tested and works as expected. Ready for use.\n>   * \u274c **Failing:** Known to be broken or not functional. Help is wanted to fix this!\n>   * \ud83e\uddea **Experimental:** Works, but unoptimized or pending community validation.\n>   * \ud83d\udcdd **Planned:** Not yet implemented, but on the official roadmap.\n>   * \u26d4\ufe0f **Unplanned:** There is no benefit to adding this.\n>   * \u2753 **Untested:** The functionality exists but has not been recently or thoroughly verified.\n> \n\n## Recommended Models\nThese tables show the models currently tested for accuracy and performance.\n### Models\n[Release](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#release)[Nightly](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#nightly)  \n| Model  | Type  | Unit Test  | Correctness Test  | Performance Test  |  \n| --- | --- | --- | --- | --- |  \n| [google/gemma-4-26B-A4B-it](https://huggingface.co/google/gemma-4-26B-A4B-it)  | Multimodal  | \u2705  | \u2705  | \u2705  |  \n| [google/gemma-4-31B-it](https://huggingface.co/google/gemma-4-31B-it)  | Multimodal  | \u2705  | \u2705  | \u2705  |  \n| [google/gemma-4-E2B-it](https://huggingface.co/google/gemma-4-E2B-it)  | Multimodal  | \u2705  | \u2705  | \u2705  |  \n| [google/gemma-4-E4B-it](https://huggingface.co/google/gemma-4-E4B-it)  | Multimodal  | \u2705  | \u2705  | \u2705  |  \n| [google/gemma-3-27b-it](https://huggingface.co/google/gemma-3-27b-it)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [meta-llama/Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [meta-llama/Llama-3.3-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen3-30B-A3B](https://huggingface.co/Qwen/Qwen3-30B-A3B)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen3-32B](https://huggingface.co/Qwen/Qwen3-32B)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen3-4B](https://huggingface.co/Qwen/Qwen3-4B)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen3-Coder-480B-A35B-Instruct](https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen3.5-397B-A17B](https://huggingface.co/Qwen/Qwen3.5-397B-A17B)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen3-Embedding-8B](https://huggingface.co/Qwen/Qwen3-Embedding-8B)  | Embedding  | \u2705  | \u2705  | \u2753  |  \n| [Qwen/Qwen2.5-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct)  | Multimodal  | \u2705  | \u2705  | \u2753  |  \n| [deepseek-ai/DeepSeek-R1](https://huggingface.co/deepseek-ai/DeepSeek-R1)  | Text  | \u2705  | \u2705  | \u2753  |  \n| [moonshotai/Kimi-K2.6](https://huggingface.co/moonshotai/Kimi-K2.6)  | Text  | \u2705  | \u2705  | \u2753  |  \n| [openai/gpt-oss-120b](https://huggingface.co/openai/gpt-oss-120b)  | Text  | \u2705  | \u2705  | \u2753  |  \n| [deepseek-ai/DeepSeek-OCR](https://huggingface.co/deepseek-ai/DeepSeek-OCR)  | Multimodal  | \u2753  | \u2753  | \u2753  |  \n| [meta-llama/Llama-4-Maverick-17B-128E-Instruct/multimodal](https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct/multimodal)  | Multimodal  | \u2753  | \u2753  | \u2753  |  \n| [Qwen/Qwen3-Omni-30B-A3B-Instruct](https://huggingface.co/Qwen/Qwen3-Omni-30B-A3B-Instruct)  | Multimodal  | \u2753  | \u2753  | \u2753  |  \n| [Qwen/Qwen3-VL-8B-Instruct](https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct)  | Multimodal  | \u2753  | \u2753  | \u2753  |  \n| [Qwen/Qwen3.5-9B](https://huggingface.co/Qwen/Qwen3.5-9B)  | Multimodal  | \u2753  | \u2753  | \u2753  |  \n| [deepseek-ai/DeepSeek-Math-V2](https://huggingface.co/deepseek-ai/DeepSeek-Math-V2)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [deepseek-ai/DeepSeek-V3.1](https://huggingface.co/deepseek-ai/DeepSeek-V3.1)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [deepseek-ai/DeepSeek-V3.2](https://huggingface.co/deepseek-ai/DeepSeek-V3.2)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [deepseek-ai/DeepSeek-V3.2-Speciale](https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Speciale)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [MiniMaxAI/MiniMax-M2.5](https://huggingface.co/MiniMaxAI/MiniMax-M2.5)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [mistralai/Mistral-Small-4-119B-2603/text-only](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603/text-only)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [moonshotai/Kimi-K2-Thinking](https://huggingface.co/moonshotai/Kimi-K2-Thinking)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [openai/gpt-oss-20b](https://huggingface.co/openai/gpt-oss-20b)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [zai-org/GLM-5](https://huggingface.co/zai-org/GLM-5)  | Text  | \u2753  | \u2753  | \u2753  |  \n| Model  | Type  | Unit Test  | Correctness Test  | Performance Test  |  \n| --- | --- | --- | --- | --- |  \n| [google/gemma-4-26B-A4B-it](https://huggingface.co/google/gemma-4-26B-A4B-it)  | Multimodal  | \u2705  | \u2705  | \u2705  |  \n| [google/gemma-4-31B-it](https://huggingface.co/google/gemma-4-31B-it)  | Multimodal  | \u2705  | \u2705  | \u2705  |  \n| [google/gemma-3-27b-it](https://huggingface.co/google/gemma-3-27b-it)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [meta-llama/Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [meta-llama/Llama-3.3-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen3-30B-A3B](https://huggingface.co/Qwen/Qwen3-30B-A3B)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen3-4B](https://huggingface.co/Qwen/Qwen3-4B)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen3-Coder-480B-A35B-Instruct](https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen3.5-397B-A17B](https://huggingface.co/Qwen/Qwen3.5-397B-A17B)  | Text  | \u2705  | \u2705  | \u2705  |  \n| [Qwen/Qwen2.5-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct)  | Multimodal  | \u2705  | \u2705  | \u274c  |  \n| [Qwen/Qwen3-Embedding-8B](https://huggingface.co/Qwen/Qwen3-Embedding-8B)  | Embedding  | \u2705  | \u2705  | \u2753  |  \n| [deepseek-ai/DeepSeek-R1](https://huggingface.co/deepseek-ai/DeepSeek-R1)  | Text  | \u2705  | \u2705  | \u2753  |  \n| [moonshotai/Kimi-K2.6](https://huggingface.co/moonshotai/Kimi-K2.6)  | Text  | \u2705  | \u2705  | \u2753  |  \n| [openai/gpt-oss-120b](https://huggingface.co/openai/gpt-oss-120b)  | Text  | \u2705  | \u2705  | \u2753  |  \n| [google/gemma-4-E2B-it](https://huggingface.co/google/gemma-4-E2B-it)  | Multimodal  | \u2705  | \u274c  | \u2753  |  \n| [google/gemma-4-E4B-it](https://huggingface.co/google/gemma-4-E4B-it)  | Multimodal  | \u2705  | \u274c  | \u2753  |  \n| [Qwen/Qwen3-32B](https://huggingface.co/Qwen/Qwen3-32B)  | Text  | \u274c  | \u2753  | \u2753  |  \n| [deepseek-ai/DeepSeek-OCR](https://huggingface.co/deepseek-ai/DeepSeek-OCR)  | Multimodal  | \u2753  | \u2753  | \u2753  |  \n| [Qwen/Qwen3-Omni-30B-A3B-Instruct](https://huggingface.co/Qwen/Qwen3-Omni-30B-A3B-Instruct)  | Multimodal  | \u2753  | \u2753  | \u2753  |  \n| [Qwen/Qwen3-VL-8B-Instruct](https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct)  | Multimodal  | \u2753  | \u2753  | \u2753  |  \n| [Qwen/Qwen3.5-9B](https://huggingface.co/Qwen/Qwen3.5-9B)  | Multimodal  | \u2753  | \u2753  | \u2753  |  \n| [deepseek-ai/DeepSeek-Math-V2](https://huggingface.co/deepseek-ai/DeepSeek-Math-V2)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [deepseek-ai/DeepSeek-V3.1](https://huggingface.co/deepseek-ai/DeepSeek-V3.1)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [deepseek-ai/DeepSeek-V3.2](https://huggingface.co/deepseek-ai/DeepSeek-V3.2)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [deepseek-ai/DeepSeek-V3.2-Speciale](https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Speciale)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [MiniMaxAI/MiniMax-M2.5](https://huggingface.co/MiniMaxAI/MiniMax-M2.5)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [moonshotai/Kimi-K2-Thinking](https://huggingface.co/moonshotai/Kimi-K2-Thinking)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [openai/gpt-oss-20b](https://huggingface.co/openai/gpt-oss-20b)  | Text  | \u2753  | \u2753  | \u2753  |  \n| [zai-org/GLM-5](https://huggingface.co/zai-org/GLM-5)  | Text  | \u2753  | \u2753  | \u2753  |  \n### Embedding Models\n[v7x](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#v7x)[v6e](https://docs.vllm.ai/projects/tpu/en/latest/recommended_models/#v6e)  \n| Model  | Type  | UnitTest  | Accuracy/Correctness  | Benchmark  |  \n| --- | --- | --- | --- | --- |  \n| Qwen/Qwen3-Embedding-8B  | Embedding  | \u2705 Passing  | \u2705 Passing  | \u2753 Untested  |  \n| Qwen/Qwen2.5-VL-7B-Instruct  | Multimodal  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| Qwen/Qwen3-Omni-30B-A3B-Instruct  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| Qwen/Qwen3-VL-8B-Instruct  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| Qwen/Qwen3.5-9B  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| deepseek-ai/DeepSeek-OCR  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| google/gemma-4-26B-A4B-it  | Multimodal  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| google/gemma-4-31B-it  | Multimodal  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| google/gemma-4-E2B-it  | Multimodal  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| google/gemma-4-E4B-it  | Multimodal  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| meta-llama/Llama-4-Maverick-17B-128E-Instruct/multimodal  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| MiniMaxAI/MiniMax-M2.5  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| Qwen/Qwen3-30B-A3B  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| Qwen/Qwen3-32B  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| Qwen/Qwen3-4B  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| Qwen/Qwen3-Coder-480B-A35B-Instruct  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| Qwen/Qwen3.5-397B-A17B  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| deepseek-ai/DeepSeek-Math-V2  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| deepseek-ai/DeepSeek-R1  | Text  | \u2705 Passing  | \u2705 Passing  | \u2753 Untested  |  \n| deepseek-ai/DeepSeek-V3.1  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| deepseek-ai/DeepSeek-V3.2  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| deepseek-ai/DeepSeek-V3.2-Speciale  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| google/gemma-3-27b-it  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| meta-llama/Llama-3.1-8B-Instruct  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| meta-llama/Llama-3.3-70B-Instruct  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| mistralai/Mistral-Small-4-119B-2603/text-only  | Text  | \u2753 Untested  | \u2705 Passing  | \u2753 Untested  |  \n| moonshotai/Kimi-K2-Thinking  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| moonshotai/Kimi-K2.6  | Text  | \u2705 Passing  | \u2705 Passing  | \u2753 Untested  |  \n| openai/gpt-oss-120b  | Text  | \u2705 Passing  | \u2705 Passing  | \u2753 Untested  |  \n| openai/gpt-oss-20b  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| zai-org/GLM-5  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| Model  | Type  | UnitTest  | Accuracy/Correctness  | Benchmark  |  \n| --- | --- | --- | --- | --- |  \n| Qwen/Qwen3-Embedding-8B  | Embedding  | \u2705 Passing  | \u2705 Passing  | \u2753 Untested  |  \n| Qwen/Qwen2.5-VL-7B-Instruct  | Multimodal  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| Qwen/Qwen3-Omni-30B-A3B-Instruct  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| Qwen/Qwen3-VL-8B-Instruct  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| Qwen/Qwen3.5-9B  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| deepseek-ai/DeepSeek-OCR  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| google/gemma-4-26B-A4B-it  | Multimodal  | not enough HBM  | not enough HBM  | not enough HBM  |  \n| google/gemma-4-31B-it  | Multimodal  | \u2705 Passing  | \u2705 Passing  | not enough HBM  |  \n| google/gemma-4-E2B-it  | Multimodal  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| google/gemma-4-E4B-it  | Multimodal  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| meta-llama/Llama-4-Maverick-17B-128E-Instruct/multimodal  | Multimodal  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| MiniMaxAI/MiniMax-M2.5  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| Qwen/Qwen3-30B-A3B  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| Qwen/Qwen3-32B  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| Qwen/Qwen3-4B  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| Qwen/Qwen3-Coder-480B-A35B-Instruct  | Text  | not enough HBM  | not enough HBM  | not enough HBM  |  \n| Qwen/Qwen3.5-397B-A17B  | Text  | not enough HBM  | not enough HBM  | not enough HBM  |  \n| deepseek-ai/DeepSeek-Math-V2  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| deepseek-ai/DeepSeek-R1  | Text  | not enough HBM  | not enough HBM  | \u2753 Untested  |  \n| deepseek-ai/DeepSeek-V3.1  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| deepseek-ai/DeepSeek-V3.2  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| deepseek-ai/DeepSeek-V3.2-Speciale  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| google/gemma-3-27b-it  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| meta-llama/Llama-3.1-8B-Instruct  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| meta-llama/Llama-3.3-70B-Instruct  | Text  | \u2705 Passing  | \u2705 Passing  | \u2705 Passing  |  \n| mistralai/Mistral-Small-4-119B-2603/text-only  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| moonshotai/Kimi-K2-Thinking  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| moonshotai/Kimi-K2.6  | Text  | not enough HBM  | not enough HBM  | \u2753 Untested  |  \n| openai/gpt-oss-120b  | Text  | not enough HBM  | not enough HBM  | \u2753 Untested  |  \n| openai/gpt-oss-20b  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |  \n| zai-org/GLM-5  | Text  | \u2753 Untested  | \u2753 Untested  | \u2753 Untested  |"
+  }
 }

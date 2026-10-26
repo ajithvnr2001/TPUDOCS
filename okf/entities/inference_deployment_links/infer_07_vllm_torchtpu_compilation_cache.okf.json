@@ -1,64 +1,147 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:infer_07_vllm_torchtpu_compilation_cache",
-  "@type": "DocumentationResource",
-  "name": "vLLM-TorchTPU compilation cache",
-  "canonicalUrl": "https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/compilation_cache/",
-  "category": "Inference deployment links",
-  "categorySlug": "inference_deployment_links",
-  "description": "Persist compiled artifacts and reduce repeated startup compilation.",
-  "provenance": {
-    "sourceUrl": "https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/compilation_cache/",
-    "crawledAt": "2026-10-26T12:47:33.096242+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 9378
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "vLLM-TorchTPU compilation cache",
-      "documentedIn",
-      "https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/compilation_cache/"
-    ],
-    [
-      "vLLM-TorchTPU compilation cache",
-      "belongsToCategory",
-      "inference_deployment_links"
-    ],
-    [
-      "vLLM-TorchTPU compilation cache",
-      "supportsWorkflow",
-      "High Throughput LLM Inference Serving"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:infer_07_vllm_torchtpu_compilation_cache",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "infer_07_vllm_torchtpu_compilation_cache",
+    "name": "vLLM-TorchTPU compilation cache",
+    "url": "https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/compilation_cache/",
+    "category": "inference_deployment_links",
+    "description": "Persist compiled artifacts and reduce repeated startup compilation.",
+    "char_count": 2247,
+    "word_count": 276,
+    "section_count": 4,
+    "code_block_count": 1,
+    "table_count": 0,
+    "cli_command_count": 1,
+    "indexed_at": "2026-10-26T14:46:54.627823+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:infer_07_vllm_torchtpu_compilation_cache",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:infer_07_vllm_torchtpu_compilation_cache",
+        "predicate": "schema:name",
+        "object": "vLLM-TorchTPU compilation cache"
+      },
+      {
+        "subject": "tpu_doc:infer_07_vllm_torchtpu_compilation_cache",
+        "predicate": "schema:url",
+        "object": "https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/compilation_cache/"
+      },
+      {
+        "subject": "tpu_doc:infer_07_vllm_torchtpu_compilation_cache",
+        "predicate": "schema:category",
+        "object": "inference_deployment_links"
+      },
+      {
+        "subject": "tpu_doc:infer_07_vllm_torchtpu_compilation_cache",
+        "predicate": "schema:description",
+        "object": "Persist compiled artifacts and reduce repeated startup compilation."
+      },
+      {
+        "subject": "tpu_doc:infer_07_vllm_torchtpu_compilation_cache",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:infer_07_vllm_torchtpu_compilation_cache",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:vLLM-TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:infer_07_vllm_torchtpu_compilation_cache",
+        "predicate": "okf:hasSection",
+        "object": "TorchTPU Compilation Cache"
+      },
+      {
+        "subject": "tpu_doc:infer_07_vllm_torchtpu_compilation_cache",
+        "predicate": "okf:hasSection",
+        "object": "Cache Architecture & Environment Variables"
+      },
+      {
+        "subject": "tpu_doc:infer_07_vllm_torchtpu_compilation_cache",
+        "predicate": "okf:hasSection",
+        "object": "Compilation Debugging & Telemetry"
+      },
+      {
+        "subject": "tpu_doc:infer_07_vllm_torchtpu_compilation_cache",
+        "predicate": "okf:hasSection",
+        "object": "`VLLM_XLA_CHECK_RECOMPILATION` (Runtime Recompilation Detector)"
+      },
+      {
+        "subject": "tpu_doc:infer_07_vllm_torchtpu_compilation_cache",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "vLLM-TorchTPU compilation cache provides official guidance on Persist compiled artifacts and reduce repeated startup compilation.",
-      "confidence": 1.0,
-      "source": "https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/compilation_cache/",
-      "verified": true
-    },
-    {
-      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
-      "confidence": 1.0,
-      "source": "https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/compilation_cache/",
-      "verified": true
-    },
-    {
-      "assertion": "vLLM-TorchTPU is the out-of-tree PyTorch-native serving backend for vLLM on TPUs, distinct from the JAX-native vllm-tpu backend.",
-      "confidence": 1.0,
-      "source": "https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/compilation_cache/",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is vLLM-TorchTPU compilation cache used for in Cloud TPU workflows?",
-      "answer": "Persist compiled artifacts and reduce repeated startup compilation.",
-      "category": "inference_deployment_links"
-    }
-  ],
-  "contentSummary": "Persist compiled artifacts and reduce repeated startup compilation."
+  },
+  "structured_content": {
+    "summary": "Persist compiled artifacts and reduce repeated startup compilation.",
+    "sections": [
+      {
+        "heading": "TorchTPU Compilation Cache",
+        "level": 1,
+        "content": "To enable persistent native C++ compilation caching in `vllm-torchtpu`, set `TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT` to a persistent directory path:\n\n```\nexport TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT=\"/path/to/persistent_cache\"\n\n```"
+      },
+      {
+        "heading": "Cache Architecture & Environment Variables",
+        "level": 2,
+        "content": "`vllm-torchtpu` separates Python-level framework tracing cache from native C++ compiled binary executables:\n  1. **`TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT`**(C++ Native PJRT Binaries):\n     * **Purpose** : Controls the persistent root directory for native C++ PJRT compiled binary executables (`.bin` files).\n     * **Scope** : Native `torch_tpu` C++ backend. This is the primary driver variable required to enable persistent executable binary caching on TPU.\n  2. **`VLLM_CACHE_ROOT`**(vLLM Python-Level Framework Artifacts):\n     * **Purpose** : Controls the root directory for vLLM Python-level framework tracing artifacts.\n     * **Scope** : Stores PyTorch Dynamo FX graph bytecode, Guard expressions, AOTAutograd tracing artifacts (`torch_compile_cache/torch_aot_compile`), and `TpuCompilerAdaptor` metadata pickle handles (`artifact_compile_range_*`).\n     * **Note** : `VLLM_CACHE_ROOT` manages Python framework artifacts and is completely independent of the C++ PJRT compiled binary executables managed by `TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT`."
+      },
+      {
+        "heading": "Compilation Debugging & Telemetry",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "heading": "`VLLM_XLA_CHECK_RECOMPILATION` (Runtime Recompilation Detector)",
+        "level": 3,
+        "content": "* **Default** : `0` (Disabled)\n  * **Purpose** : Detects unexpected compilation during serving \u2014 such as an input shape, dtype, or code path that AOT warmup never precompiled and that stalls the engine loop on a cache miss.\n  * **How It Works** : Queries `torch.tpu._get_cache_stats()` and advances the cached graph count watermark at each checkpoint (including every AOT precompile bucket and runtime forward step), logging newly compiled graphs whenever a cache miss occurs.\n  * **Overhead** : `0` (zero runtime overhead) vs `1` (queries cache stats and logs per step).\n  * **Recommendation** :\n    * `1`: Enable in CI and test pipelines to catch compilation leaks and un-warmed code paths.\n    * `0`: Keep disabled in production and benchmarking for maximum throughput."
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "export TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT=\"/path/to/persistent_cache\""
+      }
+    ],
+    "cli_commands": [
+      "export TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT=\"/path/to/persistent_cache\""
+    ],
+    "environment_variables": [
+      "TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT"
+    ],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'vLLM-TorchTPU compilation cache' (https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/compilation_cache/)?",
+        "answer": "Persist compiled artifacts and reduce repeated startup compilation."
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU compilation cache' handle: TorchTPU Compilation Cache?",
+        "answer": "To enable persistent native C++ compilation caching in `vllm-torchtpu`, set `TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT` to a persistent directory path:\n\n```\nexport TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT=\"/path/to/persistent_cache\"\n\n```"
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU compilation cache' handle: Cache Architecture & Environment Variables?",
+        "answer": "`vllm-torchtpu` separates Python-level framework tracing cache from native C++ compiled binary executables:\n  1. **`TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT`**(C++ Native PJRT Binaries):\n     * **Purpose** : Controls the persistent root directory for native C++ PJRT compiled binary executables (`.bin` files).\n     * **Scope** : Native `torch_tpu` C++ backend. This is the primary driver variable required to enable persistent executable binary caching on TPU.\n  2. **`VLLM_CACHE_ROOT`**(vLLM Python-Level Framework Artifacts):\n     * **Purpose** : Controls the root directory for vLLM Python-level framework tracing artifacts.\n     * **Scope** : Stores PyTorch Dynamo FX graph bytecode, Guard expressions, AOTAutograd tracing artifacts (`torch_compile_cache/torch_aot_compile`), and `TpuCompilerAdaptor` metadata pickle handles (`artifact_compile_range_*`).\n     * **Note** : `VLLM_CACHE_ROOT` manages Python framework artifacts and is completely independent of the C++ PJRT compiled binary executables managed by `TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT`."
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU compilation cache' handle: `VLLM_XLA_CHECK_RECOMPILATION` (Runtime Recompilation Detector)?",
+        "answer": "* **Default** : `0` (Disabled)\n  * **Purpose** : Detects unexpected compilation during serving \u2014 such as an input shape, dtype, or code path that AOT warmup never precompiled and that stalls the engine loop on a cache miss.\n  * **How It Works** : Queries `torch.tpu._get_cache_stats()` and advances the cached graph count watermark at each checkpoint (including every AOT precompile bucket and runtime forward step), logging newly compiled graphs whenever a cache miss occurs.\n  * **Overhead** : `0` (zero runtime overhead) vs `1` (queries cache stats and logs per step).\n  * **Recommendation** :\n    * `1`: Enable in CI and test pipelines to catch compilation leaks and un-warmed code paths.\n    * `0`: Keep disabled in production and benchmarking for maximum throughput."
+      }
+    ],
+    "full_markdown": "# TorchTPU Compilation Cache\nTo enable persistent native C++ compilation caching in `vllm-torchtpu`, set `TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT` to a persistent directory path:\n\n```\nexport TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT=\"/path/to/persistent_cache\"\n\n```\n\n## Cache Architecture & Environment Variables\n`vllm-torchtpu` separates Python-level framework tracing cache from native C++ compiled binary executables:\n  1. **`TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT`**(C++ Native PJRT Binaries):\n     * **Purpose** : Controls the persistent root directory for native C++ PJRT compiled binary executables (`.bin` files).\n     * **Scope** : Native `torch_tpu` C++ backend. This is the primary driver variable required to enable persistent executable binary caching on TPU.\n  2. **`VLLM_CACHE_ROOT`**(vLLM Python-Level Framework Artifacts):\n     * **Purpose** : Controls the root directory for vLLM Python-level framework tracing artifacts.\n     * **Scope** : Stores PyTorch Dynamo FX graph bytecode, Guard expressions, AOTAutograd tracing artifacts (`torch_compile_cache/torch_aot_compile`), and `TpuCompilerAdaptor` metadata pickle handles (`artifact_compile_range_*`).\n     * **Note** : `VLLM_CACHE_ROOT` manages Python framework artifacts and is completely independent of the C++ PJRT compiled binary executables managed by `TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT`.\n\n\n## Compilation Debugging & Telemetry\n###  `VLLM_XLA_CHECK_RECOMPILATION` (Runtime Recompilation Detector)\n  * **Default** : `0` (Disabled)\n  * **Purpose** : Detects unexpected compilation during serving \u2014 such as an input shape, dtype, or code path that AOT warmup never precompiled and that stalls the engine loop on a cache miss.\n  * **How It Works** : Queries `torch.tpu._get_cache_stats()` and advances the cached graph count watermark at each checkpoint (including every AOT precompile bucket and runtime forward step), logging newly compiled graphs whenever a cache miss occurs.\n  * **Overhead** : `0` (zero runtime overhead) vs `1` (queries cache stats and logs per step).\n  * **Recommendation** :\n    * `1`: Enable in CI and test pipelines to catch compilation leaks and un-warmed code paths.\n    * `0`: Keep disabled in production and benchmarking for maximum throughput."
+  }
 }

@@ -1,63 +1,527 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:mig_10_torchtpu_distributed_support",
-  "@type": "DocumentationResource",
-  "name": "TorchTPU distributed support",
-  "canonicalUrl": "https://torchtpu.readthedocs.io/en/latest/distributed_support/",
-  "category": "Nvidia to tpu migration docs",
-  "categorySlug": "nvidia_to_tpu_migration_docs",
-  "description": "Use torch.distributed with tpu_dist, DDP, FSDP, and DTensor across TPU devices.",
-  "provenance": {
-    "sourceUrl": "https://torchtpu.readthedocs.io/en/latest/distributed_support/",
-    "crawledAt": "2026-10-26T12:48:08.749722+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 39465
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "TorchTPU distributed support",
-      "documentedIn",
-      "https://torchtpu.readthedocs.io/en/latest/distributed_support/"
-    ],
-    [
-      "TorchTPU distributed support",
-      "belongsToCategory",
-      "nvidia_to_tpu_migration_docs"
-    ],
-    [
-      "TorchTPU distributed support",
-      "supportsWorkflow",
-      "CUDA to TPU Code Migration"
-    ],
-    [
-      "TorchTPU distributed support",
-      "primaryFramework",
-      "TorchTPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:mig_10_torchtpu_distributed_support",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "mig_10_torchtpu_distributed_support",
+    "name": "TorchTPU distributed support",
+    "url": "https://torchtpu.readthedocs.io/en/latest/distributed_support/",
+    "category": "nvidia_to_tpu_migration_docs",
+    "description": "Use torch.distributed with tpu_dist, DDP, FSDP, and DTensor across TPU devices.",
+    "char_count": 18859,
+    "word_count": 2282,
+    "section_count": 26,
+    "code_block_count": 8,
+    "table_count": 4,
+    "cli_command_count": 1,
+    "indexed_at": "2026-10-26T14:46:54.763435+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "schema:name",
+        "object": "TorchTPU distributed support"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "schema:url",
+        "object": "https://torchtpu.readthedocs.io/en/latest/distributed_support/"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "schema:category",
+        "object": "nvidia_to_tpu_migration_docs"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "schema:description",
+        "object": "Use torch.distributed with tpu_dist, DDP, FSDP, and DTensor across TPU devices."
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:Pallas"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "Distributed support"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "Key architectural differences from GPU"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "Collective execution and fusion modes"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "Using `@torch.tpu.distributed.spmd_safe`"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "Configuring the compilation handshake"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "IMPORTANT: If Handshake is in COMPILE_STAGE a recompilation happens only on `divergent_rank`"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "this would initiate a Handshake ONLY ON THAT RANK which would timeout which is why we provide"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "a DISPATCH_STAGE mode."
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "Distributed initialization"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "1. Worker script (`train.py`)"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "2. Launching with torchrun"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "Detect and export TORCH_TPU_TOPOLOGY, TORCH_TPU_SLICEBUILDER_ADDRESSES,"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "WORLD_SIZE, NODE_RANK, and multi-host coordination variables:"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "Launch 1 worker process per TPU device on the host:"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "Optimal device mesh mapping"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "Example: Constructing a topology-aware 2D DeviceMesh"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "Logical mesh shape: (dp=4, tp=2) on an 8-device slice,"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "ordered from least communication-intensive (dp) to most intensive (tp):"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "Compute an optimal rank tensor aligned with physical ICI rings"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "Instantiate the PyTorch DeviceMesh"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "Distributed Pallas Kernels"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "Writing and Registering a Communicating Pallas Kernel"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "1. Pallas Kernel Body: Asynchronously sends local buffer to neighbor rank (rank + 1)"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "2. JAX Wrapper with ShardMap and DMA Semaphores"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:hasSection",
+        "object": "3. Create the TorchTPU callable wrapper"
+      },
+      {
+        "subject": "tpu_doc:mig_10_torchtpu_distributed_support",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "TORCH_TPU_SPMD_HANDSHAKE_STAGE"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "TorchTPU distributed support provides official guidance on Use torch.distributed with tpu_dist, DDP, FSDP, and DTensor across TPU devices.",
-      "confidence": 1.0,
-      "source": "https://torchtpu.readthedocs.io/en/latest/distributed_support/",
-      "verified": true
-    },
-    {
-      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
-      "confidence": 1.0,
-      "source": "https://torchtpu.readthedocs.io/en/latest/distributed_support/",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is TorchTPU distributed support used for in Cloud TPU workflows?",
-      "answer": "Use torch.distributed with tpu_dist, DDP, FSDP, and DTensor across TPU devices.",
-      "category": "nvidia_to_tpu_migration_docs"
-    }
-  ],
-  "contentSummary": "Use torch.distributed with tpu_dist, DDP, FSDP, and DTensor across TPU devices."
+  },
+  "structured_content": {
+    "summary": "Use torch.distributed with tpu_dist, DDP, FSDP, and DTensor across TPU devices.",
+    "sections": [
+      {
+        "heading": "Distributed support",
+        "level": 2,
+        "content": "TorchTPU implements distributed communication at the PyTorch ProcessGroup level (`c10d::Backend`) under the `tpu_dist` backend name. By intercepting collectives at the ProcessGroup layer, TorchTPU supports standard `torch.distributed` APIs in both eager mode and `torch.compile`, and works directly with PyTorch distributed frameworks including DTensor, DistributedDataParallel (DDP), FSDPv2, and [SimpleFSDP](https://arxiv.org/abs/2411.00284).\nLike PyTorch on GPU, TorchTPU enforces a one-process-per-device execution model. Under the hood, TPU-to-TPU communication does not use a separate runtime communication library (such as NCCL); instead, collective operations are lowered directly into [StableHLO collective operations](https://openxla.org/stablehlo/spec#collective_ops) (such as `stablehlo.all_reduce`, `stablehlo.all_gather`, `stablehlo.reduce_scatter`, and `stablehlo.all_to_all`) and compiled by XLA into the TPU executable."
+      },
+      {
+        "heading": "Key architectural differences from GPU",
+        "level": 3,
+        "content": "While TorchTPU preserves standard `torch.distributed` semantics, programming TPUs via StableHLO and PjRT introduces three key differences compared to GPU backends:\n  * **Pre-initialization hardware topology discovery:** On a multi-GPU host, each process launched by torchrun can inspect all attached GPUs, select its assigned device via `cuda:{local_rank}`, and move models to that device before calling `torch.distributed.init_process_group()`. On a TPU host, each worker process is bound to a single TPU device and cannot own the full set of devices on its own. Before initializing the PjRT runtime or calling `torch.distributed.init_process_group()`, the environment must specify the physical mesh geometry of the [TPU slice](https://cloud.google.com/tpu/docs/system-architecture-tpu-vm#slices) (`TORCH_TPU_TOPOLOGY`), the local coordinator addresses used to construct the Inter-Chip Interconnect (ICI) mesh (`TORCH_TPU_SLICEBUILDER_ADDRESSES`), and the total number of participating TPU devices (`WORLD_SIZE`).\n  * **Global Replica Group Resolution for Subgroups:** In PyTorch, a collective call such as [`torch.distributed.all_reduce`](https://docs.pytorch.org/docs/stable/distributed.html#torch.distributed.all_reduce) only receives the ProcessGroup (subgroup) in which the calling rank participates. In contrast, [`stablehlo.all_reduce`](https://openxla.org/stablehlo/spec#all_reduce) requires a complete description of all participating subgroups across the default process group (`replica_groups`), even those the current process does not belong to:\n\n```\n%0 = \"stablehlo.all_reduce\"(%arg0) <{\n  replica_groups = dense<[[4, 0, 1, 3], [5, 2, 6, 7]]> : tensor<2x4xi64>\n}> ({ ... })\n\n```\n\nTorchTPU's `tpu_dist` backend automatically exchanges subgroup membership across all ranks in the default process group during collective setup and constructs the global `replica_groups` and `device_assignment` required by XLA. * **SPMD Compilation vs. MPMD Execution:** The XLA compiler and TPU communication stack are designed for Single Program, Multiple Data (SPMD) execution, where every rank compiles and executes an identical StableHLO module containing matching collective operations. However, PyTorch programs can exhibit Multiple Program, Multiple Data (MPMD) behavior across ranks\u2014for example, due to rank-conditional branches (`if dist.get_rank() == 0:`) or uneven tensor sharding when a dimension is not evenly divisible by the number of devices. If different ranks execute different StableHLO modules containing collectives, mismatched synchronization flag IDs or buffer offsets across ranks can cause runtime deadlocks or memory corruption."
+      },
+      {
+        "heading": "Collective execution and fusion modes",
+        "level": 3,
+        "content": "TorchTPU runs each collective as a skinny collective. To let XLA overlap compute and communication, you can opt in to either or both of two mechanisms that fuse collectives with the surrounding computation. The two are independent and can be combined: collectives inside an `@spmd_safe` function are always fused, and, when enabled, the Compilation Handshake decides for the remaining collectives in each `torch.compile` graph.  \n| Mode  | Configuration  | Graph Behavior  | Best For  |  \n| --- | --- | --- | --- |  \n| Skinny collectives (default behavior)  | Always on for any collective that the opt-ins below don't fuse  | Compiles each collective op into its own standalone (\"skinny\") StableHLO module by inserting graph breaks around collectives.  | General MPMD safety out of the box, at the cost of preventing XLA from overlapping compute and communication.  |  \n|  `@spmd_safe` decorator (opt-in)  | `@torch.tpu.distributed.spmd_safe`  | Disables graph breaks around collectives inside the decorated function, fusing compute and collectives into a single StableHLO module.  | Known-SPMD functions or training steps (e.g., SimpleFSDP or manual tensor parallelism) to maximize XLA compute-communication overlap.  |  \n| Compilation Handshake (opt-in)  |  `TORCH_TPU_SPMD_HANDSHAKE_STAGE=COMPILE_STAGE` or `DISPATCH_STAGE` (default: OFF)  | In torch.compile graphs, checks that the compiled FX graphs match across all ranks; fuses collectives if they do and falls back to skinny collectives if they don't.  | Automatically enabling collective fusion in `torch.compile` while guarding against accidental MPMD divergence.  |"
+      },
+      {
+        "heading": "Using `@torch.tpu.distributed.spmd_safe`",
+        "level": 4,
+        "content": "When you know a function or model step is strictly SPMD across all ranks (no rank-dependent control flow or uneven tensor shapes), decorate it with `@torch.tpu.distributed.spmd_safe`. Under `torch.compile` (and `DEFER_AND_FUSE` eager mode), this removes graph breaks around collectives so XLA can schedule asynchronous communication alongside matrix computation:\n\n```\nimport torch\nimport torch.distributed as dist\n\n@torch.compile\n@torch.tpu.distributed.spmd_safe\ndef spmd_train_step(x: torch.Tensor, weight: torch.Tensor) -> torch.Tensor:\n  out = x @ weight\n  dist.all_reduce(out, op=dist.ReduceOp.AVG)\n  return torch.nn.functional.silu(out)\n\n```\n\nOnly apply `@torch.tpu.distributed.spmd_safe` to code that executes the exact same sequence of tensor and collective operations on every rank; applying it to MPMD code can produce different StableHLO modules across ranks and cause TPU execution deadlocks."
+      },
+      {
+        "heading": "Configuring the compilation handshake",
+        "level": 4,
+        "content": "Instead of manually annotating functions with `@spmd_safe`, you can enable TorchTPU's Compilation Handshake via the `TORCH_TPU_SPMD_HANDSHAKE_STAGE` environment variable. When `torch.compile` traces a graph containing global collectives, TorchTPU runs a consensus check across all ranks to verify that their compiled FX graphs match before fusing collectives into the graph:\n  * `OFF` (Default):** Disables the handshake; collectives use default Skinny Collectives unless marked `@torch.tpu.distributed.spmd_safe`.\n  * `COMPILE_STAGE`: Verifies graph consensus across ranks prior to PjRT compilation. If all ranks produce identical graphs, graph breaks around collectives are elided. Recommended for standard `torch.compile` workloads where all ranks compile together.\n  * `DISPATCH_STAGE`: Compiles collectives without graph breaks and verifies consensus across ranks at dispatch time, recompiling with split collectives if ranks diverge. This mode is necessary for workloads that can trigger rank-specific recompilations; it has higher overhead than `COMPILE_STAGE`.\n\n\nBelow is an example of rank-specific recompilation that is supported by `DISPATCH_STAGE`, whereas `COMPILE_STAGE` would time out because only `divergent_rank` recompiles on iteration 1:\n\n```\niteration = 0\ndivergent_rank = ...\n\ndef divergence_after_iteration(x, y):\n  z = torch.add(x, y)\n  if rank == divergent_rank and iteration == 1:\n    z = torch.mul(z, 5.0)\n  dist.all_reduce(z)\n  return z\n\ncompiled_fn = torch.compile(divergence_after_iteration, backend=backend)\nres0 = compiled_fn(x, y)\niteration += 1"
+      },
+      {
+        "heading": "IMPORTANT: If Handshake is in COMPILE_STAGE a recompilation happens only on `divergent_rank`",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "this would initiate a Handshake ONLY ON THAT RANK which would timeout which is why we provide",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "a DISPATCH_STAGE mode.",
+        "level": 1,
+        "content": "res1 = compiled_fn(x, y)\n\n```"
+      },
+      {
+        "heading": "Distributed initialization",
+        "level": 2,
+        "content": "Initializing a distributed workload in TorchTPU uses standard `torch.distributed` APIs, paired with TorchTPU's launch environment helper to populate the TPU topology and slice-builder environment variables:  \n| Environment Variable  | Description  | Example  |  \n| --- | --- | --- |  \n| `TORCH_TPU_TOPOLOGY`  | Physical mesh geometry of the TPU slice.  |  `\"2,2,1\"`, `\"2,2,1,2\"`, `\"4,4,4\"`  |  \n| `TORCH_TPU_SLICEBUILDER_ADDRESSES`  | Comma-separated `host:port` addresses (one per device) used to construct the ICI mesh.  | `\"localhost:8471,localhost:8472,...\"`  |  \nYou need to set these variables before starting the workers. In common setups (a single host, or a GKE TPU slice), TorchTPU can determine the correct values for you: run\n\n```\neval $(python3 -m torch.tpu.distributed | sed 's/^/export /')\n\n```\n\nIn your launch script before torchrun, or call `torch.tpu.distributed.set_tpu_launch_env()` in your parent Python launcher process before spawning workers. Both leave any variable you have already set unchanged, so you can override individual values.\nBelow is the initialization flow for a distributed TorchTPU workload, followed by a complete worker and launcher example:\n[![Distributed Initialization Flow](https://torchtpu.readthedocs.io/en/latest/images/distributed.png)](https://torchtpu.readthedocs.io/en/latest/images/distributed.png)"
+      },
+      {
+        "heading": "1. Worker script (`train.py`)",
+        "level": 3,
+        "content": "Inside each worker process, initialize the `tpu_dist` backend and acquire the local TPU device via `torch.device(\"tpu\")`:\n\n```\nimport torch\nimport torch.distributed as dist\n\ndef worker_main():\n  # 1. Initialize the distributed process group using the tpu_dist backend`\n  dist.init_process_group(backend=\"tpu_dist\")\n\n  # 2. Query rank, world size, and acquire the local TPU device\n  rank = dist.get_rank()\n  world_size = dist.get_world_size()\n  device = torch.device(\"tpu\")\n\n  print(f\"[Rank {rank}/{world_size}] Initialized on {device}\")\n\n  # 3. Perform a distributed collective operation across TPU workers\n  x = torch.ones(4, 4, device=device) * (rank + 1)\n  dist.all_reduce(x, op=dist.ReduceOp.SUM)\n\n  print(f\"[Rank {rank}] Reduced sum: {x[0, 0].item()}\")\n\n  # 4. Clean up process group resources\n  dist.destroy_process_group()\n\nif __name__ == \"__main__\":\n  worker_main()\n\n```"
+      },
+      {
+        "heading": "2. Launching with torchrun",
+        "level": 3,
+        "content": "Use the `torch.tpu.distributed` CLI module to detect the TPU hardware topology and export the required launch variables before invoking `torchrun`:\n\n```"
+      },
+      {
+        "heading": "Detect and export TORCH_TPU_TOPOLOGY, TORCH_TPU_SLICEBUILDER_ADDRESSES,",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "WORLD_SIZE, NODE_RANK, and multi-host coordination variables:",
+        "level": 1,
+        "content": "eval $(python3 -m torch.tpu.distributed | sed 's/^/export /')"
+      },
+      {
+        "heading": "Launch 1 worker process per TPU device on the host:",
+        "level": 1,
+        "content": "torchrun --nproc_per_node=$WORLD_SIZE train.py\n\n```\n\nAlternatively, if you launch workers from Python (for example, with `torch.distributed.launcher.elastic_launch`), call `torch.tpu.distributed.set_tpu_launch_env()` in the parent process prior to spawning workers. Note that the default process group encompasses all devices in the [TPU slice](https://cloud.google.com/tpu/docs/system-architecture-tpu-vm#slices)."
+      },
+      {
+        "heading": "Optimal device mesh mapping",
+        "level": 2,
+        "content": "To maximize collective bandwidth and minimize latency, align your model's parallelism dimensions with the physical TPU interconnect hierarchy:\n  * **Inter-Chip Interconnect (ICI)** : High-speed direct links connecting TPU chips in a 2D/3D torus or twisted-torus mesh within a slice (tens to hundreds of GB/s per link).\n  * **Data Center Network (DCN)** : Host-level Ethernet connecting separate TPU slices in multi-slice workloads (lower bandwidth and higher latency than ICI).\n\n\nUse `torch.tpu.distributed.topology_aware_mesh()` to compute a rank layout aligned with physical ICI rings. Order your logical mesh dimensions from **lowest communication intensity** (outermost) to **highest communication intensity** (innermost):  \n| Parallelism Type  | Typical Collectives  | Communication Frequency  | Recommended Physical Placement  |  \n| --- | --- | --- | --- |  \n| **Tensor Parallel (TP)**  |  `all_reduce`, `reduce_scatter`, `all_gather`  | Every transformer layer (Forward + Backward)  | Fastest local ICI ring (same tray/host, contiguous 1-hop devices)  |  \n| **Context / Sequence Parallel (CP/SP)**  |  `all_to_all`, Ring Attention  | Per attention layer  | Local ICI axes (within slice)  |  \n| **Expert Parallel (EP)**  |  `all_to_all`, `ragged_all_to_all`  | Per MoE router layer  | Local ICI axes (within slice)  |  \n| **Fully Sharded Data Parallel (FSDP)**  |  `all_gather`, `reduce_scatter`  | Per module / transformer block  | ICI axes (within slice)  |  \n| **Replicated Data Parallel (DP)**  |  `all_reduce` (gradients only)  | Once per training step  | Outer ICI axis or DCN (across slices)  |"
+      },
+      {
+        "heading": "Example: Constructing a topology-aware 2D DeviceMesh",
+        "level": 3,
+        "content": "```\nimport torch\nfrom torch.distributed.device_mesh import DeviceMesh"
+      },
+      {
+        "heading": "Logical mesh shape: (dp=4, tp=2) on an 8-device slice,",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "ordered from least communication-intensive (dp) to most intensive (tp):",
+        "level": 1,
+        "content": "mesh_shape = (4, 2)\ndim_names = (\"dp\", \"tp\")"
+      },
+      {
+        "heading": "Compute an optimal rank tensor aligned with physical ICI rings",
+        "level": 1,
+        "content": "optimal_rank_tensor = torch.tpu.distributed.topology_aware_mesh(\n    mesh_shape=mesh_shape,\n)"
+      },
+      {
+        "heading": "Instantiate the PyTorch DeviceMesh",
+        "level": 1,
+        "content": "mesh_2d = DeviceMesh(\n    \"tpu\",\n    mesh=optimal_rank_tensor,\n    mesh_dim_names=dim_names,\n    preserve_rank_order=True,\n)\ndp_mesh = mesh_2d[\"dp\"]\ntp_mesh = mesh_2d[\"tp\"]\n\n```\n\nFor multi-slice (hybrid DCN + ICI) workloads, passing `dcn_mesh_shape` alongside `mesh_shape` is optional and only needed to choose the split explicitly: by default, `torch.tpu.distributed.topology_aware_mesh()` detects the slices automatically and maps the outermost non-trivial mesh dimension (typically data parallel) across slices over DCN and the inner dimensions within each slice over ICI."
+      },
+      {
+        "heading": "Distributed Pallas Kernels",
+        "level": 2,
+        "content": "TorchTPU supports custom [Pallas](https://docs.jax.dev/en/latest/pallas/index.html) kernels that perform direct inter-device Remote DMA (RDMA) over ICI without host CPU involvement. This enables you to author custom point-to-point or ring communication kernels\u2014such as Ring Attention, custom All-to-All shuffles, pipeline-parallel shifts, or halo exchanges\u2014and invoke them as native PyTorch custom ops in both eager mode and `torch.compile`."
+      },
+      {
+        "heading": "Writing and Registering a Communicating Pallas Kernel",
+        "level": 3,
+        "content": "Integrating a distributed Pallas kernel involves three steps:  \n| Stage  | Key Steps & Operations  |  \n| --- | --- |  \n| **1. Pallas Kernel Body**  | Query logical coordinates with `jax.lax.axis_index` and `jax.lax.axis_size`, construct an asynchronous transfer descriptor via `pltpu.make_async_remote_copy(..., device_id=(target,))`, and manage completion with `.start()` and `.wait()`.  |  \n| **2.`pl.pallas_call` & `jax.shard_map`**  | Allocate DMA semaphores (`pltpu.SemaphoreType.DMA`) in `scratch_shapes` and wrap the kernel with `jax.shard_map` over a rank-aligned, world-sized `jax.sharding.Mesh` and `PartitionSpec`.  |  \n| **3. TorchTPU Registration**  | Register a type-annotated JAX wrapper function using `torch.tpu.pallas.jax_op`, passing `mesh`, `input_partition_specs`, and `output_partition_specs`.  |  \n\n```\nimport jax\nfrom jax.experimental import pallas as pl\nfrom jax.experimental.pallas import tpu as pltpu\nimport torch\n\nP = jax.sharding.PartitionSpec"
+      },
+      {
+        "heading": "1. Pallas Kernel Body: Asynchronously sends local buffer to neighbor rank (rank + 1)",
+        "level": 1,
+        "content": "def pallas_send_to_next_kernel(x_ref, y_ref, send_sem, recv_sem):\n  rank = jax.lax.axis_index(\"x\")\n  world_size = jax.lax.axis_size(\"x\")\n  dest_id = (rank + 1) % world_size\n  # Trigger hardware Remote DMA over TPU interconnect\n  async_copy = pltpu.make_async_remote_copy(\n      src_ref=x_ref,\n      dst_ref=y_ref,\n      send_sem=send_sem,\n      recv_sem=recv_sem,\n      device_id=(dest_id,),\n  )\n  async_copy.start()\n  async_copy.wait()"
+      },
+      {
+        "heading": "2. JAX Wrapper with ShardMap and DMA Semaphores",
+        "level": 1,
+        "content": "def build_jax_fn(mesh):\n  def local_pallas_call(x: jax.Array) -> jax.Array:\n    return pl.pallas_call(\n        pallas_send_to_next_kernel,\n        out_shape=jax.ShapeDtypeStruct(x.shape, x.dtype),\n        grid_spec=pltpu.PrefetchScalarGridSpec(\n            num_scalar_prefetch=0,\n            in_specs=[pl.BlockSpec(x.shape)],\n            out_specs=pl.BlockSpec(x.shape),\n            scratch_shapes=(\n                pltpu.SemaphoreType.DMA,\n                pltpu.SemaphoreType.DMA,\n            ),  # send & recv semaphores\n        ),\n    )(x)\n\n  return jax.shard_map(\n      local_pallas_call,\n      mesh=mesh,\n      in_specs=P(\"x\"),\n      out_specs=P(\"x\"),\n      check_vma=False,\n  )"
+      },
+      {
+        "heading": "3. Create the TorchTPU callable wrapper",
+        "level": 1,
+        "content": "def get_send_to_next_op(world_size: int):\n  mesh = torch.tpu.pallas.get_pallas_mesh(\n      axis_names=(\"x\",), mesh_shape=(world_size,)\n  )\n  jax_fn = build_jax_fn(mesh)\n  return torch.tpu.pallas.jax_op(\n      \"pallas::send_to_next\",\n      jax_fn,\n      mesh=mesh,\n      input_partition_specs=[P(\"x\")],\n      output_partition_specs=[P(\"x\")],\n  )\n\n```"
+      },
+      {
+        "heading": "Rank-aligned meshes and device assignment",
+        "level": 3,
+        "content": "Device IDs and ranks assigned are not 1 to 1 in many TPU architectures: ranks are assigned such that the neighbors are the adjacent devices (rank 1 is next to rank 0 and rank 2) but the device IDs are 0, 1, and 4 for v7x in this scenario. To smooth the translation, torchTPU provides `torch.tpu.pallas.get_pallas_mesh`, which provides a Pallas/JAX mesh which matches exactly the rank ID that is used throughout the rest of the Torch application.\n  * **Rank-aligned mesh construction** : `torch.tpu.pallas.get_pallas_mesh(axis_names=..., mesh_shape=...,     process_group=...)` queries the active PyTorch `ProcessGroup`'s rank-to-device mapping and constructs a `jax.sharding.Mesh` of abstract compile-only devices without initializing a JAX PjRT backend.\n  * **World-sized mesh requirement** : Distributed Pallas kernels require a mesh whose total device count equals `dist.get_world_size()`. For multi-dimensional parallel topologies (such as data + tensor parallelism), pass a `mesh_shape` whose product equals `world_size` - for example, `torch.tpu.pallas.get_pallas_mesh(axis_names=(\"dp\", \"tp\"), mesh_shape=(2,     4))`.\n  * **Unified collective and kernel device assignment** : When `mesh` is provided to `torch.tpu.pallas.jax_op`, TorchTPU extracts the mesh's rank-to-device mapping as the XLA `DeviceAssignment` for the kernel and reconciles it with any standard `torch.distributed` collectives fused into the same compiled module. This guarantees that `jax.lax.axis_index`, mesh-addressed DMAs (`device_id={axis: target}`), and PyTorch collectives all route consistently according to PyTorch rank order."
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "%0 = \"stablehlo.all_reduce\"(%arg0) <{\n  replica_groups = dense<[[4, 0, 1, 3], [5, 2, 6, 7]]> : tensor<2x4xi64>\n}> ({ ... })"
+      },
+      {
+        "language": "text",
+        "code": "import torch\nimport torch.distributed as dist\n\n@torch.compile\n@torch.tpu.distributed.spmd_safe\ndef spmd_train_step(x: torch.Tensor, weight: torch.Tensor) -> torch.Tensor:\n  out = x @ weight\n  dist.all_reduce(out, op=dist.ReduceOp.AVG)\n  return torch.nn.functional.silu(out)"
+      },
+      {
+        "language": "text",
+        "code": "iteration = 0\ndivergent_rank = ...\n\ndef divergence_after_iteration(x, y):\n  z = torch.add(x, y)\n  if rank == divergent_rank and iteration == 1:\n    z = torch.mul(z, 5.0)\n  dist.all_reduce(z)\n  return z\n\ncompiled_fn = torch.compile(divergence_after_iteration, backend=backend)\nres0 = compiled_fn(x, y)\niteration += 1\n# IMPORTANT: If Handshake is in COMPILE_STAGE a recompilation happens only on `divergent_rank`\n# this would initiate a Handshake ONLY ON THAT RANK which would timeout which is why we provide\n# a DISPATCH_STAGE mode.\nres1 = compiled_fn(x, y)"
+      },
+      {
+        "language": "text",
+        "code": "eval $(python3 -m torch.tpu.distributed | sed 's/^/export /')"
+      },
+      {
+        "language": "text",
+        "code": "import torch\nimport torch.distributed as dist\n\ndef worker_main():\n  # 1. Initialize the distributed process group using the tpu_dist backend`\n  dist.init_process_group(backend=\"tpu_dist\")\n\n  # 2. Query rank, world size, and acquire the local TPU device\n  rank = dist.get_rank()\n  world_size = dist.get_world_size()\n  device = torch.device(\"tpu\")\n\n  print(f\"[Rank {rank}/{world_size}] Initialized on {device}\")\n\n  # 3. Perform a distributed collective operation across TPU workers\n  x = torch.ones(4, 4, device=device) * (rank + 1)\n  dist.all_reduce(x, op=dist.ReduceOp.SUM)\n\n  print(f\"[Rank {rank}] Reduced sum: {x[0, 0].item()}\")\n\n  # 4. Clean up process group resources\n  dist.destroy_process_group()\n\nif __name__ == \"__main__\":\n  worker_main()"
+      },
+      {
+        "language": "text",
+        "code": "# Detect and export TORCH_TPU_TOPOLOGY, TORCH_TPU_SLICEBUILDER_ADDRESSES,\n# WORLD_SIZE, NODE_RANK, and multi-host coordination variables:\neval $(python3 -m torch.tpu.distributed | sed 's/^/export /')\n# Launch 1 worker process per TPU device on the host:\ntorchrun --nproc_per_node=$WORLD_SIZE train.py"
+      },
+      {
+        "language": "text",
+        "code": "import torch\nfrom torch.distributed.device_mesh import DeviceMesh\n\n# Logical mesh shape: (dp=4, tp=2) on an 8-device slice,\n# ordered from least communication-intensive (dp) to most intensive (tp):\nmesh_shape = (4, 2)\ndim_names = (\"dp\", \"tp\")\n\n# Compute an optimal rank tensor aligned with physical ICI rings\noptimal_rank_tensor = torch.tpu.distributed.topology_aware_mesh(\n    mesh_shape=mesh_shape,\n)\n\n# Instantiate the PyTorch DeviceMesh\nmesh_2d = DeviceMesh(\n    \"tpu\",\n    mesh=optimal_rank_tensor,\n    mesh_dim_names=dim_names,\n    preserve_rank_order=True,\n)\ndp_mesh = mesh_2d[\"dp\"]\ntp_mesh = mesh_2d[\"tp\"]"
+      },
+      {
+        "language": "text",
+        "code": "import jax\nfrom jax.experimental import pallas as pl\nfrom jax.experimental.pallas import tpu as pltpu\nimport torch\n\nP = jax.sharding.PartitionSpec\n\n# 1. Pallas Kernel Body: Asynchronously sends local buffer to neighbor rank (rank + 1)\ndef pallas_send_to_next_kernel(x_ref, y_ref, send_sem, recv_sem):\n  rank = jax.lax.axis_index(\"x\")\n  world_size = jax.lax.axis_size(\"x\")\n  dest_id = (rank + 1) % world_size\n  # Trigger hardware Remote DMA over TPU interconnect\n  async_copy = pltpu.make_async_remote_copy(\n      src_ref=x_ref,\n      dst_ref=y_ref,\n      send_sem=send_sem,\n      recv_sem=recv_sem,\n      device_id=(dest_id,),\n  )\n  async_copy.start()\n  async_copy.wait()\n\n# 2. JAX Wrapper with ShardMap and DMA Semaphores\ndef build_jax_fn(mesh):\n  def local_pallas_call(x: jax.Array) -> jax.Array:\n    return pl.pallas_call(\n        pallas_send_to_next_kernel,\n        out_shape=jax.ShapeDtypeStruct(x.shape, x.dtype),\n        grid_spec=pltpu.PrefetchScalarGridSpec(\n            num_scalar_prefetch=0,\n            in_specs=[pl.BlockSpec(x.shape)],\n            out_specs=pl.BlockSpec(x.shape),\n            scratch_shapes=(\n                pltpu.SemaphoreType.DMA,\n                pltpu.SemaphoreType.DMA,\n            ),  # send & recv semaphores\n        ),\n    )(x)\n\n  return jax.shard_map(\n      local_pallas_call,\n      mesh=mesh,\n      in_specs=P(\"x\"),\n      out_specs=P(\"x\"),\n      check_vma=False,\n  )\n\n# 3. Create the TorchTPU callable wrapper\ndef get_send_to_next_op(world_size: int):\n  mesh = torch.tpu.pallas.get_pallas_mesh(\n      axis_names=(\"x\",), mesh_shape=(world_size,)\n  )\n  jax_fn = build_jax_fn(mesh)\n  return torch.tpu.pallas.jax_op(\n      \"pallas::send_to_next\",\n      jax_fn,\n      mesh=mesh,\n      input_partition_specs=[P(\"x\")],\n      output_partition_specs=[P(\"x\")],\n  )"
+      }
+    ],
+    "cli_commands": [
+      "torchrun --nproc_per_node=$WORLD_SIZE train.py"
+    ],
+    "environment_variables": [
+      "TORCH_TPU_SPMD_HANDSHAKE_STAGE"
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Mode",
+          "Configuration",
+          "Graph Behavior",
+          "Best For"
+        ],
+        "rows": [
+          [
+            "Skinny collectives (default behavior)",
+            "Always on for any collective that the opt-ins below don't fuse",
+            "Compiles each collective op into its own standalone (\"skinny\") StableHLO module by inserting graph breaks around collectives.",
+            "General MPMD safety out of the box, at the cost of preventing XLA from overlapping compute and communication."
+          ],
+          [
+            "`@spmd_safe` decorator (opt-in)",
+            "`@torch.tpu.distributed.spmd_safe`",
+            "Disables graph breaks around collectives inside the decorated function, fusing compute and collectives into a single StableHLO module.",
+            "Known-SPMD functions or training steps (e.g., SimpleFSDP or manual tensor parallelism) to maximize XLA compute-communication overlap."
+          ],
+          [
+            "Compilation Handshake (opt-in)",
+            "`TORCH_TPU_SPMD_HANDSHAKE_STAGE=COMPILE_STAGE` or `DISPATCH_STAGE` (default: OFF)",
+            "In torch.compile graphs, checks that the compiled FX graphs match across all ranks; fuses collectives if they do and falls back to skinny collectives if they don't.",
+            "Automatically enabling collective fusion in `torch.compile` while guarding against accidental MPMD divergence."
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "Environment Variable",
+          "Description",
+          "Example"
+        ],
+        "rows": [
+          [
+            "`TORCH_TPU_TOPOLOGY`",
+            "Physical mesh geometry of the TPU slice.",
+            "`\"2,2,1\"`, `\"2,2,1,2\"`, `\"4,4,4\"`"
+          ],
+          [
+            "`TORCH_TPU_SLICEBUILDER_ADDRESSES`",
+            "Comma-separated `host:port` addresses (one per device) used to construct the ICI mesh.",
+            "`\"localhost:8471,localhost:8472,...\"`"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "Parallelism Type",
+          "Typical Collectives",
+          "Communication Frequency",
+          "Recommended Physical Placement"
+        ],
+        "rows": [
+          [
+            "**Tensor Parallel (TP)**",
+            "`all_reduce`, `reduce_scatter`, `all_gather`",
+            "Every transformer layer (Forward + Backward)",
+            "Fastest local ICI ring (same tray/host, contiguous 1-hop devices)"
+          ],
+          [
+            "**Context / Sequence Parallel (CP/SP)**",
+            "`all_to_all`, Ring Attention",
+            "Per attention layer",
+            "Local ICI axes (within slice)"
+          ],
+          [
+            "**Expert Parallel (EP)**",
+            "`all_to_all`, `ragged_all_to_all`",
+            "Per MoE router layer",
+            "Local ICI axes (within slice)"
+          ],
+          [
+            "**Fully Sharded Data Parallel (FSDP)**",
+            "`all_gather`, `reduce_scatter`",
+            "Per module / transformer block",
+            "ICI axes (within slice)"
+          ],
+          [
+            "**Replicated Data Parallel (DP)**",
+            "`all_reduce` (gradients only)",
+            "Once per training step",
+            "Outer ICI axis or DCN (across slices)"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "Stage",
+          "Key Steps & Operations"
+        ],
+        "rows": [
+          [
+            "**1. Pallas Kernel Body**",
+            "Query logical coordinates with `jax.lax.axis_index` and `jax.lax.axis_size`, construct an asynchronous transfer descriptor via `pltpu.make_async_remote_copy(..., device_id=(target,))`, and manage completion with `.start()` and `.wait()`."
+          ],
+          [
+            "**2.`pl.pallas_call` & `jax.shard_map`**",
+            "Allocate DMA semaphores (`pltpu.SemaphoreType.DMA`) in `scratch_shapes` and wrap the kernel with `jax.shard_map` over a rank-aligned, world-sized `jax.sharding.Mesh` and `PartitionSpec`."
+          ],
+          [
+            "**3. TorchTPU Registration**",
+            "Register a type-annotated JAX wrapper function using `torch.tpu.pallas.jax_op`, passing `mesh`, `input_partition_specs`, and `output_partition_specs`."
+          ]
+        ]
+      }
+    ],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'TorchTPU distributed support' (https://torchtpu.readthedocs.io/en/latest/distributed_support/)?",
+        "answer": "Use torch.distributed with tpu_dist, DDP, FSDP, and DTensor across TPU devices."
+      },
+      {
+        "question": "How does 'TorchTPU distributed support' handle: Distributed support?",
+        "answer": "TorchTPU implements distributed communication at the PyTorch ProcessGroup level (`c10d::Backend`) under the `tpu_dist` backend name. By intercepting collectives at the ProcessGroup layer, TorchTPU supports standard `torch.distributed` APIs in both eager mode and `torch.compile`, and works directly with PyTorch distributed frameworks including DTensor, DistributedDataParallel (DDP), FSDPv2, and [SimpleFSDP](https://arxiv.org/abs/2411.00284).\nLike PyTorch on GPU, TorchTPU enforces a one-process-per-device execution model. Under the hood, TPU-to-TPU communication does not use a separate runtime communication library (such as NCCL); instead, collective operations are lowered directly into [StableHLO collective operations](https://openxla.org/stablehlo/spec#collective_ops) (such as `stablehlo.all_reduce`, `stablehlo.all_gather`, `stablehlo.reduce_scatter`, and `stablehlo.all_to_all`) and compiled by XLA into the TPU executable."
+      },
+      {
+        "question": "How does 'TorchTPU distributed support' handle: Key architectural differences from GPU?",
+        "answer": "While TorchTPU preserves standard `torch.distributed` semantics, programming TPUs via StableHLO and PjRT introduces three key differences compared to GPU backends:\n  * **Pre-initialization hardware topology discovery:** On a multi-GPU host, each process launched by torchrun can inspect all attached GPUs, select its assigned device via `cuda:{local_rank}`, and move models to that device before calling `torch.distributed.init_process_group()`. On a TPU host, each worker process is bound to a single TPU device and cannot own the full set of devices on its own. Before initializing the PjRT runtime or calling `torch.distributed.init_process_group()`, the environment must specify the physical mesh geometry of the [TPU slice](https://cloud.google.com/tpu/docs/system-architecture-tpu-vm#slices) (`TORCH_TPU_TOPOLOGY`), the local coordinator addresses used to construct the Inter-Chip Interconnect (ICI) mesh (`TORCH_TPU_SLICEBUILDER_ADDRESSES`), and the total number of participating TPU devices (`WORLD_SIZE`).\n  * **Global Replica Group Resolution for Subgroups:** In PyTorch, a collective call such as [`torch.distributed.all_reduce`](https://docs.pytorch.org/docs/stable/distributed.html#torch"
+      },
+      {
+        "question": "How does 'TorchTPU distributed support' handle: Collective execution and fusion modes?",
+        "answer": "TorchTPU runs each collective as a skinny collective. To let XLA overlap compute and communication, you can opt in to either or both of two mechanisms that fuse collectives with the surrounding computation. The two are independent and can be combined: collectives inside an `@spmd_safe` function are always fused, and, when enabled, the Compilation Handshake decides for the remaining collectives in each `torch.compile` graph.  \n| Mode  | Configuration  | Graph Behavior  | Best For  |  \n| --- | --- | --- | --- |  \n| Skinny collectives (default behavior)  | Always on for any collective that the opt-ins below don't fuse  | Compiles each collective op into its own standalone (\"skinny\") StableHLO module by inserting graph breaks around collectives.  | General MPMD safety out of the box, at the cost of preventing XLA from overlapping compute and communication.  |  \n|  `@spmd_safe` decorator (opt-in)  | `@torch.tpu.distributed.spmd_safe`  | Disables graph breaks around collectives inside the decorated function, fusing compute and collectives into a single StableHLO module.  | Known-SPMD functions or training steps (e.g., SimpleFSDP or manual tensor parallelism) to maximize XLA compute-commu"
+      },
+      {
+        "question": "How does 'TorchTPU distributed support' handle: Using `@torch.tpu.distributed.spmd_safe`?",
+        "answer": "When you know a function or model step is strictly SPMD across all ranks (no rank-dependent control flow or uneven tensor shapes), decorate it with `@torch.tpu.distributed.spmd_safe`. Under `torch.compile` (and `DEFER_AND_FUSE` eager mode), this removes graph breaks around collectives so XLA can schedule asynchronous communication alongside matrix computation:\n\n```\nimport torch\nimport torch.distributed as dist\n\n@torch.compile\n@torch.tpu.distributed.spmd_safe\ndef spmd_train_step(x: torch.Tensor, weight: torch.Tensor) -> torch.Tensor:\n  out = x @ weight\n  dist.all_reduce(out, op=dist.ReduceOp.AVG)\n  return torch.nn.functional.silu(out)\n\n```\n\nOnly apply `@torch.tpu.distributed.spmd_safe` to code that executes the exact same sequence of tensor and collective operations on every rank; applying it to MPMD code can produce different StableHLO modules across ranks and cause TPU execution deadlocks."
+      },
+      {
+        "question": "How does 'TorchTPU distributed support' handle: Configuring the compilation handshake?",
+        "answer": "Instead of manually annotating functions with `@spmd_safe`, you can enable TorchTPU's Compilation Handshake via the `TORCH_TPU_SPMD_HANDSHAKE_STAGE` environment variable. When `torch.compile` traces a graph containing global collectives, TorchTPU runs a consensus check across all ranks to verify that their compiled FX graphs match before fusing collectives into the graph:\n  * `OFF` (Default):** Disables the handshake; collectives use default Skinny Collectives unless marked `@torch.tpu.distributed.spmd_safe`.\n  * `COMPILE_STAGE`: Verifies graph consensus across ranks prior to PjRT compilation. If all ranks produce identical graphs, graph breaks around collectives are elided. Recommended for standard `torch.compile` workloads where all ranks compile together.\n  * `DISPATCH_STAGE`: Compiles collectives without graph breaks and verifies consensus across ranks at dispatch time, recompiling with split collectives if ranks diverge. This mode is necessary for workloads that can trigger rank-specific recompilations; it has higher overhead than `COMPILE_STAGE`.\n\n\nBelow is an example of rank-specific recompilation that is supported by `DISPATCH_STAGE`, whereas `COMPILE_STAGE` would time out "
+      },
+      {
+        "question": "How does 'TorchTPU distributed support' handle: Distributed initialization?",
+        "answer": "Initializing a distributed workload in TorchTPU uses standard `torch.distributed` APIs, paired with TorchTPU's launch environment helper to populate the TPU topology and slice-builder environment variables:  \n| Environment Variable  | Description  | Example  |  \n| --- | --- | --- |  \n| `TORCH_TPU_TOPOLOGY`  | Physical mesh geometry of the TPU slice.  |  `\"2,2,1\"`, `\"2,2,1,2\"`, `\"4,4,4\"`  |  \n| `TORCH_TPU_SLICEBUILDER_ADDRESSES`  | Comma-separated `host:port` addresses (one per device) used to construct the ICI mesh.  | `\"localhost:8471,localhost:8472,...\"`  |  \nYou need to set these variables before starting the workers. In common setups (a single host, or a GKE TPU slice), TorchTPU can determine the correct values for you: run\n\n```\neval $(python3 -m torch.tpu.distributed | sed 's/^/export /')\n\n```\n\nIn your launch script before torchrun, or call `torch.tpu.distributed.set_tpu_launch_env()` in your parent Python launcher process before spawning workers. Both leave any variable you have already set unchanged, so you can override individual values.\nBelow is the initialization flow for a distributed TorchTPU workload, followed by a complete worker and launcher example:\n[![Distributed I"
+      },
+      {
+        "question": "How does 'TorchTPU distributed support' handle: 1. Worker script (`train.py`)?",
+        "answer": "Inside each worker process, initialize the `tpu_dist` backend and acquire the local TPU device via `torch.device(\"tpu\")`:\n\n```\nimport torch\nimport torch.distributed as dist\n\ndef worker_main():\n  # 1. Initialize the distributed process group using the tpu_dist backend`\n  dist.init_process_group(backend=\"tpu_dist\")\n\n  # 2. Query rank, world size, and acquire the local TPU device\n  rank = dist.get_rank()\n  world_size = dist.get_world_size()\n  device = torch.device(\"tpu\")\n\n  print(f\"[Rank {rank}/{world_size}] Initialized on {device}\")\n\n  # 3. Perform a distributed collective operation across TPU workers\n  x = torch.ones(4, 4, device=device) * (rank + 1)\n  dist.all_reduce(x, op=dist.ReduceOp.SUM)\n\n  print(f\"[Rank {rank}] Reduced sum: {x[0, 0].item()}\")\n\n  # 4. Clean up process group resources\n  dist.destroy_process_group()\n\nif __name__ == \"__main__\":\n  worker_main()\n\n```"
+      },
+      {
+        "question": "How does 'TorchTPU distributed support' handle: 2. Launching with torchrun?",
+        "answer": "Use the `torch.tpu.distributed` CLI module to detect the TPU hardware topology and export the required launch variables before invoking `torchrun`:\n\n```"
+      },
+      {
+        "question": "How does 'TorchTPU distributed support' handle: WORLD_SIZE, NODE_RANK, and multi-host coordination variables:?",
+        "answer": "eval $(python3 -m torch.tpu.distributed | sed 's/^/export /')"
+      }
+    ],
+    "full_markdown": "# TorchTPU distributed support\n## Distributed support\nTorchTPU implements distributed communication at the PyTorch ProcessGroup level (`c10d::Backend`) under the `tpu_dist` backend name. By intercepting collectives at the ProcessGroup layer, TorchTPU supports standard `torch.distributed` APIs in both eager mode and `torch.compile`, and works directly with PyTorch distributed frameworks including DTensor, DistributedDataParallel (DDP), FSDPv2, and [SimpleFSDP](https://arxiv.org/abs/2411.00284).\nLike PyTorch on GPU, TorchTPU enforces a one-process-per-device execution model. Under the hood, TPU-to-TPU communication does not use a separate runtime communication library (such as NCCL); instead, collective operations are lowered directly into [StableHLO collective operations](https://openxla.org/stablehlo/spec#collective_ops) (such as `stablehlo.all_reduce`, `stablehlo.all_gather`, `stablehlo.reduce_scatter`, and `stablehlo.all_to_all`) and compiled by XLA into the TPU executable.\n### Key architectural differences from GPU\nWhile TorchTPU preserves standard `torch.distributed` semantics, programming TPUs via StableHLO and PjRT introduces three key differences compared to GPU backends:\n  * **Pre-initialization hardware topology discovery:** On a multi-GPU host, each process launched by torchrun can inspect all attached GPUs, select its assigned device via `cuda:{local_rank}`, and move models to that device before calling `torch.distributed.init_process_group()`. On a TPU host, each worker process is bound to a single TPU device and cannot own the full set of devices on its own. Before initializing the PjRT runtime or calling `torch.distributed.init_process_group()`, the environment must specify the physical mesh geometry of the [TPU slice](https://cloud.google.com/tpu/docs/system-architecture-tpu-vm#slices) (`TORCH_TPU_TOPOLOGY`), the local coordinator addresses used to construct the Inter-Chip Interconnect (ICI) mesh (`TORCH_TPU_SLICEBUILDER_ADDRESSES`), and the total number of participating TPU devices (`WORLD_SIZE`).\n  * **Global Replica Group Resolution for Subgroups:** In PyTorch, a collective call such as [`torch.distributed.all_reduce`](https://docs.pytorch.org/docs/stable/distributed.html#torch.distributed.all_reduce) only receives the ProcessGroup (subgroup) in which the calling rank participates. In contrast, [`stablehlo.all_reduce`](https://openxla.org/stablehlo/spec#all_reduce) requires a complete description of all participating subgroups across the default process group (`replica_groups`), even those the current process does not belong to:\n\n```\n%0 = \"stablehlo.all_reduce\"(%arg0) <{\n  replica_groups = dense<[[4, 0, 1, 3], [5, 2, 6, 7]]> : tensor<2x4xi64>\n}> ({ ... })\n\n```\n\nTorchTPU's `tpu_dist` backend automatically exchanges subgroup membership across all ranks in the default process group during collective setup and constructs the global `replica_groups` and `device_assignment` required by XLA. * **SPMD Compilation vs. MPMD Execution:** The XLA compiler and TPU communication stack are designed for Single Program, Multiple Data (SPMD) execution, where every rank compiles and executes an identical StableHLO module containing matching collective operations. However, PyTorch programs can exhibit Multiple Program, Multiple Data (MPMD) behavior across ranks\u2014for example, due to rank-conditional branches (`if dist.get_rank() == 0:`) or uneven tensor sharding when a dimension is not evenly divisible by the number of devices. If different ranks execute different StableHLO modules containing collectives, mismatched synchronization flag IDs or buffer offsets across ranks can cause runtime deadlocks or memory corruption.\n\n\n### Collective execution and fusion modes\nTorchTPU runs each collective as a skinny collective. To let XLA overlap compute and communication, you can opt in to either or both of two mechanisms that fuse collectives with the surrounding computation. The two are independent and can be combined: collectives inside an `@spmd_safe` function are always fused, and, when enabled, the Compilation Handshake decides for the remaining collectives in each `torch.compile` graph.  \n| Mode  | Configuration  | Graph Behavior  | Best For  |  \n| --- | --- | --- | --- |  \n| Skinny collectives (default behavior)  | Always on for any collective that the opt-ins below don't fuse  | Compiles each collective op into its own standalone (\"skinny\") StableHLO module by inserting graph breaks around collectives.  | General MPMD safety out of the box, at the cost of preventing XLA from overlapping compute and communication.  |  \n|  `@spmd_safe` decorator (opt-in)  | `@torch.tpu.distributed.spmd_safe`  | Disables graph breaks around collectives inside the decorated function, fusing compute and collectives into a single StableHLO module.  | Known-SPMD functions or training steps (e.g., SimpleFSDP or manual tensor parallelism) to maximize XLA compute-communication overlap.  |  \n| Compilation Handshake (opt-in)  |  `TORCH_TPU_SPMD_HANDSHAKE_STAGE=COMPILE_STAGE` or `DISPATCH_STAGE` (default: OFF)  | In torch.compile graphs, checks that the compiled FX graphs match across all ranks; fuses collectives if they do and falls back to skinny collectives if they don't.  | Automatically enabling collective fusion in `torch.compile` while guarding against accidental MPMD divergence.  |  \n#### Using `@torch.tpu.distributed.spmd_safe`\nWhen you know a function or model step is strictly SPMD across all ranks (no rank-dependent control flow or uneven tensor shapes), decorate it with `@torch.tpu.distributed.spmd_safe`. Under `torch.compile` (and `DEFER_AND_FUSE` eager mode), this removes graph breaks around collectives so XLA can schedule asynchronous communication alongside matrix computation:\n\n```\nimport torch\nimport torch.distributed as dist\n\n@torch.compile\n@torch.tpu.distributed.spmd_safe\ndef spmd_train_step(x: torch.Tensor, weight: torch.Tensor) -> torch.Tensor:\n  out = x @ weight\n  dist.all_reduce(out, op=dist.ReduceOp.AVG)\n  return torch.nn.functional.silu(out)\n\n```\n\nOnly apply `@torch.tpu.distributed.spmd_safe` to code that executes the exact same sequence of tensor and collective operations on every rank; applying it to MPMD code can produce different StableHLO modules across ranks and cause TPU execution deadlocks.\n#### Configuring the compilation handshake\nInstead of manually annotating functions with `@spmd_safe`, you can enable TorchTPU's Compilation Handshake via the `TORCH_TPU_SPMD_HANDSHAKE_STAGE` environment variable. When `torch.compile` traces a graph containing global collectives, TorchTPU runs a consensus check across all ranks to verify that their compiled FX graphs match before fusing collectives into the graph:\n  * `OFF` (Default):** Disables the handshake; collectives use default Skinny Collectives unless marked `@torch.tpu.distributed.spmd_safe`.\n  * `COMPILE_STAGE`: Verifies graph consensus across ranks prior to PjRT compilation. If all ranks produce identical graphs, graph breaks around collectives are elided. Recommended for standard `torch.compile` workloads where all ranks compile together.\n  * `DISPATCH_STAGE`: Compiles collectives without graph breaks and verifies consensus across ranks at dispatch time, recompiling with split collectives if ranks diverge. This mode is necessary for workloads that can trigger rank-specific recompilations; it has higher overhead than `COMPILE_STAGE`.\n\n\nBelow is an example of rank-specific recompilation that is supported by `DISPATCH_STAGE`, whereas `COMPILE_STAGE` would time out because only `divergent_rank` recompiles on iteration 1:\n\n```\niteration = 0\ndivergent_rank = ...\n\ndef divergence_after_iteration(x, y):\n  z = torch.add(x, y)\n  if rank == divergent_rank and iteration == 1:\n    z = torch.mul(z, 5.0)\n  dist.all_reduce(z)\n  return z\n\ncompiled_fn = torch.compile(divergence_after_iteration, backend=backend)\nres0 = compiled_fn(x, y)\niteration += 1\n# IMPORTANT: If Handshake is in COMPILE_STAGE a recompilation happens only on `divergent_rank`\n# this would initiate a Handshake ONLY ON THAT RANK which would timeout which is why we provide\n# a DISPATCH_STAGE mode.\nres1 = compiled_fn(x, y)\n\n```\n\n## Distributed initialization\nInitializing a distributed workload in TorchTPU uses standard `torch.distributed` APIs, paired with TorchTPU's launch environment helper to populate the TPU topology and slice-builder environment variables:  \n| Environment Variable  | Description  | Example  |  \n| --- | --- | --- |  \n| `TORCH_TPU_TOPOLOGY`  | Physical mesh geometry of the TPU slice.  |  `\"2,2,1\"`, `\"2,2,1,2\"`, `\"4,4,4\"`  |  \n| `TORCH_TPU_SLICEBUILDER_ADDRESSES`  | Comma-separated `host:port` addresses (one per device) used to construct the ICI mesh.  | `\"localhost:8471,localhost:8472,...\"`  |  \nYou need to set these variables before starting the workers. In common setups (a single host, or a GKE TPU slice), TorchTPU can determine the correct values for you: run\n\n```\neval $(python3 -m torch.tpu.distributed | sed 's/^/export /')\n\n```\n\nIn your launch script before torchrun, or call `torch.tpu.distributed.set_tpu_launch_env()` in your parent Python launcher process before spawning workers. Both leave any variable you have already set unchanged, so you can override individual values.\nBelow is the initialization flow for a distributed TorchTPU workload, followed by a complete worker and launcher example:\n[![Distributed Initialization Flow](https://torchtpu.readthedocs.io/en/latest/images/distributed.png)](https://torchtpu.readthedocs.io/en/latest/images/distributed.png)\n### 1. Worker script (`train.py`)\nInside each worker process, initialize the `tpu_dist` backend and acquire the local TPU device via `torch.device(\"tpu\")`:\n\n```\nimport torch\nimport torch.distributed as dist\n\ndef worker_main():\n  # 1. Initialize the distributed process group using the tpu_dist backend`\n  dist.init_process_group(backend=\"tpu_dist\")\n\n  # 2. Query rank, world size, and acquire the local TPU device\n  rank = dist.get_rank()\n  world_size = dist.get_world_size()\n  device = torch.device(\"tpu\")\n\n  print(f\"[Rank {rank}/{world_size}] Initialized on {device}\")\n\n  # 3. Perform a distributed collective operation across TPU workers\n  x = torch.ones(4, 4, device=device) * (rank + 1)\n  dist.all_reduce(x, op=dist.ReduceOp.SUM)\n\n  print(f\"[Rank {rank}] Reduced sum: {x[0, 0].item()}\")\n\n  # 4. Clean up process group resources\n  dist.destroy_process_group()\n\nif __name__ == \"__main__\":\n  worker_main()\n\n```\n\n### 2. Launching with torchrun\nUse the `torch.tpu.distributed` CLI module to detect the TPU hardware topology and export the required launch variables before invoking `torchrun`:\n\n```\n# Detect and export TORCH_TPU_TOPOLOGY, TORCH_TPU_SLICEBUILDER_ADDRESSES,\n# WORLD_SIZE, NODE_RANK, and multi-host coordination variables:\neval $(python3 -m torch.tpu.distributed | sed 's/^/export /')\n# Launch 1 worker process per TPU device on the host:\ntorchrun --nproc_per_node=$WORLD_SIZE train.py\n\n```\n\nAlternatively, if you launch workers from Python (for example, with `torch.distributed.launcher.elastic_launch`), call `torch.tpu.distributed.set_tpu_launch_env()` in the parent process prior to spawning workers. Note that the default process group encompasses all devices in the [TPU slice](https://cloud.google.com/tpu/docs/system-architecture-tpu-vm#slices).\n## Optimal device mesh mapping\nTo maximize collective bandwidth and minimize latency, align your model's parallelism dimensions with the physical TPU interconnect hierarchy:\n  * **Inter-Chip Interconnect (ICI)** : High-speed direct links connecting TPU chips in a 2D/3D torus or twisted-torus mesh within a slice (tens to hundreds of GB/s per link).\n  * **Data Center Network (DCN)** : Host-level Ethernet connecting separate TPU slices in multi-slice workloads (lower bandwidth and higher latency than ICI).\n\n\nUse `torch.tpu.distributed.topology_aware_mesh()` to compute a rank layout aligned with physical ICI rings. Order your logical mesh dimensions from **lowest communication intensity** (outermost) to **highest communication intensity** (innermost):  \n| Parallelism Type  | Typical Collectives  | Communication Frequency  | Recommended Physical Placement  |  \n| --- | --- | --- | --- |  \n| **Tensor Parallel (TP)**  |  `all_reduce`, `reduce_scatter`, `all_gather`  | Every transformer layer (Forward + Backward)  | Fastest local ICI ring (same tray/host, contiguous 1-hop devices)  |  \n| **Context / Sequence Parallel (CP/SP)**  |  `all_to_all`, Ring Attention  | Per attention layer  | Local ICI axes (within slice)  |  \n| **Expert Parallel (EP)**  |  `all_to_all`, `ragged_all_to_all`  | Per MoE router layer  | Local ICI axes (within slice)  |  \n| **Fully Sharded Data Parallel (FSDP)**  |  `all_gather`, `reduce_scatter`  | Per module / transformer block  | ICI axes (within slice)  |  \n| **Replicated Data Parallel (DP)**  |  `all_reduce` (gradients only)  | Once per training step  | Outer ICI axis or DCN (across slices)  |  \n### Example: Constructing a topology-aware 2D DeviceMesh\n\n```\nimport torch\nfrom torch.distributed.device_mesh import DeviceMesh\n\n# Logical mesh shape: (dp=4, tp=2) on an 8-device slice,\n# ordered from least communication-intensive (dp) to most intensive (tp):\nmesh_shape = (4, 2)\ndim_names = (\"dp\", \"tp\")\n\n# Compute an optimal rank tensor aligned with physical ICI rings\noptimal_rank_tensor = torch.tpu.distributed.topology_aware_mesh(\n    mesh_shape=mesh_shape,\n)\n\n# Instantiate the PyTorch DeviceMesh\nmesh_2d = DeviceMesh(\n    \"tpu\",\n    mesh=optimal_rank_tensor,\n    mesh_dim_names=dim_names,\n    preserve_rank_order=True,\n)\ndp_mesh = mesh_2d[\"dp\"]\ntp_mesh = mesh_2d[\"tp\"]\n\n```\n\nFor multi-slice (hybrid DCN + ICI) workloads, passing `dcn_mesh_shape` alongside `mesh_shape` is optional and only needed to choose the split explicitly: by default, `torch.tpu.distributed.topology_aware_mesh()` detects the slices automatically and maps the outermost non-trivial mesh dimension (typically data parallel) across slices over DCN and the inner dimensions within each slice over ICI.\n## Distributed Pallas Kernels\nTorchTPU supports custom [Pallas](https://docs.jax.dev/en/latest/pallas/index.html) kernels that perform direct inter-device Remote DMA (RDMA) over ICI without host CPU involvement. This enables you to author custom point-to-point or ring communication kernels\u2014such as Ring Attention, custom All-to-All shuffles, pipeline-parallel shifts, or halo exchanges\u2014and invoke them as native PyTorch custom ops in both eager mode and `torch.compile`.\n### Writing and Registering a Communicating Pallas Kernel\nIntegrating a distributed Pallas kernel involves three steps:  \n| Stage  | Key Steps & Operations  |  \n| --- | --- |  \n| **1. Pallas Kernel Body**  | Query logical coordinates with `jax.lax.axis_index` and `jax.lax.axis_size`, construct an asynchronous transfer descriptor via `pltpu.make_async_remote_copy(..., device_id=(target,))`, and manage completion with `.start()` and `.wait()`.  |  \n| **2.`pl.pallas_call` & `jax.shard_map`**  | Allocate DMA semaphores (`pltpu.SemaphoreType.DMA`) in `scratch_shapes` and wrap the kernel with `jax.shard_map` over a rank-aligned, world-sized `jax.sharding.Mesh` and `PartitionSpec`.  |  \n| **3. TorchTPU Registration**  | Register a type-annotated JAX wrapper function using `torch.tpu.pallas.jax_op`, passing `mesh`, `input_partition_specs`, and `output_partition_specs`.  |  \n\n```\nimport jax\nfrom jax.experimental import pallas as pl\nfrom jax.experimental.pallas import tpu as pltpu\nimport torch\n\nP = jax.sharding.PartitionSpec\n\n# 1. Pallas Kernel Body: Asynchronously sends local buffer to neighbor rank (rank + 1)\ndef pallas_send_to_next_kernel(x_ref, y_ref, send_sem, recv_sem):\n  rank = jax.lax.axis_index(\"x\")\n  world_size = jax.lax.axis_size(\"x\")\n  dest_id = (rank + 1) % world_size\n  # Trigger hardware Remote DMA over TPU interconnect\n  async_copy = pltpu.make_async_remote_copy(\n      src_ref=x_ref,\n      dst_ref=y_ref,\n      send_sem=send_sem,\n      recv_sem=recv_sem,\n      device_id=(dest_id,),\n  )\n  async_copy.start()\n  async_copy.wait()\n\n# 2. JAX Wrapper with ShardMap and DMA Semaphores\ndef build_jax_fn(mesh):\n  def local_pallas_call(x: jax.Array) -> jax.Array:\n    return pl.pallas_call(\n        pallas_send_to_next_kernel,\n        out_shape=jax.ShapeDtypeStruct(x.shape, x.dtype),\n        grid_spec=pltpu.PrefetchScalarGridSpec(\n            num_scalar_prefetch=0,\n            in_specs=[pl.BlockSpec(x.shape)],\n            out_specs=pl.BlockSpec(x.shape),\n            scratch_shapes=(\n                pltpu.SemaphoreType.DMA,\n                pltpu.SemaphoreType.DMA,\n            ),  # send & recv semaphores\n        ),\n    )(x)\n\n  return jax.shard_map(\n      local_pallas_call,\n      mesh=mesh,\n      in_specs=P(\"x\"),\n      out_specs=P(\"x\"),\n      check_vma=False,\n  )\n\n# 3. Create the TorchTPU callable wrapper\ndef get_send_to_next_op(world_size: int):\n  mesh = torch.tpu.pallas.get_pallas_mesh(\n      axis_names=(\"x\",), mesh_shape=(world_size,)\n  )\n  jax_fn = build_jax_fn(mesh)\n  return torch.tpu.pallas.jax_op(\n      \"pallas::send_to_next\",\n      jax_fn,\n      mesh=mesh,\n      input_partition_specs=[P(\"x\")],\n      output_partition_specs=[P(\"x\")],\n  )\n\n```\n\n### Rank-aligned meshes and device assignment\nDevice IDs and ranks assigned are not 1 to 1 in many TPU architectures: ranks are assigned such that the neighbors are the adjacent devices (rank 1 is next to rank 0 and rank 2) but the device IDs are 0, 1, and 4 for v7x in this scenario. To smooth the translation, torchTPU provides `torch.tpu.pallas.get_pallas_mesh`, which provides a Pallas/JAX mesh which matches exactly the rank ID that is used throughout the rest of the Torch application.\n  * **Rank-aligned mesh construction** : `torch.tpu.pallas.get_pallas_mesh(axis_names=..., mesh_shape=...,     process_group=...)` queries the active PyTorch `ProcessGroup`'s rank-to-device mapping and constructs a `jax.sharding.Mesh` of abstract compile-only devices without initializing a JAX PjRT backend.\n  * **World-sized mesh requirement** : Distributed Pallas kernels require a mesh whose total device count equals `dist.get_world_size()`. For multi-dimensional parallel topologies (such as data + tensor parallelism), pass a `mesh_shape` whose product equals `world_size` - for example, `torch.tpu.pallas.get_pallas_mesh(axis_names=(\"dp\", \"tp\"), mesh_shape=(2,     4))`.\n  * **Unified collective and kernel device assignment** : When `mesh` is provided to `torch.tpu.pallas.jax_op`, TorchTPU extracts the mesh's rank-to-device mapping as the XLA `DeviceAssignment` for the kernel and reconciles it with any standard `torch.distributed` collectives fused into the same compiled module. This guarantees that `jax.lax.axis_index`, mesh-addressed DMAs (`device_id={axis: target}`), and PyTorch collectives all route consistently according to PyTorch rank order."
+  }
 }

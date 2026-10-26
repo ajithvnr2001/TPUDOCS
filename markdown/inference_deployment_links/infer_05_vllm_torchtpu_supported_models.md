@@ -2,82 +2,13 @@
 id: "infer_05_vllm_torchtpu_supported_models"
 title: "vLLM-TorchTPU supported models and features"
 url: "https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/supported_models/"
-category: "Inference deployment links"
+category: "inference_deployment_links"
 description: "Check validated checkpoints, attention backends, quantization, and serving feature support."
-crawled_at: "2026-10-26T12:47:29.367424+00:00"
-crawler_engine: "Crawl4AI"
+crawled_at: "2026-10-26T14:43:56.622197+00:00"
+crawler_engine: "Crawl4AI+MkDocsSphinxCleaner"
 ---
 
-[ Skip to content ](https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/supported_models/#supported-models-features)
-[ ![vLLM logo](https://vllm-torchtpu.readthedocs.io/en/latest/assets/logos/vllm-logo-only-light.png) + ![PyTorch logo](https://vllm-torchtpu.readthedocs.io/en/latest/assets/logos/pytorch-icon-fullcolor.png) ](https://vllm-torchtpu.readthedocs.io/en/latest/ "vLLM TorchTPU")
-vLLM TorchTPU 
-Supported Models & Features 
-[ ](https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/supported_models/?q= "Share")
-Type to start searching
-[ GitHub 
-  * 113
-  * 28
-
-](https://github.com/vllm-project/vllm-torchtpu "Go to repository")
-[ ![vLLM logo](https://vllm-torchtpu.readthedocs.io/en/latest/assets/logos/vllm-logo-only-light.png) + ![PyTorch logo](https://vllm-torchtpu.readthedocs.io/en/latest/assets/logos/pytorch-icon-fullcolor.png) ](https://vllm-torchtpu.readthedocs.io/en/latest/ "vLLM TorchTPU") vLLM TorchTPU 
-[ GitHub 
-  * 113
-  * 28
-
-](https://github.com/vllm-project/vllm-torchtpu "Go to repository")
-  * [ Home  ](https://vllm-torchtpu.readthedocs.io/en/latest/)
-  * Getting Started  Getting Started 
-    * [ Cloud TPU Setup  ](https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/tpu_setup/)
-    * [ Installation  ](https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/installation/)
-    * [ Quickstart  ](https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/quickstart/)
-    * [ Docker Guide  ](https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/docker/)
-  * User Guide  User Guide 
-    * Supported Models & Features  [ Supported Models & Features  ](https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/supported_models/) Table of contents 
-      * [ Validated Models  ](https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/supported_models/#validated-models)
-      * [ Feature Support  ](https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/supported_models/#feature-support)
-    * [ Parallelism & Scaling  ](https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/parallelism/)
-    * [ Multi-Host Serving  ](https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/multihost/)
-    * [ Disaggregated Serving (P/D)  ](https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/disaggregated_serving/)
-    * [ Quantization  ](https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/quantization/)
-    * [ Speculative Decoding  ](https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/speculative_decoding/)
-    * [ Compilation & Warmup Cache  ](https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/compilation_cache/)
-    * Code Examples  Code Examples 
-      * [ Offline Inference  ](https://vllm-torchtpu.readthedocs.io/en/latest/api_and_code_examples/offline_inference/)
-      * [ Multi Modal Inference  ](https://vllm-torchtpu.readthedocs.io/en/latest/api_and_code_examples/multi_modal_inference/)
-      * [ Offline LoRA  ](https://vllm-torchtpu.readthedocs.io/en/latest/api_and_code_examples/offline_lora_inference/)
-  * Deployment & Recipes  Deployment & Recipes 
-    * [ TPU v7x (Ironwood) Recipes  ](https://vllm-torchtpu.readthedocs.io/en/latest/deployment/v7x_recipes/)
-    * [ TPU v6e (Trillium) Recipes  ](https://vllm-torchtpu.readthedocs.io/en/latest/deployment/v6e_recipes/)
-    * [ Kubernetes & GKE  ](https://vllm-torchtpu.readthedocs.io/en/latest/deployment/kubernetes/)
-  * Developer Guide  Developer Guide 
-    * [ Contributing  ](https://vllm-torchtpu.readthedocs.io/en/latest/developers_guide/contributing/)
-    * [ Coding Guidance  ](https://vllm-torchtpu.readthedocs.io/en/latest/developers_guide/coding_guidance/)
-    * [ Optimization Best Practices  ](https://vllm-torchtpu.readthedocs.io/en/latest/developers_guide/optimization_best_practices/)
-    * [ TPU Patch Mechanism  ](https://vllm-torchtpu.readthedocs.io/en/latest/developers_guide/tpu_patch_mechanism/)
-    * [ Type Checking  ](https://vllm-torchtpu.readthedocs.io/en/latest/developers_guide/type_checking/)
-    * [ Testing & CI  ](https://vllm-torchtpu.readthedocs.io/en/latest/developers_guide/testing_and_ci/)
-    * [ Benchmarking  ](https://vllm-torchtpu.readthedocs.io/en/latest/developers_guide/benchmarking/)
-    * [ Profiling  ](https://vllm-torchtpu.readthedocs.io/en/latest/developers_guide/profiling/)
-Profiling 
-      * [ Offline (tpu_profiling.py)  ](https://vllm-torchtpu.readthedocs.io/en/latest/developers_guide/profiling/offline/)
-      * [ Server-side Capture  ](https://vllm-torchtpu.readthedocs.io/en/latest/developers_guide/profiling/server/)
-      * [ Phased Profiling  ](https://vllm-torchtpu.readthedocs.io/en/latest/developers_guide/profiling/phased/)
-      * [ Disaggregated Serving (P/D)  ](https://vllm-torchtpu.readthedocs.io/en/latest/developers_guide/profiling/disaggregated/)
-      * [ Output Layout  ](https://vllm-torchtpu.readthedocs.io/en/latest/developers_guide/profiling/output/)
-      * [ Viewing Traces  ](https://vllm-torchtpu.readthedocs.io/en/latest/developers_guide/profiling/viewing/)
-      * [ Troubleshooting  ](https://vllm-torchtpu.readthedocs.io/en/latest/developers_guide/profiling/troubleshooting/)
-  * Reference  Reference 
-    * [ Environment Variables  ](https://vllm-torchtpu.readthedocs.io/en/latest/reference/env_vars/)
-  * [ Roadmap  ](https://vllm-torchtpu.readthedocs.io/en/latest/roadmap/)
-
-
-Table of contents 
-  * [ Validated Models  ](https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/supported_models/#validated-models)
-  * [ Feature Support  ](https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/supported_models/#feature-support)
-
-
-[ ](https://github.com/vllm-project/vllm-torchtpu/edit/main/docs/user_guide/supported_models.md "Edit this page")
-# Supported Models & Features[¶](https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/supported_models/#supported-models-features "Permanent link")
+# Supported Models & Features
 `vllm-torchtpu` executes models through vLLM's native PyTorch model runner (`TPUModelRunner`) compiled with `torch.compile(backend="tpu")`, paired with custom JAX/Pallas kernels for attention, Mixture-of-Experts (MoE), and quantized matrix multiplication.
 This page has two sections:
   * [Validated Models](https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/supported_models/#validated-models) — Models running on TPU, which checkpoints are tested, and in which way.
@@ -93,7 +24,7 @@ Validation levels used in both tables:
 | 🧪 **Tests**  | Covered by unit, kernel, or component tests only (no end-to-end serving run in CI)  |  
 | 📝 **Example**  | Example script, benchmark config, or recipe exists but is not scheduled in CI  |  
 * * *
-## Validated Models[¶](https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/supported_models/#validated-models "Permanent link")
+## Validated Models
 Click a family to see its architecture-specific TPU support.  
 | Family  | Validated checkpoints  | Architecture-specific TPU support  |  
 | --- | --- | --- |  
@@ -175,7 +106,7 @@ vision-language  |
 |  Architecture-specific TPU supportTPU-native on-device pooling with request bucketing and static compilation; safety classification on the AILuminate prompt set |  
 See the [TPU v7x serving recipes](https://vllm-torchtpu.readthedocs.io/en/latest/deployment/v7x_recipes/) for the exact slice topologies, parallelism layouts, and `vllm serve` flags used for the CI checkpoints. The [TPU v6e serving recipes](https://vllm-torchtpu.readthedocs.io/en/latest/deployment/v6e_recipes/) are reference configurations that are not run in CI.
 * * *
-## Feature Support[¶](https://vllm-torchtpu.readthedocs.io/en/latest/user_guide/supported_models/#feature-support "Permanent link")
+## Feature Support
 All features below are merged in `main`. "Validated with" lists the models and validation level behind each feature; a model missing from a row means the combination has not been run in CI, not that it is unsupported. Click a feature to see how to enable it.  
 | Feature  | How to enable  | Validated with  | Guide  |  
 | --- | --- | --- | --- |  
@@ -331,5 +262,3 @@ All features below are merged in `main`. "Validated with" lists the models and v
 See the [Environment Variables Reference](https://vllm-torchtpu.readthedocs.io/en/latest/reference/env_vars/) for the full list of tuning knobs behind these features.
 [**Reach the right audience** on a privacy-first ad network only for software devs:**EthicalAds**](https://server.ethicalads.io/proxy/click/8176/01a17840-4c1d-7f02-ae98-1b21ea1b8b33/)
 [Ads by EthicalAds](https://www.ethicalads.io/advertisers/topics/data-science/?ref=ea-text)
-Back to top 
-Made with [ Material for MkDocs ](https://squidfunk.github.io/mkdocs-material/)

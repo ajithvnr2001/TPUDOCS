@@ -1,52 +1,267 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:infer_11_tpu_inference_cloud_docs",
-  "@type": "DocumentationResource",
-  "name": "Run inference on Cloud TPU",
-  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/tpu-inference",
-  "category": "Inference deployment links",
-  "categorySlug": "inference_deployment_links",
-  "description": "Official overview of TPU inference, vLLM integration, prerequisites, and serving examples.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/tpu-inference",
-    "crawledAt": "2026-10-26T12:47:38.382699+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 27522
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Run inference on Cloud TPU",
-      "documentedIn",
-      "https://docs.cloud.google.com/tpu/docs/tpu-inference"
-    ],
-    [
-      "Run inference on Cloud TPU",
-      "belongsToCategory",
-      "inference_deployment_links"
-    ],
-    [
-      "Run inference on Cloud TPU",
-      "supportsWorkflow",
-      "High Throughput LLM Inference Serving"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "infer_11_tpu_inference_cloud_docs",
+    "name": "Run inference on Cloud TPU",
+    "url": "https://docs.cloud.google.com/tpu/docs/tpu-inference",
+    "category": "inference_deployment_links",
+    "description": "Official overview of TPU inference, vLLM integration, prerequisites, and serving examples.",
+    "char_count": 6080,
+    "word_count": 700,
+    "section_count": 10,
+    "code_block_count": 0,
+    "table_count": 1,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.687322+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+        "predicate": "schema:name",
+        "object": "Run inference on Cloud TPU"
+      },
+      {
+        "subject": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/tpu/docs/tpu-inference"
+      },
+      {
+        "subject": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+        "predicate": "schema:category",
+        "object": "inference_deployment_links"
+      },
+      {
+        "subject": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+        "predicate": "schema:description",
+        "object": "Official overview of TPU inference, vLLM integration, prerequisites, and serving examples."
+      },
+      {
+        "subject": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5e"
+      },
+      {
+        "subject": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:vLLM-TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:vLLM-TPU"
+      },
+      {
+        "subject": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:SGLang-TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:XProf"
+      },
+      {
+        "subject": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+        "predicate": "okf:hasSection",
+        "object": "Run inference on Cloud TPU"
+      },
+      {
+        "subject": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+        "predicate": "okf:hasSection",
+        "object": "Set up your TPU"
+      },
+      {
+        "subject": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+        "predicate": "okf:hasSection",
+        "object": "Choose an inference stack"
+      },
+      {
+        "subject": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+        "predicate": "okf:hasSection",
+        "object": "Inference with vLLM"
+      },
+      {
+        "subject": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+        "predicate": "okf:hasSection",
+        "object": "vLLM with JAX"
+      },
+      {
+        "subject": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+        "predicate": "okf:hasSection",
+        "object": "vLLM with PyTorch"
+      },
+      {
+        "subject": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+        "predicate": "okf:hasSection",
+        "object": "Inference with SGLang"
+      },
+      {
+        "subject": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+        "predicate": "okf:hasSection",
+        "object": "SGLang with PyTorch"
+      },
+      {
+        "subject": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+        "predicate": "okf:hasSection",
+        "object": "SGLang with JAX"
+      },
+      {
+        "subject": "tpu_doc:infer_11_tpu_inference_cloud_docs",
+        "predicate": "okf:hasSection",
+        "object": "Profile inference performance"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Run inference on Cloud TPU provides official guidance on Official overview of TPU inference, vLLM integration, prerequisites, and serving examples.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/tpu-inference",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Run inference on Cloud TPU used for in Cloud TPU workflows?",
-      "answer": "Official overview of TPU inference, vLLM integration, prerequisites, and serving examples.",
-      "category": "inference_deployment_links"
-    }
-  ],
-  "contentSummary": "Official overview of TPU inference, vLLM integration, prerequisites, and serving examples."
+  },
+  "structured_content": {
+    "summary": "Official overview of TPU inference, vLLM integration, prerequisites, and serving examples.",
+    "sections": [
+      {
+        "heading": "Run inference on Cloud TPU",
+        "level": 1,
+        "content": "**Note:** If you're new to Cloud TPU, see [Introduction to Cloud TPU](https://docs.cloud.google.com/tpu/docs/intro-to-tpu).\nServing is the process of deploying a trained machine learning model to a production environment to run inference. TPU v5e and later versions support inference. Meeting latency service level objectives (SLOs) is a priority for serving workloads.\nThis document discusses serving a model on a _single-host_ TPU. TPU slices with eight or fewer chips have one TPU VM or host and are called _single-host_ TPUs. For information about multi-host inference with PyTorch, see [vLLM-TorchTPU](https://github.com/vllm-project/vllm-torchtpu) and [SGLang-TorchTPU](https://github.com/sgl-project/sglang-torchtpu). For information about multi-host inference with JAX, see [Perform multi-host inference using Pathways](https://docs.cloud.google.com/ai-hypercomputer/docs/workloads/pathways-on-cloud/multihost-inference)."
+      },
+      {
+        "heading": "Set up your TPU",
+        "level": 2,
+        "content": "Whichever stack you choose, you need a Google Cloud project with a single-host TPU before you can serve a model. The following steps apply to every combination of library and framework:\n  1. **Create a project.** You need a Google Cloud account and project to use Cloud TPU. For more information, see [Set up a Google Cloud project for TPUs](https://docs.cloud.google.com/tpu/docs/setup-gcp-account-compute).\n  2. **Check your quota.** Ensure that you have sufficient quota for the number of TPU cores that you plan to use for inference. TPU v5e uses separate quotas for training and serving. In the Cloud TPU API, the serving-specific quotas for TPU v5e are as follows:\n     * **On-demand v5e resources** : `TPU v5 lite pod cores for serving per project per zone`\n     * **Preemptible v5e resources** : `Preemptible TPU v5 lite pod cores for serving per project per zone`\nFor other TPU versions, training and serving workloads use the same quota. For more information, see [Cloud TPU quotas](https://docs.cloud.google.com/tpu/docs/quota).\n  3. **Create a TPU VM.** Choose a TPU version and zone that has serving capacity, and then create a single-host TPU VM. For more information, see [TPU regions and zones](https://docs.cloud.google.com/tpu/docs/regions-zones) and [Manage TPU resources](https://docs.cloud.google.com/tpu/docs/managing-tpus-compute).\n\n\nAfter the TPU VM is running, follow the setup guide for your library and framework in [Choose an inference stack](https://docs.cloud.google.com/tpu/docs/tpu-inference#choose-an-inference-stack)."
+      },
+      {
+        "heading": "Choose an inference stack",
+        "level": 2,
+        "content": "Cloud TPU supports large language model (LLM) inference through two open-source serving libraries: [vLLM](https://docs.vllm.ai/en/latest/) and [SGLang](https://docs.sglang.io/). Both libraries run on Cloud TPU with either a JAX or a PyTorch backend, so you can choose the library that best fits your workload regardless of the framework that your model is written in.\nChoose the library first, and then select the backend that matches your model's framework, as shown in the following table:  \n| Serving library  | JAX backend  | PyTorch backend  |  \n| --- | --- | --- |  \n| vLLM  |  [`vllm-jax`](https://github.com/vllm-project/vllm-jax)  |  [`vllm-torchtpu`](https://github.com/vllm-project/vllm-torchtpu)  |  \n| SGLang  |  [`sglang-jax`](https://docs.sglang.io/docs/hardware-platforms/tpu)  |  [`sglang-torchtpu`](https://github.com/sgl-project/sglang-torchtpu)  |"
+      },
+      {
+        "heading": "Inference with vLLM",
+        "level": 2,
+        "content": "[vLLM](https://docs.vllm.ai/en/latest/) is an open-source library for fast inference and serving of LLMs, built around continuous batching and [PagedAttention](https://vllm.ai/blog/2023-06-20-vllm). Cloud TPU works with vLLM through the [`vllm-jax`](https://github.com/vllm-project/vllm-jax) plugin for JAX models and the [`vllm-torchtpu`](https://github.com/vllm-project/vllm-torchtpu) plugin for PyTorch models.\nFor additional examples of using vLLM to serve a model on TPUs, see the following resources:\n  * [Get started with vLLM TPU](https://github.com/vllm-project/vllm-jax/tree/main/docs/getting_started/quickstart.md)\n  * [Serve an LLM using TPU Trillium on Google Kubernetes Engine with vLLM](https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu)\n  * [Recipes for serving vLLM on Trillium TPUs (v6e)](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM)"
+      },
+      {
+        "heading": "vLLM with JAX",
+        "level": 3,
+        "content": "The vLLM TPU documentation covers installation, a quickstart, supported models, and tuning options. For more information, see [Serve JAX models with vLLM on TPU](https://docs.vllm.ai/projects/tpu)."
+      },
+      {
+        "heading": "vLLM with PyTorch",
+        "level": 3,
+        "content": "The `vllm-torchtpu` plugin adds TorchTPU kernel and runtime support to vLLM. For more information, see [Serve PyTorch models with vLLM on TPU](https://github.com/vllm-project/vllm-torchtpu)."
+      },
+      {
+        "heading": "Inference with SGLang",
+        "level": 2,
+        "content": "[SGLang](https://docs.sglang.io/) is an open-source serving framework for large language and multimodal models that pairs a high-performance runtime with a structured generation frontend. On Cloud TPU, SGLang runs through the SGLang-JAX backend (`sglang-jax`) for JAX models and the SGLang-TorchTPU backend (`sglang-torchtpu`) for PyTorch models."
+      },
+      {
+        "heading": "SGLang with PyTorch",
+        "level": 3,
+        "content": "For information about installation, server launch, and supported configurations, see [Serve PyTorch models with the SGLang-TorchTPU runtime on TPU](https://github.com/sgl-project/sglang-torchtpu)."
+      },
+      {
+        "heading": "SGLang with JAX",
+        "level": 3,
+        "content": "For information about installation, server launch, and supported configurations, see [Serve JAX models with the SGLang-JAX runtime on TPU](https://docs.sglang.io/docs/hardware-platforms/tpu)."
+      },
+      {
+        "heading": "Profile inference performance",
+        "level": 2,
+        "content": "After setting up inference, you can use profilers to analyze performance and TPU utilization. For more information about profiling, see the following resources:\n  * [Profiling on Cloud TPU](https://docs.cloud.google.com/tpu/docs/profile-tpu-vm)\n  * [PyTorch profiling](https://torchtpu.readthedocs.io/en/latest/performance_profiling_with_xprof/)\n  * [JAX profiling](https://jax.readthedocs.io/en/latest/profiling.html#profiling-jax-programs)"
+      }
+    ],
+    "code_examples": [],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [
+      {
+        "headers": [
+          "Serving library",
+          "JAX backend",
+          "PyTorch backend"
+        ],
+        "rows": [
+          [
+            "vLLM",
+            "[`vllm-jax`](https://github.com/vllm-project/vllm-jax)",
+            "[`vllm-torchtpu`](https://github.com/vllm-project/vllm-torchtpu)"
+          ],
+          [
+            "SGLang",
+            "[`sglang-jax`](https://docs.sglang.io/docs/hardware-platforms/tpu)",
+            "[`sglang-torchtpu`](https://github.com/sgl-project/sglang-torchtpu)"
+          ]
+        ]
+      }
+    ],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Run inference on Cloud TPU' (https://docs.cloud.google.com/tpu/docs/tpu-inference)?",
+        "answer": "Official overview of TPU inference, vLLM integration, prerequisites, and serving examples."
+      },
+      {
+        "question": "How does 'Run inference on Cloud TPU' handle: Run inference on Cloud TPU?",
+        "answer": "**Note:** If you're new to Cloud TPU, see [Introduction to Cloud TPU](https://docs.cloud.google.com/tpu/docs/intro-to-tpu).\nServing is the process of deploying a trained machine learning model to a production environment to run inference. TPU v5e and later versions support inference. Meeting latency service level objectives (SLOs) is a priority for serving workloads.\nThis document discusses serving a model on a _single-host_ TPU. TPU slices with eight or fewer chips have one TPU VM or host and are called _single-host_ TPUs. For information about multi-host inference with PyTorch, see [vLLM-TorchTPU](https://github.com/vllm-project/vllm-torchtpu) and [SGLang-TorchTPU](https://github.com/sgl-project/sglang-torchtpu). For information about multi-host inference with JAX, see [Perform multi-host inference using Pathways](https://docs.cloud.google.com/ai-hypercomputer/docs/workloads/pathways-on-cloud/multihost-inference)."
+      },
+      {
+        "question": "How does 'Run inference on Cloud TPU' handle: Set up your TPU?",
+        "answer": "Whichever stack you choose, you need a Google Cloud project with a single-host TPU before you can serve a model. The following steps apply to every combination of library and framework:\n  1. **Create a project.** You need a Google Cloud account and project to use Cloud TPU. For more information, see [Set up a Google Cloud project for TPUs](https://docs.cloud.google.com/tpu/docs/setup-gcp-account-compute).\n  2. **Check your quota.** Ensure that you have sufficient quota for the number of TPU cores that you plan to use for inference. TPU v5e uses separate quotas for training and serving. In the Cloud TPU API, the serving-specific quotas for TPU v5e are as follows:\n     * **On-demand v5e resources** : `TPU v5 lite pod cores for serving per project per zone`\n     * **Preemptible v5e resources** : `Preemptible TPU v5 lite pod cores for serving per project per zone`\nFor other TPU versions, training and serving workloads use the same quota. For more information, see [Cloud TPU quotas](https://docs.cloud.google.com/tpu/docs/quota).\n  3. **Create a TPU VM.** Choose a TPU version and zone that has serving capacity, and then create a single-host TPU VM. For more information, see [TPU regions "
+      },
+      {
+        "question": "How does 'Run inference on Cloud TPU' handle: Choose an inference stack?",
+        "answer": "Cloud TPU supports large language model (LLM) inference through two open-source serving libraries: [vLLM](https://docs.vllm.ai/en/latest/) and [SGLang](https://docs.sglang.io/). Both libraries run on Cloud TPU with either a JAX or a PyTorch backend, so you can choose the library that best fits your workload regardless of the framework that your model is written in.\nChoose the library first, and then select the backend that matches your model's framework, as shown in the following table:  \n| Serving library  | JAX backend  | PyTorch backend  |  \n| --- | --- | --- |  \n| vLLM  |  [`vllm-jax`](https://github.com/vllm-project/vllm-jax)  |  [`vllm-torchtpu`](https://github.com/vllm-project/vllm-torchtpu)  |  \n| SGLang  |  [`sglang-jax`](https://docs.sglang.io/docs/hardware-platforms/tpu)  |  [`sglang-torchtpu`](https://github.com/sgl-project/sglang-torchtpu)  |"
+      },
+      {
+        "question": "How does 'Run inference on Cloud TPU' handle: Inference with vLLM?",
+        "answer": "[vLLM](https://docs.vllm.ai/en/latest/) is an open-source library for fast inference and serving of LLMs, built around continuous batching and [PagedAttention](https://vllm.ai/blog/2023-06-20-vllm). Cloud TPU works with vLLM through the [`vllm-jax`](https://github.com/vllm-project/vllm-jax) plugin for JAX models and the [`vllm-torchtpu`](https://github.com/vllm-project/vllm-torchtpu) plugin for PyTorch models.\nFor additional examples of using vLLM to serve a model on TPUs, see the following resources:\n  * [Get started with vLLM TPU](https://github.com/vllm-project/vllm-jax/tree/main/docs/getting_started/quickstart.md)\n  * [Serve an LLM using TPU Trillium on Google Kubernetes Engine with vLLM](https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu)\n  * [Recipes for serving vLLM on Trillium TPUs (v6e)](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM)"
+      },
+      {
+        "question": "How does 'Run inference on Cloud TPU' handle: vLLM with JAX?",
+        "answer": "The vLLM TPU documentation covers installation, a quickstart, supported models, and tuning options. For more information, see [Serve JAX models with vLLM on TPU](https://docs.vllm.ai/projects/tpu)."
+      },
+      {
+        "question": "How does 'Run inference on Cloud TPU' handle: vLLM with PyTorch?",
+        "answer": "The `vllm-torchtpu` plugin adds TorchTPU kernel and runtime support to vLLM. For more information, see [Serve PyTorch models with vLLM on TPU](https://github.com/vllm-project/vllm-torchtpu)."
+      },
+      {
+        "question": "How does 'Run inference on Cloud TPU' handle: Inference with SGLang?",
+        "answer": "[SGLang](https://docs.sglang.io/) is an open-source serving framework for large language and multimodal models that pairs a high-performance runtime with a structured generation frontend. On Cloud TPU, SGLang runs through the SGLang-JAX backend (`sglang-jax`) for JAX models and the SGLang-TorchTPU backend (`sglang-torchtpu`) for PyTorch models."
+      },
+      {
+        "question": "How does 'Run inference on Cloud TPU' handle: SGLang with PyTorch?",
+        "answer": "For information about installation, server launch, and supported configurations, see [Serve PyTorch models with the SGLang-TorchTPU runtime on TPU](https://github.com/sgl-project/sglang-torchtpu)."
+      },
+      {
+        "question": "How does 'Run inference on Cloud TPU' handle: SGLang with JAX?",
+        "answer": "For information about installation, server launch, and supported configurations, see [Serve JAX models with the SGLang-JAX runtime on TPU](https://docs.sglang.io/docs/hardware-platforms/tpu)."
+      }
+    ],
+    "full_markdown": "# Run inference on Cloud TPU\n**Note:** If you're new to Cloud TPU, see [Introduction to Cloud TPU](https://docs.cloud.google.com/tpu/docs/intro-to-tpu).\nServing is the process of deploying a trained machine learning model to a production environment to run inference. TPU v5e and later versions support inference. Meeting latency service level objectives (SLOs) is a priority for serving workloads.\nThis document discusses serving a model on a _single-host_ TPU. TPU slices with eight or fewer chips have one TPU VM or host and are called _single-host_ TPUs. For information about multi-host inference with PyTorch, see [vLLM-TorchTPU](https://github.com/vllm-project/vllm-torchtpu) and [SGLang-TorchTPU](https://github.com/sgl-project/sglang-torchtpu). For information about multi-host inference with JAX, see [Perform multi-host inference using Pathways](https://docs.cloud.google.com/ai-hypercomputer/docs/workloads/pathways-on-cloud/multihost-inference).\n## Set up your TPU\nWhichever stack you choose, you need a Google Cloud project with a single-host TPU before you can serve a model. The following steps apply to every combination of library and framework:\n  1. **Create a project.** You need a Google Cloud account and project to use Cloud TPU. For more information, see [Set up a Google Cloud project for TPUs](https://docs.cloud.google.com/tpu/docs/setup-gcp-account-compute).\n  2. **Check your quota.** Ensure that you have sufficient quota for the number of TPU cores that you plan to use for inference. TPU v5e uses separate quotas for training and serving. In the Cloud TPU API, the serving-specific quotas for TPU v5e are as follows:\n     * **On-demand v5e resources** : `TPU v5 lite pod cores for serving per project per zone`\n     * **Preemptible v5e resources** : `Preemptible TPU v5 lite pod cores for serving per project per zone`\nFor other TPU versions, training and serving workloads use the same quota. For more information, see [Cloud TPU quotas](https://docs.cloud.google.com/tpu/docs/quota).\n  3. **Create a TPU VM.** Choose a TPU version and zone that has serving capacity, and then create a single-host TPU VM. For more information, see [TPU regions and zones](https://docs.cloud.google.com/tpu/docs/regions-zones) and [Manage TPU resources](https://docs.cloud.google.com/tpu/docs/managing-tpus-compute).\n\n\nAfter the TPU VM is running, follow the setup guide for your library and framework in [Choose an inference stack](https://docs.cloud.google.com/tpu/docs/tpu-inference#choose-an-inference-stack).\n## Choose an inference stack\nCloud TPU supports large language model (LLM) inference through two open-source serving libraries: [vLLM](https://docs.vllm.ai/en/latest/) and [SGLang](https://docs.sglang.io/). Both libraries run on Cloud TPU with either a JAX or a PyTorch backend, so you can choose the library that best fits your workload regardless of the framework that your model is written in.\nChoose the library first, and then select the backend that matches your model's framework, as shown in the following table:  \n| Serving library  | JAX backend  | PyTorch backend  |  \n| --- | --- | --- |  \n| vLLM  |  [`vllm-jax`](https://github.com/vllm-project/vllm-jax)  |  [`vllm-torchtpu`](https://github.com/vllm-project/vllm-torchtpu)  |  \n| SGLang  |  [`sglang-jax`](https://docs.sglang.io/docs/hardware-platforms/tpu)  |  [`sglang-torchtpu`](https://github.com/sgl-project/sglang-torchtpu)  |  \n## Inference with vLLM\n[vLLM](https://docs.vllm.ai/en/latest/) is an open-source library for fast inference and serving of LLMs, built around continuous batching and [PagedAttention](https://vllm.ai/blog/2023-06-20-vllm). Cloud TPU works with vLLM through the [`vllm-jax`](https://github.com/vllm-project/vllm-jax) plugin for JAX models and the [`vllm-torchtpu`](https://github.com/vllm-project/vllm-torchtpu) plugin for PyTorch models.\nFor additional examples of using vLLM to serve a model on TPUs, see the following resources:\n  * [Get started with vLLM TPU](https://github.com/vllm-project/vllm-jax/tree/main/docs/getting_started/quickstart.md)\n  * [Serve an LLM using TPU Trillium on Google Kubernetes Engine with vLLM](https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-vllm-tpu)\n  * [Recipes for serving vLLM on Trillium TPUs (v6e)](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/trillium/vLLM)\n\n\n### vLLM with JAX\nThe vLLM TPU documentation covers installation, a quickstart, supported models, and tuning options. For more information, see [Serve JAX models with vLLM on TPU](https://docs.vllm.ai/projects/tpu).\n### vLLM with PyTorch\nThe `vllm-torchtpu` plugin adds TorchTPU kernel and runtime support to vLLM. For more information, see [Serve PyTorch models with vLLM on TPU](https://github.com/vllm-project/vllm-torchtpu).\n## Inference with SGLang\n[SGLang](https://docs.sglang.io/) is an open-source serving framework for large language and multimodal models that pairs a high-performance runtime with a structured generation frontend. On Cloud TPU, SGLang runs through the SGLang-JAX backend (`sglang-jax`) for JAX models and the SGLang-TorchTPU backend (`sglang-torchtpu`) for PyTorch models.\n### SGLang with PyTorch\nFor information about installation, server launch, and supported configurations, see [Serve PyTorch models with the SGLang-TorchTPU runtime on TPU](https://github.com/sgl-project/sglang-torchtpu).\n### SGLang with JAX\nFor information about installation, server launch, and supported configurations, see [Serve JAX models with the SGLang-JAX runtime on TPU](https://docs.sglang.io/docs/hardware-platforms/tpu).\n## Profile inference performance\nAfter setting up inference, you can use profilers to analyze performance and TPU utilization. For more information about profiling, see the following resources:\n  * [Profiling on Cloud TPU](https://docs.cloud.google.com/tpu/docs/profile-tpu-vm)\n  * [PyTorch profiling](https://torchtpu.readthedocs.io/en/latest/performance_profiling_with_xprof/)\n  * [JAX profiling](https://jax.readthedocs.io/en/latest/profiling.html#profiling-jax-programs)"
+  }
 }

@@ -1,57 +1,370 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:setup_09_quota",
-  "@type": "DocumentationResource",
-  "name": "Cloud TPU quotas",
-  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/quota",
-  "category": "TPU setup docs",
-  "categorySlug": "tpu_setup_docs",
-  "description": "Quota names, default per-zone limits, on-demand/preemptible distinctions, and quota-request guidance.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/quota",
-    "crawledAt": "2026-10-26T12:45:08.066146+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 19235
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Cloud TPU quotas",
-      "documentedIn",
-      "https://docs.cloud.google.com/tpu/docs/quota"
-    ],
-    [
-      "Cloud TPU quotas",
-      "belongsToCategory",
-      "tpu_setup_docs"
-    ],
-    [
-      "Cloud TPU quotas",
-      "targetsPlatform",
-      "Google Cloud Platform"
-    ],
-    [
-      "Cloud TPU quotas",
-      "managesHardware",
-      "Google Cloud TPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:setup_09_quota",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "setup_09_quota",
+    "name": "Cloud TPU quotas",
+    "url": "https://docs.cloud.google.com/tpu/docs/quota",
+    "category": "tpu_setup_docs",
+    "description": "Quota names, default per-zone limits, on-demand/preemptible distinctions, and quota-request guidance.",
+    "char_count": 8327,
+    "word_count": 1316,
+    "section_count": 9,
+    "code_block_count": 0,
+    "table_count": 4,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.382639+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:setup_09_quota",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:setup_09_quota",
+        "predicate": "schema:name",
+        "object": "Cloud TPU quotas"
+      },
+      {
+        "subject": "tpu_doc:setup_09_quota",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/tpu/docs/quota"
+      },
+      {
+        "subject": "tpu_doc:setup_09_quota",
+        "predicate": "schema:category",
+        "object": "tpu_setup_docs"
+      },
+      {
+        "subject": "tpu_doc:setup_09_quota",
+        "predicate": "schema:description",
+        "object": "Quota names, default per-zone limits, on-demand/preemptible distinctions, and quota-request guidance."
+      },
+      {
+        "subject": "tpu_doc:setup_09_quota",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:setup_09_quota",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5p"
+      },
+      {
+        "subject": "tpu_doc:setup_09_quota",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5e"
+      },
+      {
+        "subject": "tpu_doc:setup_09_quota",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v4"
+      },
+      {
+        "subject": "tpu_doc:setup_09_quota",
+        "predicate": "okf:hasSection",
+        "object": "Cloud TPU quotas"
+      },
+      {
+        "subject": "tpu_doc:setup_09_quota",
+        "predicate": "okf:hasSection",
+        "object": "TPU quota"
+      },
+      {
+        "subject": "tpu_doc:setup_09_quota",
+        "predicate": "okf:hasSection",
+        "object": "Default Cloud TPU quotas"
+      },
+      {
+        "subject": "tpu_doc:setup_09_quota",
+        "predicate": "okf:hasSection",
+        "object": "Preemptible quotas"
+      },
+      {
+        "subject": "tpu_doc:setup_09_quota",
+        "predicate": "okf:hasSection",
+        "object": "On-demand quotas"
+      },
+      {
+        "subject": "tpu_doc:setup_09_quota",
+        "predicate": "okf:hasSection",
+        "object": "View and request additional quota"
+      },
+      {
+        "subject": "tpu_doc:setup_09_quota",
+        "predicate": "okf:hasSection",
+        "object": "Preemptible quotas"
+      },
+      {
+        "subject": "tpu_doc:setup_09_quota",
+        "predicate": "okf:hasSection",
+        "object": "On-demand quotas"
+      },
+      {
+        "subject": "tpu_doc:setup_09_quota",
+        "predicate": "okf:hasSection",
+        "object": "What's next"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Cloud TPU quotas provides official guidance on Quota names, default per-zone limits, on-demand/preemptible distinctions, and quota-request guidance.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/quota",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Cloud TPU quotas used for in Cloud TPU workflows?",
-      "answer": "Quota names, default per-zone limits, on-demand/preemptible distinctions, and quota-request guidance.",
-      "category": "tpu_setup_docs"
-    }
-  ],
-  "contentSummary": "Quota names, default per-zone limits, on-demand/preemptible distinctions, and quota-request guidance."
+  },
+  "structured_content": {
+    "summary": "Quota names, default per-zone limits, on-demand/preemptible distinctions, and quota-request guidance.",
+    "sections": [
+      {
+        "heading": "Cloud TPU quotas",
+        "level": 1,
+        "content": "**Important:** This document describes Cloud TPU API quota. If you are using Google Kubernetes Engine or Compute Engine to manage TPUs, you use Compute Engine API quota, which is a different quota. For more information about quota for TPUs in GKE, see [Ensure sufficient quota](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/tpus#ensure-quota). For more information about quota for TPUs in Compute Engine, see [TPU quota](https://docs.cloud.google.com/compute/resource-usage#tpu_quota).\nThis document lists the quotas that apply to Cloud TPU. For information about Cloud TPU pricing, see [Cloud TPU pricing](https://cloud.google.com/tpu/pricing).\nGoogle Cloud uses quotas to help ensure fairness and reduce spikes in resource use and availability. A quota restricts how much of a Google Cloud resource your Google Cloud project can use. Quotas apply to a range of resource types, including hardware, software, and network components. For example, quotas can restrict the number of API calls to a service, the number of load balancers used concurrently by your project, or the number of projects that you can create. Quotas protect the community of Google Cloud users by preventing the overloading of services. Quotas also help you to manage your own Google Cloud resources.\nThe Cloud Quotas system does the following:\n  * Monitors your consumption of Google Cloud products and services\n  * Restricts your consumption of those resources\n  * Provides a way to [request changes to the quota value](https://docs.cloud.google.com/docs/quotas/help/request_increase) and [automate quota adjustments](https://docs.cloud.google.com/docs/quotas/quota-adjuster)\n\n\nIn most cases, when you attempt to consume more of a resource than its quota allows, the system blocks access to the resource, and the task that you're trying to perform fails.\nQuotas generally apply at the Google Cloud project level. Your use of a resource in one project doesn't affect your available quota in another project. Within a Google Cloud project, quotas are shared across all applications and IP addresses. \nFor more information, see the [Cloud Quotas overview](https://docs.cloud.google.com/docs/quotas/overview)."
+      },
+      {
+        "heading": "TPU quota",
+        "level": 2,
+        "content": "TPU quotas are limits on the number of Cloud TPU cores you can use with a Google Cloud project. Each version of TPU is associated with its own quota. In addition, each Cloud TPU version quota is divided into on-demand quota and [preemptible](https://docs.cloud.google.com/tpu/docs/preemptible) (or spot) quota.\n**Note:** For more information about TPU chips and TensorCores, see [TPU System architecture](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm).\nWhen you create Cloud TPU resources, by default you are creating on-demand resources. You can create preemptible resources using the `--spot` parameter when creating resources with the `gcloud` command. For more information, see [Manage TPU resources](https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm)."
+      },
+      {
+        "heading": "Default Cloud TPU quotas",
+        "level": 2,
+        "content": "The following tables show default values for on-demand and preemptible quota for each [available zone](https://docs.cloud.google.com/tpu/docs/regions-zones). These values specify the maximum number of TPU cores you can use within your project."
+      },
+      {
+        "heading": "Preemptible quotas",
+        "level": 3,
+        "content": "| TPU version  | Default quota (number of cores)  | Quota name  |  \n| --- | --- | --- |  \n| v6e  | 1536 cores  | Preemptible TPU v6e cores per project per zone  |  \n| v5p  | 768 cores  | Preemptible TPU v5p cores per project per zone  |  \n| v5e  | 1536 cores  | Preemptible TPU v5 lite pod cores per project per zone  |  \n| v4  | 0 cores  | Preemptible TPU v4 pod cores per project per zone  |  \n| v3 pod  | 32 cores  | Preemptible TPU v3 pod cores per project per zone  |  \n| v3  | 120 cores  | Preemptible TPU v3 cores per project per zone  |  \n| v2 pod  | 32 cores  | Preemptible TPU v2 pod cores per project per zone  |  \n| v2  | 120 cores  | Preemptible TPU v2 cores per project per zone  |"
+      },
+      {
+        "heading": "On-demand quotas",
+        "level": 3,
+        "content": "| TPU version  | Default quota (number of cores)  | Quota name  |  \n| --- | --- | --- |  \n| v6e  | 512 cores  | TPU v6e cores per project per zone  |  \n| v5p  | 128 cores  | TPU v5p cores per project per zone  |  \n| v5e  | 512 cores  | TPU v5 lite pod cores per project per zone  |  \n| v4  | 0 cores  | TPU v4 pod cores per project per zone  |  \n| v3 pod  | 32 cores  | TPU v3 pod cores per project per zone  |  \n| v3  | 40 cores  | TPU v3 cores per project per zone  |  \n| v2 pod  | 32 cores  | TPU v2 pod cores per project per zone  |  \n| v2  | 40 cores  | TPU v2 cores per project per zone  |  \n**Note:** All requests for quota in us-central2-b (currently, only TPU v4) need to be manually approved by Google. No default quota is granted. If you require quota in us-central2-b, request quota for v4 using the same process as described in the following section."
+      },
+      {
+        "heading": "View and request additional quota",
+        "level": 2,
+        "content": "You can view the quota allocated for your Google Cloud project on the [Quotas page in the Google Cloud console](https://console.cloud.google.com/apis/api/tpu.googleapis.com/quotas).\nYou can request additional Cloud TPU quota, from the [Quotas page](https://console.cloud.google.com/iam-admin/quotas). To find the quota you want to increase, click the three vertical dots and choose **Edit quota**. For more information, see [Request a quota adjustment](https://docs.cloud.google.com/docs/quotas/view-manage#requesting_higher_quota). If you request quota below the auto-approve threshold, your request will be automatically approved."
+      },
+      {
+        "heading": "Preemptible quotas",
+        "level": 3,
+        "content": "| TPU version  | Auto-approve threshold  | Quota name  |  \n| --- | --- | --- |  \n| v6e  | All zones: 0 cores  | Preemptible TPU v6e cores per project per zone  |  \n| v5p  | All zones: 0 cores  | Preemptible TPU v5p cores per project per zone  |  \n| v5e  | \n  * us-east5-b: 800 cores\n  * us-west4-a: 1600 cores\n  * us-west4-b: 3968 cores\n  * us-west1-c: 576 cores\n  * us-central1-a: 3264 cores\n  * europe-west4-a: 4032 cores\n\n | Preemptible TPU v5 lite pod cores per project per zone  |  \n| v4  | All zones: 0 cores  | Preemptible TPU v4 pod cores per project per zone  |  \n| v3 pod  | \n  * europe-west4-a: 512 cores\n  * us-east1-d: 320 cores\n\n | Preemptible TPU v3 pod cores per project per zone  |  \n| v3  | \n  * us-central1-a: 64 cores\n  * europe-west4-a: 128 cores\n\n | Preemptible TPU v3 cores per project per zone  |  \n| v2 pod  | \n  * us-central1-a: 64 cores\n  * europe-west4-a: 64 cores\n\n | Preemptible TPU v2 pod cores per project per zone  |  \n| v2  | \n  * us-central1-b: 128 cores\n  * us-central1-c: 64 cores\n  * us-central1-f: 128 cores\n  * europe-west4-a: 32 cores\n\n | Preemptible TPU v2 cores per project per zone  |"
+      },
+      {
+        "heading": "On-demand quotas",
+        "level": 3,
+        "content": "| TPU version  | Auto-approve threshold  | Quota name  |  \n| --- | --- | --- |  \n| v6e  | All zones: 0 cores  | TPU v6e cores per project per zone  |  \n| v5p  | us-east5-a: 64 core  | TPU v5p cores per project per zone  |  \n| v5e  | All zones: 64 cores  | TPU v5 lite pod cores per project per zone  |  \n| v4  | All zones: 0 cores  | TPU v4 pod cores per project per zone  |  \n| v3 pod  | \n  * europe-west4-a: 128 cores\n  * us-east1-d: 64 cores\n\n | TPU v3 pod cores per project per zone  |  \n| v3  | \n  * us-central1-a: 64 cores\n  * europe-west4-a: 128 cores\n\n | TPU v3 cores per project per zone  |  \n| v2 pod  | \n  * us-central1-a: 64 cores\n  * europe-west4-a: 64 cores\n\n | TPU v2 pod cores per project per zone  |  \n| v2  | \n  * us-central1-b: 128 cores\n  * us-central1-c: 64 cores\n  * us-central1-f: 128 cores\n  * europe-west4-a: 32 cores\n\n | TPU v2 cores per project per zone  |  \nYou will receive an email stating if your quota request is approved or denied. Google Cloud service quota increases take place gradually. This might result in ongoing rollouts across different regions or resources. During the rollout, the quota value that appears in the Google Cloud console or Cloud Quotas API won't reflect the new, increased quota value until the rollout completes. For more information, see [View ongoing rollouts](https://docs.cloud.google.com/docs/quotas/view-ongoing-rollouts)."
+      },
+      {
+        "heading": "What's next",
+        "level": 2,
+        "content": "* Learn how to [create TPU VMs](https://docs.cloud.google.com/tpu/docs/create-tpu-vm)\n  * Learn how to [manage TPUs](https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm)"
+      }
+    ],
+    "code_examples": [],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [
+      {
+        "headers": [
+          "TPU version",
+          "Default quota (number of cores)",
+          "Quota name"
+        ],
+        "rows": [
+          [
+            "v6e",
+            "1536 cores",
+            "Preemptible TPU v6e cores per project per zone"
+          ],
+          [
+            "v5p",
+            "768 cores",
+            "Preemptible TPU v5p cores per project per zone"
+          ],
+          [
+            "v5e",
+            "1536 cores",
+            "Preemptible TPU v5 lite pod cores per project per zone"
+          ],
+          [
+            "v4",
+            "0 cores",
+            "Preemptible TPU v4 pod cores per project per zone"
+          ],
+          [
+            "v3 pod",
+            "32 cores",
+            "Preemptible TPU v3 pod cores per project per zone"
+          ],
+          [
+            "v3",
+            "120 cores",
+            "Preemptible TPU v3 cores per project per zone"
+          ],
+          [
+            "v2 pod",
+            "32 cores",
+            "Preemptible TPU v2 pod cores per project per zone"
+          ],
+          [
+            "v2",
+            "120 cores",
+            "Preemptible TPU v2 cores per project per zone"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "TPU version",
+          "Default quota (number of cores)",
+          "Quota name"
+        ],
+        "rows": [
+          [
+            "v6e",
+            "512 cores",
+            "TPU v6e cores per project per zone"
+          ],
+          [
+            "v5p",
+            "128 cores",
+            "TPU v5p cores per project per zone"
+          ],
+          [
+            "v5e",
+            "512 cores",
+            "TPU v5 lite pod cores per project per zone"
+          ],
+          [
+            "v4",
+            "0 cores",
+            "TPU v4 pod cores per project per zone"
+          ],
+          [
+            "v3 pod",
+            "32 cores",
+            "TPU v3 pod cores per project per zone"
+          ],
+          [
+            "v3",
+            "40 cores",
+            "TPU v3 cores per project per zone"
+          ],
+          [
+            "v2 pod",
+            "32 cores",
+            "TPU v2 pod cores per project per zone"
+          ],
+          [
+            "v2",
+            "40 cores",
+            "TPU v2 cores per project per zone"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "TPU version",
+          "Auto-approve threshold",
+          "Quota name"
+        ],
+        "rows": [
+          [
+            "v6e",
+            "All zones: 0 cores",
+            "Preemptible TPU v6e cores per project per zone"
+          ],
+          [
+            "v5p",
+            "All zones: 0 cores",
+            "Preemptible TPU v5p cores per project per zone"
+          ],
+          [
+            "v5e"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "TPU version",
+          "Auto-approve threshold",
+          "Quota name"
+        ],
+        "rows": [
+          [
+            "v6e",
+            "All zones: 0 cores",
+            "TPU v6e cores per project per zone"
+          ],
+          [
+            "v5p",
+            "us-east5-a: 64 core",
+            "TPU v5p cores per project per zone"
+          ],
+          [
+            "v5e",
+            "All zones: 64 cores",
+            "TPU v5 lite pod cores per project per zone"
+          ],
+          [
+            "v4",
+            "All zones: 0 cores",
+            "TPU v4 pod cores per project per zone"
+          ],
+          [
+            "v3 pod"
+          ]
+        ]
+      }
+    ],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Cloud TPU quotas' (https://docs.cloud.google.com/tpu/docs/quota)?",
+        "answer": "Quota names, default per-zone limits, on-demand/preemptible distinctions, and quota-request guidance."
+      },
+      {
+        "question": "How does 'Cloud TPU quotas' handle: Cloud TPU quotas?",
+        "answer": "**Important:** This document describes Cloud TPU API quota. If you are using Google Kubernetes Engine or Compute Engine to manage TPUs, you use Compute Engine API quota, which is a different quota. For more information about quota for TPUs in GKE, see [Ensure sufficient quota](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/tpus#ensure-quota). For more information about quota for TPUs in Compute Engine, see [TPU quota](https://docs.cloud.google.com/compute/resource-usage#tpu_quota).\nThis document lists the quotas that apply to Cloud TPU. For information about Cloud TPU pricing, see [Cloud TPU pricing](https://cloud.google.com/tpu/pricing).\nGoogle Cloud uses quotas to help ensure fairness and reduce spikes in resource use and availability. A quota restricts how much of a Google Cloud resource your Google Cloud project can use. Quotas apply to a range of resource types, including hardware, software, and network components. For example, quotas can restrict the number of API calls to a service, the number of load balancers used concurrently by your project, or the number of projects that you can create. Quotas protect the community of Google Cloud users by preventing the ov"
+      },
+      {
+        "question": "How does 'Cloud TPU quotas' handle: TPU quota?",
+        "answer": "TPU quotas are limits on the number of Cloud TPU cores you can use with a Google Cloud project. Each version of TPU is associated with its own quota. In addition, each Cloud TPU version quota is divided into on-demand quota and [preemptible](https://docs.cloud.google.com/tpu/docs/preemptible) (or spot) quota.\n**Note:** For more information about TPU chips and TensorCores, see [TPU System architecture](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm).\nWhen you create Cloud TPU resources, by default you are creating on-demand resources. You can create preemptible resources using the `--spot` parameter when creating resources with the `gcloud` command. For more information, see [Manage TPU resources](https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm)."
+      },
+      {
+        "question": "How does 'Cloud TPU quotas' handle: Default Cloud TPU quotas?",
+        "answer": "The following tables show default values for on-demand and preemptible quota for each [available zone](https://docs.cloud.google.com/tpu/docs/regions-zones). These values specify the maximum number of TPU cores you can use within your project."
+      },
+      {
+        "question": "How does 'Cloud TPU quotas' handle: Preemptible quotas?",
+        "answer": "| TPU version  | Default quota (number of cores)  | Quota name  |  \n| --- | --- | --- |  \n| v6e  | 1536 cores  | Preemptible TPU v6e cores per project per zone  |  \n| v5p  | 768 cores  | Preemptible TPU v5p cores per project per zone  |  \n| v5e  | 1536 cores  | Preemptible TPU v5 lite pod cores per project per zone  |  \n| v4  | 0 cores  | Preemptible TPU v4 pod cores per project per zone  |  \n| v3 pod  | 32 cores  | Preemptible TPU v3 pod cores per project per zone  |  \n| v3  | 120 cores  | Preemptible TPU v3 cores per project per zone  |  \n| v2 pod  | 32 cores  | Preemptible TPU v2 pod cores per project per zone  |  \n| v2  | 120 cores  | Preemptible TPU v2 cores per project per zone  |"
+      },
+      {
+        "question": "How does 'Cloud TPU quotas' handle: On-demand quotas?",
+        "answer": "| TPU version  | Default quota (number of cores)  | Quota name  |  \n| --- | --- | --- |  \n| v6e  | 512 cores  | TPU v6e cores per project per zone  |  \n| v5p  | 128 cores  | TPU v5p cores per project per zone  |  \n| v5e  | 512 cores  | TPU v5 lite pod cores per project per zone  |  \n| v4  | 0 cores  | TPU v4 pod cores per project per zone  |  \n| v3 pod  | 32 cores  | TPU v3 pod cores per project per zone  |  \n| v3  | 40 cores  | TPU v3 cores per project per zone  |  \n| v2 pod  | 32 cores  | TPU v2 pod cores per project per zone  |  \n| v2  | 40 cores  | TPU v2 cores per project per zone  |  \n**Note:** All requests for quota in us-central2-b (currently, only TPU v4) need to be manually approved by Google. No default quota is granted. If you require quota in us-central2-b, request quota for v4 using the same process as described in the following section."
+      },
+      {
+        "question": "How does 'Cloud TPU quotas' handle: View and request additional quota?",
+        "answer": "You can view the quota allocated for your Google Cloud project on the [Quotas page in the Google Cloud console](https://console.cloud.google.com/apis/api/tpu.googleapis.com/quotas).\nYou can request additional Cloud TPU quota, from the [Quotas page](https://console.cloud.google.com/iam-admin/quotas). To find the quota you want to increase, click the three vertical dots and choose **Edit quota**. For more information, see [Request a quota adjustment](https://docs.cloud.google.com/docs/quotas/view-manage#requesting_higher_quota). If you request quota below the auto-approve threshold, your request will be automatically approved."
+      },
+      {
+        "question": "How does 'Cloud TPU quotas' handle: Preemptible quotas?",
+        "answer": "| TPU version  | Auto-approve threshold  | Quota name  |  \n| --- | --- | --- |  \n| v6e  | All zones: 0 cores  | Preemptible TPU v6e cores per project per zone  |  \n| v5p  | All zones: 0 cores  | Preemptible TPU v5p cores per project per zone  |  \n| v5e  | \n  * us-east5-b: 800 cores\n  * us-west4-a: 1600 cores\n  * us-west4-b: 3968 cores\n  * us-west1-c: 576 cores\n  * us-central1-a: 3264 cores\n  * europe-west4-a: 4032 cores\n\n | Preemptible TPU v5 lite pod cores per project per zone  |  \n| v4  | All zones: 0 cores  | Preemptible TPU v4 pod cores per project per zone  |  \n| v3 pod  | \n  * europe-west4-a: 512 cores\n  * us-east1-d: 320 cores\n\n | Preemptible TPU v3 pod cores per project per zone  |  \n| v3  | \n  * us-central1-a: 64 cores\n  * europe-west4-a: 128 cores\n\n | Preemptible TPU v3 cores per project per zone  |  \n| v2 pod  | \n  * us-central1-a: 64 cores\n  * europe-west4-a: 64 cores\n\n | Preemptible TPU v2 pod cores per project per zone  |  \n| v2  | \n  * us-central1-b: 128 cores\n  * us-central1-c: 64 cores\n  * us-central1-f: 128 cores\n  * europe-west4-a: 32 cores\n\n | Preemptible TPU v2 cores per project per zone  |"
+      },
+      {
+        "question": "How does 'Cloud TPU quotas' handle: On-demand quotas?",
+        "answer": "| TPU version  | Auto-approve threshold  | Quota name  |  \n| --- | --- | --- |  \n| v6e  | All zones: 0 cores  | TPU v6e cores per project per zone  |  \n| v5p  | us-east5-a: 64 core  | TPU v5p cores per project per zone  |  \n| v5e  | All zones: 64 cores  | TPU v5 lite pod cores per project per zone  |  \n| v4  | All zones: 0 cores  | TPU v4 pod cores per project per zone  |  \n| v3 pod  | \n  * europe-west4-a: 128 cores\n  * us-east1-d: 64 cores\n\n | TPU v3 pod cores per project per zone  |  \n| v3  | \n  * us-central1-a: 64 cores\n  * europe-west4-a: 128 cores\n\n | TPU v3 cores per project per zone  |  \n| v2 pod  | \n  * us-central1-a: 64 cores\n  * europe-west4-a: 64 cores\n\n | TPU v2 pod cores per project per zone  |  \n| v2  | \n  * us-central1-b: 128 cores\n  * us-central1-c: 64 cores\n  * us-central1-f: 128 cores\n  * europe-west4-a: 32 cores\n\n | TPU v2 cores per project per zone  |  \nYou will receive an email stating if your quota request is approved or denied. Google Cloud service quota increases take place gradually. This might result in ongoing rollouts across different regions or resources. During the rollout, the quota value that appears in the Google Cloud console or Cloud Quotas API wo"
+      },
+      {
+        "question": "How does 'Cloud TPU quotas' handle: What's next?",
+        "answer": "* Learn how to [create TPU VMs](https://docs.cloud.google.com/tpu/docs/create-tpu-vm)\n  * Learn how to [manage TPUs](https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm)"
+      }
+    ],
+    "full_markdown": "# Cloud TPU quotas\n**Important:** This document describes Cloud TPU API quota. If you are using Google Kubernetes Engine or Compute Engine to manage TPUs, you use Compute Engine API quota, which is a different quota. For more information about quota for TPUs in GKE, see [Ensure sufficient quota](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/tpus#ensure-quota). For more information about quota for TPUs in Compute Engine, see [TPU quota](https://docs.cloud.google.com/compute/resource-usage#tpu_quota).\nThis document lists the quotas that apply to Cloud TPU. For information about Cloud TPU pricing, see [Cloud TPU pricing](https://cloud.google.com/tpu/pricing).\nGoogle Cloud uses quotas to help ensure fairness and reduce spikes in resource use and availability. A quota restricts how much of a Google Cloud resource your Google Cloud project can use. Quotas apply to a range of resource types, including hardware, software, and network components. For example, quotas can restrict the number of API calls to a service, the number of load balancers used concurrently by your project, or the number of projects that you can create. Quotas protect the community of Google Cloud users by preventing the overloading of services. Quotas also help you to manage your own Google Cloud resources.\nThe Cloud Quotas system does the following:\n  * Monitors your consumption of Google Cloud products and services\n  * Restricts your consumption of those resources\n  * Provides a way to [request changes to the quota value](https://docs.cloud.google.com/docs/quotas/help/request_increase) and [automate quota adjustments](https://docs.cloud.google.com/docs/quotas/quota-adjuster)\n\n\nIn most cases, when you attempt to consume more of a resource than its quota allows, the system blocks access to the resource, and the task that you're trying to perform fails.\nQuotas generally apply at the Google Cloud project level. Your use of a resource in one project doesn't affect your available quota in another project. Within a Google Cloud project, quotas are shared across all applications and IP addresses. \nFor more information, see the [Cloud Quotas overview](https://docs.cloud.google.com/docs/quotas/overview). \n## TPU quota\nTPU quotas are limits on the number of Cloud TPU cores you can use with a Google Cloud project. Each version of TPU is associated with its own quota. In addition, each Cloud TPU version quota is divided into on-demand quota and [preemptible](https://docs.cloud.google.com/tpu/docs/preemptible) (or spot) quota.\n**Note:** For more information about TPU chips and TensorCores, see [TPU System architecture](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm).\nWhen you create Cloud TPU resources, by default you are creating on-demand resources. You can create preemptible resources using the `--spot` parameter when creating resources with the `gcloud` command. For more information, see [Manage TPU resources](https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm).\n## Default Cloud TPU quotas\nThe following tables show default values for on-demand and preemptible quota for each [available zone](https://docs.cloud.google.com/tpu/docs/regions-zones). These values specify the maximum number of TPU cores you can use within your project.\n### Preemptible quotas  \n| TPU version  | Default quota (number of cores)  | Quota name  |  \n| --- | --- | --- |  \n| v6e  | 1536 cores  | Preemptible TPU v6e cores per project per zone  |  \n| v5p  | 768 cores  | Preemptible TPU v5p cores per project per zone  |  \n| v5e  | 1536 cores  | Preemptible TPU v5 lite pod cores per project per zone  |  \n| v4  | 0 cores  | Preemptible TPU v4 pod cores per project per zone  |  \n| v3 pod  | 32 cores  | Preemptible TPU v3 pod cores per project per zone  |  \n| v3  | 120 cores  | Preemptible TPU v3 cores per project per zone  |  \n| v2 pod  | 32 cores  | Preemptible TPU v2 pod cores per project per zone  |  \n| v2  | 120 cores  | Preemptible TPU v2 cores per project per zone  |  \n### On-demand quotas  \n| TPU version  | Default quota (number of cores)  | Quota name  |  \n| --- | --- | --- |  \n| v6e  | 512 cores  | TPU v6e cores per project per zone  |  \n| v5p  | 128 cores  | TPU v5p cores per project per zone  |  \n| v5e  | 512 cores  | TPU v5 lite pod cores per project per zone  |  \n| v4  | 0 cores  | TPU v4 pod cores per project per zone  |  \n| v3 pod  | 32 cores  | TPU v3 pod cores per project per zone  |  \n| v3  | 40 cores  | TPU v3 cores per project per zone  |  \n| v2 pod  | 32 cores  | TPU v2 pod cores per project per zone  |  \n| v2  | 40 cores  | TPU v2 cores per project per zone  |  \n**Note:** All requests for quota in us-central2-b (currently, only TPU v4) need to be manually approved by Google. No default quota is granted. If you require quota in us-central2-b, request quota for v4 using the same process as described in the following section.\n## View and request additional quota\nYou can view the quota allocated for your Google Cloud project on the [Quotas page in the Google Cloud console](https://console.cloud.google.com/apis/api/tpu.googleapis.com/quotas).\nYou can request additional Cloud TPU quota, from the [Quotas page](https://console.cloud.google.com/iam-admin/quotas). To find the quota you want to increase, click the three vertical dots and choose **Edit quota**. For more information, see [Request a quota adjustment](https://docs.cloud.google.com/docs/quotas/view-manage#requesting_higher_quota). If you request quota below the auto-approve threshold, your request will be automatically approved.\n### Preemptible quotas  \n| TPU version  | Auto-approve threshold  | Quota name  |  \n| --- | --- | --- |  \n| v6e  | All zones: 0 cores  | Preemptible TPU v6e cores per project per zone  |  \n| v5p  | All zones: 0 cores  | Preemptible TPU v5p cores per project per zone  |  \n| v5e  | \n  * us-east5-b: 800 cores\n  * us-west4-a: 1600 cores\n  * us-west4-b: 3968 cores\n  * us-west1-c: 576 cores\n  * us-central1-a: 3264 cores\n  * europe-west4-a: 4032 cores\n\n | Preemptible TPU v5 lite pod cores per project per zone  |  \n| v4  | All zones: 0 cores  | Preemptible TPU v4 pod cores per project per zone  |  \n| v3 pod  | \n  * europe-west4-a: 512 cores\n  * us-east1-d: 320 cores\n\n | Preemptible TPU v3 pod cores per project per zone  |  \n| v3  | \n  * us-central1-a: 64 cores\n  * europe-west4-a: 128 cores\n\n | Preemptible TPU v3 cores per project per zone  |  \n| v2 pod  | \n  * us-central1-a: 64 cores\n  * europe-west4-a: 64 cores\n\n | Preemptible TPU v2 pod cores per project per zone  |  \n| v2  | \n  * us-central1-b: 128 cores\n  * us-central1-c: 64 cores\n  * us-central1-f: 128 cores\n  * europe-west4-a: 32 cores\n\n | Preemptible TPU v2 cores per project per zone  |  \n### On-demand quotas  \n| TPU version  | Auto-approve threshold  | Quota name  |  \n| --- | --- | --- |  \n| v6e  | All zones: 0 cores  | TPU v6e cores per project per zone  |  \n| v5p  | us-east5-a: 64 core  | TPU v5p cores per project per zone  |  \n| v5e  | All zones: 64 cores  | TPU v5 lite pod cores per project per zone  |  \n| v4  | All zones: 0 cores  | TPU v4 pod cores per project per zone  |  \n| v3 pod  | \n  * europe-west4-a: 128 cores\n  * us-east1-d: 64 cores\n\n | TPU v3 pod cores per project per zone  |  \n| v3  | \n  * us-central1-a: 64 cores\n  * europe-west4-a: 128 cores\n\n | TPU v3 cores per project per zone  |  \n| v2 pod  | \n  * us-central1-a: 64 cores\n  * europe-west4-a: 64 cores\n\n | TPU v2 pod cores per project per zone  |  \n| v2  | \n  * us-central1-b: 128 cores\n  * us-central1-c: 64 cores\n  * us-central1-f: 128 cores\n  * europe-west4-a: 32 cores\n\n | TPU v2 cores per project per zone  |  \nYou will receive an email stating if your quota request is approved or denied. Google Cloud service quota increases take place gradually. This might result in ongoing rollouts across different regions or resources. During the rollout, the quota value that appears in the Google Cloud console or Cloud Quotas API won't reflect the new, increased quota value until the rollout completes. For more information, see [View ongoing rollouts](https://docs.cloud.google.com/docs/quotas/view-ongoing-rollouts).\n## What's next\n  * Learn how to [create TPU VMs](https://docs.cloud.google.com/tpu/docs/create-tpu-vm)\n  * Learn how to [manage TPUs](https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm)"
+  }
 }

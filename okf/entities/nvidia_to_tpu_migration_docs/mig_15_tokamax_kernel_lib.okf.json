@@ -1,57 +1,178 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:mig_15_tokamax_kernel_lib",
-  "@type": "DocumentationResource",
-  "name": "Tokamax TPU kernel library",
-  "canonicalUrl": "https://github.com/openxla/tokamax",
-  "category": "Nvidia to tpu migration docs",
-  "categorySlug": "nvidia_to_tpu_migration_docs",
-  "description": "Prebuilt high-performance TPU kernels with PyTorch interoperability.",
-  "provenance": {
-    "sourceUrl": "https://github.com/openxla/tokamax",
-    "crawledAt": "2026-10-26T12:48:16.895947+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 14172
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Tokamax TPU kernel library",
-      "documentedIn",
-      "https://github.com/openxla/tokamax"
-    ],
-    [
-      "Tokamax TPU kernel library",
-      "belongsToCategory",
-      "nvidia_to_tpu_migration_docs"
-    ],
-    [
-      "Tokamax TPU kernel library",
-      "supportsWorkflow",
-      "CUDA to TPU Code Migration"
-    ],
-    [
-      "Tokamax TPU kernel library",
-      "primaryFramework",
-      "TorchTPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:mig_15_tokamax_kernel_lib",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "mig_15_tokamax_kernel_lib",
+    "name": "Tokamax TPU kernel library",
+    "url": "https://github.com/openxla/tokamax",
+    "category": "nvidia_to_tpu_migration_docs",
+    "description": "Prebuilt high-performance TPU kernels with PyTorch interoperability.",
+    "char_count": 2289,
+    "word_count": 202,
+    "section_count": 6,
+    "code_block_count": 2,
+    "table_count": 0,
+    "cli_command_count": 2,
+    "indexed_at": "2026-10-26T14:46:54.780517+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:mig_15_tokamax_kernel_lib",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:mig_15_tokamax_kernel_lib",
+        "predicate": "schema:name",
+        "object": "Tokamax TPU kernel library"
+      },
+      {
+        "subject": "tpu_doc:mig_15_tokamax_kernel_lib",
+        "predicate": "schema:url",
+        "object": "https://github.com/openxla/tokamax"
+      },
+      {
+        "subject": "tpu_doc:mig_15_tokamax_kernel_lib",
+        "predicate": "schema:category",
+        "object": "nvidia_to_tpu_migration_docs"
+      },
+      {
+        "subject": "tpu_doc:mig_15_tokamax_kernel_lib",
+        "predicate": "schema:description",
+        "object": "Prebuilt high-performance TPU kernels with PyTorch interoperability."
+      },
+      {
+        "subject": "tpu_doc:mig_15_tokamax_kernel_lib",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:mig_15_tokamax_kernel_lib",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:Pallas"
+      },
+      {
+        "subject": "tpu_doc:mig_15_tokamax_kernel_lib",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:Tokamax"
+      },
+      {
+        "subject": "tpu_doc:mig_15_tokamax_kernel_lib",
+        "predicate": "okf:hasSection",
+        "object": "Tokamax"
+      },
+      {
+        "subject": "tpu_doc:mig_15_tokamax_kernel_lib",
+        "predicate": "okf:hasSection",
+        "object": "Documentation"
+      },
+      {
+        "subject": "tpu_doc:mig_15_tokamax_kernel_lib",
+        "predicate": "okf:hasSection",
+        "object": "Getting Started"
+      },
+      {
+        "subject": "tpu_doc:mig_15_tokamax_kernel_lib",
+        "predicate": "okf:hasSection",
+        "object": "Installation"
+      },
+      {
+        "subject": "tpu_doc:mig_15_tokamax_kernel_lib",
+        "predicate": "okf:hasSection",
+        "object": "Usage Examples"
+      },
+      {
+        "subject": "tpu_doc:mig_15_tokamax_kernel_lib",
+        "predicate": "okf:hasSection",
+        "object": "Contributing"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Tokamax TPU kernel library provides official guidance on Prebuilt high-performance TPU kernels with PyTorch interoperability.",
-      "confidence": 1.0,
-      "source": "https://github.com/openxla/tokamax",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Tokamax TPU kernel library used for in Cloud TPU workflows?",
-      "answer": "Prebuilt high-performance TPU kernels with PyTorch interoperability.",
-      "category": "nvidia_to_tpu_migration_docs"
-    }
-  ],
-  "contentSummary": "Prebuilt high-performance TPU kernels with PyTorch interoperability."
+  },
+  "structured_content": {
+    "summary": "Prebuilt high-performance TPU kernels with PyTorch interoperability.",
+    "sections": [
+      {
+        "heading": "Tokamax",
+        "level": 1,
+        "content": "[![nightly](https://img.shields.io/github/actions/workflow/status/openxla/tokamax/ci-nightly.yml?label=nightly&logo=githubactions&logoColor=white)](https://github.com/openxla/tokamax/actions/workflows/ci-nightly.yml)\n[![PyPI version](https://img.shields.io/pypi/v/tokamax?color=blue)](https://pypi.org/project/tokamax/)\n\nTokamax is a library of custom accelerator kernels. It provides highly optimized\nimplementations of key operators, including mixture-of-experts building blocks\nlike grouped matrix multiplication and token gathers/scatters, attention\nvariants like paged attention, splash attention, gated deltanet, Kimi delta\nattention and multiheaded latent attention, and TopK computation. The operator\nportfolio will evolve over time to support the latest OSS models running on the\nlatest hardware accelerators, including Google\n[TPUs](https://cloud.google.com/tpu/docs/intro-to-tpu) and NVIDIA GPUs. The\nlibrary also provides foundational infrastructure to simplify kernel authoring,\nmaintenance, and deployment; for example, features like autotuning, low-overhead\nbenchmarking, and so on.\n\nTokamax kernels are typically built on top of\n[JAX](https://docs.jax.dev/en/latest/index.html) and\n[Pallas](https://docs.jax.dev/en/latest/pallas/index.html), but also expose\nnative PyTorch APIs on TPUs for developer convenience."
+      },
+      {
+        "heading": "Documentation",
+        "level": 2,
+        "content": "Detailed documentation can be found at\n[openxla.org/tokamax](https://openxla.org/tokamax/), including a list of\n[supported ops](https://openxla.org/tokamax/supported_ops) on different hardware\naccelerators, [benchmarking](https://openxla.org/tokamax/benchmarking)\ninfrastructure, and [autotuning](https://openxla.org/tokamax/autotuning)."
+      },
+      {
+        "heading": "Getting Started",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "heading": "Installation",
+        "level": 3,
+        "content": "The latest Tokamax [PyPI release](https://pypi.org/project/tokamax/):\n\n```python\npip install -U tokamax\n```\n\nThe latest bleeding edge version from Github, with no stability guarantees:\n\n```python\npip install git+https://github.com/openxla/tokamax.git\n```"
+      },
+      {
+        "heading": "Usage Examples",
+        "level": 3,
+        "content": "Please see the Colab notebooks [here](https://openxla.org/tokamax/tokamax_demos)\nfor usage examples."
+      },
+      {
+        "heading": "Contributing",
+        "level": 3,
+        "content": "Please see documentation on\n[how to contribute](https://openxla.org/tokamax/contributing) and our\n[code style guide](https://openxla.org/tokamax/code_style)."
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "python",
+        "code": "pip install -U tokamax"
+      },
+      {
+        "language": "python",
+        "code": "pip install git+https://github.com/openxla/tokamax.git"
+      }
+    ],
+    "cli_commands": [
+      "pip install -U tokamax",
+      "pip install git+https://github.com/openxla/tokamax.git"
+    ],
+    "environment_variables": [],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Tokamax TPU kernel library' (https://github.com/openxla/tokamax)?",
+        "answer": "Prebuilt high-performance TPU kernels with PyTorch interoperability."
+      },
+      {
+        "question": "How does 'Tokamax TPU kernel library' handle: Tokamax?",
+        "answer": "[![nightly](https://img.shields.io/github/actions/workflow/status/openxla/tokamax/ci-nightly.yml?label=nightly&logo=githubactions&logoColor=white)](https://github.com/openxla/tokamax/actions/workflows/ci-nightly.yml)\n[![PyPI version](https://img.shields.io/pypi/v/tokamax?color=blue)](https://pypi.org/project/tokamax/)\n\nTokamax is a library of custom accelerator kernels. It provides highly optimized\nimplementations of key operators, including mixture-of-experts building blocks\nlike grouped matrix multiplication and token gathers/scatters, attention\nvariants like paged attention, splash attention, gated deltanet, Kimi delta\nattention and multiheaded latent attention, and TopK computation. The operator\nportfolio will evolve over time to support the latest OSS models running on the\nlatest hardware accelerators, including Google\n[TPUs](https://cloud.google.com/tpu/docs/intro-to-tpu) and NVIDIA GPUs. The\nlibrary also provides foundational infrastructure to simplify kernel authoring,\nmaintenance, and deployment; for example, features like autotuning, low-overhead\nbenchmarking, and so on.\n\nTokamax kernels are typically built on top of\n[JAX](https://docs.jax.dev/en/latest/index.html) and\n[P"
+      },
+      {
+        "question": "How does 'Tokamax TPU kernel library' handle: Documentation?",
+        "answer": "Detailed documentation can be found at\n[openxla.org/tokamax](https://openxla.org/tokamax/), including a list of\n[supported ops](https://openxla.org/tokamax/supported_ops) on different hardware\naccelerators, [benchmarking](https://openxla.org/tokamax/benchmarking)\ninfrastructure, and [autotuning](https://openxla.org/tokamax/autotuning)."
+      },
+      {
+        "question": "How does 'Tokamax TPU kernel library' handle: Installation?",
+        "answer": "The latest Tokamax [PyPI release](https://pypi.org/project/tokamax/):\n\n```python\npip install -U tokamax\n```\n\nThe latest bleeding edge version from Github, with no stability guarantees:\n\n```python\npip install git+https://github.com/openxla/tokamax.git\n```"
+      },
+      {
+        "question": "How does 'Tokamax TPU kernel library' handle: Usage Examples?",
+        "answer": "Please see the Colab notebooks [here](https://openxla.org/tokamax/tokamax_demos)\nfor usage examples."
+      },
+      {
+        "question": "How does 'Tokamax TPU kernel library' handle: Contributing?",
+        "answer": "Please see documentation on\n[how to contribute](https://openxla.org/tokamax/contributing) and our\n[code style guide](https://openxla.org/tokamax/code_style)."
+      }
+    ],
+    "full_markdown": "# Tokamax\n\n[![nightly](https://img.shields.io/github/actions/workflow/status/openxla/tokamax/ci-nightly.yml?label=nightly&logo=githubactions&logoColor=white)](https://github.com/openxla/tokamax/actions/workflows/ci-nightly.yml)\n[![PyPI version](https://img.shields.io/pypi/v/tokamax?color=blue)](https://pypi.org/project/tokamax/)\n\nTokamax is a library of custom accelerator kernels. It provides highly optimized\nimplementations of key operators, including mixture-of-experts building blocks\nlike grouped matrix multiplication and token gathers/scatters, attention\nvariants like paged attention, splash attention, gated deltanet, Kimi delta\nattention and multiheaded latent attention, and TopK computation. The operator\nportfolio will evolve over time to support the latest OSS models running on the\nlatest hardware accelerators, including Google\n[TPUs](https://cloud.google.com/tpu/docs/intro-to-tpu) and NVIDIA GPUs. The\nlibrary also provides foundational infrastructure to simplify kernel authoring,\nmaintenance, and deployment; for example, features like autotuning, low-overhead\nbenchmarking, and so on.\n\nTokamax kernels are typically built on top of\n[JAX](https://docs.jax.dev/en/latest/index.html) and\n[Pallas](https://docs.jax.dev/en/latest/pallas/index.html), but also expose\nnative PyTorch APIs on TPUs for developer convenience.\n\n## Documentation\n\nDetailed documentation can be found at\n[openxla.org/tokamax](https://openxla.org/tokamax/), including a list of\n[supported ops](https://openxla.org/tokamax/supported_ops) on different hardware\naccelerators, [benchmarking](https://openxla.org/tokamax/benchmarking)\ninfrastructure, and [autotuning](https://openxla.org/tokamax/autotuning).\n\n## Getting Started\n\n### Installation\n\nThe latest Tokamax [PyPI release](https://pypi.org/project/tokamax/):\n\n```python\npip install -U tokamax\n```\n\nThe latest bleeding edge version from Github, with no stability guarantees:\n\n```python\npip install git+https://github.com/openxla/tokamax.git\n```\n\n### Usage Examples\n\nPlease see the Colab notebooks [here](https://openxla.org/tokamax/tokamax_demos)\nfor usage examples.\n\n### Contributing\n\nPlease see documentation on\n[how to contribute](https://openxla.org/tokamax/contributing) and our\n[code style guide](https://openxla.org/tokamax/code_style)."
+  }
 }

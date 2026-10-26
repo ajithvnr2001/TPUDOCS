@@ -1,64 +1,363 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:infer_10_sglang_torchtpu_repo",
-  "@type": "DocumentationResource",
-  "name": "SGLang-TorchTPU official repository",
-  "canonicalUrl": "https://github.com/sgl-project/sglang-torchtpu",
-  "category": "Inference deployment links",
-  "categorySlug": "inference_deployment_links",
-  "description": "Official SGLang PyTorch-native TPU backend, complementary to vLLM-TorchTPU and distinct from SGLang-JAX.",
-  "provenance": {
-    "sourceUrl": "https://github.com/sgl-project/sglang-torchtpu",
-    "crawledAt": "2026-10-26T12:47:40.828362+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 373835
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "SGLang-TorchTPU official repository",
-      "documentedIn",
-      "https://github.com/sgl-project/sglang-torchtpu"
-    ],
-    [
-      "SGLang-TorchTPU official repository",
-      "belongsToCategory",
-      "inference_deployment_links"
-    ],
-    [
-      "SGLang-TorchTPU official repository",
-      "supportsWorkflow",
-      "High Throughput LLM Inference Serving"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:infer_10_sglang_torchtpu_repo",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "infer_10_sglang_torchtpu_repo",
+    "name": "SGLang-TorchTPU official repository",
+    "url": "https://github.com/sgl-project/sglang-torchtpu",
+    "category": "inference_deployment_links",
+    "description": "Official SGLang PyTorch-native TPU backend, complementary to vLLM-TorchTPU and distinct from SGLang-JAX.",
+    "char_count": 6851,
+    "word_count": 793,
+    "section_count": 13,
+    "code_block_count": 7,
+    "table_count": 2,
+    "cli_command_count": 9,
+    "indexed_at": "2026-10-26T14:46:54.685082+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "schema:name",
+        "object": "SGLang-TorchTPU official repository"
+      },
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "schema:url",
+        "object": "https://github.com/sgl-project/sglang-torchtpu"
+      },
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "schema:category",
+        "object": "inference_deployment_links"
+      },
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "schema:description",
+        "object": "Official SGLang PyTorch-native TPU backend, complementary to vLLM-TorchTPU and distinct from SGLang-JAX."
+      },
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:TPU7x"
+      },
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v4"
+      },
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:SGLang-TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:Pallas"
+      },
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "SGLang-TorchTPU Official Repository"
+      },
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "Highlights"
+      },
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "Get started"
+      },
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "Docker"
+      },
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "pip"
+      },
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "From source"
+      },
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "Launch a server"
+      },
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "Supported hardware"
+      },
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "Models and features"
+      },
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "Part of the SGLang ecosystem"
+      },
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "Development and contributing"
+      },
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "Issues and feedback"
+      },
+      {
+        "subject": "tpu_doc:infer_10_sglang_torchtpu_repo",
+        "predicate": "okf:hasSection",
+        "object": "License and acknowledgments"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "SGLang-TorchTPU official repository provides official guidance on Official SGLang PyTorch-native TPU backend, complementary to vLLM-TorchTPU and distinct from SGLang-JAX.",
-      "confidence": 1.0,
-      "source": "https://github.com/sgl-project/sglang-torchtpu",
-      "verified": true
-    },
-    {
-      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
-      "confidence": 1.0,
-      "source": "https://github.com/sgl-project/sglang-torchtpu",
-      "verified": true
-    },
-    {
-      "assertion": "vLLM-TorchTPU is the out-of-tree PyTorch-native serving backend for vLLM on TPUs, distinct from the JAX-native vllm-tpu backend.",
-      "confidence": 1.0,
-      "source": "https://github.com/sgl-project/sglang-torchtpu",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is SGLang-TorchTPU official repository used for in Cloud TPU workflows?",
-      "answer": "Official SGLang PyTorch-native TPU backend, complementary to vLLM-TorchTPU and distinct from SGLang-JAX.",
-      "category": "inference_deployment_links"
-    }
-  ],
-  "contentSummary": "Official SGLang PyTorch-native TPU backend, complementary to vLLM-TorchTPU and distinct from SGLang-JAX."
+  },
+  "structured_content": {
+    "summary": "Official SGLang PyTorch-native TPU backend, complementary to vLLM-TorchTPU and distinct from SGLang-JAX.",
+    "sections": [
+      {
+        "heading": "SGLang-TorchTPU Official Repository",
+        "level": 1,
+        "content": "<p align=\"center\">\n  <img src=\"assets/torch-tpu.svg\" alt=\"SGLang-TorchTPU\" width=\"360\">\n</p>\n\n<h1 align=\"center\">SGLang-TorchTPU</h1>\n\n<p align=\"center\">\n  <strong>PyTorch-native LLM serving on Google TPUs.</strong><br>\n  The SGLang serving engine. The PyTorch ecosystem. Built for TPU.\n</p>\n\n<p align=\"center\">\n  <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/License-Apache%202.0-green?style=flat&amp;labelColor=555555\" alt=\"License: Apache 2.0\"></a>\n  <img src=\"https://img.shields.io/badge/Hardware-TPU7x%20Ironwood-orange?style=flat&amp;labelColor=555555\" alt=\"Hardware: TPU7x Ironwood\">\n</p>\n\nSGLang-TorchTPU brings [SGLang](https://github.com/sgl-project/sglang) to Google TPUs through **torch_tpu** and **Pallas kernels**. Serve large language and vision-language models with SGLang's OpenAI-compatible API and scheduling engine, while developing in PyTorch with eager execution and TPU compilation.\n\n<p align=\"center\">\n  <a href=\"https://docs.sglang.io/docs/hardware-platforms/tpu#sglang-torchtpu\">Documentation</a>\n</p>"
+      },
+      {
+        "heading": "Highlights",
+        "level": 2,
+        "content": "**PyTorch-native TPU serving.** Develop with familiar PyTorch workflows and deploy on TPU7x (Ironwood), with `torch.compile` and direct compilation. Tensor, expert, data, pipeline, and context parallelism cover a range of serving configurations.\n\n**Efficient inference at scale.** Combine prefix caching, HiCache KV offload to host memory, and disaggregated prefill/decode with TP resharding. Low-precision inference includes FP8, MXFP4, INT4 W4A16, and FP8 KV cache.\n\n**Speculative decoding.** Explore EAGLE3, DFlash, DFlash2, DSPark, and MTP for supported model configurations. The speculative decoding developer guide below covers worker selection and model-specific requirements."
+      },
+      {
+        "heading": "Get started",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "heading": "Docker",
+        "level": 3,
+        "content": "Pull the TPU image, which has the engine and TPU plugin installed:\n\n```bash\ndocker pull lmsysorg/sglang:v0.1.0-tpu\n```\n\nOn a TPU7x host, start a container with access to the TPU chips:\n\n```bash\ndocker run -it --rm --privileged --net=host --shm-size=64g \\\n  -e SGLANG_PLATFORM=tpu_oot \\\n  lmsysorg/sglang:v0.1.0-tpu\n```\n\nThe container starts in the repository root, `/sgl-workspace/sglang`."
+      },
+      {
+        "heading": "pip",
+        "level": 3,
+        "content": "On a TPU7x host (Linux x86_64, Python 3.11 to 3.14), install the engine and TPU plugin wheels from the [v0.1.0 release](https://github.com/sgl-project/sglang-torchtpu/releases/tag/tpu-v0.1.0). Install both together: `sglang` here is this repository's build, not the PyPI package.\n\n```bash\npip install --extra-index-url https://download.pytorch.org/whl/cpu \\\n  https://github.com/sgl-project/sglang-torchtpu/releases/download/tpu-v0.1.0/sglang-0.5.22-py3-none-any.whl \\\n  https://github.com/sgl-project/sglang-torchtpu/releases/download/tpu-v0.1.0/sglang_tpu-0.1.0-py3-none-any.whl\n```\n\nThe serving recipes below live in the repository, so clone it to run them."
+      },
+      {
+        "heading": "From source",
+        "level": 3,
+        "content": "On a TPU7x host, install the engine with [the TPU dependency manifest](python/pyproject_tpu.toml), then the TPU plugin:\n\n```bash\ngit clone https://github.com/sgl-project/sglang-torchtpu.git\ncd sglang-torchtpu\ncp python/pyproject_tpu.toml python/pyproject.toml\npip install --extra-index-url https://download.pytorch.org/whl/cpu -e python/\npip install --no-deps -e .\n```"
+      },
+      {
+        "heading": "Launch a server",
+        "level": 3,
+        "content": "From the repository root, launch GPT-OSS-20B with the single-host serving recipe, configured for 4 chips and 8 TensorCores:\n\n```bash\npython -m benchmark.tpu.launch_server --config recipe/configs/gpt_oss_20b/server.py\n```\n\nOnce the server is ready, send an OpenAI-compatible request from another terminal:\n\n```bash\ncurl http://localhost:30000/v1/chat/completions \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"model\": \"gpt-oss-20b\", \"messages\": [{\"role\": \"user\", \"content\": \"Hello\"}]}'\n```"
+      },
+      {
+        "heading": "Supported hardware",
+        "level": 2,
+        "content": "Development and testing focus on **TPU7x (Ironwood)**, from a single host to multi-host serving and disaggregated prefill/decode.\n\n| Deployment | Topology |\n| --- | --- |\n| Single host | 4 chips, 8 TensorCores; TP up to 8 |\n| Multi-host | 2 hosts; TP 16 |\n| Disaggregated serving | 4 hosts; 2 prefill + 2 decode |"
+      },
+      {
+        "heading": "Models and features",
+        "level": 2,
+        "content": "Selected model integrations include the following. Recipe availability and test coverage vary by model; experimental integrations are included.\n\n| Model | Available recipes and tests |\n| --- | --- |\n| Muse Spark Open | Serving and agentic recipes |\n| GLM-5.3-Flash | Serving and MTP recipes |\n| Kimi-K3 | Small-model compile test with dummy weights |\n| DeepSeek-V4-Flash | Serving recipe |\n| Qwen3.8-27B | Accuracy and MTP recipes |\n| GPT-OSS (20B, 120B) | 20B recipes, 120B recipes |\n| Gemma 4 (31B, 26B-A4B) | 31B recipes, 26B-A4B recipes |\n\nSee the [full support guide](SUPPORT.md) for support tiers, model-specific requirements, and experimental capabilities.\n\nExplore [model recipes](benchmark/tpu/recipe/README.md), [TPU benchmarks](benchmark/tpu/README.md), and the [CI support matrix](SUPPORT_MATRIX.md) for configurations and test coverage."
+      },
+      {
+        "heading": "Part of the SGLang ecosystem",
+        "level": 2,
+        "content": "SGLang-TorchTPU is the PyTorch-native TPU backend in the [SGLang](https://github.com/sgl-project/sglang) ecosystem, alongside the JAX-based [SGL-JAX](https://github.com/sgl-project/sglang-jax). It brings TPU execution to the SGLang serving interface, so applications can use familiar OpenAI-compatible clients.\n\nTPU kernels, memory management, and backend integrations live in `sglang_tpu/`."
+      },
+      {
+        "heading": "Development and contributing",
+        "level": 2,
+        "content": "Contributions are welcome in model support, kernel optimizations, serving features, benchmarks, and documentation.\n\n1. Read the [contributor guide](CONTRIBUTING.md) for development setup and the pull request workflow.\n2. Explore the [TPU backend](sglang_tpu/README.md) and [speculative decoding developer guide](sglang_tpu/experimental/speculative/README.md).\n3. Add coverage for your changes and include accuracy or performance results where relevant.\n\nCPU-only unit tests run without a TPU:\n\n```bash\npython test/run_suite.py --suite base-a-test-cpu\n```\n\nKernel and end-to-end tests require TPU hardware. A maintainer applies the `run-ci` label and comments `/tag-and-rerun-ci` to run them on your pull request."
+      },
+      {
+        "heading": "Issues and feedback",
+        "level": 2,
+        "content": "- **Bugs and feature requests:** Open an [issue](https://github.com/sgl-project/sglang-torchtpu/issues), including your TPU generation, topology, and torch_tpu version for bug reports.\n- **Security:** See our [security policy](SECURITY.md) for reporting vulnerabilities.\n\nFor engine issues that also reproduce on GPUs, use the [upstream SGLang issue tracker](https://github.com/sgl-project/sglang/issues)."
+      },
+      {
+        "heading": "License and acknowledgments",
+        "level": 2,
+        "content": "SGLang-TorchTPU is released under the [Apache 2.0 license](LICENSE).\n\nSGLang-TorchTPU is a joint effort of Google, Meta, RadixArk, and the SGLang community. Thanks to all contributors.\n\nSee [NOTICE](NOTICE) for attribution details."
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "bash",
+        "code": "docker pull lmsysorg/sglang:v0.1.0-tpu"
+      },
+      {
+        "language": "bash",
+        "code": "docker run -it --rm --privileged --net=host --shm-size=64g \\\n  -e SGLANG_PLATFORM=tpu_oot \\\n  lmsysorg/sglang:v0.1.0-tpu"
+      },
+      {
+        "language": "bash",
+        "code": "pip install --extra-index-url https://download.pytorch.org/whl/cpu \\\n  https://github.com/sgl-project/sglang-torchtpu/releases/download/tpu-v0.1.0/sglang-0.5.22-py3-none-any.whl \\\n  https://github.com/sgl-project/sglang-torchtpu/releases/download/tpu-v0.1.0/sglang_tpu-0.1.0-py3-none-any.whl"
+      },
+      {
+        "language": "bash",
+        "code": "git clone https://github.com/sgl-project/sglang-torchtpu.git\ncd sglang-torchtpu\ncp python/pyproject_tpu.toml python/pyproject.toml\npip install --extra-index-url https://download.pytorch.org/whl/cpu -e python/\npip install --no-deps -e ."
+      },
+      {
+        "language": "bash",
+        "code": "python -m benchmark.tpu.launch_server --config recipe/configs/gpt_oss_20b/server.py"
+      },
+      {
+        "language": "bash",
+        "code": "curl http://localhost:30000/v1/chat/completions \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"model\": \"gpt-oss-20b\", \"messages\": [{\"role\": \"user\", \"content\": \"Hello\"}]}'"
+      },
+      {
+        "language": "bash",
+        "code": "python test/run_suite.py --suite base-a-test-cpu"
+      }
+    ],
+    "cli_commands": [
+      "docker pull lmsysorg/sglang:v0.1.0-tpu",
+      "docker run -it --rm --privileged --net=host --shm-size=64g \\",
+      "pip install --extra-index-url https://download.pytorch.org/whl/cpu \\",
+      "git clone https://github.com/sgl-project/sglang-torchtpu.git",
+      "pip install --extra-index-url https://download.pytorch.org/whl/cpu -e python/",
+      "pip install --no-deps -e .",
+      "python -m benchmark.tpu.launch_server --config recipe/configs/gpt_oss_20b/server.py",
+      "curl http://localhost:30000/v1/chat/completions \\",
+      "python test/run_suite.py --suite base-a-test-cpu"
+    ],
+    "environment_variables": [],
+    "tables": [
+      {
+        "headers": [
+          "Deployment",
+          "Topology"
+        ],
+        "rows": [
+          [
+            "Single host",
+            "4 chips, 8 TensorCores; TP up to 8"
+          ],
+          [
+            "Multi-host",
+            "2 hosts; TP 16"
+          ],
+          [
+            "Disaggregated serving",
+            "4 hosts; 2 prefill + 2 decode"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "Model",
+          "Available recipes and tests"
+        ],
+        "rows": [
+          [
+            "Muse Spark Open",
+            "Serving and agentic recipes"
+          ],
+          [
+            "GLM-5.3-Flash",
+            "Serving and MTP recipes"
+          ],
+          [
+            "Kimi-K3",
+            "Small-model compile test with dummy weights"
+          ],
+          [
+            "DeepSeek-V4-Flash",
+            "Serving recipe"
+          ],
+          [
+            "Qwen3.8-27B",
+            "Accuracy and MTP recipes"
+          ],
+          [
+            "GPT-OSS (20B, 120B)",
+            "20B recipes, 120B recipes"
+          ],
+          [
+            "Gemma 4 (31B, 26B-A4B)",
+            "31B recipes, 26B-A4B recipes"
+          ]
+        ]
+      }
+    ],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'SGLang-TorchTPU official repository' (https://github.com/sgl-project/sglang-torchtpu)?",
+        "answer": "Official SGLang PyTorch-native TPU backend, complementary to vLLM-TorchTPU and distinct from SGLang-JAX."
+      },
+      {
+        "question": "How does 'SGLang-TorchTPU official repository' handle: SGLang-TorchTPU Official Repository?",
+        "answer": "<p align=\"center\">\n  <img src=\"assets/torch-tpu.svg\" alt=\"SGLang-TorchTPU\" width=\"360\">\n</p>\n\n<h1 align=\"center\">SGLang-TorchTPU</h1>\n\n<p align=\"center\">\n  <strong>PyTorch-native LLM serving on Google TPUs.</strong><br>\n  The SGLang serving engine. The PyTorch ecosystem. Built for TPU.\n</p>\n\n<p align=\"center\">\n  <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/License-Apache%202.0-green?style=flat&amp;labelColor=555555\" alt=\"License: Apache 2.0\"></a>\n  <img src=\"https://img.shields.io/badge/Hardware-TPU7x%20Ironwood-orange?style=flat&amp;labelColor=555555\" alt=\"Hardware: TPU7x Ironwood\">\n</p>\n\nSGLang-TorchTPU brings [SGLang](https://github.com/sgl-project/sglang) to Google TPUs through **torch_tpu** and **Pallas kernels**. Serve large language and vision-language models with SGLang's OpenAI-compatible API and scheduling engine, while developing in PyTorch with eager execution and TPU compilation.\n\n<p align=\"center\">\n  <a href=\"https://docs.sglang.io/docs/hardware-platforms/tpu#sglang-torchtpu\">Documentation</a>\n</p>"
+      },
+      {
+        "question": "How does 'SGLang-TorchTPU official repository' handle: Highlights?",
+        "answer": "**PyTorch-native TPU serving.** Develop with familiar PyTorch workflows and deploy on TPU7x (Ironwood), with `torch.compile` and direct compilation. Tensor, expert, data, pipeline, and context parallelism cover a range of serving configurations.\n\n**Efficient inference at scale.** Combine prefix caching, HiCache KV offload to host memory, and disaggregated prefill/decode with TP resharding. Low-precision inference includes FP8, MXFP4, INT4 W4A16, and FP8 KV cache.\n\n**Speculative decoding.** Explore EAGLE3, DFlash, DFlash2, DSPark, and MTP for supported model configurations. The speculative decoding developer guide below covers worker selection and model-specific requirements."
+      },
+      {
+        "question": "How does 'SGLang-TorchTPU official repository' handle: Docker?",
+        "answer": "Pull the TPU image, which has the engine and TPU plugin installed:\n\n```bash\ndocker pull lmsysorg/sglang:v0.1.0-tpu\n```\n\nOn a TPU7x host, start a container with access to the TPU chips:\n\n```bash\ndocker run -it --rm --privileged --net=host --shm-size=64g \\\n  -e SGLANG_PLATFORM=tpu_oot \\\n  lmsysorg/sglang:v0.1.0-tpu\n```\n\nThe container starts in the repository root, `/sgl-workspace/sglang`."
+      },
+      {
+        "question": "How does 'SGLang-TorchTPU official repository' handle: pip?",
+        "answer": "On a TPU7x host (Linux x86_64, Python 3.11 to 3.14), install the engine and TPU plugin wheels from the [v0.1.0 release](https://github.com/sgl-project/sglang-torchtpu/releases/tag/tpu-v0.1.0). Install both together: `sglang` here is this repository's build, not the PyPI package.\n\n```bash\npip install --extra-index-url https://download.pytorch.org/whl/cpu \\\n  https://github.com/sgl-project/sglang-torchtpu/releases/download/tpu-v0.1.0/sglang-0.5.22-py3-none-any.whl \\\n  https://github.com/sgl-project/sglang-torchtpu/releases/download/tpu-v0.1.0/sglang_tpu-0.1.0-py3-none-any.whl\n```\n\nThe serving recipes below live in the repository, so clone it to run them."
+      },
+      {
+        "question": "How does 'SGLang-TorchTPU official repository' handle: From source?",
+        "answer": "On a TPU7x host, install the engine with [the TPU dependency manifest](python/pyproject_tpu.toml), then the TPU plugin:\n\n```bash\ngit clone https://github.com/sgl-project/sglang-torchtpu.git\ncd sglang-torchtpu\ncp python/pyproject_tpu.toml python/pyproject.toml\npip install --extra-index-url https://download.pytorch.org/whl/cpu -e python/\npip install --no-deps -e .\n```"
+      },
+      {
+        "question": "How does 'SGLang-TorchTPU official repository' handle: Launch a server?",
+        "answer": "From the repository root, launch GPT-OSS-20B with the single-host serving recipe, configured for 4 chips and 8 TensorCores:\n\n```bash\npython -m benchmark.tpu.launch_server --config recipe/configs/gpt_oss_20b/server.py\n```\n\nOnce the server is ready, send an OpenAI-compatible request from another terminal:\n\n```bash\ncurl http://localhost:30000/v1/chat/completions \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"model\": \"gpt-oss-20b\", \"messages\": [{\"role\": \"user\", \"content\": \"Hello\"}]}'\n```"
+      },
+      {
+        "question": "How does 'SGLang-TorchTPU official repository' handle: Supported hardware?",
+        "answer": "Development and testing focus on **TPU7x (Ironwood)**, from a single host to multi-host serving and disaggregated prefill/decode.\n\n| Deployment | Topology |\n| --- | --- |\n| Single host | 4 chips, 8 TensorCores; TP up to 8 |\n| Multi-host | 2 hosts; TP 16 |\n| Disaggregated serving | 4 hosts; 2 prefill + 2 decode |"
+      },
+      {
+        "question": "How does 'SGLang-TorchTPU official repository' handle: Models and features?",
+        "answer": "Selected model integrations include the following. Recipe availability and test coverage vary by model; experimental integrations are included.\n\n| Model | Available recipes and tests |\n| --- | --- |\n| Muse Spark Open | Serving and agentic recipes |\n| GLM-5.3-Flash | Serving and MTP recipes |\n| Kimi-K3 | Small-model compile test with dummy weights |\n| DeepSeek-V4-Flash | Serving recipe |\n| Qwen3.8-27B | Accuracy and MTP recipes |\n| GPT-OSS (20B, 120B) | 20B recipes, 120B recipes |\n| Gemma 4 (31B, 26B-A4B) | 31B recipes, 26B-A4B recipes |\n\nSee the [full support guide](SUPPORT.md) for support tiers, model-specific requirements, and experimental capabilities.\n\nExplore [model recipes](benchmark/tpu/recipe/README.md), [TPU benchmarks](benchmark/tpu/README.md), and the [CI support matrix](SUPPORT_MATRIX.md) for configurations and test coverage."
+      },
+      {
+        "question": "How does 'SGLang-TorchTPU official repository' handle: Part of the SGLang ecosystem?",
+        "answer": "SGLang-TorchTPU is the PyTorch-native TPU backend in the [SGLang](https://github.com/sgl-project/sglang) ecosystem, alongside the JAX-based [SGL-JAX](https://github.com/sgl-project/sglang-jax). It brings TPU execution to the SGLang serving interface, so applications can use familiar OpenAI-compatible clients.\n\nTPU kernels, memory management, and backend integrations live in `sglang_tpu/`."
+      }
+    ],
+    "full_markdown": "# SGLang-TorchTPU Official Repository\n\n<p align=\"center\">\n  <img src=\"assets/torch-tpu.svg\" alt=\"SGLang-TorchTPU\" width=\"360\">\n</p>\n\n<h1 align=\"center\">SGLang-TorchTPU</h1>\n\n<p align=\"center\">\n  <strong>PyTorch-native LLM serving on Google TPUs.</strong><br>\n  The SGLang serving engine. The PyTorch ecosystem. Built for TPU.\n</p>\n\n<p align=\"center\">\n  <a href=\"LICENSE\"><img src=\"https://img.shields.io/badge/License-Apache%202.0-green?style=flat&amp;labelColor=555555\" alt=\"License: Apache 2.0\"></a>\n  <img src=\"https://img.shields.io/badge/Hardware-TPU7x%20Ironwood-orange?style=flat&amp;labelColor=555555\" alt=\"Hardware: TPU7x Ironwood\">\n</p>\n\nSGLang-TorchTPU brings [SGLang](https://github.com/sgl-project/sglang) to Google TPUs through **torch_tpu** and **Pallas kernels**. Serve large language and vision-language models with SGLang's OpenAI-compatible API and scheduling engine, while developing in PyTorch with eager execution and TPU compilation.\n\n<p align=\"center\">\n  <a href=\"https://docs.sglang.io/docs/hardware-platforms/tpu#sglang-torchtpu\">Documentation</a>\n</p>\n\n## Highlights\n\n**PyTorch-native TPU serving.** Develop with familiar PyTorch workflows and deploy on TPU7x (Ironwood), with `torch.compile` and direct compilation. Tensor, expert, data, pipeline, and context parallelism cover a range of serving configurations.\n\n**Efficient inference at scale.** Combine prefix caching, HiCache KV offload to host memory, and disaggregated prefill/decode with TP resharding. Low-precision inference includes FP8, MXFP4, INT4 W4A16, and FP8 KV cache.\n\n**Speculative decoding.** Explore EAGLE3, DFlash, DFlash2, DSPark, and MTP for supported model configurations. The speculative decoding developer guide below covers worker selection and model-specific requirements.\n\n## Get started\n\n### Docker\n\nPull the TPU image, which has the engine and TPU plugin installed:\n\n```bash\ndocker pull lmsysorg/sglang:v0.1.0-tpu\n```\n\nOn a TPU7x host, start a container with access to the TPU chips:\n\n```bash\ndocker run -it --rm --privileged --net=host --shm-size=64g \\\n  -e SGLANG_PLATFORM=tpu_oot \\\n  lmsysorg/sglang:v0.1.0-tpu\n```\n\nThe container starts in the repository root, `/sgl-workspace/sglang`.\n\n### pip\n\nOn a TPU7x host (Linux x86_64, Python 3.11 to 3.14), install the engine and TPU plugin wheels from the [v0.1.0 release](https://github.com/sgl-project/sglang-torchtpu/releases/tag/tpu-v0.1.0). Install both together: `sglang` here is this repository's build, not the PyPI package.\n\n```bash\npip install --extra-index-url https://download.pytorch.org/whl/cpu \\\n  https://github.com/sgl-project/sglang-torchtpu/releases/download/tpu-v0.1.0/sglang-0.5.22-py3-none-any.whl \\\n  https://github.com/sgl-project/sglang-torchtpu/releases/download/tpu-v0.1.0/sglang_tpu-0.1.0-py3-none-any.whl\n```\n\nThe serving recipes below live in the repository, so clone it to run them.\n\n### From source\n\nOn a TPU7x host, install the engine with [the TPU dependency manifest](python/pyproject_tpu.toml), then the TPU plugin:\n\n```bash\ngit clone https://github.com/sgl-project/sglang-torchtpu.git\ncd sglang-torchtpu\ncp python/pyproject_tpu.toml python/pyproject.toml\npip install --extra-index-url https://download.pytorch.org/whl/cpu -e python/\npip install --no-deps -e .\n```\n\n### Launch a server\n\nFrom the repository root, launch GPT-OSS-20B with the single-host serving recipe, configured for 4 chips and 8 TensorCores:\n\n```bash\npython -m benchmark.tpu.launch_server --config recipe/configs/gpt_oss_20b/server.py\n```\n\nOnce the server is ready, send an OpenAI-compatible request from another terminal:\n\n```bash\ncurl http://localhost:30000/v1/chat/completions \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"model\": \"gpt-oss-20b\", \"messages\": [{\"role\": \"user\", \"content\": \"Hello\"}]}'\n```\n\n## Supported hardware\n\nDevelopment and testing focus on **TPU7x (Ironwood)**, from a single host to multi-host serving and disaggregated prefill/decode.\n\n| Deployment | Topology |\n| --- | --- |\n| Single host | 4 chips, 8 TensorCores; TP up to 8 |\n| Multi-host | 2 hosts; TP 16 |\n| Disaggregated serving | 4 hosts; 2 prefill + 2 decode |\n\n## Models and features\n\nSelected model integrations include the following. Recipe availability and test coverage vary by model; experimental integrations are included.\n\n| Model | Available recipes and tests |\n| --- | --- |\n| Muse Spark Open | Serving and agentic recipes |\n| GLM-5.3-Flash | Serving and MTP recipes |\n| Kimi-K3 | Small-model compile test with dummy weights |\n| DeepSeek-V4-Flash | Serving recipe |\n| Qwen3.8-27B | Accuracy and MTP recipes |\n| GPT-OSS (20B, 120B) | 20B recipes, 120B recipes |\n| Gemma 4 (31B, 26B-A4B) | 31B recipes, 26B-A4B recipes |\n\nSee the [full support guide](SUPPORT.md) for support tiers, model-specific requirements, and experimental capabilities.\n\nExplore [model recipes](benchmark/tpu/recipe/README.md), [TPU benchmarks](benchmark/tpu/README.md), and the [CI support matrix](SUPPORT_MATRIX.md) for configurations and test coverage.\n\n## Part of the SGLang ecosystem\n\nSGLang-TorchTPU is the PyTorch-native TPU backend in the [SGLang](https://github.com/sgl-project/sglang) ecosystem, alongside the JAX-based [SGL-JAX](https://github.com/sgl-project/sglang-jax). It brings TPU execution to the SGLang serving interface, so applications can use familiar OpenAI-compatible clients.\n\nTPU kernels, memory management, and backend integrations live in `sglang_tpu/`.\n\n## Development and contributing\n\nContributions are welcome in model support, kernel optimizations, serving features, benchmarks, and documentation.\n\n1. Read the [contributor guide](CONTRIBUTING.md) for development setup and the pull request workflow.\n2. Explore the [TPU backend](sglang_tpu/README.md) and [speculative decoding developer guide](sglang_tpu/experimental/speculative/README.md).\n3. Add coverage for your changes and include accuracy or performance results where relevant.\n\nCPU-only unit tests run without a TPU:\n\n```bash\npython test/run_suite.py --suite base-a-test-cpu\n```\n\nKernel and end-to-end tests require TPU hardware. A maintainer applies the `run-ci` label and comments `/tag-and-rerun-ci` to run them on your pull request.\n\n## Issues and feedback\n\n- **Bugs and feature requests:** Open an [issue](https://github.com/sgl-project/sglang-torchtpu/issues), including your TPU generation, topology, and torch_tpu version for bug reports.\n- **Security:** See our [security policy](SECURITY.md) for reporting vulnerabilities.\n\nFor engine issues that also reproduce on GPUs, use the [upstream SGLang issue tracker](https://github.com/sgl-project/sglang/issues).\n\n## License and acknowledgments\n\nSGLang-TorchTPU is released under the [Apache 2.0 license](LICENSE).\n\nSGLang-TorchTPU is a joint effort of Google, Meta, RadixArk, and the SGLang community. Thanks to all contributors.\n\nSee [NOTICE](NOTICE) for attribution details."
+  }
 }

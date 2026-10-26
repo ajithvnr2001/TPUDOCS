@@ -1,63 +1,692 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:legacy_01_manage_tpus_legacy_api",
-  "@type": "DocumentationResource",
-  "name": "Manage TPU resources (legacy Cloud TPU API)",
-  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm",
-  "category": "Legacy docs",
-  "categorySlug": "legacy_docs",
-  "description": "Legacy stop/delete cleanup reference; retain only for existing Cloud TPU API resources.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm",
-    "crawledAt": "2026-10-26T12:44:51.367923+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 57619
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Manage TPU resources (legacy Cloud TPU API)",
-      "documentedIn",
-      "https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm"
-    ],
-    [
-      "Manage TPU resources (legacy Cloud TPU API)",
-      "belongsToCategory",
-      "legacy_docs"
-    ],
-    [
-      "Manage TPU resources (legacy Cloud TPU API)",
-      "status",
-      "Deprecated/Legacy"
-    ],
-    [
-      "Manage TPU resources (legacy Cloud TPU API)",
-      "replacedBy",
-      "TorchTPU / Compute Engine TPU VM"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "legacy_01_manage_tpus_legacy_api",
+    "name": "Manage TPU resources (legacy Cloud TPU API)",
+    "url": "https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm",
+    "category": "legacy_docs",
+    "description": "Legacy stop/delete cleanup reference; retain only for existing Cloud TPU API resources.",
+    "char_count": 36162,
+    "word_count": 3038,
+    "section_count": 64,
+    "code_block_count": 26,
+    "table_count": 0,
+    "cli_command_count": 11,
+    "indexed_at": "2026-10-26T14:46:54.340204+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "schema:name",
+        "object": "Manage TPU resources (legacy Cloud TPU API)"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "schema:category",
+        "object": "legacy_docs"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "schema:description",
+        "object": "Legacy stop/delete cleanup reference; retain only for existing Cloud TPU API resources."
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:TPU7x"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "Manage TPU resources"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "Prerequisites"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "Connect to a Cloud TPU"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "gcloud"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "Console"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "List Cloud TPU resources"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "gcloud"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "Console"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "Java"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "Node.js"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "Python"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "TODO(developer): Update and un-comment below lines"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "project_id = \"your-project-id\""
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "zone = \"us-central1-b\""
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "Example response:"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "projects/[project_id]/locations/[zone]/nodes/node-name"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "State.READY"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "v2-8"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "Retrieve Cloud TPU information"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "gcloud"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "Console"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "Java"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "Node.js"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "Python"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:hasSection",
+        "object": "TODO(developer): Update and un-comment below lines"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "TPU_NAME"
+      },
+      {
+        "subject": "tpu_doc:legacy_01_manage_tpus_legacy_api",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "ZONE"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Manage TPU resources (legacy Cloud TPU API) provides official guidance on Legacy stop/delete cleanup reference; retain only for existing Cloud TPU API resources.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm",
-      "verified": true
-    },
-    {
-      "assertion": "Resource Manage TPU resources (legacy Cloud TPU API) is legacy or deprecated; use Compute Engine TPU API and TorchTPU for current workloads.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Manage TPU resources (legacy Cloud TPU API) used for in Cloud TPU workflows?",
-      "answer": "Legacy stop/delete cleanup reference; retain only for existing Cloud TPU API resources.",
-      "category": "legacy_docs"
-    }
-  ],
-  "contentSummary": "Legacy stop/delete cleanup reference; retain only for existing Cloud TPU API resources."
+  },
+  "structured_content": {
+    "summary": "Legacy stop/delete cleanup reference; retain only for existing Cloud TPU API resources.",
+    "sections": [
+      {
+        "heading": "Manage TPU resources",
+        "level": 1,
+        "content": "**Caution:** This page applies to the Cloud TPU API, which is no longer under active development. The Cloud TPU API will receive bug fixes and security updates only. For the latest features and support for the latest TPU versions, we recommend using Compute Engine or Google Kubernetes Engine to manage TPU resources. For more information, see [TPU resources in Compute Engine](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine) and [About TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus). The Cloud TPU API is not supported on TPU7x and later TPU versions. \nThis page describes how to list, stop, start, delete, and connect to TPU VMs."
+      },
+      {
+        "heading": "Prerequisites",
+        "level": 2,
+        "content": "Before you run these procedures, complete the following steps:\n  1. Create a Google Cloud project for your TPUs as described in [Set up a Google Cloud project for TPUs](https://docs.cloud.google.com/tpu/docs/setup-gcp-account).\n  2. Determine your TPU requirements as described in [Plan your Cloud TPU resources](https://docs.cloud.google.com/tpu/docs/plan-tpus).\n  3. Create a TPU VM as described in [Create a TPU VM](https://docs.cloud.google.com/tpu/docs/create-tpu-vm).\n  4. If you use one of the [Cloud Client Libraries](https://docs.cloud.google.com/apis/docs/client-libraries-explained), follow the setup instructions for the language you're using:\n     * [Python](https://docs.cloud.google.com/python/docs/reference/tpu/latest)\n     * [Java](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/overview)\n     * [Node.js](https://docs.cloud.google.com/nodejs/docs/reference/tpu/latest)\n  5. Set up environment variables.\n\n```\n  export TPU_NAME=your-tpu-name\n  export ZONE=your-zone\n\n```"
+      },
+      {
+        "heading": "Connect to a Cloud TPU",
+        "level": 2,
+        "content": "You can connect to a Cloud TPU using SSH.\nIf you can't connect to a TPU VM using SSH, the TPU VM might not have an external IP address. To access a TPU VM without an external IP address, follow the instructions in [Connect to a TPU VM without a public IP address](https://docs.cloud.google.com/tpu/docs/tpu-iap)."
+      },
+      {
+        "heading": "gcloud",
+        "level": 3,
+        "content": "Connect to your Cloud TPU using SSH:\n\n```\n$ gcloud compute tpus tpu-vm ssh $TPU_NAME --zone=$ZONE\n```\n\nWhen you request a slice larger than a single host, Cloud TPU creates a TPU VM for each host. The number of TPU chips per host depends on the [TPU version](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#versions).\nTo install binaries or run code, connect to each TPU VM using the `tpu-vm ssh` [command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/tpus/tpu-vm/ssh).\n\n```\n$ gcloud compute tpus tpu-vm ssh $TPU_NAME --zone=$ZONE\n```\n\nTo connect to a specific TPU VM using SSH, use the `--worker` flag with a 0-based index:\n\n```\n$ gcloud compute tpus tpu-vm ssh $TPU_NAME --zone=$ZONE --worker=1\n```\n\nTo run a command on all TPU VMs, use the `--worker=all` and `--command` flags:\n\n```\n$ gcloud compute tpus tpu-vm ssh $TPU_NAME \\\n  --zone=$ZONE \\\n  --worker=all \\\n  --command='pip install \"jax[tpu]==0.4.20\" -f https://storage.googleapis.com/jax-releases/libtpu_releases.html'\n```\n\nFor Multislice, you can run a command on a single VM using the enumerated TPU name, with each slice prefix and the number appended to it. To run a command on all TPU VMs in all slices, use the `--node=all`, `--worker=all`, and `--command` flags, with an optional [`--batch-size`](https://docs.cloud.google.com/sdk/gcloud/reference/compute/tpus/queued-resources/ssh#--batch-size) flag.\n\n```\n$ gcloud compute tpus queued-resources ssh your-queued-resource-id \\\n  --zone=$ZONE \\\n  --node=all \\\n  --worker=all \\\n  --command='pip install jax[tpu] -f https://storage.googleapis.com/jax-releases/libtpu_releases.html' \\\n  --batch-size=4\n```\n\nWhen you connect to VMs using the Google Cloud CLI, Compute Engine creates a persistent SSH key."
+      },
+      {
+        "heading": "Console",
+        "level": 3,
+        "content": "To connect to your TPUs in the Google Cloud console, use SSH in your browser:\n  1. In the Google Cloud console, go to the **TPUs** page:\n[Go to TPUs](https://console.cloud.google.com/compute/tpus)\n  2. In the list of TPU VMs, click **SSH** in the row of the TPU VM that you want to connect to.\nWhen you connect to TPU VMs using the Google Cloud console, Compute Engine creates an ephemeral SSH key."
+      },
+      {
+        "heading": "List Cloud TPU resources",
+        "level": 2,
+        "content": "You can list all Cloud TPU resources in a specified zone."
+      },
+      {
+        "heading": "gcloud",
+        "level": 3,
+        "content": "```\n$ gcloud compute tpus tpu-vm list --zone=$ZONE\n```"
+      },
+      {
+        "heading": "Console",
+        "level": 3,
+        "content": "In the Google Cloud console, go to the **TPUs** page:\n[Go to TPUs](https://console.cloud.google.com/compute/tpus)"
+      },
+      {
+        "heading": "Java",
+        "level": 3,
+        "content": "To authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\nimport com.google.cloud.tpu.v2.ListNodesRequest[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.ListNodesRequest.html);\nimport com.google.cloud.tpu.v2.TpuClient[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html);\nimport java.io.IOException;\n\npublic class ListTpuVms {\n\n  public static void main(String[] args) throws IOException {\n    // TODO(developer): Replace these variables before running the sample.\n    // Project ID or project number of the Google Cloud project you want to use.\n    String projectId = \"YOUR_PROJECT_ID\";\n    // The zone where the TPUs are located.\n    // For more information about supported TPU types for specific zones,\n    // see https://cloud.google.com/tpu/docs/regions-zones\n    String zone = \"us-central1-f\";\n\n    listTpuVms(projectId, zone);\n  }\n\n  // Lists TPU VMs in the specified zone.\n  public static [TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html).[ListNodesPage](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.ListNodesPage.html) listTpuVms(String projectId, String zone)\n      throws IOException {\n    // Initialize client that will be used to send requests. This client only needs to be created\n    // once, and can be reused for multiple requests.\n    try ([TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html) tpuClient = [TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html).create()) {\n      String parent = String.format(\"projects/%s/locations/%s\", projectId, zone);\n\n      [ListNodesRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.ListNodesRequest.html) request = [ListNodesRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.ListNodesRequest.html).newBuilder().setParent(parent).build();\n\n      return tpuClient.listNodes(request).getPage();\n    }\n  }\n}\n```"
+      },
+      {
+        "heading": "Node.js",
+        "level": 3,
+        "content": "To authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\n// Import the TPUClient\n// TODO(developer): Uncomment below line before running the sample.\n// const {TpuClient} = require('@google-cloud/tpu').v2;\n\n// Instantiate a tpuClient\n// TODO(developer): Uncomment below line before running the sample.\n// tpuClient = new TpuClient();\n\n// TODO(developer): Update these variables before running the sample.\n// Project ID or project number of the Google Cloud project you want to retrive a list of TPU nodes.\nconst projectId = await tpuClient.getProjectId();\n\n// The zone from which the TPUs are retrived.\nconst zone = 'europe-west4-a';\n\nasync function callTpuVMList() {\n  const request = {\n    parent: `projects/${projectId}/locations/${zone}`,\n  };\n\n  const [response] = await tpuClient.listNodes(request);\n\n  return response;\n}\n\nreturn await callTpuVMList();\n```"
+      },
+      {
+        "heading": "Python",
+        "level": 3,
+        "content": "To authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\nfrom google.cloud import tpu_v2"
+      },
+      {
+        "heading": "TODO(developer): Update and un-comment below lines",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "project_id = \"your-project-id\"",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "zone = \"us-central1-b\"",
+        "level": 1,
+        "content": "client = tpu_v2.TpuClient()\n\nnodes = client.[list_nodes](https://docs.cloud.google.com/python/docs/reference/tpu/latest/google.cloud.tpu_v1.services.tpu.TpuClient.html#google_cloud_tpu_v1_services_tpu_TpuClient_list_nodes)(parent=f\"projects/{project_id}/locations/{zone}\")\nfor node in nodes:\n    print(node.name)\n    print(node.state)\n    print(node.accelerator_type)"
+      },
+      {
+        "heading": "Example response:",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "projects/[project_id]/locations/[zone]/nodes/node-name",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "State.READY",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "v2-8",
+        "level": 1,
+        "content": "```"
+      },
+      {
+        "heading": "Retrieve Cloud TPU information",
+        "level": 2,
+        "content": "You can retrieve information about a specific Cloud TPU."
+      },
+      {
+        "heading": "gcloud",
+        "level": 3,
+        "content": "```\n$ gcloud compute tpus tpu-vm describe $TPU_NAME \\\n  --zone=$ZONE\n```"
+      },
+      {
+        "heading": "Console",
+        "level": 3,
+        "content": "1. In the Google Cloud console, go to the **TPUs** page:\n[Go to TPUs](https://console.cloud.google.com/compute/tpus)\n  2. Click the name of your Cloud TPU. The console displays the Cloud TPU details page."
+      },
+      {
+        "heading": "Java",
+        "level": 3,
+        "content": "To authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\nimport com.google.cloud.tpu.v2.GetNodeRequest[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.GetNodeRequest.html);\nimport com.google.cloud.tpu.v2.Node[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.Node.html);\nimport com.google.cloud.tpu.v2.NodeName[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html);\nimport com.google.cloud.tpu.v2.TpuClient[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html);\nimport java.io.IOException;\n\npublic class GetTpuVm {\n\n  public static void main(String[] args) throws IOException {\n    // TODO(developer): Replace these variables before running the sample.\n    // Project ID or project number of the Google Cloud project you want to use.\n    String projectId = \"YOUR_PROJECT_ID\";\n    // The zone in which to create the TPU.\n    // For more information about supported TPU types for specific zones,\n    // see https://cloud.google.com/tpu/docs/regions-zones\n    String zone = \"europe-west4-a\";\n    // The name for your TPU.\n    String nodeName = \"YOUR_TPU_NAME\";\n\n    getTpuVm(projectId, zone, nodeName);\n  }\n\n  // Describes a TPU VM with the specified name in the given project and zone.\n  public static [Node](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.Node.html) getTpuVm(String projectId, String zone, String nodeName)\n      throws IOException {\n    // Initialize client that will be used to send requests. This client only needs to be created\n    // once, and can be reused for multiple requests.\n    try ([TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html) tpuClient = [TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html).create()) {\n      String name = [NodeName](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html).of(projectId, zone, nodeName).toString();\n\n      [GetNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.GetNodeRequest.html) request = [GetNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.GetNodeRequest.html).newBuilder().setName(name).build();\n\n      return tpuClient.getNode(request);\n    }\n  }\n}\n```"
+      },
+      {
+        "heading": "Node.js",
+        "level": 3,
+        "content": "To authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\n// Import the TPUClient\n// TODO(developer): Uncomment below line before running the sample.\n// const {TpuClient} = require('@google-cloud/tpu').v2;\n\n// Instantiate a tpuClient\n// TODO(developer): Uncomment below line before running the sample.\n// tpuClient = new TpuClient();\n\n// TODO(developer): Update these variables before running the sample.\n// Project ID or project number of the Google Cloud project you want to retrive a node.\nconst projectId = await tpuClient.getProjectId();\n\n// The name of TPU to retrive.\nconst nodeName = 'node-name-1';\n\n// The zone, where the TPU is created.\nconst zone = 'europe-west4-a';\n\nasync function callGetTpuVM() {\n  const request = {\n    name: `projects/${projectId}/locations/${zone}/nodes/${nodeName}`,\n  };\n\n  const [response] = await tpuClient.getNode(request);\n\n  console.log(`Node: ${nodeName} retrived.`);\n  return response;\n}\n\nreturn await callGetTpuVM();\n```"
+      },
+      {
+        "heading": "Python",
+        "level": 3,
+        "content": "To authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\nfrom google.cloud import tpu_v2"
+      },
+      {
+        "heading": "TODO(developer): Update and un-comment below lines",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "project_id = \"your-project-id\"",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "zone = \"us-central1-b\"",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "tpu_name = \"tpu-name\"",
+        "level": 1,
+        "content": "client = tpu_v2.TpuClient()\nnode = client.[get_node](https://docs.cloud.google.com/python/docs/reference/tpu/latest/google.cloud.tpu_v1.services.tpu.TpuClient.html#google_cloud_tpu_v1_services_tpu_TpuClient_get_node)(\n    name=f\"projects/{project_id}/locations/{zone}/nodes/{tpu_name}\"\n)\n\nprint(node)"
+      },
+      {
+        "heading": "Example response:",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "name: \"projects/[project_id]/locations/[zone]/nodes/tpu-name\"",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "state: \"READY\"",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "runtime_version: ...",
+        "level": 1,
+        "content": "```"
+      },
+      {
+        "heading": "Stop Cloud TPU resources",
+        "level": 2,
+        "content": "You can stop a single Cloud TPU to avoid incurring charges without losing its VM configuration and software.\nThe [queued resources](https://docs.cloud.google.com/tpu/docs/queued-resources) API does not support stopping TPU slices or TPUs. To stop incurring charges for TPUs allocated through the queued resources API, delete the TPU."
+      },
+      {
+        "heading": "gcloud",
+        "level": 3,
+        "content": "```\n$ gcloud compute tpus tpu-vm stop $TPU_NAME \\\n  --zone=$ZONE\n```"
+      },
+      {
+        "heading": "Console",
+        "level": 3,
+        "content": "1. In the Google Cloud console, go to the **TPUs** page:\n[Go to TPUs](https://console.cloud.google.com/compute/tpus)\n  2. Select the checkbox next to your Cloud TPU.\n  3. Click stop **Stop**."
+      },
+      {
+        "heading": "Java",
+        "level": 3,
+        "content": "To authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\nimport com.google.cloud.tpu.v2.Node[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.Node.html);\nimport com.google.cloud.tpu.v2.NodeName[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html);\nimport com.google.cloud.tpu.v2.StopNodeRequest[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.StopNodeRequest.html);\nimport com.google.cloud.tpu.v2.TpuClient[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html);\nimport java.io.IOException;\nimport java.util.concurrent.ExecutionException;\n\npublic class StopTpuVm {\n\n  public static void main(String[] args)\n      throws IOException, ExecutionException, InterruptedException {\n    // TODO(developer): Replace these variables before running the sample.\n    // Project ID or project number of the Google Cloud project you want to use.\n    String projectId = \"YOUR_PROJECT_ID\";\n    // The zone where the TPU is located.\n    // For more information about supported TPU types for specific zones,\n    // see https://cloud.google.com/tpu/docs/regions-zones\n    String zone = \"us-central1-f\";\n    // The name for your TPU.\n    String nodeName = \"YOUR_TPU_NAME\";\n\n    stopTpuVm(projectId, zone, nodeName);\n  }\n\n  // Stops a TPU VM with the specified name in the given project and zone.\n  public static [Node](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.Node.html) stopTpuVm(String projectId, String zone, String nodeName)\n      throws IOException, ExecutionException, InterruptedException {\n    // Initialize client that will be used to send requests. This client only needs to be created\n    // once, and can be reused for multiple requests.\n    try ([TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html) tpuClient = [TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html).create()) {\n      String name = [NodeName](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html).of(projectId, zone, nodeName).toString();\n\n      [StopNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.StopNodeRequest.html) request = [StopNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.StopNodeRequest.html).newBuilder().setName(name).build();\n\n      return tpuClient.[stopNodeAsync](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html#com_google_cloud_tpu_v2_TpuClient_stopNodeAsync_com_google_cloud_tpu_v2_StopNodeRequest_)(request).get();\n    }\n  }\n}\n```"
+      },
+      {
+        "heading": "Node.js",
+        "level": 3,
+        "content": "To authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\n// Import the TPUClient\n// TODO(developer): Uncomment below line before running the sample.\n// const {TpuClient} = require('@google-cloud/tpu').v2;\n\n// Instantiate a tpuClient\n// TODO(developer): Uncomment below line before running the sample.\n// tpuClient = new TpuClient();\n\n// TODO(developer): Update these variables before running the sample.\n// Project ID or project number of the Google Cloud project you want to stop a node.\nconst projectId = await tpuClient.getProjectId();\n\n// The name of TPU to stop.\nconst nodeName = 'node-name-1';\n\n// The zone, where the TPU is created.\nconst zone = 'europe-west4-a';\n\nasync function callStopTpuVM() {\n  const request = {\n    name: `projects/${projectId}/locations/${zone}/nodes/${nodeName}`,\n  };\n\n  const [operation] = await tpuClient.stopNode(request);\n  // Wait for the operation to complete.\n  const [response] = await operation.promise();\n\n  console.log(`Node: ${nodeName} stopped.`);\n  return response;\n}\n\nreturn await callStopTpuVM();\n```"
+      },
+      {
+        "heading": "Python",
+        "level": 3,
+        "content": "To authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\nfrom google.cloud import tpu_v2"
+      },
+      {
+        "heading": "TODO(developer): Update and un-comment below lines",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "project_id = \"your-project-id\"",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "zone = \"us-central1-a\"",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "tpu_name = \"tpu-name\"",
+        "level": 1,
+        "content": "client = tpu_v2.TpuClient()\n\nrequest = tpu_v2.StopNodeRequest(\n    name=f\"projects/{project_id}/locations/{zone}/nodes/{tpu_name}\",\n)\ntry:\n    operation = client.[stop_node](https://docs.cloud.google.com/python/docs/reference/tpu/latest/google.cloud.tpu_v1.services.tpu.TpuClient.html#google_cloud_tpu_v1_services_tpu_TpuClient_stop_node)(request=request)\n    print(\"Waiting for stop operation to complete...\")\n    response = operation.result()\n    print(f\"This TPU {tpu_name} has been stopped\")\n    print(response.state)\n    # Example response:\n    # State.STOPPED\n\nexcept Exception as e:\n    print(e)\n    raise e\n\n```"
+      },
+      {
+        "heading": "Start Cloud TPU resources",
+        "level": 2,
+        "content": "You can start a stopped Cloud TPU.\nThe [queued resources](https://docs.cloud.google.com/tpu/docs/queued-resources) API does not support starting TPU Pods or TPUs."
+      },
+      {
+        "heading": "gcloud",
+        "level": 3,
+        "content": "```\n$ gcloud compute tpus tpu-vm start $TPU_NAME \\\n  --zone=$ZONE\n```"
+      },
+      {
+        "heading": "Console",
+        "level": 3,
+        "content": "1. In the Google Cloud console, go to the **TPUs** page:\n[Go to TPUs](https://console.cloud.google.com/compute/tpus)\n  2. Select the checkbox next to your Cloud TPU.\n  3. Click play_arrow **Start**."
+      },
+      {
+        "heading": "Java",
+        "level": 3,
+        "content": "To authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\nimport com.google.cloud.tpu.v2.Node[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.Node.html);\nimport com.google.cloud.tpu.v2.NodeName[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html);\nimport com.google.cloud.tpu.v2.StartNodeRequest[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.StartNodeRequest.html);\nimport com.google.cloud.tpu.v2.TpuClient[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html);\nimport java.io.IOException;\nimport java.util.concurrent.ExecutionException;\n\npublic class StartTpuVm {\n\n  public static void main(String[] args)\n      throws IOException, ExecutionException, InterruptedException {\n    // TODO(developer): Replace these variables before running the sample.\n    // Project ID or project number of the Google Cloud project you want to use.\n    String projectId = \"YOUR_PROJECT_ID\";\n    // The zone where the TPU is located.\n    // For more information about supported TPU types for specific zones,\n    // see https://cloud.google.com/tpu/docs/regions-zones\n    String zone = \"us-central1-f\";\n    // The name for your TPU.\n    String nodeName = \"YOUR_TPU_NAME\";\n\n    startTpuVm(projectId, zone, nodeName);\n  }\n\n  // Starts a TPU VM with the specified name in the given project and zone.\n  public static [Node](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.Node.html) startTpuVm(String projectId, String zone, String nodeName)\n      throws IOException, ExecutionException, InterruptedException {\n    // Initialize client that will be used to send requests. This client only needs to be created\n    // once, and can be reused for multiple requests.\n    try ([TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html) tpuClient = [TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html).create()) {\n      String name = [NodeName](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html).of(projectId, zone, nodeName).toString();\n\n      [StartNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.StartNodeRequest.html) request = [StartNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.StartNodeRequest.html).newBuilder().setName(name).build();\n\n      return tpuClient.[startNodeAsync](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html#com_google_cloud_tpu_v2_TpuClient_startNodeAsync_com_google_cloud_tpu_v2_StartNodeRequest_)(request).get();\n    }\n  }\n}\n```"
+      },
+      {
+        "heading": "Node.js",
+        "level": 3,
+        "content": "To authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\n// Import the TPUClient\n// TODO(developer): Uncomment below line before running the sample.\n// const {TpuClient} = require('@google-cloud/tpu').v2;\n\n// Instantiate a tpuClient\n// TODO(developer): Uncomment below line before running the sample.\n// tpuClient = new TpuClient();\n\n// TODO(developer): Update these variables before running the sample.\n// Project ID or project number of the Google Cloud project you want to start a node.\nconst projectId = await tpuClient.getProjectId();\n\n// The name of TPU to start.\nconst nodeName = 'node-name-1';\n\n// The zone, where the TPU is created.\nconst zone = 'europe-west4-a';\n\nasync function callStartTpuVM() {\n  const request = {\n    name: `projects/${projectId}/locations/${zone}/nodes/${nodeName}`,\n  };\n\n  const [operation] = await tpuClient.startNode(request);\n\n  // Wait for the operation to complete.\n  const [response] = await operation.promise();\n\n  console.log(`Node: ${nodeName} started.`);\n  return response;\n}\n\nreturn await callStartTpuVM();\n```"
+      },
+      {
+        "heading": "Python",
+        "level": 3,
+        "content": "To authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\nfrom google.cloud import tpu_v2"
+      },
+      {
+        "heading": "TODO(developer): Update and un-comment below lines",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "project_id = \"your-project-id\"",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "zone = \"us-central1-a\"",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "tpu_name = \"tpu-name\"",
+        "level": 1,
+        "content": "client = tpu_v2.TpuClient()\n\nrequest = tpu_v2.StartNodeRequest(\n    name=f\"projects/{project_id}/locations/{zone}/nodes/{tpu_name}\",\n)\ntry:\n    operation = client.[start_node](https://docs.cloud.google.com/python/docs/reference/tpu/latest/google.cloud.tpu_v1.services.tpu.TpuClient.html#google_cloud_tpu_v1_services_tpu_TpuClient_start_node)(request=request)\n    print(\"Waiting for start operation to complete...\")\n    response = operation.result()\n    print(f\"TPU {tpu_name} has been started\")\n    print(response.state)\n    # Example response:\n    # State.READY\n\nexcept Exception as e:\n    print(e)\n    raise e\n\n```"
+      },
+      {
+        "heading": "Delete a Cloud TPU",
+        "level": 2,
+        "content": "Delete your TPU VM slices after your session."
+      },
+      {
+        "heading": "gcloud",
+        "level": 3,
+        "content": "```\n$ gcloud compute tpus tpu-vm delete $TPU_NAME \\\n  --zone=$ZONE \\\n  --quiet\n```"
+      },
+      {
+        "heading": "Command flag descriptions",
+        "level": 4,
+        "content": "* `zone`: The [zone](https://docs.cloud.google.com/tpu/docs/types-zones-tpu-vm) where you plan to delete your Cloud TPU.\n  * `quiet`: Disables all interactive prompts when running gcloud CLI commands."
+      },
+      {
+        "heading": "Console",
+        "level": 3,
+        "content": "1. In the Google Cloud console, go to the **TPUs** page:\n[Go to TPUs](https://console.cloud.google.com/compute/tpus)\n  2. Select the checkbox next to your Cloud TPU.\n  3. Click delete **Delete**."
+      },
+      {
+        "heading": "Java",
+        "level": 3,
+        "content": "To authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\nimport com.google.api.gax.longrunning.OperationTimedPollAlgorithm[](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.longrunning.OperationTimedPollAlgorithm.html);\nimport com.google.api.gax.retrying.RetrySettings[](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.html);\nimport com.google.cloud.tpu.v2.DeleteNodeRequest[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.DeleteNodeRequest.html);\nimport com.google.cloud.tpu.v2.NodeName[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html);\nimport com.google.cloud.tpu.v2.TpuClient[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html);\nimport com.google.cloud.tpu.v2.TpuSettings[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuSettings.html);\nimport java.io.IOException;\nimport java.util.concurrent.ExecutionException;\nimport org.threeten.bp.Duration;\n\npublic class DeleteTpuVm {\n\n  public static void main(String[] args)\n      throws IOException, ExecutionException, InterruptedException {\n    // TODO(developer): Replace these variables before running the sample.\n    // Project ID or project number of the Google Cloud project you want to create a node.\n    String projectId = \"YOUR_PROJECT_ID\";\n    // The zone in which to create the TPU.\n    // For more information about supported TPU types for specific zones,\n    // see https://cloud.google.com/tpu/docs/regions-zones\n    String zone = \"europe-west4-a\";\n    // The name for your TPU.\n    String nodeName = \"YOUR_TPU_NAME\";\n\n    deleteTpuVm(projectId, zone, nodeName);\n  }\n\n  // Deletes a TPU VM with the specified name in the given project and zone.\n  public static void deleteTpuVm(String projectId, String zone, String nodeName)\n      throws IOException, ExecutionException, InterruptedException {\n    // With these settings the client library handles the Operation's polling mechanism\n    // and prevent CancellationException error\n    [TpuSettings](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuSettings.html).Builder clientSettings =\n        [TpuSettings](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuSettings.html).newBuilder();\n    clientSettings\n        .deleteNodeOperationSettings()\n        .setPollingAlgorithm(\n            [OperationTimedPollAlgorithm](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.longrunning.OperationTimedPollAlgorithm.html).create(\n                [RetrySettings](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.html).newBuilder()\n                    .[setInitialRetryDelay](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.Builder.html#com_google_api_gax_retrying_RetrySettings_Builder_setInitialRetryDelay_org_threeten_bp_Duration_)(Duration.ofMillis(5000L))\n                    .[setRetryDelayMultiplier](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.Builder.html#com_google_api_gax_retrying_RetrySettings_Builder_setRetryDelayMultiplier_double_)(1.5)\n                    .[setMaxRetryDelay](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.Builder.html#com_google_api_gax_retrying_RetrySettings_Builder_setMaxRetryDelay_org_threeten_bp_Duration_)(Duration.ofMillis(45000L))\n                    .[setInitialRpcTimeout](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.Builder.html#com_google_api_gax_retrying_RetrySettings_Builder_setInitialRpcTimeout_org_threeten_bp_Duration_)(Duration.ZERO)\n                    .[setRpcTimeoutMultiplier](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.Builder.html#com_google_api_gax_retrying_RetrySettings_Builder_setRpcTimeoutMultiplier_double_)(1.0)\n                    .[setMaxRpcTimeout](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.Builder.html#com_google_api_gax_retrying_RetrySettings_Builder_setMaxRpcTimeout_org_threeten_bp_Duration_)(Duration.ZERO)\n                    .[setTotalTimeout](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.Builder.html#com_google_api_gax_retrying_RetrySettings_Builder_setTotalTimeout_org_threeten_bp_Duration_)(Duration.ofHours(24L))\n                    .build()));\n\n    // Initialize client that will be used to send requests. This client only needs to be created\n    // once, and can be reused for multiple requests.\n    try ([TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html) tpuClient = [TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html).create(clientSettings.build())) {\n      String name = [NodeName](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html).of(projectId, zone, nodeName).toString();\n\n      [DeleteNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.DeleteNodeRequest.html) request = [DeleteNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.DeleteNodeRequest.html).newBuilder().setName(name).build();\n\n      tpuClient.[deleteNodeAsync](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html#com_google_cloud_tpu_v2_TpuClient_deleteNodeAsync__org_jspecify_annotations_Nullable_com_google_cloud_tpu_v2_NodeName_)(request).[get](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.longrunning.OperationFutureImpl.html#com_google_api_gax_longrunning_OperationFutureImpl_get__)();\n      System.out.println(\"TPU VM deleted\");\n    }\n  }\n}\n```"
+      },
+      {
+        "heading": "Node.js",
+        "level": 3,
+        "content": "To authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\n// Import the TPUClient\n// TODO(developer): Uncomment below line before running the sample.\n// const {TpuClient} = require('@google-cloud/tpu').v2;\n\n// Instantiate a tpuClient\n// TODO(developer): Uncomment below line before running the sample.\n// tpuClient = new TpuClient();\n\n// TODO(developer): Update these variables before running the sample.\n// Project ID or project number of the Google Cloud project you want to delete a node.\nconst projectId = await tpuClient.getProjectId();\n\n// The name of TPU to delete.\nconst nodeName = 'node-name-1';\n\n// The zone, where the TPU is created.\nconst zone = 'europe-west4-a';\n\nasync function callDeleteTpuVM() {\n  const request = {\n    name: `projects/${projectId}/locations/${zone}/nodes/${nodeName}`,\n  };\n\n  const [operation] = await tpuClient.deleteNode(request);\n\n  // Wait for the delete operation to complete.\n  const [response] = await operation.promise();\n\n  console.log(`Node: ${nodeName} deleted.`);\n  return response;\n}\n\nreturn await callDeleteTpuVM();\n```"
+      },
+      {
+        "heading": "Python",
+        "level": 3,
+        "content": "To authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\nfrom google.cloud import tpu_v2"
+      },
+      {
+        "heading": "TODO(developer): Update and un-comment below lines",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "project_id = \"your-project-id\"",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "zone = \"us-central1-b\"",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "tpu_name = \"tpu-name\"",
+        "level": 1,
+        "content": "client = tpu_v2.TpuClient()\ntry:\n    client.[delete_node](https://docs.cloud.google.com/python/docs/reference/tpu/latest/google.cloud.tpu_v1.services.tpu.TpuClient.html#google_cloud_tpu_v1_services_tpu_TpuClient_delete_node)(\n        name=f\"projects/{project_id}/locations/{zone}/nodes/{tpu_name}\"\n    )\n    print(\"The TPU node was deleted.\")\nexcept Exception as e:\n    print(e)\n\n```"
+      },
+      {
+        "heading": "What's next",
+        "level": 2,
+        "content": "* Learn how to [configure networking and access to your Cloud TPU](https://docs.cloud.google.com/tpu/docs/configure-networking-access)\n  * Learn about [queued resources](https://docs.cloud.google.com/tpu/docs/queued-resources).\n  * Learn about [TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus).\n  * Learn how to [run JAX code on a TPU VM](https://docs.cloud.google.com/tpu/docs/run-calculation-jax).\n  * Learn how to [run PyTorch code on a TPU VM](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu)."
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "export TPU_NAME=your-tpu-name\n  export ZONE=your-zone"
+      },
+      {
+        "language": "text",
+        "code": "$ gcloud compute tpus tpu-vm ssh $TPU_NAME --zone=$ZONE"
+      },
+      {
+        "language": "text",
+        "code": "$ gcloud compute tpus tpu-vm ssh $TPU_NAME --zone=$ZONE"
+      },
+      {
+        "language": "text",
+        "code": "$ gcloud compute tpus tpu-vm ssh $TPU_NAME --zone=$ZONE --worker=1"
+      },
+      {
+        "language": "text",
+        "code": "$ gcloud compute tpus tpu-vm ssh $TPU_NAME \\\n  --zone=$ZONE \\\n  --worker=all \\\n  --command='pip install \"jax[tpu]==0.4.20\" -f https://storage.googleapis.com/jax-releases/libtpu_releases.html'"
+      },
+      {
+        "language": "text",
+        "code": "$ gcloud compute tpus queued-resources ssh your-queued-resource-id \\\n  --zone=$ZONE \\\n  --node=all \\\n  --worker=all \\\n  --command='pip install jax[tpu] -f https://storage.googleapis.com/jax-releases/libtpu_releases.html' \\\n  --batch-size=4"
+      },
+      {
+        "language": "text",
+        "code": "$ gcloud compute tpus tpu-vm list --zone=$ZONE"
+      },
+      {
+        "language": "text",
+        "code": "import com.google.cloud.tpu.v2.ListNodesRequest[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.ListNodesRequest.html);\nimport com.google.cloud.tpu.v2.TpuClient[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html);\nimport java.io.IOException;\n\npublic class ListTpuVms {\n\n  public static void main(String[] args) throws IOException {\n    // TODO(developer): Replace these variables before running the sample.\n    // Project ID or project number of the Google Cloud project you want to use.\n    String projectId = \"YOUR_PROJECT_ID\";\n    // The zone where the TPUs are located.\n    // For more information about supported TPU types for specific zones,\n    // see https://cloud.google.com/tpu/docs/regions-zones\n    String zone = \"us-central1-f\";\n\n    listTpuVms(projectId, zone);\n  }\n\n  // Lists TPU VMs in the specified zone.\n  public static [TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html).[ListNodesPage](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.ListNodesPage.html) listTpuVms(String projectId, String zone)\n      throws IOException {\n    // Initialize client that will be used to send requests. This client only needs to be created\n    // once, and can be reused for multiple requests.\n    try ([TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html) tpuClient = [TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html).create()) {\n      String parent = String.format(\"projects/%s/locations/%s\", projectId, zone);\n\n      [ListNodesRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.ListNodesRequest.html) request = [ListNodesRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.ListNodesRequest.html).newBuilder().setParent(parent).build();\n\n      return tpuClient.listNodes(request).getPage();\n    }\n  }\n}"
+      },
+      {
+        "language": "text",
+        "code": "// Import the TPUClient\n// TODO(developer): Uncomment below line before running the sample.\n// const {TpuClient} = require('@google-cloud/tpu').v2;\n\n// Instantiate a tpuClient\n// TODO(developer): Uncomment below line before running the sample.\n// tpuClient = new TpuClient();\n\n// TODO(developer): Update these variables before running the sample.\n// Project ID or project number of the Google Cloud project you want to retrive a list of TPU nodes.\nconst projectId = await tpuClient.getProjectId();\n\n// The zone from which the TPUs are retrived.\nconst zone = 'europe-west4-a';\n\nasync function callTpuVMList() {\n  const request = {\n    parent: `projects/${projectId}/locations/${zone}`,\n  };\n\n  const [response] = await tpuClient.listNodes(request);\n\n  return response;\n}\n\nreturn await callTpuVMList();"
+      },
+      {
+        "language": "text",
+        "code": "from google.cloud import tpu_v2\n\n# TODO(developer): Update and un-comment below lines\n# project_id = \"your-project-id\"\n# zone = \"us-central1-b\"\n\nclient = tpu_v2.TpuClient()\n\nnodes = client.[list_nodes](https://docs.cloud.google.com/python/docs/reference/tpu/latest/google.cloud.tpu_v1.services.tpu.TpuClient.html#google_cloud_tpu_v1_services_tpu_TpuClient_list_nodes)(parent=f\"projects/{project_id}/locations/{zone}\")\nfor node in nodes:\n    print(node.name)\n    print(node.state)\n    print(node.accelerator_type)\n# Example response:\n# projects/[project_id]/locations/[zone]/nodes/node-name\n# State.READY\n# v2-8"
+      },
+      {
+        "language": "text",
+        "code": "$ gcloud compute tpus tpu-vm describe $TPU_NAME \\\n  --zone=$ZONE"
+      },
+      {
+        "language": "text",
+        "code": "import com.google.cloud.tpu.v2.GetNodeRequest[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.GetNodeRequest.html);\nimport com.google.cloud.tpu.v2.Node[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.Node.html);\nimport com.google.cloud.tpu.v2.NodeName[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html);\nimport com.google.cloud.tpu.v2.TpuClient[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html);\nimport java.io.IOException;\n\npublic class GetTpuVm {\n\n  public static void main(String[] args) throws IOException {\n    // TODO(developer): Replace these variables before running the sample.\n    // Project ID or project number of the Google Cloud project you want to use.\n    String projectId = \"YOUR_PROJECT_ID\";\n    // The zone in which to create the TPU.\n    // For more information about supported TPU types for specific zones,\n    // see https://cloud.google.com/tpu/docs/regions-zones\n    String zone = \"europe-west4-a\";\n    // The name for your TPU.\n    String nodeName = \"YOUR_TPU_NAME\";\n\n    getTpuVm(projectId, zone, nodeName);\n  }\n\n  // Describes a TPU VM with the specified name in the given project and zone.\n  public static [Node](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.Node.html) getTpuVm(String projectId, String zone, String nodeName)\n      throws IOException {\n    // Initialize client that will be used to send requests. This client only needs to be created\n    // once, and can be reused for multiple requests.\n    try ([TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html) tpuClient = [TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html).create()) {\n      String name = [NodeName](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html).of(projectId, zone, nodeName).toString();\n\n      [GetNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.GetNodeRequest.html) request = [GetNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.GetNodeRequest.html).newBuilder().setName(name).build();\n\n      return tpuClient.getNode(request);\n    }\n  }\n}"
+      },
+      {
+        "language": "text",
+        "code": "// Import the TPUClient\n// TODO(developer): Uncomment below line before running the sample.\n// const {TpuClient} = require('@google-cloud/tpu').v2;\n\n// Instantiate a tpuClient\n// TODO(developer): Uncomment below line before running the sample.\n// tpuClient = new TpuClient();\n\n// TODO(developer): Update these variables before running the sample.\n// Project ID or project number of the Google Cloud project you want to retrive a node.\nconst projectId = await tpuClient.getProjectId();\n\n// The name of TPU to retrive.\nconst nodeName = 'node-name-1';\n\n// The zone, where the TPU is created.\nconst zone = 'europe-west4-a';\n\nasync function callGetTpuVM() {\n  const request = {\n    name: `projects/${projectId}/locations/${zone}/nodes/${nodeName}`,\n  };\n\n  const [response] = await tpuClient.getNode(request);\n\n  console.log(`Node: ${nodeName} retrived.`);\n  return response;\n}\n\nreturn await callGetTpuVM();"
+      },
+      {
+        "language": "text",
+        "code": "from google.cloud import tpu_v2\n\n# TODO(developer): Update and un-comment below lines\n# project_id = \"your-project-id\"\n# zone = \"us-central1-b\"\n# tpu_name = \"tpu-name\"\n\nclient = tpu_v2.TpuClient()\nnode = client.[get_node](https://docs.cloud.google.com/python/docs/reference/tpu/latest/google.cloud.tpu_v1.services.tpu.TpuClient.html#google_cloud_tpu_v1_services_tpu_TpuClient_get_node)(\n    name=f\"projects/{project_id}/locations/{zone}/nodes/{tpu_name}\"\n)\n\nprint(node)\n# Example response:\n# name: \"projects/[project_id]/locations/[zone]/nodes/tpu-name\"\n# state: \"READY\"\n# runtime_version: ..."
+      },
+      {
+        "language": "text",
+        "code": "$ gcloud compute tpus tpu-vm stop $TPU_NAME \\\n  --zone=$ZONE"
+      },
+      {
+        "language": "text",
+        "code": "import com.google.cloud.tpu.v2.Node[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.Node.html);\nimport com.google.cloud.tpu.v2.NodeName[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html);\nimport com.google.cloud.tpu.v2.StopNodeRequest[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.StopNodeRequest.html);\nimport com.google.cloud.tpu.v2.TpuClient[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html);\nimport java.io.IOException;\nimport java.util.concurrent.ExecutionException;\n\npublic class StopTpuVm {\n\n  public static void main(String[] args)\n      throws IOException, ExecutionException, InterruptedException {\n    // TODO(developer): Replace these variables before running the sample.\n    // Project ID or project number of the Google Cloud project you want to use.\n    String projectId = \"YOUR_PROJECT_ID\";\n    // The zone where the TPU is located.\n    // For more information about supported TPU types for specific zones,\n    // see https://cloud.google.com/tpu/docs/regions-zones\n    String zone = \"us-central1-f\";\n    // The name for your TPU.\n    String nodeName = \"YOUR_TPU_NAME\";\n\n    stopTpuVm(projectId, zone, nodeName);\n  }\n\n  // Stops a TPU VM with the specified name in the given project and zone.\n  public static [Node](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.Node.html) stopTpuVm(String projectId, String zone, String nodeName)\n      throws IOException, ExecutionException, InterruptedException {\n    // Initialize client that will be used to send requests. This client only needs to be created\n    // once, and can be reused for multiple requests.\n    try ([TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html) tpuClient = [TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html).create()) {\n      String name = [NodeName](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html).of(projectId, zone, nodeName).toString();\n\n      [StopNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.StopNodeRequest.html) request = [StopNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.StopNodeRequest.html).newBuilder().setName(name).build();\n\n      return tpuClient.[stopNodeAsync](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html#com_google_cloud_tpu_v2_TpuClient_stopNodeAsync_com_google_cloud_tpu_v2_StopNodeRequest_)(request).get();\n    }\n  }\n}"
+      },
+      {
+        "language": "text",
+        "code": "// Import the TPUClient\n// TODO(developer): Uncomment below line before running the sample.\n// const {TpuClient} = require('@google-cloud/tpu').v2;\n\n// Instantiate a tpuClient\n// TODO(developer): Uncomment below line before running the sample.\n// tpuClient = new TpuClient();\n\n// TODO(developer): Update these variables before running the sample.\n// Project ID or project number of the Google Cloud project you want to stop a node.\nconst projectId = await tpuClient.getProjectId();\n\n// The name of TPU to stop.\nconst nodeName = 'node-name-1';\n\n// The zone, where the TPU is created.\nconst zone = 'europe-west4-a';\n\nasync function callStopTpuVM() {\n  const request = {\n    name: `projects/${projectId}/locations/${zone}/nodes/${nodeName}`,\n  };\n\n  const [operation] = await tpuClient.stopNode(request);\n  // Wait for the operation to complete.\n  const [response] = await operation.promise();\n\n  console.log(`Node: ${nodeName} stopped.`);\n  return response;\n}\n\nreturn await callStopTpuVM();"
+      },
+      {
+        "language": "text",
+        "code": "from google.cloud import tpu_v2\n\n# TODO(developer): Update and un-comment below lines\n# project_id = \"your-project-id\"\n# zone = \"us-central1-a\"\n# tpu_name = \"tpu-name\"\n\nclient = tpu_v2.TpuClient()\n\nrequest = tpu_v2.StopNodeRequest(\n    name=f\"projects/{project_id}/locations/{zone}/nodes/{tpu_name}\",\n)\ntry:\n    operation = client.[stop_node](https://docs.cloud.google.com/python/docs/reference/tpu/latest/google.cloud.tpu_v1.services.tpu.TpuClient.html#google_cloud_tpu_v1_services_tpu_TpuClient_stop_node)(request=request)\n    print(\"Waiting for stop operation to complete...\")\n    response = operation.result()\n    print(f\"This TPU {tpu_name} has been stopped\")\n    print(response.state)\n    # Example response:\n    # State.STOPPED\n\nexcept Exception as e:\n    print(e)\n    raise e"
+      },
+      {
+        "language": "text",
+        "code": "$ gcloud compute tpus tpu-vm start $TPU_NAME \\\n  --zone=$ZONE"
+      },
+      {
+        "language": "text",
+        "code": "import com.google.cloud.tpu.v2.Node[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.Node.html);\nimport com.google.cloud.tpu.v2.NodeName[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html);\nimport com.google.cloud.tpu.v2.StartNodeRequest[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.StartNodeRequest.html);\nimport com.google.cloud.tpu.v2.TpuClient[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html);\nimport java.io.IOException;\nimport java.util.concurrent.ExecutionException;\n\npublic class StartTpuVm {\n\n  public static void main(String[] args)\n      throws IOException, ExecutionException, InterruptedException {\n    // TODO(developer): Replace these variables before running the sample.\n    // Project ID or project number of the Google Cloud project you want to use.\n    String projectId = \"YOUR_PROJECT_ID\";\n    // The zone where the TPU is located.\n    // For more information about supported TPU types for specific zones,\n    // see https://cloud.google.com/tpu/docs/regions-zones\n    String zone = \"us-central1-f\";\n    // The name for your TPU.\n    String nodeName = \"YOUR_TPU_NAME\";\n\n    startTpuVm(projectId, zone, nodeName);\n  }\n\n  // Starts a TPU VM with the specified name in the given project and zone.\n  public static [Node](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.Node.html) startTpuVm(String projectId, String zone, String nodeName)\n      throws IOException, ExecutionException, InterruptedException {\n    // Initialize client that will be used to send requests. This client only needs to be created\n    // once, and can be reused for multiple requests.\n    try ([TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html) tpuClient = [TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html).create()) {\n      String name = [NodeName](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html).of(projectId, zone, nodeName).toString();\n\n      [StartNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.StartNodeRequest.html) request = [StartNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.StartNodeRequest.html).newBuilder().setName(name).build();\n\n      return tpuClient.[startNodeAsync](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html#com_google_cloud_tpu_v2_TpuClient_startNodeAsync_com_google_cloud_tpu_v2_StartNodeRequest_)(request).get();\n    }\n  }\n}"
+      },
+      {
+        "language": "text",
+        "code": "// Import the TPUClient\n// TODO(developer): Uncomment below line before running the sample.\n// const {TpuClient} = require('@google-cloud/tpu').v2;\n\n// Instantiate a tpuClient\n// TODO(developer): Uncomment below line before running the sample.\n// tpuClient = new TpuClient();\n\n// TODO(developer): Update these variables before running the sample.\n// Project ID or project number of the Google Cloud project you want to start a node.\nconst projectId = await tpuClient.getProjectId();\n\n// The name of TPU to start.\nconst nodeName = 'node-name-1';\n\n// The zone, where the TPU is created.\nconst zone = 'europe-west4-a';\n\nasync function callStartTpuVM() {\n  const request = {\n    name: `projects/${projectId}/locations/${zone}/nodes/${nodeName}`,\n  };\n\n  const [operation] = await tpuClient.startNode(request);\n\n  // Wait for the operation to complete.\n  const [response] = await operation.promise();\n\n  console.log(`Node: ${nodeName} started.`);\n  return response;\n}\n\nreturn await callStartTpuVM();"
+      },
+      {
+        "language": "text",
+        "code": "from google.cloud import tpu_v2\n\n# TODO(developer): Update and un-comment below lines\n# project_id = \"your-project-id\"\n# zone = \"us-central1-a\"\n# tpu_name = \"tpu-name\"\n\nclient = tpu_v2.TpuClient()\n\nrequest = tpu_v2.StartNodeRequest(\n    name=f\"projects/{project_id}/locations/{zone}/nodes/{tpu_name}\",\n)\ntry:\n    operation = client.[start_node](https://docs.cloud.google.com/python/docs/reference/tpu/latest/google.cloud.tpu_v1.services.tpu.TpuClient.html#google_cloud_tpu_v1_services_tpu_TpuClient_start_node)(request=request)\n    print(\"Waiting for start operation to complete...\")\n    response = operation.result()\n    print(f\"TPU {tpu_name} has been started\")\n    print(response.state)\n    # Example response:\n    # State.READY\n\nexcept Exception as e:\n    print(e)\n    raise e"
+      },
+      {
+        "language": "text",
+        "code": "$ gcloud compute tpus tpu-vm delete $TPU_NAME \\\n  --zone=$ZONE \\\n  --quiet"
+      },
+      {
+        "language": "text",
+        "code": "import com.google.api.gax.longrunning.OperationTimedPollAlgorithm[](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.longrunning.OperationTimedPollAlgorithm.html);\nimport com.google.api.gax.retrying.RetrySettings[](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.html);\nimport com.google.cloud.tpu.v2.DeleteNodeRequest[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.DeleteNodeRequest.html);\nimport com.google.cloud.tpu.v2.NodeName[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html);\nimport com.google.cloud.tpu.v2.TpuClient[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html);\nimport com.google.cloud.tpu.v2.TpuSettings[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuSettings.html);\nimport java.io.IOException;\nimport java.util.concurrent.ExecutionException;\nimport org.threeten.bp.Duration;\n\npublic class DeleteTpuVm {\n\n  public static void main(String[] args)\n      throws IOException, ExecutionException, InterruptedException {\n    // TODO(developer): Replace these variables before running the sample.\n    // Project ID or project number of the Google Cloud project you want to create a node.\n    String projectId = \"YOUR_PROJECT_ID\";\n    // The zone in which to create the TPU.\n    // For more information about supported TPU types for specific zones,\n    // see https://cloud.google.com/tpu/docs/regions-zones\n    String zone = \"europe-west4-a\";\n    // The name for your TPU.\n    String nodeName = \"YOUR_TPU_NAME\";\n\n    deleteTpuVm(projectId, zone, nodeName);\n  }\n\n  // Deletes a TPU VM with the specified name in the given project and zone.\n  public static void deleteTpuVm(String projectId, String zone, String nodeName)\n      throws IOException, ExecutionException, InterruptedException {\n    // With these settings the client library handles the Operation's polling mechanism\n    // and prevent CancellationException error\n    [TpuSettings](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuSettings.html).Builder clientSettings =\n        [TpuSettings](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuSettings.html).newBuilder();\n    clientSettings\n        .deleteNodeOperationSettings()\n        .setPollingAlgorithm(\n            [OperationTimedPollAlgorithm](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.longrunning.OperationTimedPollAlgorithm.html).create(\n                [RetrySettings](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.html).newBuilder()\n                    .[setInitialRetryDelay](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.Builder.html#com_google_api_gax_retrying_RetrySettings_Builder_setInitialRetryDelay_org_threeten_bp_Duration_)(Duration.ofMillis(5000L))\n                    .[setRetryDelayMultiplier](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.Builder.html#com_google_api_gax_retrying_RetrySettings_Builder_setRetryDelayMultiplier_double_)(1.5)\n                    .[setMaxRetryDelay](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.Builder.html#com_google_api_gax_retrying_RetrySettings_Builder_setMaxRetryDelay_org_threeten_bp_Duration_)(Duration.ofMillis(45000L))\n                    .[setInitialRpcTimeout](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.Builder.html#com_google_api_gax_retrying_RetrySettings_Builder_setInitialRpcTimeout_org_threeten_bp_Duration_)(Duration.ZERO)\n                    .[setRpcTimeoutMultiplier](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.Builder.html#com_google_api_gax_retrying_RetrySettings_Builder_setRpcTimeoutMultiplier_double_)(1.0)\n                    .[setMaxRpcTimeout](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.Builder.html#com_google_api_gax_retrying_RetrySettings_Builder_setMaxRpcTimeout_org_threeten_bp_Duration_)(Duration.ZERO)\n                    .[setTotalTimeout](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.Builder.html#com_google_api_gax_retrying_RetrySettings_Builder_setTotalTimeout_org_threeten_bp_Duration_)(Duration.ofHours(24L))\n                    .build()));\n\n    // Initialize client that will be used to send requests. This client only needs to be created\n    // once, and can be reused for multiple requests.\n    try ([TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html) tpuClient = [TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html).create(clientSettings.build())) {\n      String name = [NodeName](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html).of(projectId, zone, nodeName).toString();\n\n      [DeleteNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.DeleteNodeRequest.html) request = [DeleteNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.DeleteNodeRequest.html).newBuilder().setName(name).build();\n\n      tpuClient.[deleteNodeAsync](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html#com_google_cloud_tpu_v2_TpuClient_deleteNodeAsync__org_jspecify_annotations_Nullable_com_google_cloud_tpu_v2_NodeName_)(request).[get](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.longrunning.OperationFutureImpl.html#com_google_api_gax_longrunning_OperationFutureImpl_get__)();\n      System.out.println(\"TPU VM deleted\");\n    }\n  }\n}"
+      },
+      {
+        "language": "text",
+        "code": "// Import the TPUClient\n// TODO(developer): Uncomment below line before running the sample.\n// const {TpuClient} = require('@google-cloud/tpu').v2;\n\n// Instantiate a tpuClient\n// TODO(developer): Uncomment below line before running the sample.\n// tpuClient = new TpuClient();\n\n// TODO(developer): Update these variables before running the sample.\n// Project ID or project number of the Google Cloud project you want to delete a node.\nconst projectId = await tpuClient.getProjectId();\n\n// The name of TPU to delete.\nconst nodeName = 'node-name-1';\n\n// The zone, where the TPU is created.\nconst zone = 'europe-west4-a';\n\nasync function callDeleteTpuVM() {\n  const request = {\n    name: `projects/${projectId}/locations/${zone}/nodes/${nodeName}`,\n  };\n\n  const [operation] = await tpuClient.deleteNode(request);\n\n  // Wait for the delete operation to complete.\n  const [response] = await operation.promise();\n\n  console.log(`Node: ${nodeName} deleted.`);\n  return response;\n}\n\nreturn await callDeleteTpuVM();"
+      },
+      {
+        "language": "text",
+        "code": "from google.cloud import tpu_v2\n\n# TODO(developer): Update and un-comment below lines\n# project_id = \"your-project-id\"\n# zone = \"us-central1-b\"\n# tpu_name = \"tpu-name\"\n\nclient = tpu_v2.TpuClient()\ntry:\n    client.[delete_node](https://docs.cloud.google.com/python/docs/reference/tpu/latest/google.cloud.tpu_v1.services.tpu.TpuClient.html#google_cloud_tpu_v1_services_tpu_TpuClient_delete_node)(\n        name=f\"projects/{project_id}/locations/{zone}/nodes/{tpu_name}\"\n    )\n    print(\"The TPU node was deleted.\")\nexcept Exception as e:\n    print(e)"
+      }
+    ],
+    "cli_commands": [
+      "export TPU_NAME=your-tpu-name",
+      "export ZONE=your-zone",
+      "gcloud compute tpus tpu-vm ssh $TPU_NAME --zone=$ZONE",
+      "gcloud compute tpus tpu-vm ssh $TPU_NAME --zone=$ZONE --worker=1",
+      "gcloud compute tpus tpu-vm ssh $TPU_NAME \\",
+      "gcloud compute tpus queued-resources ssh your-queued-resource-id \\",
+      "gcloud compute tpus tpu-vm list --zone=$ZONE",
+      "gcloud compute tpus tpu-vm describe $TPU_NAME \\",
+      "gcloud compute tpus tpu-vm stop $TPU_NAME \\",
+      "gcloud compute tpus tpu-vm start $TPU_NAME \\",
+      "gcloud compute tpus tpu-vm delete $TPU_NAME \\"
+    ],
+    "environment_variables": [
+      "TPU_NAME",
+      "ZONE"
+    ],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Manage TPU resources (legacy Cloud TPU API)' (https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm)?",
+        "answer": "Legacy stop/delete cleanup reference; retain only for existing Cloud TPU API resources."
+      },
+      {
+        "question": "How does 'Manage TPU resources (legacy Cloud TPU API)' handle: Manage TPU resources?",
+        "answer": "**Caution:** This page applies to the Cloud TPU API, which is no longer under active development. The Cloud TPU API will receive bug fixes and security updates only. For the latest features and support for the latest TPU versions, we recommend using Compute Engine or Google Kubernetes Engine to manage TPU resources. For more information, see [TPU resources in Compute Engine](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine) and [About TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus). The Cloud TPU API is not supported on TPU7x and later TPU versions. \nThis page describes how to list, stop, start, delete, and connect to TPU VMs."
+      },
+      {
+        "question": "How does 'Manage TPU resources (legacy Cloud TPU API)' handle: Prerequisites?",
+        "answer": "Before you run these procedures, complete the following steps:\n  1. Create a Google Cloud project for your TPUs as described in [Set up a Google Cloud project for TPUs](https://docs.cloud.google.com/tpu/docs/setup-gcp-account).\n  2. Determine your TPU requirements as described in [Plan your Cloud TPU resources](https://docs.cloud.google.com/tpu/docs/plan-tpus).\n  3. Create a TPU VM as described in [Create a TPU VM](https://docs.cloud.google.com/tpu/docs/create-tpu-vm).\n  4. If you use one of the [Cloud Client Libraries](https://docs.cloud.google.com/apis/docs/client-libraries-explained), follow the setup instructions for the language you're using:\n     * [Python](https://docs.cloud.google.com/python/docs/reference/tpu/latest)\n     * [Java](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/overview)\n     * [Node.js](https://docs.cloud.google.com/nodejs/docs/reference/tpu/latest)\n  5. Set up environment variables.\n\n```\n  export TPU_NAME=your-tpu-name\n  export ZONE=your-zone\n\n```"
+      },
+      {
+        "question": "How does 'Manage TPU resources (legacy Cloud TPU API)' handle: Connect to a Cloud TPU?",
+        "answer": "You can connect to a Cloud TPU using SSH.\nIf you can't connect to a TPU VM using SSH, the TPU VM might not have an external IP address. To access a TPU VM without an external IP address, follow the instructions in [Connect to a TPU VM without a public IP address](https://docs.cloud.google.com/tpu/docs/tpu-iap)."
+      },
+      {
+        "question": "How does 'Manage TPU resources (legacy Cloud TPU API)' handle: gcloud?",
+        "answer": "Connect to your Cloud TPU using SSH:\n\n```\n$ gcloud compute tpus tpu-vm ssh $TPU_NAME --zone=$ZONE\n```\n\nWhen you request a slice larger than a single host, Cloud TPU creates a TPU VM for each host. The number of TPU chips per host depends on the [TPU version](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#versions).\nTo install binaries or run code, connect to each TPU VM using the `tpu-vm ssh` [command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/tpus/tpu-vm/ssh).\n\n```\n$ gcloud compute tpus tpu-vm ssh $TPU_NAME --zone=$ZONE\n```\n\nTo connect to a specific TPU VM using SSH, use the `--worker` flag with a 0-based index:\n\n```\n$ gcloud compute tpus tpu-vm ssh $TPU_NAME --zone=$ZONE --worker=1\n```\n\nTo run a command on all TPU VMs, use the `--worker=all` and `--command` flags:\n\n```\n$ gcloud compute tpus tpu-vm ssh $TPU_NAME \\\n  --zone=$ZONE \\\n  --worker=all \\\n  --command='pip install \"jax[tpu]==0.4.20\" -f https://storage.googleapis.com/jax-releases/libtpu_releases.html'\n```\n\nFor Multislice, you can run a command on a single VM using the enumerated TPU name, with each slice prefix and the number appended to it. To run a command on all TPU VMs in all slices, "
+      },
+      {
+        "question": "How does 'Manage TPU resources (legacy Cloud TPU API)' handle: Console?",
+        "answer": "To connect to your TPUs in the Google Cloud console, use SSH in your browser:\n  1. In the Google Cloud console, go to the **TPUs** page:\n[Go to TPUs](https://console.cloud.google.com/compute/tpus)\n  2. In the list of TPU VMs, click **SSH** in the row of the TPU VM that you want to connect to.\nWhen you connect to TPU VMs using the Google Cloud console, Compute Engine creates an ephemeral SSH key."
+      },
+      {
+        "question": "How does 'Manage TPU resources (legacy Cloud TPU API)' handle: Console?",
+        "answer": "In the Google Cloud console, go to the **TPUs** page:\n[Go to TPUs](https://console.cloud.google.com/compute/tpus)"
+      },
+      {
+        "question": "How does 'Manage TPU resources (legacy Cloud TPU API)' handle: Java?",
+        "answer": "To authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\nimport com.google.cloud.tpu.v2.ListNodesRequest[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.ListNodesRequest.html);\nimport com.google.cloud.tpu.v2.TpuClient[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html);\nimport java.io.IOException;\n\npublic class ListTpuVms {\n\n  public static void main(String[] args) throws IOException {\n    // TODO(developer): Replace these variables before running the sample.\n    // Project ID or project number of the Google Cloud project you want to use.\n    String projectId = \"YOUR_PROJECT_ID\";\n    // The zone where the TPUs are located.\n    // For more information about supported TPU types for specific zones,\n    // see https://cloud.google.com/tpu/docs/regions-zones\n    String zone = \"us-central1-f\";\n\n    listTpuVms(projectId, zone);\n  }\n\n  // Lists TPU VMs in the specified zone.\n  public stati"
+      },
+      {
+        "question": "How does 'Manage TPU resources (legacy Cloud TPU API)' handle: Node.js?",
+        "answer": "To authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\n// Import the TPUClient\n// TODO(developer): Uncomment below line before running the sample.\n// const {TpuClient} = require('@google-cloud/tpu').v2;\n\n// Instantiate a tpuClient\n// TODO(developer): Uncomment below line before running the sample.\n// tpuClient = new TpuClient();\n\n// TODO(developer): Update these variables before running the sample.\n// Project ID or project number of the Google Cloud project you want to retrive a list of TPU nodes.\nconst projectId = await tpuClient.getProjectId();\n\n// The zone from which the TPUs are retrived.\nconst zone = 'europe-west4-a';\n\nasync function callTpuVMList() {\n  const request = {\n    parent: `projects/${projectId}/locations/${zone}`,\n  };\n\n  const [response] = await tpuClient.listNodes(request);\n\n  return response;\n}\n\nreturn await callTpuVMList();\n```"
+      },
+      {
+        "question": "How does 'Manage TPU resources (legacy Cloud TPU API)' handle: Python?",
+        "answer": "To authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\nfrom google.cloud import tpu_v2"
+      }
+    ],
+    "full_markdown": "# Manage TPU resources\n**Caution:** This page applies to the Cloud TPU API, which is no longer under active development. The Cloud TPU API will receive bug fixes and security updates only. For the latest features and support for the latest TPU versions, we recommend using Compute Engine or Google Kubernetes Engine to manage TPU resources. For more information, see [TPU resources in Compute Engine](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine) and [About TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus). The Cloud TPU API is not supported on TPU7x and later TPU versions. \nThis page describes how to list, stop, start, delete, and connect to TPU VMs.\n## Prerequisites\nBefore you run these procedures, complete the following steps:\n  1. Create a Google Cloud project for your TPUs as described in [Set up a Google Cloud project for TPUs](https://docs.cloud.google.com/tpu/docs/setup-gcp-account).\n  2. Determine your TPU requirements as described in [Plan your Cloud TPU resources](https://docs.cloud.google.com/tpu/docs/plan-tpus).\n  3. Create a TPU VM as described in [Create a TPU VM](https://docs.cloud.google.com/tpu/docs/create-tpu-vm).\n  4. If you use one of the [Cloud Client Libraries](https://docs.cloud.google.com/apis/docs/client-libraries-explained), follow the setup instructions for the language you're using:\n     * [Python](https://docs.cloud.google.com/python/docs/reference/tpu/latest)\n     * [Java](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/overview)\n     * [Node.js](https://docs.cloud.google.com/nodejs/docs/reference/tpu/latest)\n  5. Set up environment variables.\n\n```\n  export TPU_NAME=your-tpu-name\n  export ZONE=your-zone\n\n```\n\n## Connect to a Cloud TPU\nYou can connect to a Cloud TPU using SSH.\nIf you can't connect to a TPU VM using SSH, the TPU VM might not have an external IP address. To access a TPU VM without an external IP address, follow the instructions in [Connect to a TPU VM without a public IP address](https://docs.cloud.google.com/tpu/docs/tpu-iap).\n### gcloud\nConnect to your Cloud TPU using SSH:\n\n```\n$ gcloud compute tpus tpu-vm ssh $TPU_NAME --zone=$ZONE\n```\n\nWhen you request a slice larger than a single host, Cloud TPU creates a TPU VM for each host. The number of TPU chips per host depends on the [TPU version](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#versions).\nTo install binaries or run code, connect to each TPU VM using the `tpu-vm ssh` [command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/tpus/tpu-vm/ssh).\n\n```\n$ gcloud compute tpus tpu-vm ssh $TPU_NAME --zone=$ZONE\n```\n\nTo connect to a specific TPU VM using SSH, use the `--worker` flag with a 0-based index:\n\n```\n$ gcloud compute tpus tpu-vm ssh $TPU_NAME --zone=$ZONE --worker=1\n```\n\nTo run a command on all TPU VMs, use the `--worker=all` and `--command` flags:\n\n```\n$ gcloud compute tpus tpu-vm ssh $TPU_NAME \\\n  --zone=$ZONE \\\n  --worker=all \\\n  --command='pip install \"jax[tpu]==0.4.20\" -f https://storage.googleapis.com/jax-releases/libtpu_releases.html'\n```\n\nFor Multislice, you can run a command on a single VM using the enumerated TPU name, with each slice prefix and the number appended to it. To run a command on all TPU VMs in all slices, use the `--node=all`, `--worker=all`, and `--command` flags, with an optional [`--batch-size`](https://docs.cloud.google.com/sdk/gcloud/reference/compute/tpus/queued-resources/ssh#--batch-size) flag.\n\n```\n$ gcloud compute tpus queued-resources ssh your-queued-resource-id \\\n  --zone=$ZONE \\\n  --node=all \\\n  --worker=all \\\n  --command='pip install jax[tpu] -f https://storage.googleapis.com/jax-releases/libtpu_releases.html' \\\n  --batch-size=4\n```\n\nWhen you connect to VMs using the Google Cloud CLI, Compute Engine creates a persistent SSH key.\n### Console\nTo connect to your TPUs in the Google Cloud console, use SSH in your browser:\n  1. In the Google Cloud console, go to the **TPUs** page:\n[Go to TPUs](https://console.cloud.google.com/compute/tpus)\n  2. In the list of TPU VMs, click **SSH** in the row of the TPU VM that you want to connect to.\nWhen you connect to TPU VMs using the Google Cloud console, Compute Engine creates an ephemeral SSH key.\n\n\n## List Cloud TPU resources\nYou can list all Cloud TPU resources in a specified zone.\n### gcloud\n\n```\n$ gcloud compute tpus tpu-vm list --zone=$ZONE\n```\n\n### Console\nIn the Google Cloud console, go to the **TPUs** page:\n[Go to TPUs](https://console.cloud.google.com/compute/tpus)\n###  Java \nTo authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\nimport com.google.cloud.tpu.v2.ListNodesRequest[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.ListNodesRequest.html);\nimport com.google.cloud.tpu.v2.TpuClient[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html);\nimport java.io.IOException;\n\npublic class ListTpuVms {\n\n  public static void main(String[] args) throws IOException {\n    // TODO(developer): Replace these variables before running the sample.\n    // Project ID or project number of the Google Cloud project you want to use.\n    String projectId = \"YOUR_PROJECT_ID\";\n    // The zone where the TPUs are located.\n    // For more information about supported TPU types for specific zones,\n    // see https://cloud.google.com/tpu/docs/regions-zones\n    String zone = \"us-central1-f\";\n\n    listTpuVms(projectId, zone);\n  }\n\n  // Lists TPU VMs in the specified zone.\n  public static [TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html).[ListNodesPage](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.ListNodesPage.html) listTpuVms(String projectId, String zone)\n      throws IOException {\n    // Initialize client that will be used to send requests. This client only needs to be created\n    // once, and can be reused for multiple requests.\n    try ([TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html) tpuClient = [TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html).create()) {\n      String parent = String.format(\"projects/%s/locations/%s\", projectId, zone);\n\n      [ListNodesRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.ListNodesRequest.html) request = [ListNodesRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.ListNodesRequest.html).newBuilder().setParent(parent).build();\n\n      return tpuClient.listNodes(request).getPage();\n    }\n  }\n}\n```\n\n###  Node.js \nTo authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\n// Import the TPUClient\n// TODO(developer): Uncomment below line before running the sample.\n// const {TpuClient} = require('@google-cloud/tpu').v2;\n\n// Instantiate a tpuClient\n// TODO(developer): Uncomment below line before running the sample.\n// tpuClient = new TpuClient();\n\n// TODO(developer): Update these variables before running the sample.\n// Project ID or project number of the Google Cloud project you want to retrive a list of TPU nodes.\nconst projectId = await tpuClient.getProjectId();\n\n// The zone from which the TPUs are retrived.\nconst zone = 'europe-west4-a';\n\nasync function callTpuVMList() {\n  const request = {\n    parent: `projects/${projectId}/locations/${zone}`,\n  };\n\n  const [response] = await tpuClient.listNodes(request);\n\n  return response;\n}\n\nreturn await callTpuVMList();\n```\n\n###  Python \nTo authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\nfrom google.cloud import tpu_v2\n\n# TODO(developer): Update and un-comment below lines\n# project_id = \"your-project-id\"\n# zone = \"us-central1-b\"\n\nclient = tpu_v2.TpuClient()\n\nnodes = client.[list_nodes](https://docs.cloud.google.com/python/docs/reference/tpu/latest/google.cloud.tpu_v1.services.tpu.TpuClient.html#google_cloud_tpu_v1_services_tpu_TpuClient_list_nodes)(parent=f\"projects/{project_id}/locations/{zone}\")\nfor node in nodes:\n    print(node.name)\n    print(node.state)\n    print(node.accelerator_type)\n# Example response:\n# projects/[project_id]/locations/[zone]/nodes/node-name\n# State.READY\n# v2-8\n\n```\n\n## Retrieve Cloud TPU information\nYou can retrieve information about a specific Cloud TPU.\n### gcloud\n\n```\n$ gcloud compute tpus tpu-vm describe $TPU_NAME \\\n  --zone=$ZONE\n```\n\n### Console\n  1. In the Google Cloud console, go to the **TPUs** page:\n[Go to TPUs](https://console.cloud.google.com/compute/tpus)\n  2. Click the name of your Cloud TPU. The console displays the Cloud TPU details page.\n\n\n###  Java \nTo authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\nimport com.google.cloud.tpu.v2.GetNodeRequest[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.GetNodeRequest.html);\nimport com.google.cloud.tpu.v2.Node[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.Node.html);\nimport com.google.cloud.tpu.v2.NodeName[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html);\nimport com.google.cloud.tpu.v2.TpuClient[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html);\nimport java.io.IOException;\n\npublic class GetTpuVm {\n\n  public static void main(String[] args) throws IOException {\n    // TODO(developer): Replace these variables before running the sample.\n    // Project ID or project number of the Google Cloud project you want to use.\n    String projectId = \"YOUR_PROJECT_ID\";\n    // The zone in which to create the TPU.\n    // For more information about supported TPU types for specific zones,\n    // see https://cloud.google.com/tpu/docs/regions-zones\n    String zone = \"europe-west4-a\";\n    // The name for your TPU.\n    String nodeName = \"YOUR_TPU_NAME\";\n\n    getTpuVm(projectId, zone, nodeName);\n  }\n\n  // Describes a TPU VM with the specified name in the given project and zone.\n  public static [Node](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.Node.html) getTpuVm(String projectId, String zone, String nodeName)\n      throws IOException {\n    // Initialize client that will be used to send requests. This client only needs to be created\n    // once, and can be reused for multiple requests.\n    try ([TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html) tpuClient = [TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html).create()) {\n      String name = [NodeName](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html).of(projectId, zone, nodeName).toString();\n\n      [GetNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.GetNodeRequest.html) request = [GetNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.GetNodeRequest.html).newBuilder().setName(name).build();\n\n      return tpuClient.getNode(request);\n    }\n  }\n}\n```\n\n###  Node.js \nTo authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\n// Import the TPUClient\n// TODO(developer): Uncomment below line before running the sample.\n// const {TpuClient} = require('@google-cloud/tpu').v2;\n\n// Instantiate a tpuClient\n// TODO(developer): Uncomment below line before running the sample.\n// tpuClient = new TpuClient();\n\n// TODO(developer): Update these variables before running the sample.\n// Project ID or project number of the Google Cloud project you want to retrive a node.\nconst projectId = await tpuClient.getProjectId();\n\n// The name of TPU to retrive.\nconst nodeName = 'node-name-1';\n\n// The zone, where the TPU is created.\nconst zone = 'europe-west4-a';\n\nasync function callGetTpuVM() {\n  const request = {\n    name: `projects/${projectId}/locations/${zone}/nodes/${nodeName}`,\n  };\n\n  const [response] = await tpuClient.getNode(request);\n\n  console.log(`Node: ${nodeName} retrived.`);\n  return response;\n}\n\nreturn await callGetTpuVM();\n```\n\n###  Python \nTo authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\nfrom google.cloud import tpu_v2\n\n# TODO(developer): Update and un-comment below lines\n# project_id = \"your-project-id\"\n# zone = \"us-central1-b\"\n# tpu_name = \"tpu-name\"\n\nclient = tpu_v2.TpuClient()\nnode = client.[get_node](https://docs.cloud.google.com/python/docs/reference/tpu/latest/google.cloud.tpu_v1.services.tpu.TpuClient.html#google_cloud_tpu_v1_services_tpu_TpuClient_get_node)(\n    name=f\"projects/{project_id}/locations/{zone}/nodes/{tpu_name}\"\n)\n\nprint(node)\n# Example response:\n# name: \"projects/[project_id]/locations/[zone]/nodes/tpu-name\"\n# state: \"READY\"\n# runtime_version: ...\n\n```\n\n## Stop Cloud TPU resources\nYou can stop a single Cloud TPU to avoid incurring charges without losing its VM configuration and software.\nThe [queued resources](https://docs.cloud.google.com/tpu/docs/queued-resources) API does not support stopping TPU slices or TPUs. To stop incurring charges for TPUs allocated through the queued resources API, delete the TPU.\n### gcloud\n\n```\n$ gcloud compute tpus tpu-vm stop $TPU_NAME \\\n  --zone=$ZONE\n```\n\n### Console\n  1. In the Google Cloud console, go to the **TPUs** page:\n[Go to TPUs](https://console.cloud.google.com/compute/tpus)\n  2. Select the checkbox next to your Cloud TPU.\n  3. Click stop **Stop**.\n\n\n###  Java \nTo authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\nimport com.google.cloud.tpu.v2.Node[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.Node.html);\nimport com.google.cloud.tpu.v2.NodeName[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html);\nimport com.google.cloud.tpu.v2.StopNodeRequest[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.StopNodeRequest.html);\nimport com.google.cloud.tpu.v2.TpuClient[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html);\nimport java.io.IOException;\nimport java.util.concurrent.ExecutionException;\n\npublic class StopTpuVm {\n\n  public static void main(String[] args)\n      throws IOException, ExecutionException, InterruptedException {\n    // TODO(developer): Replace these variables before running the sample.\n    // Project ID or project number of the Google Cloud project you want to use.\n    String projectId = \"YOUR_PROJECT_ID\";\n    // The zone where the TPU is located.\n    // For more information about supported TPU types for specific zones,\n    // see https://cloud.google.com/tpu/docs/regions-zones\n    String zone = \"us-central1-f\";\n    // The name for your TPU.\n    String nodeName = \"YOUR_TPU_NAME\";\n\n    stopTpuVm(projectId, zone, nodeName);\n  }\n\n  // Stops a TPU VM with the specified name in the given project and zone.\n  public static [Node](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.Node.html) stopTpuVm(String projectId, String zone, String nodeName)\n      throws IOException, ExecutionException, InterruptedException {\n    // Initialize client that will be used to send requests. This client only needs to be created\n    // once, and can be reused for multiple requests.\n    try ([TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html) tpuClient = [TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html).create()) {\n      String name = [NodeName](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html).of(projectId, zone, nodeName).toString();\n\n      [StopNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.StopNodeRequest.html) request = [StopNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.StopNodeRequest.html).newBuilder().setName(name).build();\n\n      return tpuClient.[stopNodeAsync](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html#com_google_cloud_tpu_v2_TpuClient_stopNodeAsync_com_google_cloud_tpu_v2_StopNodeRequest_)(request).get();\n    }\n  }\n}\n```\n\n###  Node.js \nTo authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\n// Import the TPUClient\n// TODO(developer): Uncomment below line before running the sample.\n// const {TpuClient} = require('@google-cloud/tpu').v2;\n\n// Instantiate a tpuClient\n// TODO(developer): Uncomment below line before running the sample.\n// tpuClient = new TpuClient();\n\n// TODO(developer): Update these variables before running the sample.\n// Project ID or project number of the Google Cloud project you want to stop a node.\nconst projectId = await tpuClient.getProjectId();\n\n// The name of TPU to stop.\nconst nodeName = 'node-name-1';\n\n// The zone, where the TPU is created.\nconst zone = 'europe-west4-a';\n\nasync function callStopTpuVM() {\n  const request = {\n    name: `projects/${projectId}/locations/${zone}/nodes/${nodeName}`,\n  };\n\n  const [operation] = await tpuClient.stopNode(request);\n  // Wait for the operation to complete.\n  const [response] = await operation.promise();\n\n  console.log(`Node: ${nodeName} stopped.`);\n  return response;\n}\n\nreturn await callStopTpuVM();\n```\n\n###  Python \nTo authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\nfrom google.cloud import tpu_v2\n\n# TODO(developer): Update and un-comment below lines\n# project_id = \"your-project-id\"\n# zone = \"us-central1-a\"\n# tpu_name = \"tpu-name\"\n\nclient = tpu_v2.TpuClient()\n\nrequest = tpu_v2.StopNodeRequest(\n    name=f\"projects/{project_id}/locations/{zone}/nodes/{tpu_name}\",\n)\ntry:\n    operation = client.[stop_node](https://docs.cloud.google.com/python/docs/reference/tpu/latest/google.cloud.tpu_v1.services.tpu.TpuClient.html#google_cloud_tpu_v1_services_tpu_TpuClient_stop_node)(request=request)\n    print(\"Waiting for stop operation to complete...\")\n    response = operation.result()\n    print(f\"This TPU {tpu_name} has been stopped\")\n    print(response.state)\n    # Example response:\n    # State.STOPPED\n\nexcept Exception as e:\n    print(e)\n    raise e\n\n```\n\n## Start Cloud TPU resources\nYou can start a stopped Cloud TPU.\nThe [queued resources](https://docs.cloud.google.com/tpu/docs/queued-resources) API does not support starting TPU Pods or TPUs.\n### gcloud\n\n```\n$ gcloud compute tpus tpu-vm start $TPU_NAME \\\n  --zone=$ZONE\n```\n\n### Console\n  1. In the Google Cloud console, go to the **TPUs** page:\n[Go to TPUs](https://console.cloud.google.com/compute/tpus)\n  2. Select the checkbox next to your Cloud TPU.\n  3. Click play_arrow **Start**.\n\n\n###  Java \nTo authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\nimport com.google.cloud.tpu.v2.Node[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.Node.html);\nimport com.google.cloud.tpu.v2.NodeName[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html);\nimport com.google.cloud.tpu.v2.StartNodeRequest[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.StartNodeRequest.html);\nimport com.google.cloud.tpu.v2.TpuClient[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html);\nimport java.io.IOException;\nimport java.util.concurrent.ExecutionException;\n\npublic class StartTpuVm {\n\n  public static void main(String[] args)\n      throws IOException, ExecutionException, InterruptedException {\n    // TODO(developer): Replace these variables before running the sample.\n    // Project ID or project number of the Google Cloud project you want to use.\n    String projectId = \"YOUR_PROJECT_ID\";\n    // The zone where the TPU is located.\n    // For more information about supported TPU types for specific zones,\n    // see https://cloud.google.com/tpu/docs/regions-zones\n    String zone = \"us-central1-f\";\n    // The name for your TPU.\n    String nodeName = \"YOUR_TPU_NAME\";\n\n    startTpuVm(projectId, zone, nodeName);\n  }\n\n  // Starts a TPU VM with the specified name in the given project and zone.\n  public static [Node](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.Node.html) startTpuVm(String projectId, String zone, String nodeName)\n      throws IOException, ExecutionException, InterruptedException {\n    // Initialize client that will be used to send requests. This client only needs to be created\n    // once, and can be reused for multiple requests.\n    try ([TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html) tpuClient = [TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html).create()) {\n      String name = [NodeName](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html).of(projectId, zone, nodeName).toString();\n\n      [StartNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.StartNodeRequest.html) request = [StartNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.StartNodeRequest.html).newBuilder().setName(name).build();\n\n      return tpuClient.[startNodeAsync](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html#com_google_cloud_tpu_v2_TpuClient_startNodeAsync_com_google_cloud_tpu_v2_StartNodeRequest_)(request).get();\n    }\n  }\n}\n```\n\n###  Node.js \nTo authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\n// Import the TPUClient\n// TODO(developer): Uncomment below line before running the sample.\n// const {TpuClient} = require('@google-cloud/tpu').v2;\n\n// Instantiate a tpuClient\n// TODO(developer): Uncomment below line before running the sample.\n// tpuClient = new TpuClient();\n\n// TODO(developer): Update these variables before running the sample.\n// Project ID or project number of the Google Cloud project you want to start a node.\nconst projectId = await tpuClient.getProjectId();\n\n// The name of TPU to start.\nconst nodeName = 'node-name-1';\n\n// The zone, where the TPU is created.\nconst zone = 'europe-west4-a';\n\nasync function callStartTpuVM() {\n  const request = {\n    name: `projects/${projectId}/locations/${zone}/nodes/${nodeName}`,\n  };\n\n  const [operation] = await tpuClient.startNode(request);\n\n  // Wait for the operation to complete.\n  const [response] = await operation.promise();\n\n  console.log(`Node: ${nodeName} started.`);\n  return response;\n}\n\nreturn await callStartTpuVM();\n```\n\n###  Python \nTo authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\nfrom google.cloud import tpu_v2\n\n# TODO(developer): Update and un-comment below lines\n# project_id = \"your-project-id\"\n# zone = \"us-central1-a\"\n# tpu_name = \"tpu-name\"\n\nclient = tpu_v2.TpuClient()\n\nrequest = tpu_v2.StartNodeRequest(\n    name=f\"projects/{project_id}/locations/{zone}/nodes/{tpu_name}\",\n)\ntry:\n    operation = client.[start_node](https://docs.cloud.google.com/python/docs/reference/tpu/latest/google.cloud.tpu_v1.services.tpu.TpuClient.html#google_cloud_tpu_v1_services_tpu_TpuClient_start_node)(request=request)\n    print(\"Waiting for start operation to complete...\")\n    response = operation.result()\n    print(f\"TPU {tpu_name} has been started\")\n    print(response.state)\n    # Example response:\n    # State.READY\n\nexcept Exception as e:\n    print(e)\n    raise e\n\n```\n\n## Delete a Cloud TPU\nDelete your TPU VM slices after your session.\n### gcloud\n\n```\n$ gcloud compute tpus tpu-vm delete $TPU_NAME \\\n  --zone=$ZONE \\\n  --quiet\n```\n\n#### Command flag descriptions\n  * `zone`: The [zone](https://docs.cloud.google.com/tpu/docs/types-zones-tpu-vm) where you plan to delete your Cloud TPU.\n  * `quiet`: Disables all interactive prompts when running gcloud CLI commands.\n\n\n### Console\n  1. In the Google Cloud console, go to the **TPUs** page:\n[Go to TPUs](https://console.cloud.google.com/compute/tpus)\n  2. Select the checkbox next to your Cloud TPU.\n  3. Click delete **Delete**.\n\n\n###  Java \nTo authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\nimport com.google.api.gax.longrunning.OperationTimedPollAlgorithm[](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.longrunning.OperationTimedPollAlgorithm.html);\nimport com.google.api.gax.retrying.RetrySettings[](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.html);\nimport com.google.cloud.tpu.v2.DeleteNodeRequest[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.DeleteNodeRequest.html);\nimport com.google.cloud.tpu.v2.NodeName[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html);\nimport com.google.cloud.tpu.v2.TpuClient[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html);\nimport com.google.cloud.tpu.v2.TpuSettings[](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuSettings.html);\nimport java.io.IOException;\nimport java.util.concurrent.ExecutionException;\nimport org.threeten.bp.Duration;\n\npublic class DeleteTpuVm {\n\n  public static void main(String[] args)\n      throws IOException, ExecutionException, InterruptedException {\n    // TODO(developer): Replace these variables before running the sample.\n    // Project ID or project number of the Google Cloud project you want to create a node.\n    String projectId = \"YOUR_PROJECT_ID\";\n    // The zone in which to create the TPU.\n    // For more information about supported TPU types for specific zones,\n    // see https://cloud.google.com/tpu/docs/regions-zones\n    String zone = \"europe-west4-a\";\n    // The name for your TPU.\n    String nodeName = \"YOUR_TPU_NAME\";\n\n    deleteTpuVm(projectId, zone, nodeName);\n  }\n\n  // Deletes a TPU VM with the specified name in the given project and zone.\n  public static void deleteTpuVm(String projectId, String zone, String nodeName)\n      throws IOException, ExecutionException, InterruptedException {\n    // With these settings the client library handles the Operation's polling mechanism\n    // and prevent CancellationException error\n    [TpuSettings](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuSettings.html).Builder clientSettings =\n        [TpuSettings](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuSettings.html).newBuilder();\n    clientSettings\n        .deleteNodeOperationSettings()\n        .setPollingAlgorithm(\n            [OperationTimedPollAlgorithm](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.longrunning.OperationTimedPollAlgorithm.html).create(\n                [RetrySettings](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.html).newBuilder()\n                    .[setInitialRetryDelay](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.Builder.html#com_google_api_gax_retrying_RetrySettings_Builder_setInitialRetryDelay_org_threeten_bp_Duration_)(Duration.ofMillis(5000L))\n                    .[setRetryDelayMultiplier](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.Builder.html#com_google_api_gax_retrying_RetrySettings_Builder_setRetryDelayMultiplier_double_)(1.5)\n                    .[setMaxRetryDelay](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.Builder.html#com_google_api_gax_retrying_RetrySettings_Builder_setMaxRetryDelay_org_threeten_bp_Duration_)(Duration.ofMillis(45000L))\n                    .[setInitialRpcTimeout](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.Builder.html#com_google_api_gax_retrying_RetrySettings_Builder_setInitialRpcTimeout_org_threeten_bp_Duration_)(Duration.ZERO)\n                    .[setRpcTimeoutMultiplier](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.Builder.html#com_google_api_gax_retrying_RetrySettings_Builder_setRpcTimeoutMultiplier_double_)(1.0)\n                    .[setMaxRpcTimeout](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.Builder.html#com_google_api_gax_retrying_RetrySettings_Builder_setMaxRpcTimeout_org_threeten_bp_Duration_)(Duration.ZERO)\n                    .[setTotalTimeout](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.retrying.RetrySettings.Builder.html#com_google_api_gax_retrying_RetrySettings_Builder_setTotalTimeout_org_threeten_bp_Duration_)(Duration.ofHours(24L))\n                    .build()));\n\n    // Initialize client that will be used to send requests. This client only needs to be created\n    // once, and can be reused for multiple requests.\n    try ([TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html) tpuClient = [TpuClient](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html).create(clientSettings.build())) {\n      String name = [NodeName](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.NodeName.html).of(projectId, zone, nodeName).toString();\n\n      [DeleteNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.DeleteNodeRequest.html) request = [DeleteNodeRequest](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.DeleteNodeRequest.html).newBuilder().setName(name).build();\n\n      tpuClient.[deleteNodeAsync](https://docs.cloud.google.com/java/docs/reference/google-cloud-tpu/latest/com.google.cloud.tpu.v2.TpuClient.html#com_google_cloud_tpu_v2_TpuClient_deleteNodeAsync__org_jspecify_annotations_Nullable_com_google_cloud_tpu_v2_NodeName_)(request).[get](https://docs.cloud.google.com/java/docs/reference/gax/latest/com.google.api.gax.longrunning.OperationFutureImpl.html#com_google_api_gax_longrunning_OperationFutureImpl_get__)();\n      System.out.println(\"TPU VM deleted\");\n    }\n  }\n}\n```\n\n###  Node.js \nTo authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\n// Import the TPUClient\n// TODO(developer): Uncomment below line before running the sample.\n// const {TpuClient} = require('@google-cloud/tpu').v2;\n\n// Instantiate a tpuClient\n// TODO(developer): Uncomment below line before running the sample.\n// tpuClient = new TpuClient();\n\n// TODO(developer): Update these variables before running the sample.\n// Project ID or project number of the Google Cloud project you want to delete a node.\nconst projectId = await tpuClient.getProjectId();\n\n// The name of TPU to delete.\nconst nodeName = 'node-name-1';\n\n// The zone, where the TPU is created.\nconst zone = 'europe-west4-a';\n\nasync function callDeleteTpuVM() {\n  const request = {\n    name: `projects/${projectId}/locations/${zone}/nodes/${nodeName}`,\n  };\n\n  const [operation] = await tpuClient.deleteNode(request);\n\n  // Wait for the delete operation to complete.\n  const [response] = await operation.promise();\n\n  console.log(`Node: ${nodeName} deleted.`);\n  return response;\n}\n\nreturn await callDeleteTpuVM();\n```\n\n###  Python \nTo authenticate to Cloud TPU, set up Application Default Credentials. For more information, see [Set up authentication for a local development environment](https://docs.cloud.google.com/docs/authentication/set-up-adc-local-dev-environment). \n\n```\nfrom google.cloud import tpu_v2\n\n# TODO(developer): Update and un-comment below lines\n# project_id = \"your-project-id\"\n# zone = \"us-central1-b\"\n# tpu_name = \"tpu-name\"\n\nclient = tpu_v2.TpuClient()\ntry:\n    client.[delete_node](https://docs.cloud.google.com/python/docs/reference/tpu/latest/google.cloud.tpu_v1.services.tpu.TpuClient.html#google_cloud_tpu_v1_services_tpu_TpuClient_delete_node)(\n        name=f\"projects/{project_id}/locations/{zone}/nodes/{tpu_name}\"\n    )\n    print(\"The TPU node was deleted.\")\nexcept Exception as e:\n    print(e)\n\n```\n\n## What's next\n  * Learn how to [configure networking and access to your Cloud TPU](https://docs.cloud.google.com/tpu/docs/configure-networking-access)\n  * Learn about [queued resources](https://docs.cloud.google.com/tpu/docs/queued-resources).\n  * Learn about [TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus).\n  * Learn how to [run JAX code on a TPU VM](https://docs.cloud.google.com/tpu/docs/run-calculation-jax).\n  * Learn how to [run PyTorch code on a TPU VM](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu)."
+  }
 }

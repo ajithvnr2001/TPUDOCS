@@ -1,57 +1,269 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:setup_19_storage_best_practices",
-  "@type": "DocumentationResource",
-  "name": "Cloud TPU storage best practices",
-  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/storage-best-practices",
-  "category": "TPU setup docs",
-  "categorySlug": "tpu_setup_docs",
-  "description": "Choose storage for data loading, model weights, and synchronous or asynchronous checkpoints.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/storage-best-practices",
-    "crawledAt": "2026-10-26T12:45:23.516359+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 35150
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Cloud TPU storage best practices",
-      "documentedIn",
-      "https://docs.cloud.google.com/tpu/docs/storage-best-practices"
-    ],
-    [
-      "Cloud TPU storage best practices",
-      "belongsToCategory",
-      "tpu_setup_docs"
-    ],
-    [
-      "Cloud TPU storage best practices",
-      "targetsPlatform",
-      "Google Cloud Platform"
-    ],
-    [
-      "Cloud TPU storage best practices",
-      "managesHardware",
-      "Google Cloud TPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:setup_19_storage_best_practices",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "setup_19_storage_best_practices",
+    "name": "Cloud TPU storage best practices",
+    "url": "https://docs.cloud.google.com/tpu/docs/storage-best-practices",
+    "category": "tpu_setup_docs",
+    "description": "Choose storage for data loading, model weights, and synchronous or asynchronous checkpoints.",
+    "char_count": 13734,
+    "word_count": 1669,
+    "section_count": 12,
+    "code_block_count": 0,
+    "table_count": 2,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.409829+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:setup_19_storage_best_practices",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:setup_19_storage_best_practices",
+        "predicate": "schema:name",
+        "object": "Cloud TPU storage best practices"
+      },
+      {
+        "subject": "tpu_doc:setup_19_storage_best_practices",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/tpu/docs/storage-best-practices"
+      },
+      {
+        "subject": "tpu_doc:setup_19_storage_best_practices",
+        "predicate": "schema:category",
+        "object": "tpu_setup_docs"
+      },
+      {
+        "subject": "tpu_doc:setup_19_storage_best_practices",
+        "predicate": "schema:description",
+        "object": "Choose storage for data loading, model weights, and synchronous or asynchronous checkpoints."
+      },
+      {
+        "subject": "tpu_doc:setup_19_storage_best_practices",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:TPU7x"
+      },
+      {
+        "subject": "tpu_doc:setup_19_storage_best_practices",
+        "predicate": "okf:hasSection",
+        "object": "Storage best practices for AI/ML workloads on TPU VMs"
+      },
+      {
+        "subject": "tpu_doc:setup_19_storage_best_practices",
+        "predicate": "okf:hasSection",
+        "object": "Workload-specific guidance"
+      },
+      {
+        "subject": "tpu_doc:setup_19_storage_best_practices",
+        "predicate": "okf:hasSection",
+        "object": "Cloud Storage optimizations"
+      },
+      {
+        "subject": "tpu_doc:setup_19_storage_best_practices",
+        "predicate": "okf:hasSection",
+        "object": "Enable hierarchical namespace for metadata optimization"
+      },
+      {
+        "subject": "tpu_doc:setup_19_storage_best_practices",
+        "predicate": "okf:hasSection",
+        "object": "Use Cloud Storage FUSE with appropriate profiles"
+      },
+      {
+        "subject": "tpu_doc:setup_19_storage_best_practices",
+        "predicate": "okf:hasSection",
+        "object": "Customize the TPU VM boot disk"
+      },
+      {
+        "subject": "tpu_doc:setup_19_storage_best_practices",
+        "predicate": "okf:hasSection",
+        "object": "Plan your storage capacity"
+      },
+      {
+        "subject": "tpu_doc:setup_19_storage_best_practices",
+        "predicate": "okf:hasSection",
+        "object": "Estimate storage"
+      },
+      {
+        "subject": "tpu_doc:setup_19_storage_best_practices",
+        "predicate": "okf:hasSection",
+        "object": "Estimate checkpoint bandwidth"
+      },
+      {
+        "subject": "tpu_doc:setup_19_storage_best_practices",
+        "predicate": "okf:hasSection",
+        "object": "Reference recipes"
+      },
+      {
+        "subject": "tpu_doc:setup_19_storage_best_practices",
+        "predicate": "okf:hasSection",
+        "object": "Quotas and bandwidth limits"
+      },
+      {
+        "subject": "tpu_doc:setup_19_storage_best_practices",
+        "predicate": "okf:hasSection",
+        "object": "What's next"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Cloud TPU storage best practices provides official guidance on Choose storage for data loading, model weights, and synchronous or asynchronous checkpoints.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/storage-best-practices",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Cloud TPU storage best practices used for in Cloud TPU workflows?",
-      "answer": "Choose storage for data loading, model weights, and synchronous or asynchronous checkpoints.",
-      "category": "tpu_setup_docs"
-    }
-  ],
-  "contentSummary": "Choose storage for data loading, model weights, and synchronous or asynchronous checkpoints."
+  },
+  "structured_content": {
+    "summary": "Choose storage for data loading, model weights, and synchronous or asynchronous checkpoints.",
+    "sections": [
+      {
+        "heading": "Storage best practices for AI/ML workloads on TPU VMs",
+        "level": 1,
+        "content": "To maximize the performance and cost-efficiency of your AI/ML workloads on TPU VMs, select and configure the right storage solution for your workload. By removing I/O bottlenecks, you can reduce the amount of time that your TPU accelerators are idle, which reduces training time and costs.\nThis document provides workload-specific storage recommendations and optimization best practices for training, checkpointing, serving, and caching on TPU VMs. Before applying these practices, review the available [Storage options for TPU data](https://docs.cloud.google.com/tpu/docs/storage-options). This document assumes that you are familiar with TPU VMs and have basic experience provisioning Cloud Storage resources."
+      },
+      {
+        "heading": "Workload-specific guidance",
+        "level": 2,
+        "content": "The following table provides storage recommendations, listed in order of preference, for different workloads:  \n| Workload  | Recommendation  | Optimization and tooling (if applicable)  |  \n| --- | --- | --- |  \n| **Training datasets, including data preparation**  | \n  1. Use [Cloud Storage regional buckets](https://docs.cloud.google.com/storage/docs/buckets) with [Rapid Cache](https://docs.cloud.google.com/storage/docs/rapid/rapid-cache) and client-side tuning (such as read-ahead reads) for the lowest cost. \n  2. Use [Cloud Storage Rapid Bucket](https://docs.cloud.google.com/storage/docs/rapid/rapid-bucket) for the best performance and scale. \n  3. Use [Managed Lustre](https://docs.cloud.google.com/managed-lustre/docs/overview) if you're standardizing on Lustre (file system storage) due to high metadata concurrency or small files (less than 1 MB). \n\n | \n  * For regional Cloud Storage buckets, enable [hierarchical namespace](https://docs.cloud.google.com/tpu/docs/storage-best-practices#hierarchical-namespace). \n  * For regional Cloud Storage buckets or Rapid Bucket, use Cloud Storage FUSE and [gRPC](https://grpc.io/). For GKE, use the [`gcsfusecsi-training` profile](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/gcsfuse-profiles#select-performance-profile). \n  * For Managed Lustre, consider using the Dynamic tier to reduce costs and automatically optimize performance. \n\n |  \n| **Checkpointing and reinforcement learning weights**  | \n  1. Use [Managed Lustre](https://docs.cloud.google.com/managed-lustre/docs/overview) for high performance without extensive tuning for low latency (less than 1 ms) requirements, such as synchronous checkpoints and high-speed weight propagation for reinforcement learning. \n  2. Use [Cloud Storage Rapid Bucket](https://docs.cloud.google.com/storage/docs/rapid/rapid-bucket) for the highest throughput for asynchronous and multi-tiered checkpointing and parallelizing checkpoint operations to storage. Rapid Bucket provides the high throughput needed for these workloads. \n\n |  For Rapid Bucket, use the [`gcsfusecsi-checkpointing` profile](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/gcsfuse-profiles#select-performance-profile).   |  \n| **Model storage and download**  | \n  1. Use [Hyperdisk ML](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-ml) for small model caching and up to 2,500 instances. \n  2. Use the same storage solution that you use for training datasets (Managed Lustre, Rapid Bucket, or regional buckets) if you want to standardize on a single storage solution. \n\n |  For downloading models, use [GKE Run:ai Model Streamer](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/run-ai-model-streamer) or Cloud Storage FUSE with a separate mount point using the [`gcsfusecsi-serving` profile](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/gcsfuse-profiles#select-performance-profile).   |  \n| **Key-value (KV) cache offload**  | \n  1. Always use host CPU memory (RAM) as the primary tier to free up VRAM without adding significant latency. \n  2. If CPU memory is insufficient, use [Managed Lustre](https://docs.cloud.google.com/managed-lustre/docs/overview) as a parallel, low-latency second tier in the cache hierarchy to meet the ultra low latency (less than 1 ms) needs of KV cache offloading at high throughput (up to 10 TB/s). \n\n |   |"
+      },
+      {
+        "heading": "Cloud Storage optimizations",
+        "level": 2,
+        "content": "The following sections describe best practices to optimize performance when using Cloud Storage with TPU VMs."
+      },
+      {
+        "heading": "Enable hierarchical namespace for metadata optimization",
+        "level": 3,
+        "content": "To improve metadata performance, enable hierarchical namespace when you create regional buckets for AI/ML workloads. Metadata performance refers to how quickly Cloud Storage can process operations that involve looking up, listing, or modifying object paths and folders, rather than reading or writing the file contents themselves.\nIn buckets without hierarchical namespace enabled, folders don't exist as actual resources, but are instead [simulated folders](https://docs.cloud.google.com/storage/docs/folder-types) represented by object name prefixes delimited by forward slashes (`/`). This makes operations like listing directory contents or renaming directories slow because the system must scan all objects with that prefix. Hierarchical namespace provides a true file system structure, which is important for AI/ML workloads for several reasons:\n  * **Atomic directory renames** : ML frameworks use directory renames to finalize checkpoints. Hierarchical namespace supports atomic renames, ensuring that checkpoints are finalized quickly.\n  * **Higher initial QPS** : Hierarchical namespace supports up to eight times higher initial queries per second (QPS) for reads and writes compared to buckets without hierarchical namespace enabled. This prevents bottlenecks when many TPUs access storage simultaneously.\n  * **Efficient folder-level operations** : Finding and listing files within specific directories is much faster, reducing response times during training and data loading.\n\n\nZonal buckets, offered through Rapid Bucket, use hierarchical namespace by default. For more information, see [Hierarchical namespace overview](https://docs.cloud.google.com/storage/docs/hns-overview)."
+      },
+      {
+        "heading": "Use Cloud Storage FUSE with appropriate profiles",
+        "level": 3,
+        "content": "[Cloud Storage FUSE](https://docs.cloud.google.com/storage/docs/cloud-storage-fuse/overview) is a FUSE adapter that lets you mount buckets as a local file system. When using Google Kubernetes Engine, we recommend using the [Cloud Storage FUSE CSI driver](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/cloud-storage-fuse-csi-driver) and the [Cloud Storage FUSE profiles](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/gcsfuse-profiles) to automate performance tuning.\nFor more information about best practices for using Cloud Storage FUSE, see [Performance tuning best practices](https://docs.cloud.google.com/storage/docs/cloud-storage-fuse/performance)."
+      },
+      {
+        "heading": "Customize the TPU VM boot disk",
+        "level": 2,
+        "content": "You can customize the guest OS environment on a TPU VM by using startup scripts or by creating custom images. Customizing the boot disk is useful for the following scenarios:\n  * **Pre-loading software and libraries** : Install specific ML frameworks, dependencies, or custom software to reduce VM startup time and ensure consistent environments.\n  * **Using non-standard OS distributions** : Use an OS distribution or version not included in the [Google-managed list](https://docs.cloud.google.com/tpu/docs/tpu-os-images#google-managed_os_images).\n  * **Applying security and monitoring configurations** : Apply custom security settings, install monitoring agents, or set environment variables.\n\n\nHowever, boot disk recovery for TPU VMs is limited. You can't detach or snapshot the boot disk for offline repair, so use caution when making changes that affect the boot process. By following these best practices, you can reduce the risk of boot failures when customizing your TPU VM environments.\nKeep the following key principles in mind when customizing your boot disk:\n  * **Minimize boot disk modifications** : Whenever possible, install applications and store data on Persistent Disk or Hyperdisk volumes rather than heavily modifying the boot disk.\n  * **Use UUIDs for mounting** : When adding entries to the `/etc/fstab` file, always use UUIDs to identify disks and partitions (`UUID=...`) rather than device names like `/dev/sdb1`. Auto-generated device names are not guaranteed to be stable across reboots.\n\n\nFollow these recommendations to reduce the risk of boot failures when making system changes:\n  * **Error handling** : Implement robust error checking and graceful failure modes in your scripts. Log detailed messages to the serial console and Cloud Logging to aid in debugging.\n  * **Critical dependencies** : Be extremely careful when modifying files essential for booting, such as the `/etc/fstab` file, network configurations, or bootloader settings. A syntax error or incorrect entry can render the VM unbootable.\n  * **Secondary disks** : If your script relies on secondary disks, ensure it handles cases where the disk might not be present or takes longer to attach than expected. Avoid making the boot process critically dependent on secondary disk mounts unless absolutely necessary.\nThe following are examples of recommended and not recommended `/etc/fstab` entries for mounting a secondary disk:\n    * **Recommended** : `UUID=a1b2c3d4-e5f6-7890-1234-567890abcdef /mnt/mydata ext4 defaults,nofail 0 2`\n    * **Not recommended** : `/dev/sdb1 /mnt/mydata ext4 defaults 0 2`\nUsing the `nofail` option can prevent the system from halting if the disk isn't found, but ensure your application can handle the mount point being unavailable.\n  * **Package management** : Be cautious when adding third-party repositories. Ensure they are trusted and compatible with the base OS image. Understand the dependencies of any packages you install and their potential impact on system libraries.\n  * **Disk space** : Monitor boot disk usage. Extensive logging or large software installations can fill the boot disk, preventing the VM from starting.\n  * **Logging** : Configure your applications and scripts to log verbosely to the serial console, as this is the primary tool for diagnosing boot issues on TPU VMs."
+      },
+      {
+        "heading": "Plan your storage capacity",
+        "level": 2,
+        "content": "It's important to plan the amount of storage capacity that your workload will need to fully utilize your accelerators. This includes the storage capacity and checkpoint bandwidth."
+      },
+      {
+        "heading": "Estimate storage",
+        "level": 3,
+        "content": "You can use the following estimates as a starting point for your storage requirements:  \n| Workload type  | Dataset storage  | Checkpoint storage  |  \n| --- | --- | --- |  \n| LLM pre-training  | 2 TB per TPU  | 200 GB per TPU  |  \n| Multimodal training  | 12 TB per TPU  | 1 TB per TPU  |  \n| Inference  | 1 TB per TPU  | 1 GB per TPU  |"
+      },
+      {
+        "heading": "Estimate checkpoint bandwidth",
+        "level": 3,
+        "content": "You can estimate the minimum checkpointing bandwidth required for training workloads using the following formula. For data reads, multiple training runs, or training and inference, increase your estimated bandwidth requirements proportionally.\n  1. **Checkpoint size** : _Number of parameters_ \u00d7  _bytes per parameter_ (approximately 12-16 bytes per parameter for FP16 + optimizer state). Add a buffer (approximately 3\u00d7) for optimizer states and different precisions.\n  2. **Checkpoint interval** : How often you save a checkpoint (for example, every 15 minutes).\n  3. **Required bandwidth** : _Checkpoint size_ \u00f7  _checkpoint interval_.\n\n\nThe following example shows how to estimate the minimum checkpointing bandwidth for Qwen3-72B:\n  1. **Checkpoint size** : 72B parameters \u00d7 12 bytes \u2248 864 GB per checkpoint. With buffer, 3 \u00d7 864 GB \u2248 2.5 TB.\n  2. **Checkpoint interval** : 2 minutes = 120 seconds.\n  3. **Required bandwidth** : 2.5 TB \u00f7 120 seconds \u2248 20 GBps."
+      },
+      {
+        "heading": "Reference recipes",
+        "level": 2,
+        "content": "For examples of storage configurations for specific hardware and workloads, see the following recipes:\n  * **TPU7x inference** : \n    * [Cloud Storage recipe](https://github.com/AI-Hypercomputer/tpu-recipes/blob/main/inference/ironwood/vLLM/GPT-OSS/README-gcs.md)\n    * [Managed Lustre recipe](https://github.com/AI-Hypercomputer/tpu-recipes/blob/main/inference/ironwood/vLLM/GPT-OSS/README-lustre.md)\n  * **TPU7x training** : \n    * [Cloud Storage recipe](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/deepseek3-671b/4k-bf16-tpu7x-4x8x8-gcs)\n    * [Managed Lustre recipe](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/deepseek3-671b/4k-bf16-tpu7x-4x8x8-lustre)\n    * [Provision Managed Lustre on GKE using Cluster Toolkit](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/ct-lustre-tpu)"
+      },
+      {
+        "heading": "Quotas and bandwidth limits",
+        "level": 2,
+        "content": "The bandwidth for Cloud Storage and Compute Engine offerings is limited by default quotas. If you exceed a quota, your input and output requests might be throttled.\nFor information about Cloud Storage quotas and how to request increases, see [Quotas & limits](https://docs.cloud.google.com/storage/quotas) in the Cloud Storage documentation. For information about Compute Engine quotas for Hyperdisk and Persistent Disk, see [Disk quotas](https://docs.cloud.google.com/compute/resource-usage#disk_quota)."
+      },
+      {
+        "heading": "What's next",
+        "level": 2,
+        "content": "* [Storage options for TPU data](https://docs.cloud.google.com/tpu/docs/storage-options)\n  * [Connect TPU VMs to Cloud Storage buckets](https://docs.cloud.google.com/tpu/docs/storage-buckets-compute)\n  * [Attach durable block storage to a TPU VM](https://docs.cloud.google.com/tpu/docs/attach-durable-block-storage-compute)\n  * [Cloud Storage FUSE performance tuning best practices](https://docs.cloud.google.com/storage/docs/cloud-storage-fuse/performance)"
+      }
+    ],
+    "code_examples": [],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [
+      {
+        "headers": [
+          "Workload",
+          "Recommendation",
+          "Optimization and tooling (if applicable)"
+        ],
+        "rows": [
+          [
+            "**Training datasets, including data preparation**"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "Workload type",
+          "Dataset storage",
+          "Checkpoint storage"
+        ],
+        "rows": [
+          [
+            "LLM pre-training",
+            "2 TB per TPU",
+            "200 GB per TPU"
+          ],
+          [
+            "Multimodal training",
+            "12 TB per TPU",
+            "1 TB per TPU"
+          ],
+          [
+            "Inference",
+            "1 TB per TPU",
+            "1 GB per TPU"
+          ]
+        ]
+      }
+    ],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Cloud TPU storage best practices' (https://docs.cloud.google.com/tpu/docs/storage-best-practices)?",
+        "answer": "Choose storage for data loading, model weights, and synchronous or asynchronous checkpoints."
+      },
+      {
+        "question": "How does 'Cloud TPU storage best practices' handle: Storage best practices for AI/ML workloads on TPU VMs?",
+        "answer": "To maximize the performance and cost-efficiency of your AI/ML workloads on TPU VMs, select and configure the right storage solution for your workload. By removing I/O bottlenecks, you can reduce the amount of time that your TPU accelerators are idle, which reduces training time and costs.\nThis document provides workload-specific storage recommendations and optimization best practices for training, checkpointing, serving, and caching on TPU VMs. Before applying these practices, review the available [Storage options for TPU data](https://docs.cloud.google.com/tpu/docs/storage-options). This document assumes that you are familiar with TPU VMs and have basic experience provisioning Cloud Storage resources."
+      },
+      {
+        "question": "How does 'Cloud TPU storage best practices' handle: Workload-specific guidance?",
+        "answer": "The following table provides storage recommendations, listed in order of preference, for different workloads:  \n| Workload  | Recommendation  | Optimization and tooling (if applicable)  |  \n| --- | --- | --- |  \n| **Training datasets, including data preparation**  | \n  1. Use [Cloud Storage regional buckets](https://docs.cloud.google.com/storage/docs/buckets) with [Rapid Cache](https://docs.cloud.google.com/storage/docs/rapid/rapid-cache) and client-side tuning (such as read-ahead reads) for the lowest cost. \n  2. Use [Cloud Storage Rapid Bucket](https://docs.cloud.google.com/storage/docs/rapid/rapid-bucket) for the best performance and scale. \n  3. Use [Managed Lustre](https://docs.cloud.google.com/managed-lustre/docs/overview) if you're standardizing on Lustre (file system storage) due to high metadata concurrency or small files (less than 1 MB). \n\n | \n  * For regional Cloud Storage buckets, enable [hierarchical namespace](https://docs.cloud.google.com/tpu/docs/storage-best-practices#hierarchical-namespace). \n  * For regional Cloud Storage buckets or Rapid Bucket, use Cloud Storage FUSE and [gRPC](https://grpc.io/). For GKE, use the [`gcsfusecsi-training` profile](https://docs.cl"
+      },
+      {
+        "question": "How does 'Cloud TPU storage best practices' handle: Cloud Storage optimizations?",
+        "answer": "The following sections describe best practices to optimize performance when using Cloud Storage with TPU VMs."
+      },
+      {
+        "question": "How does 'Cloud TPU storage best practices' handle: Enable hierarchical namespace for metadata optimization?",
+        "answer": "To improve metadata performance, enable hierarchical namespace when you create regional buckets for AI/ML workloads. Metadata performance refers to how quickly Cloud Storage can process operations that involve looking up, listing, or modifying object paths and folders, rather than reading or writing the file contents themselves.\nIn buckets without hierarchical namespace enabled, folders don't exist as actual resources, but are instead [simulated folders](https://docs.cloud.google.com/storage/docs/folder-types) represented by object name prefixes delimited by forward slashes (`/`). This makes operations like listing directory contents or renaming directories slow because the system must scan all objects with that prefix. Hierarchical namespace provides a true file system structure, which is important for AI/ML workloads for several reasons:\n  * **Atomic directory renames** : ML frameworks use directory renames to finalize checkpoints. Hierarchical namespace supports atomic renames, ensuring that checkpoints are finalized quickly.\n  * **Higher initial QPS** : Hierarchical namespace supports up to eight times higher initial queries per second (QPS) for reads and writes compared to buc"
+      },
+      {
+        "question": "How does 'Cloud TPU storage best practices' handle: Use Cloud Storage FUSE with appropriate profiles?",
+        "answer": "[Cloud Storage FUSE](https://docs.cloud.google.com/storage/docs/cloud-storage-fuse/overview) is a FUSE adapter that lets you mount buckets as a local file system. When using Google Kubernetes Engine, we recommend using the [Cloud Storage FUSE CSI driver](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/cloud-storage-fuse-csi-driver) and the [Cloud Storage FUSE profiles](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/gcsfuse-profiles) to automate performance tuning.\nFor more information about best practices for using Cloud Storage FUSE, see [Performance tuning best practices](https://docs.cloud.google.com/storage/docs/cloud-storage-fuse/performance)."
+      },
+      {
+        "question": "How does 'Cloud TPU storage best practices' handle: Customize the TPU VM boot disk?",
+        "answer": "You can customize the guest OS environment on a TPU VM by using startup scripts or by creating custom images. Customizing the boot disk is useful for the following scenarios:\n  * **Pre-loading software and libraries** : Install specific ML frameworks, dependencies, or custom software to reduce VM startup time and ensure consistent environments.\n  * **Using non-standard OS distributions** : Use an OS distribution or version not included in the [Google-managed list](https://docs.cloud.google.com/tpu/docs/tpu-os-images#google-managed_os_images).\n  * **Applying security and monitoring configurations** : Apply custom security settings, install monitoring agents, or set environment variables.\n\n\nHowever, boot disk recovery for TPU VMs is limited. You can't detach or snapshot the boot disk for offline repair, so use caution when making changes that affect the boot process. By following these best practices, you can reduce the risk of boot failures when customizing your TPU VM environments.\nKeep the following key principles in mind when customizing your boot disk:\n  * **Minimize boot disk modifications** : Whenever possible, install applications and store data on Persistent Disk or Hyperdis"
+      },
+      {
+        "question": "How does 'Cloud TPU storage best practices' handle: Plan your storage capacity?",
+        "answer": "It's important to plan the amount of storage capacity that your workload will need to fully utilize your accelerators. This includes the storage capacity and checkpoint bandwidth."
+      },
+      {
+        "question": "How does 'Cloud TPU storage best practices' handle: Estimate storage?",
+        "answer": "You can use the following estimates as a starting point for your storage requirements:  \n| Workload type  | Dataset storage  | Checkpoint storage  |  \n| --- | --- | --- |  \n| LLM pre-training  | 2 TB per TPU  | 200 GB per TPU  |  \n| Multimodal training  | 12 TB per TPU  | 1 TB per TPU  |  \n| Inference  | 1 TB per TPU  | 1 GB per TPU  |"
+      },
+      {
+        "question": "How does 'Cloud TPU storage best practices' handle: Estimate checkpoint bandwidth?",
+        "answer": "You can estimate the minimum checkpointing bandwidth required for training workloads using the following formula. For data reads, multiple training runs, or training and inference, increase your estimated bandwidth requirements proportionally.\n  1. **Checkpoint size** : _Number of parameters_ \u00d7  _bytes per parameter_ (approximately 12-16 bytes per parameter for FP16 + optimizer state). Add a buffer (approximately 3\u00d7) for optimizer states and different precisions.\n  2. **Checkpoint interval** : How often you save a checkpoint (for example, every 15 minutes).\n  3. **Required bandwidth** : _Checkpoint size_ \u00f7  _checkpoint interval_.\n\n\nThe following example shows how to estimate the minimum checkpointing bandwidth for Qwen3-72B:\n  1. **Checkpoint size** : 72B parameters \u00d7 12 bytes \u2248 864 GB per checkpoint. With buffer, 3 \u00d7 864 GB \u2248 2.5 TB.\n  2. **Checkpoint interval** : 2 minutes = 120 seconds.\n  3. **Required bandwidth** : 2.5 TB \u00f7 120 seconds \u2248 20 GBps."
+      }
+    ],
+    "full_markdown": "# Storage best practices for AI/ML workloads on TPU VMs\nTo maximize the performance and cost-efficiency of your AI/ML workloads on TPU VMs, select and configure the right storage solution for your workload. By removing I/O bottlenecks, you can reduce the amount of time that your TPU accelerators are idle, which reduces training time and costs.\nThis document provides workload-specific storage recommendations and optimization best practices for training, checkpointing, serving, and caching on TPU VMs. Before applying these practices, review the available [Storage options for TPU data](https://docs.cloud.google.com/tpu/docs/storage-options). This document assumes that you are familiar with TPU VMs and have basic experience provisioning Cloud Storage resources.\n## Workload-specific guidance\nThe following table provides storage recommendations, listed in order of preference, for different workloads:  \n| Workload  | Recommendation  | Optimization and tooling (if applicable)  |  \n| --- | --- | --- |  \n| **Training datasets, including data preparation**  | \n  1. Use [Cloud Storage regional buckets](https://docs.cloud.google.com/storage/docs/buckets) with [Rapid Cache](https://docs.cloud.google.com/storage/docs/rapid/rapid-cache) and client-side tuning (such as read-ahead reads) for the lowest cost. \n  2. Use [Cloud Storage Rapid Bucket](https://docs.cloud.google.com/storage/docs/rapid/rapid-bucket) for the best performance and scale. \n  3. Use [Managed Lustre](https://docs.cloud.google.com/managed-lustre/docs/overview) if you're standardizing on Lustre (file system storage) due to high metadata concurrency or small files (less than 1 MB). \n\n | \n  * For regional Cloud Storage buckets, enable [hierarchical namespace](https://docs.cloud.google.com/tpu/docs/storage-best-practices#hierarchical-namespace). \n  * For regional Cloud Storage buckets or Rapid Bucket, use Cloud Storage FUSE and [gRPC](https://grpc.io/). For GKE, use the [`gcsfusecsi-training` profile](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/gcsfuse-profiles#select-performance-profile). \n  * For Managed Lustre, consider using the Dynamic tier to reduce costs and automatically optimize performance. \n\n |  \n| **Checkpointing and reinforcement learning weights**  | \n  1. Use [Managed Lustre](https://docs.cloud.google.com/managed-lustre/docs/overview) for high performance without extensive tuning for low latency (less than 1 ms) requirements, such as synchronous checkpoints and high-speed weight propagation for reinforcement learning. \n  2. Use [Cloud Storage Rapid Bucket](https://docs.cloud.google.com/storage/docs/rapid/rapid-bucket) for the highest throughput for asynchronous and multi-tiered checkpointing and parallelizing checkpoint operations to storage. Rapid Bucket provides the high throughput needed for these workloads. \n\n |  For Rapid Bucket, use the [`gcsfusecsi-checkpointing` profile](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/gcsfuse-profiles#select-performance-profile).   |  \n| **Model storage and download**  | \n  1. Use [Hyperdisk ML](https://docs.cloud.google.com/compute/docs/disks/hd-types/hyperdisk-ml) for small model caching and up to 2,500 instances. \n  2. Use the same storage solution that you use for training datasets (Managed Lustre, Rapid Bucket, or regional buckets) if you want to standardize on a single storage solution. \n\n |  For downloading models, use [GKE Run:ai Model Streamer](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/run-ai-model-streamer) or Cloud Storage FUSE with a separate mount point using the [`gcsfusecsi-serving` profile](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/gcsfuse-profiles#select-performance-profile).   |  \n| **Key-value (KV) cache offload**  | \n  1. Always use host CPU memory (RAM) as the primary tier to free up VRAM without adding significant latency. \n  2. If CPU memory is insufficient, use [Managed Lustre](https://docs.cloud.google.com/managed-lustre/docs/overview) as a parallel, low-latency second tier in the cache hierarchy to meet the ultra low latency (less than 1 ms) needs of KV cache offloading at high throughput (up to 10 TB/s). \n\n |   |  \n## Cloud Storage optimizations\nThe following sections describe best practices to optimize performance when using Cloud Storage with TPU VMs.\n### Enable hierarchical namespace for metadata optimization\nTo improve metadata performance, enable hierarchical namespace when you create regional buckets for AI/ML workloads. Metadata performance refers to how quickly Cloud Storage can process operations that involve looking up, listing, or modifying object paths and folders, rather than reading or writing the file contents themselves.\nIn buckets without hierarchical namespace enabled, folders don't exist as actual resources, but are instead [simulated folders](https://docs.cloud.google.com/storage/docs/folder-types) represented by object name prefixes delimited by forward slashes (`/`). This makes operations like listing directory contents or renaming directories slow because the system must scan all objects with that prefix. Hierarchical namespace provides a true file system structure, which is important for AI/ML workloads for several reasons:\n  * **Atomic directory renames** : ML frameworks use directory renames to finalize checkpoints. Hierarchical namespace supports atomic renames, ensuring that checkpoints are finalized quickly.\n  * **Higher initial QPS** : Hierarchical namespace supports up to eight times higher initial queries per second (QPS) for reads and writes compared to buckets without hierarchical namespace enabled. This prevents bottlenecks when many TPUs access storage simultaneously.\n  * **Efficient folder-level operations** : Finding and listing files within specific directories is much faster, reducing response times during training and data loading.\n\n\nZonal buckets, offered through Rapid Bucket, use hierarchical namespace by default. For more information, see [Hierarchical namespace overview](https://docs.cloud.google.com/storage/docs/hns-overview).\n### Use Cloud Storage FUSE with appropriate profiles\n[Cloud Storage FUSE](https://docs.cloud.google.com/storage/docs/cloud-storage-fuse/overview) is a FUSE adapter that lets you mount buckets as a local file system. When using Google Kubernetes Engine, we recommend using the [Cloud Storage FUSE CSI driver](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/cloud-storage-fuse-csi-driver) and the [Cloud Storage FUSE profiles](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/gcsfuse-profiles) to automate performance tuning.\nFor more information about best practices for using Cloud Storage FUSE, see [Performance tuning best practices](https://docs.cloud.google.com/storage/docs/cloud-storage-fuse/performance).\n## Customize the TPU VM boot disk\nYou can customize the guest OS environment on a TPU VM by using startup scripts or by creating custom images. Customizing the boot disk is useful for the following scenarios:\n  * **Pre-loading software and libraries** : Install specific ML frameworks, dependencies, or custom software to reduce VM startup time and ensure consistent environments.\n  * **Using non-standard OS distributions** : Use an OS distribution or version not included in the [Google-managed list](https://docs.cloud.google.com/tpu/docs/tpu-os-images#google-managed_os_images).\n  * **Applying security and monitoring configurations** : Apply custom security settings, install monitoring agents, or set environment variables.\n\n\nHowever, boot disk recovery for TPU VMs is limited. You can't detach or snapshot the boot disk for offline repair, so use caution when making changes that affect the boot process. By following these best practices, you can reduce the risk of boot failures when customizing your TPU VM environments.\nKeep the following key principles in mind when customizing your boot disk:\n  * **Minimize boot disk modifications** : Whenever possible, install applications and store data on Persistent Disk or Hyperdisk volumes rather than heavily modifying the boot disk.\n  * **Use UUIDs for mounting** : When adding entries to the `/etc/fstab` file, always use UUIDs to identify disks and partitions (`UUID=...`) rather than device names like `/dev/sdb1`. Auto-generated device names are not guaranteed to be stable across reboots.\n\n\nFollow these recommendations to reduce the risk of boot failures when making system changes:\n  * **Error handling** : Implement robust error checking and graceful failure modes in your scripts. Log detailed messages to the serial console and Cloud Logging to aid in debugging.\n  * **Critical dependencies** : Be extremely careful when modifying files essential for booting, such as the `/etc/fstab` file, network configurations, or bootloader settings. A syntax error or incorrect entry can render the VM unbootable.\n  * **Secondary disks** : If your script relies on secondary disks, ensure it handles cases where the disk might not be present or takes longer to attach than expected. Avoid making the boot process critically dependent on secondary disk mounts unless absolutely necessary.\nThe following are examples of recommended and not recommended `/etc/fstab` entries for mounting a secondary disk:\n    * **Recommended** : `UUID=a1b2c3d4-e5f6-7890-1234-567890abcdef /mnt/mydata ext4 defaults,nofail 0 2`\n    * **Not recommended** : `/dev/sdb1 /mnt/mydata ext4 defaults 0 2`\nUsing the `nofail` option can prevent the system from halting if the disk isn't found, but ensure your application can handle the mount point being unavailable.\n  * **Package management** : Be cautious when adding third-party repositories. Ensure they are trusted and compatible with the base OS image. Understand the dependencies of any packages you install and their potential impact on system libraries.\n  * **Disk space** : Monitor boot disk usage. Extensive logging or large software installations can fill the boot disk, preventing the VM from starting.\n  * **Logging** : Configure your applications and scripts to log verbosely to the serial console, as this is the primary tool for diagnosing boot issues on TPU VMs.\n\n\n## Plan your storage capacity\nIt's important to plan the amount of storage capacity that your workload will need to fully utilize your accelerators. This includes the storage capacity and checkpoint bandwidth.\n### Estimate storage\nYou can use the following estimates as a starting point for your storage requirements:  \n| Workload type  | Dataset storage  | Checkpoint storage  |  \n| --- | --- | --- |  \n| LLM pre-training  | 2 TB per TPU  | 200 GB per TPU  |  \n| Multimodal training  | 12 TB per TPU  | 1 TB per TPU  |  \n| Inference  | 1 TB per TPU  | 1 GB per TPU  |  \n### Estimate checkpoint bandwidth\nYou can estimate the minimum checkpointing bandwidth required for training workloads using the following formula. For data reads, multiple training runs, or training and inference, increase your estimated bandwidth requirements proportionally.\n  1. **Checkpoint size** : _Number of parameters_ \u00d7  _bytes per parameter_ (approximately 12-16 bytes per parameter for FP16 + optimizer state). Add a buffer (approximately 3\u00d7) for optimizer states and different precisions.\n  2. **Checkpoint interval** : How often you save a checkpoint (for example, every 15 minutes).\n  3. **Required bandwidth** : _Checkpoint size_ \u00f7  _checkpoint interval_.\n\n\nThe following example shows how to estimate the minimum checkpointing bandwidth for Qwen3-72B:\n  1. **Checkpoint size** : 72B parameters \u00d7 12 bytes \u2248 864 GB per checkpoint. With buffer, 3 \u00d7 864 GB \u2248 2.5 TB.\n  2. **Checkpoint interval** : 2 minutes = 120 seconds.\n  3. **Required bandwidth** : 2.5 TB \u00f7 120 seconds \u2248 20 GBps.\n\n\n## Reference recipes\nFor examples of storage configurations for specific hardware and workloads, see the following recipes:\n  * **TPU7x inference** : \n    * [Cloud Storage recipe](https://github.com/AI-Hypercomputer/tpu-recipes/blob/main/inference/ironwood/vLLM/GPT-OSS/README-gcs.md)\n    * [Managed Lustre recipe](https://github.com/AI-Hypercomputer/tpu-recipes/blob/main/inference/ironwood/vLLM/GPT-OSS/README-lustre.md)\n  * **TPU7x training** : \n    * [Cloud Storage recipe](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/deepseek3-671b/4k-bf16-tpu7x-4x8x8-gcs)\n    * [Managed Lustre recipe](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/deepseek3-671b/4k-bf16-tpu7x-4x8x8-lustre)\n    * [Provision Managed Lustre on GKE using Cluster Toolkit](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/ct-lustre-tpu)\n\n\n## Quotas and bandwidth limits\nThe bandwidth for Cloud Storage and Compute Engine offerings is limited by default quotas. If you exceed a quota, your input and output requests might be throttled.\nFor information about Cloud Storage quotas and how to request increases, see [Quotas & limits](https://docs.cloud.google.com/storage/quotas) in the Cloud Storage documentation. For information about Compute Engine quotas for Hyperdisk and Persistent Disk, see [Disk quotas](https://docs.cloud.google.com/compute/resource-usage#disk_quota).\n## What's next\n  * [Storage options for TPU data](https://docs.cloud.google.com/tpu/docs/storage-options)\n  * [Connect TPU VMs to Cloud Storage buckets](https://docs.cloud.google.com/tpu/docs/storage-buckets-compute)\n  * [Attach durable block storage to a TPU VM](https://docs.cloud.google.com/tpu/docs/attach-durable-block-storage-compute)\n  * [Cloud Storage FUSE performance tuning best practices](https://docs.cloud.google.com/storage/docs/cloud-storage-fuse/performance)"
+  }
 }

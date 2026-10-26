@@ -2,498 +2,408 @@
 id: "legacy_04_pytorch_xla_legacy_notice"
 title: "PyTorch/XLA documentation (legacy notice)"
 url: "https://docs.pytorch.org/xla/master/index.html"
-category: "Legacy docs"
+category: "legacy_docs"
 description: "Retain only for migrating existing code: the documentation now labels PyTorch/XLA deprecated and replaced by TorchTPU."
-crawled_at: "2026-10-26T12:44:56.526062+00:00"
-crawler_engine: "Crawl4AI"
+crawled_at: "2026-10-26T14:43:49.667828+00:00"
+crawler_engine: "Canonical-Source+Crawl4AI"
 ---
 
-[ Skip to main content ](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#main-content)
-[ ![Google Cloud Documentation](https://www.gstatic.com/devrel-devsite/prod/v5a0f9ff8b593048661361a49e11ab98a8b1ac025e19e60e6189f2b56796f8a43/clouddocs/images/lockup_full_color.svg) ](https://docs.cloud.google.com/)
-[ Documentation ](https://docs.cloud.google.com/docs)
-close
-  * Get Started
+# PyTorch/XLA Documentation (Legacy Deprecation Notice)
 
+## Official Deprecation Notice (`https://docs.pytorch.org/xla/master/index.html`)
 
-  * [ Get Started with Google Cloud  ](https://docs.cloud.google.com/docs/get-started)
-  * [ Product List  ](https://docs.cloud.google.com/docs/product-list)
-  * [ Cloud Customer Care  ](https://docs.cloud.google.com/support/docs)
+> **Deprecated:** This project is deprecated and replaced by [TorchTPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu). The PyTorch/XLA repo will be archived on **November 15, 2026**. Please start new PyTorch TPU workloads with TorchTPU and migrate existing PyTorch/XLA workloads to TorchTPU.
 
-
-  * Featured Products
-
-
-  * [ Agent Platform  ](https://docs.cloud.google.com/products/gemini-enterprise-agent-platform)
-  * [ Apigee API Management  ](https://docs.cloud.google.com/apigee)
-  * [ BigQuery  ](https://docs.cloud.google.com/bigquery)
-  * [ Compute Engine  ](https://docs.cloud.google.com/products/compute)
-  * [ Cloud CDN  ](https://docs.cloud.google.com/cdn)
-  * [ Cloud Run  ](https://docs.cloud.google.com/run)
-  * [ Cloud Storage  ](https://docs.cloud.google.com/storage)
-  * [ Cloud SQL  ](https://docs.cloud.google.com/sql)
-  * [ Gemini Enterprise  ](https://docs.cloud.google.com/gemini/enterprise/docs)
-  * [ Google Kubernetes Engine  ](https://docs.cloud.google.com/kubernetes-engine)
-  * [ Looker  ](https://docs.cloud.google.com/looker)
-
-
-  * Cross-product Tools
-
-
-  * [ Access and resources management  ](https://docs.cloud.google.com/docs/access-resources)
-  * [ Costs and usage management  ](https://docs.cloud.google.com/docs/costs-usage)
-  * [ Infrastructure as code  ](https://docs.cloud.google.com/docs/iac)
-  * [ SDK, languages, frameworks, and tools  ](https://docs.cloud.google.com/docs/devtools)
-
-
-  * Technology Areas
-
-
-  * [ AI and ML  ](https://docs.cloud.google.com/docs/ai-ml)
-  * [ Application development  ](https://docs.cloud.google.com/docs/application-development)
-  * [ Application hosting  ](https://docs.cloud.google.com/docs/application-hosting)
-  * [ Compute  ](https://docs.cloud.google.com/docs/compute-area)
-  * [ Data analytics and pipelines  ](https://docs.cloud.google.com/docs/data)
-  * [ Databases  ](https://docs.cloud.google.com/docs/databases)
-  * [ Distributed, hybrid, and multicloud  ](https://docs.cloud.google.com/docs/dhm-cloud)
-  * [ Industry solutions  ](https://docs.cloud.google.com/docs/industry)
-  * [ Migration  ](https://docs.cloud.google.com/docs/migration)
-  * [ Networking  ](https://docs.cloud.google.com/docs/networking)
-  * [ Observability and monitoring  ](https://docs.cloud.google.com/docs/observability)
-  * [ Security  ](https://docs.cloud.google.com/docs/security)
-  * [ Storage  ](https://docs.cloud.google.com/docs/storage)
-
-
-`/`
-[ Console ](https://console.cloud.google.com/)
-  * English
-  * Deutsch
-  * Español – América Latina
-  * Français
-  * Indonesia
-  * Italiano
-  * Português – Brasil
-  * עברית
-  * 中文 – 简体
-  * 中文 – 繁體
-  * 日本語
-  * 한국어
-
-Sign in
-[ ![](https://docs.cloud.google.com/_static/clouddocs/images/icons/categories/ai-and-machine-learning-color.svg) ](https://docs.cloud.google.com/tpu/docs)
-  * [ Cloud TPU ](https://docs.cloud.google.com/tpu/docs)
-
-
-[Start free](https://console.cloud.google.com/freetrial)
-[ Overview ](https://docs.cloud.google.com/tpu/docs) [ Guides ](https://docs.cloud.google.com/tpu/docs/intro-to-tpu) [ Reference ](https://docs.cloud.google.com/tpu/docs/reference) [ Samples ](https://docs.cloud.google.com/tpu/docs/samples) [ Support ](https://docs.cloud.google.com/tpu/docs/support) [ Resources ](https://docs.cloud.google.com/tpu/docs/resources)
-[ ![Google Cloud Documentation](https://www.gstatic.com/devrel-devsite/prod/v5a0f9ff8b593048661361a49e11ab98a8b1ac025e19e60e6189f2b56796f8a43/clouddocs/images/lockup_full_color.svg) ](https://docs.cloud.google.com/)
-  * [ Documentation  ](https://docs.cloud.google.com/docs)
-    * More 
-    * [ Overview  ](https://docs.cloud.google.com/tpu/docs)
-    * [ Guides  ](https://docs.cloud.google.com/tpu/docs/intro-to-tpu)
-    * [ Reference  ](https://docs.cloud.google.com/tpu/docs/reference)
-    * [ Samples  ](https://docs.cloud.google.com/tpu/docs/samples)
-    * [ Support  ](https://docs.cloud.google.com/tpu/docs/support)
-    * [ Resources  ](https://docs.cloud.google.com/tpu/docs/resources)
-  * [ Console  ](https://console.cloud.google.com/)
-
-
-  * Discover
-  * [Introduction to Cloud TPU](https://docs.cloud.google.com/tpu/docs/intro-to-tpu)
-  * [TPU architecture](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm)
-  * TPU versions
-    * [TPU7x (Ironwood)](https://docs.cloud.google.com/tpu/docs/tpu7x)
-    * [TPU v6e](https://docs.cloud.google.com/tpu/docs/v6e)
-    * [TPU v5p](https://docs.cloud.google.com/tpu/docs/v5p)
-    * [TPU v5e](https://docs.cloud.google.com/tpu/docs/v5e)
-    * [TPU v4](https://docs.cloud.google.com/tpu/docs/v4)
-  * [Regions and zones](https://docs.cloud.google.com/tpu/docs/regions-zones)
-  * [Cloud TPU resources in Compute Engine](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine)
-  * [TPU capacity modes](https://docs.cloud.google.com/tpu/docs/capacity-modes)
-  * [PyTorch on Cloud TPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu)
-  * [JAX AI stack](https://docs.cloud.google.com/tpu/docs/jax-ai-stack)
-  * Get started
-  * [Set up a Google Cloud project](https://docs.cloud.google.com/tpu/docs/setup-gcp-account-compute)
-  * Quickstarts
-    * [Create a TPU instance](https://docs.cloud.google.com/tpu/docs/quickstart-create-tpu-instance)
-    * [Create a multi-host TPU slice](https://docs.cloud.google.com/tpu/docs/quickstart-create-multi-host-slice)
-  * [Plan your Cloud TPU resources](https://docs.cloud.google.com/tpu/docs/plan-tpus)
-  * Reserve TPUs
-    * [About TPU reservations](https://docs.cloud.google.com/tpu/docs/about-tpu-reservations)
-    * [Request a reservation for up to 90 days (in calendar mode)](https://docs.cloud.google.com/tpu/docs/calendar-mode-reservation)
-    * [Request a future reservation for one year or longer](https://docs.cloud.google.com/tpu/docs/long-term-reservation)
-    * [Share a reservation](https://docs.cloud.google.com/tpu/docs/share-reservation)
-    * [Consume a reservation](https://docs.cloud.google.com/tpu/docs/consume-reservation-compute)
-  * Create TPUs
-    * [TPU creation overview](https://docs.cloud.google.com/tpu/docs/create-tpu-vm-compute)
-    * [Create a TPU VM instance](https://docs.cloud.google.com/tpu/docs/create-instance-compute)
-    * [Create TPU Flex-start VMs](https://docs.cloud.google.com/tpu/docs/create-flex-start-compute)
-    * [Create TPU Spot VMs](https://docs.cloud.google.com/tpu/docs/spot-compute)
-    * [TPU instances in MIGs](https://docs.cloud.google.com/tpu/docs/tpus-and-migs)
-    * [Create a MIG for a multi-host TPU slice](https://docs.cloud.google.com/tpu/docs/create-multi-host-mig)
-    * [Create a MIG for single-host TPU slices](https://docs.cloud.google.com/tpu/docs/create-single-host-mig)
-  * Configure TPUs
-  * [Configure networking and access](https://docs.cloud.google.com/tpu/docs/configure-networking-access-compute)
-  * [TPU OS images](https://docs.cloud.google.com/tpu/docs/tpu-os-images)
-  * [Use a custom OS image](https://docs.cloud.google.com/tpu/docs/custom-os-image)
-  * [Encrypt a TPU VM boot disk with a CMEK](https://docs.cloud.google.com/tpu/docs/cmek-tpu-compute)
-  * [Use a cross-project service account](https://docs.cloud.google.com/tpu/docs/cross-project-sa-compute)
-  * Manage storage
-    * [Storage options for TPU VMs](https://docs.cloud.google.com/tpu/docs/storage-options)
-    * [Storage best practices](https://docs.cloud.google.com/tpu/docs/storage-best-practices)
-    * [Attach storage disks](https://docs.cloud.google.com/tpu/docs/attach-durable-block-storage-compute)
-    * [Connect to Cloud Storage buckets](https://docs.cloud.google.com/tpu/docs/storage-buckets-compute)
-  * Manage TPUs
-  * [Manage TPU resources with Compute Engine](https://docs.cloud.google.com/tpu/docs/managing-tpus-compute)
-  * [Manage maintenance events in managed capacity mode](https://docs.cloud.google.com/tpu/docs/prepare-for-maintenance)
-  * [Failure recovery of TPU instances](https://docs.cloud.google.com/tpu/docs/failure-recovery)
-  * Manage TPUs in All Capacity mode
-    * [All Capacity mode overview](https://docs.cloud.google.com/tpu/docs/all-capacity-overview)
-    * [Request an All Capacity mode reservation](https://docs.cloud.google.com/tpu/docs/request-all-capacity-mode-reservation)
-    * [View the topology and health of All Capacity mode TPUs](https://docs.cloud.google.com/tpu/docs/view-all-capacity-topology-tpus)
-    * [Report and repair faulty hosts in All Capacity mode](https://docs.cloud.google.com/tpu/docs/all-capacity-report-faulty-hosts)
-    * [Manage maintenance events in All Capacity mode](https://docs.cloud.google.com/tpu/docs/all-capacity-maintenance-events)
-  * [Multislice training](https://docs.cloud.google.com/tpu/docs/multislice-introduction)
-  * [Schedule TPU collections for inference workloads](https://docs.cloud.google.com/tpu/docs/collection-scheduling)
-  * Run workloads
-  * [Train a model using TPU7x](https://docs.cloud.google.com/tpu/docs/tpu7x-training)
-  * [Run inference on Cloud TPU](https://docs.cloud.google.com/tpu/docs/tpu-inference)
-  * [Train on Cloud TPU slices](https://docs.cloud.google.com/tpu/docs/training-on-tpu-pods)
-  * [Scale a model on TPUs](https://docs.cloud.google.com/tpu/docs/scaling-model-on-tpus)
-  * Optimize performance
-  * [Cloud TPU performance guide](https://docs.cloud.google.com/tpu/docs/performance-guide)
-  * [Improve your model's performance with bfloat16](https://docs.cloud.google.com/tpu/docs/bfloat16)
-  * [TPU7x (Ironwood) performance optimizations](https://docs.cloud.google.com/tpu/docs/ironwood-performance)
-  * Monitor and troubleshoot TPUs
-  * [Monitor TPU VMs](https://docs.cloud.google.com/tpu/docs/monitor-tpu)
-  * [Monitor TPU health](https://docs.cloud.google.com/tpu/docs/troubleshooting/tpu-health)
-  * [Monitor TPU capacity](https://docs.cloud.google.com/tpu/docs/monitor-capacity)
-  * [Monitor TPU goodput](https://docs.cloud.google.com/tpu/docs/goodput)
-  * [TPU monitoring library](https://docs.cloud.google.com/tpu/docs/tpu-monitoring-library)
-  * [Monitor with tpu-info CLI](https://docs.cloud.google.com/tpu/docs/tpu-info-cli)
-  * [Troubleshoot PyTorch models](https://docs.cloud.google.com/tpu/docs/troubleshooting/trouble-pytorch)
-  * [Troubleshoot JAX models](https://docs.cloud.google.com/tpu/docs/troubleshooting/trouble-jax)
-  * ML Diagnostics platform
-    * [Overview](https://docs.cloud.google.com/tpu/docs/ml-diagnostics/overview)
-    * [Set up GKE](https://docs.cloud.google.com/tpu/docs/ml-diagnostics/gke)
-    * [Get started with the SDK](https://docs.cloud.google.com/tpu/docs/ml-diagnostics/sdk)
-    * [Get started with the CLI](https://docs.cloud.google.com/tpu/docs/ml-diagnostics/cli)
-    * [Use ML Diagnostics with MaxText](https://docs.cloud.google.com/tpu/docs/ml-diagnostics/maxtext)
-    * [View machine learning runs](https://docs.cloud.google.com/tpu/docs/ml-diagnostics/view-runs)
-    * [Monitor workloads](https://docs.cloud.google.com/tpu/docs/ml-diagnostics/workload-monitoring)
-  * Profile TPUs
-  * [Profile TPU VMs](https://docs.cloud.google.com/tpu/docs/profile-tpu-vm)
-  * [Profile Multislice environments](https://docs.cloud.google.com/tpu/docs/troubleshooting/troubleshoot-multislice)
-  * [Profile PyTorch/XLA workloads](https://docs.cloud.google.com/tpu/docs/pytorch-xla-performance-profiling-tpu-vm)
-  * Cloud TPU API
-  * Discover
-    * [TPU software versions](https://docs.cloud.google.com/tpu/docs/runtimes)
-    * TPU versions
-      * [TPU v3](https://docs.cloud.google.com/tpu/docs/v3)
-      * [TPU v2](https://docs.cloud.google.com/tpu/docs/v2)
-  * Get started
-    * [Set up a Google Cloud project](https://docs.cloud.google.com/tpu/docs/setup-gcp-account)
-    * [Create TPUs](https://docs.cloud.google.com/tpu/docs/create-tpu-vm)
-    * [Consume a reservation](https://docs.cloud.google.com/tpu/docs/consume-reservation)
-    * [Run JAX on Cloud TPU VM](https://docs.cloud.google.com/tpu/docs/run-calculation-jax)
-    * [Run PyTorch on Cloud TPU VM](https://docs.cloud.google.com/tpu/docs/run-calculation-pytorch)
-    * [Run JAX on Cloud TPU slices](https://docs.cloud.google.com/tpu/docs/jax-pods)
-    * [Run PyTorch on Cloud TPU slices](https://docs.cloud.google.com/tpu/docs/pytorch-pods)
-  * Configure TPUs
-    * [Connect a TPU to a shared VPC network](https://docs.cloud.google.com/tpu/docs/shared-vpc-networks)
-    * [Connect to a TPU VM without a public IP address](https://docs.cloud.google.com/tpu/docs/tpu-iap)
-    * [Configure networking and access](https://docs.cloud.google.com/tpu/docs/configure-networking-access)
-    * [Encrypt a TPU VM boot disk with a CMEK](https://docs.cloud.google.com/tpu/docs/cmek-tpu)
-    * [Use a cross-project service account](https://docs.cloud.google.com/tpu/docs/cross-project-sa)
-    * [Attach durable block storage to a TPU VM](https://docs.cloud.google.com/tpu/docs/attach-durable-block-storage)
-    * [Connect to Cloud Storage buckets](https://docs.cloud.google.com/tpu/docs/storage-buckets)
-    * [Mount a Filestore instance on a TPU VM](https://docs.cloud.google.com/tpu/docs/mount-filestore)
-  * Manage TPUs
-    * [Manage TPU resources](https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm)
-    * [Manage queued resources](https://docs.cloud.google.com/tpu/docs/queued-resources)
-    * [Request TPU Flex-start VMs](https://docs.cloud.google.com/tpu/docs/request-using-flex-start)
-    * [Manage TPU Spot VMs](https://docs.cloud.google.com/tpu/docs/spot)
-    * [Prepare for maintenance events](https://docs.cloud.google.com/tpu/docs/maintenance-events)
-    * [Autocheckpoint](https://docs.cloud.google.com/tpu/docs/autocheckpoint)
-    * [View maintenance notifications](https://docs.cloud.google.com/tpu/docs/view-maintenance-notifications)
-    * [Manually start host maintenance](https://docs.cloud.google.com/tpu/docs/manually-start-maintenance)
-    * [Preemptible TPUs](https://docs.cloud.google.com/tpu/docs/preemptible)
-  * Run workloads
-    * [Train a model using v6e](https://docs.cloud.google.com/tpu/docs/v6e-training)
-    * [Train a model using v5e](https://docs.cloud.google.com/tpu/docs/v5e-training)
-    * [Run TPU applications in a Docker container](https://docs.cloud.google.com/tpu/docs/run-in-container)
-  * Monitor and troubleshoot TPUs
-    * [Troubleshoot TPU VMs](https://docs.cloud.google.com/tpu/docs/troubleshooting/troubleshooting)
-    * [Monitor TPU VMs](https://docs.cloud.google.com/tpu/docs/troubleshooting/tpu-vm-monitoring)
-    * [Dashboards for monitoring and logging](https://docs.cloud.google.com/tpu/docs/troubleshooting/dashboards)
-    * [Troubleshoot TensorFlow models](https://docs.cloud.google.com/tpu/docs/troubleshooting/trouble-tf)
-    * [Cloud TPU error glossary](https://docs.cloud.google.com/tpu/docs/troubleshooting/error_glossary)
-    * [Cloud TPU audit logs](https://docs.cloud.google.com/tpu/docs/audit-logs)
-  * Tutorials and notebooks
-    * [MaxDiffusion inference on v6e](https://docs.cloud.google.com/tpu/docs/tutorials/LLM/maxdiffusion-inference-v6e)
-
-
-  * Get Started 
-  * [ Get Started with Google Cloud  ](https://docs.cloud.google.com/docs/get-started)
-  * [ Product List  ](https://docs.cloud.google.com/docs/product-list)
-  * [ Cloud Customer Care  ](https://docs.cloud.google.com/support/docs)
-  * Featured Products 
-  * [ Agent Platform  ](https://docs.cloud.google.com/products/gemini-enterprise-agent-platform)
-  * [ Apigee API Management  ](https://docs.cloud.google.com/apigee)
-  * [ BigQuery  ](https://docs.cloud.google.com/bigquery)
-  * [ Compute Engine  ](https://docs.cloud.google.com/products/compute)
-  * [ Cloud CDN  ](https://docs.cloud.google.com/cdn)
-  * [ Cloud Run  ](https://docs.cloud.google.com/run)
-  * [ Cloud Storage  ](https://docs.cloud.google.com/storage)
-  * [ Cloud SQL  ](https://docs.cloud.google.com/sql)
-  * [ Gemini Enterprise  ](https://docs.cloud.google.com/gemini/enterprise/docs)
-  * [ Google Kubernetes Engine  ](https://docs.cloud.google.com/kubernetes-engine)
-  * [ Looker  ](https://docs.cloud.google.com/looker)
-  * Cross-product Tools 
-  * [ Access and resources management  ](https://docs.cloud.google.com/docs/access-resources)
-  * [ Costs and usage management  ](https://docs.cloud.google.com/docs/costs-usage)
-  * [ Infrastructure as code  ](https://docs.cloud.google.com/docs/iac)
-  * [ SDK, languages, frameworks, and tools  ](https://docs.cloud.google.com/docs/devtools)
-  * Technology Areas 
-  * [ AI and ML  ](https://docs.cloud.google.com/docs/ai-ml)
-  * [ Application development  ](https://docs.cloud.google.com/docs/application-development)
-  * [ Application hosting  ](https://docs.cloud.google.com/docs/application-hosting)
-  * [ Compute  ](https://docs.cloud.google.com/docs/compute-area)
-  * [ Data analytics and pipelines  ](https://docs.cloud.google.com/docs/data)
-  * [ Databases  ](https://docs.cloud.google.com/docs/databases)
-  * [ Distributed, hybrid, and multicloud  ](https://docs.cloud.google.com/docs/dhm-cloud)
-  * [ Industry solutions  ](https://docs.cloud.google.com/docs/industry)
-  * [ Migration  ](https://docs.cloud.google.com/docs/migration)
-  * [ Networking  ](https://docs.cloud.google.com/docs/networking)
-  * [ Observability and monitoring  ](https://docs.cloud.google.com/docs/observability)
-  * [ Security  ](https://docs.cloud.google.com/docs/security)
-  * [ Storage  ](https://docs.cloud.google.com/docs/storage)
-
-
-  * [ Home ](https://docs.cloud.google.com/)
-  * [ Documentation ](https://docs.cloud.google.com/docs)
-  * [ AI and ML ](https://docs.cloud.google.com/docs/ai-ml)
-  * [ Cloud TPU ](https://docs.cloud.google.com/tpu/docs)
-  * [ Guides ](https://docs.cloud.google.com/tpu/docs/intro-to-tpu)
-
-
-Send feedback  Stay organized with collections  Save and categorize content based on your preferences. 
-# PyTorch on Cloud TPU
-PyTorch on Cloud TPU lets you train, fine-tune, and serve open models on Cloud TPU hardware using standard PyTorch semantics and distributed APIs. It integrates with the ecosystem tools you already use, including Hugging Face, vLLM, SGLang, llm-d, TorchTitan, TorchRec, and Ray.
-At the foundation of the stack is [TorchTPU](https://github.com/google-pytorch/torch_tpu), an open-source, PyTorch-native backend co-developed with the PyTorch team at Meta. TorchTPU provides libraries, frameworks, and tools for every stage of the machine learning lifecycle, from core runtime execution and custom kernels to production inference, large-scale training, and cluster orchestration.
-![TorchTPU connected to Hugging Face, TorchTitan, vLLM, SGLang, Ray, and llm-d,
-with torch.profiler, DTensor, TorchRec, and
-Pallas.](https://docs.cloud.google.com/static/tpu/docs/images/torchtpu-ecosystem.png)
-## Get started
-  * **Run PyTorch models on TPUs** : start with [TorchTPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#torchtpu) and the [TorchTPU documentation](https://torchtpu.readthedocs.io/).
-  * **Serve large language models (LLMs) and multimodal models** : use [vLLM-TorchTPU or SGLang-TorchTPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#inference-engines).
-  * **Route requests across a Kubernetes fleet** : use [llm-d](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#llm-d).
-  * **Pre-train or fine-tune foundation models** : use [TorchTitan on TPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#torchtitan) (or [TorchRec](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#torchrec) for recommendation models).
-  * **Scale data processing, training, reinforcement learning (RL), and serving pipelines** : use [Ray](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#ray).
-  * **Onboard, profile, and tune models with your coding assistant** : use the [TPU agent suite](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu#tpu-agent-suite) (Preview).
-
-
-## TorchTPU: PyTorch-native backend for Cloud TPU
-[TorchTPU](https://github.com/google-pytorch/torch_tpu) provides the device backend, graph compiler integration, and custom kernel APIs for PyTorch on Cloud TPU. Built with the PyTorch team, TorchTPU lets you debug models interactively in eager mode, compile model code with `torch.compile`, and scale across slices with `torch.distributed` (`tpu_dist`).
-To install TorchTPU, run the following command:
-
-```
-pip install torch_tpu
-
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>PyTorch/XLA is deprecated</title>
+    <link rel="canonical" href="https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu">
+    <meta http-equiv="refresh" content="0; url=https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu">
+  </head>
+  <body>
+    <p><b>Deprecated:</b> This project is deprecated and replaced by
+    <a href="https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu">TorchTPU</a>. The PyTorch/XLA repo will be archived on
+    November 15, 2026. Please start new PyTorch TPU workloads with TorchTPU and
+    migrate existing PyTorch/XLA workloads to TorchTPU.</p>
+  </body>
+</html>
 ```
 
-To run a tensor operation on a Cloud TPU, run the following Python code:
+## Key Migration Differences (PyTorch/XLA -> TorchTPU)
+
+| Feature | Legacy PyTorch/XLA (`torch_xla`) | Modern TorchTPU (`torch_tpu`) |
+| --- | --- | --- |
+| Import | `import torch_xla.core.xla_model as xm` | `import torch_tpu` |
+| Device | `xm.xla_device()` | `torch.device('tpu')` or `torch.tpu` |
+| Step / Execution | `xm.mark_step()` | Eager / `torch.compile(backend='tpu')` |
+| Multi-process Launch | `python xla_spawn.py --num_cores 8 ...` | Standard `torchrun` + `torch.distributed` |
+
+---
+
+## Legacy PyTorch/XLA Repository Reference (`pytorch/xla`)
+
+# PyTorch/XLA
+
+> [!CAUTION]
+> **Deprecated:** This project is deprecated and
+> replaced by [TorchTPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu). The
+> PyTorch/XLA repo will be archived on November 15, 2026. Please start new PyTorch
+> TPU workloads with TorchTPU and migrate existing PyTorch/XLA workloads to
+> TorchTPU.
+
+<b>Current CI status:</b>  ![GitHub Actions
+status](https://github.com/pytorch/xla/actions/workflows/build_and_test.yml/badge.svg)
+
+PyTorch/XLA is a Python package that uses the [XLA deep learning
+compiler](https://www.tensorflow.org/xla) to connect the [PyTorch deep learning
+framework](https://pytorch.org/) and [Cloud
+TPUs](https://cloud.google.com/tpu/). You can try it right now, for free, on a
+single Cloud TPU VM with
+[Kaggle](https://www.kaggle.com/discussions/product-feedback/369338)!
+
+Take a look at one of our [Kaggle
+notebooks](https://github.com/pytorch/xla/tree/master/contrib/kaggle) to get
+started:
+
+* [Stable Diffusion with PyTorch/XLA
+  2.0](https://github.com/pytorch/xla/blob/master/contrib/kaggle/pytorch-xla-2-0-on-kaggle.ipynb)
+* [Distributed PyTorch/XLA
+  Basics](https://github.com/pytorch/xla/blob/master/contrib/kaggle/distributed-pytorch-xla-basics-with-pjrt.ipynb)
+
+## Installation
+
+### TPU
+
+To install PyTorch/XLA stable build in a new TPU VM:
+Note: Builds are available for Python 3.8 to 3.11; please use one of the supported versions.
+
+```sh
+# - for venv
+# python3.11 -m venv py311
+# - for conda
+# conda create -n py311 python=3.11
+
+pip install torch==2.8.0 'torch_xla[tpu]==2.8.0'
+
+# Optional: if you're using custom kernels, install pallas dependencies
+pip install --pre torch_xla[pallas] --index-url https://us-python.pkg.dev/ml-oss-artifacts-published/jax/simple/ --find-links https://storage.googleapis.com/jax-releases/libtpu_releases.html
+```
+**As of 07/16/2025 and starting from Pytorch/XLA 2.8 release, PyTorch/XLA will 
+provide nightly and release wheels for Python 3.11 to 3.13**
+To install PyTorch/XLA nightly build in a new TPU VM:
+
+```sh
+pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cpu
+# Edit `cp310-cp310` to fit your desired Python version as needed
+pip install 'torch_xla[tpu] @ https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.9.0.dev-cp312-cp312-linux_x86_64.whl' \
+  -f https://storage.googleapis.com/libtpu-wheels/index.html
+```
+
+### C++11 ABI builds
+**As of 03/18/2025 and starting from Pytorch/XLA 2.7 release, C++11 ABI builds
+are the default and we no longer provide wheels built with pre-C++11 ABI.**
+
+In Pytorch/XLA 2.6, we'll provide wheels and docker images built with
+two C++ ABI flavors: C++11 and pre-C++11. Pre-C++11 is the default to align with
+PyTorch upstream, but C++11 ABI wheels and docker images have better lazy tensor
+tracing performance.
+
+To install C++11 ABI flavored 2.6 wheels (Python 3.10 example):
+
+```sh
+pip install torch==2.6.0+cpu.cxx11.abi \
+  https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.6.0%2Bcxx11-cp310-cp310-manylinux_2_28_x86_64.whl \
+  'torch_xla[tpu]' \
+  -f https://storage.googleapis.com/libtpu-releases/index.html \
+  -f https://storage.googleapis.com/libtpu-wheels/index.html \
+  -f https://download.pytorch.org/whl/torch
+```
+
+The above command works for Python 3.10. We additionally have Python 3.9 and 3.11
+wheels:
+
+- 3.9: https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.6.0%2Bcxx11-cp39-cp39-manylinux_2_28_x86_64.whl
+- 3.10: https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.6.0%2Bcxx11-cp310-cp310-manylinux_2_28_x86_64.whl
+- 3.11: https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.6.0%2Bcxx11-cp311-cp311-manylinux_2_28_x86_64.whl
+
+To access C++11 ABI flavored docker image:
 
 ```
-import torch
-
-device = torch.device("tpu")
-
-x = torch.randn((4, 4), device=device)
-y = torch.ones((4, 4), device=device)
-result = torch.matmul(x, y).cpu()
-
-print(f"Executed on device: {x.device}")
-print(f"Result shape on CPU: {result.shape}, sum: {result.sum():.4f}")
-
+us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.6.0_3.10_tpuvm_cxx11
 ```
 
-The following video gives you a brief overview of TorchTPU:
-For more information, see [TorchTPU is now open source: Run native PyTorch on TPUs](https://cloud.google.com/blog/topics/ai-infrastructure/torchtpu-is-now-open-source-run-native-pytorch-on-tpus), and see [How TorchTPU works](https://torchtpu.readthedocs.io/en/latest/how_torchtpu_works/).
-### Motivation
-Although Cloud TPUs have historically been paired with JAX and TensorFlow, running PyTorch on TPUs previously required lazy-tensor graph recording (PyTorch/XLA), which often meant adding code to mark compilable regions. TorchTPU runs operations eagerly by default using PyTorch's standard one-process-per-device execution model, so existing workloads and libraries run without structural rewrites.
-**Note:** TorchTPU replaces PyTorch/XLA. We recommend starting new workloads with TorchTPU and migrating existing PyTorch/XLA workloads to TorchTPU.
-### Design
-TorchTPU brings PyTorch-native TPU support to PyTorch around three design goals:
-  * **Standard PyTorch semantics** : runs one process per device and preserves PyTorch tensor views and in-place mutations without a JAX runtime dependency.
-  * **Eager execution by default** : runs standard PyTorch models immediately in eager mode for interactive debugging and step-by-step inspection.
-  * **Compiler and kernel optimizations** : provides operator fusion in eager mode (in addition to operator-by-operator eager execution), `torch.compile` integration with dynamic shape bounds to reduce recompilations, and custom kernel APIs.
+If your model is tracing bound (e.g. you see that the host CPU is busy tracing
+the model while TPUs are idle), switching to the C++11 ABI wheels/docker images
+can improve performance. Mixtral 8x7B benchmarking results on v5p-256, global
+batch size 1024:
+
+- Pre-C++11 ABI MFU: 33%
+- C++ ABI MFU: 39%
 
 
-For graph compilation, `torch.compile` captures the PyTorch computation graph with TorchDynamo and compiles it into TPU machine code through OpenXLA and StableHLO. Collective operations run at the `torch.distributed` process group level (`tpu_dist`).
-### Key strengths
-  * **Operator, model, and Hugging Face support** : TorchTPU supports standard PyTorch (ATen) operators in forward and backward passes and is continuously tested against popular Hugging Face models. You can deploy models in Transformers v5 by passing `device_map="tpu"`, run Diffusers pipelines with eager mode, `torch.compile`, and tensor parallelism, and profile workloads with `torch.profiler` in TensorBoard and XProf.
-  * **Single-chip to Multislice scaling** : the `tpu_dist` backend supports `DistributedDataParallel` (DDP), `FullyShardedDataParallel` (FSDP2), and `DTensor`. In addition, `torch.tpu.distributed.topology_aware_mesh` maps parallelism dimensions onto the physical TPU interconnects.
-  * **Configurable eager execution modes** : provides three eager execution modes: 
-    * `Strict` (default): dispatches operators individually and asynchronously, with standard imperative PyTorch semantics.
-    * `Debug`: runs synchronously with tensor bounds checking.
-    * `DeferAndFuse`: fuses sequences of eager operators to reduce high-bandwidth memory (HBM) traffic.
-  * **Full-graph compilation and caching** : `torch.compile(backend="tpu")` compiles graphs into TPU executables and caches them across processes, hosts, and job restarts.
-  * **Custom TPU kernels** : you can call custom [Pallas kernels](https://docs.jax.dev/en/latest/pallas/index.html), including kernels that communicate directly between chips, as standard PyTorch functions. You can also use prebuilt kernels from the [Tokamax](https://github.com/openxla/tokamax) library or author portable tile-based kernels with [Helion](https://pytorch.org/blog/helion-on-tpu-towards-hardware-heterogeneous-kernel-authoring/).
+## Github Doc Map
+
+Our github contains many useful docs on working with different aspects of PyTorch XLA, here is a list of useful docs spread around our repository:
+
+- [docs/source/learn](https://github.com/pytorch/xla/tree/master/docs/source/learn): docs for learning concepts associated with XLA, troubleshooting, pjrt, eager mode, and dynamic shape.
+- [docs/source/accelerators](https://github.com/pytorch/xla/tree/master/docs/source/accelerators): references to `TPU` accelerator documents.
+- [docs/source/perf](https://github.com/pytorch/xla/tree/master/docs/source/perf): documentation about performance specific aspects of PyTorch/XLA such as: `AMP`, `DDP`, `Dynamo`, Fori loop, `FSDP`, quantization, recompilation, and `SPMD`
+- [docs/source/features](https://github.com/pytorch/xla/tree/master/docs/source/features): documentation on distributed torch, pallas, scan, and stable hlo.
+- [docs/source/contribute](https://github.com/pytorch/xla/tree/master/docs/source/contribute): documents on setting up PyTorch for development, and guides for lowering operations.
+- PJRT plugins:
+  - [CPU](https://github.com/pytorch/xla/blob/master/plugins/cpu/README.md)
+- [torchax/docs](https://github.com/pytorch/xla/tree/master/torchax/docs): torchax documents
+  - [torchax/examples](https://github.com/pytorch/xla/tree/master/torchax/examples): torchax examples
+
+## Getting Started
+
+Following here are guides for two modes:
+- Single process: one Python interpreter controlling a single TPU at a time
+- Multi process: N Python interpreters are launched, corresponding to N TPUs
+found on the system
+
+Another mode is SPMD, where one Python interpreter controls all N TPUs found on
+the system. Multi processing is more complex, and is not compatible with SPMD. This
+tutorial does not dive into SPMD. For more on that, check our
+[SPMD guide](https://github.com/pytorch/xla/blob/master/docs/source/perf/spmd_basic.md).
+
+### Simple single process
+
+To update your exisitng training loop, make the following changes:
+
+```diff
++import torch_xla
+
+ def train(model, training_data, ...):
+   ...
+   for inputs, labels in train_loader:
++    with torch_xla.step():
+       inputs, labels = training_data[i]
++      inputs, labels = inputs.to('xla'), labels.to('xla')
+       optimizer.zero_grad()
+       outputs = model(inputs)
+       loss = loss_fn(outputs, labels)
+       loss.backward()
+       optimizer.step()
+
++  torch_xla.sync()
+   ...
+
+ if __name__ == '__main__':
+   ...
++  # Move the model paramters to your XLA device
++  model.to('xla')
+   train(model, training_data, ...)
+   ...
+```
+
+The changes above should get your model to train on the TPU.
+
+### Multi processing
+
+To update your existing training loop, make the following changes:
+
+```diff
+-import torch.multiprocessing as mp
++import torch_xla
++import torch_xla.core.xla_model as xm
+
+ def _mp_fn(index):
+   ...
+
++  # Move the model paramters to your XLA device
++  model.to('xla')
+
+   for inputs, labels in train_loader:
++    with torch_xla.step():
++      # Transfer data to the XLA device. This happens asynchronously.
++      inputs, labels = inputs.to('xla'), labels.to('xla')
+       optimizer.zero_grad()
+       outputs = model(inputs)
+       loss = loss_fn(outputs, labels)
+       loss.backward()
+-      optimizer.step()
++      # `xm.optimizer_step` combines gradients across replicas
++      xm.optimizer_step(optimizer)
+
+ if __name__ == '__main__':
+-  mp.spawn(_mp_fn, args=(), nprocs=world_size)
++  # torch_xla.launch automatically selects the correct world size
++  torch_xla.launch(_mp_fn, args=())
+```
+
+If you're using `DistributedDataParallel`, make the following changes:
 
 
-For more information, see the [TorchTPU documentation](https://torchtpu.readthedocs.io/), ask questions in the [PyTorch on TPU discussion forum](https://discuss.pytorch.org/c/tpu/45), or report issues on the [TorchTPU issue tracker](https://github.com/google-pytorch/torch_tpu/issues).
-## Production inference and serving
-For production deployment, PyTorch on Cloud TPU integrates with open-source inference engines and Kubernetes-native distributed serving infrastructure.
-### vLLM-TorchTPU and SGLang-TorchTPU: Inference engines
-[vLLM-TorchTPU](https://github.com/vllm-project/vllm-torchtpu) and [SGLang-TorchTPU](https://github.com/sgl-project/sglang-torchtpu) are TorchTPU backends for the vLLM and SGLang inference engines. Both backends run open models such as Qwen, DeepSeek, GLM, Kimi, GPT-OSS, and Gemma 4.
-For more information, see the [vLLM-TorchTPU documentation](https://vllm-torchtpu.readthedocs.io/en/latest/) and [Announcing new vLLM and SGLang inference engines on TPU](https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu/).
-**Note:** [vLLM-JAX](https://github.com/vllm-project/vllm-jax) and [SGLang-JAX](https://github.com/sgl-project/sglang-jax) remain maintained and supported for JAX-based serving workflows.
-#### Motivation
-Serving reasoning, multimodal, and tool-using workloads often requires custom model definitions, speculative decoding methods, and quantization schemes. Building the vLLM and SGLang backends on TorchTPU lets you customize and debug your serving stack directly in PyTorch.
-#### Design
-Both backends retain standard vLLM and SGLang schedulers, key-value (KV) cache managers, and API servers while using TorchTPU execution and custom Pallas operators underneath. Most models run their standard PyTorch model definitions, whereas compute-intensive blocks invoke Pallas kernels inside the compiled graph so hardware-specific kernels can be updated independently.
-#### Key strengths
-  * **Parallelism, quantization, and speculative decoding** : supports tensor, data, expert, pipeline, and context parallelism across hosts, along with multimodal (image and video) and embedding inputs. Supported speculative decoding methods include multi-token prediction (MTP), EAGLE-3, DFlash, DSpark, and n-gram matching. Supported quantization formats include 8-bit (FP8) KV caches and 8-bit (FP8) and 4-bit (MXFP4 and NVFP4) floating-point model checkpoints.
-  * **Two-tier prefix caching, tool calling, and structured output** : automatic prefix caching retains active prefixes in HBM and offloads older prefixes to host memory to avoid recomputation on multi-turn requests. This caching supports hybrid attention and recurrent models, and tool calling and structured output are built in.
-  * **Overlapped KV cache transfers with TPU Sync** : supports disaggregated prefill and decode serving (separating prompt processing and token generation onto distinct worker pools) across hosts and host KV offloading using [TPU Sync](https://github.com/google/tpu-sync). TPU Sync is an open-source C++ library that reads PyTorch device buffers directly on background threads without copying data through host CPU memory.
+```diff
+ import torch.distributed as dist
+-import torch.multiprocessing as mp
++import torch_xla
++import torch_xla.distributed.xla_backend
+
+ def _mp_fn(rank):
+   ...
+
+-  os.environ['MASTER_ADDR'] = 'localhost'
+-  os.environ['MASTER_PORT'] = '12355'
+-  dist.init_process_group("gloo", rank=rank, world_size=world_size)
++  # Rank and world size are inferred from the XLA device runtime
++  dist.init_process_group("xla", init_method='xla://')
++
++  model.to('xla')
++  ddp_model = DDP(model, gradient_as_bucket_view=True)
+
+-  model = model.to(rank)
+-  ddp_model = DDP(model, device_ids=[rank])
+
+   for inputs, labels in train_loader:
++    with torch_xla.step():
++      inputs, labels = inputs.to('xla'), labels.to('xla')
+       optimizer.zero_grad()
+       outputs = ddp_model(inputs)
+       loss = loss_fn(outputs, labels)
+       loss.backward()
+       optimizer.step()
+
+ if __name__ == '__main__':
+-  mp.spawn(_mp_fn, args=(), nprocs=world_size)
++  torch_xla.launch(_mp_fn, args=())
+```
+
+Additional information on PyTorch/XLA, including a description of its semantics
+and functions, is available at [PyTorch.org](http://pytorch.org/xla/). See the
+[API Guide](API_GUIDE.md) for best practices when writing networks that run on
+XLA devices (TPU, CPU and...).
+
+Our comprehensive user guides are available at:
+
+[Documentation for the latest release](https://pytorch.org/xla)
+
+[Documentation for master branch](https://pytorch.org/xla/master)
 
 
-For more information about vLLM-TorchTPU, see the [vLLM-TorchTPU repository](https://github.com/vllm-project/vllm-torchtpu) and the [vLLM-TorchTPU recipes for TPU7x](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/inference/ironwood/vLLM/vLLM-TorchTPU), ask questions in the [vLLM Slack channel](https://slack.vllm.ai/), or report issues on the [vLLM-TorchTPU issue tracker](https://github.com/vllm-project/vllm-torchtpu/issues).
-For more information about SGLang-TorchTPU, see the [SGLang-TorchTPU repository](https://github.com/sgl-project/sglang-torchtpu) or report issues on the [SGLang-TorchTPU issue tracker](https://github.com/sgl-project/sglang-torchtpu/issues).
-### llm-d: Kubernetes-native distributed inference
-[llm-d](https://github.com/llm-d/llm-d) is an open-source Cloud Native Computing Foundation (CNCF) sandbox framework for distributed LLM inference on Kubernetes. It is developed with Red Hat, IBM, Google Cloud, and a community of more than 500 contributors and 35 organizations.
-#### Motivation
-Although single-instance inference engines manage per-replica execution, production fleets must handle traffic spikes, multi-tenant priorities, fleet-wide context sharing, and zero-downtime rollouts. llm-d provides the cluster-level routing and operations layer to coordinate a fleet of inference servers.
-#### Design
-llm-d runs in front of model servers such as vLLM and SGLang on Kubernetes. llm-d provides the following:
-  * Routes requests based on prefix cache state and replica load.
-  * Coordinates disaggregated prefill and decode worker pools.
-  * Supports mixture-of-experts (MoE) sharding and asynchronous batch inference.
-  * Manages tiered KV cache offloading across device memory, host memory, and storage.
+## PyTorch/XLA tutorials
 
+* [Cloud TPU VM quickstart](https://cloud.google.com/tpu/docs/run-calculation-pytorch)
+* [Cloud TPU Pod slice quickstart](https://cloud.google.com/tpu/docs/pytorch-pods)
+* [Profiling on TPU VM](https://cloud.google.com/tpu/docs/pytorch-xla-performance-profiling-tpu-vm)
 
-#### Key strengths
-  * **Multi-turn session routing** : routes multi-turn conversations to replicas that hold their cached context. Turn-priority scheduling and stateful Responses API support let agents reuse context across turns to reduce recomputation.
-  * **Multi-tenant quality of service** : priority and fairness flow control lets latency-sensitive requests and bursty agent workloads share a fleet without resource starvation.
-  * **Fleet operations and rolling updates** : provides a v1 configuration API, router high availability, and coordinated rolling updates that manage prefill and decode replicas as a single logical unit.
-  * **Native TorchTPU serving on Google Kubernetes Engine (GKE)** : you can serve Cloud TPUs alongside other accelerators behind one llm-d endpoint and manage vLLM-TorchTPU and SGLang-TorchTPU replicas with standard Kubernetes tooling.
+## Reference implementations
 
+The [AI-Hypercomputer/tpu-recipes](https://github.com/AI-Hypercomputer/tpu-recipes)
+repo. contains examples for training and serving many LLM and diffusion models.
 
-For more information, see [llm-d Router in About GKE Inference Gateway](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/about-gke-inference-gateway#llm-d-router) and the [llm-d GKE gateway guide](https://llm-d.ai/docs/infrastructure/gateway/gke), ask questions in the [llm-d Slack channel](https://llm-d.ai/slack), or report issues on the [llm-d issue tracker](https://github.com/llm-d/llm-d/issues).
-## Train, fine-tune, and domain libraries
-To pre-train, fine-tune, and adapt large models, TorchTPU provides reference training recipes and domain-specific libraries tuned for TPU hardware.
-### TorchTitan on TPU: Large-scale training reference
-[TorchTitan on TPU](https://github.com/google-pytorch/torchtitan) extends [TorchTitan](https://github.com/pytorch/torchtitan), the PyTorch modular reference platform for generative AI training, with TPU sharding passes, custom kernels, and training recipes.
-For more information, see [Integrating TorchTPU into TorchTitan and Optimizing Models for TPU](https://developers.googleblog.com/integrating-torchtpu-into-torchtitan-and-optimizing-models-for-tpu/).
-#### Motivation
-Scaling training across multi-host TPU slices requires sharding parameters across the chip interconnect and overlapping communication with computation. Google and Meta co-developed TPU sharding and compilation passes inside TorchTitan so you don't need to design custom TPU sharding strategies or manually schedule communication.
-#### Design
-You write models in single-device PyTorch without accelerator-specific code. TorchTitan configures model layers from configuration files, letting you replace individual layers with custom Pallas kernels (such as Splash Attention) without editing the model definition or training loop.
-TorchTitan's `SimpleFSDP` implementation places parameter sharding operations directly inside the compiled graph so the XLA compiler can overlap device communication with computation. In addition, whole-step graph compilation captures the entire training step as a single XLA program. For Multislice runs, hybrid sharding (HSDP) shards within each slice over the inter-chip interconnect (ICI) and replicates across slices over the data center network (DCN). This layout limits cross-slice traffic to a single gradient reduction per step.
-#### Key strengths
-  * **Pre-training and RL post-training recipes** : includes reference recipes for dense LLMs (Llama 3, Qwen 3, and MuseGlimmer 30B), MoE models (Qwen 3 235B, validated on up to 8,192 TPU7x chips), and diffusion transformers (FLUX.1). For RL post-training (such as group relative policy optimization, or GRPO), [VeRL](https://github.com/verl-project/verl/tree/main/examples/tpu/grpo) (Preview) delegates parameter updates to TorchTitan. It then pushes updated weights to serving engines to generate training trajectories (rollouts).
-  * **Preconfigured compiler and parallelism settings** : recipe configurations include preconfigured compiler and parallelism settings so you can tune model FLOPs utilization (MFU) through configuration files rather than code changes.
-  * **Onboarding for new architectures** : the Hugging Face Transformers modeling backend runs Hugging Face Hub model checkpoints (including MoE models without expert parallelism) through the TorchTitan trainer. For full model ports, TorchTitan includes a step-by-step onboarding skill for engineers and coding agents.
-  * **Standalone component reuse** : you can adopt TorchTitan end to end or import individual modules, custom operators, and compiler flags into an existing training codebase.
+## Available docker images and wheels
 
+### Python packages
 
-For more information, see the [TorchTitan on TPU getting started guide](https://github.com/google-pytorch/torchtitan/blob/main/torchtitan/experiments/tpu/README.md) and the [TorchTitan Qwen3-8B training recipe for TPU7x](https://github.com/AI-Hypercomputer/tpu-recipes/tree/main/training/ironwood/torchtitan/qwen3-8b/tpu7x-2x2x2), ask questions in the [TorchTitan discussion forum](https://discuss.pytorch.org/c/distributed/torchtitan/44), or report issues on the [TorchTitan issue tracker](https://github.com/pytorch/torchtitan/issues).
-### TorchRec: Recommendation systems
-[TorchRec](https://github.com/meta-pytorch/torchrec) is a PyTorch domain library that provides distributed embedding tables and sharding primitives for recommendation models. On Cloud TPU, TorchRec offloads sparse embedding table lookups to dedicated TPU SparseCore processors while running dense matrix operations on the TPU TensorCores.
-For more information about TorchRec, see the [TorchRec documentation](https://docs.pytorch.org/tutorials/intermediate/torchrec_intro_tutorial.html), ask questions in the [PyTorch on TPU discussion forum](https://discuss.pytorch.org/c/tpu/45), or report issues on the [TorchRec issue tracker](https://github.com/meta-pytorch/torchrec/issues).
-## Cluster orchestration and developer tools
-To scale multi-node pipelines and automate model onboarding, the TorchTPU ecosystem integrates with Ray and provides coding agent extensions with access to TPU documentation.
-### Ray: Distributed training, serving, and RL
-[Ray](https://github.com/ray-project/ray) scales Python and AI workloads across clusters using Ray Train, Ray Serve, Ray Data, Ray Core, and RL frameworks such as [VeRL](https://github.com/verl-project/verl/tree/main/examples/tpu/grpo) (Preview). For more information, see [Announcing Ray support for PyTorch on Google TPUs](https://www.anyscale.com/blog/announcing-ray-support-native-pytorch-google-tpu).
-#### Motivation
-Multislice training and multi-stage pipelines (such as RL workflows that combine data preprocessing, training, and rollout generation) require automated slice provisioning, topology discovery, and fault-tolerant worker coordination. Standalone launch utilities such as `torchrun` don't provision TPU slices or coordinate multi-stage actor pipelines, so Ray manages cluster-wide scheduling and placement for TorchTPU workloads.
-#### Design
-When you submit a job specifying the TPU generation, topology, and worker count, Ray's `SlicePlacementGroup` API reserves complete TPU slices so all workers in a slice are gang-scheduled together over the inter-chip interconnect (ICI). Ray isolates one logical TPU device per worker (`TPU_VISIBLE_CHIPS`) and configures TorchTPU's slice-builder addresses and mesh topology. In Ray Train, setting `use_tpu=True` in `ScalingConfig` with `TorchTrainer` initializes the `tpu` device and `tpu_dist` process group automatically across workers.
-#### Key strengths
-  * **Topology-matched gang scheduling** : `SlicePlacementGroup` and `TorchTrainer` match worker placement across hosts to the physical TPU generation and slice layout to prevent resource fragmentation.
-  * **Automated failure recovery** : runs distributed DDP, FSDP2, and DTensor training jobs across TPU slices on GKE with automated recovery when a worker or slice fails.
-  * **Direct-to-TPU data prefetching** : Ray Data's `iter_torch_batches` method prefetches batches as PyTorch tensors directly into TPU device memory.
-  * **Multi-host inference orchestration** : Ray Serve LLM (`LLMConfig`) reserves a `SlicePlacementGroup` per replica and deploys OpenAI-compatible vLLM-TorchTPU endpoints across single-host and multi-host TPU slices.
+PyTorch/XLA releases starting with version r2.1 will be available on PyPI. You
+can now install the main build with `pip install torch_xla`. To also install the
+Cloud TPU plugin corresponding to your installed `torch_xla`, install the optional `tpu` dependencies after installing the main build with
 
+```
+pip install torch_xla[tpu]
+```
 
-To get started on GKE, see [About Ray on GKE](https://docs.cloud.google.com/kubernetes-engine/docs/add-on/ray-on-gke/concepts/overview) and the tutorials on how to [Fine-tune models on multi-host TPUs with Ray and TorchTPU](https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/train-models-tpu-ray-torchtpu) and [Serve LLMs on multi-host TPUs with Ray and TorchTPU](https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/serve-llm-tpu-ray-torchtpu).
-### TPU agent suite: Coding agents for TPU (Preview)
-The [TPU agent suite](https://github.com/google-pytorch/tpu-agent-suite) is an open-source extension for coding assistants—including Claude Code and Google Antigravity—focused on transformer inference (dense LLMs and MoE models) on TPU v6e and TPU7x.
-For more information, watch the open-source TPU agent suite overview:
-#### Motivation
-General-purpose coding assistants often lack current context on TPU hardware topologies, XLA compiler flags, XProf telemetry, and Pallas kernel constraints. The TPU agent suite gives your assistant access to official TPU documentation and structured workflows. This helps prevent invalid flag suggestions and automates iterative profiling and benchmarking.
-#### Design
-The suite adds a TPU knowledge base and four task-specific sub-agents to your existing coding assistant. A router agent (`tpu-agent`) delegates each prompt to the appropriate sub-agent without running commands itself. Any command execution on your TPU VM or GKE cluster requires your approval, and tuning loops run a bounded number of recorded attempts before returning results.
-#### Key strengths
-  * **Model onboarding and accuracy verification** : the `tpu-model-onboarding` agent resolves unsupported operators and selects a serving path (vLLM-TorchTPU or standard PyTorch). It also compares layer-by-layer outputs against the CPU reference model to verify numerical accuracy.
-  * **Crash and bottleneck diagnostics** : the `tpu-diagnostics` agent analyzes crash logs, inspects XProf profiles and XLA compiler traces, and isolates runtime bottlenecks.
-  * **Custom Pallas kernel development** : the `tpu-kernel-development` agent helps write and autotune custom Pallas TPU kernels within a bounded iteration budget.
-  * **Documentation lookup with citations** : the `tpu-knowledge-base` agent answers technical questions with explicit citations to official TPU documentation and tutorials, and states when a topic isn't covered.
+TPU nightly builds are available in our public GCS bucket.
 
+| Version | Cloud TPU Nightly Wheels |
+| --- | ----------- |
+| nightly (Python 3.11) | `https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.9.0.dev-cp311-cp311-linux_x86_64.whl` |
+| nightly (Python 3.12) | `https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.9.0.dev-cp312-cp312-linux_x86_64.whl` |
+| nightly (Python 3.13) | `https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.9.0.dev-cp312-cp312-linux_x86_64.whl` |
 
-For more information, see the [TPU agent suite documentation](https://github.com/google-pytorch/tpu-agent-suite), share feedback and ask questions in [TPU agent suite GitHub Discussions](https://github.com/google-pytorch/tpu-agent-suite/discussions), or report issues on the [TPU agent suite issue tracker](https://github.com/google-pytorch/tpu-agent-suite/issues).
-## What's next
-  * Get started with the [TorchTPU documentation](https://torchtpu.readthedocs.io/).
-  * Try the [TorchTitan on TPU](https://github.com/google-pytorch/torchtitan) recipes.
-  * Deploy inference workloads with [vLLM-TorchTPU](https://github.com/vllm-project/vllm-torchtpu) and [SGLang-TorchTPU](https://github.com/sgl-project/sglang-torchtpu).
-  * Ask questions in the [PyTorch on TPU discussion forum](https://discuss.pytorch.org/c/tpu/45).
-  * To discuss a specific use case with the Google product and engineering team, send an email to torchtpu-feedback@google.com.
+#### Use nightly build
 
+You can also add `yyyymmdd` like `torch_xla-2.9.0.devyyyymmdd` (or the latest dev version)
+to get the nightly wheel of a specified date. Here is an example:
 
-Send feedback 
-Except as otherwise noted, the content of this page is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For details, see the [Google Developers Site Policies](https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its affiliates.
-Last updated 2026-10-22 UTC.
-Need to tell us more?  [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Hard to understand","hardToUnderstand","thumb-down"],["Incorrect information or sample code","incorrectInformationOrSampleCode","thumb-down"],["Missing the information/samples I need","missingTheInformationSamplesINeed","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-22 UTC."],[],[]] 
-  * ### Products and pricing
-    * [ See all products ](https://cloud.google.com/products/)
-    * [ Google Cloud pricing ](https://cloud.google.com/pricing/)
-    * [ Google Cloud Marketplace ](https://cloud.google.com/marketplace/)
-    * [ Contact sales ](https://cloud.google.com/contact/)
-  * ### Support
-    * [ Community forums ](https://discuss.google.dev/c/google-cloud/14/)
-    * [ Support ](https://cloud.google.com/support-hub/)
-    * [ Release Notes ](https://docs.cloud.google.com/release-notes)
-    * [ System status ](https://status.cloud.google.com)
-  * ### Resources
-    * [ GitHub ](https://github.com/googlecloudPlatform/)
-    * [ Getting Started with Google Cloud ](https://docs.cloud.google.com/docs/get-started/)
-    * [ Code samples ](https://docs.cloud.google.com/docs/samples)
-    * [ Cloud Architecture Center ](https://docs.cloud.google.com/architecture/)
-    * [ Training and Certification ](https://cloud.google.com/learn/training/)
-    * [ Builders Hub ](https://me.developers.google.com/)
-  * ### Engage
-    * [ Blog ](https://cloud.google.com/blog/)
-    * [ Events ](https://cloud.google.com/events/)
-    * [ X (Twitter) ](https://x.com/googlecloud)
-    * [ Google Cloud on YouTube ](https://www.youtube.com/googlecloud)
-    * [ Google Cloud Tech on YouTube ](https://www.youtube.com/googlecloudplatform)
+```
+pip3 install torch==2.9.0.dev20250423+cpu --index-url https://download.pytorch.org/whl/nightly/cpu
+pip3 install https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.9.0.dev20250423-cp310-cp310-linux_x86_64.whl
+```
 
+The torch wheel version `2.9.0.dev20250423+cpu` can be found at https://download.pytorch.org/whl/nightly/torch/.
 
-[ ![Google Developers](https://www.gstatic.com/devrel-devsite/prod/v5a0f9ff8b593048661361a49e11ab98a8b1ac025e19e60e6189f2b56796f8a43/clouddocs/images/lockup-google-for-developers.svg) ](https://developers.google.com/)
-  * [ Android ](https://developer.android.com/)
-  * [ Chrome ](https://developer.chrome.com/)
-  * [ Firebase ](https://firebase.google.com/)
-  * [ Google AI ](https://ai.google.com/)
+<details>
 
+<summary>older versions</summary>
 
-  * [ About Google ](https://about.google/)
-  * [ Privacy ](https://policies.google.com/privacy)
-  * [ Site terms ](https://policies.google.com/terms?hl=en)
-  * [ Google Cloud terms ](https://cloud.google.com/product-terms)
-  * [ Manage cookies ](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu)
-  * [ Our third decade of climate action: join us ](https://cloud.google.com/sustainability)
-  * Sign up for the Google Cloud newsletter [ Subscribe ](https://cloud.google.com/newsletter/)
+| Version | Cloud TPU VMs Wheel |
+|---------|-------------------|
+| 2.7 (Python 3.10) | `https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.7.0-cp310-cp310-manylinux_2_28_x86_64.whl` |
+| 2.6 (Python 3.10) | `https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.6.0-cp310-cp310-manylinux_2_28_x86_64.whl` |
+| 2.5 (Python 3.10) | `https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.5.0-cp310-cp310-manylinux_2_28_x86_64.whl` |
+| 2.4 (Python 3.10) | `https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.4.0-cp310-cp310-manylinux_2_28_x86_64.whl` |
+| 2.3 (Python 3.10) | `https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.3.0-cp310-cp310-manylinux_2_28_x86_64.whl` |
+| 2.2 (Python 3.10) | `https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.2.0-cp310-cp310-manylinux_2_28_x86_64.whl` |
+| 2.1 (XRT + Python 3.10) | `https://storage.googleapis.com/pytorch-xla-releases/wheels/xrt/tpuvm/torch_xla-2.1.0%2Bxrt-cp310-cp310-manylinux_2_28_x86_64.whl` |
+| 2.1 (Python 3.8) | `https://storage.googleapis.com/pytorch-xla-releases/wheels/tpuvm/torch_xla-2.1.0-cp38-cp38-linux_x86_64.whl` |
 
+</details>
 
-  * English
-  * Deutsch
-  * Español – América Latina
-  * Français
-  * Indonesia
-  * Italiano
-  * Português – Brasil
-  * עברית
-  * 中文 – 简体
-  * 中文 – 繁體
-  * 日本語
-  * 한국어
+### Docker
+NOTE: Since PyTorch/XLA 2.7, all builds will use the C++11 ABI by default
+| Version | Cloud TPU VMs Docker |
+| --- | ----------- |
+| 2.7 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.7.0_3.10_tpuvm` |
+| 2.6 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.6.0_3.10_tpuvm` |
+| 2.6 (C++11 ABI) | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.6.0_3.10_tpuvm_cxx11` |
+| 2.5 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.5.0_3.10_tpuvm` |
+| 2.4 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.4.0_3.10_tpuvm` |
+| 2.3 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.3.0_3.10_tpuvm` |
+| 2.2 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.2.0_3.10_tpuvm` |
+| 2.1 | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:r2.1.0_3.10_tpuvm` |
+| nightly python | `us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:nightly_3.10_tpuvm` |
+
+To use the above dockers, please pass `--privileged --net host --shm-size=16G` along. Here is an example:
+```bash
+docker run --privileged --net host --shm-size=16G -it us-central1-docker.pkg.dev/tpu-pytorch-releases/docker/xla:nightly_3.10_tpuvm /bin/bash
+```
+
+## Troubleshooting
+
+If PyTorch/XLA isn't performing as expected, see the [troubleshooting
+guide](docs/source/learn/troubleshoot.md), which has suggestions for debugging and optimizing
+your network(s).
+
+## Providing Feedback
+
+The PyTorch/XLA team is always happy to hear from users and OSS contributors!
+The best way to reach out is by filing an issue on this Github. Questions, bug
+reports, feature requests, build issues, etc. are all welcome!
+
+## Contributing
+
+See the [contribution guide](CONTRIBUTING.md).
+
+## Disclaimer
+
+This repository is jointly operated and maintained by Google, Meta and a
+number of individual contributors listed in the
+[CONTRIBUTORS](https://github.com/pytorch/xla/graphs/contributors) file. For
+questions directed at Meta, please send an email to opensource@fb.com. For
+questions directed at Google, please send an email to
+pytorch-xla@googlegroups.com. For all other questions, please open up an issue
+in this repository [here](https://github.com/pytorch/xla/issues).
+
+## Additional Reads
+
+You can find additional useful reading materials in
+* [Performance debugging on Cloud TPU
+  VM](https://cloud.google.com/blog/topics/developers-practitioners/pytorchxla-performance-debugging-tpu-vm-part-1)
+* [Lazy tensor
+  intro](https://pytorch.org/blog/understanding-lazytensor-system-performance-with-pytorch-xla-on-cloud-tpu/)
+* [Scaling deep learning workloads with PyTorch / XLA and Cloud TPU
+  VM](https://cloud.google.com/blog/topics/developers-practitioners/scaling-deep-learning-workloads-pytorch-xla-and-cloud-tpu-vm)
+* [Scaling PyTorch models on Cloud TPUs with
+  FSDP](https://pytorch.org/blog/scaling-pytorch-models-on-cloud-tpus-with-fsdp/)
+
+## Related Projects
+
+* [OpenXLA](https://github.com/openxla)
+* [HuggingFace](https://huggingface.co/docs/accelerate/en/basic_tutorials/tpu)
+* [JetStream](https://github.com/google/JetStream-pytorch)

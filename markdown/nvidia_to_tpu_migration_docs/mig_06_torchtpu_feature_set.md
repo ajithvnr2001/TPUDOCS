@@ -2,64 +2,14 @@
 id: "mig_06_torchtpu_feature_set"
 title: "TorchTPU supported features and roadmap"
 url: "https://torchtpu.readthedocs.io/en/latest/feature_set/"
-category: "Nvidia to tpu migration docs"
+category: "nvidia_to_tpu_migration_docs"
 description: "Check validated versus experimental hardware, operators, models, kernels, and distributed features."
-crawled_at: "2026-10-26T12:48:03.381642+00:00"
-crawler_engine: "Crawl4AI"
+crawled_at: "2026-10-26T14:44:03.199312+00:00"
+crawler_engine: "Crawl4AI+MkDocsSphinxCleaner"
 ---
 
-[ Skip to content ](https://torchtpu.readthedocs.io/en/latest/feature_set/#torchtpu-supported-feature-set-and-future-work)
-[ ![logo](https://torchtpu.readthedocs.io/en/latest/images/logo.png) ](https://torchtpu.readthedocs.io/en/latest/ "TorchTPU Documentation")
-TorchTPU Documentation 
-TorchTPU supported feature set and future work 
-[ ](https://torchtpu.readthedocs.io/en/latest/feature_set/?q= "Share")
-Type to start searching
-[ GitHub 
-  * 741
-  * 60
-
-](https://github.com/google-pytorch/torch_tpu "Go to repository")
-[ ![logo](https://torchtpu.readthedocs.io/en/latest/images/logo.png) ](https://torchtpu.readthedocs.io/en/latest/ "TorchTPU Documentation") TorchTPU Documentation 
-[ GitHub 
-  * 741
-  * 60
-
-](https://github.com/google-pytorch/torch_tpu "Go to repository")
-  * [ Home  ](https://torchtpu.readthedocs.io/en/latest/)
-  * Get started with TorchTPU  Get started with TorchTPU 
-    * [ Introduction to TorchTPU  ](https://torchtpu.readthedocs.io/en/latest/intro_to_torchtpu/)
-    * [ Get started with TorchTPU on a TPU VM  ](https://torchtpu.readthedocs.io/en/latest/get_started_on_a_vm/)
-    * [ Get started with TorchTPU on GKE  ](https://torchtpu.readthedocs.io/en/latest/get_started_on_gke/)
-    * TorchTPU supported feature set and future work  [ TorchTPU supported feature set and future work  ](https://torchtpu.readthedocs.io/en/latest/feature_set/) Table of contents 
-      * [ Current supported feature set  ](https://torchtpu.readthedocs.io/en/latest/feature_set/#current-supported-feature-set)
-      * [ Future work  ](https://torchtpu.readthedocs.io/en/latest/feature_set/#future-work)
-    * [ TorchTPU API Reference  ](https://torchtpu.readthedocs.io/en/latest/api_reference/)
-    * [ TorchTPU FAQ  ](https://torchtpu.readthedocs.io/en/latest/faq/)
-  * In-depth  In-depth 
-    * [ How TorchTPU works  ](https://torchtpu.readthedocs.io/en/latest/how_torchtpu_works/)
-    * [ TorchTPU execution model  ](https://torchtpu.readthedocs.io/en/latest/torchtpu_execution_model/)
-    * [ TorchTPU and the TPU memory model  ](https://torchtpu.readthedocs.io/en/latest/torchtpu_memory_model/)
-    * [ TorchTPU distributed support  ](https://torchtpu.readthedocs.io/en/latest/distributed_support/)
-    * [ TorchTPU custom kernels  ](https://torchtpu.readthedocs.io/en/latest/custom_kernels/)
-    * [ Dynamic shapes  ](https://torchtpu.readthedocs.io/en/latest/dynamic_shapes/)
-  * Case studies  Case studies 
-    * [ FLUX optimization  ](https://torchtpu.readthedocs.io/en/latest/case_studies_flux/)
-    * [ Muse Glimmer 30B: autoregressive decoding  ](https://torchtpu.readthedocs.io/en/latest/case_studies_muse_glimmer_30b_inference/)
-    * [ Muse Glimmer 30B: training  ](https://torchtpu.readthedocs.io/en/latest/case_studies_muse_glimmer_30b_training/)
-    * [ FSDP best practices  ](https://torchtpu.readthedocs.io/en/latest/case_studies_fsdp/)
-  * Analyze your workload  Analyze your workload 
-    * [ Manage numerical precision in TorchTPU  ](https://torchtpu.readthedocs.io/en/latest/numerical_precision/)
-    * [ Performance profiling with XProf  ](https://torchtpu.readthedocs.io/en/latest/performance_profiling_with_xprof/)
-
-
-Table of contents 
-  * [ Current supported feature set  ](https://torchtpu.readthedocs.io/en/latest/feature_set/#current-supported-feature-set)
-  * [ Future work  ](https://torchtpu.readthedocs.io/en/latest/feature_set/#future-work)
-
-
-[ ](https://github.com/google-pytorch/torch_tpu/edit/master/docs/feature_set.md "Edit this page")
-# TorchTPU supported feature set and future work[¶](https://torchtpu.readthedocs.io/en/latest/feature_set/#torchtpu-supported-feature-set-and-future-work "Permanent link")
-## Current supported feature set[¶](https://torchtpu.readthedocs.io/en/latest/feature_set/#current-supported-feature-set "Permanent link")
+# TorchTPU supported feature set and future work
+## Current supported feature set
 The table below reflects our current feature coverage as of the initial open-source release.
 To help you evaluate TorchTPU for your workloads, we categorize features into two tiers:
   * **Validated:** Capabilities that have end-to-end continuous testing, automated CI/CD coverage, and benchmark verification across standard model architectures.
@@ -148,7 +98,7 @@ TorchTPU is evolving rapidly in the open. For the most up-to-date status or to r
   * Fine-tuning (up to \~8K chips)
 
  |   |  
-## Future work[¶](https://torchtpu.readthedocs.io/en/latest/feature_set/#future-work "Permanent link")
+## Future work
 This section outlines our future development horizons and explorations, not a committed release schedule.
 As a community-first open-source project, our development priorities are intentionally responsive to community feedback and developer adoption. Features, timelines, and architectural approaches may evolve as we learn what workloads matter most to you.
 We organize our upcoming work into two broad horizons:
@@ -205,6 +155,4 @@ We organize our upcoming work into two broad horizons:
  | 
   * Pre-training
 
- |  
-Back to top 
-Made with [ Material for MkDocs ](https://squidfunk.github.io/mkdocs-material/)
+ |

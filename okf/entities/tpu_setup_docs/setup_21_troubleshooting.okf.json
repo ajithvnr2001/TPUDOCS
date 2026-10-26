@@ -1,57 +1,189 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:setup_21_troubleshooting",
-  "@type": "DocumentationResource",
-  "name": "Troubleshoot your Cloud TPU workflow",
-  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/troubleshooting/troubleshooting",
-  "category": "TPU setup docs",
-  "categorySlug": "tpu_setup_docs",
-  "description": "Operations troubleshooting using Cloud Monitoring metrics, Cloud Logging, profiling, diagnostics, and serial console output.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/troubleshooting/troubleshooting",
-    "crawledAt": "2026-10-26T12:45:27.785293+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 26881
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Troubleshoot your Cloud TPU workflow",
-      "documentedIn",
-      "https://docs.cloud.google.com/tpu/docs/troubleshooting/troubleshooting"
-    ],
-    [
-      "Troubleshoot your Cloud TPU workflow",
-      "belongsToCategory",
-      "tpu_setup_docs"
-    ],
-    [
-      "Troubleshoot your Cloud TPU workflow",
-      "targetsPlatform",
-      "Google Cloud Platform"
-    ],
-    [
-      "Troubleshoot your Cloud TPU workflow",
-      "managesHardware",
-      "Google Cloud TPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:setup_21_troubleshooting",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "setup_21_troubleshooting",
+    "name": "Troubleshoot your Cloud TPU workflow",
+    "url": "https://docs.cloud.google.com/tpu/docs/troubleshooting/troubleshooting",
+    "category": "tpu_setup_docs",
+    "description": "Operations troubleshooting using Cloud Monitoring metrics, Cloud Logging, profiling, diagnostics, and serial console output.",
+    "char_count": 5405,
+    "word_count": 666,
+    "section_count": 7,
+    "code_block_count": 0,
+    "table_count": 0,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.415590+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:setup_21_troubleshooting",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:setup_21_troubleshooting",
+        "predicate": "schema:name",
+        "object": "Troubleshoot your Cloud TPU workflow"
+      },
+      {
+        "subject": "tpu_doc:setup_21_troubleshooting",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/tpu/docs/troubleshooting/troubleshooting"
+      },
+      {
+        "subject": "tpu_doc:setup_21_troubleshooting",
+        "predicate": "schema:category",
+        "object": "tpu_setup_docs"
+      },
+      {
+        "subject": "tpu_doc:setup_21_troubleshooting",
+        "predicate": "schema:description",
+        "object": "Operations troubleshooting using Cloud Monitoring metrics, Cloud Logging, profiling, diagnostics, and serial console output."
+      },
+      {
+        "subject": "tpu_doc:setup_21_troubleshooting",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:TPU7x"
+      },
+      {
+        "subject": "tpu_doc:setup_21_troubleshooting",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:setup_21_troubleshooting",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:setup_21_troubleshooting",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:XProf"
+      },
+      {
+        "subject": "tpu_doc:setup_21_troubleshooting",
+        "predicate": "okf:hasSection",
+        "object": "Troubleshoot your Cloud TPU workflow"
+      },
+      {
+        "subject": "tpu_doc:setup_21_troubleshooting",
+        "predicate": "okf:hasSection",
+        "object": "Cloud TPU VM metrics"
+      },
+      {
+        "subject": "tpu_doc:setup_21_troubleshooting",
+        "predicate": "okf:hasSection",
+        "object": "Cloud TPU logs"
+      },
+      {
+        "subject": "tpu_doc:setup_21_troubleshooting",
+        "predicate": "okf:hasSection",
+        "object": "Cloud TPU health metrics"
+      },
+      {
+        "subject": "tpu_doc:setup_21_troubleshooting",
+        "predicate": "okf:hasSection",
+        "object": "Monitoring and logging dashboards"
+      },
+      {
+        "subject": "tpu_doc:setup_21_troubleshooting",
+        "predicate": "okf:hasSection",
+        "object": "Profiling your workloads on TPU VMs"
+      },
+      {
+        "subject": "tpu_doc:setup_21_troubleshooting",
+        "predicate": "okf:hasSection",
+        "object": "VM boot failures with custom images"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Troubleshoot your Cloud TPU workflow provides official guidance on Operations troubleshooting using Cloud Monitoring metrics, Cloud Logging, profiling, diagnostics, and serial console output.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/troubleshooting/troubleshooting",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Troubleshoot your Cloud TPU workflow used for in Cloud TPU workflows?",
-      "answer": "Operations troubleshooting using Cloud Monitoring metrics, Cloud Logging, profiling, diagnostics, and serial console output.",
-      "category": "tpu_setup_docs"
-    }
-  ],
-  "contentSummary": "Operations troubleshooting using Cloud Monitoring metrics, Cloud Logging, profiling, diagnostics, and serial console output."
+  },
+  "structured_content": {
+    "summary": "Operations troubleshooting using Cloud Monitoring metrics, Cloud Logging, profiling, diagnostics, and serial console output.",
+    "sections": [
+      {
+        "heading": "Troubleshoot your Cloud TPU workflow",
+        "level": 1,
+        "content": "**Caution:** This page applies to the Cloud TPU API, which is no longer under active development. The Cloud TPU API will receive bug fixes and security updates only. For the latest features and support for the latest TPU versions, we recommend using Compute Engine or Google Kubernetes Engine to manage TPU resources. For more information, see [TPU resources in Compute Engine](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine) and [About TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus). The Cloud TPU API is not supported on TPU7x and later TPU versions. \nOnce you have your training or inference workload running on TPUs, the next step is to ensure your workload is working as expected. Cloud TPU generates metrics and logs that enable you to look for and debug any TPU VMs that are not behaving as expected. We refer to such VMs as _outliers_ throughout this documentation.\nThe general troubleshooting workflow is:\n  1. View Cloud TPU metrics to check for outlier TPU VMs\n  2. View Cloud TPU logs for the outlier TPU VMs\n  3. Profile your workload\n\n\nYou can view metrics and logs in the [Metrics Explorer](https://docs.cloud.google.com/monitoring/charts/metrics-explorer) and the [Logs Explorer](https://docs.cloud.google.com/logging/docs/view/logs-explorer-interface) in the Google Cloud console. You can also use monitoring and logging dashboards to collect all Cloud TPU related metrics and logs in individual dashboards."
+      },
+      {
+        "heading": "Cloud TPU VM metrics",
+        "level": 2,
+        "content": "Cloud Monitoring automatically collects metrics from your TPUs and their host Compute Engine VMs. Metrics track numerical quantities over time, for example, CPU utilization, network usage, or TensorCore idle duration. For more information on Cloud TPU metrics, see [Monitoring TPU VMs](https://docs.cloud.google.com/tpu/docs/troubleshooting/tpu-vm-monitoring)."
+      },
+      {
+        "heading": "Cloud TPU logs",
+        "level": 2,
+        "content": "Cloud Logging automatically collects logs from your TPUs and their host Compute Engine VMs. Cloud Logging tracks events generated by Cloud TPU. You can also instrument your code to generate logs. Two types of logs are generated by Cloud TPU:\n  * TPU worker logs\n  * Audited resource logs\n\n\nTPU worker logs contain information about a specific TPU worker in a specific zone, for example the amount of memory available on the TPU worker (system_available_memory_GiB).\nAudited Resource logs contain information about when a specific Cloud TPU API was called and who made the call. For example `CreateNode`, `UpdateNode`, and `DeleteNode`.\nYou can also use the `cloud-tpu-diagnostics` PyPi package to write stack traces to logs. For more information, see [Debugging TPU VMs](https://docs.cloud.google.com/tpu/docs/troubleshooting/debugging).\nFor more information about logs, see [Logging](https://docs.cloud.google.com/tpu/docs/troubleshooting/tpu-vm-monitoring#locate_logs)."
+      },
+      {
+        "heading": "Cloud TPU health metrics",
+        "level": 2,
+        "content": "Cloud TPU health monitoring provides real-time information on the health status of VMs and slices. Using either the Cloud Monitoring console or [LibTPU Monitoring Library](https://docs.cloud.google.com/tpu/docs/tpu-monitoring-library), you can identify hardware failures as they occur. This lets you reallocate resources to avoid complete job failures and minimize performance degradation.\nFor more information, see [TPU health monitoring](https://docs.cloud.google.com/tpu/docs/troubleshooting/tpu-health)."
+      },
+      {
+        "heading": "Monitoring and logging dashboards",
+        "level": 2,
+        "content": "Having a single page in the Google Cloud console can make viewing and interpreting Cloud TPU-related metrics and logs easier. The [cloud-tpu-monitoring-debugging](https://github.com/google/cloud-tpu-monitoring-debugging) GitHub repository contains a set of scripts and configuration files that use [Terraform](https://developer.hashicorp.com/terraform) to automatically deploy dashboards that contain all Cloud TPU related metrics and logs in dashboards. To set up these dashboards in your Google Cloud project, see [Monitoring and Logging Dashboards](https://docs.cloud.google.com/tpu/docs/troubleshooting/dashboards)."
+      },
+      {
+        "heading": "Profiling your workloads on TPU VMs",
+        "level": 2,
+        "content": "Profiling lets you optimize your model's training performance on TPU VMs. You use [TensorBoard](https://www.tensorflow.org/tensorboard) and the [TPU TensorBoard plug-in](https://docs.cloud.google.com/tpu/docs/profile-tpu-vm#install-plugin) to profile your model. For more information about how to profile your workload, see [Profile your model on TPU VMs](https://docs.cloud.google.com/tpu/docs/profile-tpu-vm).\nFor more information about using TensorBoard with one of the supported frameworks, see the following documents:\n  * [JAX performance guide](https://jax.readthedocs.io/en/latest/profiling.html)\n  * [PyTorch performance guide](https://torchtpu.readthedocs.io/en/latest/performance_profiling_with_xprof/)"
+      },
+      {
+        "heading": "VM boot failures with custom images",
+        "level": 2,
+        "content": "If a VM fails to boot after customization, review the serial console output using the the Google Cloud console or `gcloud compute instances get-serial-port-output`. This is the primary source of information for diagnosis. Because you cannot repair the disk offline, you must recreate the TPU resource after correcting the issue in your startup script or custom image source.\nFor more information about customizing Cloud TPU VM boot disks, see [TPU VM boot disk](https://docs.cloud.google.com/tpu/docs/storage-options#vmboot-disk)."
+      }
+    ],
+    "code_examples": [],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Troubleshoot your Cloud TPU workflow' (https://docs.cloud.google.com/tpu/docs/troubleshooting/troubleshooting)?",
+        "answer": "Operations troubleshooting using Cloud Monitoring metrics, Cloud Logging, profiling, diagnostics, and serial console output."
+      },
+      {
+        "question": "How does 'Troubleshoot your Cloud TPU workflow' handle: Troubleshoot your Cloud TPU workflow?",
+        "answer": "**Caution:** This page applies to the Cloud TPU API, which is no longer under active development. The Cloud TPU API will receive bug fixes and security updates only. For the latest features and support for the latest TPU versions, we recommend using Compute Engine or Google Kubernetes Engine to manage TPU resources. For more information, see [TPU resources in Compute Engine](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine) and [About TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus). The Cloud TPU API is not supported on TPU7x and later TPU versions. \nOnce you have your training or inference workload running on TPUs, the next step is to ensure your workload is working as expected. Cloud TPU generates metrics and logs that enable you to look for and debug any TPU VMs that are not behaving as expected. We refer to such VMs as _outliers_ throughout this documentation.\nThe general troubleshooting workflow is:\n  1. View Cloud TPU metrics to check for outlier TPU VMs\n  2. View Cloud TPU logs for the outlier TPU VMs\n  3. Profile your workload\n\n\nYou can view metrics and logs in the [Metrics Explorer](https://docs.cloud.google.com/monitoring/char"
+      },
+      {
+        "question": "How does 'Troubleshoot your Cloud TPU workflow' handle: Cloud TPU VM metrics?",
+        "answer": "Cloud Monitoring automatically collects metrics from your TPUs and their host Compute Engine VMs. Metrics track numerical quantities over time, for example, CPU utilization, network usage, or TensorCore idle duration. For more information on Cloud TPU metrics, see [Monitoring TPU VMs](https://docs.cloud.google.com/tpu/docs/troubleshooting/tpu-vm-monitoring)."
+      },
+      {
+        "question": "How does 'Troubleshoot your Cloud TPU workflow' handle: Cloud TPU logs?",
+        "answer": "Cloud Logging automatically collects logs from your TPUs and their host Compute Engine VMs. Cloud Logging tracks events generated by Cloud TPU. You can also instrument your code to generate logs. Two types of logs are generated by Cloud TPU:\n  * TPU worker logs\n  * Audited resource logs\n\n\nTPU worker logs contain information about a specific TPU worker in a specific zone, for example the amount of memory available on the TPU worker (system_available_memory_GiB).\nAudited Resource logs contain information about when a specific Cloud TPU API was called and who made the call. For example `CreateNode`, `UpdateNode`, and `DeleteNode`.\nYou can also use the `cloud-tpu-diagnostics` PyPi package to write stack traces to logs. For more information, see [Debugging TPU VMs](https://docs.cloud.google.com/tpu/docs/troubleshooting/debugging).\nFor more information about logs, see [Logging](https://docs.cloud.google.com/tpu/docs/troubleshooting/tpu-vm-monitoring#locate_logs)."
+      },
+      {
+        "question": "How does 'Troubleshoot your Cloud TPU workflow' handle: Cloud TPU health metrics?",
+        "answer": "Cloud TPU health monitoring provides real-time information on the health status of VMs and slices. Using either the Cloud Monitoring console or [LibTPU Monitoring Library](https://docs.cloud.google.com/tpu/docs/tpu-monitoring-library), you can identify hardware failures as they occur. This lets you reallocate resources to avoid complete job failures and minimize performance degradation.\nFor more information, see [TPU health monitoring](https://docs.cloud.google.com/tpu/docs/troubleshooting/tpu-health)."
+      },
+      {
+        "question": "How does 'Troubleshoot your Cloud TPU workflow' handle: Monitoring and logging dashboards?",
+        "answer": "Having a single page in the Google Cloud console can make viewing and interpreting Cloud TPU-related metrics and logs easier. The [cloud-tpu-monitoring-debugging](https://github.com/google/cloud-tpu-monitoring-debugging) GitHub repository contains a set of scripts and configuration files that use [Terraform](https://developer.hashicorp.com/terraform) to automatically deploy dashboards that contain all Cloud TPU related metrics and logs in dashboards. To set up these dashboards in your Google Cloud project, see [Monitoring and Logging Dashboards](https://docs.cloud.google.com/tpu/docs/troubleshooting/dashboards)."
+      },
+      {
+        "question": "How does 'Troubleshoot your Cloud TPU workflow' handle: Profiling your workloads on TPU VMs?",
+        "answer": "Profiling lets you optimize your model's training performance on TPU VMs. You use [TensorBoard](https://www.tensorflow.org/tensorboard) and the [TPU TensorBoard plug-in](https://docs.cloud.google.com/tpu/docs/profile-tpu-vm#install-plugin) to profile your model. For more information about how to profile your workload, see [Profile your model on TPU VMs](https://docs.cloud.google.com/tpu/docs/profile-tpu-vm).\nFor more information about using TensorBoard with one of the supported frameworks, see the following documents:\n  * [JAX performance guide](https://jax.readthedocs.io/en/latest/profiling.html)\n  * [PyTorch performance guide](https://torchtpu.readthedocs.io/en/latest/performance_profiling_with_xprof/)"
+      },
+      {
+        "question": "How does 'Troubleshoot your Cloud TPU workflow' handle: VM boot failures with custom images?",
+        "answer": "If a VM fails to boot after customization, review the serial console output using the the Google Cloud console or `gcloud compute instances get-serial-port-output`. This is the primary source of information for diagnosis. Because you cannot repair the disk offline, you must recreate the TPU resource after correcting the issue in your startup script or custom image source.\nFor more information about customizing Cloud TPU VM boot disks, see [TPU VM boot disk](https://docs.cloud.google.com/tpu/docs/storage-options#vmboot-disk)."
+      }
+    ],
+    "full_markdown": "# Troubleshoot your Cloud TPU workflow\n**Caution:** This page applies to the Cloud TPU API, which is no longer under active development. The Cloud TPU API will receive bug fixes and security updates only. For the latest features and support for the latest TPU versions, we recommend using Compute Engine or Google Kubernetes Engine to manage TPU resources. For more information, see [TPU resources in Compute Engine](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine) and [About TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus). The Cloud TPU API is not supported on TPU7x and later TPU versions. \nOnce you have your training or inference workload running on TPUs, the next step is to ensure your workload is working as expected. Cloud TPU generates metrics and logs that enable you to look for and debug any TPU VMs that are not behaving as expected. We refer to such VMs as _outliers_ throughout this documentation.\nThe general troubleshooting workflow is:\n  1. View Cloud TPU metrics to check for outlier TPU VMs\n  2. View Cloud TPU logs for the outlier TPU VMs\n  3. Profile your workload\n\n\nYou can view metrics and logs in the [Metrics Explorer](https://docs.cloud.google.com/monitoring/charts/metrics-explorer) and the [Logs Explorer](https://docs.cloud.google.com/logging/docs/view/logs-explorer-interface) in the Google Cloud console. You can also use monitoring and logging dashboards to collect all Cloud TPU related metrics and logs in individual dashboards.\n## Cloud TPU VM metrics\nCloud Monitoring automatically collects metrics from your TPUs and their host Compute Engine VMs. Metrics track numerical quantities over time, for example, CPU utilization, network usage, or TensorCore idle duration. For more information on Cloud TPU metrics, see [Monitoring TPU VMs](https://docs.cloud.google.com/tpu/docs/troubleshooting/tpu-vm-monitoring).\n## Cloud TPU logs\nCloud Logging automatically collects logs from your TPUs and their host Compute Engine VMs. Cloud Logging tracks events generated by Cloud TPU. You can also instrument your code to generate logs. Two types of logs are generated by Cloud TPU:\n  * TPU worker logs\n  * Audited resource logs\n\n\nTPU worker logs contain information about a specific TPU worker in a specific zone, for example the amount of memory available on the TPU worker (system_available_memory_GiB).\nAudited Resource logs contain information about when a specific Cloud TPU API was called and who made the call. For example `CreateNode`, `UpdateNode`, and `DeleteNode`.\nYou can also use the `cloud-tpu-diagnostics` PyPi package to write stack traces to logs. For more information, see [Debugging TPU VMs](https://docs.cloud.google.com/tpu/docs/troubleshooting/debugging).\nFor more information about logs, see [Logging](https://docs.cloud.google.com/tpu/docs/troubleshooting/tpu-vm-monitoring#locate_logs).\n## Cloud TPU health metrics\nCloud TPU health monitoring provides real-time information on the health status of VMs and slices. Using either the Cloud Monitoring console or [LibTPU Monitoring Library](https://docs.cloud.google.com/tpu/docs/tpu-monitoring-library), you can identify hardware failures as they occur. This lets you reallocate resources to avoid complete job failures and minimize performance degradation.\nFor more information, see [TPU health monitoring](https://docs.cloud.google.com/tpu/docs/troubleshooting/tpu-health).\n## Monitoring and logging dashboards\nHaving a single page in the Google Cloud console can make viewing and interpreting Cloud TPU-related metrics and logs easier. The [cloud-tpu-monitoring-debugging](https://github.com/google/cloud-tpu-monitoring-debugging) GitHub repository contains a set of scripts and configuration files that use [Terraform](https://developer.hashicorp.com/terraform) to automatically deploy dashboards that contain all Cloud TPU related metrics and logs in dashboards. To set up these dashboards in your Google Cloud project, see [Monitoring and Logging Dashboards](https://docs.cloud.google.com/tpu/docs/troubleshooting/dashboards).\n## Profiling your workloads on TPU VMs\nProfiling lets you optimize your model's training performance on TPU VMs. You use [TensorBoard](https://www.tensorflow.org/tensorboard) and the [TPU TensorBoard plug-in](https://docs.cloud.google.com/tpu/docs/profile-tpu-vm#install-plugin) to profile your model. For more information about how to profile your workload, see [Profile your model on TPU VMs](https://docs.cloud.google.com/tpu/docs/profile-tpu-vm).\nFor more information about using TensorBoard with one of the supported frameworks, see the following documents:\n  * [JAX performance guide](https://jax.readthedocs.io/en/latest/profiling.html)\n  * [PyTorch performance guide](https://torchtpu.readthedocs.io/en/latest/performance_profiling_with_xprof/)\n\n\n## VM boot failures with custom images\nIf a VM fails to boot after customization, review the serial console output using the the Google Cloud console or `gcloud compute instances get-serial-port-output`. This is the primary source of information for diagnosis. Because you cannot repair the disk offline, you must recreate the TPU resource after correcting the issue in your startup script or custom image source.\nFor more information about customizing Cloud TPU VM boot disks, see [TPU VM boot disk](https://docs.cloud.google.com/tpu/docs/storage-options#vmboot-disk)."
+  }
 }

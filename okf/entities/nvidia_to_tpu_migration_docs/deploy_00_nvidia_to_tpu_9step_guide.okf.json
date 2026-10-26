@@ -1,0 +1,456 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
+  },
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "deploy_00_nvidia_to_tpu_9step_guide",
+    "name": "Practical 9-Step NVIDIA-to-TPU Deployment & vLLM-TorchTPU Serving Guide",
+    "url": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/quickstart/",
+    "category": "nvidia_to_tpu_migration_docs",
+    "description": "End-to-end 9-step runbook for migrating from NVIDIA CUDA to Cloud TPU v6e: project/IAM setup, TPU VM creation, Python 3.12 venv, TorchTPU smoke test, vLLM-TorchTPU installation, Hugging Face auth, Llama-3.2-1B serving, OpenAI API test, and VM cleanup.",
+    "char_count": 6405,
+    "word_count": 822,
+    "section_count": 22,
+    "code_block_count": 6,
+    "table_count": 0,
+    "cli_command_count": 15,
+    "indexed_at": "2026-10-26T14:46:54.802088+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "schema:name",
+        "object": "Practical 9-Step NVIDIA-to-TPU Deployment & vLLM-TorchTPU Serving Guide"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "schema:url",
+        "object": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/quickstart/"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "schema:category",
+        "object": "nvidia_to_tpu_migration_docs"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "schema:description",
+        "object": "End-to-end 9-step runbook for migrating from NVIDIA CUDA to Cloud TPU v6e: project/IAM setup, TPU VM creation, Python 3.12 venv, TorchTPU smoke test, vLLM-TorchTPU installation, Hugging Face auth, Llama-3.2-1B serving, OpenAI API test, and VM cleanup."
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:TPU7x"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5p"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5e"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v4"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:vLLM-TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:vLLM-TPU"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:MaxText"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:MaxDiffusion"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:Pallas"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:Tokamax"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TPUStrategy"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:KubeRay"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:hasSection",
+        "object": "Practical Guide: Deploying NVIDIA Workloads to Google Cloud TPUs"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:hasSection",
+        "object": "1. Workload Strategy & Framework Paradigm"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:hasSection",
+        "object": "2. Provisioning a Compatible Cloud TPU VM"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:hasSection",
+        "object": "Provision a single-host TPU v6e VM via Compute Engine"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:hasSection",
+        "object": "Connect to the instance"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:hasSection",
+        "object": "3. Custom PyTorch Environment & Hardware Smoke Test"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:hasSection",
+        "object": "1. Create and activate virtual environment"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:hasSection",
+        "object": "2. Install TorchTPU released package"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:hasSection",
+        "object": "3. Execute hardware smoke test"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:hasSection",
+        "object": "4. Incremental Workload Porting from CUDA to TPU"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:hasSection",
+        "object": "5. Deploying LLM Serving with vLLM-TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:hasSection",
+        "object": "1. Create and activate serving environment"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:hasSection",
+        "object": "2. Install native vLLM-TorchTPU package"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:hasSection",
+        "object": "3. Configure compilation and artifact caching"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:hasSection",
+        "object": "4. Hugging Face Authentication (accept model license on HF website first)"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:hasSection",
+        "object": "5. Launch the OpenAI-compatible vLLM serving daemon"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:hasSection",
+        "object": "6. Verification and Endpoint Querying"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:hasSection",
+        "object": "7. Compilation Cache & Scaling Considerations"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:hasSection",
+        "object": "8. JAX & TensorFlow Alternatives"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:hasSection",
+        "object": "9. Cleanup & Teardown"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:hasSection",
+        "object": "Delete Compute Engine TPU VM instance"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:hasSection",
+        "object": "Or via TPU VM management:"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT"
+      },
+      {
+        "subject": "tpu_doc:deploy_00_nvidia_to_tpu_9step_guide",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "VLLM_CACHE_ROOT"
+      }
+    ]
+  },
+  "structured_content": {
+    "summary": "End-to-end 9-step runbook for migrating from NVIDIA CUDA to Cloud TPU v6e: project/IAM setup, TPU VM creation, Python 3.12 venv, TorchTPU smoke test, vLLM-TorchTPU installation, Hugging Face auth, Llama-3.2-1B serving, OpenAI API test, and VM cleanup.",
+    "sections": [
+      {
+        "heading": "Practical Guide: Deploying NVIDIA Workloads to Google Cloud TPUs",
+        "level": 1,
+        "content": "This guide provides the authoritative step-by-step instructions for porting and deploying machine learning workloads\u2014originally developed for NVIDIA CUDA GPUs\u2014onto Google Cloud TPUs.\n\n---"
+      },
+      {
+        "heading": "1. Workload Strategy & Framework Paradigm",
+        "level": 2,
+        "content": "- **Migrate the workload, not NVIDIA hardware**: These instructions specifically target Google Cloud TPUs.\n- **PyTorch Strategy**: For existing PyTorch code, start with **TorchTPU**. Google officially recommends TorchTPU instead of the deprecated PyTorch/XLA path for all new PyTorch TPU workloads.\n- **LLM Serving Strategy**: For PyTorch-based LLM serving, use **vLLM-TorchTPU** (the native PyTorch out-of-tree plugin) or vLLM-TPU (JAX-native). Do not mix their dependencies.\n\n---"
+      },
+      {
+        "heading": "2. Provisioning a Compatible Cloud TPU VM",
+        "level": 2,
+        "content": "1. Enable billing and the required Google Cloud APIs (`compute.googleapis.com`, `tpu.googleapis.com`).\n2. Obtain TPU quota in your chosen region/zone (e.g., `us-central2-b`).\n3. Follow the Compute Engine TPU quickstart to create your TPU VM instance.\n4. Start on a single host (e.g. `v6e-4` or `v6e-8`) rather than a multi-host Kubernetes cluster unless you already require container orchestration.\n5. **Hardware compatibility checks**:\n   - `vLLM-TorchTPU` currently recommends **TPU7x (Ironwood)** and marks `v6e`, `v5e`, and `v5p` experimental.\n   - Its installation guide strictly requires **Python 3.12**.\n\n```bash"
+      },
+      {
+        "heading": "Provision a single-host TPU v6e VM via Compute Engine",
+        "level": 1,
+        "content": "gcloud compute tpus tpu-vm create tpu-quickstart-node \\\n  --zone=us-central2-b \\\n  --accelerator-type=v6e-4 \\\n  --version=v2-alpha-tpuv6e"
+      },
+      {
+        "heading": "Connect to the instance",
+        "level": 1,
+        "content": "gcloud compute tpus tpu-vm ssh tpu-quickstart-node --zone=us-central2-b\n```\n\n---"
+      },
+      {
+        "heading": "3. Custom PyTorch Environment & Hardware Smoke Test",
+        "level": 2,
+        "content": "For custom PyTorch training or inference, create a dedicated Python 3.12 environment on the TPU VM:\n\n```bash"
+      },
+      {
+        "heading": "1. Create and activate virtual environment",
+        "level": 1,
+        "content": "python3.12 -m venv .venv-tpu\nsource .venv-tpu/bin/activate"
+      },
+      {
+        "heading": "2. Install TorchTPU released package",
+        "level": 1,
+        "content": "pip install --upgrade pip\npip install torch_tpu==0.2.0 --extra-index-url https://download.pytorch.org/whl/cpu"
+      },
+      {
+        "heading": "3. Execute hardware smoke test",
+        "level": 1,
+        "content": "python -c 'import torch; import torch_tpu; x = torch.ones((4, 4), device=\"tpu\"); print((x @ x).cpu())'\n```\n*Note: This confirms hardware access and runtime linkage; it is not deployment of your model.*\n\n---"
+      },
+      {
+        "heading": "4. Incremental Workload Porting from CUDA to TPU",
+        "level": 2,
+        "content": "1. **Device Placement**: Replace `.cuda()` or `.to(\"cuda\")` calls with `.to(\"tpu\")`.\n2. **CUDA APIs**: Consult the CUDA-to-TPU API Reference for `torch.cuda` calls:\n   - `torch.cuda.device_count()` $\\rightarrow$ `torch.tpu.device_count()`\n   - `torch.cuda.synchronize()` $\\rightarrow$ `torch.tpu.synchronize()`\n3. **Distributed Execution**: Use the documented `tpu_dist` backend rather than NCCL:\n   ```python\n   torch.distributed.init_process_group(\"tpu_dist\")\n   ```\n4. **CUDA Extensions & Operators**: Review CUDA-only extensions (`.cu` kernels, custom Triton code) instead of assuming a device string replacement is sufficient. Use **Tokamax** for prebuilt high-performance kernels or **Pallas** for custom TPU kernel authoring.\n5. **Execution Order**:\n   - First verify correctness in **eager mode**.\n   - Then evaluate `torch.compile(..., backend=\"openxla\")` with appropriate numerical precision (`bfloat16`).\n\n---"
+      },
+      {
+        "heading": "5. Deploying LLM Serving with vLLM-TorchTPU",
+        "level": 2,
+        "content": "For an OpenAI-compatible LLM inference server, isolate dependencies in a separate Python 3.12 environment:\n\n```bash"
+      },
+      {
+        "heading": "1. Create and activate serving environment",
+        "level": 1,
+        "content": "python3.12 -m venv .venv-vllm-tpu\nsource .venv-vllm-tpu/bin/activate"
+      },
+      {
+        "heading": "2. Install native vLLM-TorchTPU package",
+        "level": 1,
+        "content": "pip install --upgrade pip\npip install --extra-index-url https://download.pytorch.org/whl/cpu vllm-torchtpu"
+      },
+      {
+        "heading": "3. Configure compilation and artifact caching",
+        "level": 1,
+        "content": "export TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT=\"/data/tpu_cache/tier3\"\nexport VLLM_CACHE_ROOT=\"/data/tpu_cache/vllm\"\nmkdir -p \"$TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT\" \"$VLLM_CACHE_ROOT\""
+      },
+      {
+        "heading": "4. Hugging Face Authentication (accept model license on HF website first)",
+        "level": 1,
+        "content": "hf auth login"
+      },
+      {
+        "heading": "5. Launch the OpenAI-compatible vLLM serving daemon",
+        "level": 1,
+        "content": "vllm serve meta-llama/Llama-3.2-1B-Instruct \\\n  --tensor-parallel-size 1 \\\n  --max-model-len 4096 \\\n  --port 8000\n```\n> [!IMPORTANT]\n> - Obtain access to the Llama model on Hugging Face and accept its license before serving it; authentication does not itself grant gated model access.\n> - Do not mix this installation with the separate `vllm-tpu`/JAX backend.\n\n---"
+      },
+      {
+        "heading": "6. Verification and Endpoint Querying",
+        "level": 2,
+        "content": "From a second terminal on the TPU VM (or across a secure VPC network), send a chat completion request:\n\n```bash\ncurl http://localhost:8000/v1/chat/completions \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"model\": \"meta-llama/Llama-3.2-1B-Instruct\",\n    \"messages\": [\n      {\"role\": \"user\", \"content\": \"Explain what a TPU is.\"}\n    ],\n    \"max_tokens\": 128,\n    \"temperature\": 0.0\n  }'\n```\n*Security note: Keep initial tests private on localhost or behind VPN/IAM proxy before exposing public endpoints.*\n\n---"
+      },
+      {
+        "heading": "7. Compilation Cache & Scaling Considerations",
+        "level": 2,
+        "content": "- **Initial Compilation**: Expect 2\u201310 minutes of initial graph compilation upon starting a new model or context size.\n- **Persistent Cache**: Ensure `TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT` points to a persistent disk so restarts do not re-trigger graph compilation.\n- **Production Scaling**: When moving beyond a single host, use the official GKE reference architecture with Ray Serve or KubeRay.\n\n---"
+      },
+      {
+        "heading": "8. JAX & TensorFlow Alternatives",
+        "level": 2,
+        "content": "- **JAX Workloads**: If your existing codebase uses JAX, install accelerator dependencies via `pip install \"jax[tpu]\"` and utilize **MaxText** (for LLMs) or **MaxDiffusion** (for image generation) instead of rewriting into PyTorch.\n- **TensorFlow / Keras**: Use `tf.distribute.TPUStrategy` on TPU v4 or v5e. **Note: TPU7x (Ironwood) does not support TensorFlow**.\n\n---"
+      },
+      {
+        "heading": "9. Cleanup & Teardown",
+        "level": 2,
+        "content": "Clean up test infrastructure when experimentation concludes to prevent ongoing charges:\n\n```bash"
+      },
+      {
+        "heading": "Delete Compute Engine TPU VM instance",
+        "level": 1,
+        "content": "gcloud compute instances delete TPU_NAME --zone=ZONE"
+      },
+      {
+        "heading": "Or via TPU VM management:",
+        "level": 1,
+        "content": "gcloud compute tpus tpu-vm delete TPU_NAME --zone=ZONE --quiet\n```\n*Ensure all model weights, checkpoints, and logs are synced to Google Cloud Storage (`gs://...`) before deletion.*"
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "bash",
+        "code": "# Provision a single-host TPU v6e VM via Compute Engine\ngcloud compute tpus tpu-vm create tpu-quickstart-node \\\n  --zone=us-central2-b \\\n  --accelerator-type=v6e-4 \\\n  --version=v2-alpha-tpuv6e\n\n# Connect to the instance\ngcloud compute tpus tpu-vm ssh tpu-quickstart-node --zone=us-central2-b"
+      },
+      {
+        "language": "bash",
+        "code": "# 1. Create and activate virtual environment\npython3.12 -m venv .venv-tpu\nsource .venv-tpu/bin/activate\n\n# 2. Install TorchTPU released package\npip install --upgrade pip\npip install torch_tpu==0.2.0 --extra-index-url https://download.pytorch.org/whl/cpu\n\n# 3. Execute hardware smoke test\npython -c 'import torch; import torch_tpu; x = torch.ones((4, 4), device=\"tpu\"); print((x @ x).cpu())'"
+      },
+      {
+        "language": "python",
+        "code": "torch.distributed.init_process_group(\"tpu_dist\")"
+      },
+      {
+        "language": "bash",
+        "code": "# 1. Create and activate serving environment\npython3.12 -m venv .venv-vllm-tpu\nsource .venv-vllm-tpu/bin/activate\n\n# 2. Install native vLLM-TorchTPU package\npip install --upgrade pip\npip install --extra-index-url https://download.pytorch.org/whl/cpu vllm-torchtpu\n\n# 3. Configure compilation and artifact caching\nexport TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT=\"/data/tpu_cache/tier3\"\nexport VLLM_CACHE_ROOT=\"/data/tpu_cache/vllm\"\nmkdir -p \"$TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT\" \"$VLLM_CACHE_ROOT\"\n\n# 4. Hugging Face Authentication (accept model license on HF website first)\nhf auth login\n\n# 5. Launch the OpenAI-compatible vLLM serving daemon\nvllm serve meta-llama/Llama-3.2-1B-Instruct \\\n  --tensor-parallel-size 1 \\\n  --max-model-len 4096 \\\n  --port 8000"
+      },
+      {
+        "language": "bash",
+        "code": "curl http://localhost:8000/v1/chat/completions \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"model\": \"meta-llama/Llama-3.2-1B-Instruct\",\n    \"messages\": [\n      {\"role\": \"user\", \"content\": \"Explain what a TPU is.\"}\n    ],\n    \"max_tokens\": 128,\n    \"temperature\": 0.0\n  }'"
+      },
+      {
+        "language": "bash",
+        "code": "# Delete Compute Engine TPU VM instance\ngcloud compute instances delete TPU_NAME --zone=ZONE\n# Or via TPU VM management:\ngcloud compute tpus tpu-vm delete TPU_NAME --zone=ZONE --quiet"
+      }
+    ],
+    "cli_commands": [
+      "gcloud compute tpus tpu-vm create tpu-quickstart-node \\",
+      "gcloud compute tpus tpu-vm ssh tpu-quickstart-node --zone=us-central2-b",
+      "python3.12 -m venv .venv-tpu",
+      "pip install --upgrade pip",
+      "pip install torch_tpu==0.2.0 --extra-index-url https://download.pytorch.org/whl/cpu",
+      "python -c 'import torch; import torch_tpu; x = torch.ones((4, 4), device=\"tpu\"); print((x @ x).cpu())'",
+      "python3.12 -m venv .venv-vllm-tpu",
+      "pip install --extra-index-url https://download.pytorch.org/whl/cpu vllm-torchtpu",
+      "export TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT=\"/data/tpu_cache/tier3\"",
+      "export VLLM_CACHE_ROOT=\"/data/tpu_cache/vllm\"",
+      "hf auth login",
+      "vllm serve meta-llama/Llama-3.2-1B-Instruct \\",
+      "curl http://localhost:8000/v1/chat/completions \\",
+      "gcloud compute instances delete TPU_NAME --zone=ZONE",
+      "gcloud compute tpus tpu-vm delete TPU_NAME --zone=ZONE --quiet"
+    ],
+    "environment_variables": [
+      "TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT",
+      "VLLM_CACHE_ROOT"
+    ],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Practical 9-Step NVIDIA-to-TPU Deployment & vLLM-TorchTPU Serving Guide' (https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/quickstart/)?",
+        "answer": "End-to-end 9-step runbook for migrating from NVIDIA CUDA to Cloud TPU v6e: project/IAM setup, TPU VM creation, Python 3.12 venv, TorchTPU smoke test, vLLM-TorchTPU installation, Hugging Face auth, Llama-3.2-1B serving, OpenAI API test, and VM cleanup."
+      },
+      {
+        "question": "How does 'Practical 9-Step NVIDIA-to-TPU Deployment & vLLM-TorchTPU Serving Guide' handle: Practical Guide: Deploying NVIDIA Workloads to Google Cloud TPUs?",
+        "answer": "This guide provides the authoritative step-by-step instructions for porting and deploying machine learning workloads\u2014originally developed for NVIDIA CUDA GPUs\u2014onto Google Cloud TPUs.\n\n---"
+      },
+      {
+        "question": "How does 'Practical 9-Step NVIDIA-to-TPU Deployment & vLLM-TorchTPU Serving Guide' handle: 1. Workload Strategy & Framework Paradigm?",
+        "answer": "- **Migrate the workload, not NVIDIA hardware**: These instructions specifically target Google Cloud TPUs.\n- **PyTorch Strategy**: For existing PyTorch code, start with **TorchTPU**. Google officially recommends TorchTPU instead of the deprecated PyTorch/XLA path for all new PyTorch TPU workloads.\n- **LLM Serving Strategy**: For PyTorch-based LLM serving, use **vLLM-TorchTPU** (the native PyTorch out-of-tree plugin) or vLLM-TPU (JAX-native). Do not mix their dependencies.\n\n---"
+      },
+      {
+        "question": "How does 'Practical 9-Step NVIDIA-to-TPU Deployment & vLLM-TorchTPU Serving Guide' handle: 2. Provisioning a Compatible Cloud TPU VM?",
+        "answer": "1. Enable billing and the required Google Cloud APIs (`compute.googleapis.com`, `tpu.googleapis.com`).\n2. Obtain TPU quota in your chosen region/zone (e.g., `us-central2-b`).\n3. Follow the Compute Engine TPU quickstart to create your TPU VM instance.\n4. Start on a single host (e.g. `v6e-4` or `v6e-8`) rather than a multi-host Kubernetes cluster unless you already require container orchestration.\n5. **Hardware compatibility checks**:\n   - `vLLM-TorchTPU` currently recommends **TPU7x (Ironwood)** and marks `v6e`, `v5e`, and `v5p` experimental.\n   - Its installation guide strictly requires **Python 3.12**.\n\n```bash"
+      },
+      {
+        "question": "How does 'Practical 9-Step NVIDIA-to-TPU Deployment & vLLM-TorchTPU Serving Guide' handle: Provision a single-host TPU v6e VM via Compute Engine?",
+        "answer": "gcloud compute tpus tpu-vm create tpu-quickstart-node \\\n  --zone=us-central2-b \\\n  --accelerator-type=v6e-4 \\\n  --version=v2-alpha-tpuv6e"
+      },
+      {
+        "question": "How does 'Practical 9-Step NVIDIA-to-TPU Deployment & vLLM-TorchTPU Serving Guide' handle: Connect to the instance?",
+        "answer": "gcloud compute tpus tpu-vm ssh tpu-quickstart-node --zone=us-central2-b\n```\n\n---"
+      },
+      {
+        "question": "How does 'Practical 9-Step NVIDIA-to-TPU Deployment & vLLM-TorchTPU Serving Guide' handle: 3. Custom PyTorch Environment & Hardware Smoke Test?",
+        "answer": "For custom PyTorch training or inference, create a dedicated Python 3.12 environment on the TPU VM:\n\n```bash"
+      },
+      {
+        "question": "How does 'Practical 9-Step NVIDIA-to-TPU Deployment & vLLM-TorchTPU Serving Guide' handle: 2. Install TorchTPU released package?",
+        "answer": "pip install --upgrade pip\npip install torch_tpu==0.2.0 --extra-index-url https://download.pytorch.org/whl/cpu"
+      },
+      {
+        "question": "How does 'Practical 9-Step NVIDIA-to-TPU Deployment & vLLM-TorchTPU Serving Guide' handle: 3. Execute hardware smoke test?",
+        "answer": "python -c 'import torch; import torch_tpu; x = torch.ones((4, 4), device=\"tpu\"); print((x @ x).cpu())'\n```\n*Note: This confirms hardware access and runtime linkage; it is not deployment of your model.*\n\n---"
+      },
+      {
+        "question": "How does 'Practical 9-Step NVIDIA-to-TPU Deployment & vLLM-TorchTPU Serving Guide' handle: 4. Incremental Workload Porting from CUDA to TPU?",
+        "answer": "1. **Device Placement**: Replace `.cuda()` or `.to(\"cuda\")` calls with `.to(\"tpu\")`.\n2. **CUDA APIs**: Consult the CUDA-to-TPU API Reference for `torch.cuda` calls:\n   - `torch.cuda.device_count()` $\\rightarrow$ `torch.tpu.device_count()`\n   - `torch.cuda.synchronize()` $\\rightarrow$ `torch.tpu.synchronize()`\n3. **Distributed Execution**: Use the documented `tpu_dist` backend rather than NCCL:\n   ```python\n   torch.distributed.init_process_group(\"tpu_dist\")\n   ```\n4. **CUDA Extensions & Operators**: Review CUDA-only extensions (`.cu` kernels, custom Triton code) instead of assuming a device string replacement is sufficient. Use **Tokamax** for prebuilt high-performance kernels or **Pallas** for custom TPU kernel authoring.\n5. **Execution Order**:\n   - First verify correctness in **eager mode**.\n   - Then evaluate `torch.compile(..., backend=\"openxla\")` with appropriate numerical precision (`bfloat16`).\n\n---"
+      }
+    ],
+    "full_markdown": "# Practical Guide: Deploying NVIDIA Workloads to Google Cloud TPUs\n\nThis guide provides the authoritative step-by-step instructions for porting and deploying machine learning workloads\u2014originally developed for NVIDIA CUDA GPUs\u2014onto Google Cloud TPUs.\n\n---\n\n## 1. Workload Strategy & Framework Paradigm\n- **Migrate the workload, not NVIDIA hardware**: These instructions specifically target Google Cloud TPUs.\n- **PyTorch Strategy**: For existing PyTorch code, start with **TorchTPU**. Google officially recommends TorchTPU instead of the deprecated PyTorch/XLA path for all new PyTorch TPU workloads.\n- **LLM Serving Strategy**: For PyTorch-based LLM serving, use **vLLM-TorchTPU** (the native PyTorch out-of-tree plugin) or vLLM-TPU (JAX-native). Do not mix their dependencies.\n\n---\n\n## 2. Provisioning a Compatible Cloud TPU VM\n1. Enable billing and the required Google Cloud APIs (`compute.googleapis.com`, `tpu.googleapis.com`).\n2. Obtain TPU quota in your chosen region/zone (e.g., `us-central2-b`).\n3. Follow the Compute Engine TPU quickstart to create your TPU VM instance.\n4. Start on a single host (e.g. `v6e-4` or `v6e-8`) rather than a multi-host Kubernetes cluster unless you already require container orchestration.\n5. **Hardware compatibility checks**:\n   - `vLLM-TorchTPU` currently recommends **TPU7x (Ironwood)** and marks `v6e`, `v5e`, and `v5p` experimental.\n   - Its installation guide strictly requires **Python 3.12**.\n\n```bash\n# Provision a single-host TPU v6e VM via Compute Engine\ngcloud compute tpus tpu-vm create tpu-quickstart-node \\\n  --zone=us-central2-b \\\n  --accelerator-type=v6e-4 \\\n  --version=v2-alpha-tpuv6e\n\n# Connect to the instance\ngcloud compute tpus tpu-vm ssh tpu-quickstart-node --zone=us-central2-b\n```\n\n---\n\n## 3. Custom PyTorch Environment & Hardware Smoke Test\nFor custom PyTorch training or inference, create a dedicated Python 3.12 environment on the TPU VM:\n\n```bash\n# 1. Create and activate virtual environment\npython3.12 -m venv .venv-tpu\nsource .venv-tpu/bin/activate\n\n# 2. Install TorchTPU released package\npip install --upgrade pip\npip install torch_tpu==0.2.0 --extra-index-url https://download.pytorch.org/whl/cpu\n\n# 3. Execute hardware smoke test\npython -c 'import torch; import torch_tpu; x = torch.ones((4, 4), device=\"tpu\"); print((x @ x).cpu())'\n```\n*Note: This confirms hardware access and runtime linkage; it is not deployment of your model.*\n\n---\n\n## 4. Incremental Workload Porting from CUDA to TPU\n1. **Device Placement**: Replace `.cuda()` or `.to(\"cuda\")` calls with `.to(\"tpu\")`.\n2. **CUDA APIs**: Consult the CUDA-to-TPU API Reference for `torch.cuda` calls:\n   - `torch.cuda.device_count()` $\\rightarrow$ `torch.tpu.device_count()`\n   - `torch.cuda.synchronize()` $\\rightarrow$ `torch.tpu.synchronize()`\n3. **Distributed Execution**: Use the documented `tpu_dist` backend rather than NCCL:\n   ```python\n   torch.distributed.init_process_group(\"tpu_dist\")\n   ```\n4. **CUDA Extensions & Operators**: Review CUDA-only extensions (`.cu` kernels, custom Triton code) instead of assuming a device string replacement is sufficient. Use **Tokamax** for prebuilt high-performance kernels or **Pallas** for custom TPU kernel authoring.\n5. **Execution Order**:\n   - First verify correctness in **eager mode**.\n   - Then evaluate `torch.compile(..., backend=\"openxla\")` with appropriate numerical precision (`bfloat16`).\n\n---\n\n## 5. Deploying LLM Serving with vLLM-TorchTPU\nFor an OpenAI-compatible LLM inference server, isolate dependencies in a separate Python 3.12 environment:\n\n```bash\n# 1. Create and activate serving environment\npython3.12 -m venv .venv-vllm-tpu\nsource .venv-vllm-tpu/bin/activate\n\n# 2. Install native vLLM-TorchTPU package\npip install --upgrade pip\npip install --extra-index-url https://download.pytorch.org/whl/cpu vllm-torchtpu\n\n# 3. Configure compilation and artifact caching\nexport TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT=\"/data/tpu_cache/tier3\"\nexport VLLM_CACHE_ROOT=\"/data/tpu_cache/vllm\"\nmkdir -p \"$TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT\" \"$VLLM_CACHE_ROOT\"\n\n# 4. Hugging Face Authentication (accept model license on HF website first)\nhf auth login\n\n# 5. Launch the OpenAI-compatible vLLM serving daemon\nvllm serve meta-llama/Llama-3.2-1B-Instruct \\\n  --tensor-parallel-size 1 \\\n  --max-model-len 4096 \\\n  --port 8000\n```\n> [!IMPORTANT]\n> - Obtain access to the Llama model on Hugging Face and accept its license before serving it; authentication does not itself grant gated model access.\n> - Do not mix this installation with the separate `vllm-tpu`/JAX backend.\n\n---\n\n## 6. Verification and Endpoint Querying\nFrom a second terminal on the TPU VM (or across a secure VPC network), send a chat completion request:\n\n```bash\ncurl http://localhost:8000/v1/chat/completions \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"model\": \"meta-llama/Llama-3.2-1B-Instruct\",\n    \"messages\": [\n      {\"role\": \"user\", \"content\": \"Explain what a TPU is.\"}\n    ],\n    \"max_tokens\": 128,\n    \"temperature\": 0.0\n  }'\n```\n*Security note: Keep initial tests private on localhost or behind VPN/IAM proxy before exposing public endpoints.*\n\n---\n\n## 7. Compilation Cache & Scaling Considerations\n- **Initial Compilation**: Expect 2\u201310 minutes of initial graph compilation upon starting a new model or context size.\n- **Persistent Cache**: Ensure `TORCH_TPU_TIER3_COMPILATION_CACHE_ROOT` points to a persistent disk so restarts do not re-trigger graph compilation.\n- **Production Scaling**: When moving beyond a single host, use the official GKE reference architecture with Ray Serve or KubeRay.\n\n---\n\n## 8. JAX & TensorFlow Alternatives\n- **JAX Workloads**: If your existing codebase uses JAX, install accelerator dependencies via `pip install \"jax[tpu]\"` and utilize **MaxText** (for LLMs) or **MaxDiffusion** (for image generation) instead of rewriting into PyTorch.\n- **TensorFlow / Keras**: Use `tf.distribute.TPUStrategy` on TPU v4 or v5e. **Note: TPU7x (Ironwood) does not support TensorFlow**.\n\n---\n\n## 9. Cleanup & Teardown\nClean up test infrastructure when experimentation concludes to prevent ongoing charges:\n\n```bash\n# Delete Compute Engine TPU VM instance\ngcloud compute instances delete TPU_NAME --zone=ZONE\n# Or via TPU VM management:\ngcloud compute tpus tpu-vm delete TPU_NAME --zone=ZONE --quiet\n```\n*Ensure all model weights, checkpoints, and logs are synced to Google Cloud Storage (`gs://...`) before deletion.*"
+  }
+}

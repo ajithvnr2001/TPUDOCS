@@ -2,15 +2,13 @@
 id: "train_09_torchtitan_tpu_getting_started"
 title: "TorchTitan on TPU getting started"
 url: "https://github.com/google-pytorch/torchtitan/blob/main/torchtitan/experiments/tpu/README.md"
-category: "Training framework links"
+category: "training_framework_links"
 description: "TPU-specific setup and training recipes for TorchTitan."
-crawled_at: "2026-10-26T12:45:41.290148+00:00"
-crawler_engine: "GitHubRaw"
+crawled_at: "2026-10-26T14:43:50.220467+00:00"
+crawler_engine: "GitHub-Raw-API+Scrapling"
 ---
 
-# TorchTitan on TPU getting started
-
-Source: https://github.com/google-pytorch/torchtitan/blob/main/torchtitan/experiments/tpu/README.md
+# TorchTitan on TPU Getting Started
 
 ## TorchTPU Support for TorchTitan
 

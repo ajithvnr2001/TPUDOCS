@@ -1,63 +1,315 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:setup_03_quickstart_create_tpu_instance",
-  "@type": "DocumentationResource",
-  "name": "Quickstart: Create a TPU instance",
-  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/quickstart-create-tpu-instance",
-  "category": "TPU setup docs",
-  "categorySlug": "tpu_setup_docs",
-  "description": "Fastest current Compute Engine provisioning path, including required IAM roles and a v6e example.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/quickstart-create-tpu-instance",
-    "crawledAt": "2026-10-26T12:45:00.934891+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 31934
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Quickstart: Create a TPU instance",
-      "documentedIn",
-      "https://docs.cloud.google.com/tpu/docs/quickstart-create-tpu-instance"
-    ],
-    [
-      "Quickstart: Create a TPU instance",
-      "belongsToCategory",
-      "tpu_setup_docs"
-    ],
-    [
-      "Quickstart: Create a TPU instance",
-      "targetsPlatform",
-      "Google Cloud Platform"
-    ],
-    [
-      "Quickstart: Create a TPU instance",
-      "managesHardware",
-      "Google Cloud TPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:setup_03_quickstart_create_tpu_instance",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "setup_03_quickstart_create_tpu_instance",
+    "name": "Quickstart: Create a TPU instance",
+    "url": "https://docs.cloud.google.com/tpu/docs/quickstart-create-tpu-instance",
+    "category": "tpu_setup_docs",
+    "description": "Fastest current Compute Engine provisioning path, including required IAM roles and a v6e example.",
+    "char_count": 10510,
+    "word_count": 1225,
+    "section_count": 10,
+    "code_block_count": 19,
+    "table_count": 0,
+    "cli_command_count": 10,
+    "indexed_at": "2026-10-26T14:46:54.366101+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:setup_03_quickstart_create_tpu_instance",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:setup_03_quickstart_create_tpu_instance",
+        "predicate": "schema:name",
+        "object": "Quickstart: Create a TPU instance"
+      },
+      {
+        "subject": "tpu_doc:setup_03_quickstart_create_tpu_instance",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/tpu/docs/quickstart-create-tpu-instance"
+      },
+      {
+        "subject": "tpu_doc:setup_03_quickstart_create_tpu_instance",
+        "predicate": "schema:category",
+        "object": "tpu_setup_docs"
+      },
+      {
+        "subject": "tpu_doc:setup_03_quickstart_create_tpu_instance",
+        "predicate": "schema:description",
+        "object": "Fastest current Compute Engine provisioning path, including required IAM roles and a v6e example."
+      },
+      {
+        "subject": "tpu_doc:setup_03_quickstart_create_tpu_instance",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:setup_03_quickstart_create_tpu_instance",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5p"
+      },
+      {
+        "subject": "tpu_doc:setup_03_quickstart_create_tpu_instance",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5e"
+      },
+      {
+        "subject": "tpu_doc:setup_03_quickstart_create_tpu_instance",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:setup_03_quickstart_create_tpu_instance",
+        "predicate": "okf:hasSection",
+        "object": "Create a TPU instance"
+      },
+      {
+        "subject": "tpu_doc:setup_03_quickstart_create_tpu_instance",
+        "predicate": "okf:hasSection",
+        "object": "Before you begin"
+      },
+      {
+        "subject": "tpu_doc:setup_03_quickstart_create_tpu_instance",
+        "predicate": "okf:hasSection",
+        "object": "Required roles"
+      },
+      {
+        "subject": "tpu_doc:setup_03_quickstart_create_tpu_instance",
+        "predicate": "okf:hasSection",
+        "object": "Create a TPU v6e (Trillium) instance"
+      },
+      {
+        "subject": "tpu_doc:setup_03_quickstart_create_tpu_instance",
+        "predicate": "okf:hasSection",
+        "object": "Connect to the TPU instance"
+      },
+      {
+        "subject": "tpu_doc:setup_03_quickstart_create_tpu_instance",
+        "predicate": "okf:hasSection",
+        "object": "Install JAX"
+      },
+      {
+        "subject": "tpu_doc:setup_03_quickstart_create_tpu_instance",
+        "predicate": "okf:hasSection",
+        "object": "Run a system check"
+      },
+      {
+        "subject": "tpu_doc:setup_03_quickstart_create_tpu_instance",
+        "predicate": "okf:hasSection",
+        "object": "Perform a calculation"
+      },
+      {
+        "subject": "tpu_doc:setup_03_quickstart_create_tpu_instance",
+        "predicate": "okf:hasSection",
+        "object": "Clean up"
+      },
+      {
+        "subject": "tpu_doc:setup_03_quickstart_create_tpu_instance",
+        "predicate": "okf:hasSection",
+        "object": "What's next"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Quickstart: Create a TPU instance provides official guidance on Fastest current Compute Engine provisioning path, including required IAM roles and a v6e example.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/quickstart-create-tpu-instance",
-      "verified": true
-    },
-    {
-      "assertion": "TPU v6e (Trillium) is Google's 6th generation TPU offering high efficiency for inference and training.",
-      "confidence": 0.99,
-      "source": "https://docs.cloud.google.com/tpu/docs/quickstart-create-tpu-instance",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Quickstart: Create a TPU instance used for in Cloud TPU workflows?",
-      "answer": "Fastest current Compute Engine provisioning path, including required IAM roles and a v6e example.",
-      "category": "tpu_setup_docs"
-    }
-  ],
-  "contentSummary": "Fastest current Compute Engine provisioning path, including required IAM roles and a v6e example."
+  },
+  "structured_content": {
+    "summary": "Fastest current Compute Engine provisioning path, including required IAM roles and a v6e example.",
+    "sections": [
+      {
+        "heading": "Create a TPU instance",
+        "level": 1,
+        "content": "This document shows you how to create a TPU v6e (Trillium) virtual machine (VM) instance, connect to it, and run a calculation on it. The TPU instance that you create in this quickstart uses on-demand, the default consumption option."
+      },
+      {
+        "heading": "Before you begin",
+        "level": 2,
+        "content": "1. Sign in to your Google Cloud account. If you're new to Google Cloud, [ create an account](https://console.cloud.google.com/freetrial) to evaluate how our products perform in real-world scenarios. New customers also get $300 in free credits to run, test, and deploy workloads. \n  2. [Install](https://docs.cloud.google.com/sdk/docs/install) the Google Cloud CLI. \n**Note:** If you installed the gcloud CLI previously, make sure you have the latest version by running `gcloud components update`. \n  3. If you're using an external identity provider (IdP), you must first [ sign in to the gcloud CLI with your federated identity](https://docs.cloud.google.com/iam/docs/workforce-log-in-gcloud). \n  4. To [initialize](https://docs.cloud.google.com/sdk/docs/initializing) the gcloud CLI, run the following command: \n\n```\ngcloud init\n```\n\n  5. [Create or select a Google Cloud project](https://cloud.google.com/resource-manager/docs/creating-managing-projects).\n**Roles required to select or create a project**\n     * **Select a project** : Selecting a project doesn't require a specific IAM role\u2014you can select any project that you've been granted a role on. \n     * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.\n     * Create a Google Cloud project:\n\n```\ngcloud projects create PROJECT_ID\n```\n\nReplace `PROJECT_ID` with a name for the Google Cloud project you are creating.\n     * Select the Google Cloud project that you created:\n\n```\ngcloud config set project PROJECT_ID\n```\n\nReplace `PROJECT_ID` with your Google Cloud project name.\n  6. If you're using an existing project for this guide, [verify that you have the permissions required to complete this guide](https://docs.cloud.google.com/tpu/docs/quickstart-create-tpu-instance#required-roles). If you created a new project, then you already have the required permissions. \n  7. [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). \n  8. Enable the Compute Engine API, if it is not already enabled: \n**Roles required to enable APIs**\nTo enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n\n```\ngcloud services enable compute.googleapis.com\n```\n\n  9. [Install](https://docs.cloud.google.com/sdk/docs/install) the Google Cloud CLI. \n**Note:** If you installed the gcloud CLI previously, make sure you have the latest version by running `gcloud components update`. \n  10. If you're using an external identity provider (IdP), you must first [ sign in to the gcloud CLI with your federated identity](https://docs.cloud.google.com/iam/docs/workforce-log-in-gcloud). \n  11. To [initialize](https://docs.cloud.google.com/sdk/docs/initializing) the gcloud CLI, run the following command: \n\n```\ngcloud init\n```\n\n  12. [Create or select a Google Cloud project](https://cloud.google.com/resource-manager/docs/creating-managing-projects).\n**Roles required to select or create a project**\n     * **Select a project** : Selecting a project doesn't require a specific IAM role\u2014you can select any project that you've been granted a role on. \n     * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.\n     * Create a Google Cloud project:\n\n```\ngcloud projects create PROJECT_ID\n```\n\nReplace `PROJECT_ID` with a name for the Google Cloud project you are creating.\n     * Select the Google Cloud project that you created:\n\n```\ngcloud config set project PROJECT_ID\n```\n\nReplace `PROJECT_ID` with your Google Cloud project name.\n  13. If you're using an existing project for this guide, [verify that you have the permissions required to complete this guide](https://docs.cloud.google.com/tpu/docs/quickstart-create-tpu-instance#required-roles). If you created a new project, then you already have the required permissions. \n  14. [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). \n  15. Enable the Compute Engine API, if it is not already enabled: \n**Roles required to enable APIs**\nTo enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n\n```\ngcloud services enable compute.googleapis.com\n```"
+      },
+      {
+        "heading": "Required roles",
+        "level": 3,
+        "content": "To get the permissions that you need to create a TPU instance, connect to it using SSH, and run commands, ask your administrator to grant you the following IAM roles on your project: \n  * [Compute Instance Admin (v1) ](https://docs.cloud.google.com/iam/docs/roles-permissions/compute#compute.instanceAdmin.v1) (`roles/compute.instanceAdmin.v1`)\n  * [Service Account User ](https://docs.cloud.google.com/iam/docs/roles-permissions/iam#iam.serviceAccountUser) (`roles/iam.serviceAccountUser`)\n  * [Service Usage Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/serviceusage#serviceusage.serviceUsageAdmin) (`roles/serviceusage.serviceUsageAdmin`)\n\n\nFor more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \nYou might also be able to get the required permissions through [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined)."
+      },
+      {
+        "heading": "Create a TPU v6e (Trillium) instance",
+        "level": 2,
+        "content": "Run the following commands in your local terminal or using [Cloud Shell](https://docs.cloud.google.com/shell/docs/launching-cloud-shell).\n  1. To create a TPU v6e instance, run the following [`gcloud compute instances create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create):\n\n```\ngcloud compute instances create quickstart-tpu \\\n    --machine-type=ct6e-standard-4t \\\n    --zone=europe-west4-a \\\n    --image-project=ubuntu-os-accelerator-images \\\n    --image-family=ubuntu-accel-2204-amd64-tpu-v5e-v5p-v6e \\\n    --maintenance-policy=TERMINATE\n\n```\n\n  2. Optionally, verify that the instance is running by using the [`gcloud compute instances describe` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/describe):\n\n```\ngcloud compute instances describe quickstart-tpu --zone=europe-west4-a\n\n```\n\nIn the output, check the `status` field to verify if the instance is running or still pending."
+      },
+      {
+        "heading": "Connect to the TPU instance",
+        "level": 2,
+        "content": "You can connect to a TPU instance using the Google Cloud console or the gcloud CLI.\nTo connect to the VM using SSH, run the following [`gcloud compute ssh` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/ssh):\n\n```\ngcloud compute ssh quickstart-tpu --zone=europe-west4-a\n\n```"
+      },
+      {
+        "heading": "Install JAX",
+        "level": 2,
+        "content": "Install the JAX framework by running the following command on your TPU instance:\n\n```\npip install jax[tpu] -f https://storage.googleapis.com/jax-releases/libtpu_releases.html\n\n```\n**Note:** If this command fails, you might need to run `sudo apt update` and `sudo apt install python3-pip`."
+      },
+      {
+        "heading": "Run a system check",
+        "level": 2,
+        "content": "Verify that JAX can access the TPU and can run basic operations by running the following commands on your TPU instance:\n  1. Start the Python 3 interpreter:\n\n```\npython3\n\n```\n\n  2. Import the JAX module:\n\n```\n>>> import jax\n\n```\n\n  3. Display the number of TPU cores available:\n\n```\n>>> jax.device_count()\n\n```\n\nThe output shows the number of TPU cores. The number of cores is dependent on the TPU version you are using. For more information, see [TPU versions](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#versions)."
+      },
+      {
+        "heading": "Perform a calculation",
+        "level": 2,
+        "content": "1. Run the following command to add two numbers together:\n\n```\n>>> jax.numpy.add(1, 1)\n\n```\n\nThe output should be similar to the following:\n\n```\n>>> Array(2, dtype=int32, weak_type=True)\n\n```\n\n  2. Exit the Python interpreter:\n\n```\n>>> \nexit()\n\n```"
+      },
+      {
+        "heading": "Clean up",
+        "level": 2,
+        "content": "To avoid incurring charges to your Google Cloud account for the resources used on this page, delete the Google Cloud project with the resources. \nAlternatively, if you want to keep your project, you can delete only the VM by using the [`gcloud compute instances delete` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/delete):\n\n```\ngcloud compute instances delete quickstart-tpu --zone=europe-west4-a\n\n```"
+      },
+      {
+        "heading": "What's next",
+        "level": 2,
+        "content": "* Learn about [TPU resources in Compute Engine](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine)\n  * [Create a TPU instance using other consumption options](https://docs.cloud.google.com/tpu/docs/create-instance-compute)\n  * Learn about [TPU instances in MIGs](https://docs.cloud.google.com/tpu/docs/tpus-and-migs)"
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "gcloud init"
+      },
+      {
+        "language": "text",
+        "code": "gcloud projects create PROJECT_ID"
+      },
+      {
+        "language": "text",
+        "code": "gcloud config set project PROJECT_ID"
+      },
+      {
+        "language": "text",
+        "code": "gcloud services enable compute.googleapis.com"
+      },
+      {
+        "language": "text",
+        "code": "gcloud init"
+      },
+      {
+        "language": "text",
+        "code": "gcloud projects create PROJECT_ID"
+      },
+      {
+        "language": "text",
+        "code": "gcloud config set project PROJECT_ID"
+      },
+      {
+        "language": "text",
+        "code": "gcloud services enable compute.googleapis.com"
+      },
+      {
+        "language": "text",
+        "code": "gcloud compute instances create quickstart-tpu \\\n    --machine-type=ct6e-standard-4t \\\n    --zone=europe-west4-a \\\n    --image-project=ubuntu-os-accelerator-images \\\n    --image-family=ubuntu-accel-2204-amd64-tpu-v5e-v5p-v6e \\\n    --maintenance-policy=TERMINATE"
+      },
+      {
+        "language": "text",
+        "code": "gcloud compute instances describe quickstart-tpu --zone=europe-west4-a"
+      },
+      {
+        "language": "text",
+        "code": "gcloud compute ssh quickstart-tpu --zone=europe-west4-a"
+      },
+      {
+        "language": "text",
+        "code": "pip install jax[tpu] -f https://storage.googleapis.com/jax-releases/libtpu_releases.html"
+      },
+      {
+        "language": "text",
+        "code": "python3"
+      },
+      {
+        "language": "text",
+        "code": ">>> import jax"
+      },
+      {
+        "language": "text",
+        "code": ">>> jax.device_count()"
+      },
+      {
+        "language": "text",
+        "code": ">>> jax.numpy.add(1, 1)"
+      },
+      {
+        "language": "text",
+        "code": ">>> Array(2, dtype=int32, weak_type=True)"
+      },
+      {
+        "language": "text",
+        "code": ">>> \nexit()"
+      },
+      {
+        "language": "text",
+        "code": "gcloud compute instances delete quickstart-tpu --zone=europe-west4-a"
+      }
+    ],
+    "cli_commands": [
+      "gcloud init",
+      "gcloud projects create PROJECT_ID",
+      "gcloud config set project PROJECT_ID",
+      "gcloud services enable compute.googleapis.com",
+      "gcloud compute instances create quickstart-tpu \\",
+      "gcloud compute instances describe quickstart-tpu --zone=europe-west4-a",
+      "gcloud compute ssh quickstart-tpu --zone=europe-west4-a",
+      "pip install jax[tpu] -f https://storage.googleapis.com/jax-releases/libtpu_releases.html",
+      "python3",
+      "gcloud compute instances delete quickstart-tpu --zone=europe-west4-a"
+    ],
+    "environment_variables": [],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Quickstart: Create a TPU instance' (https://docs.cloud.google.com/tpu/docs/quickstart-create-tpu-instance)?",
+        "answer": "Fastest current Compute Engine provisioning path, including required IAM roles and a v6e example."
+      },
+      {
+        "question": "How does 'Quickstart: Create a TPU instance' handle: Create a TPU instance?",
+        "answer": "This document shows you how to create a TPU v6e (Trillium) virtual machine (VM) instance, connect to it, and run a calculation on it. The TPU instance that you create in this quickstart uses on-demand, the default consumption option."
+      },
+      {
+        "question": "How does 'Quickstart: Create a TPU instance' handle: Before you begin?",
+        "answer": "1. Sign in to your Google Cloud account. If you're new to Google Cloud, [ create an account](https://console.cloud.google.com/freetrial) to evaluate how our products perform in real-world scenarios. New customers also get $300 in free credits to run, test, and deploy workloads. \n  2. [Install](https://docs.cloud.google.com/sdk/docs/install) the Google Cloud CLI. \n**Note:** If you installed the gcloud CLI previously, make sure you have the latest version by running `gcloud components update`. \n  3. If you're using an external identity provider (IdP), you must first [ sign in to the gcloud CLI with your federated identity](https://docs.cloud.google.com/iam/docs/workforce-log-in-gcloud). \n  4. To [initialize](https://docs.cloud.google.com/sdk/docs/initializing) the gcloud CLI, run the following command: \n\n```\ngcloud init\n```\n\n  5. [Create or select a Google Cloud project](https://cloud.google.com/resource-manager/docs/creating-managing-projects).\n**Roles required to select or create a project**\n     * **Select a project** : Selecting a project doesn't require a specific IAM role\u2014you can select any project that you've been granted a role on. \n     * **Create a project** : To create a p"
+      },
+      {
+        "question": "How does 'Quickstart: Create a TPU instance' handle: Required roles?",
+        "answer": "To get the permissions that you need to create a TPU instance, connect to it using SSH, and run commands, ask your administrator to grant you the following IAM roles on your project: \n  * [Compute Instance Admin (v1) ](https://docs.cloud.google.com/iam/docs/roles-permissions/compute#compute.instanceAdmin.v1) (`roles/compute.instanceAdmin.v1`)\n  * [Service Account User ](https://docs.cloud.google.com/iam/docs/roles-permissions/iam#iam.serviceAccountUser) (`roles/iam.serviceAccountUser`)\n  * [Service Usage Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/serviceusage#serviceusage.serviceUsageAdmin) (`roles/serviceusage.serviceUsageAdmin`)\n\n\nFor more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \nYou might also be able to get the required permissions through [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined)."
+      },
+      {
+        "question": "How does 'Quickstart: Create a TPU instance' handle: Create a TPU v6e (Trillium) instance?",
+        "answer": "Run the following commands in your local terminal or using [Cloud Shell](https://docs.cloud.google.com/shell/docs/launching-cloud-shell).\n  1. To create a TPU v6e instance, run the following [`gcloud compute instances create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create):\n\n```\ngcloud compute instances create quickstart-tpu \\\n    --machine-type=ct6e-standard-4t \\\n    --zone=europe-west4-a \\\n    --image-project=ubuntu-os-accelerator-images \\\n    --image-family=ubuntu-accel-2204-amd64-tpu-v5e-v5p-v6e \\\n    --maintenance-policy=TERMINATE\n\n```\n\n  2. Optionally, verify that the instance is running by using the [`gcloud compute instances describe` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/describe):\n\n```\ngcloud compute instances describe quickstart-tpu --zone=europe-west4-a\n\n```\n\nIn the output, check the `status` field to verify if the instance is running or still pending."
+      },
+      {
+        "question": "How does 'Quickstart: Create a TPU instance' handle: Connect to the TPU instance?",
+        "answer": "You can connect to a TPU instance using the Google Cloud console or the gcloud CLI.\nTo connect to the VM using SSH, run the following [`gcloud compute ssh` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/ssh):\n\n```\ngcloud compute ssh quickstart-tpu --zone=europe-west4-a\n\n```"
+      },
+      {
+        "question": "How does 'Quickstart: Create a TPU instance' handle: Install JAX?",
+        "answer": "Install the JAX framework by running the following command on your TPU instance:\n\n```\npip install jax[tpu] -f https://storage.googleapis.com/jax-releases/libtpu_releases.html\n\n```\n**Note:** If this command fails, you might need to run `sudo apt update` and `sudo apt install python3-pip`."
+      },
+      {
+        "question": "How does 'Quickstart: Create a TPU instance' handle: Run a system check?",
+        "answer": "Verify that JAX can access the TPU and can run basic operations by running the following commands on your TPU instance:\n  1. Start the Python 3 interpreter:\n\n```\npython3\n\n```\n\n  2. Import the JAX module:\n\n```\n>>> import jax\n\n```\n\n  3. Display the number of TPU cores available:\n\n```\n>>> jax.device_count()\n\n```\n\nThe output shows the number of TPU cores. The number of cores is dependent on the TPU version you are using. For more information, see [TPU versions](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#versions)."
+      },
+      {
+        "question": "How does 'Quickstart: Create a TPU instance' handle: Perform a calculation?",
+        "answer": "1. Run the following command to add two numbers together:\n\n```\n>>> jax.numpy.add(1, 1)\n\n```\n\nThe output should be similar to the following:\n\n```\n>>> Array(2, dtype=int32, weak_type=True)\n\n```\n\n  2. Exit the Python interpreter:\n\n```\n>>> \nexit()\n\n```"
+      },
+      {
+        "question": "How does 'Quickstart: Create a TPU instance' handle: Clean up?",
+        "answer": "To avoid incurring charges to your Google Cloud account for the resources used on this page, delete the Google Cloud project with the resources. \nAlternatively, if you want to keep your project, you can delete only the VM by using the [`gcloud compute instances delete` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/delete):\n\n```\ngcloud compute instances delete quickstart-tpu --zone=europe-west4-a\n\n```"
+      }
+    ],
+    "full_markdown": "# Create a TPU instance\nThis document shows you how to create a TPU v6e (Trillium) virtual machine (VM) instance, connect to it, and run a calculation on it. The TPU instance that you create in this quickstart uses on-demand, the default consumption option.\n## Before you begin\n  1. Sign in to your Google Cloud account. If you're new to Google Cloud, [ create an account](https://console.cloud.google.com/freetrial) to evaluate how our products perform in real-world scenarios. New customers also get $300 in free credits to run, test, and deploy workloads. \n  2. [Install](https://docs.cloud.google.com/sdk/docs/install) the Google Cloud CLI. \n**Note:** If you installed the gcloud CLI previously, make sure you have the latest version by running `gcloud components update`. \n  3. If you're using an external identity provider (IdP), you must first [ sign in to the gcloud CLI with your federated identity](https://docs.cloud.google.com/iam/docs/workforce-log-in-gcloud). \n  4. To [initialize](https://docs.cloud.google.com/sdk/docs/initializing) the gcloud CLI, run the following command: \n\n```\ngcloud init\n```\n\n  5. [Create or select a Google Cloud project](https://cloud.google.com/resource-manager/docs/creating-managing-projects).\n**Roles required to select or create a project**\n     * **Select a project** : Selecting a project doesn't require a specific IAM role\u2014you can select any project that you've been granted a role on. \n     * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.\n     * Create a Google Cloud project:\n\n```\ngcloud projects create PROJECT_ID\n```\n\nReplace `PROJECT_ID` with a name for the Google Cloud project you are creating.\n     * Select the Google Cloud project that you created:\n\n```\ngcloud config set project PROJECT_ID\n```\n\nReplace `PROJECT_ID` with your Google Cloud project name.\n  6. If you're using an existing project for this guide, [verify that you have the permissions required to complete this guide](https://docs.cloud.google.com/tpu/docs/quickstart-create-tpu-instance#required-roles). If you created a new project, then you already have the required permissions. \n  7. [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). \n  8. Enable the Compute Engine API, if it is not already enabled: \n**Roles required to enable APIs**\nTo enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n\n```\ngcloud services enable compute.googleapis.com\n```\n\n  9. [Install](https://docs.cloud.google.com/sdk/docs/install) the Google Cloud CLI. \n**Note:** If you installed the gcloud CLI previously, make sure you have the latest version by running `gcloud components update`. \n  10. If you're using an external identity provider (IdP), you must first [ sign in to the gcloud CLI with your federated identity](https://docs.cloud.google.com/iam/docs/workforce-log-in-gcloud). \n  11. To [initialize](https://docs.cloud.google.com/sdk/docs/initializing) the gcloud CLI, run the following command: \n\n```\ngcloud init\n```\n\n  12. [Create or select a Google Cloud project](https://cloud.google.com/resource-manager/docs/creating-managing-projects).\n**Roles required to select or create a project**\n     * **Select a project** : Selecting a project doesn't require a specific IAM role\u2014you can select any project that you've been granted a role on. \n     * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.\n     * Create a Google Cloud project:\n\n```\ngcloud projects create PROJECT_ID\n```\n\nReplace `PROJECT_ID` with a name for the Google Cloud project you are creating.\n     * Select the Google Cloud project that you created:\n\n```\ngcloud config set project PROJECT_ID\n```\n\nReplace `PROJECT_ID` with your Google Cloud project name.\n  13. If you're using an existing project for this guide, [verify that you have the permissions required to complete this guide](https://docs.cloud.google.com/tpu/docs/quickstart-create-tpu-instance#required-roles). If you created a new project, then you already have the required permissions. \n  14. [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). \n  15. Enable the Compute Engine API, if it is not already enabled: \n**Roles required to enable APIs**\nTo enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n\n```\ngcloud services enable compute.googleapis.com\n```\n\n### Required roles\nTo get the permissions that you need to create a TPU instance, connect to it using SSH, and run commands, ask your administrator to grant you the following IAM roles on your project: \n  * [Compute Instance Admin (v1) ](https://docs.cloud.google.com/iam/docs/roles-permissions/compute#compute.instanceAdmin.v1) (`roles/compute.instanceAdmin.v1`)\n  * [Service Account User ](https://docs.cloud.google.com/iam/docs/roles-permissions/iam#iam.serviceAccountUser) (`roles/iam.serviceAccountUser`)\n  * [Service Usage Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/serviceusage#serviceusage.serviceUsageAdmin) (`roles/serviceusage.serviceUsageAdmin`)\n\n\nFor more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \nYou might also be able to get the required permissions through [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). \n## Create a TPU v6e (Trillium) instance\nRun the following commands in your local terminal or using [Cloud Shell](https://docs.cloud.google.com/shell/docs/launching-cloud-shell).\n  1. To create a TPU v6e instance, run the following [`gcloud compute instances create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create):\n\n```\ngcloud compute instances create quickstart-tpu \\\n    --machine-type=ct6e-standard-4t \\\n    --zone=europe-west4-a \\\n    --image-project=ubuntu-os-accelerator-images \\\n    --image-family=ubuntu-accel-2204-amd64-tpu-v5e-v5p-v6e \\\n    --maintenance-policy=TERMINATE\n\n```\n\n  2. Optionally, verify that the instance is running by using the [`gcloud compute instances describe` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/describe):\n\n```\ngcloud compute instances describe quickstart-tpu --zone=europe-west4-a\n\n```\n\nIn the output, check the `status` field to verify if the instance is running or still pending.\n\n\n## Connect to the TPU instance\nYou can connect to a TPU instance using the Google Cloud console or the gcloud CLI.\nTo connect to the VM using SSH, run the following [`gcloud compute ssh` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/ssh):\n\n```\ngcloud compute ssh quickstart-tpu --zone=europe-west4-a\n\n```\n\n## Install JAX\nInstall the JAX framework by running the following command on your TPU instance:\n\n```\npip install jax[tpu] -f https://storage.googleapis.com/jax-releases/libtpu_releases.html\n\n```\n**Note:** If this command fails, you might need to run `sudo apt update` and `sudo apt install python3-pip`.\n## Run a system check\nVerify that JAX can access the TPU and can run basic operations by running the following commands on your TPU instance:\n  1. Start the Python 3 interpreter:\n\n```\npython3\n\n```\n\n  2. Import the JAX module:\n\n```\n>>> import jax\n\n```\n\n  3. Display the number of TPU cores available:\n\n```\n>>> jax.device_count()\n\n```\n\nThe output shows the number of TPU cores. The number of cores is dependent on the TPU version you are using. For more information, see [TPU versions](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#versions).\n\n\n## Perform a calculation\n  1. Run the following command to add two numbers together:\n\n```\n>>> jax.numpy.add(1, 1)\n\n```\n\nThe output should be similar to the following:\n\n```\n>>> Array(2, dtype=int32, weak_type=True)\n\n```\n\n  2. Exit the Python interpreter:\n\n```\n>>> \nexit()\n\n```\n\n## Clean up\nTo avoid incurring charges to your Google Cloud account for the resources used on this page, delete the Google Cloud project with the resources. \nAlternatively, if you want to keep your project, you can delete only the VM by using the [`gcloud compute instances delete` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/delete):\n\n```\ngcloud compute instances delete quickstart-tpu --zone=europe-west4-a\n\n```\n\n## What's next\n  * Learn about [TPU resources in Compute Engine](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine)\n  * [Create a TPU instance using other consumption options](https://docs.cloud.google.com/tpu/docs/create-instance-compute)\n  * Learn about [TPU instances in MIGs](https://docs.cloud.google.com/tpu/docs/tpus-and-migs)"
+  }
 }

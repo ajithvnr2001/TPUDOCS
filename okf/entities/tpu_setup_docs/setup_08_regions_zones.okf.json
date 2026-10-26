@@ -1,57 +1,376 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:setup_08_regions_zones",
-  "@type": "DocumentationResource",
-  "name": "TPU regions and zones",
-  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/regions-zones",
-  "category": "TPU setup docs",
-  "categorySlug": "tpu_setup_docs",
-  "description": "Authoritative availability matrix for TPU generations, configurations, regions, and zones.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/regions-zones",
-    "crawledAt": "2026-10-26T12:45:04.536020+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 27213
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "TPU regions and zones",
-      "documentedIn",
-      "https://docs.cloud.google.com/tpu/docs/regions-zones"
-    ],
-    [
-      "TPU regions and zones",
-      "belongsToCategory",
-      "tpu_setup_docs"
-    ],
-    [
-      "TPU regions and zones",
-      "targetsPlatform",
-      "Google Cloud Platform"
-    ],
-    [
-      "TPU regions and zones",
-      "managesHardware",
-      "Google Cloud TPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:setup_08_regions_zones",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "setup_08_regions_zones",
+    "name": "TPU regions and zones",
+    "url": "https://docs.cloud.google.com/tpu/docs/regions-zones",
+    "category": "tpu_setup_docs",
+    "description": "Authoritative availability matrix for TPU generations, configurations, regions, and zones.",
+    "char_count": 5771,
+    "word_count": 842,
+    "section_count": 6,
+    "code_block_count": 0,
+    "table_count": 15,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.380212+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:setup_08_regions_zones",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:setup_08_regions_zones",
+        "predicate": "schema:name",
+        "object": "TPU regions and zones"
+      },
+      {
+        "subject": "tpu_doc:setup_08_regions_zones",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/tpu/docs/regions-zones"
+      },
+      {
+        "subject": "tpu_doc:setup_08_regions_zones",
+        "predicate": "schema:category",
+        "object": "tpu_setup_docs"
+      },
+      {
+        "subject": "tpu_doc:setup_08_regions_zones",
+        "predicate": "schema:description",
+        "object": "Authoritative availability matrix for TPU generations, configurations, regions, and zones."
+      },
+      {
+        "subject": "tpu_doc:setup_08_regions_zones",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:TPU7x"
+      },
+      {
+        "subject": "tpu_doc:setup_08_regions_zones",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:setup_08_regions_zones",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5p"
+      },
+      {
+        "subject": "tpu_doc:setup_08_regions_zones",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5e"
+      },
+      {
+        "subject": "tpu_doc:setup_08_regions_zones",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v4"
+      },
+      {
+        "subject": "tpu_doc:setup_08_regions_zones",
+        "predicate": "okf:hasSection",
+        "object": "TPU regions and zones"
+      },
+      {
+        "subject": "tpu_doc:setup_08_regions_zones",
+        "predicate": "okf:hasSection",
+        "object": "North America"
+      },
+      {
+        "subject": "tpu_doc:setup_08_regions_zones",
+        "predicate": "okf:hasSection",
+        "object": "Europe"
+      },
+      {
+        "subject": "tpu_doc:setup_08_regions_zones",
+        "predicate": "okf:hasSection",
+        "object": "Asia Pacific"
+      },
+      {
+        "subject": "tpu_doc:setup_08_regions_zones",
+        "predicate": "okf:hasSection",
+        "object": "South America"
+      },
+      {
+        "subject": "tpu_doc:setup_08_regions_zones",
+        "predicate": "okf:hasSection",
+        "object": "What's next"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "TPU regions and zones provides official guidance on Authoritative availability matrix for TPU generations, configurations, regions, and zones.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/regions-zones",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is TPU regions and zones used for in Cloud TPU workflows?",
-      "answer": "Authoritative availability matrix for TPU generations, configurations, regions, and zones.",
-      "category": "tpu_setup_docs"
-    }
-  ],
-  "contentSummary": "Authoritative availability matrix for TPU generations, configurations, regions, and zones."
+  },
+  "structured_content": {
+    "summary": "Authoritative availability matrix for TPU generations, configurations, regions, and zones.",
+    "sections": [
+      {
+        "heading": "TPU regions and zones",
+        "level": 1,
+        "content": "Google Cloud uses regions, subdivided into zones, to define the geographic location of physical compute resources. For example, the `us-central1` region denotes a region near the geographic center of the United States.\nGoogle Cloud also offers AI zones which are specialized Google Cloud zones for AI/ML training and inference workloads. They provide significant ML accelerator (GPU/TPU) capacity. AI zones are geographically located typically within a 5ms radius from standard Google Cloud zones. For more information see [About AI zones](https://docs.cloud.google.com/compute/docs/regions-zones/ai-zones).\nWhen you create a TPU VM, you specify the zone in which you want to create it. For more information about regional and zonal resources, see Compute Engine [Global, regional, and zonal resources](https://docs.cloud.google.com/compute/docs/regions-zones/global-regional-zonal-resources). You can create TPU VMs in the zones shown in the following table."
+      },
+      {
+        "heading": "North America",
+        "level": 3,
+        "content": "| **TPU type (TPU7x)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All TPU7x configurations](https://docs.cloud.google.com/tpu/docs/tpu7x#configurations)  | Varies by slice size  | \n  * `us-central1-ai1a`\n  * `us-central1-c`\n\n |  \n| **TPU type (v6e)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v6e configurations](https://docs.cloud.google.com/tpu/docs/v6e#configurations)  | Varies by slice size  | \n  * `us-central1-b`\n  * `us-east1-d`\n  * `us-east5-a`\n  * `us-east5-b`\n  * `us-south1-ai1b`\n\n |  \n| **TPU type (v5p)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v5p configurations](https://docs.cloud.google.com/tpu/docs/v5p#configurations)  | Varies by slice size  | \n  * `us-central1-a`\n  * `us-east5-a`\n\n |  \n| **TPU type (v5e)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v5e configurations](https://docs.cloud.google.com/tpu/docs/v5e#configurations)  | Varies by slice size  | \n  * `us-central1-a`\n  * `us-south1-a`\n  * `us-west1-c`\n  * `us-west4-a`\n\n |  \n| **TPU type (v4)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v4 configurations](https://docs.cloud.google.com/tpu/docs/v4#configurations)  | Varies by slice size  | \n  * `us-central2-b`\n\n |  \n| **TPU type (v3)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  v3-8   | 8  | \n  * `us-central1-a`\n  * `us-central1-b`\n\n |  \n| **TPU type (v2)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  v2-8   | 8  | \n  * `us-central1-b`\n  * `us-central1-c`\n\n |  \n|  v2-32   | 32  | \n  * `us-central1-a`\n\n |  \n|  v2-128   | 128  | \n  * `us-central1-a`\n\n |  \n|  v2-256   | 256  | \n  * `us-central1-a`\n\n |  \n|  v2-512   | 512  | \n  * `us-central1-a`\n\n |"
+      },
+      {
+        "heading": "Europe",
+        "level": 3,
+        "content": "| **TPU type (v6e)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v6e configurations](https://docs.cloud.google.com/tpu/docs/v6e#configurations)  | Varies by slice size  | \n  * `europe-west4-a`\n\n |  \n| **TPU type (v5p)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v5p configurations](https://docs.cloud.google.com/tpu/docs/v5p#configurations)  | Varies by slice size  | \n  * `europe-west4-b`\n\n |  \n| **TPU type (v5e)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v5e configurations](https://docs.cloud.google.com/tpu/docs/v5e#configurations)  | Varies by slice size  | \n  * `europe-west4-b`\n\n |  \n| **TPU type (v3)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  v3-8   | 8  | \n  * `europe-west4-a`\n\n |  \n|  v3-32   | 32  | \n  * `europe-west4-a`\n\n |  \n|  v3-64   | 64  | \n  * `europe-west4-a`\n\n |  \n|  v3-128   | 128  | \n  * `europe-west4-a`\n\n |  \n|  v3-256   | 256  | \n  * `europe-west4-a`\n\n |  \n|  v3-512   | 512  | \n  * `europe-west4-a`\n\n |  \n|  v3-1024   | 1024  | \n  * `europe-west4-a`\n\n |  \n|  v3-2048   | 2048  | \n  * `europe-west4-a`\n\n |  \n| **TPU type (v2)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  v2-8   | 8  | \n  * `europe-west4-a`\n\n |  \n|  v2-32   | 32  | \n  * `europe-west4-a`\n\n |  \n|  v2-128   | 128  | \n  * `europe-west4-a`\n\n |  \n|  v2-256   | 256  | \n  * `europe-west4-a`\n\n |  \n|  v2-512   | 512  | \n  * `europe-west4-a`\n\n |"
+      },
+      {
+        "heading": "Asia Pacific",
+        "level": 3,
+        "content": "| **TPU type (v6e)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v6e configurations](https://docs.cloud.google.com/tpu/docs/v6e#configurations)  | Varies by slice size  | \n  * `asia-northeast1-b`\n\n |  \n| **TPU type (v2)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  v2-8   | 8  | \n  * `asia-east1-c`\n\n |"
+      },
+      {
+        "heading": "South America",
+        "level": 3,
+        "content": "| **TPU type (v6e)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v6e configurations](https://docs.cloud.google.com/tpu/docs/v6e#configurations)  | Varies by slice size  | \n  * `southamerica-west1-a`\n\n |  \nTPU types with higher numbers of chips or cores are available only in limited quantities. TPU types with lower chip or core counts are more likely to be available.\n**Note:** The [Cloud TPU pricing](https://cloud.google.com/tpu/pricing) page might display pricing for regions where public TPU zones aren't generally available. Use the tables on this page to verify which regions and zones currently support each TPU version."
+      },
+      {
+        "heading": "What's next",
+        "level": 2,
+        "content": "* To see pricing for TPUs in each region, see [Cloud TPU pricing](https://cloud.google.com/tpu/pricing).\n  * To learn how to work with TPUs, see [Get started](https://docs.cloud.google.com/tpu/docs/quick-starts).\n  * To learn about TPU architecture, see [TPU Architecture](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm).\n  * To learn about the types of models that are well-suited to Cloud TPU, see [When to use TPUs](https://docs.cloud.google.com/tpu/docs/tpus#when_to_use_tpus)."
+      }
+    ],
+    "code_examples": [],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [
+      {
+        "headers": [
+          "**TPU type (TPU7x)**",
+          "TPU cores",
+          "Supported zones"
+        ],
+        "rows": [
+          [
+            "[All TPU7x configurations](https://docs.cloud.google.com/tpu/docs/tpu7x#configurations)",
+            "Varies by slice size"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "**TPU type (v6e)**",
+          "TPU cores",
+          "Supported zones"
+        ],
+        "rows": [
+          [
+            "[All v6e configurations](https://docs.cloud.google.com/tpu/docs/v6e#configurations)",
+            "Varies by slice size"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "**TPU type (v5p)**",
+          "TPU cores",
+          "Supported zones"
+        ],
+        "rows": [
+          [
+            "[All v5p configurations](https://docs.cloud.google.com/tpu/docs/v5p#configurations)",
+            "Varies by slice size"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "**TPU type (v5e)**",
+          "TPU cores",
+          "Supported zones"
+        ],
+        "rows": [
+          [
+            "[All v5e configurations](https://docs.cloud.google.com/tpu/docs/v5e#configurations)",
+            "Varies by slice size"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "**TPU type (v4)**",
+          "TPU cores",
+          "Supported zones"
+        ],
+        "rows": [
+          [
+            "[All v4 configurations](https://docs.cloud.google.com/tpu/docs/v4#configurations)",
+            "Varies by slice size"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "**TPU type (v3)**",
+          "TPU cores",
+          "Supported zones"
+        ],
+        "rows": [
+          [
+            "v3-8",
+            "8"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "**TPU type (v2)**",
+          "TPU cores",
+          "Supported zones"
+        ],
+        "rows": [
+          [
+            "v2-8",
+            "8"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "**TPU type (v6e)**",
+          "TPU cores",
+          "Supported zones"
+        ],
+        "rows": [
+          [
+            "[All v6e configurations](https://docs.cloud.google.com/tpu/docs/v6e#configurations)",
+            "Varies by slice size"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "**TPU type (v5p)**",
+          "TPU cores",
+          "Supported zones"
+        ],
+        "rows": [
+          [
+            "[All v5p configurations](https://docs.cloud.google.com/tpu/docs/v5p#configurations)",
+            "Varies by slice size"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "**TPU type (v5e)**",
+          "TPU cores",
+          "Supported zones"
+        ],
+        "rows": [
+          [
+            "[All v5e configurations](https://docs.cloud.google.com/tpu/docs/v5e#configurations)",
+            "Varies by slice size"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "**TPU type (v3)**",
+          "TPU cores",
+          "Supported zones"
+        ],
+        "rows": [
+          [
+            "v3-8",
+            "8"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "**TPU type (v2)**",
+          "TPU cores",
+          "Supported zones"
+        ],
+        "rows": [
+          [
+            "v2-8",
+            "8"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "**TPU type (v6e)**",
+          "TPU cores",
+          "Supported zones"
+        ],
+        "rows": [
+          [
+            "[All v6e configurations](https://docs.cloud.google.com/tpu/docs/v6e#configurations)",
+            "Varies by slice size"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "**TPU type (v2)**",
+          "TPU cores",
+          "Supported zones"
+        ],
+        "rows": [
+          [
+            "v2-8",
+            "8"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "**TPU type (v6e)**",
+          "TPU cores",
+          "Supported zones"
+        ],
+        "rows": [
+          [
+            "[All v6e configurations](https://docs.cloud.google.com/tpu/docs/v6e#configurations)",
+            "Varies by slice size"
+          ]
+        ]
+      }
+    ],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'TPU regions and zones' (https://docs.cloud.google.com/tpu/docs/regions-zones)?",
+        "answer": "Authoritative availability matrix for TPU generations, configurations, regions, and zones."
+      },
+      {
+        "question": "How does 'TPU regions and zones' handle: TPU regions and zones?",
+        "answer": "Google Cloud uses regions, subdivided into zones, to define the geographic location of physical compute resources. For example, the `us-central1` region denotes a region near the geographic center of the United States.\nGoogle Cloud also offers AI zones which are specialized Google Cloud zones for AI/ML training and inference workloads. They provide significant ML accelerator (GPU/TPU) capacity. AI zones are geographically located typically within a 5ms radius from standard Google Cloud zones. For more information see [About AI zones](https://docs.cloud.google.com/compute/docs/regions-zones/ai-zones).\nWhen you create a TPU VM, you specify the zone in which you want to create it. For more information about regional and zonal resources, see Compute Engine [Global, regional, and zonal resources](https://docs.cloud.google.com/compute/docs/regions-zones/global-regional-zonal-resources). You can create TPU VMs in the zones shown in the following table."
+      },
+      {
+        "question": "How does 'TPU regions and zones' handle: North America?",
+        "answer": "| **TPU type (TPU7x)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All TPU7x configurations](https://docs.cloud.google.com/tpu/docs/tpu7x#configurations)  | Varies by slice size  | \n  * `us-central1-ai1a`\n  * `us-central1-c`\n\n |  \n| **TPU type (v6e)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v6e configurations](https://docs.cloud.google.com/tpu/docs/v6e#configurations)  | Varies by slice size  | \n  * `us-central1-b`\n  * `us-east1-d`\n  * `us-east5-a`\n  * `us-east5-b`\n  * `us-south1-ai1b`\n\n |  \n| **TPU type (v5p)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v5p configurations](https://docs.cloud.google.com/tpu/docs/v5p#configurations)  | Varies by slice size  | \n  * `us-central1-a`\n  * `us-east5-a`\n\n |  \n| **TPU type (v5e)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v5e configurations](https://docs.cloud.google.com/tpu/docs/v5e#configurations)  | Varies by slice size  | \n  * `us-central1-a`\n  * `us-south1-a`\n  * `us-west1-c`\n  * `us-west4-a`\n\n |  \n| **TPU type (v4)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v4 configurations](https://docs.cloud.google.com/tpu/docs/v"
+      },
+      {
+        "question": "How does 'TPU regions and zones' handle: Europe?",
+        "answer": "| **TPU type (v6e)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v6e configurations](https://docs.cloud.google.com/tpu/docs/v6e#configurations)  | Varies by slice size  | \n  * `europe-west4-a`\n\n |  \n| **TPU type (v5p)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v5p configurations](https://docs.cloud.google.com/tpu/docs/v5p#configurations)  | Varies by slice size  | \n  * `europe-west4-b`\n\n |  \n| **TPU type (v5e)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v5e configurations](https://docs.cloud.google.com/tpu/docs/v5e#configurations)  | Varies by slice size  | \n  * `europe-west4-b`\n\n |  \n| **TPU type (v3)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  v3-8   | 8  | \n  * `europe-west4-a`\n\n |  \n|  v3-32   | 32  | \n  * `europe-west4-a`\n\n |  \n|  v3-64   | 64  | \n  * `europe-west4-a`\n\n |  \n|  v3-128   | 128  | \n  * `europe-west4-a`\n\n |  \n|  v3-256   | 256  | \n  * `europe-west4-a`\n\n |  \n|  v3-512   | 512  | \n  * `europe-west4-a`\n\n |  \n|  v3-1024   | 1024  | \n  * `europe-west4-a`\n\n |  \n|  v3-2048   | 2048  | \n  * `europe-west4-a`\n\n |  \n| **TPU type (v2)**  | TPU cores  | Supported zones  |  \n| --- | --"
+      },
+      {
+        "question": "How does 'TPU regions and zones' handle: Asia Pacific?",
+        "answer": "| **TPU type (v6e)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v6e configurations](https://docs.cloud.google.com/tpu/docs/v6e#configurations)  | Varies by slice size  | \n  * `asia-northeast1-b`\n\n |  \n| **TPU type (v2)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  v2-8   | 8  | \n  * `asia-east1-c`\n\n |"
+      },
+      {
+        "question": "How does 'TPU regions and zones' handle: South America?",
+        "answer": "| **TPU type (v6e)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v6e configurations](https://docs.cloud.google.com/tpu/docs/v6e#configurations)  | Varies by slice size  | \n  * `southamerica-west1-a`\n\n |  \nTPU types with higher numbers of chips or cores are available only in limited quantities. TPU types with lower chip or core counts are more likely to be available.\n**Note:** The [Cloud TPU pricing](https://cloud.google.com/tpu/pricing) page might display pricing for regions where public TPU zones aren't generally available. Use the tables on this page to verify which regions and zones currently support each TPU version."
+      },
+      {
+        "question": "How does 'TPU regions and zones' handle: What's next?",
+        "answer": "* To see pricing for TPUs in each region, see [Cloud TPU pricing](https://cloud.google.com/tpu/pricing).\n  * To learn how to work with TPUs, see [Get started](https://docs.cloud.google.com/tpu/docs/quick-starts).\n  * To learn about TPU architecture, see [TPU Architecture](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm).\n  * To learn about the types of models that are well-suited to Cloud TPU, see [When to use TPUs](https://docs.cloud.google.com/tpu/docs/tpus#when_to_use_tpus)."
+      }
+    ],
+    "full_markdown": "# TPU regions and zones\nGoogle Cloud uses regions, subdivided into zones, to define the geographic location of physical compute resources. For example, the `us-central1` region denotes a region near the geographic center of the United States.\nGoogle Cloud also offers AI zones which are specialized Google Cloud zones for AI/ML training and inference workloads. They provide significant ML accelerator (GPU/TPU) capacity. AI zones are geographically located typically within a 5ms radius from standard Google Cloud zones. For more information see [About AI zones](https://docs.cloud.google.com/compute/docs/regions-zones/ai-zones).\nWhen you create a TPU VM, you specify the zone in which you want to create it. For more information about regional and zonal resources, see Compute Engine [Global, regional, and zonal resources](https://docs.cloud.google.com/compute/docs/regions-zones/global-regional-zonal-resources). You can create TPU VMs in the zones shown in the following table.\n### North America  \n| **TPU type (TPU7x)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All TPU7x configurations](https://docs.cloud.google.com/tpu/docs/tpu7x#configurations)  | Varies by slice size  | \n  * `us-central1-ai1a`\n  * `us-central1-c`\n\n |  \n| **TPU type (v6e)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v6e configurations](https://docs.cloud.google.com/tpu/docs/v6e#configurations)  | Varies by slice size  | \n  * `us-central1-b`\n  * `us-east1-d`\n  * `us-east5-a`\n  * `us-east5-b`\n  * `us-south1-ai1b`\n\n |  \n| **TPU type (v5p)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v5p configurations](https://docs.cloud.google.com/tpu/docs/v5p#configurations)  | Varies by slice size  | \n  * `us-central1-a`\n  * `us-east5-a`\n\n |  \n| **TPU type (v5e)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v5e configurations](https://docs.cloud.google.com/tpu/docs/v5e#configurations)  | Varies by slice size  | \n  * `us-central1-a`\n  * `us-south1-a`\n  * `us-west1-c`\n  * `us-west4-a`\n\n |  \n| **TPU type (v4)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v4 configurations](https://docs.cloud.google.com/tpu/docs/v4#configurations)  | Varies by slice size  | \n  * `us-central2-b`\n\n |  \n| **TPU type (v3)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  v3-8   | 8  | \n  * `us-central1-a`\n  * `us-central1-b`\n\n |  \n| **TPU type (v2)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  v2-8   | 8  | \n  * `us-central1-b`\n  * `us-central1-c`\n\n |  \n|  v2-32   | 32  | \n  * `us-central1-a`\n\n |  \n|  v2-128   | 128  | \n  * `us-central1-a`\n\n |  \n|  v2-256   | 256  | \n  * `us-central1-a`\n\n |  \n|  v2-512   | 512  | \n  * `us-central1-a`\n\n |  \n### Europe  \n| **TPU type (v6e)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v6e configurations](https://docs.cloud.google.com/tpu/docs/v6e#configurations)  | Varies by slice size  | \n  * `europe-west4-a`\n\n |  \n| **TPU type (v5p)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v5p configurations](https://docs.cloud.google.com/tpu/docs/v5p#configurations)  | Varies by slice size  | \n  * `europe-west4-b`\n\n |  \n| **TPU type (v5e)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v5e configurations](https://docs.cloud.google.com/tpu/docs/v5e#configurations)  | Varies by slice size  | \n  * `europe-west4-b`\n\n |  \n| **TPU type (v3)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  v3-8   | 8  | \n  * `europe-west4-a`\n\n |  \n|  v3-32   | 32  | \n  * `europe-west4-a`\n\n |  \n|  v3-64   | 64  | \n  * `europe-west4-a`\n\n |  \n|  v3-128   | 128  | \n  * `europe-west4-a`\n\n |  \n|  v3-256   | 256  | \n  * `europe-west4-a`\n\n |  \n|  v3-512   | 512  | \n  * `europe-west4-a`\n\n |  \n|  v3-1024   | 1024  | \n  * `europe-west4-a`\n\n |  \n|  v3-2048   | 2048  | \n  * `europe-west4-a`\n\n |  \n| **TPU type (v2)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  v2-8   | 8  | \n  * `europe-west4-a`\n\n |  \n|  v2-32   | 32  | \n  * `europe-west4-a`\n\n |  \n|  v2-128   | 128  | \n  * `europe-west4-a`\n\n |  \n|  v2-256   | 256  | \n  * `europe-west4-a`\n\n |  \n|  v2-512   | 512  | \n  * `europe-west4-a`\n\n |  \n### Asia Pacific  \n| **TPU type (v6e)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v6e configurations](https://docs.cloud.google.com/tpu/docs/v6e#configurations)  | Varies by slice size  | \n  * `asia-northeast1-b`\n\n |  \n| **TPU type (v2)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  v2-8   | 8  | \n  * `asia-east1-c`\n\n |  \n### South America  \n| **TPU type (v6e)**  | TPU cores  | Supported zones  |  \n| --- | --- | --- |  \n|  [All v6e configurations](https://docs.cloud.google.com/tpu/docs/v6e#configurations)  | Varies by slice size  | \n  * `southamerica-west1-a`\n\n |  \nTPU types with higher numbers of chips or cores are available only in limited quantities. TPU types with lower chip or core counts are more likely to be available.\n**Note:** The [Cloud TPU pricing](https://cloud.google.com/tpu/pricing) page might display pricing for regions where public TPU zones aren't generally available. Use the tables on this page to verify which regions and zones currently support each TPU version.\n## What's next\n  * To see pricing for TPUs in each region, see [Cloud TPU pricing](https://cloud.google.com/tpu/pricing).\n  * To learn how to work with TPUs, see [Get started](https://docs.cloud.google.com/tpu/docs/quick-starts).\n  * To learn about TPU architecture, see [TPU Architecture](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm).\n  * To learn about the types of models that are well-suited to Cloud TPU, see [When to use TPUs](https://docs.cloud.google.com/tpu/docs/tpus#when_to_use_tpus)."
+  }
 }

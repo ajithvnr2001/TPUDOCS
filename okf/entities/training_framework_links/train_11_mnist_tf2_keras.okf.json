@@ -1,52 +1,465 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:train_11_mnist_tf2_keras",
-  "@type": "DocumentationResource",
-  "name": "Cloud TPU MNIST with TensorFlow 2.x/Keras",
-  "canonicalUrl": "https://cloud.google.com/tpu/docs/tutorials/mnist-2.x",
-  "category": "Training framework links",
-  "categorySlug": "training_framework_links",
-  "description": "Official end-to-end TensorFlow/Keras training recipe using TPU distribution; useful as a small migration smoke test before a larger workload.",
-  "provenance": {
-    "sourceUrl": "https://cloud.google.com/tpu/docs/tutorials/mnist-2.x",
-    "crawledAt": "2026-10-26T12:45:47.695635+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 44249
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Cloud TPU MNIST with TensorFlow 2.x/Keras",
-      "documentedIn",
-      "https://cloud.google.com/tpu/docs/tutorials/mnist-2.x"
-    ],
-    [
-      "Cloud TPU MNIST with TensorFlow 2.x/Keras",
-      "belongsToCategory",
-      "training_framework_links"
-    ],
-    [
-      "Cloud TPU MNIST with TensorFlow 2.x/Keras",
-      "supportsWorkflow",
-      "Distributed Machine Learning Training"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:train_11_mnist_tf2_keras",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "train_11_mnist_tf2_keras",
+    "name": "Cloud TPU MNIST with TensorFlow 2.x/Keras",
+    "url": "https://cloud.google.com/tpu/docs/tutorials/mnist-2.x",
+    "category": "training_framework_links",
+    "description": "Official end-to-end TensorFlow/Keras training recipe using TPU distribution; useful as a small migration smoke test before a larger workload.",
+    "char_count": 12268,
+    "word_count": 1220,
+    "section_count": 41,
+    "code_block_count": 4,
+    "table_count": 0,
+    "cli_command_count": 5,
+    "indexed_at": "2026-10-26T14:46:54.508199+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "schema:name",
+        "object": "Cloud TPU MNIST with TensorFlow 2.x/Keras"
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "schema:url",
+        "object": "https://cloud.google.com/tpu/docs/tutorials/mnist-2.x"
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "schema:category",
+        "object": "training_framework_links"
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "schema:description",
+        "object": "Official end-to-end TensorFlow/Keras training recipe using TPU distribution; useful as a small migration smoke test before a larger workload."
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TPUStrategy"
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "Cloud TPU MNIST with TensorFlow 2.x and Keras (`mnist-2.x`)"
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "1. Overview & Architecture"
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "2. Provision a Cloud TPU VM & Install TensorFlow"
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "Create a TPU VM using Compute Engine"
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "SSH into the TPU VM"
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "3. Initialize `TPUClusterResolver` and `TPUStrategy`"
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "4. Official `tensorflow/tpu` Keras MNIST Script (`models/experimental/mnist_keras/mnist.py`)"
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "Copyright 2018 The TensorFlow Authors. All Rights Reserved."
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "you may not use this file except in compliance with the License."
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "You may obtain a copy of the License at"
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "Unless required by applicable law or agreed to in writing, software"
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied."
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "See the License for the specific language governing permissions and"
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "limitations under the License."
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "=============================================================================="
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "Standard Imports"
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "TODO(sourabhbajaj): Remove the need for this flag."
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "Batch size should satify two properties to be able to run in cloud:"
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "num_eval_samples % batch_size == 0"
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "batch_size % 8 == 0"
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "input image dimensions"
+      },
+      {
+        "subject": "tpu_doc:train_11_mnist_tf2_keras",
+        "predicate": "okf:hasSection",
+        "object": "5. Official `tensorflow/tpu` TensorFlow 2.x MNIST with TensorBoard Summary (`mnist_tf2_with_summary.py`)"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Cloud TPU MNIST with TensorFlow 2.x/Keras provides official guidance on Official end-to-end TensorFlow/Keras training recipe using TPU distribution; useful as a small migration smoke test before a larger workload.",
-      "confidence": 1.0,
-      "source": "https://cloud.google.com/tpu/docs/tutorials/mnist-2.x",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Cloud TPU MNIST with TensorFlow 2.x/Keras used for in Cloud TPU workflows?",
-      "answer": "Official end-to-end TensorFlow/Keras training recipe using TPU distribution; useful as a small migration smoke test before a larger workload.",
-      "category": "training_framework_links"
-    }
-  ],
-  "contentSummary": "Official end-to-end TensorFlow/Keras training recipe using TPU distribution; useful as a small migration smoke test before a larger workload."
+  },
+  "structured_content": {
+    "summary": "Official end-to-end TensorFlow/Keras training recipe using TPU distribution; useful as a small migration smoke test before a larger workload.",
+    "sections": [
+      {
+        "heading": "Cloud TPU MNIST with TensorFlow 2.x and Keras (`mnist-2.x`)",
+        "level": 1,
+        "content": "> **URL Redirect Note**: On `cloud.google.com/tpu/docs/tutorials/mnist-2.x`, Google Cloud now HTTP 301 redirects to `/tpu/docs/pytorch-on-tpu`. Below is the complete end-to-end TensorFlow 2.x / Keras Cloud TPU MNIST training guide and the official `tensorflow/tpu` reference scripts (`mnist.py` and `mnist_tf2_with_summary.py`)."
+      },
+      {
+        "heading": "1. Overview & Architecture",
+        "level": 2,
+        "content": "This recipe demonstrates synchronous distributed training on a Cloud TPU VM using TensorFlow 2.x, Keras (`tf.keras`), `tf.data`, and `tf.distribute.TPUStrategy`. It serves as a fast migration smoke test before running larger TensorFlow/Keras workloads on Cloud TPU."
+      },
+      {
+        "heading": "2. Provision a Cloud TPU VM & Install TensorFlow",
+        "level": 2,
+        "content": "```bash"
+      },
+      {
+        "heading": "Create a TPU VM using Compute Engine",
+        "level": 1,
+        "content": "gcloud compute tpus tpu-vm create mnist-tpu-vm \\\n  --zone=us-central1-a \\\n  --accelerator-type=v5litepod-8 \\\n  --version=tpu-ubuntu2204-base"
+      },
+      {
+        "heading": "SSH into the TPU VM",
+        "level": 1,
+        "content": "gcloud compute tpus tpu-vm ssh mnist-tpu-vm --zone=us-central1-a\n```"
+      },
+      {
+        "heading": "3. Initialize `TPUClusterResolver` and `TPUStrategy`",
+        "level": 2,
+        "content": "```python\nimport tensorflow as tf\nimport tensorflow_datasets as tfds\n\nresolver = tf.distribute.cluster_resolver.TPUClusterResolver(tpu='local')\ntf.config.experimental_connect_to_cluster(resolver)\ntf.tpu.experimental.initialize_tpu_system(resolver)\nstrategy = tf.distribute.TPUStrategy(resolver)\nprint('Number of accelerators: ', strategy.num_replicas_in_sync)\n```"
+      },
+      {
+        "heading": "4. Official `tensorflow/tpu` Keras MNIST Script (`models/experimental/mnist_keras/mnist.py`)",
+        "level": 2,
+        "content": "```python"
+      },
+      {
+        "heading": "Copyright 2018 The TensorFlow Authors. All Rights Reserved.",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "Licensed under the Apache License, Version 2.0 (the \"License\");",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "you may not use this file except in compliance with the License.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "You may obtain a copy of the License at",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "http://www.apache.org/licenses/LICENSE-2.0",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "Unless required by applicable law or agreed to in writing, software",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "distributed under the License is distributed on an \"AS IS\" BASIS,",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "See the License for the specific language governing permissions and",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "limitations under the License.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "==============================================================================",
+        "level": 1,
+        "content": "r\"\"\"Experimental Keras MNIST Example.\n\nTo test on CPU:\n    python mnist.py --use_tpu=False [--fake_data=true]\n\nTo test on TPU:\n    python mnist.py --use_tpu=True [--tpu=$TPU_NAME]\n\"\"\"\n\nfrom __future__ import absolute_import\nfrom __future__ import division\nfrom __future__ import print_function"
+      },
+      {
+        "heading": "Standard Imports",
+        "level": 1,
+        "content": "from absl import app\nfrom absl import flags\nimport numpy as np\nimport tensorflow.compat.v1 as tf\nfrom tensorflow.contrib import cluster_resolver as contrib_cluster_resolver\nfrom tensorflow.contrib import distribute as contrib_distribute"
+      },
+      {
+        "heading": "TODO(sourabhbajaj): Remove the need for this flag.",
+        "level": 1,
+        "content": "flags.DEFINE_bool('use_tpu', True,\n                  'Ignored: preserved for backward compatibility.')\nflags.DEFINE_string('tpu', '', 'Name of the TPU to use.')\nflags.DEFINE_string(\n    'model_dir', None,\n    ('The directory where the model and training/evaluation summaries '\n     'are stored. If unset, no summaries will be stored.'))\n\nflags.DEFINE_bool('fake_data', False, 'Use fake data to test functionality.')"
+      },
+      {
+        "heading": "Batch size should satify two properties to be able to run in cloud:",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "num_eval_samples % batch_size == 0",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "batch_size % 8 == 0",
+        "level": 1,
+        "content": "BATCH_SIZE = 200\nNUM_CLASSES = 10\nEPOCHS = 15"
+      },
+      {
+        "heading": "input image dimensions",
+        "level": 1,
+        "content": "IMG_ROWS, IMG_COLS = 28, 28\n\nFLAGS = flags.FLAGS\n\n\ndef mnist_model(input_shape):\n  \"\"\"Creates a MNIST model.\"\"\"\n  model = tf.keras.models.Sequential()\n  model.add(\n      tf.keras.layers.Conv2D(\n          32, kernel_size=(3, 3), activation='relu', input_shape=input_shape))\n  model.add(tf.keras.layers.Conv2D(64, (3, 3), activation='relu'))\n  model.add(tf.keras.layers.MaxPooling2D(pool_size=(2, 2)))\n  model.add(tf.keras.layers.Dropout(0.25))\n  model.add(tf.keras.layers.Flatten())\n  model.add(tf.keras.layers.Dense(128, activation='relu'))\n  model.add(tf.keras.layers.Dropout(0.5))\n  model.add(tf.keras.layers.Dense(NUM_CLASSES, activation='softmax'))\n  return model\n\n\ndef run():\n  \"\"\"Run the model training and return evaluation output.\"\"\"\n  resolver = contrib_cluster_resolver.TPUClusterResolver(tpu=FLAGS.tpu)\n  contrib_distribute.initialize_tpu_system(resolver)\n  strategy = contrib_distribute.TPUStrategy(resolver, steps_per_run=100)\n\n  if FLAGS.fake_data:\n    print('Using fake data')\n    x_train = np.random.random((BATCH_SIZE, IMG_ROWS, IMG_COLS))\n    y_train = np.zeros([BATCH_SIZE, 1], dtype=np.int32)\n    x_test, y_test = x_train, y_train\n  else:\n    # the data, split between train and test sets\n    print('Using real data')\n    (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()\n\n  x_train = x_train.reshape(x_train.shape[0], IMG_ROWS, IMG_COLS, 1)\n  x_test = x_test.reshape(x_test.shape[0], IMG_ROWS, IMG_COLS, 1)\n  input_shape = (IMG_ROWS, IMG_COLS, 1)\n\n  x_train = x_train.astype('float32')\n  x_test = x_test.astype('float32')\n  x_train /= 255\n  x_test /= 255\n  print('x_train shape:', x_train.shape)\n  print(x_train.shape[0], 'train samples')\n  print(x_test.shape[0], 'test samples')\n\n  # convert class vectors to binary class matrices\n  y_train = tf.keras.utils.to_categorical(y_train, NUM_CLASSES)\n  y_test = tf.keras.utils.to_categorical(y_test, NUM_CLASSES)\n  with strategy.scope():\n    model = mnist_model(input_shape)\n    model.compile(\n        loss=tf.keras.losses.categorical_crossentropy,\n        optimizer=tf.train.GradientDescentOptimizer(learning_rate=0.05),\n        metrics=['accuracy'])\n\n  callbacks = []\n  if FLAGS.model_dir:\n    callbacks = [tf.keras.callbacks.TensorBoard(log_dir=FLAGS.model_dir)]\n\n  model.fit(\n      x_train,\n      y_train,\n      batch_size=BATCH_SIZE,\n      callbacks=callbacks,\n      epochs=EPOCHS,\n      verbose=1,\n      validation_data=(x_test, y_test))\n  return model.evaluate(x_test, y_test, batch_size=BATCH_SIZE, verbose=1)\n\n\ndef main(unused_dev):\n  score = run()\n  print('Loss for final step: %s;' % score[0])\n  print('Accuracy: %s;' % score[1])\n\n\nif __name__ == '__main__':\n  tf.logging.set_verbosity(tf.logging.INFO)\n  app.run(main)\n```"
+      },
+      {
+        "heading": "5. Official `tensorflow/tpu` TensorFlow 2.x MNIST with TensorBoard Summary (`mnist_tf2_with_summary.py`)",
+        "level": 2,
+        "content": "```python"
+      },
+      {
+        "heading": "Copyright 2019 The TensorFlow Authors. All Rights Reserved.",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "Licensed under the Apache License, Version 2.0 (the \"License\");",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "you may not use this file except in compliance with the License.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "You may obtain a copy of the License at",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "http://www.apache.org/licenses/LICENSE-2.0",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "Unless required by applicable law or agreed to in writing, software",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "distributed under the License is distributed on an \"AS IS\" BASIS,",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "See the License for the specific language governing permissions and",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "limitations under the License.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "==============================================================================",
+        "level": 1,
+        "content": "r\"\"\"Keras MNIST Example with tf.summary usage.\n\nPassing Keras Tensorboard callback to Keras fit() API parameter writes\nmetrics and losses as well as model weights to summary event files for\nvisualization. However, for advanced use cases, users may wish to write\naribitrary intermediate tensors to summary event files. This example\nshows how to write intermediate tensors in model definition while running\na model on TPU's.\n\nTo test on TPU:\n    python mnist_tf2_with_summary.py --use_tpu=True [--tpu=$TPU_NAME]\n\"\"\"\n\nfrom __future__ import absolute_import\nfrom __future__ import division\nfrom __future__ import print_function"
+      },
+      {
+        "heading": "Standard Imports",
+        "level": 1,
+        "content": "from absl import app\nfrom absl import flags\nfrom absl import logging\n\nimport tensorflow.compat.v2 as tf\n\nflags.DEFINE_bool('use_tpu', True,\n                  'Ignored: preserved for backward compatibility.')\nflags.DEFINE_string('tpu', '', 'Name of the TPU to use.')\nflags.DEFINE_string(\n    'model_dir', '',\n    ('The directory where the model and training/evaluation summaries '\n     'are stored. If unset, no summaries will be stored.'))\nflags.DEFINE_string(\n    'protocol', None,\n    'Ex: \"grpc\". Overrides the communication protocol for the '\n    'cluster.')\n\nflags.DEFINE_bool('fake_data', False, 'Use fake data to test functionality.')"
+      },
+      {
+        "heading": "Batch size should satify two properties to be able to run in cloud:",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "num_eval_samples % batch_size == 0",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "batch_size % 8 == 0",
+        "level": 1,
+        "content": "BATCH_SIZE = 200\nNUM_CLASSES = 10\n_EPOCHS = 15"
+      },
+      {
+        "heading": "input image dimensions",
+        "level": 1,
+        "content": "IMG_ROWS, IMG_COLS = 28, 28\n\nFLAGS = flags.FLAGS\n\n\nclass LayerForWritingHistogramSummary(tf.keras.layers.Layer):\n  \"\"\"A pass-through layer that only records values to summary.\"\"\"\n\n  def call(self, x):\n    tf.summary.histogram('custom_histogram_summary', x)\n    return x\n\n\nclass LayerForWritingImageSummary(tf.keras.layers.Layer):\n  \"\"\"A pass-through layer that only records image values to summary.\"\"\"\n\n  def call(self, x):\n    tf.summary.image('custom_image_summary', x)\n    return x\n\n\ndef mnist_model(input_shape):\n  \"\"\"Creates a MNIST model.\"\"\"\n  model = tf.keras.models.Sequential()\n\n  # Adding custom pass-through layer to visualize input images.\n  model.add(LayerForWritingImageSummary())\n\n  model.add(\n      tf.keras.layers.Conv2D(\n          32, kernel_size=(3, 3), activation='relu', input_shape=input_shape))\n  model.add(tf.keras.layers.Conv2D(64, (3, 3), activation='relu'))\n  model.add(tf.keras.layers.MaxPooling2D(pool_size=(2, 2)))\n  model.add(tf.keras.layers.Dropout(0.25))\n  model.add(tf.keras.layers.Flatten())\n  model.add(tf.keras.layers.Dense(128, activation='relu'))\n  model.add(tf.keras.layers.Dropout(0.5))\n  model.add(tf.keras.layers.Dense(NUM_CLASSES, activation='softmax'))\n\n  # Adding custom pass-through layer for summary recording.\n  model.add(LayerForWritingHistogramSummary())\n  return model\n\n\ndef run():\n  \"\"\"Run the model training and return evaluation output.\"\"\"\n  resolver = tf.distribute.cluster_resolver.TPUClusterResolver(tpu=FLAGS.tpu)\n  tf.config.experimental_connect_to_cluster(resolver, protocol=FLAGS.protocol)\n  logging.info('Remote eager configured')\n  tf.tpu.experimental.initialize_tpu_system(resolver)\n  strategy = tf.distribute.experimental.TPUStrategy(resolver)\n\n  (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()\n\n  x_train = x_train.reshape(x_train.shape[0], IMG_ROWS, IMG_COLS, 1)\n  x_test = x_test.reshape(x_test.shape[0], IMG_ROWS, IMG_COLS, 1)\n  input_shape = (IMG_ROWS, IMG_COLS, 1)\n\n  x_train = x_train.astype('float32')\n  x_test = x_test.astype('float32')\n  x_train /= 255\n  x_test /= 255\n  print('x_train shape:', x_train.shape)\n  print(x_train.shape[0], 'train samples')\n  print(x_test.shape[0], 'test samples')\n  steps_per_epoch = int(x_train.shape[0] / BATCH_SIZE)\n  steps_per_eval = int(x_test.shape[0] / BATCH_SIZE)\n\n  # convert class vectors to binary class matrices\n  y_train = tf.keras.utils.to_categorical(y_train, NUM_CLASSES)\n  y_test = tf.keras.utils.to_categorical(y_test, NUM_CLASSES)\n\n  train_dataset = tf.data.Dataset.from_tensor_slices((x_train, y_train))\n  train_dataset = train_dataset.batch(BATCH_SIZE, drop_remainder=True).repeat()\n  test_dataset = tf.data.Dataset.from_tensor_slices((x_test, y_test))\n  test_dataset = test_dataset.batch(BATCH_SIZE, drop_remainder=True).repeat()\n\n  with strategy.scope():\n    model = mnist_model(input_shape)\n    optimizer = tf.keras.optimizers.SGD(learning_rate=0.05)\n    logging.info('Finished building Keras MNIST model')\n    model.compile(optimizer, loss=tf.keras.losses.categorical_crossentropy)\n\n    # Writing summary logs to file may have performance impact. Therefore, we\n    # only write summary events every 100th steps.\n    tensorboard_callback = tf.keras.callbacks.TensorBoard(\n        FLAGS.model_dir, update_freq=100)\n    model.fit(\n        x=train_dataset,\n        epochs=_EPOCHS,\n        steps_per_epoch=steps_per_epoch,\n        validation_steps=steps_per_eval,\n        validation_data=test_dataset,\n        callbacks=[tensorboard_callback])\n\n\ndef main(unused_dev):\n  run()\n\n\nif __name__ == '__main__':\n  logging.set_verbosity(logging.INFO)\n  tf.enable_v2_behavior()\n\n  # Soft device placement should be enabled to automatically place\n  # summary ops to CPU.\n  tf.config.set_soft_device_placement(True)\n\n  app.run(main)\n```"
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "bash",
+        "code": "# Create a TPU VM using Compute Engine\ngcloud compute tpus tpu-vm create mnist-tpu-vm \\\n  --zone=us-central1-a \\\n  --accelerator-type=v5litepod-8 \\\n  --version=tpu-ubuntu2204-base\n\n# SSH into the TPU VM\ngcloud compute tpus tpu-vm ssh mnist-tpu-vm --zone=us-central1-a"
+      },
+      {
+        "language": "python",
+        "code": "import tensorflow as tf\nimport tensorflow_datasets as tfds\n\nresolver = tf.distribute.cluster_resolver.TPUClusterResolver(tpu='local')\ntf.config.experimental_connect_to_cluster(resolver)\ntf.tpu.experimental.initialize_tpu_system(resolver)\nstrategy = tf.distribute.TPUStrategy(resolver)\nprint('Number of accelerators: ', strategy.num_replicas_in_sync)"
+      },
+      {
+        "language": "python",
+        "code": "# Copyright 2018 The TensorFlow Authors. All Rights Reserved.\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#     http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n# ==============================================================================\nr\"\"\"Experimental Keras MNIST Example.\n\nTo test on CPU:\n    python mnist.py --use_tpu=False [--fake_data=true]\n\nTo test on TPU:\n    python mnist.py --use_tpu=True [--tpu=$TPU_NAME]\n\"\"\"\n\nfrom __future__ import absolute_import\nfrom __future__ import division\nfrom __future__ import print_function\n\n# Standard Imports\nfrom absl import app\nfrom absl import flags\nimport numpy as np\nimport tensorflow.compat.v1 as tf\nfrom tensorflow.contrib import cluster_resolver as contrib_cluster_resolver\nfrom tensorflow.contrib import distribute as contrib_distribute\n\n# TODO(sourabhbajaj): Remove the need for this flag.\nflags.DEFINE_bool('use_tpu', True,\n                  'Ignored: preserved for backward compatibility.')\nflags.DEFINE_string('tpu', '', 'Name of the TPU to use.')\nflags.DEFINE_string(\n    'model_dir', None,\n    ('The directory where the model and training/evaluation summaries '\n     'are stored. If unset, no summaries will be stored.'))\n\nflags.DEFINE_bool('fake_data', False, 'Use fake data to test functionality.')\n\n# Batch size should satify two properties to be able to run in cloud:\n# num_eval_samples % batch_size == 0\n# batch_size % 8 == 0\nBATCH_SIZE = 200\nNUM_CLASSES = 10\nEPOCHS = 15\n\n# input image dimensions\nIMG_ROWS, IMG_COLS = 28, 28\n\nFLAGS = flags.FLAGS\n\n\ndef mnist_model(input_shape):\n  \"\"\"Creates a MNIST model.\"\"\"\n  model = tf.keras.models.Sequential()\n  model.add(\n      tf.keras.layers.Conv2D(\n          32, kernel_size=(3, 3), activation='relu', input_shape=input_shape))\n  model.add(tf.keras.layers.Conv2D(64, (3, 3), activation='relu'))\n  model.add(tf.keras.layers.MaxPooling2D(pool_size=(2, 2)))\n  model.add(tf.keras.layers.Dropout(0.25))\n  model.add(tf.keras.layers.Flatten())\n  model.add(tf.keras.layers.Dense(128, activation='relu'))\n  model.add(tf.keras.layers.Dropout(0.5))\n  model.add(tf.keras.layers.Dense(NUM_CLASSES, activation='softmax'))\n  return model\n\n\ndef run():\n  \"\"\"Run the model training and return evaluation output.\"\"\"\n  resolver = contrib_cluster_resolver.TPUClusterResolver(tpu=FLAGS.tpu)\n  contrib_distribute.initialize_tpu_system(resolver)\n  strategy = contrib_distribute.TPUStrategy(resolver, steps_per_run=100)\n\n  if FLAGS.fake_data:\n    print('Using fake data')\n    x_train = np.random.random((BATCH_SIZE, IMG_ROWS, IMG_COLS))\n    y_train = np.zeros([BATCH_SIZE, 1], dtype=np.int32)\n    x_test, y_test = x_train, y_train\n  else:\n    # the data, split between train and test sets\n    print('Using real data')\n    (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()\n\n  x_train = x_train.reshape(x_train.shape[0], IMG_ROWS, IMG_COLS, 1)\n  x_test = x_test.reshape(x_test.shape[0], IMG_ROWS, IMG_COLS, 1)\n  input_shape = (IMG_ROWS, IMG_COLS, 1)\n\n  x_train = x_train.astype('float32')\n  x_test = x_test.astype('float32')\n  x_train /= 255\n  x_test /= 255\n  print('x_train shape:', x_train.shape)\n  print(x_train.shape[0], 'train samples')\n  print(x_test.shape[0], 'test samples')\n\n  # convert class vectors to binary class matrices\n  y_train = tf.keras.utils.to_categorical(y_train, NUM_CLASSES)\n  y_test = tf.keras.utils.to_categorical(y_test, NUM_CLASSES)\n  with strategy.scope():\n    model = mnist_model(input_shape)\n    model.compile(\n        loss=tf.keras.losses.categorical_crossentropy,\n        optimizer=tf.train.GradientDescentOptimizer(learning_rate=0.05),\n        metrics=['accuracy'])\n\n  callbacks = []\n  if FLAGS.model_dir:\n    callbacks = [tf.keras.callbacks.TensorBoard(log_dir=FLAGS.model_dir)]\n\n  model.fit(\n      x_train,\n      y_train,\n      batch_size=BATCH_SIZE,\n      callbacks=callbacks,\n      epochs=EPOCHS,\n      verbose=1,\n      validation_data=(x_test, y_test))\n  return model.evaluate(x_test, y_test, batch_size=BATCH_SIZE, verbose=1)\n\n\ndef main(unused_dev):\n  score = run()\n  print('Loss for final step: %s;' % score[0])\n  print('Accuracy: %s;' % score[1])\n\n\nif __name__ == '__main__':\n  tf.logging.set_verbosity(tf.logging.INFO)\n  app.run(main)"
+      },
+      {
+        "language": "python",
+        "code": "# Copyright 2019 The TensorFlow Authors. All Rights Reserved.\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#     http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n# ==============================================================================\nr\"\"\"Keras MNIST Example with tf.summary usage.\n\nPassing Keras Tensorboard callback to Keras fit() API parameter writes\nmetrics and losses as well as model weights to summary event files for\nvisualization. However, for advanced use cases, users may wish to write\naribitrary intermediate tensors to summary event files. This example\nshows how to write intermediate tensors in model definition while running\na model on TPU's.\n\nTo test on TPU:\n    python mnist_tf2_with_summary.py --use_tpu=True [--tpu=$TPU_NAME]\n\"\"\"\n\nfrom __future__ import absolute_import\nfrom __future__ import division\nfrom __future__ import print_function\n\n# Standard Imports\n\nfrom absl import app\nfrom absl import flags\nfrom absl import logging\n\nimport tensorflow.compat.v2 as tf\n\nflags.DEFINE_bool('use_tpu', True,\n                  'Ignored: preserved for backward compatibility.')\nflags.DEFINE_string('tpu', '', 'Name of the TPU to use.')\nflags.DEFINE_string(\n    'model_dir', '',\n    ('The directory where the model and training/evaluation summaries '\n     'are stored. If unset, no summaries will be stored.'))\nflags.DEFINE_string(\n    'protocol', None,\n    'Ex: \"grpc\". Overrides the communication protocol for the '\n    'cluster.')\n\nflags.DEFINE_bool('fake_data', False, 'Use fake data to test functionality.')\n\n# Batch size should satify two properties to be able to run in cloud:\n# num_eval_samples % batch_size == 0\n# batch_size % 8 == 0\nBATCH_SIZE = 200\nNUM_CLASSES = 10\n_EPOCHS = 15\n\n# input image dimensions\nIMG_ROWS, IMG_COLS = 28, 28\n\nFLAGS = flags.FLAGS\n\n\nclass LayerForWritingHistogramSummary(tf.keras.layers.Layer):\n  \"\"\"A pass-through layer that only records values to summary.\"\"\"\n\n  def call(self, x):\n    tf.summary.histogram('custom_histogram_summary', x)\n    return x\n\n\nclass LayerForWritingImageSummary(tf.keras.layers.Layer):\n  \"\"\"A pass-through layer that only records image values to summary.\"\"\"\n\n  def call(self, x):\n    tf.summary.image('custom_image_summary', x)\n    return x\n\n\ndef mnist_model(input_shape):\n  \"\"\"Creates a MNIST model.\"\"\"\n  model = tf.keras.models.Sequential()\n\n  # Adding custom pass-through layer to visualize input images.\n  model.add(LayerForWritingImageSummary())\n\n  model.add(\n      tf.keras.layers.Conv2D(\n          32, kernel_size=(3, 3), activation='relu', input_shape=input_shape))\n  model.add(tf.keras.layers.Conv2D(64, (3, 3), activation='relu'))\n  model.add(tf.keras.layers.MaxPooling2D(pool_size=(2, 2)))\n  model.add(tf.keras.layers.Dropout(0.25))\n  model.add(tf.keras.layers.Flatten())\n  model.add(tf.keras.layers.Dense(128, activation='relu'))\n  model.add(tf.keras.layers.Dropout(0.5))\n  model.add(tf.keras.layers.Dense(NUM_CLASSES, activation='softmax'))\n\n  # Adding custom pass-through layer for summary recording.\n  model.add(LayerForWritingHistogramSummary())\n  return model\n\n\ndef run():\n  \"\"\"Run the model training and return evaluation output.\"\"\"\n  resolver = tf.distribute.cluster_resolver.TPUClusterResolver(tpu=FLAGS.tpu)\n  tf.config.experimental_connect_to_cluster(resolver, protocol=FLAGS.protocol)\n  logging.info('Remote eager configured')\n  tf.tpu.experimental.initialize_tpu_system(resolver)\n  strategy = tf.distribute.experimental.TPUStrategy(resolver)\n\n  (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()\n\n  x_train = x_train.reshape(x_train.shape[0], IMG_ROWS, IMG_COLS, 1)\n  x_test = x_test.reshape(x_test.shape[0], IMG_ROWS, IMG_COLS, 1)\n  input_shape = (IMG_ROWS, IMG_COLS, 1)\n\n  x_train = x_train.astype('float32')\n  x_test = x_test.astype('float32')\n  x_train /= 255\n  x_test /= 255\n  print('x_train shape:', x_train.shape)\n  print(x_train.shape[0], 'train samples')\n  print(x_test.shape[0], 'test samples')\n  steps_per_epoch = int(x_train.shape[0] / BATCH_SIZE)\n  steps_per_eval = int(x_test.shape[0] / BATCH_SIZE)\n\n  # convert class vectors to binary class matrices\n  y_train = tf.keras.utils.to_categorical(y_train, NUM_CLASSES)\n  y_test = tf.keras.utils.to_categorical(y_test, NUM_CLASSES)\n\n  train_dataset = tf.data.Dataset.from_tensor_slices((x_train, y_train))\n  train_dataset = train_dataset.batch(BATCH_SIZE, drop_remainder=True).repeat()\n  test_dataset = tf.data.Dataset.from_tensor_slices((x_test, y_test))\n  test_dataset = test_dataset.batch(BATCH_SIZE, drop_remainder=True).repeat()\n\n  with strategy.scope():\n    model = mnist_model(input_shape)\n    optimizer = tf.keras.optimizers.SGD(learning_rate=0.05)\n    logging.info('Finished building Keras MNIST model')\n    model.compile(optimizer, loss=tf.keras.losses.categorical_crossentropy)\n\n    # Writing summary logs to file may have performance impact. Therefore, we\n    # only write summary events every 100th steps.\n    tensorboard_callback = tf.keras.callbacks.TensorBoard(\n        FLAGS.model_dir, update_freq=100)\n    model.fit(\n        x=train_dataset,\n        epochs=_EPOCHS,\n        steps_per_epoch=steps_per_epoch,\n        validation_steps=steps_per_eval,\n        validation_data=test_dataset,\n        callbacks=[tensorboard_callback])\n\n\ndef main(unused_dev):\n  run()\n\n\nif __name__ == '__main__':\n  logging.set_verbosity(logging.INFO)\n  tf.enable_v2_behavior()\n\n  # Soft device placement should be enabled to automatically place\n  # summary ops to CPU.\n  tf.config.set_soft_device_placement(True)\n\n  app.run(main)"
+      }
+    ],
+    "cli_commands": [
+      "gcloud compute tpus tpu-vm create mnist-tpu-vm \\",
+      "gcloud compute tpus tpu-vm ssh mnist-tpu-vm --zone=us-central1-a",
+      "python mnist.py --use_tpu=False [--fake_data=true]",
+      "python mnist.py --use_tpu=True [--tpu=$TPU_NAME]",
+      "python mnist_tf2_with_summary.py --use_tpu=True [--tpu=$TPU_NAME]"
+    ],
+    "environment_variables": [],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Cloud TPU MNIST with TensorFlow 2.x/Keras' (https://cloud.google.com/tpu/docs/tutorials/mnist-2.x)?",
+        "answer": "Official end-to-end TensorFlow/Keras training recipe using TPU distribution; useful as a small migration smoke test before a larger workload."
+      },
+      {
+        "question": "How does 'Cloud TPU MNIST with TensorFlow 2.x/Keras' handle: Cloud TPU MNIST with TensorFlow 2.x and Keras (`mnist-2.x`)?",
+        "answer": "> **URL Redirect Note**: On `cloud.google.com/tpu/docs/tutorials/mnist-2.x`, Google Cloud now HTTP 301 redirects to `/tpu/docs/pytorch-on-tpu`. Below is the complete end-to-end TensorFlow 2.x / Keras Cloud TPU MNIST training guide and the official `tensorflow/tpu` reference scripts (`mnist.py` and `mnist_tf2_with_summary.py`)."
+      },
+      {
+        "question": "How does 'Cloud TPU MNIST with TensorFlow 2.x/Keras' handle: 1. Overview & Architecture?",
+        "answer": "This recipe demonstrates synchronous distributed training on a Cloud TPU VM using TensorFlow 2.x, Keras (`tf.keras`), `tf.data`, and `tf.distribute.TPUStrategy`. It serves as a fast migration smoke test before running larger TensorFlow/Keras workloads on Cloud TPU."
+      },
+      {
+        "question": "How does 'Cloud TPU MNIST with TensorFlow 2.x/Keras' handle: Create a TPU VM using Compute Engine?",
+        "answer": "gcloud compute tpus tpu-vm create mnist-tpu-vm \\\n  --zone=us-central1-a \\\n  --accelerator-type=v5litepod-8 \\\n  --version=tpu-ubuntu2204-base"
+      },
+      {
+        "question": "How does 'Cloud TPU MNIST with TensorFlow 2.x/Keras' handle: SSH into the TPU VM?",
+        "answer": "gcloud compute tpus tpu-vm ssh mnist-tpu-vm --zone=us-central1-a\n```"
+      },
+      {
+        "question": "How does 'Cloud TPU MNIST with TensorFlow 2.x/Keras' handle: 3. Initialize `TPUClusterResolver` and `TPUStrategy`?",
+        "answer": "```python\nimport tensorflow as tf\nimport tensorflow_datasets as tfds\n\nresolver = tf.distribute.cluster_resolver.TPUClusterResolver(tpu='local')\ntf.config.experimental_connect_to_cluster(resolver)\ntf.tpu.experimental.initialize_tpu_system(resolver)\nstrategy = tf.distribute.TPUStrategy(resolver)\nprint('Number of accelerators: ', strategy.num_replicas_in_sync)\n```"
+      },
+      {
+        "question": "How does 'Cloud TPU MNIST with TensorFlow 2.x/Keras' handle: ==============================================================================?",
+        "answer": "r\"\"\"Experimental Keras MNIST Example.\n\nTo test on CPU:\n    python mnist.py --use_tpu=False [--fake_data=true]\n\nTo test on TPU:\n    python mnist.py --use_tpu=True [--tpu=$TPU_NAME]\n\"\"\"\n\nfrom __future__ import absolute_import\nfrom __future__ import division\nfrom __future__ import print_function"
+      },
+      {
+        "question": "How does 'Cloud TPU MNIST with TensorFlow 2.x/Keras' handle: Standard Imports?",
+        "answer": "from absl import app\nfrom absl import flags\nimport numpy as np\nimport tensorflow.compat.v1 as tf\nfrom tensorflow.contrib import cluster_resolver as contrib_cluster_resolver\nfrom tensorflow.contrib import distribute as contrib_distribute"
+      },
+      {
+        "question": "How does 'Cloud TPU MNIST with TensorFlow 2.x/Keras' handle: TODO(sourabhbajaj): Remove the need for this flag.?",
+        "answer": "flags.DEFINE_bool('use_tpu', True,\n                  'Ignored: preserved for backward compatibility.')\nflags.DEFINE_string('tpu', '', 'Name of the TPU to use.')\nflags.DEFINE_string(\n    'model_dir', None,\n    ('The directory where the model and training/evaluation summaries '\n     'are stored. If unset, no summaries will be stored.'))\n\nflags.DEFINE_bool('fake_data', False, 'Use fake data to test functionality.')"
+      },
+      {
+        "question": "How does 'Cloud TPU MNIST with TensorFlow 2.x/Keras' handle: input image dimensions?",
+        "answer": "IMG_ROWS, IMG_COLS = 28, 28\n\nFLAGS = flags.FLAGS\n\n\ndef mnist_model(input_shape):\n  \"\"\"Creates a MNIST model.\"\"\"\n  model = tf.keras.models.Sequential()\n  model.add(\n      tf.keras.layers.Conv2D(\n          32, kernel_size=(3, 3), activation='relu', input_shape=input_shape))\n  model.add(tf.keras.layers.Conv2D(64, (3, 3), activation='relu'))\n  model.add(tf.keras.layers.MaxPooling2D(pool_size=(2, 2)))\n  model.add(tf.keras.layers.Dropout(0.25))\n  model.add(tf.keras.layers.Flatten())\n  model.add(tf.keras.layers.Dense(128, activation='relu'))\n  model.add(tf.keras.layers.Dropout(0.5))\n  model.add(tf.keras.layers.Dense(NUM_CLASSES, activation='softmax'))\n  return model\n\n\ndef run():\n  \"\"\"Run the model training and return evaluation output.\"\"\"\n  resolver = contrib_cluster_resolver.TPUClusterResolver(tpu=FLAGS.tpu)\n  contrib_distribute.initialize_tpu_system(resolver)\n  strategy = contrib_distribute.TPUStrategy(resolver, steps_per_run=100)\n\n  if FLAGS.fake_data:\n    print('Using fake data')\n    x_train = np.random.random((BATCH_SIZE, IMG_ROWS, IMG_COLS))\n    y_train = np.zeros([BATCH_SIZE, 1], dtype=np.int32)\n    x_test, y_test = x_train, y_train\n  else:\n    # the data, split between train and t"
+      }
+    ],
+    "full_markdown": "# Cloud TPU MNIST with TensorFlow 2.x and Keras (`mnist-2.x`)\n\n> **URL Redirect Note**: On `cloud.google.com/tpu/docs/tutorials/mnist-2.x`, Google Cloud now HTTP 301 redirects to `/tpu/docs/pytorch-on-tpu`. Below is the complete end-to-end TensorFlow 2.x / Keras Cloud TPU MNIST training guide and the official `tensorflow/tpu` reference scripts (`mnist.py` and `mnist_tf2_with_summary.py`).\n\n## 1. Overview & Architecture\n\nThis recipe demonstrates synchronous distributed training on a Cloud TPU VM using TensorFlow 2.x, Keras (`tf.keras`), `tf.data`, and `tf.distribute.TPUStrategy`. It serves as a fast migration smoke test before running larger TensorFlow/Keras workloads on Cloud TPU.\n\n## 2. Provision a Cloud TPU VM & Install TensorFlow\n\n```bash\n# Create a TPU VM using Compute Engine\ngcloud compute tpus tpu-vm create mnist-tpu-vm \\\n  --zone=us-central1-a \\\n  --accelerator-type=v5litepod-8 \\\n  --version=tpu-ubuntu2204-base\n\n# SSH into the TPU VM\ngcloud compute tpus tpu-vm ssh mnist-tpu-vm --zone=us-central1-a\n```\n\n## 3. Initialize `TPUClusterResolver` and `TPUStrategy`\n\n```python\nimport tensorflow as tf\nimport tensorflow_datasets as tfds\n\nresolver = tf.distribute.cluster_resolver.TPUClusterResolver(tpu='local')\ntf.config.experimental_connect_to_cluster(resolver)\ntf.tpu.experimental.initialize_tpu_system(resolver)\nstrategy = tf.distribute.TPUStrategy(resolver)\nprint('Number of accelerators: ', strategy.num_replicas_in_sync)\n```\n\n## 4. Official `tensorflow/tpu` Keras MNIST Script (`models/experimental/mnist_keras/mnist.py`)\n\n```python\n# Copyright 2018 The TensorFlow Authors. All Rights Reserved.\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#     http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n# ==============================================================================\nr\"\"\"Experimental Keras MNIST Example.\n\nTo test on CPU:\n    python mnist.py --use_tpu=False [--fake_data=true]\n\nTo test on TPU:\n    python mnist.py --use_tpu=True [--tpu=$TPU_NAME]\n\"\"\"\n\nfrom __future__ import absolute_import\nfrom __future__ import division\nfrom __future__ import print_function\n\n# Standard Imports\nfrom absl import app\nfrom absl import flags\nimport numpy as np\nimport tensorflow.compat.v1 as tf\nfrom tensorflow.contrib import cluster_resolver as contrib_cluster_resolver\nfrom tensorflow.contrib import distribute as contrib_distribute\n\n# TODO(sourabhbajaj): Remove the need for this flag.\nflags.DEFINE_bool('use_tpu', True,\n                  'Ignored: preserved for backward compatibility.')\nflags.DEFINE_string('tpu', '', 'Name of the TPU to use.')\nflags.DEFINE_string(\n    'model_dir', None,\n    ('The directory where the model and training/evaluation summaries '\n     'are stored. If unset, no summaries will be stored.'))\n\nflags.DEFINE_bool('fake_data', False, 'Use fake data to test functionality.')\n\n# Batch size should satify two properties to be able to run in cloud:\n# num_eval_samples % batch_size == 0\n# batch_size % 8 == 0\nBATCH_SIZE = 200\nNUM_CLASSES = 10\nEPOCHS = 15\n\n# input image dimensions\nIMG_ROWS, IMG_COLS = 28, 28\n\nFLAGS = flags.FLAGS\n\n\ndef mnist_model(input_shape):\n  \"\"\"Creates a MNIST model.\"\"\"\n  model = tf.keras.models.Sequential()\n  model.add(\n      tf.keras.layers.Conv2D(\n          32, kernel_size=(3, 3), activation='relu', input_shape=input_shape))\n  model.add(tf.keras.layers.Conv2D(64, (3, 3), activation='relu'))\n  model.add(tf.keras.layers.MaxPooling2D(pool_size=(2, 2)))\n  model.add(tf.keras.layers.Dropout(0.25))\n  model.add(tf.keras.layers.Flatten())\n  model.add(tf.keras.layers.Dense(128, activation='relu'))\n  model.add(tf.keras.layers.Dropout(0.5))\n  model.add(tf.keras.layers.Dense(NUM_CLASSES, activation='softmax'))\n  return model\n\n\ndef run():\n  \"\"\"Run the model training and return evaluation output.\"\"\"\n  resolver = contrib_cluster_resolver.TPUClusterResolver(tpu=FLAGS.tpu)\n  contrib_distribute.initialize_tpu_system(resolver)\n  strategy = contrib_distribute.TPUStrategy(resolver, steps_per_run=100)\n\n  if FLAGS.fake_data:\n    print('Using fake data')\n    x_train = np.random.random((BATCH_SIZE, IMG_ROWS, IMG_COLS))\n    y_train = np.zeros([BATCH_SIZE, 1], dtype=np.int32)\n    x_test, y_test = x_train, y_train\n  else:\n    # the data, split between train and test sets\n    print('Using real data')\n    (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()\n\n  x_train = x_train.reshape(x_train.shape[0], IMG_ROWS, IMG_COLS, 1)\n  x_test = x_test.reshape(x_test.shape[0], IMG_ROWS, IMG_COLS, 1)\n  input_shape = (IMG_ROWS, IMG_COLS, 1)\n\n  x_train = x_train.astype('float32')\n  x_test = x_test.astype('float32')\n  x_train /= 255\n  x_test /= 255\n  print('x_train shape:', x_train.shape)\n  print(x_train.shape[0], 'train samples')\n  print(x_test.shape[0], 'test samples')\n\n  # convert class vectors to binary class matrices\n  y_train = tf.keras.utils.to_categorical(y_train, NUM_CLASSES)\n  y_test = tf.keras.utils.to_categorical(y_test, NUM_CLASSES)\n  with strategy.scope():\n    model = mnist_model(input_shape)\n    model.compile(\n        loss=tf.keras.losses.categorical_crossentropy,\n        optimizer=tf.train.GradientDescentOptimizer(learning_rate=0.05),\n        metrics=['accuracy'])\n\n  callbacks = []\n  if FLAGS.model_dir:\n    callbacks = [tf.keras.callbacks.TensorBoard(log_dir=FLAGS.model_dir)]\n\n  model.fit(\n      x_train,\n      y_train,\n      batch_size=BATCH_SIZE,\n      callbacks=callbacks,\n      epochs=EPOCHS,\n      verbose=1,\n      validation_data=(x_test, y_test))\n  return model.evaluate(x_test, y_test, batch_size=BATCH_SIZE, verbose=1)\n\n\ndef main(unused_dev):\n  score = run()\n  print('Loss for final step: %s;' % score[0])\n  print('Accuracy: %s;' % score[1])\n\n\nif __name__ == '__main__':\n  tf.logging.set_verbosity(tf.logging.INFO)\n  app.run(main)\n```\n\n## 5. Official `tensorflow/tpu` TensorFlow 2.x MNIST with TensorBoard Summary (`mnist_tf2_with_summary.py`)\n\n```python\n# Copyright 2019 The TensorFlow Authors. All Rights Reserved.\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#     http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n# ==============================================================================\nr\"\"\"Keras MNIST Example with tf.summary usage.\n\nPassing Keras Tensorboard callback to Keras fit() API parameter writes\nmetrics and losses as well as model weights to summary event files for\nvisualization. However, for advanced use cases, users may wish to write\naribitrary intermediate tensors to summary event files. This example\nshows how to write intermediate tensors in model definition while running\na model on TPU's.\n\nTo test on TPU:\n    python mnist_tf2_with_summary.py --use_tpu=True [--tpu=$TPU_NAME]\n\"\"\"\n\nfrom __future__ import absolute_import\nfrom __future__ import division\nfrom __future__ import print_function\n\n# Standard Imports\n\nfrom absl import app\nfrom absl import flags\nfrom absl import logging\n\nimport tensorflow.compat.v2 as tf\n\nflags.DEFINE_bool('use_tpu', True,\n                  'Ignored: preserved for backward compatibility.')\nflags.DEFINE_string('tpu', '', 'Name of the TPU to use.')\nflags.DEFINE_string(\n    'model_dir', '',\n    ('The directory where the model and training/evaluation summaries '\n     'are stored. If unset, no summaries will be stored.'))\nflags.DEFINE_string(\n    'protocol', None,\n    'Ex: \"grpc\". Overrides the communication protocol for the '\n    'cluster.')\n\nflags.DEFINE_bool('fake_data', False, 'Use fake data to test functionality.')\n\n# Batch size should satify two properties to be able to run in cloud:\n# num_eval_samples % batch_size == 0\n# batch_size % 8 == 0\nBATCH_SIZE = 200\nNUM_CLASSES = 10\n_EPOCHS = 15\n\n# input image dimensions\nIMG_ROWS, IMG_COLS = 28, 28\n\nFLAGS = flags.FLAGS\n\n\nclass LayerForWritingHistogramSummary(tf.keras.layers.Layer):\n  \"\"\"A pass-through layer that only records values to summary.\"\"\"\n\n  def call(self, x):\n    tf.summary.histogram('custom_histogram_summary', x)\n    return x\n\n\nclass LayerForWritingImageSummary(tf.keras.layers.Layer):\n  \"\"\"A pass-through layer that only records image values to summary.\"\"\"\n\n  def call(self, x):\n    tf.summary.image('custom_image_summary', x)\n    return x\n\n\ndef mnist_model(input_shape):\n  \"\"\"Creates a MNIST model.\"\"\"\n  model = tf.keras.models.Sequential()\n\n  # Adding custom pass-through layer to visualize input images.\n  model.add(LayerForWritingImageSummary())\n\n  model.add(\n      tf.keras.layers.Conv2D(\n          32, kernel_size=(3, 3), activation='relu', input_shape=input_shape))\n  model.add(tf.keras.layers.Conv2D(64, (3, 3), activation='relu'))\n  model.add(tf.keras.layers.MaxPooling2D(pool_size=(2, 2)))\n  model.add(tf.keras.layers.Dropout(0.25))\n  model.add(tf.keras.layers.Flatten())\n  model.add(tf.keras.layers.Dense(128, activation='relu'))\n  model.add(tf.keras.layers.Dropout(0.5))\n  model.add(tf.keras.layers.Dense(NUM_CLASSES, activation='softmax'))\n\n  # Adding custom pass-through layer for summary recording.\n  model.add(LayerForWritingHistogramSummary())\n  return model\n\n\ndef run():\n  \"\"\"Run the model training and return evaluation output.\"\"\"\n  resolver = tf.distribute.cluster_resolver.TPUClusterResolver(tpu=FLAGS.tpu)\n  tf.config.experimental_connect_to_cluster(resolver, protocol=FLAGS.protocol)\n  logging.info('Remote eager configured')\n  tf.tpu.experimental.initialize_tpu_system(resolver)\n  strategy = tf.distribute.experimental.TPUStrategy(resolver)\n\n  (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()\n\n  x_train = x_train.reshape(x_train.shape[0], IMG_ROWS, IMG_COLS, 1)\n  x_test = x_test.reshape(x_test.shape[0], IMG_ROWS, IMG_COLS, 1)\n  input_shape = (IMG_ROWS, IMG_COLS, 1)\n\n  x_train = x_train.astype('float32')\n  x_test = x_test.astype('float32')\n  x_train /= 255\n  x_test /= 255\n  print('x_train shape:', x_train.shape)\n  print(x_train.shape[0], 'train samples')\n  print(x_test.shape[0], 'test samples')\n  steps_per_epoch = int(x_train.shape[0] / BATCH_SIZE)\n  steps_per_eval = int(x_test.shape[0] / BATCH_SIZE)\n\n  # convert class vectors to binary class matrices\n  y_train = tf.keras.utils.to_categorical(y_train, NUM_CLASSES)\n  y_test = tf.keras.utils.to_categorical(y_test, NUM_CLASSES)\n\n  train_dataset = tf.data.Dataset.from_tensor_slices((x_train, y_train))\n  train_dataset = train_dataset.batch(BATCH_SIZE, drop_remainder=True).repeat()\n  test_dataset = tf.data.Dataset.from_tensor_slices((x_test, y_test))\n  test_dataset = test_dataset.batch(BATCH_SIZE, drop_remainder=True).repeat()\n\n  with strategy.scope():\n    model = mnist_model(input_shape)\n    optimizer = tf.keras.optimizers.SGD(learning_rate=0.05)\n    logging.info('Finished building Keras MNIST model')\n    model.compile(optimizer, loss=tf.keras.losses.categorical_crossentropy)\n\n    # Writing summary logs to file may have performance impact. Therefore, we\n    # only write summary events every 100th steps.\n    tensorboard_callback = tf.keras.callbacks.TensorBoard(\n        FLAGS.model_dir, update_freq=100)\n    model.fit(\n        x=train_dataset,\n        epochs=_EPOCHS,\n        steps_per_epoch=steps_per_epoch,\n        validation_steps=steps_per_eval,\n        validation_data=test_dataset,\n        callbacks=[tensorboard_callback])\n\n\ndef main(unused_dev):\n  run()\n\n\nif __name__ == '__main__':\n  logging.set_verbosity(logging.INFO)\n  tf.enable_v2_behavior()\n\n  # Soft device placement should be enabled to automatically place\n  # summary ops to CPU.\n  tf.config.set_soft_device_placement(True)\n\n  app.run(main)\n```"
+  }
 }

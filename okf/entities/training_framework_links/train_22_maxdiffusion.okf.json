@@ -1,52 +1,852 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:train_22_maxdiffusion",
-  "@type": "DocumentationResource",
-  "name": "MaxDiffusion",
-  "canonicalUrl": "https://github.com/google/maxdiffusion",
-  "category": "Training framework links",
-  "categorySlug": "training_framework_links",
-  "description": "JAX/XLA diffusion reference implementations for Cloud TPUs (and GPUs), covering Stable Diffusion, SDXL, Flux, DreamBooth, Wan and other training/inference workloads.",
-  "provenance": {
-    "sourceUrl": "https://github.com/google/maxdiffusion",
-    "crawledAt": "2026-10-26T12:47:25.378613+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 72538
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "MaxDiffusion",
-      "documentedIn",
-      "https://github.com/google/maxdiffusion"
-    ],
-    [
-      "MaxDiffusion",
-      "belongsToCategory",
-      "training_framework_links"
-    ],
-    [
-      "MaxDiffusion",
-      "supportsWorkflow",
-      "Distributed Machine Learning Training"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:train_22_maxdiffusion",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "train_22_maxdiffusion",
+    "name": "MaxDiffusion",
+    "url": "https://github.com/google/maxdiffusion",
+    "category": "training_framework_links",
+    "description": "JAX/XLA diffusion reference implementations for Cloud TPUs (and GPUs), covering Stable Diffusion, SDXL, Flux, DreamBooth, Wan and other training/inference workloads.",
+    "char_count": 49544,
+    "word_count": 5093,
+    "section_count": 23,
+    "code_block_count": 61,
+    "table_count": 4,
+    "cli_command_count": 50,
+    "indexed_at": "2026-10-26T14:46:54.570456+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "schema:name",
+        "object": "MaxDiffusion"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "schema:url",
+        "object": "https://github.com/google/maxdiffusion"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "schema:category",
+        "object": "training_framework_links"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "schema:description",
+        "object": "JAX/XLA diffusion reference implementations for Cloud TPUs (and GPUs), covering Stable Diffusion, SDXL, Flux, DreamBooth, Wan and other training/inference workloads."
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:TPU7x"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5p"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v4"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:MaxDiffusion"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:Tokamax"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:XProf"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:hasSection",
+        "object": "MaxDiffusion (Google AI-Hypercomputer)"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:hasSection",
+        "object": "What's new?"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:hasSection",
+        "object": "Table of Contents"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:hasSection",
+        "object": "Getting Started"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:hasSection",
+        "object": "Getting Started:"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:hasSection",
+        "object": "NVIDIA DGX Spark"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:hasSection",
+        "object": "Training"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:hasSection",
+        "object": "Inference"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:hasSection",
+        "object": "Example: enable MagCache for Wan 2.2 T2V"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:hasSection",
+        "object": "Example: enable MagCache for Wan 2.2 I2V"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:hasSection",
+        "object": "Ring Attention"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:hasSection",
+        "object": "Automatic Tile-Size Search"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:hasSection",
+        "object": "Getting Started: Multihost development"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:hasSection",
+        "object": "Comparison to Alternatives"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:hasSection",
+        "object": "Development"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:hasSection",
+        "object": "Pre-commit Hooks"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:hasSection",
+        "object": "1. Activate your virtual environment first"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:hasSection",
+        "object": "2. Install pre-commit (if not already installed)"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:hasSection",
+        "object": "3. Install git pre-commit hooks"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:hasSection",
+        "object": "Code Style"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:hasSection",
+        "object": "Profiling"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:hasSection",
+        "object": "Metrics"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "HF_DATASET_DIR"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "HF_HUB_CACHE"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "HF_HUB_ENABLE_HF_TRANSFER"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "LIBTPU_INIT_ARGS"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "OUTPUT_DIR"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "PROJECT_ID"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "TPU_NAME"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "XLA_FLAGS"
+      },
+      {
+        "subject": "tpu_doc:train_22_maxdiffusion",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "ZONE"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "MaxDiffusion provides official guidance on JAX/XLA diffusion reference implementations for Cloud TPUs (and GPUs), covering Stable Diffusion, SDXL, Flux, DreamBooth, Wan and other training/inference workloads.",
-      "confidence": 1.0,
-      "source": "https://github.com/google/maxdiffusion",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is MaxDiffusion used for in Cloud TPU workflows?",
-      "answer": "JAX/XLA diffusion reference implementations for Cloud TPUs (and GPUs), covering Stable Diffusion, SDXL, Flux, DreamBooth, Wan and other training/inference workloads.",
-      "category": "training_framework_links"
-    }
-  ],
-  "contentSummary": "JAX/XLA diffusion reference implementations for Cloud TPUs (and GPUs), covering Stable Diffusion, SDXL, Flux, DreamBooth, Wan and other training/inference workloads."
+  },
+  "structured_content": {
+    "summary": "JAX/XLA diffusion reference implementations for Cloud TPUs (and GPUs), covering Stable Diffusion, SDXL, Flux, DreamBooth, Wan and other training/inference workloads.",
+    "sections": [
+      {
+        "heading": "MaxDiffusion (Google AI-Hypercomputer)",
+        "level": 1,
+        "content": "[![Unit Tests](https://github.com/AI-Hypercomputer/maxdiffusion/actions/workflows/UnitTests.yml/badge.svg)](https://github.com/AI-Hypercomputer/maxdiffusion/actions/workflows/UnitTests.yml)"
+      },
+      {
+        "heading": "What's new?",
+        "level": 1,
+        "content": "- **`2026/09/23`**: Wan2.2 text2vid dual-expert training is now supported.\n- **`2026/08/28`**: Flux2.Klein text to image and image editing (w/ KV Cache) is now supported.\n- **`2026/07/14`**: Automatic attention tile-size (`block_q`/`block_kv`) search for Wan is now supported.\n- **`2026/06/26`**: 2D ring (USP) attention with a custom splash kernel is now supported for Wan (`ulysses_ring_custom`), splitting context parallelism into an intra-chip Ulysses axis and a cross-chip ring axis.\n- **`2026/04/16`**: Support for Tokamax Ring Attention kernel is now added.\n- **`2026/03/31`**: Wan2.2 SenCache inference is now supported for T2V and I2V (up to 1.4x speedup)\n- **`2026/03/25`**: Wan2.1 and Wan2.2 Magcache inference is now supported\n- **`2026/03/25`**: LTX-2 Video Inference is now supported\n- **`2026/01/29`**: Wan LoRA for inference is now supported\n- **`2026/01/15`**: Wan2.1 and Wan2.2 Img2vid generation is now supported\n- **`2025/11/11`**: Wan2.2 txt2vid generation is now supported\n- **`2025/10/10`**: Wan2.1 txt2vid training and generation is now supported.\n- **`2025/10/14`**: NVIDIA DGX Spark Flux support.\n- **`2025/08/14`**: LTX-Video img2vid generation is now supported.\n- **`2025/07/29`**: LTX-Video text2vid generation is now supported.\n- **`2025/04/17`**: Flux Finetuning.\n- **`2025/02/12`**: Flux LoRA for inference.\n- **`2025/02/08`**: Flux schnell & dev inference.\n- **`2024/12/12`**: Load multiple LoRAs for inference.\n- **`2024/10/22`**: LoRA support for Hyper SDXL.\n- **`2024/08/01`**: Orbax is the new default checkpointer. You can still use `pipeline.save_pretrained` after training to save in diffusers format.\n- **`2024/07/20`**: Dreambooth training for Stable Diffusion 1.x,2.x is now supported."
+      },
+      {
+        "heading": "Overview",
+        "level": 1,
+        "content": "MaxDiffusion is a collection of reference implementations of various latent diffusion models written in pure Python/Jax that run on XLA devices including Cloud TPUs and GPUs. MaxDiffusion aims to be a launching off point for ambitious Diffusion projects both in research and production. We encourage you to start by experimenting with MaxDiffusion out of the box and then fork and modify MaxDiffusion to meet your needs.\n\nThe goal of this project is to provide reference implementations for latent diffusion models that help developers get started with training, tuning, and serving solutions on XLA devices including Cloud TPUs and GPUs. We started with Stable Diffusion inference on TPUs, but welcome code contributions to grow.\n\nMaxDiffusion supports\n* Stable Diffusion 2 base (inference)\n* Stable Diffusion 2.1 (training and inference)\n* Stable Diffusion XL (training and inference).\n* Flux Dev and Schnell (Training and inference).\n* Flux.2-Klein 4B & 9B (text-to-image and multi-image editing with KV-Cache).\n* Stable Diffusion Lightning (inference).\n* Hyper-SD XL LoRA loading (inference).\n* Load Multiple LoRA (SDXL inference).\n* ControlNet inference (Stable Diffusion 1.4 & SDXL).\n* Dreambooth training support for Stable Diffusion 1.x,2.x.\n* LTX-Video text2vid, img2vid (inference).\n* LTX-2 Video text2vid (inference).\n* Wan2.1 text2vid (training and inference).\n* Wan2.2 text2vid (training and inference).\n\n**Note on GPU Support:** GPU support is not actively maintained, but contributions are welcome"
+      },
+      {
+        "heading": "Table of Contents",
+        "level": 1,
+        "content": "- [What's new?](#whats-new)\n- [Overview](#overview)\n- [Table of Contents](#table-of-contents)\n- [Getting Started](#getting-started)\n  - [Getting Started:](#getting-started-1)\n  - [NVIDIA DGX Spark](#nvidia-dgx-spark)\n  - [Training](#training)\n    - [Wan2.1](#wan-21-training)\n    - [Wan2.2](#wan-22-training)\n    - [Flux](#flux-training)\n    - [SDXL](#stable-diffusion-xl-training)\n    - [SD 2 base](#stable-diffusion-2-base-training)\n    - [SD 1.4](#stable-diffusion-14-training)\n    - [Dreambooth](#dreambooth)\n  - [Inference](#inference)\n    - [Wan](#wan-models)\n    - [LTX-Video](#ltx-video)\n    - [LTX-2 Video](#ltx-2-video)\n    - [Flux](#flux)\n      - [Fused Attention for GPU](#fused-attention-for-gpu)\n    - [SDXL](#stable-diffusion-xl)\n    - [SD 2 base](#stable-diffusion-2-base)\n    - [SD 2.1](#stable-diffusion-21)\n    - [Wan LoRA](#wan-lora)\n    - [Flux LoRA](#flux-lora)\n    - [Hyper SDXL LoRA](#hyper-sdxl-lora)\n    - [Load Multiple LoRA](#load-multiple-lora)\n    - [SDXL Lightning](#sdxl-lightning)\n    - [ControlNet](#controlnet)\n  - [Getting Started: Multihost development](#getting-started-multihost-development)\n- [Comparison to Alternatives](#comparison-to-alternatives)\n- [Development](#development)\n  - [Profiling](#profiling)\n  - [Metrics](#metrics)"
+      },
+      {
+        "heading": "Getting Started",
+        "level": 1,
+        "content": "We recommend starting with a single TPU host and then moving to multihost.\n\nMinimum requirements: Ubuntu Version 22.04, Python 3.12 and Tensorflow >= 2.12.0."
+      },
+      {
+        "heading": "Getting Started:",
+        "level": 2,
+        "content": "For your first time running Maxdiffusion, we provide specific [instructions](docs/getting_started/first_run.md)."
+      },
+      {
+        "heading": "NVIDIA DGX Spark",
+        "level": 2,
+        "content": "Try out MaxDiffusion on NVIDIA's DGX Spark. We provide specific [instructions](docs/dgx_spark.md)."
+      },
+      {
+        "heading": "Training",
+        "level": 2,
+        "content": "After installation completes, run the training script.\n\n  ## Wan 2.1 Training\n\n  in the first part, we'll run on a single host VM to get familiar with the workflow, then run on xpk for large scale training.\n\n  Although not required, attaching an external disk is recommended as weights take up a lot of disk space. [Follow these instructions if you would like to attach an external disk](https://cloud.google.com/tpu/docs/attach-durable-block-storage).\n\n  This workflow was tested using v5p-8 with a 500GB disk attached.\n\n  ### Dataset Preparation\n\n  For this example, we'll be using the [PusaV1 dataset](https://huggingface.co/datasets/RaphaelLiu/PusaV1_training).\n\n  First, download the dataset.\n\n  ```bash\n  export HF_DATASET_DIR=/mnt/disks/external_disk/PusaV1_training/\n  export TFRECORDS_DATASET_DIR=/mnt/disks/external_disk/wan_tfr_dataset_pusa_v1\n  huggingface-cli download RaphaelLiu/PusaV1_training --repo-type dataset --local-dir $HF_DATASET_DIR\n  ```\n\n  Next run the TFRecords conversion script. This step prepares training and eval datasets. Validation is done as described in  [Scaling Rectified Flow Transformers for High-Resolution Image Synthesis](https://arxiv.org/pdf/2403.03206). More details [here](https://github.com/mlcommons/training/tree/master/text_to_image#5-quality)\n\n  Training dataset.\n\n  ```bash\n  python src/maxdiffusion/data_preprocessing/wan_pusav1_to_tfrecords.py src/maxdiffusion/configs/base_wan_14b.yml train_data_dir=$HF_DATASET_DIR tfrecords_dir=$TFRECORDS_DATASET_DIR/train no_records_per_shard=10 enable_eval_timesteps=False\n  ```\n\n  The script will not have an output, but you can check the progress using:\n\n  ```bash\n  ls -ll $TFRECORDS_DATASET_DIR/train\n  ```\n\n  Evaluation dataset.\n\n  ```bash\n  python src/maxdiffusion/data_preprocessing/wan_pusav1_to_tfrecords.py src/maxdiffusion/configs/base_wan_14b.yml train_data_dir=$HF_DATASET_DIR tfrecords_dir=$TFRECORDS_DATASET_DIR/eval no_records_per_shard=10 enable_eval_timesteps=True\n  ```\n\n  The evaluation dataset creation takes the first 420 samples of the dataset and adds a timestep field. We then need to manually delete the first 420 samples from the `train` folder so they are not used in training.\n\n\n  ```bash\n  printf \"%s\\n\" $TFRECORDS_DATASET_DIR/train/file_*-*.tfrec | awk -F '[-.]' '$2+0 <= 420' | xargs -d '\\n' rm\n  ```\n\n  And verify that they do not exist.\n\n  ```bash\n  printf \"%s\\n\" $TFRECORDS_DATASET_DIR/train/file_*-*.tfrec | awk -F '[-.]' '$2+0 <= 420' | xargs -d '\\n' echo\n  ```\n\n  After the script is done running, you should see the following directory structure inside `$TFRECORDS_DATASET_DIR`\n\n  ```\n  train\n  eval_timesteps\n  ```\n\n  In some instances an empty file `file_42-430.tfrec` is created inside `eval_timesteps`, for sanity check, let's run a delete command.\n\n  ```bash\n  rm $TFRECORDS_DATASET_DIR/eval_timesteps/file_42-430.tfrec\n  ```\n\n  ### Training on a Single VM\n\n  Loading the data is supported both locally from the disk created above, or from `gcs`. In this guide, we'll be using a gcs bucket to train. First copy the data to the GCS bucket.\n\n  ```bash\n  BUCKET_NAME=my-bucket\n  gcloud storage cp --recursive $TFRECORDS_DATASET_DIR gs://$BUCKET_NAME/${TFRECORDS_DATASET_DIR##*/}\n  ```\n\n  Now run the training command:\n\n  ```bash\n  RUN_NAME=jfacevedo-wan-v5p-8-${RANDOM}\n  OUTPUT_DIR=gs://$BUCKET_NAME/wan/\n  DATASET_DIR=gs://$BUCKET_NAME/${TFRECORDS_DATASET_DIR##*/}/train/\n  EVAL_DATA_DIR=gs://$BUCKET_NAME/${TFRECORDS_DATASET_DIR##*/}/eval_timesteps/\n  SAVE_DATASET_DIR=gs://$BUCKET_NAME/${TFRECORDS_DATASET_DIR##*/}/save/\n  ```\n\n  ```bash\n  export LIBTPU_INIT_ARGS='--xla_tpu_enable_async_collective_fusion_fuse_all_gather=true \\\n  --xla_tpu_megacore_fusion_allow_ags=false \\\n  --xla_enable_async_collective_permute=true \\\n  --xla_tpu_enable_ag_backward_pipelining=true \\\n  --xla_tpu_enable_data_parallel_all_reduce_opt=true \\\n  --xla_tpu_data_parallel_opt_different_sized_ops=true \\\n  --xla_tpu_enable_async_collective_fusion=true \\\n  --xla_tpu_enable_async_collective_fusion_multiple_steps=true \\\n  --xla_tpu_overlap_compute_collective_tc=true \\\n  --xla_enable_async_all_gather=true \\\n  --xla_tpu_scoped_vmem_limit_kib=65536 \\\n  --xla_tpu_enable_async_all_to_all=true \\\n  --xla_tpu_enable_all_experimental_scheduler_features=true \\\n  --xla_tpu_enable_scheduler_memory_pressure_tracking=true \\\n  --xla_tpu_host_transfer_overlap_limit=24 \\\n  --xla_tpu_aggressive_opt_barrier_removal=ENABLED \\\n  --xla_lhs_prioritize_async_depth_over_stall=ENABLED \\\n  --xla_should_allow_loop_variant_parameter_in_chain=ENABLED \\\n  --xla_should_add_loop_invariant_op_in_chain=ENABLED \\\n  --xla_max_concurrent_host_send_recv=100 \\\n  --xla_tpu_scheduler_percent_shared_memory_limit=100 \\\n  --xla_latency_hiding_scheduler_rerun=2 \\\n  --xla_tpu_use_minor_sharding_for_major_trivial_input=true \\\n  --xla_tpu_relayout_group_size_threshold_for_reduce_scatter=1 \\\n  --xla_tpu_assign_all_reduce_scatter_layout=true'\n  ```\n\n  ```bash\n  HF_HUB_CACHE=/mnt/disks/external_disk/maxdiffusion_hf_cache/ python src/maxdiffusion/train_wan.py \\\n  src/maxdiffusion/configs/base_wan_14b.yml \\\n  attention='flash' \\\n  weights_dtype=bfloat16 \\\n  activations_dtype=bfloat16 \\\n  guidance_scale=5.0 \\\n  flow_shift=5.0 \\\n  fps=16 \\\n  skip_jax_distributed_system=False \\\n  run_name=${RUN_NAME} \\\n  output_dir=${OUTPUT_DIR} \\\n  train_data_dir=${DATASET_DIR} \\\n  load_tfrecord_cached=True \\\n  height=1280 \\\n  width=720 \\\n  num_frames=81 \\\n  num_inference_steps=50 \\\n  jax_cache_dir=${OUTPUT_DIR}/jax_cache/ \\\n  max_train_steps=1000 \\\n  enable_profiler=True \\\n  dataset_save_location=${SAVE_DATASET_DIR} \\\n  remat_policy='HIDDEN_STATE_WITH_OFFLOAD' \\\n  flash_min_seq_length=0 \\\n  seed=$RANDOM \\\n  skip_first_n_steps_for_profiler=3 \\\n  profiler_steps=3 \\\n  per_device_batch_size=0.25 \\\n  ici_data_parallelism=1 \\\n  ici_fsdp_parallelism=4 \\\n  ici_tensor_parallelism=1\n  ```\n\n  It is important to note a couple of things:\n  - per_device_batch_size can be a fractional, but must be a whole number when multiplied by number of devices. In this example, 0.25 * 4 (devices) = effective global batch size = 1.\n  - The step time in v5p-8 with global batch size = 1 is large due to using `FULL` remat. On larger number of chips we can run larger batch sizes greatly increasing MFU, as we will see in the next session of deploying with xpk.\n  - To enable eval during training set `eval_every` to a value > 0.\n  - In Wan2.1, the ici_fsdp_parallelism axis is used for sequence parallelism, the ici_tensor_parallelism axis is used for head parallelism.\n    - You can enable both, keeping in mind that Wan2.1 has 40 heads and 40 must be evenly divisible by ici_tensor_parallelism.\n    - For Sequence parallelism, the code pads the sequence length to evenly divide the sequence. Try out different ici_fsdp_parallelism numbers, but we find 2 and 4 to be the best right now.\n  - For use on GPU it is recommended to enable the cudnn_te_flash attention kernel for optimal performance.\n    - Best performance is achieved with the use of batch parallelism, which can be enabled by using the ici_fsdp_batch_parallelism axis. Note that this parallelism strategy does not support fractional batch sizes.\n    - ici_fsdp_batch_parallelism and ici_fsdp_parallelism can be combined to allow for fractional batch sizes. However, padding is not currently supported for the cudnn_te_flash attention kernel and it is therefore required that the sequence length is divisible by the number of devices in the ici_fsdp_parallelism axis.\n  - For benchmarking training performance on multiple data dimension input without downloading/re-processing the dataset, the synthetic data iterator is supported.\n    - Set dataset_type='synthetic' and synthetic_num_samples=null to enable the synthetic data iterator.\n    - The following overrides on data dimensions are supported:\n      - synthetic_override_height: 720\n      - synthetic_override_width: 1280\n      - synthetic_override_num_frames: 85\n      - synthetic_override_max_sequence_length: 512\n      - synthetic_override_text_embed_dim: 4096\n      - synthetic_override_num_channels_latents: 16\n      - synthetic_override_vae_scale_factor_spatial: 8\n      - synthetic_override_vae_scale_factor_temporal: 4\n\n  You should eventually see a training run as:\n\n  ```bash\n  ***** Running training *****\n  Instantaneous batch size per device = 0.25\n  Total train batch size (w. parallel & distributed) = 1\n  Total optimization steps = 1000\n  Calculated TFLOPs per pass: 4893.2719\n  Warning, batch dimension should be shardable among the devices in data and fsdp axis, batch dimension: 1, devices_in_data_fsdp: 4\n  Warning, batch dimension should be shardable among the devices in data and fsdp axis, batch dimension: 1, devices_in_data_fsdp: 4\n  Warning, batch dimension should be shardable among the devices in data and fsdp axis, batch dimension: 1, devices_in_data_fsdp: 4\n  Warning, batch dimension should be shardable among the devices in data and fsdp axis, batch dimension: 1, devices_in_data_fsdp: 4\n  completed step: 0, seconds: 142.395, TFLOP/s/device: 34.364, loss: 0.270\n  To see full metrics 'tensorboard --logdir=gs://jfacevedo-maxdiffusion-v5p/wan/jfacevedo-wan-v5p-8-17263/tensorboard/'\n  completed step: 1, seconds: 137.207, TFLOP/s/device: 35.664, loss: 0.144\n  completed step: 2, seconds: 36.014, TFLOP/s/device: 135.871, loss: 0.210\n  completed step: 3, seconds: 36.016, TFLOP/s/device: 135.864, loss: 0.120\n  completed step: 4, seconds: 36.008, TFLOP/s/device: 135.894, loss: 0.107\n  completed step: 5, seconds: 36.008, TFLOP/s/device: 135.895, loss: 0.346\n  completed step: 6, seconds: 36.006, TFLOP/s/device: 135.900, loss: 0.169\n  ```\n\n  ### Deploying with XPK\n\n  This assumes the user has already created an xpk cluster, installed all dependencies and the also created the dataset from the step above. For getting started with MaxDiffusion and xpk see [this guide](docs/getting_started/run_maxdiffusion_via_xpk.md).\n\n  Using v5p-256 Then the command to run on xpk is as follows:\n\n  ```bash\n  RUN_NAME=jfacevedo-wan-v5p-8-${RANDOM}\n  OUTPUT_DIR=gs://$BUCKET_NAME/wan/\n  DATASET_DIR=gs://$BUCKET_NAME/${TFRECORDS_DATASET_DIR##*/}/train/\n  EVAL_DATA_DIR=gs://$BUCKET_NAME/${TFRECORDS_DATASET_DIR##*/}/eval_timesteps/\n  SAVE_DATASET_DIR=gs://$BUCKET_NAME/${TFRECORDS_DATASET_DIR##*/}/save/\n  ```\n\n  ```bash\n  LIBTPU_INIT_ARGS='--xla_tpu_enable_async_collective_fusion_fuse_all_gather=true \\\n  --xla_tpu_megacore_fusion_allow_ags=false \\\n  --xla_enable_async_collective_permute=true \\\n  --xla_tpu_enable_ag_backward_pipelining=true \\\n  --xla_tpu_enable_data_parallel_all_reduce_opt=true \\\n  --xla_tpu_data_parallel_opt_different_sized_ops=true \\\n  --xla_tpu_enable_async_collective_fusion=true \\\n  --xla_tpu_enable_async_collective_fusion_multiple_steps=true \\\n  --xla_tpu_overlap_compute_collective_tc=true \\\n  --xla_enable_async_all_gather=true \\\n  --xla_tpu_scoped_vmem_limit_kib=65536 \\\n  --xla_tpu_enable_async_all_to_all=true \\\n  --xla_tpu_enable_all_experimental_scheduler_features=true \\\n  --xla_tpu_enable_scheduler_memory_pressure_tracking=true \\\n  --xla_tpu_host_transfer_overlap_limit=24 \\\n  --xla_tpu_aggressive_opt_barrier_removal=ENABLED \\\n  --xla_lhs_prioritize_async_depth_over_stall=ENABLED \\\n  --xla_should_allow_loop_variant_parameter_in_chain=ENABLED \\\n  --xla_should_add_loop_invariant_op_in_chain=ENABLED \\\n  --xla_max_concurrent_host_send_recv=100 \\\n  --xla_tpu_scheduler_percent_shared_memory_limit=100 \\\n  --xla_latency_hiding_scheduler_rerun=2 \\\n  --xla_tpu_use_minor_sharding_for_major_trivial_input=true \\\n  --xla_tpu_relayout_group_size_threshold_for_reduce_scatter=1 \\\n  --xla_tpu_assign_all_reduce_scatter_layout=true'\n  ```\n\n  ```bash\n  python3 ~/xpk/xpk.py workload create \\\n  --cluster=$CLUSTER_NAME \\\n  --project=$PROJECT \\\n  --zone=$ZONE \\\n  --device-type=$DEVICE_TYPE \\\n  --num-slices=1 \\\n  --command=\" \\\n  HF_HUB_CACHE=/mnt/disks/external_disk/maxdiffusion_hf_cache/ python src/maxdiffusion/train_wan.py \\\n  src/maxdiffusion/configs/base_wan_14b.yml \\\n  attention='flash' \\\n  weights_dtype=bfloat16 \\\n  activations_dtype=bfloat16 \\\n  guidance_scale=5.0 \\\n  flow_shift=5.0 \\\n  fps=16 \\\n  skip_jax_distributed_system=False \\\n  run_name=${RUN_NAME} \\\n  output_dir=${OUTPUT_DIR} \\\n  train_data_dir=${DATASET_DIR} \\\n  load_tfrecord_cached=True \\\n  height=1280 \\\n  width=720 \\\n  num_frames=81 \\\n  num_inference_steps=50 \\\n  jax_cache_dir=${OUTPUT_DIR}/jax_cache/ \\\n  enable_profiler=True \\\n  dataset_save_location=${SAVE_DATASET_DIR} \\\n  remat_policy='HIDDEN_STATE_WITH_OFFLOAD' \\\n  flash_min_seq_length=0 \\\n  seed=$RANDOM \\\n  skip_first_n_steps_for_profiler=3 \\\n  profiler_steps=3 \\\n  per_device_batch_size=0.25 \\\n  ici_data_parallelism=32 \\\n  ici_fsdp_parallelism=4 \\\n  ici_tensor_parallelism=1 \\\n  max_train_steps=5000 \\\n  eval_every=100 \\\n  eval_data_dir=${EVAL_DATA_DIR} \\\n  enable_generate_video_for_eval=True\" \\\n  --base-docker-image=${IMAGE_DIR} \\\n  --enable-debug-logs \\\n  --workload=${RUN_NAME} \\\n  --priority=medium \\\n  --max-restarts=0\n  ```\n\n  ## Wan 2.2 Training\n\n  Wan 2.2 introduces a **dual-expert DiT architecture** (High-Noise Expert and Low-Noise Expert, ~27B total parameters). MaxDiffusion supports joint dual-expert training where samples are dynamically routed to the appropriate expert based on `boundary_ratio` (default `0.875`) using the Flow Match time shift schedule.\n\n  ### Single Host Training\n\n  Wan 2.2 uses the same dataset format (TFRecords or local/GCS dataset directories) prepared in the [Wan 2.1 dataset preparation step](#dataset-preparation).\n\n  Run single-host training using `train_wan.py` with `base_wan_27b.yml`:\n\n  ```bash\n  python src/maxdiffusion/train_wan.py \\\n    src/maxdiffusion/configs/base_wan_27b.yml \\\n    run_name=${RUN_NAME} \\\n    output_dir=${OUTPUT_DIR} \\\n    train_data_dir=${DATASET_DIR} \\\n    dataset_save_location=${SAVE_DATASET_DIR} \\\n    boundary_ratio=0.875 \\\n    weights_dtype=bfloat16 \\\n    activations_dtype=bfloat16 \\\n    per_device_batch_size=0.25 \\\n    ici_fsdp_parallelism=4 \\\n    ici_data_parallelism=1 \\\n    remat_policy='HIDDEN_STATE_WITH_OFFLOAD' \\\n    max_train_steps=1000 \\\n    checkpoint_every=500 \\\n    save_final_checkpoint=True\n  ```\n\n  ### Multi-Host Training with XPK\n\n  For large-scale multi-host training across TPU pods or clusters (e.g. v5p, v6e, v7x). The following example is configured for a 128-chip slice (such as `v5p-128`, `v6e-128`, or `tpu7x-4x4x4`):\n\n  ```bash\n  python3 ~/xpk/xpk.py workload create \\\n    --cluster=$CLUSTER_NAME \\\n    --project=$PROJECT \\\n    --zone=$ZONE \\\n    --device-type=$DEVICE_TYPE \\\n    --num-slices=1 \\\n    --workload=${RUN_NAME} \\\n    --command=\" \\\n    python3 src/maxdiffusion/train_wan.py \\\n      src/maxdiffusion/configs/base_wan_27b.yml \\\n      run_name=${RUN_NAME} \\\n      output_dir=${OUTPUT_DIR} \\\n      train_data_dir=${DATASET_DIR} \\\n      dataset_save_location=${SAVE_DATASET_DIR} \\\n      boundary_ratio=0.875 \\\n      weights_dtype=bfloat16 \\\n      activations_dtype=bfloat16 \\\n      per_device_batch_size=1 \\\n      ici_fsdp_parallelism=4 \\\n      ici_data_parallelism=32 \\\n      remat_policy='HIDDEN_STATE_WITH_OFFLOAD' \\\n      max_train_steps=5000 \\\n      checkpoint_every=1000 \\\n      save_final_checkpoint=True\" \\\n    --base-docker-image=${IMAGE_DIR} \\\n    --priority=medium \\\n    --max-restarts=0\n  ```\n\n  ### Checkpointing & Export\n\n  Wan 2.2 training checkpoints are managed with Orbax via `WanCheckpointer2_2`. Checkpoints store optimizer states and weights for both experts (`low_noise_transformer_state` and `high_noise_transformer_state`) alongside model configurations. MaxDiffusion inference pipelines (`WanPipeline2_2`) can load directly from these Orbax checkpoints for downstream sampling.\n\n  ## Flux Training\n\n  Expected results on 1024 x 1024 images with flash attention and bfloat16:\n\n  | Model | Accelerator | Sharding Strategy | Per Device Batch Size | Global Batch Size | Step Time (secs) |\n  | --- | --- | --- | --- | --- | --- |\n  | Flux-dev | v5p-8 | FSDP | 2 | 8 | 1.769 |\n\n  Flux finetuning has only been tested on TPU v5p.\n\n  To run the Flux training benchmark on v5p-8, use:\n\n  ```bash\n  python src/maxdiffusion/train_flux.py src/maxdiffusion/configs/base_flux_dev.yml \\\n      run_name=\"flux-training\" \\\n      output_dir=\"gs://<your-gcs-bucket>/\" \\\n      jax_cache_dir=\"/tmp/jax_cache\" \\\n      save_final_checkpoint=False \\\n      max_train_steps=100 \\\n      dataset_type=synthetic \\\n      ici_data_parallelism=1 \\\n      ici_fsdp_parallelism=4 \\\n      ici_tensor_parallelism=1 \\\n      train_new_flux=True \\\n      resolution=1024 \\\n      attention_sharding_uniform=False \\\n      attention=tokamax_flash \\\n      per_device_batch_size=2 \\\n      enable_profiler=False \\\n      reuse_example_batch=True \\\n      write_metrics=False \\\n      use_base2_exp=True\n  ```\n\n  To generate images with a finetuned checkpoint, run:\n\n  ```bash\n  python src/maxdiffusion/generate_flux_pipeline.py src/maxdiffusion/configs/base_flux_dev.yml  run_name=\"test-flux-train\" output_dir=\"gs://<your-gcs-bucket>/\" jax_cache_dir=\"/tmp/jax_cache\"\n  ```\n\n  ## Stable Diffusion XL Training\n\n  ```bash\n  export LIBTPU_INIT_ARGS=\"\"\n  python -m src.maxdiffusion.train_sdxl src/maxdiffusion/configs/base_xl.yml run_name=\"my_xl_run\" output_dir=\"gs://your-bucket/\" per_device_batch_size=1\n  ```\n\n  On GPUS with Fused Attention:\n\n  First install Transformer Engine by following the [instructions here](#fused-attention-for-gpu).\n\n  ```bash\n  NVTE_FUSED_ATTN=1 python -m src.maxdiffusion.train_sdxl src/maxdiffusion/configs/base_xl.yml hardware=gpu run_name='test-sdxl-train' output_dir=/tmp/ train_new_unet=true train_text_encoder=false cache_latents_text_encoder_outputs=true max_train_steps=200 weights_dtype=bfloat16 resolution=512 per_device_batch_size=1 attention=\"cudnn_flash_te\" jit_initializers=False\n  ```\n\n  To generate images with a trained checkpoint, run:\n\n  ```bash\n  python -m src.maxdiffusion.generate src/maxdiffusion/configs/base_xl.yml run_name=\"my_run\" pretrained_model_name_or_path=<your_saved_checkpoint_path> from_pt=False attention=dot_product\n  ```\n\n  ## Stable Diffusion 2 base Training\n\n  ```bash\n  export LIBTPU_INIT_ARGS=\"\"\n  python -m src.maxdiffusion.train src/maxdiffusion/configs/base_2_base.yml run_name=\"my_run\" jax_cache_dir=gs://your-bucket/cache_dir activations_dtype=float32 weights_dtype=float32 per_device_batch_size=2 precision=DEFAULT dataset_save_location=/tmp/my_dataset/ output_dir=gs://your-bucket/ attention=flash\n  ```\n\n  ## Stable Diffusion 1.4 Training\n\n  ```bash\n  export LIBTPU_INIT_ARGS=\"\"\n  python -m src.maxdiffusion.train src/maxdiffusion/configs/base14.yml run_name=\"my_run\" jax_cache_dir=gs://your-bucket/cache_dir activations_dtype=float32 weights_dtype=float32 per_device_batch_size=2 precision=DEFAULT dataset_save_location=/tmp/my_dataset/ output_dir=gs://your-bucket/ attention=flash\n  ```\n\n  To generate images with a trained checkpoint, run:\n\n  ```bash\n  python -m src.maxdiffusion.generate src/maxdiffusion/configs/base_2_base.yml run_name=\"my_run\" output_dir=gs://your-bucket/ from_pt=False attention=dot_product\n  ```\n\n  ## Dreambooth\n\n  Supported models are **Stable Diffusion 1.x,2.x**\n\n  ```bash\n  python src/maxdiffusion/dreambooth/train_dreambooth.py src/maxdiffusion/configs/base14.yml class_data_dir=<your-class-dir> instance_data_dir=<your-instance-dir> instance_prompt=\"a photo of ohwx dog\" class_prompt=\"photo of a dog\" max_train_steps=150 jax_cache_dir=<your-cache-dir> class_prompt=\"a photo of a dog\" activations_dtype=bfloat16 weights_dtype=float32 per_device_batch_size=1 enable_profiler=False precision=DEFAULT cache_dreambooth_dataset=False learning_rate=4e-6 num_class_images=100 run_name=<your-run-name> output_dir=gs://<your-bucket-name>\n  ```"
+      },
+      {
+        "heading": "Inference",
+        "level": 2,
+        "content": "To generate images, run the following command:\n  ## Stable Diffusion XL\n\n  Single and Multi host inference is supported with sharding annotations:\n\n  ```bash\n  python -m src.maxdiffusion.generate_sdxl src/maxdiffusion/configs/base_xl.yml run_name=\"my_run\"\n  ```\n\n  Single host pmap version:\n\n  ```bash\n  python -m src.maxdiffusion.generate_sdxl_replicated\n  ```\n\n  ## Stable Diffusion 2 base\n  ```bash\n  python -m src.maxdiffusion.generate src/maxdiffusion/configs/base_2_base.yml run_name=\"my_run\"\n  ```\n\n  ## Stable Diffusion 2.1\n  ```bash\n  python -m src.maxdiffusion.generate src/maxdiffusion/configs/base21.yml run_name=\"my_run\"\n  ```\n\n  ## LTX-Video\n  In the folder src/maxdiffusion/models/ltx_video/utils, run:\n\n  ```bash\n  python convert_torch_weights_to_jax.py --ckpt_path [LOCAL DIRECTORY FOR WEIGHTS] --transformer_config_path ../ltxv-13B.json\n  ```\n\n  In the repo folder, run:\n  ```bash\n  python src/maxdiffusion/generate_ltx_video.py src/maxdiffusion/configs/ltx_video.yml output_dir=\"[SAME DIRECTORY]\" config_path=\"src/maxdiffusion/models/ltx_video/ltxv-13B.json\"\n  ```\n  Img2video Generation:\n\n  Add conditioning image path as conditioning_media_paths in the form of [\"IMAGE_PATH\"] along with other generation parameters in the ltx_video.yml file. Then follow same instruction as above.\n\n  ## LTX-2 Video\n\n  Although not required, attaching an external disk is recommended as weights take up a lot of disk space. [Follow these instructions if you would like to attach an external disk](https://cloud.google.com/tpu/docs/attach-durable-block-storage).\n\n  The following command will run LTX-2 T2V:\n\n   ```bash\n  HF_HUB_CACHE=/mnt/disks/external_disk/maxdiffusion_hf_cache/ \\\n  LIBTPU_INIT_ARGS=\"--xla_tpu_enable_async_collective_fusion=true \\\n  --xla_tpu_enable_async_collective_fusion_fuse_all_reduce=true \\\n  --xla_tpu_enable_async_collective_fusion_multiple_steps=true \\\n  --xla_tpu_overlap_compute_collective_tc=true \\\n  --xla_enable_async_all_reduce=true\" \\\n  HF_HUB_ENABLE_HF_TRANSFER=1 \\\n  python src/maxdiffusion/generate_ltx2.py \\\n  src/maxdiffusion/configs/ltx2_video.yml \\\n  attention=\"flash\" \\\n  num_inference_steps=40 \\\n  num_frames=121 \\\n  width=768 \\\n  height=512 \\\n  per_device_batch_size=.125 \\\n  ici_data_parallelism=2 \\\n  ici_context_parallelism=4 \\\n  run_name=ltx2-inference\n  ```\n\n  ## Wan Models\n\n  Although not required, attaching an external disk is recommended as weights take up a lot of disk space. [Follow these instructions if you would like to attach an external disk](https://cloud.google.com/tpu/docs/attach-durable-block-storage).\n\n  Supports both Text2Vid and Img2Vid pipelines.\n\n  **Note**: The product of per_device_batch_size and num_devices must be equal to a whole number.\n\n  The below command uses 4 devices and a per_device_batch_size=0.25. Thus, 4 * 0.25 = 1. This will generate a single video. Setting per_device_batch_size to 0.5, will generate 2 videos and so on.\n\n  If using 8 devices, then per_device_batch_size=0.125 will generate 1 video, per_device_batch_size=0.25 generates 2 videos.\n\n  The following command will run Wan2.1 T2V:\n\n  ```bash\n  HF_HUB_CACHE=/mnt/disks/external_disk/maxdiffusion_hf_cache/ \\\n  LIBTPU_INIT_ARGS=\"--xla_tpu_enable_async_collective_fusion=true \\\n  --xla_tpu_enable_async_collective_fusion_fuse_all_reduce=true \\\n  --xla_tpu_enable_async_collective_fusion_multiple_steps=true \\\n  --xla_tpu_overlap_compute_collective_tc=true \\\n  --xla_enable_async_all_reduce=true\" \\\n  HF_HUB_ENABLE_HF_TRANSFER=1 \\\n  python src/maxdiffusion/generate_wan.py \\\n  src/maxdiffusion/configs/base_wan_14b.yml \\\n  attention=\"flash\" \\\n  num_inference_steps=50 \\\n  num_frames=81 \\\n  width=1280 \\\n  height=720 \\\n  jax_cache_dir=gs://jfacevedo-maxdiffusion/jax_cache/ \\\n  per_device_batch_size=.0.25 \\\n  ici_data_parallelism=2 \\\n  ici_context_parallelism=2 \\\n  flow_shift=5.0 \\\n  enable_profiler=True \\\n  run_name=wan-inference-testing-720p \\\n  output_dir=gs:/jfacevedo-maxdiffusion \\\n  fps=16 \\\n  flash_min_seq_length=0 \\\n  flash_block_sizes='{\"block_q\" : 3024, \"block_kv_compute\" : 1024, \"block_kv\" : 2048, \"block_q_dkv\": 3024, \"block_kv_dkv\" : 2048, \"block_kv_dkv_compute\" : 2048, \"block_q_dq\" : 3024, \"block_kv_dq\" : 2048 }' \\\n  seed=118445\n  ```\n\n  To run other Wan model inference pipelines, change the config file in the command above:\n\n  * For Wan2.1 I2V, use `base_wan_i2v_14b.yml`.\n  * For Wan2.2 T2V, use `base_wan_27b.yml`.\n  * For Wan2.2 I2V, use `base_wan_i2v_27b.yml`.\n\n  ### Ulysses Attention\n\n  MaxDiffusion supports Ulysses attention for WAN TPU inference. Enable it by setting `attention=\"ulysses\"`.\n\n  Internally, this follows the Ulysses sequence-parallel attention pattern and trades sequence shards for head shards around the local TPU splash kernel. For background, see [DeepSpeed Ulysses: System Optimizations for Enabling Training of Extreme Long Sequence Transformer Models](https://arxiv.org/abs/2309.14509).\n\n  To enable Ulysses attention, set the corresponding override in your config YAML or pass it as a command-line override:\n\n  ```bash\n  python src/maxdiffusion/generate_wan.py \\\n  src/maxdiffusion/configs/base_wan_i2v_27b.yml \\\n  attention=\"ulysses\" \\\n  ici_context_parallelism=4 \\\n  ...\n  ```\n\n  Ulysses requires `ici_context_parallelism` greater than 1, and the number of attention heads must be divisible by the context shard count. `flash_block_sizes` tuning is optional and can still be used for hardware-specific tuning.\n\n  In our Wan2.2 I2V benchmarks at 40 inference steps, 81 frames, and `720x1280` resolution, Ulysses improved inference time by roughly `~10%` compared with flash attention, with about `~20s` lower latency on the v6e-8 and v7x-8 TPU setup.\n\n  #### Chunked Ulysses Attention (Overlapping Communication and Compute)\n\n  If you observe a major `all-to-all` communication bottleneck (especially when communication overhead is more pronounced compared to attention computation), you can enable **Chunked Ulysses Attention**.\n\n  By setting `ulysses_attention_chunks` greater than 1, MaxDiffusion splits the Ulysses all-to-all communication and attention computation into head-group passes (chunks). This allows XLA to overlap the all-to-all communication of one chunk with the head-parallel local attention compute of another chunk, significantly mitigating the communication bottleneck.\n\n  This chunking technique is supported and works for both plain Ulysses attention (`attention=\"ulysses\"`) and hybrid Ulysses+Ring 2D attention/context parallelism (`attention=\"ulysses_ring\"`).\n\n  To enable chunked Ulysses attention, set the corresponding override (e.g. `ulysses_attention_chunks=2` or `ulysses_attention_chunks=5`) in your config YAML or command line:\n\n  ```bash\n  python src/maxdiffusion/generate_wan.py \\\n  src/maxdiffusion/configs/base_wan_i2v_27b.yml \\\n  attention=\"ulysses\" \\\n  ici_context_parallelism=4 \\\n  ulysses_attention_chunks=2 \\\n  ...\n  ```\n\n  > [!IMPORTANT]\n  > For communication-compute overlap to be effective on TPUs, you must enable the following XLA flags before running:\n  > ```bash\n  > export XLA_FLAGS=\"--xla_tpu_enable_async_all_to_all=true --xla_tpu_overlap_compute_collective_tc=true\"\n  > ```\n\n  ### Caching Mechanisms\n\n  Wan 2.x pipelines support several caching strategies to accelerate inference by skipping redundant transformer forward passes. These are **mutually exclusive** \u2014 enable only one at a time.\n\n  | Cache Type | Config Flag | Supported Pipelines | Speedup | Description |\n  | --- | --- | --- | --- | --- |\n  | **CFG Cache** | `use_cfg_cache: True` | Wan 2.1 T2V, Wan 2.2 T2V/I2V | ~1.2x | FasterCache-style: caches the unconditional branch and applies FFT frequency-domain compensation on skipped steps. |\n  | **SenCache** | `use_sen_cache: True` | Wan 2.2 T2V/I2V | ~1.4x | Sensitivity-Aware Caching ([arXiv:2602.24208](https://arxiv.org/abs/2602.24208)): predicts output change via first-order sensitivity S = \u03b1_x\u00b7\u2016\u0394x\u2016 + \u03b1_t\u00b7\\|\u0394t\\|. Skips the full CFG forward pass when predicted change is below tolerance \u03b5. |\n  | **MagCache** | `use_magcache: True` | Wan 2.1 T2V, Wan 2.2 T2V/I2V | ~1.75\u20131.9x | [MagCache](https://github.com/Zehong-Ma/MagCache): skips the transformer blocks and reuses the cached block residual when the accumulated magnitude-ratio error stays below `magcache_thresh`, capped at `magcache_K` consecutive skips. Uses a precalibrated per-step `mag_ratios_base` curve, so the skip schedule is deterministic (no data-dependent control flow). |\n\n  For Wan 2.2 (dual-transformer), MagCache uses a single `mag_ratios_base` curve across both phases, forces a full recompute for the first `retention_ratio` fraction of each phase, and resets the cached residual at the high\u2192low boundary. The shipped curves are seeded from the official Wan2.2 values (`base_wan_27b.yml` for T2V, `base_wan_i2v_27b.yml` for I2V); recalibrate for your dtype/attention kernel to tighten the quality gap.\n\n  > **Wan 2.2 T2V requires `flow_shift=12.0`** \u2014 it sets where the high\u2192low boundary lands, which is what `mag_ratios_base` is calibrated against. A lower shift (e.g. `5.0`) moves the boundary out of phase, so MagCache skips at the wrong steps and quality drops.\n\n  Benchmarks (7x, A14B, 720\u00d71280, 81 frames, 40 steps, vs dense \u2014 SSIM/PSNR largely reflect trajectory divergence, not visible degradation):\n\n  | Variant | Settings | Speedup | SSIM / PSNR |\n  | --- | --- | --- | --- |\n  | T2V | `flow_shift=12.0`, `magcache_thresh=0.04`, `magcache_K=2` | ~1.82\u00d7 (18/40 skipped) | 0.72 / 21.8 dB |\n  | I2V | `flow_shift=5.0`, `boundary_ratio=0.900`, `magcache_thresh=0.06`, `magcache_K=2` | ~1.75\u00d7 (17/40 skipped) | 0.91 / 25.4 dB |\n\n  To enable a caching mechanism, set the corresponding flag in your config YAML or pass it as a command-line override:\n\n  ```bash\n  # Example: enable SenCache for Wan 2.2 T2V\n  python src/maxdiffusion/generate_wan.py \\\n    src/maxdiffusion/configs/base_wan_27b.yml \\\n    use_sen_cache=True \\\n    ...\n\n  # Example: enable CFG Cache for Wan 2.2 I2V\n  python src/maxdiffusion/generate_wan.py \\\n    src/maxdiffusion/configs/base_wan_i2v_27b.yml \\\n    use_cfg_cache=True \\\n    ..."
+      },
+      {
+        "heading": "Example: enable MagCache for Wan 2.2 T2V",
+        "level": 1,
+        "content": "python src/maxdiffusion/generate_wan.py \\\n  src/maxdiffusion/configs/base_wan_27b.yml \\\n  use_magcache=True \\\n  magcache_thresh=0.04 \\\n  magcache_K=2 \\\n  ..."
+      },
+      {
+        "heading": "Example: enable MagCache for Wan 2.2 I2V",
+        "level": 1,
+        "content": "python src/maxdiffusion/generate_wan.py \\\n  src/maxdiffusion/configs/base_wan_i2v_27b.yml \\\n  use_magcache=True \\\n  magcache_thresh=0.06 \\\n  magcache_K=2 \\\n  ...\n```"
+      },
+      {
+        "heading": "Ring Attention",
+        "level": 3,
+        "content": "We added ring attention support for Wan models. Below are the stats for one `720p` (81 frames) video generation (with CFG DP):\n| Accelerator |  Model | Attention Type | Inference Steps | Sharding | e2e Generation Time |\n| -- | -- | -- | -- | -- | -- |\n| v7x-8 | WAN 2.1 | Tokamax Flash | 50 | dp2-fsdp1-context4-tp1 | **249.3** |\n| v7x-8 | WAN 2.1 | Tokamax Ring | 50 | dp2-fsdp1-context4-tp1 | 252.4 |\n| v7x-8 | WAN 2.2 | Tokamax Flash | 40 | dp2-fsdp1-context4-tp1 | **194.4** |\n| v7x-8 | WAN 2.2 | Tokamax Ring | 40 | dp2-fsdp1-context4-tp1 | 201.7 |\n\n| Accelerator |  Model | Attention Type | Inference Steps | Sharding | e2e Generation Time |\n| -- | -- | -- | -- | -- | -- |\n| v7x-16 | WAN 2.1 | Tokamax Flash | 50 | dp2-fsdp1-context8-tp1 | **127.1** |\n| v7x-16 | WAN 2.1 | Tokamax Ring | 50 | dp2-fsdp1-context8-tp1 | 137.2 |\n| v7x-16 | WAN 2.2 | Tokamax Flash | 40 | dp2-fsdp1-context8-tp1 | **106.0** |\n| v7x-16 | WAN 2.2 | Tokamax Ring | 40 | dp2-fsdp1-context8-tp1 | 137.5 |\n\n(* There are some known stability issues for ring attention on 16 TPUs, please use `tokamax_flash` attention instead.)"
+      },
+      {
+        "heading": "Automatic Tile-Size Search",
+        "level": 3,
+        "content": "The optimal attention tile sizes (`block_q` / `block_kv`) depend on the sequence length, VMEM, sharding, and accelerator, and the feasibility edge is a VMEM OOM with no clean closed form \u2014 so we tune them empirically. Passing `enable_tile_search=true` to `generate_wan.py` runs a fast one-DiT-block grid search before inference and injects the winning block sizes into `flash_block_sizes` (`tile_search_mode=smart` by default; the search is opt-in and off by default).  The core is model-agnostic (`utils/tile_size_grid_search.py`) with a per-model plug (`utils/wan_block_benchmark.py`), which also runs standalone via `python -m maxdiffusion.utils.wan_block_benchmark ... --smart-search`.\n\n  ## Flux\n\n  First make sure you have permissions to access the Flux repos in Huggingface.\n\n  Expected results on 1024 x 1024 images with flash attention and bfloat16:\n\n  | Model | Accelerator | Sharding Strategy | Batch Size | Steps | time (secs) |\n  | --- | --- | --- | --- | --- | --- |\n  | Flux-dev | v4-8 | DDP | 4 | 28 | 23 |\n  | Flux-schnell | v4-8 | DDP | 4 | 4 | 2.2 |\n  | Flux-dev | v6e-4 | DDP | 4 | 28 | 5.5 |\n  | Flux-schnell | v6e-4 | DDP | 4 | 4 | 0.8 |\n  | Flux-schnell | v6e-4 | FSDP | 4 | 4 | 1.2 |\n\n  Schnell:\n\n  ```bash\n  python src/maxdiffusion/generate_flux.py src/maxdiffusion/configs/base_flux_schnell.yml jax_cache_dir=/tmp/cache_dir run_name=flux_test output_dir=/tmp/ prompt=\"photograph of an electronics chip in the shape of a race car with trillium written on its side\" per_device_batch_size=1\n  ```\n\n  Dev:\n\n  ```bash\n  python src/maxdiffusion/generate_flux.py src/maxdiffusion/configs/base_flux_dev.yml jax_cache_dir=/tmp/cache_dir run_name=flux_test output_dir=/tmp/ prompt=\"photograph of an electronics chip in the shape of a race car with trillium written on its side\" per_device_batch_size=1\n  ```\n\n  If you are using a TPU v6e (Trillium), you can use optimized flash block sizes for faster inference. Uncomment Flux-dev [config](src/maxdiffusion/configs/base_flux_dev.yml#60) and Flux-schnell [config](src/maxdiffusion/configs/base_flux_schnell.yml#68)\n\n  To keep text encoders, vae and transformer on HBM memory at all times, the following command shards the model across devices.\n\n  ```bash\n  python src/maxdiffusion/generate_flux.py src/maxdiffusion/configs/base_flux_schnell.yml jax_cache_dir=/tmp/cache_dir run_name=flux_test output_dir=/tmp/ prompt=\"photograph of an electronics chip in the shape of a race car with trillium written on its side\" per_device_batch_size=1 ici_data_parallelism=1 ici_fsdp_parallelism=-1 offload_encoders=False\n  ```\n\n  ### Flux.2-Klein (4B & 9B)\n\n  Flux.2-Klein provides ultra-fast 4-step image generation using Qwen3 text embeddings and FLUX.2 transformer blocks.\n\n  #### Text-to-Image Generation:\n\n  Flux.2-Klein 4B:\n\n  ```bash\n  python src/maxdiffusion/generate_flux2klein.py src/maxdiffusion/configs/base_flux2klein.yml run_name=flux2klein_4b prompt=\"A detailed vector illustration of a robotic hummingbird\"\n  ```\n\n  Flux.2-Klein 9B:\n\n  ```bash\n  python src/maxdiffusion/generate_flux2klein.py src/maxdiffusion/configs/base_flux2klein_9B.yml run_name=flux2klein_9b prompt=\"A detailed vector illustration of a robotic hummingbird\"\n  ```\n\n  #### Multi-Reference Image Editing:\n\n  Flux.2-Klein supports multi-reference image editing conditioned on up to 4 reference images via the `image_paths` CLI flag.\n\n  Flux.2-Klein 9B Image Editing:\n\n  ```bash\n  python src/maxdiffusion/generate_flux2klein.py src/maxdiffusion/configs/base_flux2klein_9B.yml run_name=flux2klein_9b_image_edit prompt=\"change the lighting to evening\" image_paths=\"['src/maxdiffusion/tests/images/flux2klein/ref_flux2klein_9b.png']\"\n  ```\n\n  The 9B model also supports KV-Cache for faster inference, and can be toggled with the `use_kv=True` CLI flag:\n\n  ```bash\n  python src/maxdiffusion/generate_flux2klein.py src/maxdiffusion/configs/base_flux2klein_9B.yml run_name=flux2klein_9b_kv_edit prompt=\"change the lighting to evening\" image_paths=\"['src/maxdiffusion/tests/images/flux2klein/ref_flux2klein_9b.png']\" use_kv=True\n  ```\n  ## Fused Attention for GPU:\n  Fused Attention for GPU is supported via TransformerEngine. Installation instructions:\n\n  ```bash\n  cd maxdiffusion\n  pip install -U \"jax[cuda12]\"\n  pip install -r requirements.txt\n  pip install --upgrade torch torchvision\n  pip install \"transformer_engine[jax]\n  pip install .\n  ```\n\n  Now run the command:\n\n  ```bash\n  NVTE_FUSED_ATTN=1 HF_HUB_ENABLE_HF_TRANSFER=1 python src/maxdiffusion/generate_flux.py src/maxdiffusion/configs/base_flux_dev.yml jax_cache_dir=/tmp/cache_dir run_name=flux_test output_dir=/tmp/ prompt='A cute corgi lives in a house made out of sushi, anime' num_inference_steps=28 split_head_dim=True per_device_batch_size=1 attention=\"cudnn_flash_te\" hardware=gpu\n  ```\n  ## Wan LoRA\n\n  Disclaimer: not all LoRA formats have been tested. Currently supports ComfyUI and AI Toolkit formats. If there is a specific LoRA that doesn't load, please let us know.\n\n  First create a copy of the relevant config file eg: `src/maxdiffusion/configs/base_wan_{*}.yml`. Update the prompt and LoRA details in the config. Make sure to set `enable_lora: True`. Then run the following command:\n\n  ```bash\n  HF_HUB_CACHE=/mnt/disks/external_disk/maxdiffusion_hf_cache/ \\\n  LIBTPU_INIT_ARGS=\"--xla_tpu_enable_async_collective_fusion=true \\\n  --xla_tpu_enable_async_collective_fusion_fuse_all_reduce=true \\\n  --xla_tpu_enable_async_collective_fusion_multiple_steps=true \\\n  --xla_tpu_overlap_compute_collective_tc=true \\\n  --xla_enable_async_all_reduce=true\" \\\n  HF_HUB_ENABLE_HF_TRANSFER=1 \\\n  python src/maxdiffusion/generate_wan.py \\\n  src/maxdiffusion/configs/base_wan_i2v_14b.yml \\   # --> Change to your copy\n  jax_cache_dir=gs://jfacevedo-maxdiffusion/jax_cache/ \\\n  per_device_batch_size=.125 \\\n  ici_data_parallelism=2 \\\n  ici_context_parallelism=2 \\\n  run_name=wan-lora-inference-testing-720p \\\n  output_dir=gs:/jfacevedo-maxdiffusion \\\n  seed=118445 \\\n  enable_lora=True \\\n  ```\n\n  Loading multiple LoRAs is supported as well.\n\n  ## Flux LoRA\n\n  Disclaimer: not all LoRA formats have been tested. If there is a specific LoRA that doesn't load, please let us know.\n\n  Tested with [Amateur Photography](https://civitai.com/models/652699/amateur-photography-flux-dev) and [XLabs-AI](https://huggingface.co/XLabs-AI/flux-lora-collection/tree/main) LoRA collection.\n\n  First download the LoRA file to a local directory, for example, `/home/jfacevedo/anime_lora.safetensors`. Then run as follows:\n\n  ```bash\n  python src/maxdiffusion/generate_flux.py src/maxdiffusion/configs/base_flux_dev.yml jax_cache_dir=/tmp/cache_dir run_name=flux_test output_dir=/tmp/ prompt='A cute corgi lives in a house made out of sushi, anime' num_inference_steps=28 ici_data_parallelism=1 ici_fsdp_parallelism=-1 split_head_dim=True lora_config='{\"lora_model_name_or_path\" : [\"/home/jfacevedo/anime_lora.safetensors\"], \"weight_name\" : [\"anime_lora.safetensors\"], \"adapter_name\" : [\"anime\"], \"scale\": [0.8], \"from_pt\": [\"true\"]}'\n  ```\n\n  Loading multiple LoRAs is supported as follows:\n\n  ```bash\n  python src/maxdiffusion/generate_flux.py src/maxdiffusion/configs/base_flux_dev.yml jax_cache_dir=/tmp/cache_dir run_name=flux_test output_dir=/tmp/ prompt='A cute corgi lives in a house made out of sushi, anime' num_inference_steps=28 ici_data_parallelism=1 ici_fsdp_parallelism=-1 split_head_dim=True lora_config='{\"lora_model_name_or_path\" : [\"/home/jfacevedo/anime_lora.safetensors\", \"/home/jfacevedo/amateurphoto-v6-forcu.safetensors\"], \"weight_name\" : [\"anime_lora.safetensors\",\"amateurphoto-v6-forcu.safetensors\"], \"adapter_name\" : [\"anime\",\"realistic\"], \"scale\": [0.6, 0.6], \"from_pt\": [\"true\",\"true\"]}'\n  ```\n\n  ## Hyper SDXL LoRA\n\n  Supports Hyper-SDXL models from [ByteDance](https://huggingface.co/ByteDance/Hyper-SD)\n\n  ```bash\n  python src/maxdiffusion/generate_sdxl.py src/maxdiffusion/configs/base_xl.yml run_name=\"test-lora\" output_dir=/tmp/ jax_cache_dir=/tmp/cache_dir/ num_inference_steps=2 do_classifier_free_guidance=False prompt=\"a photograph of a cat wearing a hat riding a skateboard in a park.\" per_device_batch_size=1 pretrained_model_name_or_path=\"Lykon/AAM_XL_AnimeMix\" from_pt=True revision=main diffusion_scheduler_config='{\"_class_name\" : \"FlaxDDIMScheduler\", \"timestep_spacing\" : \"trailing\"}' lora_config='{\"lora_model_name_or_path\" : [\"ByteDance/Hyper-SD\"], \"weight_name\" : [\"Hyper-SDXL-2steps-lora.safetensors\"], \"adapter_name\" : [\"hyper-sdxl\"], \"scale\": [0.7], \"from_pt\": [\"true\"]}'\n  ```\n\n  ## Load Multiple LoRA\n\n  Supports loading multiple LoRAs for inference. Both from local or from HuggingFace hub.\n\n  ```bash\n  python src/maxdiffusion/generate_sdxl.py src/maxdiffusion/configs/base_xl.yml run_name=\"test-lora\" output_dir=/tmp/tmp/ jax_cache_dir=/tmp/cache_dir/ num_inference_steps=30 do_classifier_free_guidance=True prompt=\"ultra detailed diagram blueprint of a papercut Sitting MaineCoon cat, wide canvas, ampereart, electrical diagram, bl3uprint, papercut\" per_device_batch_size=1 diffusion_scheduler_config='{\"_class_name\" : \"FlaxDDIMScheduler\", \"timestep_spacing\" : \"trailing\"}' lora_config='{\"lora_model_name_or_path\" : [\"/home/jfacevedo/blueprintify-sd-xl-10.safetensors\",\"TheLastBen/Papercut_SDXL\"], \"weight_name\" : [\"/home/jfacevedo/blueprintify-sd-xl-10.safetensors\",\"papercut.safetensors\"], \"adapter_name\" : [\"blueprint\",\"papercut\"], \"scale\": [0.8, 0.7], \"from_pt\": [\"true\", \"true\"]}'\n  ```\n\n  ## SDXL Lightning\n\n  Single and Multi host inference is supported with sharding annotations:\n\n  ```bash\n  python -m src.maxdiffusion.generate_sdxl src/maxdiffusion/configs/base_xl_lightning.yml run_name=\"my_run\" lightning_repo=\"ByteDance/SDXL-Lightning\" lightning_ckpt=\"sdxl_lightning_4step_unet.safetensors\"\n  ```\n\n  ## ControlNet\n\n  Might require installing extra libraries for opencv: `apt-get update && apt-get install ffmpeg libsm6 libxext6  -y`\n\n  ### Stable Diffusion 1.4\n\n  ```bash\n  python src/maxdiffusion/controlnet/generate_controlnet_replicated.py\n  ```\n\n  ### Stable Diffusion XL\n\n  ```bash\n  python src/maxdiffusion/controlnet/generate_controlnet_sdxl_replicated.py\n  ```"
+      },
+      {
+        "heading": "Getting Started: Multihost development",
+        "level": 2,
+        "content": "Multihost training for Stable Diffusion 2 base can be run using the following command:\n```bash\nTPU_NAME=<your-tpu-name>\nZONE=<your-zone>\nPROJECT_ID=<your-project-id>\ngcloud compute tpus tpu-vm ssh $TPU_NAME --zone=$ZONE --project $PROJECT_ID --worker=all --command=\"\nexport LIBTPU_INIT_ARGS=\"\"\ngit clone https://github.com/google/maxdiffusion\ncd maxdiffusion\npip3 install jax[tpu] -f https://storage.googleapis.com/jax-releases/libtpu_releases.html\npip3 install -r requirements.txt\npip3 install .\npython -m src.maxdiffusion.train src/maxdiffusion/configs/base_2_base.yml run_name=my_run output_dir=gs://your-bucket/\"\n```"
+      },
+      {
+        "heading": "Comparison to Alternatives",
+        "level": 1,
+        "content": "MaxDiffusion started as a fork of [Diffusers](https://github.com/huggingface/diffusers), a Hugging Face diffusion library written in Python, Pytorch and Jax. MaxDiffusion is compatible with Hugging Face Jax models. MaxDiffusion is more complex and was designed to run distributed across TPU Pods."
+      },
+      {
+        "heading": "Development",
+        "level": 1,
+        "content": "Whether you are forking MaxDiffusion for your own needs or intending to contribute back to the community, a full suite of tests can be found in `tests` and `src/maxdiffusion/tests`.\n\nTo run unit tests simply run:\n```bash\npython -m pytest\n```"
+      },
+      {
+        "heading": "Pre-commit Hooks",
+        "level": 3,
+        "content": "We use [pre-commit](https://pre-commit.com/) to automatically check and format code before each commit (using `pyink`, `ruff`, `pylint`, and general git hygiene checks).\n\n> **Important:** Make sure you are in your active virtual environment (e.g. `maxdiffusion_venv` or your active venv) before running `pre-commit install`, so that hooks run using the environment's installed dependencies.\n\n```bash"
+      },
+      {
+        "heading": "1. Activate your virtual environment first",
+        "level": 1,
+        "content": "source <path-to-venv>/bin/activate"
+      },
+      {
+        "heading": "2. Install pre-commit (if not already installed)",
+        "level": 1,
+        "content": "pip install pre-commit"
+      },
+      {
+        "heading": "3. Install git pre-commit hooks",
+        "level": 1,
+        "content": "pre-commit install\n```\n\nOnce installed, pre-commit will automatically run on staged files whenever you run `git commit`.\n\nYou can also run all pre-commit checks manually across the entire repository at any time:\n\n```bash\npre-commit run --all-files\n```"
+      },
+      {
+        "heading": "Code Style",
+        "level": 3,
+        "content": "This project uses `pylint` and `pyink` to enforce code style. Before submitting a pull request, please ensure your code passes these checks by running:\n\n```bash\nbash code_style.sh\n```\n\nThis script will automatically format your code with `pyink` and help you identify any remaining style issues.\n\n\nThe full suite of -end-to end tests is in `tests` and `src/maxdiffusion/tests`. We run them with a nightly cadance."
+      },
+      {
+        "heading": "Profiling",
+        "level": 2,
+        "content": "To learn how to enable ML Diagnostics and XProf profiling for your runs, please see our [ML Diagnostics Guide](docs/profiling.md)."
+      },
+      {
+        "heading": "Metrics",
+        "level": 2,
+        "content": "To learn how to enable ML Diagnostics metrics tracking for your runs, please see our [Metrics Guide](docs/metrics.md)."
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "bash",
+        "code": "export HF_DATASET_DIR=/mnt/disks/external_disk/PusaV1_training/\n  export TFRECORDS_DATASET_DIR=/mnt/disks/external_disk/wan_tfr_dataset_pusa_v1\n  huggingface-cli download RaphaelLiu/PusaV1_training --repo-type dataset --local-dir $HF_DATASET_DIR"
+      },
+      {
+        "language": "bash",
+        "code": "python src/maxdiffusion/data_preprocessing/wan_pusav1_to_tfrecords.py src/maxdiffusion/configs/base_wan_14b.yml train_data_dir=$HF_DATASET_DIR tfrecords_dir=$TFRECORDS_DATASET_DIR/train no_records_per_shard=10 enable_eval_timesteps=False"
+      },
+      {
+        "language": "bash",
+        "code": "ls -ll $TFRECORDS_DATASET_DIR/train"
+      },
+      {
+        "language": "bash",
+        "code": "python src/maxdiffusion/data_preprocessing/wan_pusav1_to_tfrecords.py src/maxdiffusion/configs/base_wan_14b.yml train_data_dir=$HF_DATASET_DIR tfrecords_dir=$TFRECORDS_DATASET_DIR/eval no_records_per_shard=10 enable_eval_timesteps=True"
+      },
+      {
+        "language": "bash",
+        "code": "printf \"%s\\n\" $TFRECORDS_DATASET_DIR/train/file_*-*.tfrec | awk -F '[-.]' '$2+0 <= 420' | xargs -d '\\n' rm"
+      },
+      {
+        "language": "bash",
+        "code": "printf \"%s\\n\" $TFRECORDS_DATASET_DIR/train/file_*-*.tfrec | awk -F '[-.]' '$2+0 <= 420' | xargs -d '\\n' echo"
+      },
+      {
+        "language": "text",
+        "code": "train\n  eval_timesteps"
+      },
+      {
+        "language": "bash",
+        "code": "rm $TFRECORDS_DATASET_DIR/eval_timesteps/file_42-430.tfrec"
+      },
+      {
+        "language": "bash",
+        "code": "BUCKET_NAME=my-bucket\n  gcloud storage cp --recursive $TFRECORDS_DATASET_DIR gs://$BUCKET_NAME/${TFRECORDS_DATASET_DIR##*/}"
+      },
+      {
+        "language": "bash",
+        "code": "RUN_NAME=jfacevedo-wan-v5p-8-${RANDOM}\n  OUTPUT_DIR=gs://$BUCKET_NAME/wan/\n  DATASET_DIR=gs://$BUCKET_NAME/${TFRECORDS_DATASET_DIR##*/}/train/\n  EVAL_DATA_DIR=gs://$BUCKET_NAME/${TFRECORDS_DATASET_DIR##*/}/eval_timesteps/\n  SAVE_DATASET_DIR=gs://$BUCKET_NAME/${TFRECORDS_DATASET_DIR##*/}/save/"
+      },
+      {
+        "language": "bash",
+        "code": "export LIBTPU_INIT_ARGS='--xla_tpu_enable_async_collective_fusion_fuse_all_gather=true \\\n  --xla_tpu_megacore_fusion_allow_ags=false \\\n  --xla_enable_async_collective_permute=true \\\n  --xla_tpu_enable_ag_backward_pipelining=true \\\n  --xla_tpu_enable_data_parallel_all_reduce_opt=true \\\n  --xla_tpu_data_parallel_opt_different_sized_ops=true \\\n  --xla_tpu_enable_async_collective_fusion=true \\\n  --xla_tpu_enable_async_collective_fusion_multiple_steps=true \\\n  --xla_tpu_overlap_compute_collective_tc=true \\\n  --xla_enable_async_all_gather=true \\\n  --xla_tpu_scoped_vmem_limit_kib=65536 \\\n  --xla_tpu_enable_async_all_to_all=true \\\n  --xla_tpu_enable_all_experimental_scheduler_features=true \\\n  --xla_tpu_enable_scheduler_memory_pressure_tracking=true \\\n  --xla_tpu_host_transfer_overlap_limit=24 \\\n  --xla_tpu_aggressive_opt_barrier_removal=ENABLED \\\n  --xla_lhs_prioritize_async_depth_over_stall=ENABLED \\\n  --xla_should_allow_loop_variant_parameter_in_chain=ENABLED \\\n  --xla_should_add_loop_invariant_op_in_chain=ENABLED \\\n  --xla_max_concurrent_host_send_recv=100 \\\n  --xla_tpu_scheduler_percent_shared_memory_limit=100 \\\n  --xla_latency_hiding_scheduler_rerun=2 \\\n  --xla_tpu_use_minor_sharding_for_major_trivial_input=true \\\n  --xla_tpu_relayout_group_size_threshold_for_reduce_scatter=1 \\\n  --xla_tpu_assign_all_reduce_scatter_layout=true'"
+      },
+      {
+        "language": "bash",
+        "code": "HF_HUB_CACHE=/mnt/disks/external_disk/maxdiffusion_hf_cache/ python src/maxdiffusion/train_wan.py \\\n  src/maxdiffusion/configs/base_wan_14b.yml \\\n  attention='flash' \\\n  weights_dtype=bfloat16 \\\n  activations_dtype=bfloat16 \\\n  guidance_scale=5.0 \\\n  flow_shift=5.0 \\\n  fps=16 \\\n  skip_jax_distributed_system=False \\\n  run_name=${RUN_NAME} \\\n  output_dir=${OUTPUT_DIR} \\\n  train_data_dir=${DATASET_DIR} \\\n  load_tfrecord_cached=True \\\n  height=1280 \\\n  width=720 \\\n  num_frames=81 \\\n  num_inference_steps=50 \\\n  jax_cache_dir=${OUTPUT_DIR}/jax_cache/ \\\n  max_train_steps=1000 \\\n  enable_profiler=True \\\n  dataset_save_location=${SAVE_DATASET_DIR} \\\n  remat_policy='HIDDEN_STATE_WITH_OFFLOAD' \\\n  flash_min_seq_length=0 \\\n  seed=$RANDOM \\\n  skip_first_n_steps_for_profiler=3 \\\n  profiler_steps=3 \\\n  per_device_batch_size=0.25 \\\n  ici_data_parallelism=1 \\\n  ici_fsdp_parallelism=4 \\\n  ici_tensor_parallelism=1"
+      },
+      {
+        "language": "bash",
+        "code": "***** Running training *****\n  Instantaneous batch size per device = 0.25\n  Total train batch size (w. parallel & distributed) = 1\n  Total optimization steps = 1000\n  Calculated TFLOPs per pass: 4893.2719\n  Warning, batch dimension should be shardable among the devices in data and fsdp axis, batch dimension: 1, devices_in_data_fsdp: 4\n  Warning, batch dimension should be shardable among the devices in data and fsdp axis, batch dimension: 1, devices_in_data_fsdp: 4\n  Warning, batch dimension should be shardable among the devices in data and fsdp axis, batch dimension: 1, devices_in_data_fsdp: 4\n  Warning, batch dimension should be shardable among the devices in data and fsdp axis, batch dimension: 1, devices_in_data_fsdp: 4\n  completed step: 0, seconds: 142.395, TFLOP/s/device: 34.364, loss: 0.270\n  To see full metrics 'tensorboard --logdir=gs://jfacevedo-maxdiffusion-v5p/wan/jfacevedo-wan-v5p-8-17263/tensorboard/'\n  completed step: 1, seconds: 137.207, TFLOP/s/device: 35.664, loss: 0.144\n  completed step: 2, seconds: 36.014, TFLOP/s/device: 135.871, loss: 0.210\n  completed step: 3, seconds: 36.016, TFLOP/s/device: 135.864, loss: 0.120\n  completed step: 4, seconds: 36.008, TFLOP/s/device: 135.894, loss: 0.107\n  completed step: 5, seconds: 36.008, TFLOP/s/device: 135.895, loss: 0.346\n  completed step: 6, seconds: 36.006, TFLOP/s/device: 135.900, loss: 0.169"
+      },
+      {
+        "language": "bash",
+        "code": "RUN_NAME=jfacevedo-wan-v5p-8-${RANDOM}\n  OUTPUT_DIR=gs://$BUCKET_NAME/wan/\n  DATASET_DIR=gs://$BUCKET_NAME/${TFRECORDS_DATASET_DIR##*/}/train/\n  EVAL_DATA_DIR=gs://$BUCKET_NAME/${TFRECORDS_DATASET_DIR##*/}/eval_timesteps/\n  SAVE_DATASET_DIR=gs://$BUCKET_NAME/${TFRECORDS_DATASET_DIR##*/}/save/"
+      },
+      {
+        "language": "bash",
+        "code": "LIBTPU_INIT_ARGS='--xla_tpu_enable_async_collective_fusion_fuse_all_gather=true \\\n  --xla_tpu_megacore_fusion_allow_ags=false \\\n  --xla_enable_async_collective_permute=true \\\n  --xla_tpu_enable_ag_backward_pipelining=true \\\n  --xla_tpu_enable_data_parallel_all_reduce_opt=true \\\n  --xla_tpu_data_parallel_opt_different_sized_ops=true \\\n  --xla_tpu_enable_async_collective_fusion=true \\\n  --xla_tpu_enable_async_collective_fusion_multiple_steps=true \\\n  --xla_tpu_overlap_compute_collective_tc=true \\\n  --xla_enable_async_all_gather=true \\\n  --xla_tpu_scoped_vmem_limit_kib=65536 \\\n  --xla_tpu_enable_async_all_to_all=true \\\n  --xla_tpu_enable_all_experimental_scheduler_features=true \\\n  --xla_tpu_enable_scheduler_memory_pressure_tracking=true \\\n  --xla_tpu_host_transfer_overlap_limit=24 \\\n  --xla_tpu_aggressive_opt_barrier_removal=ENABLED \\\n  --xla_lhs_prioritize_async_depth_over_stall=ENABLED \\\n  --xla_should_allow_loop_variant_parameter_in_chain=ENABLED \\\n  --xla_should_add_loop_invariant_op_in_chain=ENABLED \\\n  --xla_max_concurrent_host_send_recv=100 \\\n  --xla_tpu_scheduler_percent_shared_memory_limit=100 \\\n  --xla_latency_hiding_scheduler_rerun=2 \\\n  --xla_tpu_use_minor_sharding_for_major_trivial_input=true \\\n  --xla_tpu_relayout_group_size_threshold_for_reduce_scatter=1 \\\n  --xla_tpu_assign_all_reduce_scatter_layout=true'"
+      },
+      {
+        "language": "bash",
+        "code": "python3 ~/xpk/xpk.py workload create \\\n  --cluster=$CLUSTER_NAME \\\n  --project=$PROJECT \\\n  --zone=$ZONE \\\n  --device-type=$DEVICE_TYPE \\\n  --num-slices=1 \\\n  --command=\" \\\n  HF_HUB_CACHE=/mnt/disks/external_disk/maxdiffusion_hf_cache/ python src/maxdiffusion/train_wan.py \\\n  src/maxdiffusion/configs/base_wan_14b.yml \\\n  attention='flash' \\\n  weights_dtype=bfloat16 \\\n  activations_dtype=bfloat16 \\\n  guidance_scale=5.0 \\\n  flow_shift=5.0 \\\n  fps=16 \\\n  skip_jax_distributed_system=False \\\n  run_name=${RUN_NAME} \\\n  output_dir=${OUTPUT_DIR} \\\n  train_data_dir=${DATASET_DIR} \\\n  load_tfrecord_cached=True \\\n  height=1280 \\\n  width=720 \\\n  num_frames=81 \\\n  num_inference_steps=50 \\\n  jax_cache_dir=${OUTPUT_DIR}/jax_cache/ \\\n  enable_profiler=True \\\n  dataset_save_location=${SAVE_DATASET_DIR} \\\n  remat_policy='HIDDEN_STATE_WITH_OFFLOAD' \\\n  flash_min_seq_length=0 \\\n  seed=$RANDOM \\\n  skip_first_n_steps_for_profiler=3 \\\n  profiler_steps=3 \\\n  per_device_batch_size=0.25 \\\n  ici_data_parallelism=32 \\\n  ici_fsdp_parallelism=4 \\\n  ici_tensor_parallelism=1 \\\n  max_train_steps=5000 \\\n  eval_every=100 \\\n  eval_data_dir=${EVAL_DATA_DIR} \\\n  enable_generate_video_for_eval=True\" \\\n  --base-docker-image=${IMAGE_DIR} \\\n  --enable-debug-logs \\\n  --workload=${RUN_NAME} \\\n  --priority=medium \\\n  --max-restarts=0"
+      },
+      {
+        "language": "bash",
+        "code": "python src/maxdiffusion/train_wan.py \\\n    src/maxdiffusion/configs/base_wan_27b.yml \\\n    run_name=${RUN_NAME} \\\n    output_dir=${OUTPUT_DIR} \\\n    train_data_dir=${DATASET_DIR} \\\n    dataset_save_location=${SAVE_DATASET_DIR} \\\n    boundary_ratio=0.875 \\\n    weights_dtype=bfloat16 \\\n    activations_dtype=bfloat16 \\\n    per_device_batch_size=0.25 \\\n    ici_fsdp_parallelism=4 \\\n    ici_data_parallelism=1 \\\n    remat_policy='HIDDEN_STATE_WITH_OFFLOAD' \\\n    max_train_steps=1000 \\\n    checkpoint_every=500 \\\n    save_final_checkpoint=True"
+      },
+      {
+        "language": "bash",
+        "code": "python3 ~/xpk/xpk.py workload create \\\n    --cluster=$CLUSTER_NAME \\\n    --project=$PROJECT \\\n    --zone=$ZONE \\\n    --device-type=$DEVICE_TYPE \\\n    --num-slices=1 \\\n    --workload=${RUN_NAME} \\\n    --command=\" \\\n    python3 src/maxdiffusion/train_wan.py \\\n      src/maxdiffusion/configs/base_wan_27b.yml \\\n      run_name=${RUN_NAME} \\\n      output_dir=${OUTPUT_DIR} \\\n      train_data_dir=${DATASET_DIR} \\\n      dataset_save_location=${SAVE_DATASET_DIR} \\\n      boundary_ratio=0.875 \\\n      weights_dtype=bfloat16 \\\n      activations_dtype=bfloat16 \\\n      per_device_batch_size=1 \\\n      ici_fsdp_parallelism=4 \\\n      ici_data_parallelism=32 \\\n      remat_policy='HIDDEN_STATE_WITH_OFFLOAD' \\\n      max_train_steps=5000 \\\n      checkpoint_every=1000 \\\n      save_final_checkpoint=True\" \\\n    --base-docker-image=${IMAGE_DIR} \\\n    --priority=medium \\\n    --max-restarts=0"
+      },
+      {
+        "language": "bash",
+        "code": "python src/maxdiffusion/train_flux.py src/maxdiffusion/configs/base_flux_dev.yml \\\n      run_name=\"flux-training\" \\\n      output_dir=\"gs://<your-gcs-bucket>/\" \\\n      jax_cache_dir=\"/tmp/jax_cache\" \\\n      save_final_checkpoint=False \\\n      max_train_steps=100 \\\n      dataset_type=synthetic \\\n      ici_data_parallelism=1 \\\n      ici_fsdp_parallelism=4 \\\n      ici_tensor_parallelism=1 \\\n      train_new_flux=True \\\n      resolution=1024 \\\n      attention_sharding_uniform=False \\\n      attention=tokamax_flash \\\n      per_device_batch_size=2 \\\n      enable_profiler=False \\\n      reuse_example_batch=True \\\n      write_metrics=False \\\n      use_base2_exp=True"
+      },
+      {
+        "language": "bash",
+        "code": "python src/maxdiffusion/generate_flux_pipeline.py src/maxdiffusion/configs/base_flux_dev.yml  run_name=\"test-flux-train\" output_dir=\"gs://<your-gcs-bucket>/\" jax_cache_dir=\"/tmp/jax_cache\""
+      },
+      {
+        "language": "bash",
+        "code": "export LIBTPU_INIT_ARGS=\"\"\n  python -m src.maxdiffusion.train_sdxl src/maxdiffusion/configs/base_xl.yml run_name=\"my_xl_run\" output_dir=\"gs://your-bucket/\" per_device_batch_size=1"
+      },
+      {
+        "language": "bash",
+        "code": "NVTE_FUSED_ATTN=1 python -m src.maxdiffusion.train_sdxl src/maxdiffusion/configs/base_xl.yml hardware=gpu run_name='test-sdxl-train' output_dir=/tmp/ train_new_unet=true train_text_encoder=false cache_latents_text_encoder_outputs=true max_train_steps=200 weights_dtype=bfloat16 resolution=512 per_device_batch_size=1 attention=\"cudnn_flash_te\" jit_initializers=False"
+      },
+      {
+        "language": "bash",
+        "code": "python -m src.maxdiffusion.generate src/maxdiffusion/configs/base_xl.yml run_name=\"my_run\" pretrained_model_name_or_path=<your_saved_checkpoint_path> from_pt=False attention=dot_product"
+      },
+      {
+        "language": "bash",
+        "code": "export LIBTPU_INIT_ARGS=\"\"\n  python -m src.maxdiffusion.train src/maxdiffusion/configs/base_2_base.yml run_name=\"my_run\" jax_cache_dir=gs://your-bucket/cache_dir activations_dtype=float32 weights_dtype=float32 per_device_batch_size=2 precision=DEFAULT dataset_save_location=/tmp/my_dataset/ output_dir=gs://your-bucket/ attention=flash"
+      },
+      {
+        "language": "bash",
+        "code": "export LIBTPU_INIT_ARGS=\"\"\n  python -m src.maxdiffusion.train src/maxdiffusion/configs/base14.yml run_name=\"my_run\" jax_cache_dir=gs://your-bucket/cache_dir activations_dtype=float32 weights_dtype=float32 per_device_batch_size=2 precision=DEFAULT dataset_save_location=/tmp/my_dataset/ output_dir=gs://your-bucket/ attention=flash"
+      },
+      {
+        "language": "bash",
+        "code": "python -m src.maxdiffusion.generate src/maxdiffusion/configs/base_2_base.yml run_name=\"my_run\" output_dir=gs://your-bucket/ from_pt=False attention=dot_product"
+      },
+      {
+        "language": "bash",
+        "code": "python src/maxdiffusion/dreambooth/train_dreambooth.py src/maxdiffusion/configs/base14.yml class_data_dir=<your-class-dir> instance_data_dir=<your-instance-dir> instance_prompt=\"a photo of ohwx dog\" class_prompt=\"photo of a dog\" max_train_steps=150 jax_cache_dir=<your-cache-dir> class_prompt=\"a photo of a dog\" activations_dtype=bfloat16 weights_dtype=float32 per_device_batch_size=1 enable_profiler=False precision=DEFAULT cache_dreambooth_dataset=False learning_rate=4e-6 num_class_images=100 run_name=<your-run-name> output_dir=gs://<your-bucket-name>"
+      },
+      {
+        "language": "bash",
+        "code": "python -m src.maxdiffusion.generate_sdxl src/maxdiffusion/configs/base_xl.yml run_name=\"my_run\""
+      },
+      {
+        "language": "bash",
+        "code": "python -m src.maxdiffusion.generate_sdxl_replicated"
+      },
+      {
+        "language": "bash",
+        "code": "python -m src.maxdiffusion.generate src/maxdiffusion/configs/base_2_base.yml run_name=\"my_run\""
+      },
+      {
+        "language": "bash",
+        "code": "python -m src.maxdiffusion.generate src/maxdiffusion/configs/base21.yml run_name=\"my_run\""
+      },
+      {
+        "language": "bash",
+        "code": "python convert_torch_weights_to_jax.py --ckpt_path [LOCAL DIRECTORY FOR WEIGHTS] --transformer_config_path ../ltxv-13B.json"
+      },
+      {
+        "language": "bash",
+        "code": "python src/maxdiffusion/generate_ltx_video.py src/maxdiffusion/configs/ltx_video.yml output_dir=\"[SAME DIRECTORY]\" config_path=\"src/maxdiffusion/models/ltx_video/ltxv-13B.json\""
+      },
+      {
+        "language": "bash",
+        "code": "HF_HUB_CACHE=/mnt/disks/external_disk/maxdiffusion_hf_cache/ \\\n  LIBTPU_INIT_ARGS=\"--xla_tpu_enable_async_collective_fusion=true \\\n  --xla_tpu_enable_async_collective_fusion_fuse_all_reduce=true \\\n  --xla_tpu_enable_async_collective_fusion_multiple_steps=true \\\n  --xla_tpu_overlap_compute_collective_tc=true \\\n  --xla_enable_async_all_reduce=true\" \\\n  HF_HUB_ENABLE_HF_TRANSFER=1 \\\n  python src/maxdiffusion/generate_ltx2.py \\\n  src/maxdiffusion/configs/ltx2_video.yml \\\n  attention=\"flash\" \\\n  num_inference_steps=40 \\\n  num_frames=121 \\\n  width=768 \\\n  height=512 \\\n  per_device_batch_size=.125 \\\n  ici_data_parallelism=2 \\\n  ici_context_parallelism=4 \\\n  run_name=ltx2-inference"
+      },
+      {
+        "language": "bash",
+        "code": "HF_HUB_CACHE=/mnt/disks/external_disk/maxdiffusion_hf_cache/ \\\n  LIBTPU_INIT_ARGS=\"--xla_tpu_enable_async_collective_fusion=true \\\n  --xla_tpu_enable_async_collective_fusion_fuse_all_reduce=true \\\n  --xla_tpu_enable_async_collective_fusion_multiple_steps=true \\\n  --xla_tpu_overlap_compute_collective_tc=true \\\n  --xla_enable_async_all_reduce=true\" \\\n  HF_HUB_ENABLE_HF_TRANSFER=1 \\\n  python src/maxdiffusion/generate_wan.py \\\n  src/maxdiffusion/configs/base_wan_14b.yml \\\n  attention=\"flash\" \\\n  num_inference_steps=50 \\\n  num_frames=81 \\\n  width=1280 \\\n  height=720 \\\n  jax_cache_dir=gs://jfacevedo-maxdiffusion/jax_cache/ \\\n  per_device_batch_size=.0.25 \\\n  ici_data_parallelism=2 \\\n  ici_context_parallelism=2 \\\n  flow_shift=5.0 \\\n  enable_profiler=True \\\n  run_name=wan-inference-testing-720p \\\n  output_dir=gs:/jfacevedo-maxdiffusion \\\n  fps=16 \\\n  flash_min_seq_length=0 \\\n  flash_block_sizes='{\"block_q\" : 3024, \"block_kv_compute\" : 1024, \"block_kv\" : 2048, \"block_q_dkv\": 3024, \"block_kv_dkv\" : 2048, \"block_kv_dkv_compute\" : 2048, \"block_q_dq\" : 3024, \"block_kv_dq\" : 2048 }' \\\n  seed=118445"
+      },
+      {
+        "language": "bash",
+        "code": "python src/maxdiffusion/generate_wan.py \\\n  src/maxdiffusion/configs/base_wan_i2v_27b.yml \\\n  attention=\"ulysses\" \\\n  ici_context_parallelism=4 \\\n  ..."
+      },
+      {
+        "language": "bash",
+        "code": "python src/maxdiffusion/generate_wan.py \\\n  src/maxdiffusion/configs/base_wan_i2v_27b.yml \\\n  attention=\"ulysses\" \\\n  ici_context_parallelism=4 \\\n  ulysses_attention_chunks=2 \\\n  ..."
+      },
+      {
+        "language": "bash",
+        "code": "> export XLA_FLAGS=\"--xla_tpu_enable_async_all_to_all=true --xla_tpu_overlap_compute_collective_tc=true\"\n  >"
+      },
+      {
+        "language": "bash",
+        "code": "# Example: enable SenCache for Wan 2.2 T2V\n  python src/maxdiffusion/generate_wan.py \\\n    src/maxdiffusion/configs/base_wan_27b.yml \\\n    use_sen_cache=True \\\n    ...\n\n  # Example: enable CFG Cache for Wan 2.2 I2V\n  python src/maxdiffusion/generate_wan.py \\\n    src/maxdiffusion/configs/base_wan_i2v_27b.yml \\\n    use_cfg_cache=True \\\n    ...\n\n# Example: enable MagCache for Wan 2.2 T2V\npython src/maxdiffusion/generate_wan.py \\\n  src/maxdiffusion/configs/base_wan_27b.yml \\\n  use_magcache=True \\\n  magcache_thresh=0.04 \\\n  magcache_K=2 \\\n  ...\n\n# Example: enable MagCache for Wan 2.2 I2V\npython src/maxdiffusion/generate_wan.py \\\n  src/maxdiffusion/configs/base_wan_i2v_27b.yml \\\n  use_magcache=True \\\n  magcache_thresh=0.06 \\\n  magcache_K=2 \\\n  ..."
+      },
+      {
+        "language": "bash",
+        "code": "python src/maxdiffusion/generate_flux.py src/maxdiffusion/configs/base_flux_schnell.yml jax_cache_dir=/tmp/cache_dir run_name=flux_test output_dir=/tmp/ prompt=\"photograph of an electronics chip in the shape of a race car with trillium written on its side\" per_device_batch_size=1"
+      },
+      {
+        "language": "bash",
+        "code": "python src/maxdiffusion/generate_flux.py src/maxdiffusion/configs/base_flux_dev.yml jax_cache_dir=/tmp/cache_dir run_name=flux_test output_dir=/tmp/ prompt=\"photograph of an electronics chip in the shape of a race car with trillium written on its side\" per_device_batch_size=1"
+      },
+      {
+        "language": "bash",
+        "code": "python src/maxdiffusion/generate_flux.py src/maxdiffusion/configs/base_flux_schnell.yml jax_cache_dir=/tmp/cache_dir run_name=flux_test output_dir=/tmp/ prompt=\"photograph of an electronics chip in the shape of a race car with trillium written on its side\" per_device_batch_size=1 ici_data_parallelism=1 ici_fsdp_parallelism=-1 offload_encoders=False"
+      },
+      {
+        "language": "bash",
+        "code": "python src/maxdiffusion/generate_flux2klein.py src/maxdiffusion/configs/base_flux2klein.yml run_name=flux2klein_4b prompt=\"A detailed vector illustration of a robotic hummingbird\""
+      },
+      {
+        "language": "bash",
+        "code": "python src/maxdiffusion/generate_flux2klein.py src/maxdiffusion/configs/base_flux2klein_9B.yml run_name=flux2klein_9b prompt=\"A detailed vector illustration of a robotic hummingbird\""
+      },
+      {
+        "language": "bash",
+        "code": "python src/maxdiffusion/generate_flux2klein.py src/maxdiffusion/configs/base_flux2klein_9B.yml run_name=flux2klein_9b_image_edit prompt=\"change the lighting to evening\" image_paths=\"['src/maxdiffusion/tests/images/flux2klein/ref_flux2klein_9b.png']\""
+      },
+      {
+        "language": "bash",
+        "code": "python src/maxdiffusion/generate_flux2klein.py src/maxdiffusion/configs/base_flux2klein_9B.yml run_name=flux2klein_9b_kv_edit prompt=\"change the lighting to evening\" image_paths=\"['src/maxdiffusion/tests/images/flux2klein/ref_flux2klein_9b.png']\" use_kv=True"
+      },
+      {
+        "language": "bash",
+        "code": "cd maxdiffusion\n  pip install -U \"jax[cuda12]\"\n  pip install -r requirements.txt\n  pip install --upgrade torch torchvision\n  pip install \"transformer_engine[jax]\n  pip install ."
+      },
+      {
+        "language": "bash",
+        "code": "NVTE_FUSED_ATTN=1 HF_HUB_ENABLE_HF_TRANSFER=1 python src/maxdiffusion/generate_flux.py src/maxdiffusion/configs/base_flux_dev.yml jax_cache_dir=/tmp/cache_dir run_name=flux_test output_dir=/tmp/ prompt='A cute corgi lives in a house made out of sushi, anime' num_inference_steps=28 split_head_dim=True per_device_batch_size=1 attention=\"cudnn_flash_te\" hardware=gpu"
+      },
+      {
+        "language": "bash",
+        "code": "HF_HUB_CACHE=/mnt/disks/external_disk/maxdiffusion_hf_cache/ \\\n  LIBTPU_INIT_ARGS=\"--xla_tpu_enable_async_collective_fusion=true \\\n  --xla_tpu_enable_async_collective_fusion_fuse_all_reduce=true \\\n  --xla_tpu_enable_async_collective_fusion_multiple_steps=true \\\n  --xla_tpu_overlap_compute_collective_tc=true \\\n  --xla_enable_async_all_reduce=true\" \\\n  HF_HUB_ENABLE_HF_TRANSFER=1 \\\n  python src/maxdiffusion/generate_wan.py \\\n  src/maxdiffusion/configs/base_wan_i2v_14b.yml \\   # --> Change to your copy\n  jax_cache_dir=gs://jfacevedo-maxdiffusion/jax_cache/ \\\n  per_device_batch_size=.125 \\\n  ici_data_parallelism=2 \\\n  ici_context_parallelism=2 \\\n  run_name=wan-lora-inference-testing-720p \\\n  output_dir=gs:/jfacevedo-maxdiffusion \\\n  seed=118445 \\\n  enable_lora=True \\"
+      },
+      {
+        "language": "bash",
+        "code": "python src/maxdiffusion/generate_flux.py src/maxdiffusion/configs/base_flux_dev.yml jax_cache_dir=/tmp/cache_dir run_name=flux_test output_dir=/tmp/ prompt='A cute corgi lives in a house made out of sushi, anime' num_inference_steps=28 ici_data_parallelism=1 ici_fsdp_parallelism=-1 split_head_dim=True lora_config='{\"lora_model_name_or_path\" : [\"/home/jfacevedo/anime_lora.safetensors\"], \"weight_name\" : [\"anime_lora.safetensors\"], \"adapter_name\" : [\"anime\"], \"scale\": [0.8], \"from_pt\": [\"true\"]}'"
+      },
+      {
+        "language": "bash",
+        "code": "python src/maxdiffusion/generate_flux.py src/maxdiffusion/configs/base_flux_dev.yml jax_cache_dir=/tmp/cache_dir run_name=flux_test output_dir=/tmp/ prompt='A cute corgi lives in a house made out of sushi, anime' num_inference_steps=28 ici_data_parallelism=1 ici_fsdp_parallelism=-1 split_head_dim=True lora_config='{\"lora_model_name_or_path\" : [\"/home/jfacevedo/anime_lora.safetensors\", \"/home/jfacevedo/amateurphoto-v6-forcu.safetensors\"], \"weight_name\" : [\"anime_lora.safetensors\",\"amateurphoto-v6-forcu.safetensors\"], \"adapter_name\" : [\"anime\",\"realistic\"], \"scale\": [0.6, 0.6], \"from_pt\": [\"true\",\"true\"]}'"
+      },
+      {
+        "language": "bash",
+        "code": "python src/maxdiffusion/generate_sdxl.py src/maxdiffusion/configs/base_xl.yml run_name=\"test-lora\" output_dir=/tmp/ jax_cache_dir=/tmp/cache_dir/ num_inference_steps=2 do_classifier_free_guidance=False prompt=\"a photograph of a cat wearing a hat riding a skateboard in a park.\" per_device_batch_size=1 pretrained_model_name_or_path=\"Lykon/AAM_XL_AnimeMix\" from_pt=True revision=main diffusion_scheduler_config='{\"_class_name\" : \"FlaxDDIMScheduler\", \"timestep_spacing\" : \"trailing\"}' lora_config='{\"lora_model_name_or_path\" : [\"ByteDance/Hyper-SD\"], \"weight_name\" : [\"Hyper-SDXL-2steps-lora.safetensors\"], \"adapter_name\" : [\"hyper-sdxl\"], \"scale\": [0.7], \"from_pt\": [\"true\"]}'"
+      },
+      {
+        "language": "bash",
+        "code": "python src/maxdiffusion/generate_sdxl.py src/maxdiffusion/configs/base_xl.yml run_name=\"test-lora\" output_dir=/tmp/tmp/ jax_cache_dir=/tmp/cache_dir/ num_inference_steps=30 do_classifier_free_guidance=True prompt=\"ultra detailed diagram blueprint of a papercut Sitting MaineCoon cat, wide canvas, ampereart, electrical diagram, bl3uprint, papercut\" per_device_batch_size=1 diffusion_scheduler_config='{\"_class_name\" : \"FlaxDDIMScheduler\", \"timestep_spacing\" : \"trailing\"}' lora_config='{\"lora_model_name_or_path\" : [\"/home/jfacevedo/blueprintify-sd-xl-10.safetensors\",\"TheLastBen/Papercut_SDXL\"], \"weight_name\" : [\"/home/jfacevedo/blueprintify-sd-xl-10.safetensors\",\"papercut.safetensors\"], \"adapter_name\" : [\"blueprint\",\"papercut\"], \"scale\": [0.8, 0.7], \"from_pt\": [\"true\", \"true\"]}'"
+      },
+      {
+        "language": "bash",
+        "code": "python -m src.maxdiffusion.generate_sdxl src/maxdiffusion/configs/base_xl_lightning.yml run_name=\"my_run\" lightning_repo=\"ByteDance/SDXL-Lightning\" lightning_ckpt=\"sdxl_lightning_4step_unet.safetensors\""
+      },
+      {
+        "language": "bash",
+        "code": "python src/maxdiffusion/controlnet/generate_controlnet_replicated.py"
+      },
+      {
+        "language": "bash",
+        "code": "python src/maxdiffusion/controlnet/generate_controlnet_sdxl_replicated.py"
+      },
+      {
+        "language": "bash",
+        "code": "TPU_NAME=<your-tpu-name>\nZONE=<your-zone>\nPROJECT_ID=<your-project-id>\ngcloud compute tpus tpu-vm ssh $TPU_NAME --zone=$ZONE --project $PROJECT_ID --worker=all --command=\"\nexport LIBTPU_INIT_ARGS=\"\"\ngit clone https://github.com/google/maxdiffusion\ncd maxdiffusion\npip3 install jax[tpu] -f https://storage.googleapis.com/jax-releases/libtpu_releases.html\npip3 install -r requirements.txt\npip3 install .\npython -m src.maxdiffusion.train src/maxdiffusion/configs/base_2_base.yml run_name=my_run output_dir=gs://your-bucket/\""
+      },
+      {
+        "language": "bash",
+        "code": "python -m pytest"
+      },
+      {
+        "language": "bash",
+        "code": "# 1. Activate your virtual environment first\nsource <path-to-venv>/bin/activate\n\n# 2. Install pre-commit (if not already installed)\npip install pre-commit\n\n# 3. Install git pre-commit hooks\npre-commit install"
+      },
+      {
+        "language": "bash",
+        "code": "pre-commit run --all-files"
+      },
+      {
+        "language": "bash",
+        "code": "bash code_style.sh"
+      }
+    ],
+    "cli_commands": [
+      "export HF_DATASET_DIR=/mnt/disks/external_disk/PusaV1_training/",
+      "export TFRECORDS_DATASET_DIR=/mnt/disks/external_disk/wan_tfr_dataset_pusa_v1",
+      "huggingface-cli download RaphaelLiu/PusaV1_training --repo-type dataset --local-dir $HF_DATASET_DIR",
+      "python src/maxdiffusion/data_preprocessing/wan_pusav1_to_tfrecords.py src/maxdiffusion/configs/base_wan_14b.yml train_data_dir=$HF_DATASET_DIR tfrecords_dir=$TFRECORDS_DATASET_DIR/train no_records_per_shard=10 enable_eval_timesteps=False",
+      "python src/maxdiffusion/data_preprocessing/wan_pusav1_to_tfrecords.py src/maxdiffusion/configs/base_wan_14b.yml train_data_dir=$HF_DATASET_DIR tfrecords_dir=$TFRECORDS_DATASET_DIR/eval no_records_per_shard=10 enable_eval_timesteps=True",
+      "gcloud storage cp --recursive $TFRECORDS_DATASET_DIR gs://$BUCKET_NAME/${TFRECORDS_DATASET_DIR##*/}",
+      "export LIBTPU_INIT_ARGS='--xla_tpu_enable_async_collective_fusion_fuse_all_gather=true \\",
+      "python3 ~/xpk/xpk.py workload create \\",
+      "python src/maxdiffusion/train_wan.py \\",
+      "python3 src/maxdiffusion/train_wan.py \\",
+      "python src/maxdiffusion/train_flux.py src/maxdiffusion/configs/base_flux_dev.yml \\",
+      "python src/maxdiffusion/generate_flux_pipeline.py src/maxdiffusion/configs/base_flux_dev.yml  run_name=\"test-flux-train\" output_dir=\"gs://<your-gcs-bucket>/\" jax_cache_dir=\"/tmp/jax_cache\"",
+      "export LIBTPU_INIT_ARGS=\"\"",
+      "python -m src.maxdiffusion.train_sdxl src/maxdiffusion/configs/base_xl.yml run_name=\"my_xl_run\" output_dir=\"gs://your-bucket/\" per_device_batch_size=1",
+      "python -m src.maxdiffusion.generate src/maxdiffusion/configs/base_xl.yml run_name=\"my_run\" pretrained_model_name_or_path=<your_saved_checkpoint_path> from_pt=False attention=dot_product",
+      "python -m src.maxdiffusion.train src/maxdiffusion/configs/base_2_base.yml run_name=\"my_run\" jax_cache_dir=gs://your-bucket/cache_dir activations_dtype=float32 weights_dtype=float32 per_device_batch_size=2 precision=DEFAULT dataset_save_location=/tmp/my_dataset/ output_dir=gs://your-bucket/ attention=flash",
+      "python -m src.maxdiffusion.train src/maxdiffusion/configs/base14.yml run_name=\"my_run\" jax_cache_dir=gs://your-bucket/cache_dir activations_dtype=float32 weights_dtype=float32 per_device_batch_size=2 precision=DEFAULT dataset_save_location=/tmp/my_dataset/ output_dir=gs://your-bucket/ attention=flash",
+      "python -m src.maxdiffusion.generate src/maxdiffusion/configs/base_2_base.yml run_name=\"my_run\" output_dir=gs://your-bucket/ from_pt=False attention=dot_product",
+      "python src/maxdiffusion/dreambooth/train_dreambooth.py src/maxdiffusion/configs/base14.yml class_data_dir=<your-class-dir> instance_data_dir=<your-instance-dir> instance_prompt=\"a photo of ohwx dog\" class_prompt=\"photo of a dog\" max_train_steps=150 jax_cache_dir=<your-cache-dir> class_prompt=\"a photo of a dog\" activations_dtype=bfloat16 weights_dtype=float32 per_device_batch_size=1 enable_profiler=False precision=DEFAULT cache_dreambooth_dataset=False learning_rate=4e-6 num_class_images=100 run_name=<your-run-name> output_dir=gs://<your-bucket-name>",
+      "python -m src.maxdiffusion.generate_sdxl src/maxdiffusion/configs/base_xl.yml run_name=\"my_run\"",
+      "python -m src.maxdiffusion.generate_sdxl_replicated",
+      "python -m src.maxdiffusion.generate src/maxdiffusion/configs/base_2_base.yml run_name=\"my_run\"",
+      "python -m src.maxdiffusion.generate src/maxdiffusion/configs/base21.yml run_name=\"my_run\"",
+      "python convert_torch_weights_to_jax.py --ckpt_path [LOCAL DIRECTORY FOR WEIGHTS] --transformer_config_path ../ltxv-13B.json",
+      "python src/maxdiffusion/generate_ltx_video.py src/maxdiffusion/configs/ltx_video.yml output_dir=\"[SAME DIRECTORY]\" config_path=\"src/maxdiffusion/models/ltx_video/ltxv-13B.json\"",
+      "python src/maxdiffusion/generate_ltx2.py \\",
+      "python src/maxdiffusion/generate_wan.py \\",
+      "python src/maxdiffusion/generate_flux.py src/maxdiffusion/configs/base_flux_schnell.yml jax_cache_dir=/tmp/cache_dir run_name=flux_test output_dir=/tmp/ prompt=\"photograph of an electronics chip in the shape of a race car with trillium written on its side\" per_device_batch_size=1",
+      "python src/maxdiffusion/generate_flux.py src/maxdiffusion/configs/base_flux_dev.yml jax_cache_dir=/tmp/cache_dir run_name=flux_test output_dir=/tmp/ prompt=\"photograph of an electronics chip in the shape of a race car with trillium written on its side\" per_device_batch_size=1",
+      "python src/maxdiffusion/generate_flux.py src/maxdiffusion/configs/base_flux_schnell.yml jax_cache_dir=/tmp/cache_dir run_name=flux_test output_dir=/tmp/ prompt=\"photograph of an electronics chip in the shape of a race car with trillium written on its side\" per_device_batch_size=1 ici_data_parallelism=1 ici_fsdp_parallelism=-1 offload_encoders=False",
+      "python src/maxdiffusion/generate_flux2klein.py src/maxdiffusion/configs/base_flux2klein.yml run_name=flux2klein_4b prompt=\"A detailed vector illustration of a robotic hummingbird\"",
+      "python src/maxdiffusion/generate_flux2klein.py src/maxdiffusion/configs/base_flux2klein_9B.yml run_name=flux2klein_9b prompt=\"A detailed vector illustration of a robotic hummingbird\"",
+      "python src/maxdiffusion/generate_flux2klein.py src/maxdiffusion/configs/base_flux2klein_9B.yml run_name=flux2klein_9b_image_edit prompt=\"change the lighting to evening\" image_paths=\"['src/maxdiffusion/tests/images/flux2klein/ref_flux2klein_9b.png']\"",
+      "python src/maxdiffusion/generate_flux2klein.py src/maxdiffusion/configs/base_flux2klein_9B.yml run_name=flux2klein_9b_kv_edit prompt=\"change the lighting to evening\" image_paths=\"['src/maxdiffusion/tests/images/flux2klein/ref_flux2klein_9b.png']\" use_kv=True",
+      "pip install -U \"jax[cuda12]\"",
+      "pip install -r requirements.txt",
+      "pip install --upgrade torch torchvision",
+      "pip install \"transformer_engine[jax]",
+      "pip install .",
+      "python src/maxdiffusion/generate_flux.py src/maxdiffusion/configs/base_flux_dev.yml jax_cache_dir=/tmp/cache_dir run_name=flux_test output_dir=/tmp/ prompt='A cute corgi lives in a house made out of sushi, anime' num_inference_steps=28 ici_data_parallelism=1 ici_fsdp_parallelism=-1 split_head_dim=True lora_config='{\"lora_model_name_or_path\" : [\"/home/jfacevedo/anime_lora.safetensors\"], \"weight_name\" : [\"anime_lora.safetensors\"], \"adapter_name\" : [\"anime\"], \"scale\": [0.8], \"from_pt\": [\"true\"]}'",
+      "python src/maxdiffusion/generate_flux.py src/maxdiffusion/configs/base_flux_dev.yml jax_cache_dir=/tmp/cache_dir run_name=flux_test output_dir=/tmp/ prompt='A cute corgi lives in a house made out of sushi, anime' num_inference_steps=28 ici_data_parallelism=1 ici_fsdp_parallelism=-1 split_head_dim=True lora_config='{\"lora_model_name_or_path\" : [\"/home/jfacevedo/anime_lora.safetensors\", \"/home/jfacevedo/amateurphoto-v6-forcu.safetensors\"], \"weight_name\" : [\"anime_lora.safetensors\",\"amateurphoto-v6-forcu.safetensors\"], \"adapter_name\" : [\"anime\",\"realistic\"], \"scale\": [0.6, 0.6], \"from_pt\": [\"true\",\"true\"]}'",
+      "python src/maxdiffusion/generate_sdxl.py src/maxdiffusion/configs/base_xl.yml run_name=\"test-lora\" output_dir=/tmp/ jax_cache_dir=/tmp/cache_dir/ num_inference_steps=2 do_classifier_free_guidance=False prompt=\"a photograph of a cat wearing a hat riding a skateboard in a park.\" per_device_batch_size=1 pretrained_model_name_or_path=\"Lykon/AAM_XL_AnimeMix\" from_pt=True revision=main diffusion_scheduler_config='{\"_class_name\" : \"FlaxDDIMScheduler\", \"timestep_spacing\" : \"trailing\"}' lora_config='{\"lora_model_name_or_path\" : [\"ByteDance/Hyper-SD\"], \"weight_name\" : [\"Hyper-SDXL-2steps-lora.safetensors\"], \"adapter_name\" : [\"hyper-sdxl\"], \"scale\": [0.7], \"from_pt\": [\"true\"]}'",
+      "python src/maxdiffusion/generate_sdxl.py src/maxdiffusion/configs/base_xl.yml run_name=\"test-lora\" output_dir=/tmp/tmp/ jax_cache_dir=/tmp/cache_dir/ num_inference_steps=30 do_classifier_free_guidance=True prompt=\"ultra detailed diagram blueprint of a papercut Sitting MaineCoon cat, wide canvas, ampereart, electrical diagram, bl3uprint, papercut\" per_device_batch_size=1 diffusion_scheduler_config='{\"_class_name\" : \"FlaxDDIMScheduler\", \"timestep_spacing\" : \"trailing\"}' lora_config='{\"lora_model_name_or_path\" : [\"/home/jfacevedo/blueprintify-sd-xl-10.safetensors\",\"TheLastBen/Papercut_SDXL\"], \"weight_name\" : [\"/home/jfacevedo/blueprintify-sd-xl-10.safetensors\",\"papercut.safetensors\"], \"adapter_name\" : [\"blueprint\",\"papercut\"], \"scale\": [0.8, 0.7], \"from_pt\": [\"true\", \"true\"]}'",
+      "python -m src.maxdiffusion.generate_sdxl src/maxdiffusion/configs/base_xl_lightning.yml run_name=\"my_run\" lightning_repo=\"ByteDance/SDXL-Lightning\" lightning_ckpt=\"sdxl_lightning_4step_unet.safetensors\"",
+      "python src/maxdiffusion/controlnet/generate_controlnet_replicated.py",
+      "python src/maxdiffusion/controlnet/generate_controlnet_sdxl_replicated.py",
+      "gcloud compute tpus tpu-vm ssh $TPU_NAME --zone=$ZONE --project $PROJECT_ID --worker=all --command=\"",
+      "git clone https://github.com/google/maxdiffusion",
+      "pip3 install jax[tpu] -f https://storage.googleapis.com/jax-releases/libtpu_releases.html",
+      "pip3 install -r requirements.txt"
+    ],
+    "environment_variables": [
+      "HF_DATASET_DIR",
+      "HF_HUB_CACHE",
+      "HF_HUB_ENABLE_HF_TRANSFER",
+      "LIBTPU_INIT_ARGS",
+      "OUTPUT_DIR",
+      "PROJECT_ID",
+      "TPU_NAME",
+      "XLA_FLAGS",
+      "ZONE"
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Model",
+          "Accelerator",
+          "Sharding Strategy",
+          "Per Device Batch Size",
+          "Global Batch Size",
+          "Step Time (secs)"
+        ],
+        "rows": [
+          [
+            "Flux-dev",
+            "v5p-8",
+            "FSDP",
+            "2",
+            "8",
+            "1.769"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "Cache Type",
+          "Config Flag",
+          "Supported Pipelines",
+          "Speedup",
+          "Description"
+        ],
+        "rows": [
+          [
+            "**CFG Cache**",
+            "`use_cfg_cache: True`",
+            "Wan 2.1 T2V, Wan 2.2 T2V/I2V",
+            "~1.2x",
+            "FasterCache-style: caches the unconditional branch and applies FFT frequency-domain compensation on skipped steps."
+          ],
+          [
+            "**SenCache**",
+            "`use_sen_cache: True`",
+            "Wan 2.2 T2V/I2V",
+            "~1.4x",
+            "Sensitivity-Aware Caching ([arXiv:2602.24208](https://arxiv.org/abs/2602.24208)): predicts output change via first-order sensitivity S = \u03b1_x\u00b7\u2016\u0394x\u2016 + \u03b1_t\u00b7\\",
+            "\u0394t\\",
+            ". Skips the full CFG forward pass when predicted change is below tolerance \u03b5."
+          ],
+          [
+            "**MagCache**",
+            "`use_magcache: True`",
+            "Wan 2.1 T2V, Wan 2.2 T2V/I2V",
+            "~1.75\u20131.9x",
+            "[MagCache](https://github.com/Zehong-Ma/MagCache): skips the transformer blocks and reuses the cached block residual when the accumulated magnitude-ratio error stays below `magcache_thresh`, capped at `magcache_K` consecutive skips. Uses a precalibrated per-step `mag_ratios_base` curve, so the skip schedule is deterministic (no data-dependent control flow)."
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "Variant",
+          "Settings",
+          "Speedup",
+          "SSIM / PSNR"
+        ],
+        "rows": [
+          [
+            "T2V",
+            "`flow_shift=12.0`, `magcache_thresh=0.04`, `magcache_K=2`",
+            "~1.82\u00d7 (18/40 skipped)",
+            "0.72 / 21.8 dB"
+          ],
+          [
+            "I2V",
+            "`flow_shift=5.0`, `boundary_ratio=0.900`, `magcache_thresh=0.06`, `magcache_K=2`",
+            "~1.75\u00d7 (17/40 skipped)",
+            "0.91 / 25.4 dB"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "Model",
+          "Accelerator",
+          "Sharding Strategy",
+          "Batch Size",
+          "Steps",
+          "time (secs)"
+        ],
+        "rows": [
+          [
+            "Flux-dev",
+            "v4-8",
+            "DDP",
+            "4",
+            "28",
+            "23"
+          ],
+          [
+            "Flux-schnell",
+            "v4-8",
+            "DDP",
+            "4",
+            "4",
+            "2.2"
+          ],
+          [
+            "Flux-dev",
+            "v6e-4",
+            "DDP",
+            "4",
+            "28",
+            "5.5"
+          ],
+          [
+            "Flux-schnell",
+            "v6e-4",
+            "DDP",
+            "4",
+            "4",
+            "0.8"
+          ],
+          [
+            "Flux-schnell",
+            "v6e-4",
+            "FSDP",
+            "4",
+            "4",
+            "1.2"
+          ]
+        ]
+      }
+    ],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'MaxDiffusion' (https://github.com/google/maxdiffusion)?",
+        "answer": "JAX/XLA diffusion reference implementations for Cloud TPUs (and GPUs), covering Stable Diffusion, SDXL, Flux, DreamBooth, Wan and other training/inference workloads."
+      },
+      {
+        "question": "How does 'MaxDiffusion' handle: MaxDiffusion (Google AI-Hypercomputer)?",
+        "answer": "[![Unit Tests](https://github.com/AI-Hypercomputer/maxdiffusion/actions/workflows/UnitTests.yml/badge.svg)](https://github.com/AI-Hypercomputer/maxdiffusion/actions/workflows/UnitTests.yml)"
+      },
+      {
+        "question": "How does 'MaxDiffusion' handle: What's new??",
+        "answer": "- **`2026/09/23`**: Wan2.2 text2vid dual-expert training is now supported.\n- **`2026/08/28`**: Flux2.Klein text to image and image editing (w/ KV Cache) is now supported.\n- **`2026/07/14`**: Automatic attention tile-size (`block_q`/`block_kv`) search for Wan is now supported.\n- **`2026/06/26`**: 2D ring (USP) attention with a custom splash kernel is now supported for Wan (`ulysses_ring_custom`), splitting context parallelism into an intra-chip Ulysses axis and a cross-chip ring axis.\n- **`2026/04/16`**: Support for Tokamax Ring Attention kernel is now added.\n- **`2026/03/31`**: Wan2.2 SenCache inference is now supported for T2V and I2V (up to 1.4x speedup)\n- **`2026/03/25`**: Wan2.1 and Wan2.2 Magcache inference is now supported\n- **`2026/03/25`**: LTX-2 Video Inference is now supported\n- **`2026/01/29`**: Wan LoRA for inference is now supported\n- **`2026/01/15`**: Wan2.1 and Wan2.2 Img2vid generation is now supported\n- **`2025/11/11`**: Wan2.2 txt2vid generation is now supported\n- **`2025/10/10`**: Wan2.1 txt2vid training and generation is now supported.\n- **`2025/10/14`**: NVIDIA DGX Spark Flux support.\n- **`2025/08/14`**: LTX-Video img2vid generation is now supported.\n- **`2025/"
+      },
+      {
+        "question": "How does 'MaxDiffusion' handle: Overview?",
+        "answer": "MaxDiffusion is a collection of reference implementations of various latent diffusion models written in pure Python/Jax that run on XLA devices including Cloud TPUs and GPUs. MaxDiffusion aims to be a launching off point for ambitious Diffusion projects both in research and production. We encourage you to start by experimenting with MaxDiffusion out of the box and then fork and modify MaxDiffusion to meet your needs.\n\nThe goal of this project is to provide reference implementations for latent diffusion models that help developers get started with training, tuning, and serving solutions on XLA devices including Cloud TPUs and GPUs. We started with Stable Diffusion inference on TPUs, but welcome code contributions to grow.\n\nMaxDiffusion supports\n* Stable Diffusion 2 base (inference)\n* Stable Diffusion 2.1 (training and inference)\n* Stable Diffusion XL (training and inference).\n* Flux Dev and Schnell (Training and inference).\n* Flux.2-Klein 4B & 9B (text-to-image and multi-image editing with KV-Cache).\n* Stable Diffusion Lightning (inference).\n* Hyper-SD XL LoRA loading (inference).\n* Load Multiple LoRA (SDXL inference).\n* ControlNet inference (Stable Diffusion 1.4 & SDXL).\n* Dreamboo"
+      },
+      {
+        "question": "How does 'MaxDiffusion' handle: Table of Contents?",
+        "answer": "- [What's new?](#whats-new)\n- [Overview](#overview)\n- [Table of Contents](#table-of-contents)\n- [Getting Started](#getting-started)\n  - [Getting Started:](#getting-started-1)\n  - [NVIDIA DGX Spark](#nvidia-dgx-spark)\n  - [Training](#training)\n    - [Wan2.1](#wan-21-training)\n    - [Wan2.2](#wan-22-training)\n    - [Flux](#flux-training)\n    - [SDXL](#stable-diffusion-xl-training)\n    - [SD 2 base](#stable-diffusion-2-base-training)\n    - [SD 1.4](#stable-diffusion-14-training)\n    - [Dreambooth](#dreambooth)\n  - [Inference](#inference)\n    - [Wan](#wan-models)\n    - [LTX-Video](#ltx-video)\n    - [LTX-2 Video](#ltx-2-video)\n    - [Flux](#flux)\n      - [Fused Attention for GPU](#fused-attention-for-gpu)\n    - [SDXL](#stable-diffusion-xl)\n    - [SD 2 base](#stable-diffusion-2-base)\n    - [SD 2.1](#stable-diffusion-21)\n    - [Wan LoRA](#wan-lora)\n    - [Flux LoRA](#flux-lora)\n    - [Hyper SDXL LoRA](#hyper-sdxl-lora)\n    - [Load Multiple LoRA](#load-multiple-lora)\n    - [SDXL Lightning](#sdxl-lightning)\n    - [ControlNet](#controlnet)\n  - [Getting Started: Multihost development](#getting-started-multihost-development)\n- [Comparison to Alternatives](#comparison-to-alternatives)\n- [Develo"
+      },
+      {
+        "question": "How does 'MaxDiffusion' handle: Getting Started?",
+        "answer": "We recommend starting with a single TPU host and then moving to multihost.\n\nMinimum requirements: Ubuntu Version 22.04, Python 3.12 and Tensorflow >= 2.12.0."
+      },
+      {
+        "question": "How does 'MaxDiffusion' handle: Getting Started:?",
+        "answer": "For your first time running Maxdiffusion, we provide specific [instructions](docs/getting_started/first_run.md)."
+      },
+      {
+        "question": "How does 'MaxDiffusion' handle: NVIDIA DGX Spark?",
+        "answer": "Try out MaxDiffusion on NVIDIA's DGX Spark. We provide specific [instructions](docs/dgx_spark.md)."
+      },
+      {
+        "question": "How does 'MaxDiffusion' handle: Training?",
+        "answer": "After installation completes, run the training script.\n\n  ## Wan 2.1 Training\n\n  in the first part, we'll run on a single host VM to get familiar with the workflow, then run on xpk for large scale training.\n\n  Although not required, attaching an external disk is recommended as weights take up a lot of disk space. [Follow these instructions if you would like to attach an external disk](https://cloud.google.com/tpu/docs/attach-durable-block-storage).\n\n  This workflow was tested using v5p-8 with a 500GB disk attached.\n\n  ### Dataset Preparation\n\n  For this example, we'll be using the [PusaV1 dataset](https://huggingface.co/datasets/RaphaelLiu/PusaV1_training).\n\n  First, download the dataset.\n\n  ```bash\n  export HF_DATASET_DIR=/mnt/disks/external_disk/PusaV1_training/\n  export TFRECORDS_DATASET_DIR=/mnt/disks/external_disk/wan_tfr_dataset_pusa_v1\n  huggingface-cli download RaphaelLiu/PusaV1_training --repo-type dataset --local-dir $HF_DATASET_DIR\n  ```\n\n  Next run the TFRecords conversion script. This step prepares training and eval datasets. Validation is done as described in  [Scaling Rectified Flow Transformers for High-Resolution Image Synthesis](https://arxiv.org/pdf/2403.03206). "
+      },
+      {
+        "question": "How does 'MaxDiffusion' handle: Inference?",
+        "answer": "To generate images, run the following command:\n  ## Stable Diffusion XL\n\n  Single and Multi host inference is supported with sharding annotations:\n\n  ```bash\n  python -m src.maxdiffusion.generate_sdxl src/maxdiffusion/configs/base_xl.yml run_name=\"my_run\"\n  ```\n\n  Single host pmap version:\n\n  ```bash\n  python -m src.maxdiffusion.generate_sdxl_replicated\n  ```\n\n  ## Stable Diffusion 2 base\n  ```bash\n  python -m src.maxdiffusion.generate src/maxdiffusion/configs/base_2_base.yml run_name=\"my_run\"\n  ```\n\n  ## Stable Diffusion 2.1\n  ```bash\n  python -m src.maxdiffusion.generate src/maxdiffusion/configs/base21.yml run_name=\"my_run\"\n  ```\n\n  ## LTX-Video\n  In the folder src/maxdiffusion/models/ltx_video/utils, run:\n\n  ```bash\n  python convert_torch_weights_to_jax.py --ckpt_path [LOCAL DIRECTORY FOR WEIGHTS] --transformer_config_path ../ltxv-13B.json\n  ```\n\n  In the repo folder, run:\n  ```bash\n  python src/maxdiffusion/generate_ltx_video.py src/maxdiffusion/configs/ltx_video.yml output_dir=\"[SAME DIRECTORY]\" config_path=\"src/maxdiffusion/models/ltx_video/ltxv-13B.json\"\n  ```\n  Img2video Generation:\n\n  Add conditioning image path as conditioning_media_paths in the form of [\"IMAGE_PATH\"] alo"
+      }
+    ],
+    "full_markdown": "# MaxDiffusion (Google AI-Hypercomputer)\n\n\n\n[![Unit Tests](https://github.com/AI-Hypercomputer/maxdiffusion/actions/workflows/UnitTests.yml/badge.svg)](https://github.com/AI-Hypercomputer/maxdiffusion/actions/workflows/UnitTests.yml)\n\n# What's new?\n- **`2026/09/23`**: Wan2.2 text2vid dual-expert training is now supported.\n- **`2026/08/28`**: Flux2.Klein text to image and image editing (w/ KV Cache) is now supported.\n- **`2026/07/14`**: Automatic attention tile-size (`block_q`/`block_kv`) search for Wan is now supported.\n- **`2026/06/26`**: 2D ring (USP) attention with a custom splash kernel is now supported for Wan (`ulysses_ring_custom`), splitting context parallelism into an intra-chip Ulysses axis and a cross-chip ring axis.\n- **`2026/04/16`**: Support for Tokamax Ring Attention kernel is now added.\n- **`2026/03/31`**: Wan2.2 SenCache inference is now supported for T2V and I2V (up to 1.4x speedup)\n- **`2026/03/25`**: Wan2.1 and Wan2.2 Magcache inference is now supported\n- **`2026/03/25`**: LTX-2 Video Inference is now supported\n- **`2026/01/29`**: Wan LoRA for inference is now supported\n- **`2026/01/15`**: Wan2.1 and Wan2.2 Img2vid generation is now supported\n- **`2025/11/11`**: Wan2.2 txt2vid generation is now supported\n- **`2025/10/10`**: Wan2.1 txt2vid training and generation is now supported.\n- **`2025/10/14`**: NVIDIA DGX Spark Flux support.\n- **`2025/08/14`**: LTX-Video img2vid generation is now supported.\n- **`2025/07/29`**: LTX-Video text2vid generation is now supported.\n- **`2025/04/17`**: Flux Finetuning.\n- **`2025/02/12`**: Flux LoRA for inference.\n- **`2025/02/08`**: Flux schnell & dev inference.\n- **`2024/12/12`**: Load multiple LoRAs for inference.\n- **`2024/10/22`**: LoRA support for Hyper SDXL.\n- **`2024/08/01`**: Orbax is the new default checkpointer. You can still use `pipeline.save_pretrained` after training to save in diffusers format.\n- **`2024/07/20`**: Dreambooth training for Stable Diffusion 1.x,2.x is now supported.\n\n# Overview\n\nMaxDiffusion is a collection of reference implementations of various latent diffusion models written in pure Python/Jax that run on XLA devices including Cloud TPUs and GPUs. MaxDiffusion aims to be a launching off point for ambitious Diffusion projects both in research and production. We encourage you to start by experimenting with MaxDiffusion out of the box and then fork and modify MaxDiffusion to meet your needs.\n\nThe goal of this project is to provide reference implementations for latent diffusion models that help developers get started with training, tuning, and serving solutions on XLA devices including Cloud TPUs and GPUs. We started with Stable Diffusion inference on TPUs, but welcome code contributions to grow.\n\nMaxDiffusion supports\n* Stable Diffusion 2 base (inference)\n* Stable Diffusion 2.1 (training and inference)\n* Stable Diffusion XL (training and inference).\n* Flux Dev and Schnell (Training and inference).\n* Flux.2-Klein 4B & 9B (text-to-image and multi-image editing with KV-Cache).\n* Stable Diffusion Lightning (inference).\n* Hyper-SD XL LoRA loading (inference).\n* Load Multiple LoRA (SDXL inference).\n* ControlNet inference (Stable Diffusion 1.4 & SDXL).\n* Dreambooth training support for Stable Diffusion 1.x,2.x.\n* LTX-Video text2vid, img2vid (inference).\n* LTX-2 Video text2vid (inference).\n* Wan2.1 text2vid (training and inference).\n* Wan2.2 text2vid (training and inference).\n\n**Note on GPU Support:** GPU support is not actively maintained, but contributions are welcome\n\n\n# Table of Contents\n\n- [What's new?](#whats-new)\n- [Overview](#overview)\n- [Table of Contents](#table-of-contents)\n- [Getting Started](#getting-started)\n  - [Getting Started:](#getting-started-1)\n  - [NVIDIA DGX Spark](#nvidia-dgx-spark)\n  - [Training](#training)\n    - [Wan2.1](#wan-21-training)\n    - [Wan2.2](#wan-22-training)\n    - [Flux](#flux-training)\n    - [SDXL](#stable-diffusion-xl-training)\n    - [SD 2 base](#stable-diffusion-2-base-training)\n    - [SD 1.4](#stable-diffusion-14-training)\n    - [Dreambooth](#dreambooth)\n  - [Inference](#inference)\n    - [Wan](#wan-models)\n    - [LTX-Video](#ltx-video)\n    - [LTX-2 Video](#ltx-2-video)\n    - [Flux](#flux)\n      - [Fused Attention for GPU](#fused-attention-for-gpu)\n    - [SDXL](#stable-diffusion-xl)\n    - [SD 2 base](#stable-diffusion-2-base)\n    - [SD 2.1](#stable-diffusion-21)\n    - [Wan LoRA](#wan-lora)\n    - [Flux LoRA](#flux-lora)\n    - [Hyper SDXL LoRA](#hyper-sdxl-lora)\n    - [Load Multiple LoRA](#load-multiple-lora)\n    - [SDXL Lightning](#sdxl-lightning)\n    - [ControlNet](#controlnet)\n  - [Getting Started: Multihost development](#getting-started-multihost-development)\n- [Comparison to Alternatives](#comparison-to-alternatives)\n- [Development](#development)\n  - [Profiling](#profiling)\n  - [Metrics](#metrics)\n\n# Getting Started\n\nWe recommend starting with a single TPU host and then moving to multihost.\n\nMinimum requirements: Ubuntu Version 22.04, Python 3.12 and Tensorflow >= 2.12.0.\n\n## Getting Started:\n\nFor your first time running Maxdiffusion, we provide specific [instructions](docs/getting_started/first_run.md).\n\n## NVIDIA DGX Spark\n\nTry out MaxDiffusion on NVIDIA's DGX Spark. We provide specific [instructions](docs/dgx_spark.md).\n\n## Training\n\nAfter installation completes, run the training script.\n\n  ## Wan 2.1 Training\n\n  in the first part, we'll run on a single host VM to get familiar with the workflow, then run on xpk for large scale training.\n\n  Although not required, attaching an external disk is recommended as weights take up a lot of disk space. [Follow these instructions if you would like to attach an external disk](https://cloud.google.com/tpu/docs/attach-durable-block-storage).\n\n  This workflow was tested using v5p-8 with a 500GB disk attached.\n\n  ### Dataset Preparation\n\n  For this example, we'll be using the [PusaV1 dataset](https://huggingface.co/datasets/RaphaelLiu/PusaV1_training).\n\n  First, download the dataset.\n\n  ```bash\n  export HF_DATASET_DIR=/mnt/disks/external_disk/PusaV1_training/\n  export TFRECORDS_DATASET_DIR=/mnt/disks/external_disk/wan_tfr_dataset_pusa_v1\n  huggingface-cli download RaphaelLiu/PusaV1_training --repo-type dataset --local-dir $HF_DATASET_DIR\n  ```\n\n  Next run the TFRecords conversion script. This step prepares training and eval datasets. Validation is done as described in  [Scaling Rectified Flow Transformers for High-Resolution Image Synthesis](https://arxiv.org/pdf/2403.03206). More details [here](https://github.com/mlcommons/training/tree/master/text_to_image#5-quality)\n\n  Training dataset.\n\n  ```bash\n  python src/maxdiffusion/data_preprocessing/wan_pusav1_to_tfrecords.py src/maxdiffusion/configs/base_wan_14b.yml train_data_dir=$HF_DATASET_DIR tfrecords_dir=$TFRECORDS_DATASET_DIR/train no_records_per_shard=10 enable_eval_timesteps=False\n  ```\n\n  The script will not have an output, but you can check the progress using:\n\n  ```bash\n  ls -ll $TFRECORDS_DATASET_DIR/train\n  ```\n\n  Evaluation dataset.\n\n  ```bash\n  python src/maxdiffusion/data_preprocessing/wan_pusav1_to_tfrecords.py src/maxdiffusion/configs/base_wan_14b.yml train_data_dir=$HF_DATASET_DIR tfrecords_dir=$TFRECORDS_DATASET_DIR/eval no_records_per_shard=10 enable_eval_timesteps=True\n  ```\n\n  The evaluation dataset creation takes the first 420 samples of the dataset and adds a timestep field. We then need to manually delete the first 420 samples from the `train` folder so they are not used in training.\n\n\n  ```bash\n  printf \"%s\\n\" $TFRECORDS_DATASET_DIR/train/file_*-*.tfrec | awk -F '[-.]' '$2+0 <= 420' | xargs -d '\\n' rm\n  ```\n\n  And verify that they do not exist.\n\n  ```bash\n  printf \"%s\\n\" $TFRECORDS_DATASET_DIR/train/file_*-*.tfrec | awk -F '[-.]' '$2+0 <= 420' | xargs -d '\\n' echo\n  ```\n\n  After the script is done running, you should see the following directory structure inside `$TFRECORDS_DATASET_DIR`\n\n  ```\n  train\n  eval_timesteps\n  ```\n\n  In some instances an empty file `file_42-430.tfrec` is created inside `eval_timesteps`, for sanity check, let's run a delete command.\n\n  ```bash\n  rm $TFRECORDS_DATASET_DIR/eval_timesteps/file_42-430.tfrec\n  ```\n\n  ### Training on a Single VM\n\n  Loading the data is supported both locally from the disk created above, or from `gcs`. In this guide, we'll be using a gcs bucket to train. First copy the data to the GCS bucket.\n\n  ```bash\n  BUCKET_NAME=my-bucket\n  gcloud storage cp --recursive $TFRECORDS_DATASET_DIR gs://$BUCKET_NAME/${TFRECORDS_DATASET_DIR##*/}\n  ```\n\n  Now run the training command:\n\n  ```bash\n  RUN_NAME=jfacevedo-wan-v5p-8-${RANDOM}\n  OUTPUT_DIR=gs://$BUCKET_NAME/wan/\n  DATASET_DIR=gs://$BUCKET_NAME/${TFRECORDS_DATASET_DIR##*/}/train/\n  EVAL_DATA_DIR=gs://$BUCKET_NAME/${TFRECORDS_DATASET_DIR##*/}/eval_timesteps/\n  SAVE_DATASET_DIR=gs://$BUCKET_NAME/${TFRECORDS_DATASET_DIR##*/}/save/\n  ```\n\n  ```bash\n  export LIBTPU_INIT_ARGS='--xla_tpu_enable_async_collective_fusion_fuse_all_gather=true \\\n  --xla_tpu_megacore_fusion_allow_ags=false \\\n  --xla_enable_async_collective_permute=true \\\n  --xla_tpu_enable_ag_backward_pipelining=true \\\n  --xla_tpu_enable_data_parallel_all_reduce_opt=true \\\n  --xla_tpu_data_parallel_opt_different_sized_ops=true \\\n  --xla_tpu_enable_async_collective_fusion=true \\\n  --xla_tpu_enable_async_collective_fusion_multiple_steps=true \\\n  --xla_tpu_overlap_compute_collective_tc=true \\\n  --xla_enable_async_all_gather=true \\\n  --xla_tpu_scoped_vmem_limit_kib=65536 \\\n  --xla_tpu_enable_async_all_to_all=true \\\n  --xla_tpu_enable_all_experimental_scheduler_features=true \\\n  --xla_tpu_enable_scheduler_memory_pressure_tracking=true \\\n  --xla_tpu_host_transfer_overlap_limit=24 \\\n  --xla_tpu_aggressive_opt_barrier_removal=ENABLED \\\n  --xla_lhs_prioritize_async_depth_over_stall=ENABLED \\\n  --xla_should_allow_loop_variant_parameter_in_chain=ENABLED \\\n  --xla_should_add_loop_invariant_op_in_chain=ENABLED \\\n  --xla_max_concurrent_host_send_recv=100 \\\n  --xla_tpu_scheduler_percent_shared_memory_limit=100 \\\n  --xla_latency_hiding_scheduler_rerun=2 \\\n  --xla_tpu_use_minor_sharding_for_major_trivial_input=true \\\n  --xla_tpu_relayout_group_size_threshold_for_reduce_scatter=1 \\\n  --xla_tpu_assign_all_reduce_scatter_layout=true'\n  ```\n\n  ```bash\n  HF_HUB_CACHE=/mnt/disks/external_disk/maxdiffusion_hf_cache/ python src/maxdiffusion/train_wan.py \\\n  src/maxdiffusion/configs/base_wan_14b.yml \\\n  attention='flash' \\\n  weights_dtype=bfloat16 \\\n  activations_dtype=bfloat16 \\\n  guidance_scale=5.0 \\\n  flow_shift=5.0 \\\n  fps=16 \\\n  skip_jax_distributed_system=False \\\n  run_name=${RUN_NAME} \\\n  output_dir=${OUTPUT_DIR} \\\n  train_data_dir=${DATASET_DIR} \\\n  load_tfrecord_cached=True \\\n  height=1280 \\\n  width=720 \\\n  num_frames=81 \\\n  num_inference_steps=50 \\\n  jax_cache_dir=${OUTPUT_DIR}/jax_cache/ \\\n  max_train_steps=1000 \\\n  enable_profiler=True \\\n  dataset_save_location=${SAVE_DATASET_DIR} \\\n  remat_policy='HIDDEN_STATE_WITH_OFFLOAD' \\\n  flash_min_seq_length=0 \\\n  seed=$RANDOM \\\n  skip_first_n_steps_for_profiler=3 \\\n  profiler_steps=3 \\\n  per_device_batch_size=0.25 \\\n  ici_data_parallelism=1 \\\n  ici_fsdp_parallelism=4 \\\n  ici_tensor_parallelism=1\n  ```\n\n  It is important to note a couple of things:\n  - per_device_batch_size can be a fractional, but must be a whole number when multiplied by number of devices. In this example, 0.25 * 4 (devices) = effective global batch size = 1.\n  - The step time in v5p-8 with global batch size = 1 is large due to using `FULL` remat. On larger number of chips we can run larger batch sizes greatly increasing MFU, as we will see in the next session of deploying with xpk.\n  - To enable eval during training set `eval_every` to a value > 0.\n  - In Wan2.1, the ici_fsdp_parallelism axis is used for sequence parallelism, the ici_tensor_parallelism axis is used for head parallelism.\n    - You can enable both, keeping in mind that Wan2.1 has 40 heads and 40 must be evenly divisible by ici_tensor_parallelism.\n    - For Sequence parallelism, the code pads the sequence length to evenly divide the sequence. Try out different ici_fsdp_parallelism numbers, but we find 2 and 4 to be the best right now.\n  - For use on GPU it is recommended to enable the cudnn_te_flash attention kernel for optimal performance.\n    - Best performance is achieved with the use of batch parallelism, which can be enabled by using the ici_fsdp_batch_parallelism axis. Note that this parallelism strategy does not support fractional batch sizes.\n    - ici_fsdp_batch_parallelism and ici_fsdp_parallelism can be combined to allow for fractional batch sizes. However, padding is not currently supported for the cudnn_te_flash attention kernel and it is therefore required that the sequence length is divisible by the number of devices in the ici_fsdp_parallelism axis.\n  - For benchmarking training performance on multiple data dimension input without downloading/re-processing the dataset, the synthetic data iterator is supported.\n    - Set dataset_type='synthetic' and synthetic_num_samples=null to enable the synthetic data iterator.\n    - The following overrides on data dimensions are supported:\n      - synthetic_override_height: 720\n      - synthetic_override_width: 1280\n      - synthetic_override_num_frames: 85\n      - synthetic_override_max_sequence_length: 512\n      - synthetic_override_text_embed_dim: 4096\n      - synthetic_override_num_channels_latents: 16\n      - synthetic_override_vae_scale_factor_spatial: 8\n      - synthetic_override_vae_scale_factor_temporal: 4\n\n  You should eventually see a training run as:\n\n  ```bash\n  ***** Running training *****\n  Instantaneous batch size per device = 0.25\n  Total train batch size (w. parallel & distributed) = 1\n  Total optimization steps = 1000\n  Calculated TFLOPs per pass: 4893.2719\n  Warning, batch dimension should be shardable among the devices in data and fsdp axis, batch dimension: 1, devices_in_data_fsdp: 4\n  Warning, batch dimension should be shardable among the devices in data and fsdp axis, batch dimension: 1, devices_in_data_fsdp: 4\n  Warning, batch dimension should be shardable among the devices in data and fsdp axis, batch dimension: 1, devices_in_data_fsdp: 4\n  Warning, batch dimension should be shardable among the devices in data and fsdp axis, batch dimension: 1, devices_in_data_fsdp: 4\n  completed step: 0, seconds: 142.395, TFLOP/s/device: 34.364, loss: 0.270\n  To see full metrics 'tensorboard --logdir=gs://jfacevedo-maxdiffusion-v5p/wan/jfacevedo-wan-v5p-8-17263/tensorboard/'\n  completed step: 1, seconds: 137.207, TFLOP/s/device: 35.664, loss: 0.144\n  completed step: 2, seconds: 36.014, TFLOP/s/device: 135.871, loss: 0.210\n  completed step: 3, seconds: 36.016, TFLOP/s/device: 135.864, loss: 0.120\n  completed step: 4, seconds: 36.008, TFLOP/s/device: 135.894, loss: 0.107\n  completed step: 5, seconds: 36.008, TFLOP/s/device: 135.895, loss: 0.346\n  completed step: 6, seconds: 36.006, TFLOP/s/device: 135.900, loss: 0.169\n  ```\n\n  ### Deploying with XPK\n\n  This assumes the user has already created an xpk cluster, installed all dependencies and the also created the dataset from the step above. For getting started with MaxDiffusion and xpk see [this guide](docs/getting_started/run_maxdiffusion_via_xpk.md).\n\n  Using v5p-256 Then the command to run on xpk is as follows:\n\n  ```bash\n  RUN_NAME=jfacevedo-wan-v5p-8-${RANDOM}\n  OUTPUT_DIR=gs://$BUCKET_NAME/wan/\n  DATASET_DIR=gs://$BUCKET_NAME/${TFRECORDS_DATASET_DIR##*/}/train/\n  EVAL_DATA_DIR=gs://$BUCKET_NAME/${TFRECORDS_DATASET_DIR##*/}/eval_timesteps/\n  SAVE_DATASET_DIR=gs://$BUCKET_NAME/${TFRECORDS_DATASET_DIR##*/}/save/\n  ```\n\n  ```bash\n  LIBTPU_INIT_ARGS='--xla_tpu_enable_async_collective_fusion_fuse_all_gather=true \\\n  --xla_tpu_megacore_fusion_allow_ags=false \\\n  --xla_enable_async_collective_permute=true \\\n  --xla_tpu_enable_ag_backward_pipelining=true \\\n  --xla_tpu_enable_data_parallel_all_reduce_opt=true \\\n  --xla_tpu_data_parallel_opt_different_sized_ops=true \\\n  --xla_tpu_enable_async_collective_fusion=true \\\n  --xla_tpu_enable_async_collective_fusion_multiple_steps=true \\\n  --xla_tpu_overlap_compute_collective_tc=true \\\n  --xla_enable_async_all_gather=true \\\n  --xla_tpu_scoped_vmem_limit_kib=65536 \\\n  --xla_tpu_enable_async_all_to_all=true \\\n  --xla_tpu_enable_all_experimental_scheduler_features=true \\\n  --xla_tpu_enable_scheduler_memory_pressure_tracking=true \\\n  --xla_tpu_host_transfer_overlap_limit=24 \\\n  --xla_tpu_aggressive_opt_barrier_removal=ENABLED \\\n  --xla_lhs_prioritize_async_depth_over_stall=ENABLED \\\n  --xla_should_allow_loop_variant_parameter_in_chain=ENABLED \\\n  --xla_should_add_loop_invariant_op_in_chain=ENABLED \\\n  --xla_max_concurrent_host_send_recv=100 \\\n  --xla_tpu_scheduler_percent_shared_memory_limit=100 \\\n  --xla_latency_hiding_scheduler_rerun=2 \\\n  --xla_tpu_use_minor_sharding_for_major_trivial_input=true \\\n  --xla_tpu_relayout_group_size_threshold_for_reduce_scatter=1 \\\n  --xla_tpu_assign_all_reduce_scatter_layout=true'\n  ```\n\n  ```bash\n  python3 ~/xpk/xpk.py workload create \\\n  --cluster=$CLUSTER_NAME \\\n  --project=$PROJECT \\\n  --zone=$ZONE \\\n  --device-type=$DEVICE_TYPE \\\n  --num-slices=1 \\\n  --command=\" \\\n  HF_HUB_CACHE=/mnt/disks/external_disk/maxdiffusion_hf_cache/ python src/maxdiffusion/train_wan.py \\\n  src/maxdiffusion/configs/base_wan_14b.yml \\\n  attention='flash' \\\n  weights_dtype=bfloat16 \\\n  activations_dtype=bfloat16 \\\n  guidance_scale=5.0 \\\n  flow_shift=5.0 \\\n  fps=16 \\\n  skip_jax_distributed_system=False \\\n  run_name=${RUN_NAME} \\\n  output_dir=${OUTPUT_DIR} \\\n  train_data_dir=${DATASET_DIR} \\\n  load_tfrecord_cached=True \\\n  height=1280 \\\n  width=720 \\\n  num_frames=81 \\\n  num_inference_steps=50 \\\n  jax_cache_dir=${OUTPUT_DIR}/jax_cache/ \\\n  enable_profiler=True \\\n  dataset_save_location=${SAVE_DATASET_DIR} \\\n  remat_policy='HIDDEN_STATE_WITH_OFFLOAD' \\\n  flash_min_seq_length=0 \\\n  seed=$RANDOM \\\n  skip_first_n_steps_for_profiler=3 \\\n  profiler_steps=3 \\\n  per_device_batch_size=0.25 \\\n  ici_data_parallelism=32 \\\n  ici_fsdp_parallelism=4 \\\n  ici_tensor_parallelism=1 \\\n  max_train_steps=5000 \\\n  eval_every=100 \\\n  eval_data_dir=${EVAL_DATA_DIR} \\\n  enable_generate_video_for_eval=True\" \\\n  --base-docker-image=${IMAGE_DIR} \\\n  --enable-debug-logs \\\n  --workload=${RUN_NAME} \\\n  --priority=medium \\\n  --max-restarts=0\n  ```\n\n  ## Wan 2.2 Training\n\n  Wan 2.2 introduces a **dual-expert DiT architecture** (High-Noise Expert and Low-Noise Expert, ~27B total parameters). MaxDiffusion supports joint dual-expert training where samples are dynamically routed to the appropriate expert based on `boundary_ratio` (default `0.875`) using the Flow Match time shift schedule.\n\n  ### Single Host Training\n\n  Wan 2.2 uses the same dataset format (TFRecords or local/GCS dataset directories) prepared in the [Wan 2.1 dataset preparation step](#dataset-preparation).\n\n  Run single-host training using `train_wan.py` with `base_wan_27b.yml`:\n\n  ```bash\n  python src/maxdiffusion/train_wan.py \\\n    src/maxdiffusion/configs/base_wan_27b.yml \\\n    run_name=${RUN_NAME} \\\n    output_dir=${OUTPUT_DIR} \\\n    train_data_dir=${DATASET_DIR} \\\n    dataset_save_location=${SAVE_DATASET_DIR} \\\n    boundary_ratio=0.875 \\\n    weights_dtype=bfloat16 \\\n    activations_dtype=bfloat16 \\\n    per_device_batch_size=0.25 \\\n    ici_fsdp_parallelism=4 \\\n    ici_data_parallelism=1 \\\n    remat_policy='HIDDEN_STATE_WITH_OFFLOAD' \\\n    max_train_steps=1000 \\\n    checkpoint_every=500 \\\n    save_final_checkpoint=True\n  ```\n\n  ### Multi-Host Training with XPK\n\n  For large-scale multi-host training across TPU pods or clusters (e.g. v5p, v6e, v7x). The following example is configured for a 128-chip slice (such as `v5p-128`, `v6e-128`, or `tpu7x-4x4x4`):\n\n  ```bash\n  python3 ~/xpk/xpk.py workload create \\\n    --cluster=$CLUSTER_NAME \\\n    --project=$PROJECT \\\n    --zone=$ZONE \\\n    --device-type=$DEVICE_TYPE \\\n    --num-slices=1 \\\n    --workload=${RUN_NAME} \\\n    --command=\" \\\n    python3 src/maxdiffusion/train_wan.py \\\n      src/maxdiffusion/configs/base_wan_27b.yml \\\n      run_name=${RUN_NAME} \\\n      output_dir=${OUTPUT_DIR} \\\n      train_data_dir=${DATASET_DIR} \\\n      dataset_save_location=${SAVE_DATASET_DIR} \\\n      boundary_ratio=0.875 \\\n      weights_dtype=bfloat16 \\\n      activations_dtype=bfloat16 \\\n      per_device_batch_size=1 \\\n      ici_fsdp_parallelism=4 \\\n      ici_data_parallelism=32 \\\n      remat_policy='HIDDEN_STATE_WITH_OFFLOAD' \\\n      max_train_steps=5000 \\\n      checkpoint_every=1000 \\\n      save_final_checkpoint=True\" \\\n    --base-docker-image=${IMAGE_DIR} \\\n    --priority=medium \\\n    --max-restarts=0\n  ```\n\n  ### Checkpointing & Export\n\n  Wan 2.2 training checkpoints are managed with Orbax via `WanCheckpointer2_2`. Checkpoints store optimizer states and weights for both experts (`low_noise_transformer_state` and `high_noise_transformer_state`) alongside model configurations. MaxDiffusion inference pipelines (`WanPipeline2_2`) can load directly from these Orbax checkpoints for downstream sampling.\n\n  ## Flux Training\n\n  Expected results on 1024 x 1024 images with flash attention and bfloat16:\n\n  | Model | Accelerator | Sharding Strategy | Per Device Batch Size | Global Batch Size | Step Time (secs) |\n  | --- | --- | --- | --- | --- | --- |\n  | Flux-dev | v5p-8 | FSDP | 2 | 8 | 1.769 |\n\n  Flux finetuning has only been tested on TPU v5p.\n\n  To run the Flux training benchmark on v5p-8, use:\n\n  ```bash\n  python src/maxdiffusion/train_flux.py src/maxdiffusion/configs/base_flux_dev.yml \\\n      run_name=\"flux-training\" \\\n      output_dir=\"gs://<your-gcs-bucket>/\" \\\n      jax_cache_dir=\"/tmp/jax_cache\" \\\n      save_final_checkpoint=False \\\n      max_train_steps=100 \\\n      dataset_type=synthetic \\\n      ici_data_parallelism=1 \\\n      ici_fsdp_parallelism=4 \\\n      ici_tensor_parallelism=1 \\\n      train_new_flux=True \\\n      resolution=1024 \\\n      attention_sharding_uniform=False \\\n      attention=tokamax_flash \\\n      per_device_batch_size=2 \\\n      enable_profiler=False \\\n      reuse_example_batch=True \\\n      write_metrics=False \\\n      use_base2_exp=True\n  ```\n\n  To generate images with a finetuned checkpoint, run:\n\n  ```bash\n  python src/maxdiffusion/generate_flux_pipeline.py src/maxdiffusion/configs/base_flux_dev.yml  run_name=\"test-flux-train\" output_dir=\"gs://<your-gcs-bucket>/\" jax_cache_dir=\"/tmp/jax_cache\"\n  ```\n\n  ## Stable Diffusion XL Training\n\n  ```bash\n  export LIBTPU_INIT_ARGS=\"\"\n  python -m src.maxdiffusion.train_sdxl src/maxdiffusion/configs/base_xl.yml run_name=\"my_xl_run\" output_dir=\"gs://your-bucket/\" per_device_batch_size=1\n  ```\n\n  On GPUS with Fused Attention:\n\n  First install Transformer Engine by following the [instructions here](#fused-attention-for-gpu).\n\n  ```bash\n  NVTE_FUSED_ATTN=1 python -m src.maxdiffusion.train_sdxl src/maxdiffusion/configs/base_xl.yml hardware=gpu run_name='test-sdxl-train' output_dir=/tmp/ train_new_unet=true train_text_encoder=false cache_latents_text_encoder_outputs=true max_train_steps=200 weights_dtype=bfloat16 resolution=512 per_device_batch_size=1 attention=\"cudnn_flash_te\" jit_initializers=False\n  ```\n\n  To generate images with a trained checkpoint, run:\n\n  ```bash\n  python -m src.maxdiffusion.generate src/maxdiffusion/configs/base_xl.yml run_name=\"my_run\" pretrained_model_name_or_path=<your_saved_checkpoint_path> from_pt=False attention=dot_product\n  ```\n\n  ## Stable Diffusion 2 base Training\n\n  ```bash\n  export LIBTPU_INIT_ARGS=\"\"\n  python -m src.maxdiffusion.train src/maxdiffusion/configs/base_2_base.yml run_name=\"my_run\" jax_cache_dir=gs://your-bucket/cache_dir activations_dtype=float32 weights_dtype=float32 per_device_batch_size=2 precision=DEFAULT dataset_save_location=/tmp/my_dataset/ output_dir=gs://your-bucket/ attention=flash\n  ```\n\n  ## Stable Diffusion 1.4 Training\n\n  ```bash\n  export LIBTPU_INIT_ARGS=\"\"\n  python -m src.maxdiffusion.train src/maxdiffusion/configs/base14.yml run_name=\"my_run\" jax_cache_dir=gs://your-bucket/cache_dir activations_dtype=float32 weights_dtype=float32 per_device_batch_size=2 precision=DEFAULT dataset_save_location=/tmp/my_dataset/ output_dir=gs://your-bucket/ attention=flash\n  ```\n\n  To generate images with a trained checkpoint, run:\n\n  ```bash\n  python -m src.maxdiffusion.generate src/maxdiffusion/configs/base_2_base.yml run_name=\"my_run\" output_dir=gs://your-bucket/ from_pt=False attention=dot_product\n  ```\n\n  ## Dreambooth\n\n  Supported models are **Stable Diffusion 1.x,2.x**\n\n  ```bash\n  python src/maxdiffusion/dreambooth/train_dreambooth.py src/maxdiffusion/configs/base14.yml class_data_dir=<your-class-dir> instance_data_dir=<your-instance-dir> instance_prompt=\"a photo of ohwx dog\" class_prompt=\"photo of a dog\" max_train_steps=150 jax_cache_dir=<your-cache-dir> class_prompt=\"a photo of a dog\" activations_dtype=bfloat16 weights_dtype=float32 per_device_batch_size=1 enable_profiler=False precision=DEFAULT cache_dreambooth_dataset=False learning_rate=4e-6 num_class_images=100 run_name=<your-run-name> output_dir=gs://<your-bucket-name>\n  ```\n\n## Inference\n\nTo generate images, run the following command:\n  ## Stable Diffusion XL\n\n  Single and Multi host inference is supported with sharding annotations:\n\n  ```bash\n  python -m src.maxdiffusion.generate_sdxl src/maxdiffusion/configs/base_xl.yml run_name=\"my_run\"\n  ```\n\n  Single host pmap version:\n\n  ```bash\n  python -m src.maxdiffusion.generate_sdxl_replicated\n  ```\n\n  ## Stable Diffusion 2 base\n  ```bash\n  python -m src.maxdiffusion.generate src/maxdiffusion/configs/base_2_base.yml run_name=\"my_run\"\n  ```\n\n  ## Stable Diffusion 2.1\n  ```bash\n  python -m src.maxdiffusion.generate src/maxdiffusion/configs/base21.yml run_name=\"my_run\"\n  ```\n\n  ## LTX-Video\n  In the folder src/maxdiffusion/models/ltx_video/utils, run:\n\n  ```bash\n  python convert_torch_weights_to_jax.py --ckpt_path [LOCAL DIRECTORY FOR WEIGHTS] --transformer_config_path ../ltxv-13B.json\n  ```\n\n  In the repo folder, run:\n  ```bash\n  python src/maxdiffusion/generate_ltx_video.py src/maxdiffusion/configs/ltx_video.yml output_dir=\"[SAME DIRECTORY]\" config_path=\"src/maxdiffusion/models/ltx_video/ltxv-13B.json\"\n  ```\n  Img2video Generation:\n\n  Add conditioning image path as conditioning_media_paths in the form of [\"IMAGE_PATH\"] along with other generation parameters in the ltx_video.yml file. Then follow same instruction as above.\n\n  ## LTX-2 Video\n\n  Although not required, attaching an external disk is recommended as weights take up a lot of disk space. [Follow these instructions if you would like to attach an external disk](https://cloud.google.com/tpu/docs/attach-durable-block-storage).\n\n  The following command will run LTX-2 T2V:\n\n   ```bash\n  HF_HUB_CACHE=/mnt/disks/external_disk/maxdiffusion_hf_cache/ \\\n  LIBTPU_INIT_ARGS=\"--xla_tpu_enable_async_collective_fusion=true \\\n  --xla_tpu_enable_async_collective_fusion_fuse_all_reduce=true \\\n  --xla_tpu_enable_async_collective_fusion_multiple_steps=true \\\n  --xla_tpu_overlap_compute_collective_tc=true \\\n  --xla_enable_async_all_reduce=true\" \\\n  HF_HUB_ENABLE_HF_TRANSFER=1 \\\n  python src/maxdiffusion/generate_ltx2.py \\\n  src/maxdiffusion/configs/ltx2_video.yml \\\n  attention=\"flash\" \\\n  num_inference_steps=40 \\\n  num_frames=121 \\\n  width=768 \\\n  height=512 \\\n  per_device_batch_size=.125 \\\n  ici_data_parallelism=2 \\\n  ici_context_parallelism=4 \\\n  run_name=ltx2-inference\n  ```\n\n  ## Wan Models\n\n  Although not required, attaching an external disk is recommended as weights take up a lot of disk space. [Follow these instructions if you would like to attach an external disk](https://cloud.google.com/tpu/docs/attach-durable-block-storage).\n\n  Supports both Text2Vid and Img2Vid pipelines.\n\n  **Note**: The product of per_device_batch_size and num_devices must be equal to a whole number.\n\n  The below command uses 4 devices and a per_device_batch_size=0.25. Thus, 4 * 0.25 = 1. This will generate a single video. Setting per_device_batch_size to 0.5, will generate 2 videos and so on.\n\n  If using 8 devices, then per_device_batch_size=0.125 will generate 1 video, per_device_batch_size=0.25 generates 2 videos.\n\n  The following command will run Wan2.1 T2V:\n\n  ```bash\n  HF_HUB_CACHE=/mnt/disks/external_disk/maxdiffusion_hf_cache/ \\\n  LIBTPU_INIT_ARGS=\"--xla_tpu_enable_async_collective_fusion=true \\\n  --xla_tpu_enable_async_collective_fusion_fuse_all_reduce=true \\\n  --xla_tpu_enable_async_collective_fusion_multiple_steps=true \\\n  --xla_tpu_overlap_compute_collective_tc=true \\\n  --xla_enable_async_all_reduce=true\" \\\n  HF_HUB_ENABLE_HF_TRANSFER=1 \\\n  python src/maxdiffusion/generate_wan.py \\\n  src/maxdiffusion/configs/base_wan_14b.yml \\\n  attention=\"flash\" \\\n  num_inference_steps=50 \\\n  num_frames=81 \\\n  width=1280 \\\n  height=720 \\\n  jax_cache_dir=gs://jfacevedo-maxdiffusion/jax_cache/ \\\n  per_device_batch_size=.0.25 \\\n  ici_data_parallelism=2 \\\n  ici_context_parallelism=2 \\\n  flow_shift=5.0 \\\n  enable_profiler=True \\\n  run_name=wan-inference-testing-720p \\\n  output_dir=gs:/jfacevedo-maxdiffusion \\\n  fps=16 \\\n  flash_min_seq_length=0 \\\n  flash_block_sizes='{\"block_q\" : 3024, \"block_kv_compute\" : 1024, \"block_kv\" : 2048, \"block_q_dkv\": 3024, \"block_kv_dkv\" : 2048, \"block_kv_dkv_compute\" : 2048, \"block_q_dq\" : 3024, \"block_kv_dq\" : 2048 }' \\\n  seed=118445\n  ```\n\n  To run other Wan model inference pipelines, change the config file in the command above:\n\n  * For Wan2.1 I2V, use `base_wan_i2v_14b.yml`.\n  * For Wan2.2 T2V, use `base_wan_27b.yml`.\n  * For Wan2.2 I2V, use `base_wan_i2v_27b.yml`.\n\n  ### Ulysses Attention\n\n  MaxDiffusion supports Ulysses attention for WAN TPU inference. Enable it by setting `attention=\"ulysses\"`.\n\n  Internally, this follows the Ulysses sequence-parallel attention pattern and trades sequence shards for head shards around the local TPU splash kernel. For background, see [DeepSpeed Ulysses: System Optimizations for Enabling Training of Extreme Long Sequence Transformer Models](https://arxiv.org/abs/2309.14509).\n\n  To enable Ulysses attention, set the corresponding override in your config YAML or pass it as a command-line override:\n\n  ```bash\n  python src/maxdiffusion/generate_wan.py \\\n  src/maxdiffusion/configs/base_wan_i2v_27b.yml \\\n  attention=\"ulysses\" \\\n  ici_context_parallelism=4 \\\n  ...\n  ```\n\n  Ulysses requires `ici_context_parallelism` greater than 1, and the number of attention heads must be divisible by the context shard count. `flash_block_sizes` tuning is optional and can still be used for hardware-specific tuning.\n\n  In our Wan2.2 I2V benchmarks at 40 inference steps, 81 frames, and `720x1280` resolution, Ulysses improved inference time by roughly `~10%` compared with flash attention, with about `~20s` lower latency on the v6e-8 and v7x-8 TPU setup.\n\n  #### Chunked Ulysses Attention (Overlapping Communication and Compute)\n\n  If you observe a major `all-to-all` communication bottleneck (especially when communication overhead is more pronounced compared to attention computation), you can enable **Chunked Ulysses Attention**.\n\n  By setting `ulysses_attention_chunks` greater than 1, MaxDiffusion splits the Ulysses all-to-all communication and attention computation into head-group passes (chunks). This allows XLA to overlap the all-to-all communication of one chunk with the head-parallel local attention compute of another chunk, significantly mitigating the communication bottleneck.\n\n  This chunking technique is supported and works for both plain Ulysses attention (`attention=\"ulysses\"`) and hybrid Ulysses+Ring 2D attention/context parallelism (`attention=\"ulysses_ring\"`).\n\n  To enable chunked Ulysses attention, set the corresponding override (e.g. `ulysses_attention_chunks=2` or `ulysses_attention_chunks=5`) in your config YAML or command line:\n\n  ```bash\n  python src/maxdiffusion/generate_wan.py \\\n  src/maxdiffusion/configs/base_wan_i2v_27b.yml \\\n  attention=\"ulysses\" \\\n  ici_context_parallelism=4 \\\n  ulysses_attention_chunks=2 \\\n  ...\n  ```\n\n  > [!IMPORTANT]\n  > For communication-compute overlap to be effective on TPUs, you must enable the following XLA flags before running:\n  > ```bash\n  > export XLA_FLAGS=\"--xla_tpu_enable_async_all_to_all=true --xla_tpu_overlap_compute_collective_tc=true\"\n  > ```\n\n  ### Caching Mechanisms\n\n  Wan 2.x pipelines support several caching strategies to accelerate inference by skipping redundant transformer forward passes. These are **mutually exclusive** \u2014 enable only one at a time.\n\n  | Cache Type | Config Flag | Supported Pipelines | Speedup | Description |\n  | --- | --- | --- | --- | --- |\n  | **CFG Cache** | `use_cfg_cache: True` | Wan 2.1 T2V, Wan 2.2 T2V/I2V | ~1.2x | FasterCache-style: caches the unconditional branch and applies FFT frequency-domain compensation on skipped steps. |\n  | **SenCache** | `use_sen_cache: True` | Wan 2.2 T2V/I2V | ~1.4x | Sensitivity-Aware Caching ([arXiv:2602.24208](https://arxiv.org/abs/2602.24208)): predicts output change via first-order sensitivity S = \u03b1_x\u00b7\u2016\u0394x\u2016 + \u03b1_t\u00b7\\|\u0394t\\|. Skips the full CFG forward pass when predicted change is below tolerance \u03b5. |\n  | **MagCache** | `use_magcache: True` | Wan 2.1 T2V, Wan 2.2 T2V/I2V | ~1.75\u20131.9x | [MagCache](https://github.com/Zehong-Ma/MagCache): skips the transformer blocks and reuses the cached block residual when the accumulated magnitude-ratio error stays below `magcache_thresh`, capped at `magcache_K` consecutive skips. Uses a precalibrated per-step `mag_ratios_base` curve, so the skip schedule is deterministic (no data-dependent control flow). |\n\n  For Wan 2.2 (dual-transformer), MagCache uses a single `mag_ratios_base` curve across both phases, forces a full recompute for the first `retention_ratio` fraction of each phase, and resets the cached residual at the high\u2192low boundary. The shipped curves are seeded from the official Wan2.2 values (`base_wan_27b.yml` for T2V, `base_wan_i2v_27b.yml` for I2V); recalibrate for your dtype/attention kernel to tighten the quality gap.\n\n  > **Wan 2.2 T2V requires `flow_shift=12.0`** \u2014 it sets where the high\u2192low boundary lands, which is what `mag_ratios_base` is calibrated against. A lower shift (e.g. `5.0`) moves the boundary out of phase, so MagCache skips at the wrong steps and quality drops.\n\n  Benchmarks (7x, A14B, 720\u00d71280, 81 frames, 40 steps, vs dense \u2014 SSIM/PSNR largely reflect trajectory divergence, not visible degradation):\n\n  | Variant | Settings | Speedup | SSIM / PSNR |\n  | --- | --- | --- | --- |\n  | T2V | `flow_shift=12.0`, `magcache_thresh=0.04`, `magcache_K=2` | ~1.82\u00d7 (18/40 skipped) | 0.72 / 21.8 dB |\n  | I2V | `flow_shift=5.0`, `boundary_ratio=0.900`, `magcache_thresh=0.06`, `magcache_K=2` | ~1.75\u00d7 (17/40 skipped) | 0.91 / 25.4 dB |\n\n  To enable a caching mechanism, set the corresponding flag in your config YAML or pass it as a command-line override:\n\n  ```bash\n  # Example: enable SenCache for Wan 2.2 T2V\n  python src/maxdiffusion/generate_wan.py \\\n    src/maxdiffusion/configs/base_wan_27b.yml \\\n    use_sen_cache=True \\\n    ...\n\n  # Example: enable CFG Cache for Wan 2.2 I2V\n  python src/maxdiffusion/generate_wan.py \\\n    src/maxdiffusion/configs/base_wan_i2v_27b.yml \\\n    use_cfg_cache=True \\\n    ...\n\n# Example: enable MagCache for Wan 2.2 T2V\npython src/maxdiffusion/generate_wan.py \\\n  src/maxdiffusion/configs/base_wan_27b.yml \\\n  use_magcache=True \\\n  magcache_thresh=0.04 \\\n  magcache_K=2 \\\n  ...\n\n# Example: enable MagCache for Wan 2.2 I2V\npython src/maxdiffusion/generate_wan.py \\\n  src/maxdiffusion/configs/base_wan_i2v_27b.yml \\\n  use_magcache=True \\\n  magcache_thresh=0.06 \\\n  magcache_K=2 \\\n  ...\n```\n\n### Ring Attention\nWe added ring attention support for Wan models. Below are the stats for one `720p` (81 frames) video generation (with CFG DP):\n| Accelerator |  Model | Attention Type | Inference Steps | Sharding | e2e Generation Time |\n| -- | -- | -- | -- | -- | -- |\n| v7x-8 | WAN 2.1 | Tokamax Flash | 50 | dp2-fsdp1-context4-tp1 | **249.3** |\n| v7x-8 | WAN 2.1 | Tokamax Ring | 50 | dp2-fsdp1-context4-tp1 | 252.4 |\n| v7x-8 | WAN 2.2 | Tokamax Flash | 40 | dp2-fsdp1-context4-tp1 | **194.4** |\n| v7x-8 | WAN 2.2 | Tokamax Ring | 40 | dp2-fsdp1-context4-tp1 | 201.7 |\n\n| Accelerator |  Model | Attention Type | Inference Steps | Sharding | e2e Generation Time |\n| -- | -- | -- | -- | -- | -- |\n| v7x-16 | WAN 2.1 | Tokamax Flash | 50 | dp2-fsdp1-context8-tp1 | **127.1** |\n| v7x-16 | WAN 2.1 | Tokamax Ring | 50 | dp2-fsdp1-context8-tp1 | 137.2 |\n| v7x-16 | WAN 2.2 | Tokamax Flash | 40 | dp2-fsdp1-context8-tp1 | **106.0** |\n| v7x-16 | WAN 2.2 | Tokamax Ring | 40 | dp2-fsdp1-context8-tp1 | 137.5 |\n\n(* There are some known stability issues for ring attention on 16 TPUs, please use `tokamax_flash` attention instead.)\n\n### Automatic Tile-Size Search\n\nThe optimal attention tile sizes (`block_q` / `block_kv`) depend on the sequence length, VMEM, sharding, and accelerator, and the feasibility edge is a VMEM OOM with no clean closed form \u2014 so we tune them empirically. Passing `enable_tile_search=true` to `generate_wan.py` runs a fast one-DiT-block grid search before inference and injects the winning block sizes into `flash_block_sizes` (`tile_search_mode=smart` by default; the search is opt-in and off by default).  The core is model-agnostic (`utils/tile_size_grid_search.py`) with a per-model plug (`utils/wan_block_benchmark.py`), which also runs standalone via `python -m maxdiffusion.utils.wan_block_benchmark ... --smart-search`.\n\n  ## Flux\n\n  First make sure you have permissions to access the Flux repos in Huggingface.\n\n  Expected results on 1024 x 1024 images with flash attention and bfloat16:\n\n  | Model | Accelerator | Sharding Strategy | Batch Size | Steps | time (secs) |\n  | --- | --- | --- | --- | --- | --- |\n  | Flux-dev | v4-8 | DDP | 4 | 28 | 23 |\n  | Flux-schnell | v4-8 | DDP | 4 | 4 | 2.2 |\n  | Flux-dev | v6e-4 | DDP | 4 | 28 | 5.5 |\n  | Flux-schnell | v6e-4 | DDP | 4 | 4 | 0.8 |\n  | Flux-schnell | v6e-4 | FSDP | 4 | 4 | 1.2 |\n\n  Schnell:\n\n  ```bash\n  python src/maxdiffusion/generate_flux.py src/maxdiffusion/configs/base_flux_schnell.yml jax_cache_dir=/tmp/cache_dir run_name=flux_test output_dir=/tmp/ prompt=\"photograph of an electronics chip in the shape of a race car with trillium written on its side\" per_device_batch_size=1\n  ```\n\n  Dev:\n\n  ```bash\n  python src/maxdiffusion/generate_flux.py src/maxdiffusion/configs/base_flux_dev.yml jax_cache_dir=/tmp/cache_dir run_name=flux_test output_dir=/tmp/ prompt=\"photograph of an electronics chip in the shape of a race car with trillium written on its side\" per_device_batch_size=1\n  ```\n\n  If you are using a TPU v6e (Trillium), you can use optimized flash block sizes for faster inference. Uncomment Flux-dev [config](src/maxdiffusion/configs/base_flux_dev.yml#60) and Flux-schnell [config](src/maxdiffusion/configs/base_flux_schnell.yml#68)\n\n  To keep text encoders, vae and transformer on HBM memory at all times, the following command shards the model across devices.\n\n  ```bash\n  python src/maxdiffusion/generate_flux.py src/maxdiffusion/configs/base_flux_schnell.yml jax_cache_dir=/tmp/cache_dir run_name=flux_test output_dir=/tmp/ prompt=\"photograph of an electronics chip in the shape of a race car with trillium written on its side\" per_device_batch_size=1 ici_data_parallelism=1 ici_fsdp_parallelism=-1 offload_encoders=False\n  ```\n\n  ### Flux.2-Klein (4B & 9B)\n\n  Flux.2-Klein provides ultra-fast 4-step image generation using Qwen3 text embeddings and FLUX.2 transformer blocks.\n\n  #### Text-to-Image Generation:\n\n  Flux.2-Klein 4B:\n\n  ```bash\n  python src/maxdiffusion/generate_flux2klein.py src/maxdiffusion/configs/base_flux2klein.yml run_name=flux2klein_4b prompt=\"A detailed vector illustration of a robotic hummingbird\"\n  ```\n\n  Flux.2-Klein 9B:\n\n  ```bash\n  python src/maxdiffusion/generate_flux2klein.py src/maxdiffusion/configs/base_flux2klein_9B.yml run_name=flux2klein_9b prompt=\"A detailed vector illustration of a robotic hummingbird\"\n  ```\n\n  #### Multi-Reference Image Editing:\n\n  Flux.2-Klein supports multi-reference image editing conditioned on up to 4 reference images via the `image_paths` CLI flag.\n\n  Flux.2-Klein 9B Image Editing:\n\n  ```bash\n  python src/maxdiffusion/generate_flux2klein.py src/maxdiffusion/configs/base_flux2klein_9B.yml run_name=flux2klein_9b_image_edit prompt=\"change the lighting to evening\" image_paths=\"['src/maxdiffusion/tests/images/flux2klein/ref_flux2klein_9b.png']\"\n  ```\n\n  The 9B model also supports KV-Cache for faster inference, and can be toggled with the `use_kv=True` CLI flag:\n\n  ```bash\n  python src/maxdiffusion/generate_flux2klein.py src/maxdiffusion/configs/base_flux2klein_9B.yml run_name=flux2klein_9b_kv_edit prompt=\"change the lighting to evening\" image_paths=\"['src/maxdiffusion/tests/images/flux2klein/ref_flux2klein_9b.png']\" use_kv=True\n  ```\n  ## Fused Attention for GPU:\n  Fused Attention for GPU is supported via TransformerEngine. Installation instructions:\n\n  ```bash\n  cd maxdiffusion\n  pip install -U \"jax[cuda12]\"\n  pip install -r requirements.txt\n  pip install --upgrade torch torchvision\n  pip install \"transformer_engine[jax]\n  pip install .\n  ```\n\n  Now run the command:\n\n  ```bash\n  NVTE_FUSED_ATTN=1 HF_HUB_ENABLE_HF_TRANSFER=1 python src/maxdiffusion/generate_flux.py src/maxdiffusion/configs/base_flux_dev.yml jax_cache_dir=/tmp/cache_dir run_name=flux_test output_dir=/tmp/ prompt='A cute corgi lives in a house made out of sushi, anime' num_inference_steps=28 split_head_dim=True per_device_batch_size=1 attention=\"cudnn_flash_te\" hardware=gpu\n  ```\n  ## Wan LoRA\n\n  Disclaimer: not all LoRA formats have been tested. Currently supports ComfyUI and AI Toolkit formats. If there is a specific LoRA that doesn't load, please let us know.\n\n  First create a copy of the relevant config file eg: `src/maxdiffusion/configs/base_wan_{*}.yml`. Update the prompt and LoRA details in the config. Make sure to set `enable_lora: True`. Then run the following command:\n\n  ```bash\n  HF_HUB_CACHE=/mnt/disks/external_disk/maxdiffusion_hf_cache/ \\\n  LIBTPU_INIT_ARGS=\"--xla_tpu_enable_async_collective_fusion=true \\\n  --xla_tpu_enable_async_collective_fusion_fuse_all_reduce=true \\\n  --xla_tpu_enable_async_collective_fusion_multiple_steps=true \\\n  --xla_tpu_overlap_compute_collective_tc=true \\\n  --xla_enable_async_all_reduce=true\" \\\n  HF_HUB_ENABLE_HF_TRANSFER=1 \\\n  python src/maxdiffusion/generate_wan.py \\\n  src/maxdiffusion/configs/base_wan_i2v_14b.yml \\   # --> Change to your copy\n  jax_cache_dir=gs://jfacevedo-maxdiffusion/jax_cache/ \\\n  per_device_batch_size=.125 \\\n  ici_data_parallelism=2 \\\n  ici_context_parallelism=2 \\\n  run_name=wan-lora-inference-testing-720p \\\n  output_dir=gs:/jfacevedo-maxdiffusion \\\n  seed=118445 \\\n  enable_lora=True \\\n  ```\n\n  Loading multiple LoRAs is supported as well.\n\n  ## Flux LoRA\n\n  Disclaimer: not all LoRA formats have been tested. If there is a specific LoRA that doesn't load, please let us know.\n\n  Tested with [Amateur Photography](https://civitai.com/models/652699/amateur-photography-flux-dev) and [XLabs-AI](https://huggingface.co/XLabs-AI/flux-lora-collection/tree/main) LoRA collection.\n\n  First download the LoRA file to a local directory, for example, `/home/jfacevedo/anime_lora.safetensors`. Then run as follows:\n\n  ```bash\n  python src/maxdiffusion/generate_flux.py src/maxdiffusion/configs/base_flux_dev.yml jax_cache_dir=/tmp/cache_dir run_name=flux_test output_dir=/tmp/ prompt='A cute corgi lives in a house made out of sushi, anime' num_inference_steps=28 ici_data_parallelism=1 ici_fsdp_parallelism=-1 split_head_dim=True lora_config='{\"lora_model_name_or_path\" : [\"/home/jfacevedo/anime_lora.safetensors\"], \"weight_name\" : [\"anime_lora.safetensors\"], \"adapter_name\" : [\"anime\"], \"scale\": [0.8], \"from_pt\": [\"true\"]}'\n  ```\n\n  Loading multiple LoRAs is supported as follows:\n\n  ```bash\n  python src/maxdiffusion/generate_flux.py src/maxdiffusion/configs/base_flux_dev.yml jax_cache_dir=/tmp/cache_dir run_name=flux_test output_dir=/tmp/ prompt='A cute corgi lives in a house made out of sushi, anime' num_inference_steps=28 ici_data_parallelism=1 ici_fsdp_parallelism=-1 split_head_dim=True lora_config='{\"lora_model_name_or_path\" : [\"/home/jfacevedo/anime_lora.safetensors\", \"/home/jfacevedo/amateurphoto-v6-forcu.safetensors\"], \"weight_name\" : [\"anime_lora.safetensors\",\"amateurphoto-v6-forcu.safetensors\"], \"adapter_name\" : [\"anime\",\"realistic\"], \"scale\": [0.6, 0.6], \"from_pt\": [\"true\",\"true\"]}'\n  ```\n\n  ## Hyper SDXL LoRA\n\n  Supports Hyper-SDXL models from [ByteDance](https://huggingface.co/ByteDance/Hyper-SD)\n\n  ```bash\n  python src/maxdiffusion/generate_sdxl.py src/maxdiffusion/configs/base_xl.yml run_name=\"test-lora\" output_dir=/tmp/ jax_cache_dir=/tmp/cache_dir/ num_inference_steps=2 do_classifier_free_guidance=False prompt=\"a photograph of a cat wearing a hat riding a skateboard in a park.\" per_device_batch_size=1 pretrained_model_name_or_path=\"Lykon/AAM_XL_AnimeMix\" from_pt=True revision=main diffusion_scheduler_config='{\"_class_name\" : \"FlaxDDIMScheduler\", \"timestep_spacing\" : \"trailing\"}' lora_config='{\"lora_model_name_or_path\" : [\"ByteDance/Hyper-SD\"], \"weight_name\" : [\"Hyper-SDXL-2steps-lora.safetensors\"], \"adapter_name\" : [\"hyper-sdxl\"], \"scale\": [0.7], \"from_pt\": [\"true\"]}'\n  ```\n\n  ## Load Multiple LoRA\n\n  Supports loading multiple LoRAs for inference. Both from local or from HuggingFace hub.\n\n  ```bash\n  python src/maxdiffusion/generate_sdxl.py src/maxdiffusion/configs/base_xl.yml run_name=\"test-lora\" output_dir=/tmp/tmp/ jax_cache_dir=/tmp/cache_dir/ num_inference_steps=30 do_classifier_free_guidance=True prompt=\"ultra detailed diagram blueprint of a papercut Sitting MaineCoon cat, wide canvas, ampereart, electrical diagram, bl3uprint, papercut\" per_device_batch_size=1 diffusion_scheduler_config='{\"_class_name\" : \"FlaxDDIMScheduler\", \"timestep_spacing\" : \"trailing\"}' lora_config='{\"lora_model_name_or_path\" : [\"/home/jfacevedo/blueprintify-sd-xl-10.safetensors\",\"TheLastBen/Papercut_SDXL\"], \"weight_name\" : [\"/home/jfacevedo/blueprintify-sd-xl-10.safetensors\",\"papercut.safetensors\"], \"adapter_name\" : [\"blueprint\",\"papercut\"], \"scale\": [0.8, 0.7], \"from_pt\": [\"true\", \"true\"]}'\n  ```\n\n  ## SDXL Lightning\n\n  Single and Multi host inference is supported with sharding annotations:\n\n  ```bash\n  python -m src.maxdiffusion.generate_sdxl src/maxdiffusion/configs/base_xl_lightning.yml run_name=\"my_run\" lightning_repo=\"ByteDance/SDXL-Lightning\" lightning_ckpt=\"sdxl_lightning_4step_unet.safetensors\"\n  ```\n\n  ## ControlNet\n\n  Might require installing extra libraries for opencv: `apt-get update && apt-get install ffmpeg libsm6 libxext6  -y`\n\n  ### Stable Diffusion 1.4\n\n  ```bash\n  python src/maxdiffusion/controlnet/generate_controlnet_replicated.py\n  ```\n\n  ### Stable Diffusion XL\n\n  ```bash\n  python src/maxdiffusion/controlnet/generate_controlnet_sdxl_replicated.py\n  ```\n\n## Getting Started: Multihost development\nMultihost training for Stable Diffusion 2 base can be run using the following command:\n```bash\nTPU_NAME=<your-tpu-name>\nZONE=<your-zone>\nPROJECT_ID=<your-project-id>\ngcloud compute tpus tpu-vm ssh $TPU_NAME --zone=$ZONE --project $PROJECT_ID --worker=all --command=\"\nexport LIBTPU_INIT_ARGS=\"\"\ngit clone https://github.com/google/maxdiffusion\ncd maxdiffusion\npip3 install jax[tpu] -f https://storage.googleapis.com/jax-releases/libtpu_releases.html\npip3 install -r requirements.txt\npip3 install .\npython -m src.maxdiffusion.train src/maxdiffusion/configs/base_2_base.yml run_name=my_run output_dir=gs://your-bucket/\"\n```\n\n# Comparison to Alternatives\n\nMaxDiffusion started as a fork of [Diffusers](https://github.com/huggingface/diffusers), a Hugging Face diffusion library written in Python, Pytorch and Jax. MaxDiffusion is compatible with Hugging Face Jax models. MaxDiffusion is more complex and was designed to run distributed across TPU Pods.\n\n# Development\n\nWhether you are forking MaxDiffusion for your own needs or intending to contribute back to the community, a full suite of tests can be found in `tests` and `src/maxdiffusion/tests`.\n\nTo run unit tests simply run:\n```bash\npython -m pytest\n```\n\n### Pre-commit Hooks\n\nWe use [pre-commit](https://pre-commit.com/) to automatically check and format code before each commit (using `pyink`, `ruff`, `pylint`, and general git hygiene checks).\n\n> **Important:** Make sure you are in your active virtual environment (e.g. `maxdiffusion_venv` or your active venv) before running `pre-commit install`, so that hooks run using the environment's installed dependencies.\n\n```bash\n# 1. Activate your virtual environment first\nsource <path-to-venv>/bin/activate\n\n# 2. Install pre-commit (if not already installed)\npip install pre-commit\n\n# 3. Install git pre-commit hooks\npre-commit install\n```\n\nOnce installed, pre-commit will automatically run on staged files whenever you run `git commit`.\n\nYou can also run all pre-commit checks manually across the entire repository at any time:\n\n```bash\npre-commit run --all-files\n```\n\n### Code Style\n\nThis project uses `pylint` and `pyink` to enforce code style. Before submitting a pull request, please ensure your code passes these checks by running:\n\n```bash\nbash code_style.sh\n```\n\nThis script will automatically format your code with `pyink` and help you identify any remaining style issues.\n\n\nThe full suite of -end-to end tests is in `tests` and `src/maxdiffusion/tests`. We run them with a nightly cadance.\n\n## Profiling\nTo learn how to enable ML Diagnostics and XProf profiling for your runs, please see our [ML Diagnostics Guide](docs/profiling.md).\n\n## Metrics\nTo learn how to enable ML Diagnostics metrics tracking for your runs, please see our [Metrics Guide](docs/metrics.md)."
+  }
 }

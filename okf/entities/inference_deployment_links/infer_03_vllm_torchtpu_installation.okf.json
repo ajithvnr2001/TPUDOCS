@@ -1,64 +1,462 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:infer_03_vllm_torchtpu_installation",
-  "@type": "DocumentationResource",
-  "name": "vLLM-TorchTPU installation",
-  "canonicalUrl": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/installation/",
-  "category": "Inference deployment links",
-  "categorySlug": "inference_deployment_links",
-  "description": "Install the PyTorch-native vLLM TPU plugin; distinct from the vllm-tpu JAX backend.",
-  "provenance": {
-    "sourceUrl": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/installation/",
-    "crawledAt": "2026-10-26T12:47:29.086272+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 28760
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "vLLM-TorchTPU installation",
-      "documentedIn",
-      "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/installation/"
-    ],
-    [
-      "vLLM-TorchTPU installation",
-      "belongsToCategory",
-      "inference_deployment_links"
-    ],
-    [
-      "vLLM-TorchTPU installation",
-      "supportsWorkflow",
-      "High Throughput LLM Inference Serving"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:infer_03_vllm_torchtpu_installation",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "infer_03_vllm_torchtpu_installation",
+    "name": "vLLM-TorchTPU installation",
+    "url": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/installation/",
+    "category": "inference_deployment_links",
+    "description": "Install the PyTorch-native vLLM TPU plugin; distinct from the vllm-tpu JAX backend.",
+    "char_count": 8963,
+    "word_count": 1012,
+    "section_count": 24,
+    "code_block_count": 10,
+    "table_count": 1,
+    "cli_command_count": 15,
+    "indexed_at": "2026-10-26T14:46:54.600492+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "schema:name",
+        "object": "vLLM-TorchTPU installation"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "schema:url",
+        "object": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/installation/"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "schema:category",
+        "object": "inference_deployment_links"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "schema:description",
+        "object": "Install the PyTorch-native vLLM TPU plugin; distinct from the vllm-tpu JAX backend."
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:vLLM-TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:Pallas"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "Installation"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "Interactive Installation Generator"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "Install vllm-torchtpu from PyPI (https://pypi.org/project/vllm-torchtpu/):"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "Prerequisites"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "Package Architecture (`vllm-torchtpu` vs. `vllm-torchtpu-core`)"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "Option 1: Install from PyPI ([`vllm-torchtpu`](https://pypi.org/project/vllm-torchtpu/))"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "Using `uv` (Recommended)"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "Route torch and torchvision to the PyTorch CPU index"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "Using `pip`"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "Option 2: Install from `vllm-torchtpu` Repository (`--group vllm`)"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "Using `uv` (Recommended)"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "1. Install uv (if not already installed)"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "2. Clone vllm-torchtpu and sync the environment (including the vllm group)"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "3. Activate the virtual environment"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "Using `pip`"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "Option 3: Install `vllm` and `vllm-torchtpu-core` Separately (Cross-Repo Development)"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "Using `uv` (Recommended)"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "1. Clone and install vLLM in editable mode (with common dependencies)"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "2. Clone and install vllm-torchtpu-core only (without --group vllm)"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "Using `pip`"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "1. Clone and install vLLM in editable mode (with common dependencies)"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "2. Clone and install vllm-torchtpu-core only (without --group vllm)"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "Optional Dependency Groups & Extras"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:hasSection",
+        "object": "Verify Installation"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "UV_TORCH_BACKEND"
+      },
+      {
+        "subject": "tpu_doc:infer_03_vllm_torchtpu_installation",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "VLLM_TARGET_DEVICE"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "vLLM-TorchTPU installation provides official guidance on Install the PyTorch-native vLLM TPU plugin; distinct from the vllm-tpu JAX backend.",
-      "confidence": 1.0,
-      "source": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/installation/",
-      "verified": true
-    },
-    {
-      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
-      "confidence": 1.0,
-      "source": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/installation/",
-      "verified": true
-    },
-    {
-      "assertion": "vLLM-TorchTPU is the out-of-tree PyTorch-native serving backend for vLLM on TPUs, distinct from the JAX-native vllm-tpu backend.",
-      "confidence": 1.0,
-      "source": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/installation/",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is vLLM-TorchTPU installation used for in Cloud TPU workflows?",
-      "answer": "Install the PyTorch-native vLLM TPU plugin; distinct from the vllm-tpu JAX backend.",
-      "category": "inference_deployment_links"
-    }
-  ],
-  "contentSummary": "Install the PyTorch-native vLLM TPU plugin; distinct from the vllm-tpu JAX backend."
+  },
+  "structured_content": {
+    "summary": "Install the PyTorch-native vLLM TPU plugin; distinct from the vllm-tpu JAX backend.",
+    "sections": [
+      {
+        "heading": "Installation",
+        "level": 1,
+        "content": "`vllm-torchtpu` is a platform plugin for [vLLM](https://docs.vllm.ai/) that enables PyTorch-native LLM and multimodal serving on Google Cloud TPUs via `torch_tpu` and custom JAX/Pallas kernels.\n* * *"
+      },
+      {
+        "heading": "Interactive Installation Generator",
+        "level": 2,
+        "content": "Choose your preferred installation method below:\n1. Installation Method\nPyPI Wheel (Recommended) Editable Source Install Docker Container\n2. Container Type\nRelease Image (:latest) Nightly Image (:nightly)\nInstall the pre-built [`vllm-torchtpu`](https://pypi.org/project/vllm-torchtpu/) package and its dependencies from PyPI into a Python 3.12 virtual environment.\n\n```"
+      },
+      {
+        "heading": "Install vllm-torchtpu from PyPI (https://pypi.org/project/vllm-torchtpu/):",
+        "level": 1,
+        "content": "uv venv --python 3.12 ~/uv_venv\nsource ~/uv_venv/bin/activate\nexport UV_TORCH_BACKEND=cpu\nuv pip install vllm-torchtpu\n```\n\n* * *"
+      },
+      {
+        "heading": "Prerequisites",
+        "level": 2,
+        "content": "* **Python 3.12** (`>=3.12,<3.13`). Pre-built `tpu-sync-torch` and `torch_tpu` wheels target CPython 3.12.\n  * We recommend using `uv` for installing dependencies as it is significantly faster than standard `pip`.\n\n\n* * *"
+      },
+      {
+        "heading": "Package Architecture (`vllm-torchtpu` vs. `vllm-torchtpu-core`)",
+        "level": 2,
+        "content": "* **`pip install vllm-torchtpu`**(Combined PyPI package): Installs`site-packages/vllm/` (provides `import vllm` and the `vllm` CLI, built with `VLLM_TARGET_DEVICE=\"empty\"`), and automatically pulls `vllm-torchtpu-core` as a dependency.\n  * **`pip install vllm-torchtpu-core`**(OOT Plugin package built from this repo): Installs`site-packages/vllm_torchtpu/` (`import vllm_torchtpu`), which is automatically discovered and loaded by `vllm` via the `vllm.platform_plugins` entry point\u2014you still run `vllm serve` or `import vllm` in user code. `vllm` is **not** a core dependency of `vllm-torchtpu-core`; for source installs, `--group vllm` builds `vllm` from source.\n\n```\n+----------------------------------------------------------------------------+\n|  PyPI Package: vllm-torchtpu  (Combined Wrapper Wheel)                     |\n|  * Installs: `site-packages/vllm/`  -->  `import vllm` / `vllm serve`      |\n|  * Upstream vLLM built with VLLM_TARGET_DEVICE=\"empty\"                     |\n|  * Discovers OOT plugin via `vllm.platform_plugins` entry point            |\n|                                                                            |\n|  +----------------------------------------------------------------------+  |\n|  |  PyPI Package: vllm-torchtpu-core  (OOT Plugin Wheel \u2014 This Repo)    |  |\n|  |  * Installs: `site-packages/vllm_torchtpu/`  (auto-loaded by vLLM)   |  |\n|  |  * Entry point: `torchtpu = \"vllm_torchtpu.platforms:...\"`           |  |\n|  |  * Requires TPU runtime dependencies:                                |  |\n|  |    torch (CPU), torchvision (CPU), torch-tpu, libtpu,                |  |\n|  |    tpu-sync-torch                                                    |  |\n|  +----------------------------------------------------------------------+  |\n+----------------------------------------------------------------------------+\n  ^\n  +-- Repo source install (`-e . --group vllm`):\n      Installs `vllm-torchtpu-core` from source + builds pinned upstream\n      `vllm` from Git via PEP 735 `[dependency-groups]`.\n\n```\n\nWhy the PyTorch CPU index (`https://download.pytorch.org/whl/cpu`) is required\nOn Linux `x86_64`, default PyPI (`pypi.org`) serves `torch` and `torchvision` wheels compiled with CUDA, which pulls gigabytes of unnecessary `nvidia-*` runtime dependencies onto TPU hosts. Setting `UV_TORCH_BACKEND=cpu` (or `pyproject.toml`'s `[tool.uv.sources]` for `uv`) or passing `--extra-index-url https://download.pytorch.org/whl/cpu` (for `pip`) routes `torch` and `torchvision` to the official PyTorch CPU wheel index while resolving all other dependencies (including `torch-tpu`, `libtpu`, and `tpu-sync-torch`) from public PyPI.\n* * *"
+      },
+      {
+        "heading": "Option 1: Install from PyPI ([`vllm-torchtpu`](https://pypi.org/project/vllm-torchtpu/))",
+        "level": 2,
+        "content": "For standard usage without modifying source code, install the pre-built [`vllm-torchtpu`](https://pypi.org/project/vllm-torchtpu/) package directly from PyPI (this automatically installs both `vllm` and [`vllm-torchtpu-core`](https://pypi.org/project/vllm-torchtpu-core/)):"
+      },
+      {
+        "heading": "Using `uv` (Recommended)",
+        "level": 3,
+        "content": "```\nuv venv --python 3.12 ~/uv_venv\nsource ~/uv_venv/bin/activate"
+      },
+      {
+        "heading": "Route torch and torchvision to the PyTorch CPU index",
+        "level": 1,
+        "content": "export UV_TORCH_BACKEND=cpu\n\nuv pip install vllm-torchtpu\n\n```"
+      },
+      {
+        "heading": "Using `pip`",
+        "level": 3,
+        "content": "```\npython3.12 -m venv ~/pip_venv --symlinks\nsource ~/pip_venv/bin/activate\npip install --upgrade pip\n\npip install \\\n  --extra-index-url https://download.pytorch.org/whl/cpu \\\n  vllm-torchtpu\n\n```\n\n* * *"
+      },
+      {
+        "heading": "Option 2: Install from `vllm-torchtpu` Repository (`--group vllm`)",
+        "level": 2,
+        "content": "To install `vllm-torchtpu-core` from a local clone of this repository and automatically build the pinned `vllm` commit from source via `--group vllm`:"
+      },
+      {
+        "heading": "Using `uv` (Recommended)",
+        "level": 3,
+        "content": "`pyproject.toml` configures the `pytorch-cpu` index (`https://download.pytorch.org/whl/cpu`) for `torch` and `torchvision`, and pins compatible `torch-tpu`, `jax`, `libtpu`, and `vllm` versions automatically.\n\n```"
+      },
+      {
+        "heading": "1. Install uv (if not already installed)",
+        "level": 1,
+        "content": "curl -LsSf https://astral.sh/uv/install.sh | sh\nsource $HOME/.local/bin/env"
+      },
+      {
+        "heading": "2. Clone vllm-torchtpu and sync the environment (including the vllm group)",
+        "level": 1,
+        "content": "git clone https://github.com/vllm-project/vllm-torchtpu.git\ncd vllm-torchtpu\nVLLM_TARGET_DEVICE=empty uv sync --group vllm"
+      },
+      {
+        "heading": "3. Activate the virtual environment",
+        "level": 1,
+        "content": "source .venv/bin/activate\n\n```\n\nTo install in editable mode with test and development dependencies:\n\n```\nuv venv --python 3.12 --seed\nsource .venv/bin/activate\nexport UV_TORCH_BACKEND=cpu\nVLLM_TARGET_DEVICE=empty uv pip install -e . --group vllm --group test\n\n```"
+      },
+      {
+        "heading": "Using `pip`",
+        "level": 3,
+        "content": "If using standard `pip` (`pip >= 25.1` for `--group` support), pass `--extra-index-url https://download.pytorch.org/whl/cpu` so `torch` and `torchvision` resolve to CPU wheels rather than default PyPI's CUDA wheels:\n\n```\npython3.12 -m venv .venv\nsource .venv/bin/activate\n\npip install --upgrade pip\n\ngit clone https://github.com/vllm-project/vllm-torchtpu.git\ncd vllm-torchtpu\n\nVLLM_TARGET_DEVICE=empty pip install -e . --group vllm \\\n  --extra-index-url https://download.pytorch.org/whl/cpu\n\n```\n\n* * *"
+      },
+      {
+        "heading": "Option 3: Install `vllm` and `vllm-torchtpu-core` Separately (Cross-Repo Development)",
+        "level": 2,
+        "content": "Follow these steps when developing or debugging both `vllm` and `vllm-torchtpu-core` in separate local checkouts (or installing `vllm-torchtpu-core` without `--group vllm`). Currently, `vllm==0.31.0` is supported."
+      },
+      {
+        "heading": "Using `uv` (Recommended)",
+        "level": 3,
+        "content": "```\nuv venv --python 3.12 ~/uv_venv\nsource ~/uv_venv/bin/activate\nexport UV_TORCH_BACKEND=cpu"
+      },
+      {
+        "heading": "1. Clone and install vLLM in editable mode (with common dependencies)",
+        "level": 1,
+        "content": "git clone --depth 1 --branch v0.31.0 https://github.com/vllm-project/vllm.git ~/vllm\nVLLM_TARGET_DEVICE=\"empty\" uv pip install -e ~/vllm"
+      },
+      {
+        "heading": "2. Clone and install vllm-torchtpu-core only (without --group vllm)",
+        "level": 1,
+        "content": "git clone https://github.com/vllm-project/vllm-torchtpu.git ~/vllm-torchtpu && cd ~/vllm-torchtpu\nuv pip install -e .\n\n```\n\n_(Or install`vllm-torchtpu-core` from PyPI instead of step 2: `uv pip install vllm-torchtpu-core`)_"
+      },
+      {
+        "heading": "Using `pip`",
+        "level": 3,
+        "content": "```\npython3.12 -m venv ~/pip_venv --symlinks\nsource ~/pip_venv/bin/activate\npip install --upgrade pip"
+      },
+      {
+        "heading": "1. Clone and install vLLM in editable mode (with common dependencies)",
+        "level": 1,
+        "content": "git clone --depth 1 --branch v0.31.0 https://github.com/vllm-project/vllm.git ~/vllm\nVLLM_TARGET_DEVICE=\"empty\" pip install \\\n  --extra-index-url https://download.pytorch.org/whl/cpu \\\n  -e ~/vllm"
+      },
+      {
+        "heading": "2. Clone and install vllm-torchtpu-core only (without --group vllm)",
+        "level": 1,
+        "content": "git clone https://github.com/vllm-project/vllm-torchtpu.git ~/vllm-torchtpu && cd ~/vllm-torchtpu\npip install \\\n  --extra-index-url https://download.pytorch.org/whl/cpu \\\n  -e .\n\n```\n\n_(Or install`vllm-torchtpu-core` from PyPI instead of step 2: `pip install --extra-index-url https://download.pytorch.org/whl/cpu vllm-torchtpu-core`)_\nWhy `VLLM_TARGET_DEVICE=empty`?\n`vllm-torchtpu-core` registers itself through vLLM's out-of-tree platform plugin entry points (`vllm.platform_plugins` and `vllm.general_plugins`). Installing `vllm` with `VLLM_TARGET_DEVICE=empty` skips CUDA C++ extension compilation while keeping all Python server and engine entrypoints editable.\n* * *"
+      },
+      {
+        "heading": "Optional Dependency Groups & Extras",
+        "level": 2,
+        "content": "| Flag  | Purpose  |  \n| --- | --- |  \n| `--group vllm`  | Installs pinned upstream `vllm` (`v0.31.0`) from source.  |  \n| `--group test`  | Installs `pytest`, `pytest-mock`, `pytest-cov`, `parameterized`, and `vllm_test_utils`.  |  \n| `--extra benchmarking`  | Installs `lm-eval`, `evalscope`, `datasets`, and `runai-model-streamer[gcs]`.  |  \n| `--extra omni`  | Installs `vllm-omni` for multimodal diffusion models (e.g., FLUX, Wan2.2).  |  \n* * *"
+      },
+      {
+        "heading": "Verify Installation",
+        "level": 2,
+        "content": "Verify that vLLM detects the `vllm-torchtpu` platform plugin:\n\n```\npython -c \"from vllm.platforms import current_platform; print(current_platform.device_name)\"\n\n```"
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "# Install vllm-torchtpu from PyPI (https://pypi.org/project/vllm-torchtpu/):\nuv venv --python 3.12 ~/uv_venv\nsource ~/uv_venv/bin/activate\nexport UV_TORCH_BACKEND=cpu\nuv pip install vllm-torchtpu"
+      },
+      {
+        "language": "text",
+        "code": "+----------------------------------------------------------------------------+\n|  PyPI Package: vllm-torchtpu  (Combined Wrapper Wheel)                     |\n|  * Installs: `site-packages/vllm/`  -->  `import vllm` / `vllm serve`      |\n|  * Upstream vLLM built with VLLM_TARGET_DEVICE=\"empty\"                     |\n|  * Discovers OOT plugin via `vllm.platform_plugins` entry point            |\n|                                                                            |\n|  +----------------------------------------------------------------------+  |\n|  |  PyPI Package: vllm-torchtpu-core  (OOT Plugin Wheel \u2014 This Repo)    |  |\n|  |  * Installs: `site-packages/vllm_torchtpu/`  (auto-loaded by vLLM)   |  |\n|  |  * Entry point: `torchtpu = \"vllm_torchtpu.platforms:...\"`           |  |\n|  |  * Requires TPU runtime dependencies:                                |  |\n|  |    torch (CPU), torchvision (CPU), torch-tpu, libtpu,                |  |\n|  |    tpu-sync-torch                                                    |  |\n|  +----------------------------------------------------------------------+  |\n+----------------------------------------------------------------------------+\n  ^\n  +-- Repo source install (`-e . --group vllm`):\n      Installs `vllm-torchtpu-core` from source + builds pinned upstream\n      `vllm` from Git via PEP 735 `[dependency-groups]`."
+      },
+      {
+        "language": "text",
+        "code": "uv venv --python 3.12 ~/uv_venv\nsource ~/uv_venv/bin/activate\n\n# Route torch and torchvision to the PyTorch CPU index\nexport UV_TORCH_BACKEND=cpu\n\nuv pip install vllm-torchtpu"
+      },
+      {
+        "language": "text",
+        "code": "python3.12 -m venv ~/pip_venv --symlinks\nsource ~/pip_venv/bin/activate\npip install --upgrade pip\n\npip install \\\n  --extra-index-url https://download.pytorch.org/whl/cpu \\\n  vllm-torchtpu"
+      },
+      {
+        "language": "text",
+        "code": "# 1. Install uv (if not already installed)\ncurl -LsSf https://astral.sh/uv/install.sh | sh\nsource $HOME/.local/bin/env\n\n# 2. Clone vllm-torchtpu and sync the environment (including the vllm group)\ngit clone https://github.com/vllm-project/vllm-torchtpu.git\ncd vllm-torchtpu\nVLLM_TARGET_DEVICE=empty uv sync --group vllm\n\n# 3. Activate the virtual environment\nsource .venv/bin/activate"
+      },
+      {
+        "language": "text",
+        "code": "uv venv --python 3.12 --seed\nsource .venv/bin/activate\nexport UV_TORCH_BACKEND=cpu\nVLLM_TARGET_DEVICE=empty uv pip install -e . --group vllm --group test"
+      },
+      {
+        "language": "text",
+        "code": "python3.12 -m venv .venv\nsource .venv/bin/activate\n\npip install --upgrade pip\n\ngit clone https://github.com/vllm-project/vllm-torchtpu.git\ncd vllm-torchtpu\n\nVLLM_TARGET_DEVICE=empty pip install -e . --group vllm \\\n  --extra-index-url https://download.pytorch.org/whl/cpu"
+      },
+      {
+        "language": "text",
+        "code": "uv venv --python 3.12 ~/uv_venv\nsource ~/uv_venv/bin/activate\nexport UV_TORCH_BACKEND=cpu\n\n# 1. Clone and install vLLM in editable mode (with common dependencies)\ngit clone --depth 1 --branch v0.31.0 https://github.com/vllm-project/vllm.git ~/vllm\nVLLM_TARGET_DEVICE=\"empty\" uv pip install -e ~/vllm\n\n# 2. Clone and install vllm-torchtpu-core only (without --group vllm)\ngit clone https://github.com/vllm-project/vllm-torchtpu.git ~/vllm-torchtpu && cd ~/vllm-torchtpu\nuv pip install -e ."
+      },
+      {
+        "language": "text",
+        "code": "python3.12 -m venv ~/pip_venv --symlinks\nsource ~/pip_venv/bin/activate\npip install --upgrade pip\n\n# 1. Clone and install vLLM in editable mode (with common dependencies)\ngit clone --depth 1 --branch v0.31.0 https://github.com/vllm-project/vllm.git ~/vllm\nVLLM_TARGET_DEVICE=\"empty\" pip install \\\n  --extra-index-url https://download.pytorch.org/whl/cpu \\\n  -e ~/vllm\n\n# 2. Clone and install vllm-torchtpu-core only (without --group vllm)\ngit clone https://github.com/vllm-project/vllm-torchtpu.git ~/vllm-torchtpu && cd ~/vllm-torchtpu\npip install \\\n  --extra-index-url https://download.pytorch.org/whl/cpu \\\n  -e ."
+      },
+      {
+        "language": "text",
+        "code": "python -c \"from vllm.platforms import current_platform; print(current_platform.device_name)\""
+      }
+    ],
+    "cli_commands": [
+      "uv venv --python 3.12 ~/uv_venv",
+      "export UV_TORCH_BACKEND=cpu",
+      "uv pip install vllm-torchtpu",
+      "python3.12 -m venv ~/pip_venv --symlinks",
+      "pip install --upgrade pip",
+      "pip install \\",
+      "vllm-torchtpu",
+      "curl -LsSf https://astral.sh/uv/install.sh | sh",
+      "git clone https://github.com/vllm-project/vllm-torchtpu.git",
+      "uv venv --python 3.12 --seed",
+      "python3.12 -m venv .venv",
+      "git clone --depth 1 --branch v0.31.0 https://github.com/vllm-project/vllm.git ~/vllm",
+      "git clone https://github.com/vllm-project/vllm-torchtpu.git ~/vllm-torchtpu && cd ~/vllm-torchtpu",
+      "uv pip install -e .",
+      "python -c \"from vllm.platforms import current_platform; print(current_platform.device_name)\""
+    ],
+    "environment_variables": [
+      "UV_TORCH_BACKEND",
+      "VLLM_TARGET_DEVICE"
+    ],
+    "tables": [
+      {
+        "headers": [
+          "Flag",
+          "Purpose"
+        ],
+        "rows": [
+          [
+            "`--group vllm`",
+            "Installs pinned upstream `vllm` (`v0.31.0`) from source."
+          ],
+          [
+            "`--group test`",
+            "Installs `pytest`, `pytest-mock`, `pytest-cov`, `parameterized`, and `vllm_test_utils`."
+          ],
+          [
+            "`--extra benchmarking`",
+            "Installs `lm-eval`, `evalscope`, `datasets`, and `runai-model-streamer[gcs]`."
+          ],
+          [
+            "`--extra omni`",
+            "Installs `vllm-omni` for multimodal diffusion models (e.g., FLUX, Wan2.2)."
+          ]
+        ]
+      }
+    ],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'vLLM-TorchTPU installation' (https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/installation/)?",
+        "answer": "Install the PyTorch-native vLLM TPU plugin; distinct from the vllm-tpu JAX backend."
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU installation' handle: Installation?",
+        "answer": "`vllm-torchtpu` is a platform plugin for [vLLM](https://docs.vllm.ai/) that enables PyTorch-native LLM and multimodal serving on Google Cloud TPUs via `torch_tpu` and custom JAX/Pallas kernels.\n* * *"
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU installation' handle: Interactive Installation Generator?",
+        "answer": "Choose your preferred installation method below:\n1. Installation Method\nPyPI Wheel (Recommended) Editable Source Install Docker Container\n2. Container Type\nRelease Image (:latest) Nightly Image (:nightly)\nInstall the pre-built [`vllm-torchtpu`](https://pypi.org/project/vllm-torchtpu/) package and its dependencies from PyPI into a Python 3.12 virtual environment.\n\n```"
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU installation' handle: Install vllm-torchtpu from PyPI (https://pypi.org/project/vllm-torchtpu/):?",
+        "answer": "uv venv --python 3.12 ~/uv_venv\nsource ~/uv_venv/bin/activate\nexport UV_TORCH_BACKEND=cpu\nuv pip install vllm-torchtpu\n```\n\n* * *"
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU installation' handle: Prerequisites?",
+        "answer": "* **Python 3.12** (`>=3.12,<3.13`). Pre-built `tpu-sync-torch` and `torch_tpu` wheels target CPython 3.12.\n  * We recommend using `uv` for installing dependencies as it is significantly faster than standard `pip`.\n\n\n* * *"
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU installation' handle: Package Architecture (`vllm-torchtpu` vs. `vllm-torchtpu-core`)?",
+        "answer": "* **`pip install vllm-torchtpu`**(Combined PyPI package): Installs`site-packages/vllm/` (provides `import vllm` and the `vllm` CLI, built with `VLLM_TARGET_DEVICE=\"empty\"`), and automatically pulls `vllm-torchtpu-core` as a dependency.\n  * **`pip install vllm-torchtpu-core`**(OOT Plugin package built from this repo): Installs`site-packages/vllm_torchtpu/` (`import vllm_torchtpu`), which is automatically discovered and loaded by `vllm` via the `vllm.platform_plugins` entry point\u2014you still run `vllm serve` or `import vllm` in user code. `vllm` is **not** a core dependency of `vllm-torchtpu-core`; for source installs, `--group vllm` builds `vllm` from source.\n\n```\n+----------------------------------------------------------------------------+\n|  PyPI Package: vllm-torchtpu  (Combined Wrapper Wheel)                     |\n|  * Installs: `site-packages/vllm/`  -->  `import vllm` / `vllm serve`      |\n|  * Upstream vLLM built with VLLM_TARGET_DEVICE=\"empty\"                     |\n|  * Discovers OOT plugin via `vllm.platform_plugins` entry point            |\n|                                                                            |\n|  +----------------------------------------------------"
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU installation' handle: Option 1: Install from PyPI ([`vllm-torchtpu`](https://pypi.org/project/vllm-torchtpu/))?",
+        "answer": "For standard usage without modifying source code, install the pre-built [`vllm-torchtpu`](https://pypi.org/project/vllm-torchtpu/) package directly from PyPI (this automatically installs both `vllm` and [`vllm-torchtpu-core`](https://pypi.org/project/vllm-torchtpu-core/)):"
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU installation' handle: Using `uv` (Recommended)?",
+        "answer": "```\nuv venv --python 3.12 ~/uv_venv\nsource ~/uv_venv/bin/activate"
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU installation' handle: Route torch and torchvision to the PyTorch CPU index?",
+        "answer": "export UV_TORCH_BACKEND=cpu\n\nuv pip install vllm-torchtpu\n\n```"
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU installation' handle: Using `pip`?",
+        "answer": "```\npython3.12 -m venv ~/pip_venv --symlinks\nsource ~/pip_venv/bin/activate\npip install --upgrade pip\n\npip install \\\n  --extra-index-url https://download.pytorch.org/whl/cpu \\\n  vllm-torchtpu\n\n```\n\n* * *"
+      }
+    ],
+    "full_markdown": "# Installation\n`vllm-torchtpu` is a platform plugin for [vLLM](https://docs.vllm.ai/) that enables PyTorch-native LLM and multimodal serving on Google Cloud TPUs via `torch_tpu` and custom JAX/Pallas kernels.\n* * *\n## Interactive Installation Generator\nChoose your preferred installation method below:\n1. Installation Method\nPyPI Wheel (Recommended) Editable Source Install Docker Container\n2. Container Type\nRelease Image (:latest) Nightly Image (:nightly)\nInstall the pre-built [`vllm-torchtpu`](https://pypi.org/project/vllm-torchtpu/) package and its dependencies from PyPI into a Python 3.12 virtual environment.\n\n```\n# Install vllm-torchtpu from PyPI (https://pypi.org/project/vllm-torchtpu/):\nuv venv --python 3.12 ~/uv_venv\nsource ~/uv_venv/bin/activate\nexport UV_TORCH_BACKEND=cpu\nuv pip install vllm-torchtpu\n```\n\n* * *\n## Prerequisites\n  * **Python 3.12** (`>=3.12,<3.13`). Pre-built `tpu-sync-torch` and `torch_tpu` wheels target CPython 3.12.\n  * We recommend using `uv` for installing dependencies as it is significantly faster than standard `pip`.\n\n\n* * *\n## Package Architecture (`vllm-torchtpu` vs. `vllm-torchtpu-core`)\n  * **`pip install vllm-torchtpu`**(Combined PyPI package): Installs`site-packages/vllm/` (provides `import vllm` and the `vllm` CLI, built with `VLLM_TARGET_DEVICE=\"empty\"`), and automatically pulls `vllm-torchtpu-core` as a dependency.\n  * **`pip install vllm-torchtpu-core`**(OOT Plugin package built from this repo): Installs`site-packages/vllm_torchtpu/` (`import vllm_torchtpu`), which is automatically discovered and loaded by `vllm` via the `vllm.platform_plugins` entry point\u2014you still run `vllm serve` or `import vllm` in user code. `vllm` is **not** a core dependency of `vllm-torchtpu-core`; for source installs, `--group vllm` builds `vllm` from source.\n\n```\n+----------------------------------------------------------------------------+\n|  PyPI Package: vllm-torchtpu  (Combined Wrapper Wheel)                     |\n|  * Installs: `site-packages/vllm/`  -->  `import vllm` / `vllm serve`      |\n|  * Upstream vLLM built with VLLM_TARGET_DEVICE=\"empty\"                     |\n|  * Discovers OOT plugin via `vllm.platform_plugins` entry point            |\n|                                                                            |\n|  +----------------------------------------------------------------------+  |\n|  |  PyPI Package: vllm-torchtpu-core  (OOT Plugin Wheel \u2014 This Repo)    |  |\n|  |  * Installs: `site-packages/vllm_torchtpu/`  (auto-loaded by vLLM)   |  |\n|  |  * Entry point: `torchtpu = \"vllm_torchtpu.platforms:...\"`           |  |\n|  |  * Requires TPU runtime dependencies:                                |  |\n|  |    torch (CPU), torchvision (CPU), torch-tpu, libtpu,                |  |\n|  |    tpu-sync-torch                                                    |  |\n|  +----------------------------------------------------------------------+  |\n+----------------------------------------------------------------------------+\n  ^\n  +-- Repo source install (`-e . --group vllm`):\n      Installs `vllm-torchtpu-core` from source + builds pinned upstream\n      `vllm` from Git via PEP 735 `[dependency-groups]`.\n\n```\n\nWhy the PyTorch CPU index (`https://download.pytorch.org/whl/cpu`) is required\nOn Linux `x86_64`, default PyPI (`pypi.org`) serves `torch` and `torchvision` wheels compiled with CUDA, which pulls gigabytes of unnecessary `nvidia-*` runtime dependencies onto TPU hosts. Setting `UV_TORCH_BACKEND=cpu` (or `pyproject.toml`'s `[tool.uv.sources]` for `uv`) or passing `--extra-index-url https://download.pytorch.org/whl/cpu` (for `pip`) routes `torch` and `torchvision` to the official PyTorch CPU wheel index while resolving all other dependencies (including `torch-tpu`, `libtpu`, and `tpu-sync-torch`) from public PyPI.\n* * *\n## Option 1: Install from PyPI ([`vllm-torchtpu`](https://pypi.org/project/vllm-torchtpu/))\nFor standard usage without modifying source code, install the pre-built [`vllm-torchtpu`](https://pypi.org/project/vllm-torchtpu/) package directly from PyPI (this automatically installs both `vllm` and [`vllm-torchtpu-core`](https://pypi.org/project/vllm-torchtpu-core/)):\n### Using `uv` (Recommended)\n\n```\nuv venv --python 3.12 ~/uv_venv\nsource ~/uv_venv/bin/activate\n\n# Route torch and torchvision to the PyTorch CPU index\nexport UV_TORCH_BACKEND=cpu\n\nuv pip install vllm-torchtpu\n\n```\n\n### Using `pip`\n\n```\npython3.12 -m venv ~/pip_venv --symlinks\nsource ~/pip_venv/bin/activate\npip install --upgrade pip\n\npip install \\\n  --extra-index-url https://download.pytorch.org/whl/cpu \\\n  vllm-torchtpu\n\n```\n\n* * *\n## Option 2: Install from `vllm-torchtpu` Repository (`--group vllm`)\nTo install `vllm-torchtpu-core` from a local clone of this repository and automatically build the pinned `vllm` commit from source via `--group vllm`:\n### Using `uv` (Recommended)\n`pyproject.toml` configures the `pytorch-cpu` index (`https://download.pytorch.org/whl/cpu`) for `torch` and `torchvision`, and pins compatible `torch-tpu`, `jax`, `libtpu`, and `vllm` versions automatically.\n\n```\n# 1. Install uv (if not already installed)\ncurl -LsSf https://astral.sh/uv/install.sh | sh\nsource $HOME/.local/bin/env\n\n# 2. Clone vllm-torchtpu and sync the environment (including the vllm group)\ngit clone https://github.com/vllm-project/vllm-torchtpu.git\ncd vllm-torchtpu\nVLLM_TARGET_DEVICE=empty uv sync --group vllm\n\n# 3. Activate the virtual environment\nsource .venv/bin/activate\n\n```\n\nTo install in editable mode with test and development dependencies:\n\n```\nuv venv --python 3.12 --seed\nsource .venv/bin/activate\nexport UV_TORCH_BACKEND=cpu\nVLLM_TARGET_DEVICE=empty uv pip install -e . --group vllm --group test\n\n```\n\n### Using `pip`\nIf using standard `pip` (`pip >= 25.1` for `--group` support), pass `--extra-index-url https://download.pytorch.org/whl/cpu` so `torch` and `torchvision` resolve to CPU wheels rather than default PyPI's CUDA wheels:\n\n```\npython3.12 -m venv .venv\nsource .venv/bin/activate\n\npip install --upgrade pip\n\ngit clone https://github.com/vllm-project/vllm-torchtpu.git\ncd vllm-torchtpu\n\nVLLM_TARGET_DEVICE=empty pip install -e . --group vllm \\\n  --extra-index-url https://download.pytorch.org/whl/cpu\n\n```\n\n* * *\n## Option 3: Install `vllm` and `vllm-torchtpu-core` Separately (Cross-Repo Development)\nFollow these steps when developing or debugging both `vllm` and `vllm-torchtpu-core` in separate local checkouts (or installing `vllm-torchtpu-core` without `--group vllm`). Currently, `vllm==0.31.0` is supported.\n### Using `uv` (Recommended)\n\n```\nuv venv --python 3.12 ~/uv_venv\nsource ~/uv_venv/bin/activate\nexport UV_TORCH_BACKEND=cpu\n\n# 1. Clone and install vLLM in editable mode (with common dependencies)\ngit clone --depth 1 --branch v0.31.0 https://github.com/vllm-project/vllm.git ~/vllm\nVLLM_TARGET_DEVICE=\"empty\" uv pip install -e ~/vllm\n\n# 2. Clone and install vllm-torchtpu-core only (without --group vllm)\ngit clone https://github.com/vllm-project/vllm-torchtpu.git ~/vllm-torchtpu && cd ~/vllm-torchtpu\nuv pip install -e .\n\n```\n\n_(Or install`vllm-torchtpu-core` from PyPI instead of step 2: `uv pip install vllm-torchtpu-core`)_\n### Using `pip`\n\n```\npython3.12 -m venv ~/pip_venv --symlinks\nsource ~/pip_venv/bin/activate\npip install --upgrade pip\n\n# 1. Clone and install vLLM in editable mode (with common dependencies)\ngit clone --depth 1 --branch v0.31.0 https://github.com/vllm-project/vllm.git ~/vllm\nVLLM_TARGET_DEVICE=\"empty\" pip install \\\n  --extra-index-url https://download.pytorch.org/whl/cpu \\\n  -e ~/vllm\n\n# 2. Clone and install vllm-torchtpu-core only (without --group vllm)\ngit clone https://github.com/vllm-project/vllm-torchtpu.git ~/vllm-torchtpu && cd ~/vllm-torchtpu\npip install \\\n  --extra-index-url https://download.pytorch.org/whl/cpu \\\n  -e .\n\n```\n\n_(Or install`vllm-torchtpu-core` from PyPI instead of step 2: `pip install --extra-index-url https://download.pytorch.org/whl/cpu vllm-torchtpu-core`)_\nWhy `VLLM_TARGET_DEVICE=empty`?\n`vllm-torchtpu-core` registers itself through vLLM's out-of-tree platform plugin entry points (`vllm.platform_plugins` and `vllm.general_plugins`). Installing `vllm` with `VLLM_TARGET_DEVICE=empty` skips CUDA C++ extension compilation while keeping all Python server and engine entrypoints editable.\n* * *\n## Optional Dependency Groups & Extras\n| Flag  | Purpose  |  \n| --- | --- |  \n| `--group vllm`  | Installs pinned upstream `vllm` (`v0.31.0`) from source.  |  \n| `--group test`  | Installs `pytest`, `pytest-mock`, `pytest-cov`, `parameterized`, and `vllm_test_utils`.  |  \n| `--extra benchmarking`  | Installs `lm-eval`, `evalscope`, `datasets`, and `runai-model-streamer[gcs]`.  |  \n| `--extra omni`  | Installs `vllm-omni` for multimodal diffusion models (e.g., FLUX, Wan2.2).  |  \n* * *\n## Verify Installation\nVerify that vLLM detects the `vllm-torchtpu` platform plugin:\n\n```\npython -c \"from vllm.platforms import current_platform; print(current_platform.device_name)\"\n\n```"
+  }
 }

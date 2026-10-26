@@ -1,57 +1,311 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:setup_05_create_instance_compute",
-  "@type": "DocumentationResource",
-  "name": "Create a Cloud TPU VM instance using Compute Engine",
-  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/create-instance-compute",
-  "category": "TPU setup docs",
-  "categorySlug": "tpu_setup_docs",
-  "description": "Detailed Compute Engine creation guide for on-demand, Spot, reservation-bound, and flex-start TPU VMs.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/create-instance-compute",
-    "crawledAt": "2026-10-26T12:45:01.543523+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 34760
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Create a Cloud TPU VM instance using Compute Engine",
-      "documentedIn",
-      "https://docs.cloud.google.com/tpu/docs/create-instance-compute"
-    ],
-    [
-      "Create a Cloud TPU VM instance using Compute Engine",
-      "belongsToCategory",
-      "tpu_setup_docs"
-    ],
-    [
-      "Create a Cloud TPU VM instance using Compute Engine",
-      "targetsPlatform",
-      "Google Cloud Platform"
-    ],
-    [
-      "Create a Cloud TPU VM instance using Compute Engine",
-      "managesHardware",
-      "Google Cloud TPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:setup_05_create_instance_compute",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "setup_05_create_instance_compute",
+    "name": "Create a Cloud TPU VM instance using Compute Engine",
+    "url": "https://docs.cloud.google.com/tpu/docs/create-instance-compute",
+    "category": "tpu_setup_docs",
+    "description": "Detailed Compute Engine creation guide for on-demand, Spot, reservation-bound, and flex-start TPU VMs.",
+    "char_count": 13354,
+    "word_count": 1268,
+    "section_count": 16,
+    "code_block_count": 10,
+    "table_count": 0,
+    "cli_command_count": 2,
+    "indexed_at": "2026-10-26T14:46:54.373348+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:setup_05_create_instance_compute",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:setup_05_create_instance_compute",
+        "predicate": "schema:name",
+        "object": "Create a Cloud TPU VM instance using Compute Engine"
+      },
+      {
+        "subject": "tpu_doc:setup_05_create_instance_compute",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/tpu/docs/create-instance-compute"
+      },
+      {
+        "subject": "tpu_doc:setup_05_create_instance_compute",
+        "predicate": "schema:category",
+        "object": "tpu_setup_docs"
+      },
+      {
+        "subject": "tpu_doc:setup_05_create_instance_compute",
+        "predicate": "schema:description",
+        "object": "Detailed Compute Engine creation guide for on-demand, Spot, reservation-bound, and flex-start TPU VMs."
+      },
+      {
+        "subject": "tpu_doc:setup_05_create_instance_compute",
+        "predicate": "okf:hasSection",
+        "object": "Create a Cloud TPU VM instance using Compute Engine"
+      },
+      {
+        "subject": "tpu_doc:setup_05_create_instance_compute",
+        "predicate": "okf:hasSection",
+        "object": "Prerequisites"
+      },
+      {
+        "subject": "tpu_doc:setup_05_create_instance_compute",
+        "predicate": "okf:hasSection",
+        "object": "Create a TPU VM instance"
+      },
+      {
+        "subject": "tpu_doc:setup_05_create_instance_compute",
+        "predicate": "okf:hasSection",
+        "object": "Create an on-demand TPU VM instance"
+      },
+      {
+        "subject": "tpu_doc:setup_05_create_instance_compute",
+        "predicate": "okf:hasSection",
+        "object": "gcloud"
+      },
+      {
+        "subject": "tpu_doc:setup_05_create_instance_compute",
+        "predicate": "okf:hasSection",
+        "object": "REST"
+      },
+      {
+        "subject": "tpu_doc:setup_05_create_instance_compute",
+        "predicate": "okf:hasSection",
+        "object": "Create a TPU Spot VM instance"
+      },
+      {
+        "subject": "tpu_doc:setup_05_create_instance_compute",
+        "predicate": "okf:hasSection",
+        "object": "gcloud"
+      },
+      {
+        "subject": "tpu_doc:setup_05_create_instance_compute",
+        "predicate": "okf:hasSection",
+        "object": "REST"
+      },
+      {
+        "subject": "tpu_doc:setup_05_create_instance_compute",
+        "predicate": "okf:hasSection",
+        "object": "Create a TPU VM instance using a reservation"
+      },
+      {
+        "subject": "tpu_doc:setup_05_create_instance_compute",
+        "predicate": "okf:hasSection",
+        "object": "gcloud"
+      },
+      {
+        "subject": "tpu_doc:setup_05_create_instance_compute",
+        "predicate": "okf:hasSection",
+        "object": "REST"
+      },
+      {
+        "subject": "tpu_doc:setup_05_create_instance_compute",
+        "predicate": "okf:hasSection",
+        "object": "Create a TPU Flex-start VM"
+      },
+      {
+        "subject": "tpu_doc:setup_05_create_instance_compute",
+        "predicate": "okf:hasSection",
+        "object": "gcloud"
+      },
+      {
+        "subject": "tpu_doc:setup_05_create_instance_compute",
+        "predicate": "okf:hasSection",
+        "object": "REST"
+      },
+      {
+        "subject": "tpu_doc:setup_05_create_instance_compute",
+        "predicate": "okf:hasSection",
+        "object": "What's next"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Create a Cloud TPU VM instance using Compute Engine provides official guidance on Detailed Compute Engine creation guide for on-demand, Spot, reservation-bound, and flex-start TPU VMs.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/create-instance-compute",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Create a Cloud TPU VM instance using Compute Engine used for in Cloud TPU workflows?",
-      "answer": "Detailed Compute Engine creation guide for on-demand, Spot, reservation-bound, and flex-start TPU VMs.",
-      "category": "tpu_setup_docs"
-    }
-  ],
-  "contentSummary": "Detailed Compute Engine creation guide for on-demand, Spot, reservation-bound, and flex-start TPU VMs."
+  },
+  "structured_content": {
+    "summary": "Detailed Compute Engine creation guide for on-demand, Spot, reservation-bound, and flex-start TPU VMs.",
+    "sections": [
+      {
+        "heading": "Create a Cloud TPU VM instance using Compute Engine",
+        "level": 1,
+        "content": "This document shows you how to create a single TPU VM with the Compute Engine `gcloud compute instances create` command. You can also create a TPU VM instance by specifying an [instance template](https://docs.cloud.google.com/compute/docs/instance-templates). For more information, see [Create a VM from an instance template](https://docs.cloud.google.com/compute/docs/instances/create-vm-from-instance-template)."
+      },
+      {
+        "heading": "Prerequisites",
+        "level": 2,
+        "content": "Complete the following prerequisites:\n  1. Create a Google Cloud project for your TPUs as described in [Set up a Google Cloud project for TPUs](https://docs.cloud.google.com/tpu/docs/setup-gcp-account).\n  2. Determine your TPU requirements as described in [Plan your Cloud TPU resources](https://docs.cloud.google.com/tpu/docs/plan-tpus)."
+      },
+      {
+        "heading": "Create a TPU VM instance",
+        "level": 2,
+        "content": "The parameters you use to create a TPU VM instance depend on the consumption option you are using: on-demand, Spot, reservation-bound, or flex-start. For more information, see [Plan your TPU resources](https://docs.cloud.google.com/tpu/docs/plan-tpus) ."
+      },
+      {
+        "heading": "Create an on-demand TPU VM instance",
+        "level": 3,
+        "content": "To create an _on-demand_ TPU VM instance, use the [`gcloud compute instances create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create):\n**Important:** When you use the `ct6e-standard-8t` machine type, you must set the threads per core to `1` by including the [`--threads-per-core=1` flag](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create#--threads-per-core) in the following command. For more information on threads per core, see [Set the number of threads per core](https://docs.cloud.google.com/compute/docs/instances/set-threads-per-core)."
+      },
+      {
+        "heading": "gcloud",
+        "level": 3,
+        "content": "```\ngcloud compute instances create TPU_NAME \\\n  --machine-type=MACHINE_TYPE \\\n  --image-family=IMAGE_FAMILY \\\n  --image-project=IMAGE_PROJECT \\\n  --zone=ZONE \\\n  --maintenance-policy=TERMINATE\n\n```"
+      },
+      {
+        "heading": "REST",
+        "level": 3,
+        "content": "```\ncurl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"name\": \"TPU_NAME\",\n    \"machineType\": \"zones/ZONE/machineTypes/MACHINE_TYPE\",\n    \"disks\": [\n      {\n        \"boot\": true,\n        \"initializeParams\": {\n          \"sourceImage\": \"projects/IMAGE_PROJECT/global/images/family/IMAGE_FAMILY\"\n        }\n      }\n    ],\n    \"scheduling\": {\n      \"onHostMaintenance\": \"TERMINATE\"\n    },\n    \"networkInterfaces\": [\n      {\n        \"network\": \"global/networks/default\"\n      }\n    ]\n  }' \\\n  \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances\"\n\n```\n\nReplace the following placeholders:\n  * PROJECT_ID: The ID of your Google Cloud project.\n  * TPU_NAME: A name for your TPU VM.\n  * MACHINE_TYPE: The [machine type](https://docs.cloud.google.com/compute/docs/tpus/tpu-machines#tpu_machine_types) for the TPU VM (for example `ct6e-standard-8t`).\n  * IMAGE_FAMILY: The [OS image family](https://docs.cloud.google.com/compute/docs/images#image_families) for the TPU VM. If you want to install a specific OS version, use the `--image` flag. For more information about OS images, see [OS images](https://docs.cloud.google.com/compute/docs/images).\n  * IMAGE_PROJECT: The project that contains the OS image. For TPU images, this is `ubuntu-os-accelerator-images`.\n  * ZONE: The [zone](https://docs.cloud.google.com/tpu/docs/regions-zones) for the TPU VM (for example `us-central1-b`)."
+      },
+      {
+        "heading": "Create a TPU Spot VM instance",
+        "level": 3,
+        "content": "To create a TPU Spot VM instance, use the [`gcloud compute instances create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create) with the `--provisioning-model=SPOT` flag:\n**Important:** When you use the `ct6e-standard-8t` machine type, you must set the threads per core to `1` by including the [`--threads-per-core=1` flag](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create#--threads-per-core) in the following command. For more information on threads per core, see [Set the number of threads per core](https://docs.cloud.google.com/compute/docs/instances/set-threads-per-core)."
+      },
+      {
+        "heading": "gcloud",
+        "level": 3,
+        "content": "```\ngcloud compute instances create TPU_NAME \\\n  --machine-type=MACHINE_TYPE \\\n  --image-family=IMAGE_FAMILY \\\n  --image-project=IMAGE_PROJECT \\\n  --zone=ZONE \\\n  --provisioning-model=SPOT \\\n  --instance-termination-action=DELETE \\\n  --maintenance-policy=TERMINATE\n\n```"
+      },
+      {
+        "heading": "REST",
+        "level": 3,
+        "content": "```\ncurl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"name\": \"TPU_NAME\",\n    \"machineType\": \"zones/ZONE/machineTypes/MACHINE_TYPE\",\n    \"disks\": [\n      {\n        \"boot\": true,\n        \"initializeParams\": {\n          \"sourceImage\": \"projects/IMAGE_PROJECT/global/images/family/IMAGE_FAMILY\"\n        }\n      }\n    ],\n    \"scheduling\": {\n      \"onHostMaintenance\": \"TERMINATE\",\n      \"provisioningModel\": \"SPOT\",\n      \"instanceTerminationAction\": \"DELETE\"\n    },\n    \"networkInterfaces\": [\n      {\n        \"network\": \"global/networks/default\"\n      }\n    ]\n  }' \\\n  \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances\"\n\n```\n\nReplace the following placeholders:\n  * PROJECT_ID: The ID of your Google Cloud project.\n  * TPU_NAME: A name for your TPU VM.\n  * MACHINE_TYPE: The [machine type](https://docs.cloud.google.com/compute/docs/tpus/tpu-machines#tpu_machine_types) for the TPU VM (for example `ct6e-standard-8t`).\n  * IMAGE_FAMILY: The [OS image family](https://docs.cloud.google.com/compute/docs/images#image_families) for the TPU VM. If you want to install a specific OS version, use the `--image` flag. For more information about OS images, see [OS images](https://docs.cloud.google.com/compute/docs/images).\n  * IMAGE_PROJECT: The project that contains the OS image. For TPU images, this is `ubuntu-os-accelerator-images`.\n  * ZONE: The [zone](https://docs.cloud.google.com/tpu/docs/regions-zones) for the TPU VM (for example `us-central1-b`)."
+      },
+      {
+        "heading": "Create a TPU VM instance using a reservation",
+        "level": 3,
+        "content": "To create a TPU VM instance using the _reservation-bound_ consumption option, use the [`gcloud compute instances create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create) with the `--reservation-affinity=specific` and `--reservation` flags:\n**Important:** When you use the `ct6e-standard-8t` machine type, you must set the threads per core to `1` by including the [`--threads-per-core=1` flag](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create#--threads-per-core) in the following command. For more information on threads per core, see [Set the number of threads per core](https://docs.cloud.google.com/compute/docs/instances/set-threads-per-core). **Note:** You can't use the [`--request-valid-for-duration`](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create#--request-valid-for-duration) flag with All Capacity mode reservations."
+      },
+      {
+        "heading": "gcloud",
+        "level": 3,
+        "content": "```\ngcloud compute instances create TPU_NAME \\\n  --machine-type=MACHINE_TYPE \\\n  --image-family=IMAGE_FAMILY \\\n  --image-project=IMAGE_PROJECT \\\n  --zone=ZONE \\\n  --provisioning-model=reservation-bound \\\n  --reservation-affinity=specific \\\n  --reservation=RESERVATION_NAME \\\n  --instance-termination-action=DELETE \\\n  --maintenance-policy=TERMINATE\n\n```"
+      },
+      {
+        "heading": "REST",
+        "level": 3,
+        "content": "```\ncurl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"name\": \"TPU_NAME\",\n    \"machineType\": \"zones/ZONE/machineTypes/MACHINE_TYPE\",\n    \"disks\": [\n      {\n        \"boot\": true,\n        \"initializeParams\": {\n          \"sourceImage\": \"projects/IMAGE_PROJECT/global/images/family/IMAGE_FAMILY\"\n        }\n      }\n    ],\n    \"scheduling\": {\n      \"onHostMaintenance\": \"TERMINATE\",\n      \"provisioningModel\": \"RESERVATION_BOUND\",\n      \"instanceTerminationAction\": \"DELETE\"\n    },\n    \"networkInterfaces\": [\n      {\n        \"network\": \"global/networks/default\"\n      }\n    ],\n    \"reservationAffinity\": {\n      \"consumeReservationType\": \"SPECIFIC_RESERVATION\",\n      \"key\": \"compute.googleapis.com/reservation-name\",\n      \"values\": [\n        \"RESERVATION_NAME\"\n      ]\n    }\n  }' \\\n  \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances\"\n\n```\n\nReplace the following placeholders:\n  * PROJECT_ID: The ID of your Google Cloud project.\n  * TPU_NAME: A name for your TPU VM.\n  * MACHINE_TYPE: The [machine type](https://docs.cloud.google.com/compute/docs/tpus/tpu-machines#tpu_machine_types) for the TPU VM (for example `ct6e-standard-8t`).\n  * IMAGE_FAMILY: The [OS image family](https://docs.cloud.google.com/compute/docs/images#image_families) for the TPU VM. If you want to install a specific OS version, use the `--image` flag. For more information about OS images, see [OS images](https://docs.cloud.google.com/compute/docs/images).\n  * IMAGE_PROJECT: The project that contains the OS image. For TPU images, this is `ubuntu-os-accelerator-images`.\n  * ZONE: The [zone](https://docs.cloud.google.com/tpu/docs/regions-zones) for the TPU VM (for example `us-central1-b`).\n  * RESERVATION_NAME: The name of the specific reservation to consume. For All Capacity mode reservations, you can target a block or sub-block by specifying the reservation URL as follows:\n    * Specify a block:\n\n```\nRESERVATION_NAME/reservationBlocks/RESERVATION_BLOCK_NAME\n\n```\n\n    * Specify a sub-block:\n\n```\nRESERVATION_NAME/reservationBlocks/RESERVATION_BLOCK_NAME/reservationSubBlocks/RESERVATION_SUBBLOCK_NAME\n\n```"
+      },
+      {
+        "heading": "Create a TPU Flex-start VM",
+        "level": 3,
+        "content": "To create a TPU _Flex-start_ VM instance, use the [`gcloud compute instances create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create) with the `--provisioning-model=FLEX_START` flag:\n**Important:** When you use the `ct6e-standard-8t` machine type, you must set the threads per core to `1` by including the [`--threads-per-core=1` flag](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create#--threads-per-core) in the following command. For more information on threads per core, see [Set the number of threads per core](https://docs.cloud.google.com/compute/docs/instances/set-threads-per-core)."
+      },
+      {
+        "heading": "gcloud",
+        "level": 3,
+        "content": "```\ngcloud compute instances create TPU_NAME \\\n  --machine-type=MACHINE_TYPE \\\n  --image-family=IMAGE_FAMILY \\\n  --image-project=IMAGE_PROJECT \\\n  --zone=ZONE \\\n  --provisioning-model=FLEX_START \\\n  --max-run-duration=MAX_RUN_DURATION \\\n  --request-valid-for-duration=VALID_DURATION \\\n  --instance-termination-action=DELETE \\\n  --maintenance-policy=TERMINATE\n\n```"
+      },
+      {
+        "heading": "REST",
+        "level": 3,
+        "content": "```\ncurl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"name\": \"TPU_NAME\",\n    \"machineType\": \"zones/ZONE/machineTypes/MACHINE_TYPE\",\n    \"disks\": [\n      {\n        \"boot\": true,\n        \"initializeParams\": {\n          \"sourceImage\": \"projects/IMAGE_PROJECT/global/images/family/IMAGE_FAMILY\"\n        }\n      }\n    ],\n    \"params\": {\n      \"requestValidForDuration\": {\n        \"seconds\": VALID_DURATION\n      }\n    },\n    \"scheduling\": {\n      \"onHostMaintenance\": \"TERMINATE\",\n      \"provisioningModel\": \"FLEX_START\",\n      \"instanceTerminationAction\": \"DELETE\",\n      \"maxRunDuration\": {\n        \"seconds\": MAX_RUN_DURATION\n      }\n    },\n    \"networkInterfaces\": [\n      {\n        \"network\": \"global/networks/default\"\n      }\n    ]\n  }' \\\n  \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances\"\n\n```\n\nReplace the following placeholders:\n  * PROJECT_ID: The ID of your Google Cloud project.\n  * TPU_NAME: A name for your TPU VM.\n  * MACHINE_TYPE: The [machine type](https://docs.cloud.google.com/compute/docs/tpus/tpu-machines#tpu_machine_types) for the TPU VM (for example `ct6e-standard-8t`).\n  * IMAGE_FAMILY: The [OS image family](https://docs.cloud.google.com/compute/docs/images#image_families) for the TPU VM. If you want to install a specific OS version, use the `--image` flag. For more information about OS images, see [OS images](https://docs.cloud.google.com/compute/docs/images).\n  * IMAGE_PROJECT: The project that contains the OS image. For TPU images, this is `ubuntu-os-accelerator-images`.\n  * ZONE: The [zone](https://docs.cloud.google.com/tpu/docs/regions-zones) for the TPU VM (for example `us-central1-b`).\n  * MAX_RUN_DURATION: The maximum run duration for the TPU VM (for example `6h`). For REST, specify this as a number of seconds (for example `21600` for 6 hours).\n  * VALID_DURATION: The maximum duration for which the request is valid. For REST, specify this as a number of seconds (for example `3600` for 1 hour).\n\n\nFor more information about creating Compute Engine instances, see [Create and start a Compute Engine instance](https://docs.cloud.google.com/compute/docs/instances/create-start-instance)."
+      },
+      {
+        "heading": "What's next",
+        "level": 2,
+        "content": "* Learn how to [Create a MIG with single-host Cloud TPU slices](https://docs.cloud.google.com/tpu/docs/create-single-host-mig).\n  * Learn how to [Create a MIG with a multi-host Cloud TPU slice](https://docs.cloud.google.com/tpu/docs/create-multi-host-mig).\n  * Learn how to [manage TPU VMs](https://docs.cloud.google.com/tpu/docs/managing-tpus-compute).\n  * Learn about [TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus)."
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "gcloud compute instances create TPU_NAME \\\n  --machine-type=MACHINE_TYPE \\\n  --image-family=IMAGE_FAMILY \\\n  --image-project=IMAGE_PROJECT \\\n  --zone=ZONE \\\n  --maintenance-policy=TERMINATE"
+      },
+      {
+        "language": "text",
+        "code": "curl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"name\": \"TPU_NAME\",\n    \"machineType\": \"zones/ZONE/machineTypes/MACHINE_TYPE\",\n    \"disks\": [\n      {\n        \"boot\": true,\n        \"initializeParams\": {\n          \"sourceImage\": \"projects/IMAGE_PROJECT/global/images/family/IMAGE_FAMILY\"\n        }\n      }\n    ],\n    \"scheduling\": {\n      \"onHostMaintenance\": \"TERMINATE\"\n    },\n    \"networkInterfaces\": [\n      {\n        \"network\": \"global/networks/default\"\n      }\n    ]\n  }' \\\n  \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances\""
+      },
+      {
+        "language": "text",
+        "code": "gcloud compute instances create TPU_NAME \\\n  --machine-type=MACHINE_TYPE \\\n  --image-family=IMAGE_FAMILY \\\n  --image-project=IMAGE_PROJECT \\\n  --zone=ZONE \\\n  --provisioning-model=SPOT \\\n  --instance-termination-action=DELETE \\\n  --maintenance-policy=TERMINATE"
+      },
+      {
+        "language": "text",
+        "code": "curl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"name\": \"TPU_NAME\",\n    \"machineType\": \"zones/ZONE/machineTypes/MACHINE_TYPE\",\n    \"disks\": [\n      {\n        \"boot\": true,\n        \"initializeParams\": {\n          \"sourceImage\": \"projects/IMAGE_PROJECT/global/images/family/IMAGE_FAMILY\"\n        }\n      }\n    ],\n    \"scheduling\": {\n      \"onHostMaintenance\": \"TERMINATE\",\n      \"provisioningModel\": \"SPOT\",\n      \"instanceTerminationAction\": \"DELETE\"\n    },\n    \"networkInterfaces\": [\n      {\n        \"network\": \"global/networks/default\"\n      }\n    ]\n  }' \\\n  \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances\""
+      },
+      {
+        "language": "text",
+        "code": "gcloud compute instances create TPU_NAME \\\n  --machine-type=MACHINE_TYPE \\\n  --image-family=IMAGE_FAMILY \\\n  --image-project=IMAGE_PROJECT \\\n  --zone=ZONE \\\n  --provisioning-model=reservation-bound \\\n  --reservation-affinity=specific \\\n  --reservation=RESERVATION_NAME \\\n  --instance-termination-action=DELETE \\\n  --maintenance-policy=TERMINATE"
+      },
+      {
+        "language": "text",
+        "code": "curl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"name\": \"TPU_NAME\",\n    \"machineType\": \"zones/ZONE/machineTypes/MACHINE_TYPE\",\n    \"disks\": [\n      {\n        \"boot\": true,\n        \"initializeParams\": {\n          \"sourceImage\": \"projects/IMAGE_PROJECT/global/images/family/IMAGE_FAMILY\"\n        }\n      }\n    ],\n    \"scheduling\": {\n      \"onHostMaintenance\": \"TERMINATE\",\n      \"provisioningModel\": \"RESERVATION_BOUND\",\n      \"instanceTerminationAction\": \"DELETE\"\n    },\n    \"networkInterfaces\": [\n      {\n        \"network\": \"global/networks/default\"\n      }\n    ],\n    \"reservationAffinity\": {\n      \"consumeReservationType\": \"SPECIFIC_RESERVATION\",\n      \"key\": \"compute.googleapis.com/reservation-name\",\n      \"values\": [\n        \"RESERVATION_NAME\"\n      ]\n    }\n  }' \\\n  \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances\""
+      },
+      {
+        "language": "text",
+        "code": "RESERVATION_NAME/reservationBlocks/RESERVATION_BLOCK_NAME"
+      },
+      {
+        "language": "text",
+        "code": "RESERVATION_NAME/reservationBlocks/RESERVATION_BLOCK_NAME/reservationSubBlocks/RESERVATION_SUBBLOCK_NAME"
+      },
+      {
+        "language": "text",
+        "code": "gcloud compute instances create TPU_NAME \\\n  --machine-type=MACHINE_TYPE \\\n  --image-family=IMAGE_FAMILY \\\n  --image-project=IMAGE_PROJECT \\\n  --zone=ZONE \\\n  --provisioning-model=FLEX_START \\\n  --max-run-duration=MAX_RUN_DURATION \\\n  --request-valid-for-duration=VALID_DURATION \\\n  --instance-termination-action=DELETE \\\n  --maintenance-policy=TERMINATE"
+      },
+      {
+        "language": "text",
+        "code": "curl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"name\": \"TPU_NAME\",\n    \"machineType\": \"zones/ZONE/machineTypes/MACHINE_TYPE\",\n    \"disks\": [\n      {\n        \"boot\": true,\n        \"initializeParams\": {\n          \"sourceImage\": \"projects/IMAGE_PROJECT/global/images/family/IMAGE_FAMILY\"\n        }\n      }\n    ],\n    \"params\": {\n      \"requestValidForDuration\": {\n        \"seconds\": VALID_DURATION\n      }\n    },\n    \"scheduling\": {\n      \"onHostMaintenance\": \"TERMINATE\",\n      \"provisioningModel\": \"FLEX_START\",\n      \"instanceTerminationAction\": \"DELETE\",\n      \"maxRunDuration\": {\n        \"seconds\": MAX_RUN_DURATION\n      }\n    },\n    \"networkInterfaces\": [\n      {\n        \"network\": \"global/networks/default\"\n      }\n    ]\n  }' \\\n  \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances\""
+      }
+    ],
+    "cli_commands": [
+      "gcloud compute instances create TPU_NAME \\",
+      "curl -X POST \\"
+    ],
+    "environment_variables": [],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Create a Cloud TPU VM instance using Compute Engine' (https://docs.cloud.google.com/tpu/docs/create-instance-compute)?",
+        "answer": "Detailed Compute Engine creation guide for on-demand, Spot, reservation-bound, and flex-start TPU VMs."
+      },
+      {
+        "question": "How does 'Create a Cloud TPU VM instance using Compute Engine' handle: Create a Cloud TPU VM instance using Compute Engine?",
+        "answer": "This document shows you how to create a single TPU VM with the Compute Engine `gcloud compute instances create` command. You can also create a TPU VM instance by specifying an [instance template](https://docs.cloud.google.com/compute/docs/instance-templates). For more information, see [Create a VM from an instance template](https://docs.cloud.google.com/compute/docs/instances/create-vm-from-instance-template)."
+      },
+      {
+        "question": "How does 'Create a Cloud TPU VM instance using Compute Engine' handle: Prerequisites?",
+        "answer": "Complete the following prerequisites:\n  1. Create a Google Cloud project for your TPUs as described in [Set up a Google Cloud project for TPUs](https://docs.cloud.google.com/tpu/docs/setup-gcp-account).\n  2. Determine your TPU requirements as described in [Plan your Cloud TPU resources](https://docs.cloud.google.com/tpu/docs/plan-tpus)."
+      },
+      {
+        "question": "How does 'Create a Cloud TPU VM instance using Compute Engine' handle: Create a TPU VM instance?",
+        "answer": "The parameters you use to create a TPU VM instance depend on the consumption option you are using: on-demand, Spot, reservation-bound, or flex-start. For more information, see [Plan your TPU resources](https://docs.cloud.google.com/tpu/docs/plan-tpus) ."
+      },
+      {
+        "question": "How does 'Create a Cloud TPU VM instance using Compute Engine' handle: Create an on-demand TPU VM instance?",
+        "answer": "To create an _on-demand_ TPU VM instance, use the [`gcloud compute instances create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create):\n**Important:** When you use the `ct6e-standard-8t` machine type, you must set the threads per core to `1` by including the [`--threads-per-core=1` flag](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create#--threads-per-core) in the following command. For more information on threads per core, see [Set the number of threads per core](https://docs.cloud.google.com/compute/docs/instances/set-threads-per-core)."
+      },
+      {
+        "question": "How does 'Create a Cloud TPU VM instance using Compute Engine' handle: gcloud?",
+        "answer": "```\ngcloud compute instances create TPU_NAME \\\n  --machine-type=MACHINE_TYPE \\\n  --image-family=IMAGE_FAMILY \\\n  --image-project=IMAGE_PROJECT \\\n  --zone=ZONE \\\n  --maintenance-policy=TERMINATE\n\n```"
+      },
+      {
+        "question": "How does 'Create a Cloud TPU VM instance using Compute Engine' handle: REST?",
+        "answer": "```\ncurl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"name\": \"TPU_NAME\",\n    \"machineType\": \"zones/ZONE/machineTypes/MACHINE_TYPE\",\n    \"disks\": [\n      {\n        \"boot\": true,\n        \"initializeParams\": {\n          \"sourceImage\": \"projects/IMAGE_PROJECT/global/images/family/IMAGE_FAMILY\"\n        }\n      }\n    ],\n    \"scheduling\": {\n      \"onHostMaintenance\": \"TERMINATE\"\n    },\n    \"networkInterfaces\": [\n      {\n        \"network\": \"global/networks/default\"\n      }\n    ]\n  }' \\\n  \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances\"\n\n```\n\nReplace the following placeholders:\n  * PROJECT_ID: The ID of your Google Cloud project.\n  * TPU_NAME: A name for your TPU VM.\n  * MACHINE_TYPE: The [machine type](https://docs.cloud.google.com/compute/docs/tpus/tpu-machines#tpu_machine_types) for the TPU VM (for example `ct6e-standard-8t`).\n  * IMAGE_FAMILY: The [OS image family](https://docs.cloud.google.com/compute/docs/images#image_families) for the TPU VM. If you want to install a specific OS version, use the `--image` flag. For more information about OS images, see [OS images](ht"
+      },
+      {
+        "question": "How does 'Create a Cloud TPU VM instance using Compute Engine' handle: Create a TPU Spot VM instance?",
+        "answer": "To create a TPU Spot VM instance, use the [`gcloud compute instances create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create) with the `--provisioning-model=SPOT` flag:\n**Important:** When you use the `ct6e-standard-8t` machine type, you must set the threads per core to `1` by including the [`--threads-per-core=1` flag](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create#--threads-per-core) in the following command. For more information on threads per core, see [Set the number of threads per core](https://docs.cloud.google.com/compute/docs/instances/set-threads-per-core)."
+      },
+      {
+        "question": "How does 'Create a Cloud TPU VM instance using Compute Engine' handle: gcloud?",
+        "answer": "```\ngcloud compute instances create TPU_NAME \\\n  --machine-type=MACHINE_TYPE \\\n  --image-family=IMAGE_FAMILY \\\n  --image-project=IMAGE_PROJECT \\\n  --zone=ZONE \\\n  --provisioning-model=SPOT \\\n  --instance-termination-action=DELETE \\\n  --maintenance-policy=TERMINATE\n\n```"
+      },
+      {
+        "question": "How does 'Create a Cloud TPU VM instance using Compute Engine' handle: REST?",
+        "answer": "```\ncurl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"name\": \"TPU_NAME\",\n    \"machineType\": \"zones/ZONE/machineTypes/MACHINE_TYPE\",\n    \"disks\": [\n      {\n        \"boot\": true,\n        \"initializeParams\": {\n          \"sourceImage\": \"projects/IMAGE_PROJECT/global/images/family/IMAGE_FAMILY\"\n        }\n      }\n    ],\n    \"scheduling\": {\n      \"onHostMaintenance\": \"TERMINATE\",\n      \"provisioningModel\": \"SPOT\",\n      \"instanceTerminationAction\": \"DELETE\"\n    },\n    \"networkInterfaces\": [\n      {\n        \"network\": \"global/networks/default\"\n      }\n    ]\n  }' \\\n  \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances\"\n\n```\n\nReplace the following placeholders:\n  * PROJECT_ID: The ID of your Google Cloud project.\n  * TPU_NAME: A name for your TPU VM.\n  * MACHINE_TYPE: The [machine type](https://docs.cloud.google.com/compute/docs/tpus/tpu-machines#tpu_machine_types) for the TPU VM (for example `ct6e-standard-8t`).\n  * IMAGE_FAMILY: The [OS image family](https://docs.cloud.google.com/compute/docs/images#image_families) for the TPU VM. If you want to install a specific OS version, "
+      }
+    ],
+    "full_markdown": "# Create a Cloud TPU VM instance using Compute Engine\nThis document shows you how to create a single TPU VM with the Compute Engine `gcloud compute instances create` command. You can also create a TPU VM instance by specifying an [instance template](https://docs.cloud.google.com/compute/docs/instance-templates). For more information, see [Create a VM from an instance template](https://docs.cloud.google.com/compute/docs/instances/create-vm-from-instance-template).\n## Prerequisites\nComplete the following prerequisites:\n  1. Create a Google Cloud project for your TPUs as described in [Set up a Google Cloud project for TPUs](https://docs.cloud.google.com/tpu/docs/setup-gcp-account).\n  2. Determine your TPU requirements as described in [Plan your Cloud TPU resources](https://docs.cloud.google.com/tpu/docs/plan-tpus).\n\n\n## Create a TPU VM instance\nThe parameters you use to create a TPU VM instance depend on the consumption option you are using: on-demand, Spot, reservation-bound, or flex-start. For more information, see [Plan your TPU resources](https://docs.cloud.google.com/tpu/docs/plan-tpus) .\n### Create an on-demand TPU VM instance\nTo create an _on-demand_ TPU VM instance, use the [`gcloud compute instances create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create):\n**Important:** When you use the `ct6e-standard-8t` machine type, you must set the threads per core to `1` by including the [`--threads-per-core=1` flag](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create#--threads-per-core) in the following command. For more information on threads per core, see [Set the number of threads per core](https://docs.cloud.google.com/compute/docs/instances/set-threads-per-core).\n###  gcloud \n\n```\ngcloud compute instances create TPU_NAME \\\n  --machine-type=MACHINE_TYPE \\\n  --image-family=IMAGE_FAMILY \\\n  --image-project=IMAGE_PROJECT \\\n  --zone=ZONE \\\n  --maintenance-policy=TERMINATE\n\n```\n\n###  REST \n\n```\ncurl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"name\": \"TPU_NAME\",\n    \"machineType\": \"zones/ZONE/machineTypes/MACHINE_TYPE\",\n    \"disks\": [\n      {\n        \"boot\": true,\n        \"initializeParams\": {\n          \"sourceImage\": \"projects/IMAGE_PROJECT/global/images/family/IMAGE_FAMILY\"\n        }\n      }\n    ],\n    \"scheduling\": {\n      \"onHostMaintenance\": \"TERMINATE\"\n    },\n    \"networkInterfaces\": [\n      {\n        \"network\": \"global/networks/default\"\n      }\n    ]\n  }' \\\n  \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances\"\n\n```\n\nReplace the following placeholders:\n  * PROJECT_ID: The ID of your Google Cloud project.\n  * TPU_NAME: A name for your TPU VM.\n  * MACHINE_TYPE: The [machine type](https://docs.cloud.google.com/compute/docs/tpus/tpu-machines#tpu_machine_types) for the TPU VM (for example `ct6e-standard-8t`).\n  * IMAGE_FAMILY: The [OS image family](https://docs.cloud.google.com/compute/docs/images#image_families) for the TPU VM. If you want to install a specific OS version, use the `--image` flag. For more information about OS images, see [OS images](https://docs.cloud.google.com/compute/docs/images).\n  * IMAGE_PROJECT: The project that contains the OS image. For TPU images, this is `ubuntu-os-accelerator-images`.\n  * ZONE: The [zone](https://docs.cloud.google.com/tpu/docs/regions-zones) for the TPU VM (for example `us-central1-b`).\n\n\n### Create a TPU Spot VM instance\nTo create a TPU Spot VM instance, use the [`gcloud compute instances create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create) with the `--provisioning-model=SPOT` flag:\n**Important:** When you use the `ct6e-standard-8t` machine type, you must set the threads per core to `1` by including the [`--threads-per-core=1` flag](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create#--threads-per-core) in the following command. For more information on threads per core, see [Set the number of threads per core](https://docs.cloud.google.com/compute/docs/instances/set-threads-per-core).\n###  gcloud \n\n```\ngcloud compute instances create TPU_NAME \\\n  --machine-type=MACHINE_TYPE \\\n  --image-family=IMAGE_FAMILY \\\n  --image-project=IMAGE_PROJECT \\\n  --zone=ZONE \\\n  --provisioning-model=SPOT \\\n  --instance-termination-action=DELETE \\\n  --maintenance-policy=TERMINATE\n\n```\n\n###  REST \n\n```\ncurl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"name\": \"TPU_NAME\",\n    \"machineType\": \"zones/ZONE/machineTypes/MACHINE_TYPE\",\n    \"disks\": [\n      {\n        \"boot\": true,\n        \"initializeParams\": {\n          \"sourceImage\": \"projects/IMAGE_PROJECT/global/images/family/IMAGE_FAMILY\"\n        }\n      }\n    ],\n    \"scheduling\": {\n      \"onHostMaintenance\": \"TERMINATE\",\n      \"provisioningModel\": \"SPOT\",\n      \"instanceTerminationAction\": \"DELETE\"\n    },\n    \"networkInterfaces\": [\n      {\n        \"network\": \"global/networks/default\"\n      }\n    ]\n  }' \\\n  \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances\"\n\n```\n\nReplace the following placeholders:\n  * PROJECT_ID: The ID of your Google Cloud project.\n  * TPU_NAME: A name for your TPU VM.\n  * MACHINE_TYPE: The [machine type](https://docs.cloud.google.com/compute/docs/tpus/tpu-machines#tpu_machine_types) for the TPU VM (for example `ct6e-standard-8t`).\n  * IMAGE_FAMILY: The [OS image family](https://docs.cloud.google.com/compute/docs/images#image_families) for the TPU VM. If you want to install a specific OS version, use the `--image` flag. For more information about OS images, see [OS images](https://docs.cloud.google.com/compute/docs/images).\n  * IMAGE_PROJECT: The project that contains the OS image. For TPU images, this is `ubuntu-os-accelerator-images`.\n  * ZONE: The [zone](https://docs.cloud.google.com/tpu/docs/regions-zones) for the TPU VM (for example `us-central1-b`).\n\n\n### Create a TPU VM instance using a reservation\nTo create a TPU VM instance using the _reservation-bound_ consumption option, use the [`gcloud compute instances create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create) with the `--reservation-affinity=specific` and `--reservation` flags:\n**Important:** When you use the `ct6e-standard-8t` machine type, you must set the threads per core to `1` by including the [`--threads-per-core=1` flag](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create#--threads-per-core) in the following command. For more information on threads per core, see [Set the number of threads per core](https://docs.cloud.google.com/compute/docs/instances/set-threads-per-core). **Note:** You can't use the [`--request-valid-for-duration`](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create#--request-valid-for-duration) flag with All Capacity mode reservations.\n###  gcloud \n\n```\ngcloud compute instances create TPU_NAME \\\n  --machine-type=MACHINE_TYPE \\\n  --image-family=IMAGE_FAMILY \\\n  --image-project=IMAGE_PROJECT \\\n  --zone=ZONE \\\n  --provisioning-model=reservation-bound \\\n  --reservation-affinity=specific \\\n  --reservation=RESERVATION_NAME \\\n  --instance-termination-action=DELETE \\\n  --maintenance-policy=TERMINATE\n\n```\n\n###  REST \n\n```\ncurl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"name\": \"TPU_NAME\",\n    \"machineType\": \"zones/ZONE/machineTypes/MACHINE_TYPE\",\n    \"disks\": [\n      {\n        \"boot\": true,\n        \"initializeParams\": {\n          \"sourceImage\": \"projects/IMAGE_PROJECT/global/images/family/IMAGE_FAMILY\"\n        }\n      }\n    ],\n    \"scheduling\": {\n      \"onHostMaintenance\": \"TERMINATE\",\n      \"provisioningModel\": \"RESERVATION_BOUND\",\n      \"instanceTerminationAction\": \"DELETE\"\n    },\n    \"networkInterfaces\": [\n      {\n        \"network\": \"global/networks/default\"\n      }\n    ],\n    \"reservationAffinity\": {\n      \"consumeReservationType\": \"SPECIFIC_RESERVATION\",\n      \"key\": \"compute.googleapis.com/reservation-name\",\n      \"values\": [\n        \"RESERVATION_NAME\"\n      ]\n    }\n  }' \\\n  \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances\"\n\n```\n\nReplace the following placeholders:\n  * PROJECT_ID: The ID of your Google Cloud project.\n  * TPU_NAME: A name for your TPU VM.\n  * MACHINE_TYPE: The [machine type](https://docs.cloud.google.com/compute/docs/tpus/tpu-machines#tpu_machine_types) for the TPU VM (for example `ct6e-standard-8t`).\n  * IMAGE_FAMILY: The [OS image family](https://docs.cloud.google.com/compute/docs/images#image_families) for the TPU VM. If you want to install a specific OS version, use the `--image` flag. For more information about OS images, see [OS images](https://docs.cloud.google.com/compute/docs/images).\n  * IMAGE_PROJECT: The project that contains the OS image. For TPU images, this is `ubuntu-os-accelerator-images`.\n  * ZONE: The [zone](https://docs.cloud.google.com/tpu/docs/regions-zones) for the TPU VM (for example `us-central1-b`).\n  * RESERVATION_NAME: The name of the specific reservation to consume. For All Capacity mode reservations, you can target a block or sub-block by specifying the reservation URL as follows:\n    * Specify a block:\n\n```\nRESERVATION_NAME/reservationBlocks/RESERVATION_BLOCK_NAME\n\n```\n\n    * Specify a sub-block:\n\n```\nRESERVATION_NAME/reservationBlocks/RESERVATION_BLOCK_NAME/reservationSubBlocks/RESERVATION_SUBBLOCK_NAME\n\n```\n\n### Create a TPU Flex-start VM\nTo create a TPU _Flex-start_ VM instance, use the [`gcloud compute instances create` command](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create) with the `--provisioning-model=FLEX_START` flag:\n**Important:** When you use the `ct6e-standard-8t` machine type, you must set the threads per core to `1` by including the [`--threads-per-core=1` flag](https://docs.cloud.google.com/sdk/gcloud/reference/compute/instances/create#--threads-per-core) in the following command. For more information on threads per core, see [Set the number of threads per core](https://docs.cloud.google.com/compute/docs/instances/set-threads-per-core).\n###  gcloud \n\n```\ngcloud compute instances create TPU_NAME \\\n  --machine-type=MACHINE_TYPE \\\n  --image-family=IMAGE_FAMILY \\\n  --image-project=IMAGE_PROJECT \\\n  --zone=ZONE \\\n  --provisioning-model=FLEX_START \\\n  --max-run-duration=MAX_RUN_DURATION \\\n  --request-valid-for-duration=VALID_DURATION \\\n  --instance-termination-action=DELETE \\\n  --maintenance-policy=TERMINATE\n\n```\n\n###  REST \n\n```\ncurl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"name\": \"TPU_NAME\",\n    \"machineType\": \"zones/ZONE/machineTypes/MACHINE_TYPE\",\n    \"disks\": [\n      {\n        \"boot\": true,\n        \"initializeParams\": {\n          \"sourceImage\": \"projects/IMAGE_PROJECT/global/images/family/IMAGE_FAMILY\"\n        }\n      }\n    ],\n    \"params\": {\n      \"requestValidForDuration\": {\n        \"seconds\": VALID_DURATION\n      }\n    },\n    \"scheduling\": {\n      \"onHostMaintenance\": \"TERMINATE\",\n      \"provisioningModel\": \"FLEX_START\",\n      \"instanceTerminationAction\": \"DELETE\",\n      \"maxRunDuration\": {\n        \"seconds\": MAX_RUN_DURATION\n      }\n    },\n    \"networkInterfaces\": [\n      {\n        \"network\": \"global/networks/default\"\n      }\n    ]\n  }' \\\n  \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances\"\n\n```\n\nReplace the following placeholders:\n  * PROJECT_ID: The ID of your Google Cloud project.\n  * TPU_NAME: A name for your TPU VM.\n  * MACHINE_TYPE: The [machine type](https://docs.cloud.google.com/compute/docs/tpus/tpu-machines#tpu_machine_types) for the TPU VM (for example `ct6e-standard-8t`).\n  * IMAGE_FAMILY: The [OS image family](https://docs.cloud.google.com/compute/docs/images#image_families) for the TPU VM. If you want to install a specific OS version, use the `--image` flag. For more information about OS images, see [OS images](https://docs.cloud.google.com/compute/docs/images).\n  * IMAGE_PROJECT: The project that contains the OS image. For TPU images, this is `ubuntu-os-accelerator-images`.\n  * ZONE: The [zone](https://docs.cloud.google.com/tpu/docs/regions-zones) for the TPU VM (for example `us-central1-b`).\n  * MAX_RUN_DURATION: The maximum run duration for the TPU VM (for example `6h`). For REST, specify this as a number of seconds (for example `21600` for 6 hours).\n  * VALID_DURATION: The maximum duration for which the request is valid. For REST, specify this as a number of seconds (for example `3600` for 1 hour).\n\n\nFor more information about creating Compute Engine instances, see [Create and start a Compute Engine instance](https://docs.cloud.google.com/compute/docs/instances/create-start-instance).\n## What's next\n  * Learn how to [Create a MIG with single-host Cloud TPU slices](https://docs.cloud.google.com/tpu/docs/create-single-host-mig).\n  * Learn how to [Create a MIG with a multi-host Cloud TPU slice](https://docs.cloud.google.com/tpu/docs/create-multi-host-mig).\n  * Learn how to [manage TPU VMs](https://docs.cloud.google.com/tpu/docs/managing-tpus-compute).\n  * Learn about [TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus)."
+  }
 }

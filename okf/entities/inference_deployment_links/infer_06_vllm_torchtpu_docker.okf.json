@@ -1,64 +1,299 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:infer_06_vllm_torchtpu_docker",
-  "@type": "DocumentationResource",
-  "name": "vLLM-TorchTPU Docker guide",
-  "canonicalUrl": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/docker/",
-  "category": "Inference deployment links",
-  "categorySlug": "inference_deployment_links",
-  "description": "Container images and build targets for TPU inference; distinguish runtime images from CI-only images.",
-  "provenance": {
-    "sourceUrl": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/docker/",
-    "crawledAt": "2026-10-26T12:47:33.598610+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 15566
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "vLLM-TorchTPU Docker guide",
-      "documentedIn",
-      "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/docker/"
-    ],
-    [
-      "vLLM-TorchTPU Docker guide",
-      "belongsToCategory",
-      "inference_deployment_links"
-    ],
-    [
-      "vLLM-TorchTPU Docker guide",
-      "supportsWorkflow",
-      "High Throughput LLM Inference Serving"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:infer_06_vllm_torchtpu_docker",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "infer_06_vllm_torchtpu_docker",
+    "name": "vLLM-TorchTPU Docker guide",
+    "url": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/docker/",
+    "category": "inference_deployment_links",
+    "description": "Container images and build targets for TPU inference; distinguish runtime images from CI-only images.",
+    "char_count": 4808,
+    "word_count": 618,
+    "section_count": 11,
+    "code_block_count": 9,
+    "table_count": 1,
+    "cli_command_count": 5,
+    "indexed_at": "2026-10-26T14:46:54.621326+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:infer_06_vllm_torchtpu_docker",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:infer_06_vllm_torchtpu_docker",
+        "predicate": "schema:name",
+        "object": "vLLM-TorchTPU Docker guide"
+      },
+      {
+        "subject": "tpu_doc:infer_06_vllm_torchtpu_docker",
+        "predicate": "schema:url",
+        "object": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/docker/"
+      },
+      {
+        "subject": "tpu_doc:infer_06_vllm_torchtpu_docker",
+        "predicate": "schema:category",
+        "object": "inference_deployment_links"
+      },
+      {
+        "subject": "tpu_doc:infer_06_vllm_torchtpu_docker",
+        "predicate": "schema:description",
+        "object": "Container images and build targets for TPU inference; distinguish runtime images from CI-only images."
+      },
+      {
+        "subject": "tpu_doc:infer_06_vllm_torchtpu_docker",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:infer_06_vllm_torchtpu_docker",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:vLLM-TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:infer_06_vllm_torchtpu_docker",
+        "predicate": "okf:hasSection",
+        "object": "Docker images"
+      },
+      {
+        "subject": "tpu_doc:infer_06_vllm_torchtpu_docker",
+        "predicate": "okf:hasSection",
+        "object": "Pre-built Images on Docker Hub"
+      },
+      {
+        "subject": "tpu_doc:infer_06_vllm_torchtpu_docker",
+        "predicate": "okf:hasSection",
+        "object": "Release Images (`--target prod`)"
+      },
+      {
+        "subject": "tpu_doc:infer_06_vllm_torchtpu_docker",
+        "predicate": "okf:hasSection",
+        "object": "Nightly Images (`--target dev`)"
+      },
+      {
+        "subject": "tpu_doc:infer_06_vllm_torchtpu_docker",
+        "predicate": "okf:hasSection",
+        "object": "Running the Container on a Cloud TPU VM"
+      },
+      {
+        "subject": "tpu_doc:infer_06_vllm_torchtpu_docker",
+        "predicate": "okf:hasSection",
+        "object": "Image targets"
+      },
+      {
+        "subject": "tpu_doc:infer_06_vllm_torchtpu_docker",
+        "predicate": "okf:hasSection",
+        "object": "`ci:latest`"
+      },
+      {
+        "subject": "tpu_doc:infer_06_vllm_torchtpu_docker",
+        "predicate": "okf:hasSection",
+        "object": "`dev:latest`"
+      },
+      {
+        "subject": "tpu_doc:infer_06_vllm_torchtpu_docker",
+        "predicate": "okf:hasSection",
+        "object": "`prod:latest`"
+      },
+      {
+        "subject": "tpu_doc:infer_06_vllm_torchtpu_docker",
+        "predicate": "okf:hasSection",
+        "object": "vllm-router"
+      },
+      {
+        "subject": "tpu_doc:infer_06_vllm_torchtpu_docker",
+        "predicate": "okf:hasSection",
+        "object": "Useful build arguments"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "vLLM-TorchTPU Docker guide provides official guidance on Container images and build targets for TPU inference; distinguish runtime images from CI-only images.",
-      "confidence": 1.0,
-      "source": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/docker/",
-      "verified": true
-    },
-    {
-      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
-      "confidence": 1.0,
-      "source": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/docker/",
-      "verified": true
-    },
-    {
-      "assertion": "vLLM-TorchTPU is the out-of-tree PyTorch-native serving backend for vLLM on TPUs, distinct from the JAX-native vllm-tpu backend.",
-      "confidence": 1.0,
-      "source": "https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/docker/",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is vLLM-TorchTPU Docker guide used for in Cloud TPU workflows?",
-      "answer": "Container images and build targets for TPU inference; distinguish runtime images from CI-only images.",
-      "category": "inference_deployment_links"
-    }
-  ],
-  "contentSummary": "Container images and build targets for TPU inference; distinguish runtime images from CI-only images."
+  },
+  "structured_content": {
+    "summary": "Container images and build targets for TPU inference; distinguish runtime images from CI-only images.",
+    "sections": [
+      {
+        "heading": "Docker images",
+        "level": 1,
+        "content": "This folder contains the Dockerfile used to build the main image variants for vllm-torchtpu."
+      },
+      {
+        "heading": "Pre-built Images on Docker Hub",
+        "level": 2,
+        "content": "Official pre-built `vllm-torchtpu` Docker images are publicly available on Docker Hub at [`vllm/vllm-torchtpu`](https://hub.docker.com/r/vllm/vllm-torchtpu/tags). No registry authentication is required.  \n| Docker Hub Tag  | Dockerfile Stage  | Installed Dependencies  | Intended Use  |  \n| --- | --- | --- | --- |  \n|  `vllm/vllm-torchtpu:latest`  \n`vllm/vllm-torchtpu:vX.Y.Z`  | `--target prod`  | Runtime only (`--group vllm` + `vllm-torchtpu`)  | Production serving and inference  |  \n|  `vllm/vllm-torchtpu:nightly`  \n`vllm/vllm-torchtpu:nightly-YYYYMMDD-<commit>-<vllm>`  | `--target dev`  | Runtime + test & benchmark tools (`--group vllm --group test --extra benchmarking`, editable install)  | Local development, running `pytest`, type checking, and benchmarking  |  \nNote\nRelease images (`:latest`, `:vX.Y.Z`) are built from `--target prod` and do **not** include test or benchmarking dependencies. For development, testing, or running `tools/typecheck_full.sh`, use `vllm/vllm-torchtpu:nightly` (`--target dev`). The intermediate `--target ci` base stage (which does not install `vllm-torchtpu` itself) is not published to Docker Hub; build it locally with `./docker/build_image.sh --target ci` if needed."
+      },
+      {
+        "heading": "Release Images (`--target prod`)",
+        "level": 3,
+        "content": "Release images are built from the `--target prod` Dockerfile stage and contain a standard runtime installation of `vllm` and `vllm-torchtpu`.\n  * **Latest Stable Release** (`:latest`):\n\n```\ndocker pull vllm/vllm-torchtpu:latest\n\n```\n\n  * **Pinned Version Release** (`:vX.Y.Z`, e.g., `v0.29.0`):\n\n```\ndocker pull vllm/vllm-torchtpu:v0.29.0\n\n```"
+      },
+      {
+        "heading": "Nightly Images (`--target dev`)",
+        "level": 3,
+        "content": "Nightly images are built automatically every night from the `main` branch (`--target dev` stage, which includes the repository source, `--group test` dependencies, and `--extra benchmarking` tools):\n  * **Latest Nightly Build** (`:nightly`):\n\n```\ndocker pull vllm/vllm-torchtpu:nightly\n\n```\n\n  * **Date- and Commit-Pinned Nightly Tags** (`:nightly-YYYYMMDD-<commit>-<vllm-version>`):\n\n```\ndocker pull vllm/vllm-torchtpu:nightly-20261019-88534b8-v0.31.0\n\n```\n\nBrowse all available release and nightly tags at [`https://hub.docker.com/r/vllm/vllm-torchtpu/tags`](https://hub.docker.com/r/vllm/vllm-torchtpu/tags)."
+      },
+      {
+        "heading": "Running the Container on a Cloud TPU VM",
+        "level": 3,
+        "content": "Include `--privileged`, `--net=host`, and `--shm-size 150gb` so the container can access the `/dev/vfio/*` TPU devices and shared host memory:\n\n```\nsudo docker run -it --rm \\\n  --name $USER-vllm \\\n  --privileged \\\n  --net=host \\\n  -v /dev/shm:/dev/shm \\\n  --shm-size 150gb \\\n  -p 8000:8000 \\\n  --entrypoint /bin/bash \\\n  vllm/vllm-torchtpu:latest\n\n```"
+      },
+      {
+        "heading": "Image targets",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "heading": "`ci:latest`",
+        "level": 3,
+        "content": "CI image target built from `--target ci`.\nUse this image for CI and test infrastructure. It includes extra tooling on top of the base runtime, such as:\n  * `git`\n  * `google-cloud-cli`\n  * `gcsfuse`\n  * `lsof`\n  * `psmisc` / `fuser`\n\n\nNote\nThis image does not install the `vllm-torchtpu` project itself, only the dependencies and tools needed for CI.\nExample build using the standard helper script:\n\n```\n./docker/build_image.sh --target ci -t ci:latest\n\n```"
+      },
+      {
+        "heading": "`dev:latest`",
+        "level": 3,
+        "content": "Developer image target built from `--target dev`.\nThis image is based on the `ci` variant, copies the repository into the image, and installs the project in editable mode with the `vllm`/`test` dependency groups and the `benchmarking` extra:\n  * dependencies: `--group vllm --group test --extra benchmarking`\n  * intended for local development, debugging, and running tests\n\n\nExample build using the standard helper script:\n\n```\n./docker/build_image.sh --target dev -t dev:latest\n\n```"
+      },
+      {
+        "heading": "`prod:latest`",
+        "level": 3,
+        "content": "Production image target built from `--target prod`.\nThis image is intended for regular runtime usage. It performs a standard install of the project and is the best target for production-style execution.\nExample build using the standard helper script:\n\n```\n./docker/build_image.sh --target prod -t prod:latest\n\n```"
+      },
+      {
+        "heading": "vllm-router",
+        "level": 2,
+        "content": "The `ci` and `dev` targets carry [vllm-router](https://github.com/vllm-project/router) at `/usr/local/bin/vllm-router`, built from the commit in the `VLLM_ROUTER_COMMIT` build arg. The disaggregated benchmark clients start it in prefill/decode mode when a serve config sets `AGENTX_PROXY=router`; the default stays the toy proxy in `examples/disagg`."
+      },
+      {
+        "heading": "Useful build arguments",
+        "level": 2,
+        "content": "The Dockerfile also supports a few build arguments that may be useful in advanced workflows:\n  * `VLLM_SOURCE`: when set, installs `vllm` from the copied local source tree\n\n\nExample using the helper script with build arguments:\n\n```\n./docker/build_image.sh \\\n  --target prod \\\n  -t prod:latest\n\n```"
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "docker pull vllm/vllm-torchtpu:latest"
+      },
+      {
+        "language": "text",
+        "code": "docker pull vllm/vllm-torchtpu:v0.29.0"
+      },
+      {
+        "language": "text",
+        "code": "docker pull vllm/vllm-torchtpu:nightly"
+      },
+      {
+        "language": "text",
+        "code": "docker pull vllm/vllm-torchtpu:nightly-20261019-88534b8-v0.31.0"
+      },
+      {
+        "language": "text",
+        "code": "sudo docker run -it --rm \\\n  --name $USER-vllm \\\n  --privileged \\\n  --net=host \\\n  -v /dev/shm:/dev/shm \\\n  --shm-size 150gb \\\n  -p 8000:8000 \\\n  --entrypoint /bin/bash \\\n  vllm/vllm-torchtpu:latest"
+      },
+      {
+        "language": "text",
+        "code": "./docker/build_image.sh --target ci -t ci:latest"
+      },
+      {
+        "language": "text",
+        "code": "./docker/build_image.sh --target dev -t dev:latest"
+      },
+      {
+        "language": "text",
+        "code": "./docker/build_image.sh --target prod -t prod:latest"
+      },
+      {
+        "language": "text",
+        "code": "./docker/build_image.sh \\\n  --target prod \\\n  -t prod:latest"
+      }
+    ],
+    "cli_commands": [
+      "docker pull vllm/vllm-torchtpu:latest",
+      "docker pull vllm/vllm-torchtpu:v0.29.0",
+      "docker pull vllm/vllm-torchtpu:nightly",
+      "docker pull vllm/vllm-torchtpu:nightly-20261019-88534b8-v0.31.0",
+      "vllm/vllm-torchtpu:latest"
+    ],
+    "environment_variables": [],
+    "tables": [
+      {
+        "headers": [
+          "Docker Hub Tag",
+          "Dockerfile Stage",
+          "Installed Dependencies",
+          "Intended Use"
+        ],
+        "rows": [
+          [
+            "`vllm/vllm-torchtpu:latest`"
+          ],
+          [
+            "`vllm/vllm-torchtpu:vX.Y.Z`",
+            "`--target prod`",
+            "Runtime only (`--group vllm` + `vllm-torchtpu`)",
+            "Production serving and inference"
+          ],
+          [
+            "`vllm/vllm-torchtpu:nightly`"
+          ],
+          [
+            "`vllm/vllm-torchtpu:nightly-YYYYMMDD-<commit>-<vllm>`",
+            "`--target dev`",
+            "Runtime + test & benchmark tools (`--group vllm --group test --extra benchmarking`, editable install)",
+            "Local development, running `pytest`, type checking, and benchmarking"
+          ]
+        ]
+      }
+    ],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'vLLM-TorchTPU Docker guide' (https://vllm-torchtpu.readthedocs.io/en/latest/getting_started/docker/)?",
+        "answer": "Container images and build targets for TPU inference; distinguish runtime images from CI-only images."
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU Docker guide' handle: Docker images?",
+        "answer": "This folder contains the Dockerfile used to build the main image variants for vllm-torchtpu."
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU Docker guide' handle: Pre-built Images on Docker Hub?",
+        "answer": "Official pre-built `vllm-torchtpu` Docker images are publicly available on Docker Hub at [`vllm/vllm-torchtpu`](https://hub.docker.com/r/vllm/vllm-torchtpu/tags). No registry authentication is required.  \n| Docker Hub Tag  | Dockerfile Stage  | Installed Dependencies  | Intended Use  |  \n| --- | --- | --- | --- |  \n|  `vllm/vllm-torchtpu:latest`  \n`vllm/vllm-torchtpu:vX.Y.Z`  | `--target prod`  | Runtime only (`--group vllm` + `vllm-torchtpu`)  | Production serving and inference  |  \n|  `vllm/vllm-torchtpu:nightly`  \n`vllm/vllm-torchtpu:nightly-YYYYMMDD-<commit>-<vllm>`  | `--target dev`  | Runtime + test & benchmark tools (`--group vllm --group test --extra benchmarking`, editable install)  | Local development, running `pytest`, type checking, and benchmarking  |  \nNote\nRelease images (`:latest`, `:vX.Y.Z`) are built from `--target prod` and do **not** include test or benchmarking dependencies. For development, testing, or running `tools/typecheck_full.sh`, use `vllm/vllm-torchtpu:nightly` (`--target dev`). The intermediate `--target ci` base stage (which does not install `vllm-torchtpu` itself) is not published to Docker Hub; build it locally with `./docker/build_image.sh --targe"
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU Docker guide' handle: Release Images (`--target prod`)?",
+        "answer": "Release images are built from the `--target prod` Dockerfile stage and contain a standard runtime installation of `vllm` and `vllm-torchtpu`.\n  * **Latest Stable Release** (`:latest`):\n\n```\ndocker pull vllm/vllm-torchtpu:latest\n\n```\n\n  * **Pinned Version Release** (`:vX.Y.Z`, e.g., `v0.29.0`):\n\n```\ndocker pull vllm/vllm-torchtpu:v0.29.0\n\n```"
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU Docker guide' handle: Nightly Images (`--target dev`)?",
+        "answer": "Nightly images are built automatically every night from the `main` branch (`--target dev` stage, which includes the repository source, `--group test` dependencies, and `--extra benchmarking` tools):\n  * **Latest Nightly Build** (`:nightly`):\n\n```\ndocker pull vllm/vllm-torchtpu:nightly\n\n```\n\n  * **Date- and Commit-Pinned Nightly Tags** (`:nightly-YYYYMMDD-<commit>-<vllm-version>`):\n\n```\ndocker pull vllm/vllm-torchtpu:nightly-20261019-88534b8-v0.31.0\n\n```\n\nBrowse all available release and nightly tags at [`https://hub.docker.com/r/vllm/vllm-torchtpu/tags`](https://hub.docker.com/r/vllm/vllm-torchtpu/tags)."
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU Docker guide' handle: Running the Container on a Cloud TPU VM?",
+        "answer": "Include `--privileged`, `--net=host`, and `--shm-size 150gb` so the container can access the `/dev/vfio/*` TPU devices and shared host memory:\n\n```\nsudo docker run -it --rm \\\n  --name $USER-vllm \\\n  --privileged \\\n  --net=host \\\n  -v /dev/shm:/dev/shm \\\n  --shm-size 150gb \\\n  -p 8000:8000 \\\n  --entrypoint /bin/bash \\\n  vllm/vllm-torchtpu:latest\n\n```"
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU Docker guide' handle: `ci:latest`?",
+        "answer": "CI image target built from `--target ci`.\nUse this image for CI and test infrastructure. It includes extra tooling on top of the base runtime, such as:\n  * `git`\n  * `google-cloud-cli`\n  * `gcsfuse`\n  * `lsof`\n  * `psmisc` / `fuser`\n\n\nNote\nThis image does not install the `vllm-torchtpu` project itself, only the dependencies and tools needed for CI.\nExample build using the standard helper script:\n\n```\n./docker/build_image.sh --target ci -t ci:latest\n\n```"
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU Docker guide' handle: `dev:latest`?",
+        "answer": "Developer image target built from `--target dev`.\nThis image is based on the `ci` variant, copies the repository into the image, and installs the project in editable mode with the `vllm`/`test` dependency groups and the `benchmarking` extra:\n  * dependencies: `--group vllm --group test --extra benchmarking`\n  * intended for local development, debugging, and running tests\n\n\nExample build using the standard helper script:\n\n```\n./docker/build_image.sh --target dev -t dev:latest\n\n```"
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU Docker guide' handle: `prod:latest`?",
+        "answer": "Production image target built from `--target prod`.\nThis image is intended for regular runtime usage. It performs a standard install of the project and is the best target for production-style execution.\nExample build using the standard helper script:\n\n```\n./docker/build_image.sh --target prod -t prod:latest\n\n```"
+      },
+      {
+        "question": "How does 'vLLM-TorchTPU Docker guide' handle: vllm-router?",
+        "answer": "The `ci` and `dev` targets carry [vllm-router](https://github.com/vllm-project/router) at `/usr/local/bin/vllm-router`, built from the commit in the `VLLM_ROUTER_COMMIT` build arg. The disaggregated benchmark clients start it in prefill/decode mode when a serve config sets `AGENTX_PROXY=router`; the default stays the toy proxy in `examples/disagg`."
+      }
+    ],
+    "full_markdown": "# Docker images\nThis folder contains the Dockerfile used to build the main image variants for vllm-torchtpu.\n## Pre-built Images on Docker Hub\nOfficial pre-built `vllm-torchtpu` Docker images are publicly available on Docker Hub at [`vllm/vllm-torchtpu`](https://hub.docker.com/r/vllm/vllm-torchtpu/tags). No registry authentication is required.  \n| Docker Hub Tag  | Dockerfile Stage  | Installed Dependencies  | Intended Use  |  \n| --- | --- | --- | --- |  \n|  `vllm/vllm-torchtpu:latest`  \n`vllm/vllm-torchtpu:vX.Y.Z`  | `--target prod`  | Runtime only (`--group vllm` + `vllm-torchtpu`)  | Production serving and inference  |  \n|  `vllm/vllm-torchtpu:nightly`  \n`vllm/vllm-torchtpu:nightly-YYYYMMDD-<commit>-<vllm>`  | `--target dev`  | Runtime + test & benchmark tools (`--group vllm --group test --extra benchmarking`, editable install)  | Local development, running `pytest`, type checking, and benchmarking  |  \nNote\nRelease images (`:latest`, `:vX.Y.Z`) are built from `--target prod` and do **not** include test or benchmarking dependencies. For development, testing, or running `tools/typecheck_full.sh`, use `vllm/vllm-torchtpu:nightly` (`--target dev`). The intermediate `--target ci` base stage (which does not install `vllm-torchtpu` itself) is not published to Docker Hub; build it locally with `./docker/build_image.sh --target ci` if needed.\n### Release Images (`--target prod`)\nRelease images are built from the `--target prod` Dockerfile stage and contain a standard runtime installation of `vllm` and `vllm-torchtpu`.\n  * **Latest Stable Release** (`:latest`):\n\n```\ndocker pull vllm/vllm-torchtpu:latest\n\n```\n\n  * **Pinned Version Release** (`:vX.Y.Z`, e.g., `v0.29.0`):\n\n```\ndocker pull vllm/vllm-torchtpu:v0.29.0\n\n```\n\n### Nightly Images (`--target dev`)\nNightly images are built automatically every night from the `main` branch (`--target dev` stage, which includes the repository source, `--group test` dependencies, and `--extra benchmarking` tools):\n  * **Latest Nightly Build** (`:nightly`):\n\n```\ndocker pull vllm/vllm-torchtpu:nightly\n\n```\n\n  * **Date- and Commit-Pinned Nightly Tags** (`:nightly-YYYYMMDD-<commit>-<vllm-version>`):\n\n```\ndocker pull vllm/vllm-torchtpu:nightly-20261019-88534b8-v0.31.0\n\n```\n\nBrowse all available release and nightly tags at [`https://hub.docker.com/r/vllm/vllm-torchtpu/tags`](https://hub.docker.com/r/vllm/vllm-torchtpu/tags).\n### Running the Container on a Cloud TPU VM\nInclude `--privileged`, `--net=host`, and `--shm-size 150gb` so the container can access the `/dev/vfio/*` TPU devices and shared host memory:\n\n```\nsudo docker run -it --rm \\\n  --name $USER-vllm \\\n  --privileged \\\n  --net=host \\\n  -v /dev/shm:/dev/shm \\\n  --shm-size 150gb \\\n  -p 8000:8000 \\\n  --entrypoint /bin/bash \\\n  vllm/vllm-torchtpu:latest\n\n```\n\n## Image targets\n###  `ci:latest`\nCI image target built from `--target ci`.\nUse this image for CI and test infrastructure. It includes extra tooling on top of the base runtime, such as:\n  * `git`\n  * `google-cloud-cli`\n  * `gcsfuse`\n  * `lsof`\n  * `psmisc` / `fuser`\n\n\nNote\nThis image does not install the `vllm-torchtpu` project itself, only the dependencies and tools needed for CI.\nExample build using the standard helper script:\n\n```\n./docker/build_image.sh --target ci -t ci:latest\n\n```\n\n###  `dev:latest`\nDeveloper image target built from `--target dev`.\nThis image is based on the `ci` variant, copies the repository into the image, and installs the project in editable mode with the `vllm`/`test` dependency groups and the `benchmarking` extra:\n  * dependencies: `--group vllm --group test --extra benchmarking`\n  * intended for local development, debugging, and running tests\n\n\nExample build using the standard helper script:\n\n```\n./docker/build_image.sh --target dev -t dev:latest\n\n```\n\n###  `prod:latest`\nProduction image target built from `--target prod`.\nThis image is intended for regular runtime usage. It performs a standard install of the project and is the best target for production-style execution.\nExample build using the standard helper script:\n\n```\n./docker/build_image.sh --target prod -t prod:latest\n\n```\n\n## vllm-router\nThe `ci` and `dev` targets carry [vllm-router](https://github.com/vllm-project/router) at `/usr/local/bin/vllm-router`, built from the commit in the `VLLM_ROUTER_COMMIT` build arg. The disaggregated benchmark clients start it in prefill/decode mode when a serve config sets `AGENTX_PROXY=router`; the default stays the toy proxy in `examples/disagg`.\n## Useful build arguments\nThe Dockerfile also supports a few build arguments that may be useful in advanced workflows:\n  * `VLLM_SOURCE`: when set, installs `vllm` from the copied local source tree\n\n\nExample using the helper script with build arguments:\n\n```\n./docker/build_image.sh \\\n  --target prod \\\n  -t prod:latest\n\n```"
+  }
 }

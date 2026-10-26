@@ -1,52 +1,1030 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:train_20_gke_train_llm_jax",
-  "@type": "DocumentationResource",
-  "name": "Fine-tune an LLM on GKE with JAX",
-  "canonicalUrl": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/train-llm-tpus-gke-jax",
-  "category": "Training framework links",
-  "categorySlug": "training_framework_links",
-  "description": "Introductory distributed Gemma fine-tuning tutorial on TPUs using JAX; points production LLM fine-tuning to MaxText and diffusion work to MaxDiffusion.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/train-llm-tpus-gke-jax",
-    "crawledAt": "2026-10-26T12:47:16.613336+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 76332
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Fine-tune an LLM on GKE with JAX",
-      "documentedIn",
-      "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/train-llm-tpus-gke-jax"
-    ],
-    [
-      "Fine-tune an LLM on GKE with JAX",
-      "belongsToCategory",
-      "training_framework_links"
-    ],
-    [
-      "Fine-tune an LLM on GKE with JAX",
-      "supportsWorkflow",
-      "Distributed Machine Learning Training"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:train_20_gke_train_llm_jax",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "train_20_gke_train_llm_jax",
+    "name": "Fine-tune an LLM on GKE with JAX",
+    "url": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/train-llm-tpus-gke-jax",
+    "category": "training_framework_links",
+    "description": "Introductory distributed Gemma fine-tuning tutorial on TPUs using JAX; points production LLM fine-tuning to MaxText and diffusion work to MaxDiffusion.",
+    "char_count": 45495,
+    "word_count": 5122,
+    "section_count": 109,
+    "code_block_count": 41,
+    "table_count": 0,
+    "cli_command_count": 43,
+    "indexed_at": "2026-10-26T14:46:54.549816+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "schema:name",
+        "object": "Fine-tune an LLM on GKE with JAX"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/train-llm-tpus-gke-jax"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "schema:category",
+        "object": "training_framework_links"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "schema:description",
+        "object": "Introductory distributed Gemma fine-tuning tutorial on TPUs using JAX; points production LLM fine-tuning to MaxText and diffusion work to MaxDiffusion."
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:MaxText"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:MaxDiffusion"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:XProf"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "Fine-tune a LLM using TPUs on GKE with JAX"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "Background"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "Gemma"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "TPUs"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "JAX"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "Objectives"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "Before you begin"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "Check for the roles"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "Grant the roles"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "Prepare the environment"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "Create and configure Google Cloud resources"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "Create a GKE cluster"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "Autopilot"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "Standard"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "Install JobSet"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "Configure Cloud Storage FUSE"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "Create the fine-tuning script"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "Copyright 2026 Google LLC"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "Licensed under the Apache License, Version 2.0 (the \"License\");"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "you may not use this file except in compliance with the License."
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "You may obtain a copy of the License at"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "http://www.apache.org/licenses/LICENSE-2.0"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "Unless required by applicable law or agreed to in writing, software"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "distributed under the License is distributed on an \"AS IS\" BASIS,"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:hasSection",
+        "object": "WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied."
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "PROJECT_ID"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "PROJECT_NUMBER"
+      },
+      {
+        "subject": "tpu_doc:train_20_gke_train_llm_jax",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "ZONE"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Fine-tune an LLM on GKE with JAX provides official guidance on Introductory distributed Gemma fine-tuning tutorial on TPUs using JAX; points production LLM fine-tuning to MaxText and diffusion work to MaxDiffusion.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/train-llm-tpus-gke-jax",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Fine-tune an LLM on GKE with JAX used for in Cloud TPU workflows?",
-      "answer": "Introductory distributed Gemma fine-tuning tutorial on TPUs using JAX; points production LLM fine-tuning to MaxText and diffusion work to MaxDiffusion.",
-      "category": "training_framework_links"
-    }
-  ],
-  "contentSummary": "Introductory distributed Gemma fine-tuning tutorial on TPUs using JAX; points production LLM fine-tuning to MaxText and diffusion work to MaxDiffusion."
+  },
+  "structured_content": {
+    "summary": "Introductory distributed Gemma fine-tuning tutorial on TPUs using JAX; points production LLM fine-tuning to MaxText and diffusion work to MaxDiffusion.",
+    "sections": [
+      {
+        "heading": "Fine-tune a LLM using TPUs on GKE with JAX",
+        "level": 1,
+        "content": "[ Autopilot ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview) [ Standard ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/choose-cluster-mode)\nThis tutorial shows you how to fine-tune a large language model (LLM) using Tensor Processing Units (TPUs) on Google Kubernetes Engine (GKE) with JAX. Fine-tuning lets you adapt a foundation model like Gemma 3 to a specific domain or task. This process improves the precision and accuracy of the model by updating its parameters with your own specialized dataset.\nThis guide is a good starting point if you need the granular control, customization, scalability, resilience, portability, and cost-effectiveness of managed Kubernetes when fine-tuning your AI/ML workloads."
+      },
+      {
+        "heading": "Background",
+        "level": 2,
+        "content": "By using TPUs on GKE with Jax to fine-tune an LLM, you can build a robust, production-ready fine-tuning solution with all the benefits of managed Kubernetes."
+      },
+      {
+        "heading": "Gemma",
+        "level": 3,
+        "content": "[Gemma](https://ai.google.dev/gemma) is a set of openly available, lightweight, generative AI/ML multimodal models released under an open license. These AI models are available to run in your applications, hardware, mobile devices, or hosted services. Gemma 3 introduces multimodality, and it supports vision-language input and text outputs. It handles context windows of up to 128,000 tokens and supports over 140 languages. Gemma 3 also offers improved math, reasoning, and chat capabilities, including structured outputs and function calling.\nYou can use the Gemma models for text generation, or you can also tune these models for specialized tasks.\nFor more information, see the [Gemma documentation](https://ai.google.dev/gemma/docs)."
+      },
+      {
+        "heading": "TPUs",
+        "level": 3,
+        "content": "TPUs are application-specific integrated circuits (ASICs) that Google custom-developed to accelerate machine learning and AI models that are built using frameworks such as [TensorFlow](https://www.tensorflow.org/), [PyTorch](https://pytorch.org/), and [JAX](https://github.com/google/jax).\nBefore you use TPUs in GKE, we recommend that you complete the following learning path:\n  1. Learn about current TPU version availability with the [Cloud TPU system architecture](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#versions).\n  2. Learn [about TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus)."
+      },
+      {
+        "heading": "JAX",
+        "level": 3,
+        "content": "[JAX](https://github.com/google/jax) is a high-performance machine learning framework that is designed to be used with TPUs and GPUs. JAX provides an API for building and training machine learning models.\nTo learn more, see the [JAX repository](https://github.com/google/jax)."
+      },
+      {
+        "heading": "Objectives",
+        "level": 2,
+        "content": "This tutorial covers the following steps:\n  1. Create a GKE Autopilot or Standard cluster with the recommended TPU topology, based on the model characteristics. During this tutorial, you perform the fine-tuning on single-host node pools.\n  2. Add data to a Cloud Storage bucket and mount it to the container through Cloud Storage FUSE.\n  3. Deploy the LLM fine-tuning Job on GKE.\n  4. Monitor the fine-tuning Job and view the logs."
+      },
+      {
+        "heading": "Before you begin",
+        "level": 2,
+        "content": "* Sign in to your Google Cloud account. If you're new to Google Cloud, [ create an account](https://console.cloud.google.com/freetrial) to evaluate how our products perform in real-world scenarios. New customers also get $300 in free credits to run, test, and deploy workloads. \n  * In the Google Cloud console, on the project selector page, select or create a Google Cloud project.\n**Roles required to select or create a project**\n    * **Select a project** : Selecting a project doesn't require a specific IAM role\u2014you can select any project that you've been granted a role on. \n    * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.\n[Go to project selector](https://console.cloud.google.com/projectselector2/home/dashboard)\n  * [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). \n  * Enable the required API, if it is not already enabled. \n**Roles required to enable APIs**\nTo enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n[Enable the API](https://console.cloud.google.com/apis/enableflow?apiid=container.googleapis.com)\n  * In the Google Cloud console, on the project selector page, select or create a Google Cloud project.\n**Roles required to select or create a project**\n    * **Select a project** : Selecting a project doesn't require a specific IAM role\u2014you can select any project that you've been granted a role on. \n    * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.\n[Go to project selector](https://console.cloud.google.com/projectselector2/home/dashboard)\n  * [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). \n  * Enable the required API, if it is not already enabled. \n**Roles required to enable APIs**\nTo enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n[Enable the API](https://console.cloud.google.com/apis/enableflow?apiid=container.googleapis.com)\n  * Make sure that you have the following role or roles on the project: roles/container.admin,roles/iam.serviceAccountAdmin,roles/storage.admin"
+      },
+      {
+        "heading": "Check for the roles",
+        "level": 4,
+        "content": "1. In the Google Cloud console, go to the **IAM** page. \n[Go to IAM](https://console.cloud.google.com/projectselector/iam-admin/iam?supportedpurview=project)\n    2. Select the project. \n    3. In the **Principal** column, find all rows that identify you or a group that you're included in. To learn which groups you're included in, contact your administrator. \n    4. For all rows that specify or include you, check the **Role** column to see whether the list of roles includes the required roles."
+      },
+      {
+        "heading": "Grant the roles",
+        "level": 4,
+        "content": "1. In the Google Cloud console, go to the **IAM** page. \n[Go to IAM](https://console.cloud.google.com/projectselector/iam-admin/iam?supportedpurview=project)\n    2. Select the project. \n    3. Click person_add **Grant access**. \n    4. In the **New principals** field, enter your user identifier. This is typically the email address for a Google Account.\n    5. Click **Select a role** , then search for the role. \n    6. To grant additional roles, click add **Add another role** and add each additional role. \n    7. Click **Save**. \n\n\n  * Ensure that you have sufficient quota for 16 TPU Trillium (v6e) chips. In this tutorial, you use a node pool configuration that requires 16 chips and [on-demand instances](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/tpus#ensure-quota).\n  * Ensure that you have a Docker repository. If you don't have one, [create a standard repository](https://docs.cloud.google.com/artifact-registry/docs/repositories/create-repos) in Artifact Registry."
+      },
+      {
+        "heading": "Prepare the environment",
+        "level": 2,
+        "content": "In this tutorial, you use [Cloud Shell](https://docs.cloud.google.com/shell/docs) to manage resources hosted on Google Cloud. Cloud Shell comes preinstalled with the software you need for this tutorial, including [`kubectl`](https://kubernetes.io/docs/reference/kubectl/) and [Google Cloud CLI](https://docs.cloud.google.com/sdk/gcloud).\nTo set up your environment with Cloud Shell, follow these steps:\n  1. In the Google Cloud console, launch a Cloud Shell session and click ![Cloud Shell activation icon](https://docs.cloud.google.com/static/shell/docs/images/activate_cloud_shell.svg) **Activate Cloud Shell**. This action launches a session in the bottom pane of the Google Cloud console.\n  2. Set the default environment variables:\n\n```\ngcloud config set project PROJECT_ID\ngcloud config set billing/quota_project PROJECT_ID\nexport PROJECT_ID=$(gcloud config get project)\nexport PROJECT_NUMBER=$(gcloud projects describe ${PROJECT_ID} --format=\"value(projectNumber)\")\nexport CLUSTER_NAME=CLUSTER_NAME\nexport REGION=CONTROL_PLANE_LOCATION\nexport ZONE=ZONE\nexport GCS_BUCKET_NAME=BUCKET_NAME\n\n```\n\nReplace the following values:\n     * `PROJECT_ID`: your Google Cloud [project ID](https://docs.cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects).\n     * `CLUSTER_NAME`: the name of your GKE cluster.\n     * `CONTROL_PLANE_LOCATION`: the Compute Engine [region](https://docs.cloud.google.com/compute/docs/regions-zones/tpu-regions-zones) where your GKE cluster and TPU nodes are located. The region must contain zones where TPU Trillium (v6e) machine types are available.\n     * `ZONE`: a zone within your selected `CONTROL_PLANE_LOCATION` region where TPU Trillium (v6e) machine types are available. To list zones where TPU Trillium (v6e) TPUs are available, run the following command:\n\n```\n  gcloud compute accelerator-types list --filter=\"name~ct6e\" --format=\"value(zone)\"\n\n```\n\n     * `BUCKET_NAME`: the name of the Cloud Storage bucket that contains your training data.\n  3. Clone the sample repository:\n\n```\ngit clone https://github.com/GoogleCloudPlatform/kubernetes-engine-samples.git\ncd kubernetes-engine-samples\n\n```\n\n  4. Navigate to the working directory:\n\n```\ncd ai-ml/llm-training-jax-tpu-gemma3\n\n```"
+      },
+      {
+        "heading": "Create and configure Google Cloud resources",
+        "level": 2,
+        "content": "In this section, you create and configure Google Cloud resources."
+      },
+      {
+        "heading": "Create a GKE cluster",
+        "level": 3,
+        "content": "You can fine-tune an LLM on TPUs in a GKE Autopilot or Standard cluster. We recommend that you use a Autopilot cluster for a fully managed Kubernetes experience. To choose the GKE mode of operation that's the best fit for your workloads, see [Choose a GKE mode of operation](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/choose-cluster-mode)."
+      },
+      {
+        "heading": "Autopilot",
+        "level": 3,
+        "content": "Create a GKE Autopilot cluster that uses [ Workload Identity Federation for GKE](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) and has Cloud Storage FUSE enabled.\n\n```\ngcloud container clusters create-auto ${CLUSTER_NAME} \\\n    --location=${REGION}\n\n```\n\nThe cluster creation might take several minutes."
+      },
+      {
+        "heading": "Standard",
+        "level": 3,
+        "content": "1. Create a regional GKE Standard cluster that uses [Workload Identity Federation for GKE](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) and has Cloud Storage FUSE enabled.\n\n```\ngcloud container clusters create ${CLUSTER_NAME} \\\n    --enable-ip-alias \\\n    --addons GcsFuseCsiDriver \\\n    --machine-type=n2-standard-4 \\\n    --num-nodes=2 \\\n    --workload-pool=${PROJECT_ID}.svc.id.goog \\\n    --location=${REGION}\n\n```\n\nThe cluster creation might take several minutes.\n  2. Create a single-host node pool:\n\n```\ngcloud container node-pools create jax-tpu-nodepool \\\n    --cluster=${CLUSTER_NAME} \\\n    --machine-type=ct6e-standard-1t \\\n    --num-nodes=1 \\\n    --location=${REGION} \\\n    --node-locations=${ZONE} \\\n    --workload-metadata=GKE_METADATA\n\n```\n\nGKE creates a TPU Trillium node pool with a `1x1` topology and one node. The `--workload-metadata=GKE_METADATA` flag configures the node pool to use the GKE metadata server."
+      },
+      {
+        "heading": "Install JobSet",
+        "level": 3,
+        "content": "1. Configure `kubectl` to communicate with your cluster:\n\n```\ngcloud container clusters get-credentials ${CLUSTER_NAME} --location=${REGION}\n\n```\n\n  2. Install the latest released version of [JobSet](https://jobset.sigs.k8s.io/docs/installation/):\n\n```\nkubectl apply --server-side -f https://github.com/kubernetes-sigs/jobset/releases/download/JOBSET_VERSION/manifests.yaml\n\n```\n\nReplace `JOBSET_VERSION` with the [latest released version of JobSet](https://github.com/kubernetes-sigs/jobset/releases). For example, `v0.11.0`.\n  3. Verify the JobSet installation:\n\n```\nkubectl get pods -n jobset-system\n\n```\n\nThe output is similar to the following:\n\n```\nNAME                                         READY   STATUS    RESTARTS   AGE\njobset-controller-manager-6c56668494-l4dhc   1/1     Running   0          4m45s\n\n```\n\nYou might need to add more nodes if JobSet is waiting for resources."
+      },
+      {
+        "heading": "Configure Cloud Storage FUSE",
+        "level": 3,
+        "content": "To fine-tune the LLM, you need to provide training data. In this tutorial, you use the [TinyStories dataset](https://huggingface.co/datasets/roneneldan/TinyStories) from Hugging Face. This dataset contains short stories, synthetically generated by GPT-3.5 and GPT-4, that use a limited vocabulary.\nThis section covers the steps to configure Cloud Storage FUSE to read data from a Cloud Storage bucket.\n  1. Download the dataset:\n\n```\nwget https://huggingface.co/datasets/roneneldan/TinyStories/resolve/main/TinyStories-train.txt?download=true -O TinyStories-train.txt\n\n```\n\n  2. Upload the data into a new Cloud Storage bucket:\n\n```\ngcloud storage buckets create gs://${GCS_BUCKET_NAME} \\\n    --location=${REGION} \\\n    --enable-hierarchical-namespace \\\n    --uniform-bucket-level-access\ngcloud storage cp TinyStories-train.txt gs://${GCS_BUCKET_NAME}\n\n```\n\n  3. To allow your workload to read data through Cloud Storage FUSE, create a Kubernetes ServiceAccount (`jaxserviceaccount`) in the `default` namespace:\n\n```\nkubectl create serviceaccount jaxserviceaccount --namespace default\n\n```\n\n  4. Grant the `jaxserviceaccount` Kubernetes ServiceAccount the Storage Object Viewer role (`roles/storage.objectViewer`) on the Cloud Storage bucket:\n\n```\ngcloud storage buckets add-iam-policy-binding gs://${GCS_BUCKET_NAME} \\\n    --member=\"principal://iam.googleapis.com/projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${PROJECT_ID}.svc.id.goog/subject/ns/default/sa/jaxserviceaccount\" \\\n    --role=\"roles/storage.objectViewer\" \\\n    --condition=None\n\n```\n\nAny Pod running in the `default` namespace of your GKE cluster that uses the `jaxserviceaccount` ServiceAccount now has read access to the objects stored in the `gs://${GCS_BUCKET_NAME}` bucket, which is required for the fine-tuning Job to access the dataset by using Cloud Storage FUSE."
+      },
+      {
+        "heading": "Create the fine-tuning script",
+        "level": 2,
+        "content": "In this section, you explore the training script that performs a fine-tuning operation on a Gemma 3 model. This script uses the `Gemma3Tokenizer`.\nReview the following `Gemma3LLMTrain.py` fine-tuning script:\n\n```"
+      },
+      {
+        "heading": "Copyright 2026 Google LLC",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "Licensed under the Apache License, Version 2.0 (the \"License\");",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "you may not use this file except in compliance with the License.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "You may obtain a copy of the License at",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "http://www.apache.org/licenses/LICENSE-2.0",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "Unless required by applicable law or agreed to in writing, software",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "distributed under the License is distributed on an \"AS IS\" BASIS,",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "See the License for the specific language governing permissions and",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "limitations under the License.",
+        "level": 1,
+        "content": "import grain.python as pygrain\nimport jax\nimport jax.numpy as jnp\nimport optax\nimport pandas as pd\nimport time\nimport argparse\n\nfrom dataclasses import dataclass\nfrom functools import partial\nfrom gemma import gm\nfrom flax.training import train_state\nfrom jax.sharding import Mesh, PartitionSpec, NamedSharding\n\njax.distributed.initialize()\nprint(\"Global device count:\", jax.device_count())\nprint(\"jax version:\", jax.__version__)\n\ntokenizer = gm.text.Gemma3Tokenizer()\nnum_epochs = 1\nlearning_rate = 2e-5\n\n@dataclass\nclass TextDataset:\n    data: list\n    maxlen: int\n    tokenizer: gm.text.Gemma3Tokenizer\n\n    def __len__(self):\n        return len(self.data)\n\n    def __getitem__(self, idx: int):\n        encoding = self.tokenizer.encode(self.data[idx])[:self.maxlen]  # Tokenize and truncate\n        return encoding + [0] * (self.maxlen - len(encoding))  # Pad to maxlen\n\ndef load_and_preprocess_data(file_path, batch_size, maxlen, datacount, tokenizer):\n\n    with open(file_path, 'r') as f:\n      text = f.read()\n\n    stories = text.split('<|endoftext|>')\n    stories = [story for story in stories if story.strip()][:datacount]\n    df = pd.DataFrame({'text': stories})\n    data = df['text'].dropna().tolist()\n    dataset = TextDataset(data, maxlen, tokenizer)\n\n    sampler = pygrain.IndexSampler(\n        len(dataset),\n        shuffle=False,\n        seed=42,\n        shard_options=pygrain.NoSharding(),\n        num_epochs=num_epochs,\n    )\n\n    dataloader = pygrain.DataLoader(\n        data_source=dataset,\n        sampler=sampler,\n        operations=[pygrain.Batch(batch_size=batch_size, drop_remainder=True)],\n    )\n\n    return dataloader\n\ndef generate_text(model, params, tokenizer, prompt):\n    sampler = gm.text.Sampler(\n        model=model,\n        params=params,\n        tokenizer=tokenizer,\n    )\n    print(\"Generating response for: \" + prompt)\n    out = sampler.sample(prompt, max_new_tokens=32)\n    print(\"Reponse: \\n\" + out + \"\\n\")\n    return out\n\nprep_target_batch = jax.vmap(lambda tokens: jnp.concatenate((tokens[1:], jnp.array([0]))))\n\n@partial(jax.jit, donate_argnums=(0,))\ndef train_step(state, batch):\n    \"\"\"Performs one supervised fine-tuning step.\"\"\"\n\n    def loss_fn(params):\n        # Run the forward pass. The model returns logits.\n        logits = state.apply_fn({'params': params}, batch[0]).logits\n\n        # Calculate the cross-entropy loss.\n        loss = optax.softmax_cross_entropy_with_integer_labels(\n            logits=logits, labels=batch[1]\n        ).mean()\n\n        return loss\n\n    # Compute gradients\n    grad_fn = jax.value_and_grad(loss_fn)\n    loss, grads = grad_fn(state.params)\n\n    # Update the model state\n    state = state.apply_gradients(grads=grads)\n\n    metrics = {'loss': loss}\n    return state, metrics\n\ndef train_model(state, text_dl, num_epochs, sharding):\n    batchCount = 0\n    start_time = time.time()\n    for epoch in range(num_epochs):\n        start_time = time.time()\n        for batch in text_dl:\n            if len(batch) % len(jax.devices()) != 0:\n              continue  # skip the remaining elements\n            input_batch = jnp.array(jnp.array(batch).T)\n            target_batch = prep_target_batch(input_batch)\n            state, metrics = train_step(state, jax.device_put((input_batch, target_batch), sharding))\n\n            if batchCount % 10 == 0:\n                print(f\"Loss after batch {batchCount}: {metrics['loss']}\")\n            batchCount += 1\n\n    end_time = time.time()\n    print(f\"Completed training model. Total time for training {end_time - start_time} seconds \\n\")\n    return state\n\ndef run_training(maxlen, batch_size, datacount):\n    print(f\"Batch size: {batch_size}, Max length: {maxlen}, Data count: {datacount}\")\n    #Load the training data\n    tiny_stories_dl = load_and_preprocess_data('/data/TinyStories-train.txt', batch_size, maxlen, datacount, tokenizer)\n    # Get the Gemma3 model\n    model = gm.nn.Gemma3_270M()\n    # Load the pretrained parameters\n    params = gm.ckpts.load_params(gm.ckpts.CheckpointPath.GEMMA3_270M_PT)\n    # Create an optimizer\n    optimizer = optax.adamw(learning_rate=learning_rate)\n    # Define sharding for data parallel training\n    mesh = Mesh(jax.devices(), ('batch',))\n    sharding = NamedSharding(mesh, PartitionSpec('batch', None))\n\n    # Testing out current state of the model\n    test_prompt = \"Once upon a time, there was a girl named Amy.\"\n    generate_text(model, params, tokenizer, test_prompt)\n\n    state = train_state.TrainState.create(\n        apply_fn=model.apply,\n        params=params,\n        tx=optimizer\n    )\n\n    # Perform post training\n    print(\"Start training model\")\n    state = train_model(state, tiny_stories_dl, num_epochs, sharding)\n\n    # Final text generation\n    generate_text(model, state.params, tokenizer, test_prompt)\n\nif __name__ == '__main__':\n    parser = argparse.ArgumentParser(description='Train Gemma model with custom parameters.')\n    parser.add_argument('--maxlen', type=int, default=256, help='Maximum sequence length')\n    parser.add_argument('--batch_size', type=int, default=128, help='Batch size')\n    parser.add_argument('--datacount', type=int, default=296000, help='Number of data samples to use')\n    args = parser.parse_args()\n\n    run_training(maxlen=args.maxlen, batch_size=args.batch_size, datacount=args.datacount)\n```\n\nIn this script, the following applies:\n  * A `Gemma3Tokenizer` converts text data into tokens that the model can process.\n  * The `load_and_preprocess_data` function reads the training data from a file, splits it into individual stories, and uses the tokenizer to convert the text into padded sequences of tokens.\n  * The `generate_text` function takes the model, its parameters, and a prompt to generate text.\n  * The `train_step` function defines a single iteration of training that includes the forward pass, loss calculation (using cross-entropy), gradient computation, and parameter updates.\n  * The `train_model` function iterates through the dataset for a specified number of epochs, which calls the `train_step` function for each batch.\n  * The `run_training` function orchestrates the entire process to load data, initialize the Gemma 3 model (`Gemma3_270M`) and optimizer, load pre-trained parameters, set up data sharding for parallel processing, run a test generation, execute the training loop, and perform a final text generation to demonstrate the effect of fine-tuning.\n  * The script uses `argparse` library to accept command-line arguments for `maxlen`, `batch_size`, and `datacount` parameters.\n\n\nNow that you have explored the fine-tuning script, containerize it to run on GKE."
+      },
+      {
+        "heading": "Containerize the fine-tuning script",
+        "level": 2,
+        "content": "Before you run the fine-tuning script in a GKE cluster, you need to containerize it. This tutorial uses a [JAX AI image](https://docs.cloud.google.com/ai-hypercomputer/docs/images#current_jax_ai_images) as the base image.\n  1. Open the `Dockerfile` in the same directory as the `Gemma3LLMTrain.py` file:\n\n```"
+      },
+      {
+        "heading": "Copyright 2026 Google LLC",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "Licensed under the Apache License, Version 2.0 (the \"License\");",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "you may not use this file except in compliance with the License.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "You may obtain a copy of the License at",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "http://www.apache.org/licenses/LICENSE-2.0",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "Unless required by applicable law or agreed to in writing, software",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "distributed under the License is distributed on an \"AS IS\" BASIS,",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "See the License for the specific language governing permissions and",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "limitations under the License.",
+        "level": 1,
+        "content": "FROM us-docker.pkg.dev/cloud-tpu-images/jax-ai-image/tpu:jax0.7.2-rev1\nRUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*\n\nRUN pip install --upgrade pip\nRUN pip install gemma grain\n\nWORKDIR /app"
+      },
+      {
+        "heading": "Copy your training script into the container",
+        "level": 1,
+        "content": "COPY Gemma3LLMTrain.py .\n\n```\n\nThis Dockerfile installs the necessary dependencies and copies the `Gemma3LLMTrain.py` file into the container.\n  2. Build the Docker image and push it to an image repository:\n\n```\nexport REPOSITORY=REPOSITORY_NAME\nexport IMAGE_NAME=\"jax-gemma3-training\"\nexport IMAGE_TAG=\"latest\"\nexport DOCKERFILE_PATH=\"./Dockerfile\"\nexport IMAGE_URI=\"${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPOSITORY}/${IMAGE_NAME}:${IMAGE_TAG}\"\n\ndocker build -t \"${IMAGE_URI}\" -f \"${DOCKERFILE_PATH}\" .\ngcloud auth configure-docker \"${REGION}-docker.pkg.dev\" -q\ndocker push \"${IMAGE_URI}\"\n\n```\n\nReplace `REPOSITORY_NAME` with the name of your Artifact Registry repository.\n  3. Add role bindings to the service account:\n\n```\nexport PROJECT_NUMBER=$(gcloud projects describe $PROJECT_ID --format 'get(projectNumber)')\ngcloud artifacts repositories add-iam-policy-binding ${REPOSITORY} \\\n    --project=${PROJECT_ID} \\\n    --location=${REGION} \\\n    --member=\"serviceAccount:${PROJECT_NUMBER}-compute@developer.gserviceaccount.com\" \\\n    --role=\"roles/artifactregistry.reader\"\n\n```\n\nWith the image in the repository, you can now deploy the fine-tuning Job into a GKE cluster."
+      },
+      {
+        "heading": "Deploy the LLM fine-tuning Job",
+        "level": 2,
+        "content": "This section shows you how to deploy the LLM fine-tuning Job to your GKE cluster.\n  1. Open the `training_singlehost.yaml` manifest:\n\n```"
+      },
+      {
+        "heading": "Copyright 2026 Google LLC",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "Licensed under the Apache License, Version 2.0 (the \"License\");",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "you may not use this file except in compliance with the License.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "You may obtain a copy of the License at",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "http://www.apache.org/licenses/LICENSE-2.0",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "Unless required by applicable law or agreed to in writing, software",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "distributed under the License is distributed on an \"AS IS\" BASIS,",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "See the License for the specific language governing permissions and",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "limitations under the License.",
+        "level": 1,
+        "content": "apiVersion: batch/v1\nkind: Job\nmetadata:\n  name: jax-gemma3-train-singlehost\nspec:\n  template:\n    metadata:\n      annotations:\n        gke-gcsfuse/volumes: \"true\"\n    spec:\n      serviceAccountName: jaxserviceaccout\n      containers:\n      - name: training-container\n        image: ${IMAGE_URI}\n        imagePullPolicy: \"Always\"\n        command: [\"python\", \"Gemma3LLMTrain.py\", \"--maxlen\", \"256\", \"--batch_size\", \"64\", \"--datacount\", \"355120\"]\n        resources:\n          limits:\n            google.com/tpu: 1\n        volumeMounts:\n        - name: gcs-fuse-csi-ephemeral\n          mountPath: /data\n      nodeSelector:\n        cloud.google.com/gke-tpu-accelerator: tpu-v6e-slice\n        cloud.google.com/gke-tpu-topology: 1x1\n      restartPolicy: Never\n      volumes:\n      - name: gcs-fuse-csi-ephemeral\n        csi:\n          driver: gcsfuse.csi.storage.gke.io\n          volumeAttributes:\n            bucketName: ${GCS_BUCKET_NAME}\n            mountOptions: \"implicit-dirs,file-cache:enable-parallel-downloads:true,file-cache:parallel-downloads-per-file:100,file-cache:max-parallel-downloads:-1,file-cache:download-chunk-size-mb:10,file-cache:max-size-mb:-1\"\n  backoffLimit: 1\n```\n\n  2. Apply the manifest:\n\n```\nenvsubst < training_singlehost.yaml | kubectl apply -f -\n\n```\n\nGKE creates a Job that launches a Pod on a TPU Trillium (v6e) node. This Pod runs the Python fine-tuning script, which accesses the fine-tuning data from the specified Cloud Storage bucket mounted at `/data` path by using Cloud Storage FUSE. The script then fine-tunes the Gemma model.\n**Success:** You've successfully fine-tuned a LLM model by using JAX and TPU Trillium (v6e) in GKE!"
+      },
+      {
+        "heading": "Monitor the training Job",
+        "level": 2,
+        "content": "In this section, you monitor the progress of the fine-tuning Job and its performance."
+      },
+      {
+        "heading": "See fine-tuning progress",
+        "level": 3,
+        "content": "1. List the Pods:\n\n```"
+      },
+      {
+        "heading": "Find the Pods",
+        "level": 1,
+        "content": "kubectl get pods\n\n```\n\n  2. Follow the log output:\n\n```\nkubectl logs -f pods/POD_NAME\n\n```\n\nReplace `POD_NAME` with the name of your Pod.\nThe output is similar to the following:\n\n```\nGlobal device count: 1\nBatch size: 128, Max length: 256, Data count: 96000\nI1028 00:12:55.925999 1387 google_auth_provider.cc:181] Running on GCE, using service account ...\nGenerating response for: Once upon a time, there was a girl named Amy.\nResponse:\nAmy lived in a small house. The house was in a big field. Amy liked to play in the big field. She\nStart training model\nLoss after batch 0: 10.25\nLoss after batch 10: 4.3125\n.\n.\n.\nLoss after batch 740: 1.41406\nCompleted training model. Total time for training 294.6791355609894 seconds\nGenerating response for: Once upon a time, there was a girl named Amy.\nResponse:\nShe loved to play with her toys. One day, Amy's mom told her that she had to go to the store to\n\n```\n\n  3. Analyze the output:\n     * The `Global device count: 1` line indicates the TPU cores used.\n     * The model generates reasonable text before this fine-tuning run because it loads from a pre-trained checkpoint.\n     * The output generated after fine-tuning shows more resemblance to the start of a short story, indicating the model is learning from the new dataset.\n     * Fine-tuning on the full dataset should produce even more refined outputs."
+      },
+      {
+        "heading": "Observe metrics",
+        "level": 3,
+        "content": "See the performance of the fine-tuning Job by checking the TPU and CPU metrics. To view observability metrics for your cluster, perform the steps in [View cluster and workload observability metrics](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/view-observability-metrics#view_metrics)."
+      },
+      {
+        "heading": "Alternative fine-tuning configurations",
+        "level": 2,
+        "content": "This section outlines alternative configurations for your fine-tuning workload."
+      },
+      {
+        "heading": "Model selection",
+        "level": 3,
+        "content": "This tutorial used the `Gemma3_270M` model, which is a small model that fits into a single-host TPU Trillium (v6e) node pool. For larger models that require more memory and compute for fine-tuning, you can use multi-host or multislice node pool configurations.\nFor a complete list of available models, see the [Gemma documentation](https://gemma-llm.readthedocs.io/en/latest/api/gm/nn/index.html).\n**Important:** When you use other models, ensure that you use the correct tokenizer for the selected model."
+      },
+      {
+        "heading": "Node pool configurations",
+        "level": 3,
+        "content": "This tutorial used a single-host node pool. You can also create [multi-host TPU slice node pools](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus#multi-host) or [multislice node pools](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/tpu-multislice#whats_tpu_multislice), depending on your needs.\nThe following tabs show how to create for multi-host and multislice node pools:"
+      },
+      {
+        "heading": "Multi-host",
+        "level": 3,
+        "content": "1. In Cloud Shell, run the following command:\n\n```\ngcloud container node-pools create jax-tpu-multihost1 \\\n    --cluster=${CLUSTER_NAME} \\\n    --machine-type=ct6e-standard-4t \\\n    --num-nodes=2 \\\n    --tpu-topology=2x4 \\\n    --location=${REGION} \\\n    --node-locations=${ZONE}\n\n```\n\nGKE creates a TPU Trillium node pool with a `2x4` topology and two nodes.\n  2. Open the `training_multihost_jobset.yaml` Job definition:\n\n```"
+      },
+      {
+        "heading": "Copyright 2026 Google LLC",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "Licensed under the Apache License, Version 2.0 (the \"License\");",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "you may not use this file except in compliance with the License.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "You may obtain a copy of the License at",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "http://www.apache.org/licenses/LICENSE-2.0",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "Unless required by applicable law or agreed to in writing, software",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "distributed under the License is distributed on an \"AS IS\" BASIS,",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "See the License for the specific language governing permissions and",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "limitations under the License.",
+        "level": 1,
+        "content": "apiVersion: jobset.x-k8s.io/v1alpha2\nkind: JobSet\nmetadata:\n  name: jax-gemma3-train-multihost\nspec:\n  replicatedJobs:\n    - name: trainers\n      replicas: 1\n      template:\n        spec:\n          parallelism: 2\n          completions: 2\n          backoffLimit: 1\n          template:\n            metadata:\n              annotations:\n                gke-gcsfuse/volumes: \"true\"\n            spec:\n              serviceAccountName: jaxserviceaccout\n              nodeSelector:\n                cloud.google.com/gke-tpu-accelerator: tpu-v6e-slice\n                cloud.google.com/gke-tpu-topology: 2x4\n                cloud.google.com/gke-nodepool: jax-tpu-multihost1\n              containers:\n              - name: training-container\n                image: ${IMAGE_URI} \n                imagePullPolicy: \"Always\"\n                ports:\n                  - containerPort: 8471\n                command: [\"python\", \"Gemma3LLMTrain.py\", \"--maxlen\", \"256\", \"--batch_size\", \"64\", \"--datacount\", \"5120\"]\n                resources:\n                  limits:\n                    google.com/tpu: 4\n                volumeMounts:\n                - name: gcs-fuse-csi-ephemeral\n                  mountPath: /data\n              volumes:\n                - name: gcs-fuse-csi-ephemeral\n                  csi:\n                    driver: gcsfuse.csi.storage.gke.io\n                    volumeAttributes:\n                      bucketName: ${GCS_BUCKET_NAME}\n                      mountOptions: \"implicit-dirs,file-cache:enable-parallel-downloads:true,file-cache:parallel-downloads-per-file:100,file-cache:max-parallel-downloads:-1,file-cache:download-chunk-size-mb:10,file-cache:max-size-mb:-1\"\n\n```\n\n  3. Deploy the fine-tuning Job:\n\n```\nenvsubst < training_multihost_jobset.yaml | kubectl apply -f -\n\n```"
+      },
+      {
+        "heading": "Multislice",
+        "level": 3,
+        "content": "1. In Cloud Shell, run the following command:\n\n```\ngcloud container node-pools create jax-tpu-multihost1 \\\n  --cluster=${CLUSTER_NAME} \\\n  --machine-type=ct6e-standard-4t \\\n  --num-nodes=2 \\\n  --tpu-topology=2x4 \\\n  --location=${REGION} \\\n  --node-locations=${ZONE}\n\ngcloud container node-pools create jax-tpu-multihost2 \\\n  --cluster=${CLUSTER_NAME} \\\n  --machine-type=ct6e-standard-4t \\\n  --num-nodes=2 \\\n  --tpu-topology=2x4 \\\n  --location=${REGION} \\\n  --node-locations=${ZONE}\n\n```\n\nGKE creates two TPU Trillium node pools. Each node pool has a `2x4` topology and two nodes.\n  2. Open the `training_multislice_jobset.yaml` Job definition:\n\n```"
+      },
+      {
+        "heading": "Copyright 2026 Google LLC",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "Licensed under the Apache License, Version 2.0 (the \"License\");",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "you may not use this file except in compliance with the License.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "You may obtain a copy of the License at",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "http://www.apache.org/licenses/LICENSE-2.0",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "Unless required by applicable law or agreed to in writing, software",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "distributed under the License is distributed on an \"AS IS\" BASIS,",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "See the License for the specific language governing permissions and",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "limitations under the License.",
+        "level": 1,
+        "content": "apiVersion: jobset.x-k8s.io/v1alpha2\nkind: JobSet\nmetadata:\n  name: jax-gemma3-train-multislice\nspec:\n  replicatedJobs:\n    - name: trainers\n      replicas: 2\n      template:\n        spec:\n          parallelism: 2\n          completions: 2\n          backoffLimit: 1\n          template:\n            metadata:\n              annotations:\n                gke-gcsfuse/volumes: \"true\"\n            spec:\n              serviceAccountName: jaxserviceaccout\n              nodeSelector:\n                cloud.google.com/gke-tpu-accelerator: tpu-v6e-slice\n                cloud.google.com/gke-tpu-topology: 2x4\n              containers:\n              - name: training-container\n                image: ${IMAGE_URI}\n                imagePullPolicy: \"Always\"\n                ports:\n                  - containerPort: 8471\n                command: [\"python\", \"Gemma3LLMTrain.py\", \"--maxlen\", \"256\", \"--batch_size\", \"64\", \"--datacount\", \"5120\"]\n                resources:\n                  limits:\n                    google.com/tpu: 4\n                volumeMounts:\n                - name: gcs-fuse-csi-ephemeral\n                  mountPath: /data\n              volumes:\n                - name: gcs-fuse-csi-ephemeral\n                  csi:\n                    driver: gcsfuse.csi.storage.gke.io\n                    volumeAttributes:\n                      bucketName: ${GCS_BUCKET_NAME}\n                      mountOptions: \"implicit-dirs,file-cache:enable-parallel-downloads:true,file-cache:parallel-downloads-per-file:100,file-cache:max-parallel-downloads:-1,file-cache:download-chunk-size-mb:10,file-cache:max-size-mb:100\"\n\n```\n\n  3. Deploy the fine-tuning Job:\n\n```\nenvsubst < training_multislice_jobset.yaml | kubectl apply -f -\n\n```"
+      },
+      {
+        "heading": "Performance analysis and optimization",
+        "level": 3,
+        "content": "To analyze and optimize the performance of your machine learning fine-tuning, you can use [XProf](https://github.com/openxla/xprof). XProf is a suite of tools that profiles and inspects ML workloads built with JAX, TensorFlow, or PyTorch/XLA. By showing execution traces, memory usage, and other data, XProf lets you fine-tune your models and training setup for better efficiency and faster training.\nTo analyze the performance of your fine-tuning workload by using XProf, you complete the following steps in this section:\n  * Install the `xprof` package. Modify your training script to start the XProf server.\n  * Modify your Kubernetes Job manifest to include a volume mount for XProf logs.\n  * Give the Kubernetes ServiceAccount permissions to write XProf logs to a Cloud Storage bucket.\n  * Run XProf within your Pod and set up port forwarding to access the XProf dashboard."
+      },
+      {
+        "heading": "Install the XProf package",
+        "level": 4,
+        "content": "1. Navigate to the directory that contains the XProf samples:\n\n```\n  cd ai-ml/llm-training-jax-tpu-gemma3/xprof-enabled\n\n```\n\n  2. Build the Docker image and push it to an image repository:\n\n```\nexport REPOSITORY=REPOSITORY_NAME\nexport IMAGE_NAME=\"jax-gemma3-training-xp\"\nexport IMAGE_TAG=\"latest\"\nexport DOCKERFILE_PATH=\"./Dockerfile\"\nexport IMAGE_URI=\"${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPOSITORY}/${IMAGE_NAME}:${IMAGE_TAG}\"\n\ndocker build -t \"${IMAGE_URI}\" -f \"${DOCKERFILE_PATH}\" .\ngcloud auth configure-docker \"${REGION}-docker.pkg.dev\" -q\ndocker push \"${IMAGE_URI}\"\n\n```\n\nReplace `REPOSITORY_NAME` with the name of your Artifact Registry repository.\n  3. Run the `Dockerfile` script:\n\n```"
+      },
+      {
+        "heading": "Copyright 2026 Google LLC",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "Licensed under the Apache License, Version 2.0 (the \"License\");",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "you may not use this file except in compliance with the License.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "You may obtain a copy of the License at",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "http://www.apache.org/licenses/LICENSE-2.0",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "Unless required by applicable law or agreed to in writing, software",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "distributed under the License is distributed on an \"AS IS\" BASIS,",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "See the License for the specific language governing permissions and",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "limitations under the License.",
+        "level": 1,
+        "content": "FROM us-docker.pkg.dev/cloud-tpu-images/jax-ai-image/tpu:jax0.7.2-rev1\nRUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*\n\nRUN pip install --upgrade pip\nRUN pip install gemma grain equinox\nRUN pip install xprof\n\nWORKDIR /app"
+      },
+      {
+        "heading": "Copy your training script into the container",
+        "level": 1,
+        "content": "COPY Gemma3LLMTrain.py .\n\n```\n\nThis Dockerfile installs XProf dependencies."
+      },
+      {
+        "heading": "Copy your fine-tuning script into the container",
+        "level": 4,
+        "content": "In this section, create and apply a Kubernetes Job manifest that includes the necessary volume mounts for XProf logs.\n  1. Open the `training_singlehost.yaml` Job definition:\n\n```"
+      },
+      {
+        "heading": "Copyright 2026 Google LLC",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "Licensed under the Apache License, Version 2.0 (the \"License\");",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "you may not use this file except in compliance with the License.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "You may obtain a copy of the License at",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "http://www.apache.org/licenses/LICENSE-2.0",
+        "level": 1,
+        "content": "#"
+      },
+      {
+        "heading": "Unless required by applicable law or agreed to in writing, software",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "distributed under the License is distributed on an \"AS IS\" BASIS,",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "See the License for the specific language governing permissions and",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "limitations under the License.",
+        "level": 1,
+        "content": "apiVersion: batch/v1\nkind: Job\nmetadata:\n  name: jax-gemma3-train-singlehost\nspec:\n  template:\n    metadata:\n      annotations:\n        gke-gcsfuse/volumes: \"true\"\n    spec:\n      serviceAccountName: jaxserviceaccout\n      containers:\n      - name: training-container\n        image: ${IMAGE_URI}\n        imagePullPolicy: \"Always\"\n        command: [\"python\", \"Gemma3LLMTrain.py\", \"--maxlen\", \"256\", \"--batch_size\", \"64\", \"--datacount\", \"851200\"]\n        resources:\n          limits:\n            google.com/tpu: 1\n        volumeMounts:\n        - name: gcs-fuse-csi-ephemeral\n          mountPath: /data\n        - name: gcs-fuse-csi-ephemeral2\n          mountPath: /xprof\n      nodeSelector:\n        cloud.google.com/gke-tpu-accelerator: tpu-v6e-slice\n        cloud.google.com/gke-tpu-topology: 1x1\n      restartPolicy: Never\n      volumes:\n      - name: gcs-fuse-csi-ephemeral\n        csi:\n          driver: gcsfuse.csi.storage.gke.io\n          volumeAttributes:\n            bucketName: ${GCS_BUCKET_NAME}\n            mountOptions: \"implicit-dirs,file-cache:enable-parallel-downloads:true,file-cache:parallel-downloads-per-file:100,file-cache:max-parallel-downloads:-1,file-cache:download-chunk-size-mb:10,file-cache:max-size-mb:-1\"\n      - name: gcs-fuse-csi-ephemeral2\n        csi:\n          driver: gcsfuse.csi.storage.gke.io\n          volumeAttributes:\n            bucketName: ${XPROF_GCS_BUCKET_NAME}\n            mountOptions: \"implicit-dirs,file-cache:enable-parallel-downloads:true,file-cache:parallel-downloads-per-file:100,file-cache:max-parallel-downloads:-1,file-cache:download-chunk-size-mb:10,file-cache:max-size-mb:-1\"\n  backoffLimit: 1\n```\n\n  2. Apply the manifest:\n\n```\nenvsubst < training_singlehost.yaml | kubectl apply -f -\n\n```"
+      },
+      {
+        "heading": "Give the Kubernetes ServiceAccount permissions to write XProf logs",
+        "level": 4,
+        "content": "1. To enable the `jaxserviceaccount` Kubernetes ServiceAccount to write and read XProf logs, grant it the Storage Object User role (`roles/storage.objectUser`) on the bucket:\n\n```\nexport XPROF_GCS_BUCKET_NAME=\"XPROF_GCS_BUCKET_NAME\"\n\ngcloud storage buckets add-iam-policy-binding \"gs://${XPROF_GCS_BUCKET_NAME}\" \\\n    --member=\"principal://iam.googleapis.com/projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${PROJECT_ID}.svc.id.goog/subject/ns/default/sa/jaxserviceaccount\" \\\n    --role=\"roles/storage.objectUser\" \\\n    --project=\"${PROJECT_ID}\" \\\n    --condition=None\n\n```\n\nReplace `XPROF_GCS_BUCKET_NAME` with the name of the bucket to which to grant the role.\n  2. Run XProf within your Pod:\n\n```\nkubectl exec POD_NAME -c training-container -it -- bash # exec into the container\nxprof --port 9001 --logdir /xprof # start xprof\n\n```\n\nReplace `POD_NAME` with the name of your Pod."
+      },
+      {
+        "heading": "Access the XProf dashboard",
+        "level": 4,
+        "content": "1. Set up port forwarding to the XProf server in the Pod:\n\n```\nkubectl port-forward POD_NAME 9001:9001\n\n```\n\n  2. In your browser's address bar, enter the following:\n\n```\nhttp://localhost:9001/\n\n```\n\nThe XProf Trace Viewer opens.\n  3. In the TensorBoard window, click **Capture profile**.\n  4. In the **Profile Service URL(s) or TPU name** field, enter `localhost:9002`.\n  5. To capture more details, in the **Host Trace (TraceMe) Level** , select **verbose** and enable Python trace logging.\n  6. To view the dashboard, click **Capture**.\nTensorBoard captures the profile and lets you analyze the performance of the training script. The graph shows the execution timeline for both TPU and CPU performance profiles:\n\n\n![An example of the XProf trace viewer that shows a performance matrix graph](https://docs.cloud.google.com/static/kubernetes-engine/images/xprof-performance-matrix.png)\nFor more profiling options to analyze your training workload performance, see the JAX documentation on [Profiling computation](https://jax.readthedocs.io/en/latest/profiling.html)."
+      },
+      {
+        "heading": "Fine-tuning in production environments",
+        "level": 2,
+        "content": "This tutorial showed you how to test test JAX-based training in a distributed environment. For optimized LLM fine-tuning in production, use the [Maxtext](https://github.com/google/maxtext) library. If you are interested in diffusion models, use [Maxdiffusion](https://github.com/google/maxdiffusion) implementations.\nFor long-running training or fine-tuning workloads in production, set up workload checkpointing to minimize progress loss during a failure. To learn more about setting up multi-tier checkpointing, see [Train large-scale machine learning models on GKE with Multi-Tier Checkpointing](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/machine-learning/training/multi-tier-checkpointing)."
+      },
+      {
+        "heading": "Clean up",
+        "level": 2,
+        "content": "To avoid incurring charges to your Google Cloud account for the resources used in this tutorial, either delete the project that contains the resources, or keep the project and delete the individual resources."
+      },
+      {
+        "heading": "Delete the individual resources",
+        "level": 3,
+        "content": "To avoid incurring charges to your Google Cloud account for the resources used in this tutorial, either delete the project that contains the resources, or keep the project and delete the individual resources by running the following commands:\n  1. Delete the resources you created in this tutorial:\n\n```\ngcloud container clusters delete ${CLUSTER_NAME} --location=${REGION}\ngcloud storage rm --recursive gs://${GCS_BUCKET_NAME}\ngcloud artifacts docker images delete ${IMAGE_URI} --delete-tags\n\n```\n\n  2. If you don't need the data generated by XProf, remove the Cloud Storage bucket used by XProf:\n\n```\ngcloud storage rm --recursive gs://${XPROF_GCS_BUCKET_NAME}\n\n```"
+      },
+      {
+        "heading": "What's next",
+        "level": 2,
+        "content": "* Learn more about [TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus).\n  * Explore the [JAX repository](https://github.com/google/jax)."
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "gcloud config set project PROJECT_ID\ngcloud config set billing/quota_project PROJECT_ID\nexport PROJECT_ID=$(gcloud config get project)\nexport PROJECT_NUMBER=$(gcloud projects describe ${PROJECT_ID} --format=\"value(projectNumber)\")\nexport CLUSTER_NAME=CLUSTER_NAME\nexport REGION=CONTROL_PLANE_LOCATION\nexport ZONE=ZONE\nexport GCS_BUCKET_NAME=BUCKET_NAME"
+      },
+      {
+        "language": "text",
+        "code": "gcloud compute accelerator-types list --filter=\"name~ct6e\" --format=\"value(zone)\""
+      },
+      {
+        "language": "text",
+        "code": "git clone https://github.com/GoogleCloudPlatform/kubernetes-engine-samples.git\ncd kubernetes-engine-samples"
+      },
+      {
+        "language": "text",
+        "code": "cd ai-ml/llm-training-jax-tpu-gemma3"
+      },
+      {
+        "language": "text",
+        "code": "gcloud container clusters create-auto ${CLUSTER_NAME} \\\n    --location=${REGION}"
+      },
+      {
+        "language": "text",
+        "code": "gcloud container clusters create ${CLUSTER_NAME} \\\n    --enable-ip-alias \\\n    --addons GcsFuseCsiDriver \\\n    --machine-type=n2-standard-4 \\\n    --num-nodes=2 \\\n    --workload-pool=${PROJECT_ID}.svc.id.goog \\\n    --location=${REGION}"
+      },
+      {
+        "language": "text",
+        "code": "gcloud container node-pools create jax-tpu-nodepool \\\n    --cluster=${CLUSTER_NAME} \\\n    --machine-type=ct6e-standard-1t \\\n    --num-nodes=1 \\\n    --location=${REGION} \\\n    --node-locations=${ZONE} \\\n    --workload-metadata=GKE_METADATA"
+      },
+      {
+        "language": "text",
+        "code": "gcloud container clusters get-credentials ${CLUSTER_NAME} --location=${REGION}"
+      },
+      {
+        "language": "text",
+        "code": "kubectl apply --server-side -f https://github.com/kubernetes-sigs/jobset/releases/download/JOBSET_VERSION/manifests.yaml"
+      },
+      {
+        "language": "text",
+        "code": "kubectl get pods -n jobset-system"
+      },
+      {
+        "language": "text",
+        "code": "NAME                                         READY   STATUS    RESTARTS   AGE\njobset-controller-manager-6c56668494-l4dhc   1/1     Running   0          4m45s"
+      },
+      {
+        "language": "text",
+        "code": "wget https://huggingface.co/datasets/roneneldan/TinyStories/resolve/main/TinyStories-train.txt?download=true -O TinyStories-train.txt"
+      },
+      {
+        "language": "text",
+        "code": "gcloud storage buckets create gs://${GCS_BUCKET_NAME} \\\n    --location=${REGION} \\\n    --enable-hierarchical-namespace \\\n    --uniform-bucket-level-access\ngcloud storage cp TinyStories-train.txt gs://${GCS_BUCKET_NAME}"
+      },
+      {
+        "language": "text",
+        "code": "kubectl create serviceaccount jaxserviceaccount --namespace default"
+      },
+      {
+        "language": "text",
+        "code": "gcloud storage buckets add-iam-policy-binding gs://${GCS_BUCKET_NAME} \\\n    --member=\"principal://iam.googleapis.com/projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${PROJECT_ID}.svc.id.goog/subject/ns/default/sa/jaxserviceaccount\" \\\n    --role=\"roles/storage.objectViewer\" \\\n    --condition=None"
+      },
+      {
+        "language": "text",
+        "code": "# Copyright 2026 Google LLC\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#     http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n\nimport grain.python as pygrain\nimport jax\nimport jax.numpy as jnp\nimport optax\nimport pandas as pd\nimport time\nimport argparse\n\nfrom dataclasses import dataclass\nfrom functools import partial\nfrom gemma import gm\nfrom flax.training import train_state\nfrom jax.sharding import Mesh, PartitionSpec, NamedSharding\n\njax.distributed.initialize()\nprint(\"Global device count:\", jax.device_count())\nprint(\"jax version:\", jax.__version__)\n\ntokenizer = gm.text.Gemma3Tokenizer()\nnum_epochs = 1\nlearning_rate = 2e-5\n\n@dataclass\nclass TextDataset:\n    data: list\n    maxlen: int\n    tokenizer: gm.text.Gemma3Tokenizer\n\n    def __len__(self):\n        return len(self.data)\n\n    def __getitem__(self, idx: int):\n        encoding = self.tokenizer.encode(self.data[idx])[:self.maxlen]  # Tokenize and truncate\n        return encoding + [0] * (self.maxlen - len(encoding))  # Pad to maxlen\n\ndef load_and_preprocess_data(file_path, batch_size, maxlen, datacount, tokenizer):\n\n    with open(file_path, 'r') as f:\n      text = f.read()\n\n    stories = text.split('<|endoftext|>')\n    stories = [story for story in stories if story.strip()][:datacount]\n    df = pd.DataFrame({'text': stories})\n    data = df['text'].dropna().tolist()\n    dataset = TextDataset(data, maxlen, tokenizer)\n\n    sampler = pygrain.IndexSampler(\n        len(dataset),\n        shuffle=False,\n        seed=42,\n        shard_options=pygrain.NoSharding(),\n        num_epochs=num_epochs,\n    )\n\n    dataloader = pygrain.DataLoader(\n        data_source=dataset,\n        sampler=sampler,\n        operations=[pygrain.Batch(batch_size=batch_size, drop_remainder=True)],\n    )\n\n    return dataloader\n\ndef generate_text(model, params, tokenizer, prompt):\n    sampler = gm.text.Sampler(\n        model=model,\n        params=params,\n        tokenizer=tokenizer,\n    )\n    print(\"Generating response for: \" + prompt)\n    out = sampler.sample(prompt, max_new_tokens=32)\n    print(\"Reponse: \\n\" + out + \"\\n\")\n    return out\n\nprep_target_batch = jax.vmap(lambda tokens: jnp.concatenate((tokens[1:], jnp.array([0]))))\n\n@partial(jax.jit, donate_argnums=(0,))\ndef train_step(state, batch):\n    \"\"\"Performs one supervised fine-tuning step.\"\"\"\n\n    def loss_fn(params):\n        # Run the forward pass. The model returns logits.\n        logits = state.apply_fn({'params': params}, batch[0]).logits\n\n        # Calculate the cross-entropy loss.\n        loss = optax.softmax_cross_entropy_with_integer_labels(\n            logits=logits, labels=batch[1]\n        ).mean()\n\n        return loss\n\n    # Compute gradients\n    grad_fn = jax.value_and_grad(loss_fn)\n    loss, grads = grad_fn(state.params)\n\n    # Update the model state\n    state = state.apply_gradients(grads=grads)\n\n    metrics = {'loss': loss}\n    return state, metrics\n\ndef train_model(state, text_dl, num_epochs, sharding):\n    batchCount = 0\n    start_time = time.time()\n    for epoch in range(num_epochs):\n        start_time = time.time()\n        for batch in text_dl:\n            if len(batch) % len(jax.devices()) != 0:\n              continue  # skip the remaining elements\n            input_batch = jnp.array(jnp.array(batch).T)\n            target_batch = prep_target_batch(input_batch)\n            state, metrics = train_step(state, jax.device_put((input_batch, target_batch), sharding))\n\n            if batchCount % 10 == 0:\n                print(f\"Loss after batch {batchCount}: {metrics['loss']}\")\n            batchCount += 1\n\n    end_time = time.time()\n    print(f\"Completed training model. Total time for training {end_time - start_time} seconds \\n\")\n    return state\n\ndef run_training(maxlen, batch_size, datacount):\n    print(f\"Batch size: {batch_size}, Max length: {maxlen}, Data count: {datacount}\")\n    #Load the training data\n    tiny_stories_dl = load_and_preprocess_data('/data/TinyStories-train.txt', batch_size, maxlen, datacount, tokenizer)\n    # Get the Gemma3 model\n    model = gm.nn.Gemma3_270M()\n    # Load the pretrained parameters\n    params = gm.ckpts.load_params(gm.ckpts.CheckpointPath.GEMMA3_270M_PT)\n    # Create an optimizer\n    optimizer = optax.adamw(learning_rate=learning_rate)\n    # Define sharding for data parallel training\n    mesh = Mesh(jax.devices(), ('batch',))\n    sharding = NamedSharding(mesh, PartitionSpec('batch', None))\n\n    # Testing out current state of the model\n    test_prompt = \"Once upon a time, there was a girl named Amy.\"\n    generate_text(model, params, tokenizer, test_prompt)\n\n    state = train_state.TrainState.create(\n        apply_fn=model.apply,\n        params=params,\n        tx=optimizer\n    )\n\n    # Perform post training\n    print(\"Start training model\")\n    state = train_model(state, tiny_stories_dl, num_epochs, sharding)\n\n    # Final text generation\n    generate_text(model, state.params, tokenizer, test_prompt)\n\nif __name__ == '__main__':\n    parser = argparse.ArgumentParser(description='Train Gemma model with custom parameters.')\n    parser.add_argument('--maxlen', type=int, default=256, help='Maximum sequence length')\n    parser.add_argument('--batch_size', type=int, default=128, help='Batch size')\n    parser.add_argument('--datacount', type=int, default=296000, help='Number of data samples to use')\n    args = parser.parse_args()\n\n    run_training(maxlen=args.maxlen, batch_size=args.batch_size, datacount=args.datacount)"
+      },
+      {
+        "language": "text",
+        "code": "# Copyright 2026 Google LLC\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#     http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n\nFROM us-docker.pkg.dev/cloud-tpu-images/jax-ai-image/tpu:jax0.7.2-rev1\nRUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*\n\nRUN pip install --upgrade pip\nRUN pip install gemma grain\n\nWORKDIR /app\n\n# Copy your training script into the container\nCOPY Gemma3LLMTrain.py ."
+      },
+      {
+        "language": "text",
+        "code": "export REPOSITORY=REPOSITORY_NAME\nexport IMAGE_NAME=\"jax-gemma3-training\"\nexport IMAGE_TAG=\"latest\"\nexport DOCKERFILE_PATH=\"./Dockerfile\"\nexport IMAGE_URI=\"${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPOSITORY}/${IMAGE_NAME}:${IMAGE_TAG}\"\n\ndocker build -t \"${IMAGE_URI}\" -f \"${DOCKERFILE_PATH}\" .\ngcloud auth configure-docker \"${REGION}-docker.pkg.dev\" -q\ndocker push \"${IMAGE_URI}\""
+      },
+      {
+        "language": "text",
+        "code": "export PROJECT_NUMBER=$(gcloud projects describe $PROJECT_ID --format 'get(projectNumber)')\ngcloud artifacts repositories add-iam-policy-binding ${REPOSITORY} \\\n    --project=${PROJECT_ID} \\\n    --location=${REGION} \\\n    --member=\"serviceAccount:${PROJECT_NUMBER}-compute@developer.gserviceaccount.com\" \\\n    --role=\"roles/artifactregistry.reader\""
+      },
+      {
+        "language": "text",
+        "code": "# Copyright 2026 Google LLC\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#     http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n\napiVersion: batch/v1\nkind: Job\nmetadata:\n  name: jax-gemma3-train-singlehost\nspec:\n  template:\n    metadata:\n      annotations:\n        gke-gcsfuse/volumes: \"true\"\n    spec:\n      serviceAccountName: jaxserviceaccout\n      containers:\n      - name: training-container\n        image: ${IMAGE_URI}\n        imagePullPolicy: \"Always\"\n        command: [\"python\", \"Gemma3LLMTrain.py\", \"--maxlen\", \"256\", \"--batch_size\", \"64\", \"--datacount\", \"355120\"]\n        resources:\n          limits:\n            google.com/tpu: 1\n        volumeMounts:\n        - name: gcs-fuse-csi-ephemeral\n          mountPath: /data\n      nodeSelector:\n        cloud.google.com/gke-tpu-accelerator: tpu-v6e-slice\n        cloud.google.com/gke-tpu-topology: 1x1\n      restartPolicy: Never\n      volumes:\n      - name: gcs-fuse-csi-ephemeral\n        csi:\n          driver: gcsfuse.csi.storage.gke.io\n          volumeAttributes:\n            bucketName: ${GCS_BUCKET_NAME}\n            mountOptions: \"implicit-dirs,file-cache:enable-parallel-downloads:true,file-cache:parallel-downloads-per-file:100,file-cache:max-parallel-downloads:-1,file-cache:download-chunk-size-mb:10,file-cache:max-size-mb:-1\"\n  backoffLimit: 1"
+      },
+      {
+        "language": "text",
+        "code": "envsubst < training_singlehost.yaml | kubectl apply -f -"
+      },
+      {
+        "language": "text",
+        "code": "# Find the Pods\nkubectl get pods"
+      },
+      {
+        "language": "text",
+        "code": "kubectl logs -f pods/POD_NAME"
+      },
+      {
+        "language": "text",
+        "code": "Global device count: 1\nBatch size: 128, Max length: 256, Data count: 96000\nI1028 00:12:55.925999 1387 google_auth_provider.cc:181] Running on GCE, using service account ...\nGenerating response for: Once upon a time, there was a girl named Amy.\nResponse:\nAmy lived in a small house. The house was in a big field. Amy liked to play in the big field. She\nStart training model\nLoss after batch 0: 10.25\nLoss after batch 10: 4.3125\n.\n.\n.\nLoss after batch 740: 1.41406\nCompleted training model. Total time for training 294.6791355609894 seconds\nGenerating response for: Once upon a time, there was a girl named Amy.\nResponse:\nShe loved to play with her toys. One day, Amy's mom told her that she had to go to the store to"
+      },
+      {
+        "language": "text",
+        "code": "gcloud container node-pools create jax-tpu-multihost1 \\\n    --cluster=${CLUSTER_NAME} \\\n    --machine-type=ct6e-standard-4t \\\n    --num-nodes=2 \\\n    --tpu-topology=2x4 \\\n    --location=${REGION} \\\n    --node-locations=${ZONE}"
+      },
+      {
+        "language": "text",
+        "code": "# Copyright 2026 Google LLC\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#     http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n\napiVersion: jobset.x-k8s.io/v1alpha2\nkind: JobSet\nmetadata:\n  name: jax-gemma3-train-multihost\nspec:\n  replicatedJobs:\n    - name: trainers\n      replicas: 1\n      template:\n        spec:\n          parallelism: 2\n          completions: 2\n          backoffLimit: 1\n          template:\n            metadata:\n              annotations:\n                gke-gcsfuse/volumes: \"true\"\n            spec:\n              serviceAccountName: jaxserviceaccout\n              nodeSelector:\n                cloud.google.com/gke-tpu-accelerator: tpu-v6e-slice\n                cloud.google.com/gke-tpu-topology: 2x4\n                cloud.google.com/gke-nodepool: jax-tpu-multihost1\n              containers:\n              - name: training-container\n                image: ${IMAGE_URI} \n                imagePullPolicy: \"Always\"\n                ports:\n                  - containerPort: 8471\n                command: [\"python\", \"Gemma3LLMTrain.py\", \"--maxlen\", \"256\", \"--batch_size\", \"64\", \"--datacount\", \"5120\"]\n                resources:\n                  limits:\n                    google.com/tpu: 4\n                volumeMounts:\n                - name: gcs-fuse-csi-ephemeral\n                  mountPath: /data\n              volumes:\n                - name: gcs-fuse-csi-ephemeral\n                  csi:\n                    driver: gcsfuse.csi.storage.gke.io\n                    volumeAttributes:\n                      bucketName: ${GCS_BUCKET_NAME}\n                      mountOptions: \"implicit-dirs,file-cache:enable-parallel-downloads:true,file-cache:parallel-downloads-per-file:100,file-cache:max-parallel-downloads:-1,file-cache:download-chunk-size-mb:10,file-cache:max-size-mb:-1\""
+      },
+      {
+        "language": "text",
+        "code": "envsubst < training_multihost_jobset.yaml | kubectl apply -f -"
+      },
+      {
+        "language": "text",
+        "code": "gcloud container node-pools create jax-tpu-multihost1 \\\n  --cluster=${CLUSTER_NAME} \\\n  --machine-type=ct6e-standard-4t \\\n  --num-nodes=2 \\\n  --tpu-topology=2x4 \\\n  --location=${REGION} \\\n  --node-locations=${ZONE}\n\ngcloud container node-pools create jax-tpu-multihost2 \\\n  --cluster=${CLUSTER_NAME} \\\n  --machine-type=ct6e-standard-4t \\\n  --num-nodes=2 \\\n  --tpu-topology=2x4 \\\n  --location=${REGION} \\\n  --node-locations=${ZONE}"
+      },
+      {
+        "language": "text",
+        "code": "# Copyright 2026 Google LLC\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#     http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n\napiVersion: jobset.x-k8s.io/v1alpha2\nkind: JobSet\nmetadata:\n  name: jax-gemma3-train-multislice\nspec:\n  replicatedJobs:\n    - name: trainers\n      replicas: 2\n      template:\n        spec:\n          parallelism: 2\n          completions: 2\n          backoffLimit: 1\n          template:\n            metadata:\n              annotations:\n                gke-gcsfuse/volumes: \"true\"\n            spec:\n              serviceAccountName: jaxserviceaccout\n              nodeSelector:\n                cloud.google.com/gke-tpu-accelerator: tpu-v6e-slice\n                cloud.google.com/gke-tpu-topology: 2x4\n              containers:\n              - name: training-container\n                image: ${IMAGE_URI}\n                imagePullPolicy: \"Always\"\n                ports:\n                  - containerPort: 8471\n                command: [\"python\", \"Gemma3LLMTrain.py\", \"--maxlen\", \"256\", \"--batch_size\", \"64\", \"--datacount\", \"5120\"]\n                resources:\n                  limits:\n                    google.com/tpu: 4\n                volumeMounts:\n                - name: gcs-fuse-csi-ephemeral\n                  mountPath: /data\n              volumes:\n                - name: gcs-fuse-csi-ephemeral\n                  csi:\n                    driver: gcsfuse.csi.storage.gke.io\n                    volumeAttributes:\n                      bucketName: ${GCS_BUCKET_NAME}\n                      mountOptions: \"implicit-dirs,file-cache:enable-parallel-downloads:true,file-cache:parallel-downloads-per-file:100,file-cache:max-parallel-downloads:-1,file-cache:download-chunk-size-mb:10,file-cache:max-size-mb:100\""
+      },
+      {
+        "language": "text",
+        "code": "envsubst < training_multislice_jobset.yaml | kubectl apply -f -"
+      },
+      {
+        "language": "text",
+        "code": "cd ai-ml/llm-training-jax-tpu-gemma3/xprof-enabled"
+      },
+      {
+        "language": "text",
+        "code": "export REPOSITORY=REPOSITORY_NAME\nexport IMAGE_NAME=\"jax-gemma3-training-xp\"\nexport IMAGE_TAG=\"latest\"\nexport DOCKERFILE_PATH=\"./Dockerfile\"\nexport IMAGE_URI=\"${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPOSITORY}/${IMAGE_NAME}:${IMAGE_TAG}\"\n\ndocker build -t \"${IMAGE_URI}\" -f \"${DOCKERFILE_PATH}\" .\ngcloud auth configure-docker \"${REGION}-docker.pkg.dev\" -q\ndocker push \"${IMAGE_URI}\""
+      },
+      {
+        "language": "text",
+        "code": "# Copyright 2026 Google LLC\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#     http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n\nFROM us-docker.pkg.dev/cloud-tpu-images/jax-ai-image/tpu:jax0.7.2-rev1\nRUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*\n\nRUN pip install --upgrade pip\nRUN pip install gemma grain equinox\nRUN pip install xprof\n\nWORKDIR /app\n\n# Copy your training script into the container\nCOPY Gemma3LLMTrain.py ."
+      },
+      {
+        "language": "text",
+        "code": "# Copyright 2026 Google LLC\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#     http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n\napiVersion: batch/v1\nkind: Job\nmetadata:\n  name: jax-gemma3-train-singlehost\nspec:\n  template:\n    metadata:\n      annotations:\n        gke-gcsfuse/volumes: \"true\"\n    spec:\n      serviceAccountName: jaxserviceaccout\n      containers:\n      - name: training-container\n        image: ${IMAGE_URI}\n        imagePullPolicy: \"Always\"\n        command: [\"python\", \"Gemma3LLMTrain.py\", \"--maxlen\", \"256\", \"--batch_size\", \"64\", \"--datacount\", \"851200\"]\n        resources:\n          limits:\n            google.com/tpu: 1\n        volumeMounts:\n        - name: gcs-fuse-csi-ephemeral\n          mountPath: /data\n        - name: gcs-fuse-csi-ephemeral2\n          mountPath: /xprof\n      nodeSelector:\n        cloud.google.com/gke-tpu-accelerator: tpu-v6e-slice\n        cloud.google.com/gke-tpu-topology: 1x1\n      restartPolicy: Never\n      volumes:\n      - name: gcs-fuse-csi-ephemeral\n        csi:\n          driver: gcsfuse.csi.storage.gke.io\n          volumeAttributes:\n            bucketName: ${GCS_BUCKET_NAME}\n            mountOptions: \"implicit-dirs,file-cache:enable-parallel-downloads:true,file-cache:parallel-downloads-per-file:100,file-cache:max-parallel-downloads:-1,file-cache:download-chunk-size-mb:10,file-cache:max-size-mb:-1\"\n      - name: gcs-fuse-csi-ephemeral2\n        csi:\n          driver: gcsfuse.csi.storage.gke.io\n          volumeAttributes:\n            bucketName: ${XPROF_GCS_BUCKET_NAME}\n            mountOptions: \"implicit-dirs,file-cache:enable-parallel-downloads:true,file-cache:parallel-downloads-per-file:100,file-cache:max-parallel-downloads:-1,file-cache:download-chunk-size-mb:10,file-cache:max-size-mb:-1\"\n  backoffLimit: 1"
+      },
+      {
+        "language": "text",
+        "code": "envsubst < training_singlehost.yaml | kubectl apply -f -"
+      },
+      {
+        "language": "text",
+        "code": "export XPROF_GCS_BUCKET_NAME=\"XPROF_GCS_BUCKET_NAME\"\n\ngcloud storage buckets add-iam-policy-binding \"gs://${XPROF_GCS_BUCKET_NAME}\" \\\n    --member=\"principal://iam.googleapis.com/projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${PROJECT_ID}.svc.id.goog/subject/ns/default/sa/jaxserviceaccount\" \\\n    --role=\"roles/storage.objectUser\" \\\n    --project=\"${PROJECT_ID}\" \\\n    --condition=None"
+      },
+      {
+        "language": "text",
+        "code": "kubectl exec POD_NAME -c training-container -it -- bash # exec into the container\nxprof --port 9001 --logdir /xprof # start xprof"
+      },
+      {
+        "language": "text",
+        "code": "kubectl port-forward POD_NAME 9001:9001"
+      },
+      {
+        "language": "text",
+        "code": "http://localhost:9001/"
+      },
+      {
+        "language": "text",
+        "code": "gcloud container clusters delete ${CLUSTER_NAME} --location=${REGION}\ngcloud storage rm --recursive gs://${GCS_BUCKET_NAME}\ngcloud artifacts docker images delete ${IMAGE_URI} --delete-tags"
+      },
+      {
+        "language": "text",
+        "code": "gcloud storage rm --recursive gs://${XPROF_GCS_BUCKET_NAME}"
+      }
+    ],
+    "cli_commands": [
+      "gcloud config set project PROJECT_ID",
+      "gcloud config set billing/quota_project PROJECT_ID",
+      "export PROJECT_ID=$(gcloud config get project)",
+      "export PROJECT_NUMBER=$(gcloud projects describe ${PROJECT_ID} --format=\"value(projectNumber)\")",
+      "export CLUSTER_NAME=CLUSTER_NAME",
+      "export REGION=CONTROL_PLANE_LOCATION",
+      "export ZONE=ZONE",
+      "export GCS_BUCKET_NAME=BUCKET_NAME",
+      "gcloud compute accelerator-types list --filter=\"name~ct6e\" --format=\"value(zone)\"",
+      "git clone https://github.com/GoogleCloudPlatform/kubernetes-engine-samples.git",
+      "gcloud container clusters create-auto ${CLUSTER_NAME} \\",
+      "gcloud container clusters create ${CLUSTER_NAME} \\",
+      "gcloud container node-pools create jax-tpu-nodepool \\",
+      "gcloud container clusters get-credentials ${CLUSTER_NAME} --location=${REGION}",
+      "kubectl apply --server-side -f https://github.com/kubernetes-sigs/jobset/releases/download/JOBSET_VERSION/manifests.yaml",
+      "kubectl get pods -n jobset-system",
+      "gcloud storage buckets create gs://${GCS_BUCKET_NAME} \\",
+      "gcloud storage cp TinyStories-train.txt gs://${GCS_BUCKET_NAME}",
+      "kubectl create serviceaccount jaxserviceaccount --namespace default",
+      "gcloud storage buckets add-iam-policy-binding gs://${GCS_BUCKET_NAME} \\",
+      "export REPOSITORY=REPOSITORY_NAME",
+      "export IMAGE_NAME=\"jax-gemma3-training\"",
+      "export IMAGE_TAG=\"latest\"",
+      "export DOCKERFILE_PATH=\"./Dockerfile\"",
+      "export IMAGE_URI=\"${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPOSITORY}/${IMAGE_NAME}:${IMAGE_TAG}\"",
+      "docker build -t \"${IMAGE_URI}\" -f \"${DOCKERFILE_PATH}\" .",
+      "gcloud auth configure-docker \"${REGION}-docker.pkg.dev\" -q",
+      "docker push \"${IMAGE_URI}\"",
+      "export PROJECT_NUMBER=$(gcloud projects describe $PROJECT_ID --format 'get(projectNumber)')",
+      "gcloud artifacts repositories add-iam-policy-binding ${REPOSITORY} \\",
+      "kubectl get pods",
+      "kubectl logs -f pods/POD_NAME",
+      "gcloud container node-pools create jax-tpu-multihost1 \\",
+      "gcloud container node-pools create jax-tpu-multihost2 \\",
+      "export IMAGE_NAME=\"jax-gemma3-training-xp\"",
+      "export XPROF_GCS_BUCKET_NAME=\"XPROF_GCS_BUCKET_NAME\"",
+      "gcloud storage buckets add-iam-policy-binding \"gs://${XPROF_GCS_BUCKET_NAME}\" \\",
+      "kubectl exec POD_NAME -c training-container -it -- bash # exec into the container",
+      "kubectl port-forward POD_NAME 9001:9001",
+      "gcloud container clusters delete ${CLUSTER_NAME} --location=${REGION}",
+      "gcloud storage rm --recursive gs://${GCS_BUCKET_NAME}",
+      "gcloud artifacts docker images delete ${IMAGE_URI} --delete-tags",
+      "gcloud storage rm --recursive gs://${XPROF_GCS_BUCKET_NAME}"
+    ],
+    "environment_variables": [
+      "PROJECT_ID",
+      "PROJECT_NUMBER",
+      "ZONE"
+    ],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Fine-tune an LLM on GKE with JAX' (https://docs.cloud.google.com/kubernetes-engine/docs/tutorials/train-llm-tpus-gke-jax)?",
+        "answer": "Introductory distributed Gemma fine-tuning tutorial on TPUs using JAX; points production LLM fine-tuning to MaxText and diffusion work to MaxDiffusion."
+      },
+      {
+        "question": "How does 'Fine-tune an LLM on GKE with JAX' handle: Fine-tune a LLM using TPUs on GKE with JAX?",
+        "answer": "[ Autopilot ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview) [ Standard ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/choose-cluster-mode)\nThis tutorial shows you how to fine-tune a large language model (LLM) using Tensor Processing Units (TPUs) on Google Kubernetes Engine (GKE) with JAX. Fine-tuning lets you adapt a foundation model like Gemma 3 to a specific domain or task. This process improves the precision and accuracy of the model by updating its parameters with your own specialized dataset.\nThis guide is a good starting point if you need the granular control, customization, scalability, resilience, portability, and cost-effectiveness of managed Kubernetes when fine-tuning your AI/ML workloads."
+      },
+      {
+        "question": "How does 'Fine-tune an LLM on GKE with JAX' handle: Background?",
+        "answer": "By using TPUs on GKE with Jax to fine-tune an LLM, you can build a robust, production-ready fine-tuning solution with all the benefits of managed Kubernetes."
+      },
+      {
+        "question": "How does 'Fine-tune an LLM on GKE with JAX' handle: Gemma?",
+        "answer": "[Gemma](https://ai.google.dev/gemma) is a set of openly available, lightweight, generative AI/ML multimodal models released under an open license. These AI models are available to run in your applications, hardware, mobile devices, or hosted services. Gemma 3 introduces multimodality, and it supports vision-language input and text outputs. It handles context windows of up to 128,000 tokens and supports over 140 languages. Gemma 3 also offers improved math, reasoning, and chat capabilities, including structured outputs and function calling.\nYou can use the Gemma models for text generation, or you can also tune these models for specialized tasks.\nFor more information, see the [Gemma documentation](https://ai.google.dev/gemma/docs)."
+      },
+      {
+        "question": "How does 'Fine-tune an LLM on GKE with JAX' handle: TPUs?",
+        "answer": "TPUs are application-specific integrated circuits (ASICs) that Google custom-developed to accelerate machine learning and AI models that are built using frameworks such as [TensorFlow](https://www.tensorflow.org/), [PyTorch](https://pytorch.org/), and [JAX](https://github.com/google/jax).\nBefore you use TPUs in GKE, we recommend that you complete the following learning path:\n  1. Learn about current TPU version availability with the [Cloud TPU system architecture](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#versions).\n  2. Learn [about TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus)."
+      },
+      {
+        "question": "How does 'Fine-tune an LLM on GKE with JAX' handle: JAX?",
+        "answer": "[JAX](https://github.com/google/jax) is a high-performance machine learning framework that is designed to be used with TPUs and GPUs. JAX provides an API for building and training machine learning models.\nTo learn more, see the [JAX repository](https://github.com/google/jax)."
+      },
+      {
+        "question": "How does 'Fine-tune an LLM on GKE with JAX' handle: Objectives?",
+        "answer": "This tutorial covers the following steps:\n  1. Create a GKE Autopilot or Standard cluster with the recommended TPU topology, based on the model characteristics. During this tutorial, you perform the fine-tuning on single-host node pools.\n  2. Add data to a Cloud Storage bucket and mount it to the container through Cloud Storage FUSE.\n  3. Deploy the LLM fine-tuning Job on GKE.\n  4. Monitor the fine-tuning Job and view the logs."
+      },
+      {
+        "question": "How does 'Fine-tune an LLM on GKE with JAX' handle: Before you begin?",
+        "answer": "* Sign in to your Google Cloud account. If you're new to Google Cloud, [ create an account](https://console.cloud.google.com/freetrial) to evaluate how our products perform in real-world scenarios. New customers also get $300 in free credits to run, test, and deploy workloads. \n  * In the Google Cloud console, on the project selector page, select or create a Google Cloud project.\n**Roles required to select or create a project**\n    * **Select a project** : Selecting a project doesn't require a specific IAM role\u2014you can select any project that you've been granted a role on. \n    * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.\n[Go to project selector](https://console.cloud.google.com/projectselec"
+      },
+      {
+        "question": "How does 'Fine-tune an LLM on GKE with JAX' handle: Check for the roles?",
+        "answer": "1. In the Google Cloud console, go to the **IAM** page. \n[Go to IAM](https://console.cloud.google.com/projectselector/iam-admin/iam?supportedpurview=project)\n    2. Select the project. \n    3. In the **Principal** column, find all rows that identify you or a group that you're included in. To learn which groups you're included in, contact your administrator. \n    4. For all rows that specify or include you, check the **Role** column to see whether the list of roles includes the required roles."
+      },
+      {
+        "question": "How does 'Fine-tune an LLM on GKE with JAX' handle: Grant the roles?",
+        "answer": "1. In the Google Cloud console, go to the **IAM** page. \n[Go to IAM](https://console.cloud.google.com/projectselector/iam-admin/iam?supportedpurview=project)\n    2. Select the project. \n    3. Click person_add **Grant access**. \n    4. In the **New principals** field, enter your user identifier. This is typically the email address for a Google Account.\n    5. Click **Select a role** , then search for the role. \n    6. To grant additional roles, click add **Add another role** and add each additional role. \n    7. Click **Save**. \n\n\n  * Ensure that you have sufficient quota for 16 TPU Trillium (v6e) chips. In this tutorial, you use a node pool configuration that requires 16 chips and [on-demand instances](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/tpus#ensure-quota).\n  * Ensure that you have a Docker repository. If you don't have one, [create a standard repository](https://docs.cloud.google.com/artifact-registry/docs/repositories/create-repos) in Artifact Registry."
+      }
+    ],
+    "full_markdown": "#  Fine-tune a LLM using TPUs on GKE with JAX\n[ Autopilot ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview) [ Standard ](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/choose-cluster-mode)\nThis tutorial shows you how to fine-tune a large language model (LLM) using Tensor Processing Units (TPUs) on Google Kubernetes Engine (GKE) with JAX. Fine-tuning lets you adapt a foundation model like Gemma 3 to a specific domain or task. This process improves the precision and accuracy of the model by updating its parameters with your own specialized dataset.\nThis guide is a good starting point if you need the granular control, customization, scalability, resilience, portability, and cost-effectiveness of managed Kubernetes when fine-tuning your AI/ML workloads.\n## Background\nBy using TPUs on GKE with Jax to fine-tune an LLM, you can build a robust, production-ready fine-tuning solution with all the benefits of managed Kubernetes.\n### Gemma\n[Gemma](https://ai.google.dev/gemma) is a set of openly available, lightweight, generative AI/ML multimodal models released under an open license. These AI models are available to run in your applications, hardware, mobile devices, or hosted services. Gemma 3 introduces multimodality, and it supports vision-language input and text outputs. It handles context windows of up to 128,000 tokens and supports over 140 languages. Gemma 3 also offers improved math, reasoning, and chat capabilities, including structured outputs and function calling.\nYou can use the Gemma models for text generation, or you can also tune these models for specialized tasks.\nFor more information, see the [Gemma documentation](https://ai.google.dev/gemma/docs).\n### TPUs\nTPUs are application-specific integrated circuits (ASICs) that Google custom-developed to accelerate machine learning and AI models that are built using frameworks such as [TensorFlow](https://www.tensorflow.org/), [PyTorch](https://pytorch.org/), and [JAX](https://github.com/google/jax).\nBefore you use TPUs in GKE, we recommend that you complete the following learning path:\n  1. Learn about current TPU version availability with the [Cloud TPU system architecture](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#versions).\n  2. Learn [about TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus).\n\n\n### JAX\n[JAX](https://github.com/google/jax) is a high-performance machine learning framework that is designed to be used with TPUs and GPUs. JAX provides an API for building and training machine learning models.\nTo learn more, see the [JAX repository](https://github.com/google/jax).\n## Objectives\nThis tutorial covers the following steps:\n  1. Create a GKE Autopilot or Standard cluster with the recommended TPU topology, based on the model characteristics. During this tutorial, you perform the fine-tuning on single-host node pools.\n  2. Add data to a Cloud Storage bucket and mount it to the container through Cloud Storage FUSE.\n  3. Deploy the LLM fine-tuning Job on GKE.\n  4. Monitor the fine-tuning Job and view the logs.\n\n\n## Before you begin\n  * Sign in to your Google Cloud account. If you're new to Google Cloud, [ create an account](https://console.cloud.google.com/freetrial) to evaluate how our products perform in real-world scenarios. New customers also get $300 in free credits to run, test, and deploy workloads. \n  * In the Google Cloud console, on the project selector page, select or create a Google Cloud project.\n**Roles required to select or create a project**\n    * **Select a project** : Selecting a project doesn't require a specific IAM role\u2014you can select any project that you've been granted a role on. \n    * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.\n[Go to project selector](https://console.cloud.google.com/projectselector2/home/dashboard)\n  * [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). \n  * Enable the required API, if it is not already enabled. \n**Roles required to enable APIs**\nTo enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n[Enable the API](https://console.cloud.google.com/apis/enableflow?apiid=container.googleapis.com)\n  * In the Google Cloud console, on the project selector page, select or create a Google Cloud project.\n**Roles required to select or create a project**\n    * **Select a project** : Selecting a project doesn't require a specific IAM role\u2014you can select any project that you've been granted a role on. \n    * **Create a project** : To create a project, you need the Project Creator role (`roles/resourcemanager.projectCreator`), which contains the `resourcemanager.projects.create` permission. [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n**Note** : If you don't plan to keep the resources that you create in this procedure, create a project instead of selecting an existing project. After you finish these steps, you can delete the project, removing all resources associated with the project.\n[Go to project selector](https://console.cloud.google.com/projectselector2/home/dashboard)\n  * [Verify that billing is enabled for your Google Cloud project](https://docs.cloud.google.com/billing/docs/how-to/verify-billing-enabled#confirm_billing_is_enabled_on_a_project). \n  * Enable the required API, if it is not already enabled. \n**Roles required to enable APIs**\nTo enable APIs, you need the `serviceusage.services.enable` permission. If you created the project, then you likely already have this permission through the Owner role (`roles/owner`). Otherwise, you can get this permission through the Service Usage Admin role (`roles/serviceusage.serviceUsageAdmin`). [Learn how to grant roles](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \n[Enable the API](https://console.cloud.google.com/apis/enableflow?apiid=container.googleapis.com)\n  * Make sure that you have the following role or roles on the project: roles/container.admin,roles/iam.serviceAccountAdmin,roles/storage.admin \n#### Check for the roles\n    1. In the Google Cloud console, go to the **IAM** page. \n[Go to IAM](https://console.cloud.google.com/projectselector/iam-admin/iam?supportedpurview=project)\n    2. Select the project. \n    3. In the **Principal** column, find all rows that identify you or a group that you're included in. To learn which groups you're included in, contact your administrator. \n    4. For all rows that specify or include you, check the **Role** column to see whether the list of roles includes the required roles. \n#### Grant the roles\n    1. In the Google Cloud console, go to the **IAM** page. \n[Go to IAM](https://console.cloud.google.com/projectselector/iam-admin/iam?supportedpurview=project)\n    2. Select the project. \n    3. Click person_add **Grant access**. \n    4. In the **New principals** field, enter your user identifier. This is typically the email address for a Google Account.\n    5. Click **Select a role** , then search for the role. \n    6. To grant additional roles, click add **Add another role** and add each additional role. \n    7. Click **Save**. \n\n\n  * Ensure that you have sufficient quota for 16 TPU Trillium (v6e) chips. In this tutorial, you use a node pool configuration that requires 16 chips and [on-demand instances](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/tpus#ensure-quota).\n  * Ensure that you have a Docker repository. If you don't have one, [create a standard repository](https://docs.cloud.google.com/artifact-registry/docs/repositories/create-repos) in Artifact Registry.\n\n\n## Prepare the environment\nIn this tutorial, you use [Cloud Shell](https://docs.cloud.google.com/shell/docs) to manage resources hosted on Google Cloud. Cloud Shell comes preinstalled with the software you need for this tutorial, including [`kubectl`](https://kubernetes.io/docs/reference/kubectl/) and [Google Cloud CLI](https://docs.cloud.google.com/sdk/gcloud).\nTo set up your environment with Cloud Shell, follow these steps:\n  1. In the Google Cloud console, launch a Cloud Shell session and click ![Cloud Shell activation icon](https://docs.cloud.google.com/static/shell/docs/images/activate_cloud_shell.svg) **Activate Cloud Shell**. This action launches a session in the bottom pane of the Google Cloud console.\n  2. Set the default environment variables:\n\n```\ngcloud config set project PROJECT_ID\ngcloud config set billing/quota_project PROJECT_ID\nexport PROJECT_ID=$(gcloud config get project)\nexport PROJECT_NUMBER=$(gcloud projects describe ${PROJECT_ID} --format=\"value(projectNumber)\")\nexport CLUSTER_NAME=CLUSTER_NAME\nexport REGION=CONTROL_PLANE_LOCATION\nexport ZONE=ZONE\nexport GCS_BUCKET_NAME=BUCKET_NAME\n\n```\n\nReplace the following values:\n     * `PROJECT_ID`: your Google Cloud [project ID](https://docs.cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects).\n     * `CLUSTER_NAME`: the name of your GKE cluster.\n     * `CONTROL_PLANE_LOCATION`: the Compute Engine [region](https://docs.cloud.google.com/compute/docs/regions-zones/tpu-regions-zones) where your GKE cluster and TPU nodes are located. The region must contain zones where TPU Trillium (v6e) machine types are available.\n     * `ZONE`: a zone within your selected `CONTROL_PLANE_LOCATION` region where TPU Trillium (v6e) machine types are available. To list zones where TPU Trillium (v6e) TPUs are available, run the following command:\n\n```\n  gcloud compute accelerator-types list --filter=\"name~ct6e\" --format=\"value(zone)\"\n\n```\n\n     * `BUCKET_NAME`: the name of the Cloud Storage bucket that contains your training data.\n  3. Clone the sample repository:\n\n```\ngit clone https://github.com/GoogleCloudPlatform/kubernetes-engine-samples.git\ncd kubernetes-engine-samples\n\n```\n\n  4. Navigate to the working directory:\n\n```\ncd ai-ml/llm-training-jax-tpu-gemma3\n\n```\n\n## Create and configure Google Cloud resources\nIn this section, you create and configure Google Cloud resources.\n### Create a GKE cluster\nYou can fine-tune an LLM on TPUs in a GKE Autopilot or Standard cluster. We recommend that you use a Autopilot cluster for a fully managed Kubernetes experience. To choose the GKE mode of operation that's the best fit for your workloads, see [Choose a GKE mode of operation](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/choose-cluster-mode).\n### Autopilot\nCreate a GKE Autopilot cluster that uses [ Workload Identity Federation for GKE](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) and has Cloud Storage FUSE enabled.\n\n```\ngcloud container clusters create-auto ${CLUSTER_NAME} \\\n    --location=${REGION}\n\n```\n\nThe cluster creation might take several minutes.\n### Standard\n  1. Create a regional GKE Standard cluster that uses [Workload Identity Federation for GKE](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/workload-identity) and has Cloud Storage FUSE enabled.\n\n```\ngcloud container clusters create ${CLUSTER_NAME} \\\n    --enable-ip-alias \\\n    --addons GcsFuseCsiDriver \\\n    --machine-type=n2-standard-4 \\\n    --num-nodes=2 \\\n    --workload-pool=${PROJECT_ID}.svc.id.goog \\\n    --location=${REGION}\n\n```\n\nThe cluster creation might take several minutes.\n  2. Create a single-host node pool:\n\n```\ngcloud container node-pools create jax-tpu-nodepool \\\n    --cluster=${CLUSTER_NAME} \\\n    --machine-type=ct6e-standard-1t \\\n    --num-nodes=1 \\\n    --location=${REGION} \\\n    --node-locations=${ZONE} \\\n    --workload-metadata=GKE_METADATA\n\n```\n\nGKE creates a TPU Trillium node pool with a `1x1` topology and one node. The `--workload-metadata=GKE_METADATA` flag configures the node pool to use the GKE metadata server.\n### Install JobSet\n  1. Configure `kubectl` to communicate with your cluster:\n\n```\ngcloud container clusters get-credentials ${CLUSTER_NAME} --location=${REGION}\n\n```\n\n  2. Install the latest released version of [JobSet](https://jobset.sigs.k8s.io/docs/installation/):\n\n```\nkubectl apply --server-side -f https://github.com/kubernetes-sigs/jobset/releases/download/JOBSET_VERSION/manifests.yaml\n\n```\n\nReplace `JOBSET_VERSION` with the [latest released version of JobSet](https://github.com/kubernetes-sigs/jobset/releases). For example, `v0.11.0`.\n  3. Verify the JobSet installation:\n\n```\nkubectl get pods -n jobset-system\n\n```\n\nThe output is similar to the following:\n\n```\nNAME                                         READY   STATUS    RESTARTS   AGE\njobset-controller-manager-6c56668494-l4dhc   1/1     Running   0          4m45s\n\n```\n\nYou might need to add more nodes if JobSet is waiting for resources.\n\n\n### Configure Cloud Storage FUSE\nTo fine-tune the LLM, you need to provide training data. In this tutorial, you use the [TinyStories dataset](https://huggingface.co/datasets/roneneldan/TinyStories) from Hugging Face. This dataset contains short stories, synthetically generated by GPT-3.5 and GPT-4, that use a limited vocabulary.\nThis section covers the steps to configure Cloud Storage FUSE to read data from a Cloud Storage bucket.\n  1. Download the dataset:\n\n```\nwget https://huggingface.co/datasets/roneneldan/TinyStories/resolve/main/TinyStories-train.txt?download=true -O TinyStories-train.txt\n\n```\n\n  2. Upload the data into a new Cloud Storage bucket:\n\n```\ngcloud storage buckets create gs://${GCS_BUCKET_NAME} \\\n    --location=${REGION} \\\n    --enable-hierarchical-namespace \\\n    --uniform-bucket-level-access\ngcloud storage cp TinyStories-train.txt gs://${GCS_BUCKET_NAME}\n\n```\n\n  3. To allow your workload to read data through Cloud Storage FUSE, create a Kubernetes ServiceAccount (`jaxserviceaccount`) in the `default` namespace:\n\n```\nkubectl create serviceaccount jaxserviceaccount --namespace default\n\n```\n\n  4. Grant the `jaxserviceaccount` Kubernetes ServiceAccount the Storage Object Viewer role (`roles/storage.objectViewer`) on the Cloud Storage bucket:\n\n```\ngcloud storage buckets add-iam-policy-binding gs://${GCS_BUCKET_NAME} \\\n    --member=\"principal://iam.googleapis.com/projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${PROJECT_ID}.svc.id.goog/subject/ns/default/sa/jaxserviceaccount\" \\\n    --role=\"roles/storage.objectViewer\" \\\n    --condition=None\n\n```\n\nAny Pod running in the `default` namespace of your GKE cluster that uses the `jaxserviceaccount` ServiceAccount now has read access to the objects stored in the `gs://${GCS_BUCKET_NAME}` bucket, which is required for the fine-tuning Job to access the dataset by using Cloud Storage FUSE.\n\n\n## Create the fine-tuning script\nIn this section, you explore the training script that performs a fine-tuning operation on a Gemma 3 model. This script uses the `Gemma3Tokenizer`.\nReview the following `Gemma3LLMTrain.py` fine-tuning script:\n\n```\n# Copyright 2026 Google LLC\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#     http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n\nimport grain.python as pygrain\nimport jax\nimport jax.numpy as jnp\nimport optax\nimport pandas as pd\nimport time\nimport argparse\n\nfrom dataclasses import dataclass\nfrom functools import partial\nfrom gemma import gm\nfrom flax.training import train_state\nfrom jax.sharding import Mesh, PartitionSpec, NamedSharding\n\njax.distributed.initialize()\nprint(\"Global device count:\", jax.device_count())\nprint(\"jax version:\", jax.__version__)\n\ntokenizer = gm.text.Gemma3Tokenizer()\nnum_epochs = 1\nlearning_rate = 2e-5\n\n@dataclass\nclass TextDataset:\n    data: list\n    maxlen: int\n    tokenizer: gm.text.Gemma3Tokenizer\n\n    def __len__(self):\n        return len(self.data)\n\n    def __getitem__(self, idx: int):\n        encoding = self.tokenizer.encode(self.data[idx])[:self.maxlen]  # Tokenize and truncate\n        return encoding + [0] * (self.maxlen - len(encoding))  # Pad to maxlen\n\ndef load_and_preprocess_data(file_path, batch_size, maxlen, datacount, tokenizer):\n\n    with open(file_path, 'r') as f:\n      text = f.read()\n\n    stories = text.split('<|endoftext|>')\n    stories = [story for story in stories if story.strip()][:datacount]\n    df = pd.DataFrame({'text': stories})\n    data = df['text'].dropna().tolist()\n    dataset = TextDataset(data, maxlen, tokenizer)\n\n    sampler = pygrain.IndexSampler(\n        len(dataset),\n        shuffle=False,\n        seed=42,\n        shard_options=pygrain.NoSharding(),\n        num_epochs=num_epochs,\n    )\n\n    dataloader = pygrain.DataLoader(\n        data_source=dataset,\n        sampler=sampler,\n        operations=[pygrain.Batch(batch_size=batch_size, drop_remainder=True)],\n    )\n\n    return dataloader\n\ndef generate_text(model, params, tokenizer, prompt):\n    sampler = gm.text.Sampler(\n        model=model,\n        params=params,\n        tokenizer=tokenizer,\n    )\n    print(\"Generating response for: \" + prompt)\n    out = sampler.sample(prompt, max_new_tokens=32)\n    print(\"Reponse: \\n\" + out + \"\\n\")\n    return out\n\nprep_target_batch = jax.vmap(lambda tokens: jnp.concatenate((tokens[1:], jnp.array([0]))))\n\n@partial(jax.jit, donate_argnums=(0,))\ndef train_step(state, batch):\n    \"\"\"Performs one supervised fine-tuning step.\"\"\"\n\n    def loss_fn(params):\n        # Run the forward pass. The model returns logits.\n        logits = state.apply_fn({'params': params}, batch[0]).logits\n\n        # Calculate the cross-entropy loss.\n        loss = optax.softmax_cross_entropy_with_integer_labels(\n            logits=logits, labels=batch[1]\n        ).mean()\n\n        return loss\n\n    # Compute gradients\n    grad_fn = jax.value_and_grad(loss_fn)\n    loss, grads = grad_fn(state.params)\n\n    # Update the model state\n    state = state.apply_gradients(grads=grads)\n\n    metrics = {'loss': loss}\n    return state, metrics\n\ndef train_model(state, text_dl, num_epochs, sharding):\n    batchCount = 0\n    start_time = time.time()\n    for epoch in range(num_epochs):\n        start_time = time.time()\n        for batch in text_dl:\n            if len(batch) % len(jax.devices()) != 0:\n              continue  # skip the remaining elements\n            input_batch = jnp.array(jnp.array(batch).T)\n            target_batch = prep_target_batch(input_batch)\n            state, metrics = train_step(state, jax.device_put((input_batch, target_batch), sharding))\n\n            if batchCount % 10 == 0:\n                print(f\"Loss after batch {batchCount}: {metrics['loss']}\")\n            batchCount += 1\n\n    end_time = time.time()\n    print(f\"Completed training model. Total time for training {end_time - start_time} seconds \\n\")\n    return state\n\ndef run_training(maxlen, batch_size, datacount):\n    print(f\"Batch size: {batch_size}, Max length: {maxlen}, Data count: {datacount}\")\n    #Load the training data\n    tiny_stories_dl = load_and_preprocess_data('/data/TinyStories-train.txt', batch_size, maxlen, datacount, tokenizer)\n    # Get the Gemma3 model\n    model = gm.nn.Gemma3_270M()\n    # Load the pretrained parameters\n    params = gm.ckpts.load_params(gm.ckpts.CheckpointPath.GEMMA3_270M_PT)\n    # Create an optimizer\n    optimizer = optax.adamw(learning_rate=learning_rate)\n    # Define sharding for data parallel training\n    mesh = Mesh(jax.devices(), ('batch',))\n    sharding = NamedSharding(mesh, PartitionSpec('batch', None))\n\n    # Testing out current state of the model\n    test_prompt = \"Once upon a time, there was a girl named Amy.\"\n    generate_text(model, params, tokenizer, test_prompt)\n\n    state = train_state.TrainState.create(\n        apply_fn=model.apply,\n        params=params,\n        tx=optimizer\n    )\n\n    # Perform post training\n    print(\"Start training model\")\n    state = train_model(state, tiny_stories_dl, num_epochs, sharding)\n\n    # Final text generation\n    generate_text(model, state.params, tokenizer, test_prompt)\n\nif __name__ == '__main__':\n    parser = argparse.ArgumentParser(description='Train Gemma model with custom parameters.')\n    parser.add_argument('--maxlen', type=int, default=256, help='Maximum sequence length')\n    parser.add_argument('--batch_size', type=int, default=128, help='Batch size')\n    parser.add_argument('--datacount', type=int, default=296000, help='Number of data samples to use')\n    args = parser.parse_args()\n\n    run_training(maxlen=args.maxlen, batch_size=args.batch_size, datacount=args.datacount)\n```\n\nIn this script, the following applies:\n  * A `Gemma3Tokenizer` converts text data into tokens that the model can process.\n  * The `load_and_preprocess_data` function reads the training data from a file, splits it into individual stories, and uses the tokenizer to convert the text into padded sequences of tokens.\n  * The `generate_text` function takes the model, its parameters, and a prompt to generate text.\n  * The `train_step` function defines a single iteration of training that includes the forward pass, loss calculation (using cross-entropy), gradient computation, and parameter updates.\n  * The `train_model` function iterates through the dataset for a specified number of epochs, which calls the `train_step` function for each batch.\n  * The `run_training` function orchestrates the entire process to load data, initialize the Gemma 3 model (`Gemma3_270M`) and optimizer, load pre-trained parameters, set up data sharding for parallel processing, run a test generation, execute the training loop, and perform a final text generation to demonstrate the effect of fine-tuning.\n  * The script uses `argparse` library to accept command-line arguments for `maxlen`, `batch_size`, and `datacount` parameters.\n\n\nNow that you have explored the fine-tuning script, containerize it to run on GKE.\n## Containerize the fine-tuning script\nBefore you run the fine-tuning script in a GKE cluster, you need to containerize it. This tutorial uses a [JAX AI image](https://docs.cloud.google.com/ai-hypercomputer/docs/images#current_jax_ai_images) as the base image.\n  1. Open the `Dockerfile` in the same directory as the `Gemma3LLMTrain.py` file:\n\n```\n# Copyright 2026 Google LLC\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#     http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n\nFROM us-docker.pkg.dev/cloud-tpu-images/jax-ai-image/tpu:jax0.7.2-rev1\nRUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*\n\nRUN pip install --upgrade pip\nRUN pip install gemma grain\n\nWORKDIR /app\n\n# Copy your training script into the container\nCOPY Gemma3LLMTrain.py .\n\n```\n\nThis Dockerfile installs the necessary dependencies and copies the `Gemma3LLMTrain.py` file into the container.\n  2. Build the Docker image and push it to an image repository:\n\n```\nexport REPOSITORY=REPOSITORY_NAME\nexport IMAGE_NAME=\"jax-gemma3-training\"\nexport IMAGE_TAG=\"latest\"\nexport DOCKERFILE_PATH=\"./Dockerfile\"\nexport IMAGE_URI=\"${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPOSITORY}/${IMAGE_NAME}:${IMAGE_TAG}\"\n\ndocker build -t \"${IMAGE_URI}\" -f \"${DOCKERFILE_PATH}\" .\ngcloud auth configure-docker \"${REGION}-docker.pkg.dev\" -q\ndocker push \"${IMAGE_URI}\"\n\n```\n\nReplace `REPOSITORY_NAME` with the name of your Artifact Registry repository.\n  3. Add role bindings to the service account:\n\n```\nexport PROJECT_NUMBER=$(gcloud projects describe $PROJECT_ID --format 'get(projectNumber)')\ngcloud artifacts repositories add-iam-policy-binding ${REPOSITORY} \\\n    --project=${PROJECT_ID} \\\n    --location=${REGION} \\\n    --member=\"serviceAccount:${PROJECT_NUMBER}-compute@developer.gserviceaccount.com\" \\\n    --role=\"roles/artifactregistry.reader\"\n\n```\n\nWith the image in the repository, you can now deploy the fine-tuning Job into a GKE cluster.\n## Deploy the LLM fine-tuning Job\nThis section shows you how to deploy the LLM fine-tuning Job to your GKE cluster.\n  1. Open the `training_singlehost.yaml` manifest:\n\n```\n# Copyright 2026 Google LLC\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#     http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n\napiVersion: batch/v1\nkind: Job\nmetadata:\n  name: jax-gemma3-train-singlehost\nspec:\n  template:\n    metadata:\n      annotations:\n        gke-gcsfuse/volumes: \"true\"\n    spec:\n      serviceAccountName: jaxserviceaccout\n      containers:\n      - name: training-container\n        image: ${IMAGE_URI}\n        imagePullPolicy: \"Always\"\n        command: [\"python\", \"Gemma3LLMTrain.py\", \"--maxlen\", \"256\", \"--batch_size\", \"64\", \"--datacount\", \"355120\"]\n        resources:\n          limits:\n            google.com/tpu: 1\n        volumeMounts:\n        - name: gcs-fuse-csi-ephemeral\n          mountPath: /data\n      nodeSelector:\n        cloud.google.com/gke-tpu-accelerator: tpu-v6e-slice\n        cloud.google.com/gke-tpu-topology: 1x1\n      restartPolicy: Never\n      volumes:\n      - name: gcs-fuse-csi-ephemeral\n        csi:\n          driver: gcsfuse.csi.storage.gke.io\n          volumeAttributes:\n            bucketName: ${GCS_BUCKET_NAME}\n            mountOptions: \"implicit-dirs,file-cache:enable-parallel-downloads:true,file-cache:parallel-downloads-per-file:100,file-cache:max-parallel-downloads:-1,file-cache:download-chunk-size-mb:10,file-cache:max-size-mb:-1\"\n  backoffLimit: 1\n```\n\n  2. Apply the manifest:\n\n```\nenvsubst < training_singlehost.yaml | kubectl apply -f -\n\n```\n\nGKE creates a Job that launches a Pod on a TPU Trillium (v6e) node. This Pod runs the Python fine-tuning script, which accesses the fine-tuning data from the specified Cloud Storage bucket mounted at `/data` path by using Cloud Storage FUSE. The script then fine-tunes the Gemma model.\n**Success:** You've successfully fine-tuned a LLM model by using JAX and TPU Trillium (v6e) in GKE!\n## Monitor the training Job\nIn this section, you monitor the progress of the fine-tuning Job and its performance.\n### See fine-tuning progress\n  1. List the Pods:\n\n```\n# Find the Pods\nkubectl get pods\n\n```\n\n  2. Follow the log output:\n\n```\nkubectl logs -f pods/POD_NAME\n\n```\n\nReplace `POD_NAME` with the name of your Pod.\nThe output is similar to the following:\n\n```\nGlobal device count: 1\nBatch size: 128, Max length: 256, Data count: 96000\nI1028 00:12:55.925999 1387 google_auth_provider.cc:181] Running on GCE, using service account ...\nGenerating response for: Once upon a time, there was a girl named Amy.\nResponse:\nAmy lived in a small house. The house was in a big field. Amy liked to play in the big field. She\nStart training model\nLoss after batch 0: 10.25\nLoss after batch 10: 4.3125\n.\n.\n.\nLoss after batch 740: 1.41406\nCompleted training model. Total time for training 294.6791355609894 seconds\nGenerating response for: Once upon a time, there was a girl named Amy.\nResponse:\nShe loved to play with her toys. One day, Amy's mom told her that she had to go to the store to\n\n```\n\n  3. Analyze the output:\n     * The `Global device count: 1` line indicates the TPU cores used.\n     * The model generates reasonable text before this fine-tuning run because it loads from a pre-trained checkpoint.\n     * The output generated after fine-tuning shows more resemblance to the start of a short story, indicating the model is learning from the new dataset.\n     * Fine-tuning on the full dataset should produce even more refined outputs.\n\n\n### Observe metrics\nSee the performance of the fine-tuning Job by checking the TPU and CPU metrics. To view observability metrics for your cluster, perform the steps in [View cluster and workload observability metrics](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/view-observability-metrics#view_metrics).\n## Alternative fine-tuning configurations\nThis section outlines alternative configurations for your fine-tuning workload.\n### Model selection\nThis tutorial used the `Gemma3_270M` model, which is a small model that fits into a single-host TPU Trillium (v6e) node pool. For larger models that require more memory and compute for fine-tuning, you can use multi-host or multislice node pool configurations.\nFor a complete list of available models, see the [Gemma documentation](https://gemma-llm.readthedocs.io/en/latest/api/gm/nn/index.html).\n**Important:** When you use other models, ensure that you use the correct tokenizer for the selected model.\n### Node pool configurations\nThis tutorial used a single-host node pool. You can also create [multi-host TPU slice node pools](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus#multi-host) or [multislice node pools](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/tpu-multislice#whats_tpu_multislice), depending on your needs.\nThe following tabs show how to create for multi-host and multislice node pools:\n### Multi-host\n  1. In Cloud Shell, run the following command:\n\n```\ngcloud container node-pools create jax-tpu-multihost1 \\\n    --cluster=${CLUSTER_NAME} \\\n    --machine-type=ct6e-standard-4t \\\n    --num-nodes=2 \\\n    --tpu-topology=2x4 \\\n    --location=${REGION} \\\n    --node-locations=${ZONE}\n\n```\n\nGKE creates a TPU Trillium node pool with a `2x4` topology and two nodes.\n  2. Open the `training_multihost_jobset.yaml` Job definition:\n\n```\n# Copyright 2026 Google LLC\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#     http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n\napiVersion: jobset.x-k8s.io/v1alpha2\nkind: JobSet\nmetadata:\n  name: jax-gemma3-train-multihost\nspec:\n  replicatedJobs:\n    - name: trainers\n      replicas: 1\n      template:\n        spec:\n          parallelism: 2\n          completions: 2\n          backoffLimit: 1\n          template:\n            metadata:\n              annotations:\n                gke-gcsfuse/volumes: \"true\"\n            spec:\n              serviceAccountName: jaxserviceaccout\n              nodeSelector:\n                cloud.google.com/gke-tpu-accelerator: tpu-v6e-slice\n                cloud.google.com/gke-tpu-topology: 2x4\n                cloud.google.com/gke-nodepool: jax-tpu-multihost1\n              containers:\n              - name: training-container\n                image: ${IMAGE_URI} \n                imagePullPolicy: \"Always\"\n                ports:\n                  - containerPort: 8471\n                command: [\"python\", \"Gemma3LLMTrain.py\", \"--maxlen\", \"256\", \"--batch_size\", \"64\", \"--datacount\", \"5120\"]\n                resources:\n                  limits:\n                    google.com/tpu: 4\n                volumeMounts:\n                - name: gcs-fuse-csi-ephemeral\n                  mountPath: /data\n              volumes:\n                - name: gcs-fuse-csi-ephemeral\n                  csi:\n                    driver: gcsfuse.csi.storage.gke.io\n                    volumeAttributes:\n                      bucketName: ${GCS_BUCKET_NAME}\n                      mountOptions: \"implicit-dirs,file-cache:enable-parallel-downloads:true,file-cache:parallel-downloads-per-file:100,file-cache:max-parallel-downloads:-1,file-cache:download-chunk-size-mb:10,file-cache:max-size-mb:-1\"\n\n```\n\n  3. Deploy the fine-tuning Job:\n\n```\nenvsubst < training_multihost_jobset.yaml | kubectl apply -f -\n\n```\n\n### Multislice\n  1. In Cloud Shell, run the following command:\n\n```\ngcloud container node-pools create jax-tpu-multihost1 \\\n  --cluster=${CLUSTER_NAME} \\\n  --machine-type=ct6e-standard-4t \\\n  --num-nodes=2 \\\n  --tpu-topology=2x4 \\\n  --location=${REGION} \\\n  --node-locations=${ZONE}\n\ngcloud container node-pools create jax-tpu-multihost2 \\\n  --cluster=${CLUSTER_NAME} \\\n  --machine-type=ct6e-standard-4t \\\n  --num-nodes=2 \\\n  --tpu-topology=2x4 \\\n  --location=${REGION} \\\n  --node-locations=${ZONE}\n\n```\n\nGKE creates two TPU Trillium node pools. Each node pool has a `2x4` topology and two nodes.\n  2. Open the `training_multislice_jobset.yaml` Job definition:\n\n```\n# Copyright 2026 Google LLC\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#     http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n\napiVersion: jobset.x-k8s.io/v1alpha2\nkind: JobSet\nmetadata:\n  name: jax-gemma3-train-multislice\nspec:\n  replicatedJobs:\n    - name: trainers\n      replicas: 2\n      template:\n        spec:\n          parallelism: 2\n          completions: 2\n          backoffLimit: 1\n          template:\n            metadata:\n              annotations:\n                gke-gcsfuse/volumes: \"true\"\n            spec:\n              serviceAccountName: jaxserviceaccout\n              nodeSelector:\n                cloud.google.com/gke-tpu-accelerator: tpu-v6e-slice\n                cloud.google.com/gke-tpu-topology: 2x4\n              containers:\n              - name: training-container\n                image: ${IMAGE_URI}\n                imagePullPolicy: \"Always\"\n                ports:\n                  - containerPort: 8471\n                command: [\"python\", \"Gemma3LLMTrain.py\", \"--maxlen\", \"256\", \"--batch_size\", \"64\", \"--datacount\", \"5120\"]\n                resources:\n                  limits:\n                    google.com/tpu: 4\n                volumeMounts:\n                - name: gcs-fuse-csi-ephemeral\n                  mountPath: /data\n              volumes:\n                - name: gcs-fuse-csi-ephemeral\n                  csi:\n                    driver: gcsfuse.csi.storage.gke.io\n                    volumeAttributes:\n                      bucketName: ${GCS_BUCKET_NAME}\n                      mountOptions: \"implicit-dirs,file-cache:enable-parallel-downloads:true,file-cache:parallel-downloads-per-file:100,file-cache:max-parallel-downloads:-1,file-cache:download-chunk-size-mb:10,file-cache:max-size-mb:100\"\n\n```\n\n  3. Deploy the fine-tuning Job:\n\n```\nenvsubst < training_multislice_jobset.yaml | kubectl apply -f -\n\n```\n\n### Performance analysis and optimization\nTo analyze and optimize the performance of your machine learning fine-tuning, you can use [XProf](https://github.com/openxla/xprof). XProf is a suite of tools that profiles and inspects ML workloads built with JAX, TensorFlow, or PyTorch/XLA. By showing execution traces, memory usage, and other data, XProf lets you fine-tune your models and training setup for better efficiency and faster training.\nTo analyze the performance of your fine-tuning workload by using XProf, you complete the following steps in this section:\n  * Install the `xprof` package. Modify your training script to start the XProf server.\n  * Modify your Kubernetes Job manifest to include a volume mount for XProf logs.\n  * Give the Kubernetes ServiceAccount permissions to write XProf logs to a Cloud Storage bucket.\n  * Run XProf within your Pod and set up port forwarding to access the XProf dashboard.\n\n\n#### Install the XProf package\n  1. Navigate to the directory that contains the XProf samples:\n\n```\n  cd ai-ml/llm-training-jax-tpu-gemma3/xprof-enabled\n\n```\n\n  2. Build the Docker image and push it to an image repository:\n\n```\nexport REPOSITORY=REPOSITORY_NAME\nexport IMAGE_NAME=\"jax-gemma3-training-xp\"\nexport IMAGE_TAG=\"latest\"\nexport DOCKERFILE_PATH=\"./Dockerfile\"\nexport IMAGE_URI=\"${REGION}-docker.pkg.dev/${PROJECT_ID}/${REPOSITORY}/${IMAGE_NAME}:${IMAGE_TAG}\"\n\ndocker build -t \"${IMAGE_URI}\" -f \"${DOCKERFILE_PATH}\" .\ngcloud auth configure-docker \"${REGION}-docker.pkg.dev\" -q\ndocker push \"${IMAGE_URI}\"\n\n```\n\nReplace `REPOSITORY_NAME` with the name of your Artifact Registry repository.\n  3. Run the `Dockerfile` script:\n\n```\n# Copyright 2026 Google LLC\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#     http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n\nFROM us-docker.pkg.dev/cloud-tpu-images/jax-ai-image/tpu:jax0.7.2-rev1\nRUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*\n\nRUN pip install --upgrade pip\nRUN pip install gemma grain equinox\nRUN pip install xprof\n\nWORKDIR /app\n\n# Copy your training script into the container\nCOPY Gemma3LLMTrain.py .\n\n```\n\nThis Dockerfile installs XProf dependencies.\n\n\n#### Copy your fine-tuning script into the container\nIn this section, create and apply a Kubernetes Job manifest that includes the necessary volume mounts for XProf logs.\n  1. Open the `training_singlehost.yaml` Job definition:\n\n```\n# Copyright 2026 Google LLC\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#     http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n\napiVersion: batch/v1\nkind: Job\nmetadata:\n  name: jax-gemma3-train-singlehost\nspec:\n  template:\n    metadata:\n      annotations:\n        gke-gcsfuse/volumes: \"true\"\n    spec:\n      serviceAccountName: jaxserviceaccout\n      containers:\n      - name: training-container\n        image: ${IMAGE_URI}\n        imagePullPolicy: \"Always\"\n        command: [\"python\", \"Gemma3LLMTrain.py\", \"--maxlen\", \"256\", \"--batch_size\", \"64\", \"--datacount\", \"851200\"]\n        resources:\n          limits:\n            google.com/tpu: 1\n        volumeMounts:\n        - name: gcs-fuse-csi-ephemeral\n          mountPath: /data\n        - name: gcs-fuse-csi-ephemeral2\n          mountPath: /xprof\n      nodeSelector:\n        cloud.google.com/gke-tpu-accelerator: tpu-v6e-slice\n        cloud.google.com/gke-tpu-topology: 1x1\n      restartPolicy: Never\n      volumes:\n      - name: gcs-fuse-csi-ephemeral\n        csi:\n          driver: gcsfuse.csi.storage.gke.io\n          volumeAttributes:\n            bucketName: ${GCS_BUCKET_NAME}\n            mountOptions: \"implicit-dirs,file-cache:enable-parallel-downloads:true,file-cache:parallel-downloads-per-file:100,file-cache:max-parallel-downloads:-1,file-cache:download-chunk-size-mb:10,file-cache:max-size-mb:-1\"\n      - name: gcs-fuse-csi-ephemeral2\n        csi:\n          driver: gcsfuse.csi.storage.gke.io\n          volumeAttributes:\n            bucketName: ${XPROF_GCS_BUCKET_NAME}\n            mountOptions: \"implicit-dirs,file-cache:enable-parallel-downloads:true,file-cache:parallel-downloads-per-file:100,file-cache:max-parallel-downloads:-1,file-cache:download-chunk-size-mb:10,file-cache:max-size-mb:-1\"\n  backoffLimit: 1\n```\n\n  2. Apply the manifest:\n\n```\nenvsubst < training_singlehost.yaml | kubectl apply -f -\n\n```\n\n#### Give the Kubernetes ServiceAccount permissions to write XProf logs\n  1. To enable the `jaxserviceaccount` Kubernetes ServiceAccount to write and read XProf logs, grant it the Storage Object User role (`roles/storage.objectUser`) on the bucket:\n\n```\nexport XPROF_GCS_BUCKET_NAME=\"XPROF_GCS_BUCKET_NAME\"\n\ngcloud storage buckets add-iam-policy-binding \"gs://${XPROF_GCS_BUCKET_NAME}\" \\\n    --member=\"principal://iam.googleapis.com/projects/${PROJECT_NUMBER}/locations/global/workloadIdentityPools/${PROJECT_ID}.svc.id.goog/subject/ns/default/sa/jaxserviceaccount\" \\\n    --role=\"roles/storage.objectUser\" \\\n    --project=\"${PROJECT_ID}\" \\\n    --condition=None\n\n```\n\nReplace `XPROF_GCS_BUCKET_NAME` with the name of the bucket to which to grant the role.\n  2. Run XProf within your Pod:\n\n```\nkubectl exec POD_NAME -c training-container -it -- bash # exec into the container\nxprof --port 9001 --logdir /xprof # start xprof\n\n```\n\nReplace `POD_NAME` with the name of your Pod.\n\n\n#### Access the XProf dashboard\n  1. Set up port forwarding to the XProf server in the Pod:\n\n```\nkubectl port-forward POD_NAME 9001:9001\n\n```\n\n  2. In your browser's address bar, enter the following:\n\n```\nhttp://localhost:9001/\n\n```\n\nThe XProf Trace Viewer opens.\n  3. In the TensorBoard window, click **Capture profile**.\n  4. In the **Profile Service URL(s) or TPU name** field, enter `localhost:9002`.\n  5. To capture more details, in the **Host Trace (TraceMe) Level** , select **verbose** and enable Python trace logging.\n  6. To view the dashboard, click **Capture**.\nTensorBoard captures the profile and lets you analyze the performance of the training script. The graph shows the execution timeline for both TPU and CPU performance profiles:\n\n\n![An example of the XProf trace viewer that shows a performance matrix graph](https://docs.cloud.google.com/static/kubernetes-engine/images/xprof-performance-matrix.png)\nFor more profiling options to analyze your training workload performance, see the JAX documentation on [Profiling computation](https://jax.readthedocs.io/en/latest/profiling.html).\n## Fine-tuning in production environments\nThis tutorial showed you how to test test JAX-based training in a distributed environment. For optimized LLM fine-tuning in production, use the [Maxtext](https://github.com/google/maxtext) library. If you are interested in diffusion models, use [Maxdiffusion](https://github.com/google/maxdiffusion) implementations.\nFor long-running training or fine-tuning workloads in production, set up workload checkpointing to minimize progress loss during a failure. To learn more about setting up multi-tier checkpointing, see [Train large-scale machine learning models on GKE with Multi-Tier Checkpointing](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/machine-learning/training/multi-tier-checkpointing).\n## Clean up\nTo avoid incurring charges to your Google Cloud account for the resources used in this tutorial, either delete the project that contains the resources, or keep the project and delete the individual resources. \n### Delete the individual resources\nTo avoid incurring charges to your Google Cloud account for the resources used in this tutorial, either delete the project that contains the resources, or keep the project and delete the individual resources by running the following commands:\n  1. Delete the resources you created in this tutorial:\n\n```\ngcloud container clusters delete ${CLUSTER_NAME} --location=${REGION}\ngcloud storage rm --recursive gs://${GCS_BUCKET_NAME}\ngcloud artifacts docker images delete ${IMAGE_URI} --delete-tags\n\n```\n\n  2. If you don't need the data generated by XProf, remove the Cloud Storage bucket used by XProf:\n\n```\ngcloud storage rm --recursive gs://${XPROF_GCS_BUCKET_NAME}\n\n```\n\n## What's next\n  * Learn more about [TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus).\n  * Explore the [JAX repository](https://github.com/google/jax)."
+  }
 }

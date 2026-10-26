@@ -1,52 +1,302 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:train_14_keras_sparsecore_embedding",
-  "@type": "DocumentationResource",
-  "name": "Keras SparseCore embedding example",
-  "canonicalUrl": "https://keras.io/keras_rs/examples/distributed_embedding_jax/",
-  "category": "Training framework links",
-  "categorySlug": "training_framework_links",
-  "description": "Distributed recommendation-model embeddings using JAX and TPU SparseCore.",
-  "provenance": {
-    "sourceUrl": "https://keras.io/keras_rs/examples/distributed_embedding_jax/",
-    "crawledAt": "2026-10-26T12:47:07.591927+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 15552
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Keras SparseCore embedding example",
-      "documentedIn",
-      "https://keras.io/keras_rs/examples/distributed_embedding_jax/"
-    ],
-    [
-      "Keras SparseCore embedding example",
-      "belongsToCategory",
-      "training_framework_links"
-    ],
-    [
-      "Keras SparseCore embedding example",
-      "supportsWorkflow",
-      "Distributed Machine Learning Training"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:train_14_keras_sparsecore_embedding",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "train_14_keras_sparsecore_embedding",
+    "name": "Keras SparseCore embedding example",
+    "url": "https://keras.io/keras_rs/examples/distributed_embedding_jax/",
+    "category": "training_framework_links",
+    "description": "Distributed recommendation-model embeddings using JAX and TPU SparseCore.",
+    "char_count": 10125,
+    "word_count": 1135,
+    "section_count": 11,
+    "code_block_count": 16,
+    "table_count": 0,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.522052+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:train_14_keras_sparsecore_embedding",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:train_14_keras_sparsecore_embedding",
+        "predicate": "schema:name",
+        "object": "Keras SparseCore embedding example"
+      },
+      {
+        "subject": "tpu_doc:train_14_keras_sparsecore_embedding",
+        "predicate": "schema:url",
+        "object": "https://keras.io/keras_rs/examples/distributed_embedding_jax/"
+      },
+      {
+        "subject": "tpu_doc:train_14_keras_sparsecore_embedding",
+        "predicate": "schema:category",
+        "object": "training_framework_links"
+      },
+      {
+        "subject": "tpu_doc:train_14_keras_sparsecore_embedding",
+        "predicate": "schema:description",
+        "object": "Distributed recommendation-model embeddings using JAX and TPU SparseCore."
+      },
+      {
+        "subject": "tpu_doc:train_14_keras_sparsecore_embedding",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:train_14_keras_sparsecore_embedding",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5p"
+      },
+      {
+        "subject": "tpu_doc:train_14_keras_sparsecore_embedding",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:train_14_keras_sparsecore_embedding",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TPUStrategy"
+      },
+      {
+        "subject": "tpu_doc:train_14_keras_sparsecore_embedding",
+        "predicate": "okf:hasSection",
+        "object": "DistributedEmbedding using TPU SparseCore and JAX"
+      },
+      {
+        "subject": "tpu_doc:train_14_keras_sparsecore_embedding",
+        "predicate": "okf:hasSection",
+        "object": "Introduction"
+      },
+      {
+        "subject": "tpu_doc:train_14_keras_sparsecore_embedding",
+        "predicate": "okf:hasSection",
+        "object": "Dataset distribution"
+      },
+      {
+        "subject": "tpu_doc:train_14_keras_sparsecore_embedding",
+        "predicate": "okf:hasSection",
+        "object": "Preparing the dataset"
+      },
+      {
+        "subject": "tpu_doc:train_14_keras_sparsecore_embedding",
+        "predicate": "okf:hasSection",
+        "object": "Ratings data."
+      },
+      {
+        "subject": "tpu_doc:train_14_keras_sparsecore_embedding",
+        "predicate": "okf:hasSection",
+        "object": "Features of all the available movies."
+      },
+      {
+        "subject": "tpu_doc:train_14_keras_sparsecore_embedding",
+        "predicate": "okf:hasSection",
+        "object": "Configuring DistributedEmbedding"
+      },
+      {
+        "subject": "tpu_doc:train_14_keras_sparsecore_embedding",
+        "predicate": "okf:hasSection",
+        "object": "Configuring tables"
+      },
+      {
+        "subject": "tpu_doc:train_14_keras_sparsecore_embedding",
+        "predicate": "okf:hasSection",
+        "object": "Configuring features"
+      },
+      {
+        "subject": "tpu_doc:train_14_keras_sparsecore_embedding",
+        "predicate": "okf:hasSection",
+        "object": "Defining the Model"
+      },
+      {
+        "subject": "tpu_doc:train_14_keras_sparsecore_embedding",
+        "predicate": "okf:hasSection",
+        "object": "Fitting and evaluating"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Keras SparseCore embedding example provides official guidance on Distributed recommendation-model embeddings using JAX and TPU SparseCore.",
-      "confidence": 1.0,
-      "source": "https://keras.io/keras_rs/examples/distributed_embedding_jax/",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Keras SparseCore embedding example used for in Cloud TPU workflows?",
-      "answer": "Distributed recommendation-model embeddings using JAX and TPU SparseCore.",
-      "category": "training_framework_links"
-    }
-  ],
-  "contentSummary": "Distributed recommendation-model embeddings using JAX and TPU SparseCore."
+  },
+  "structured_content": {
+    "summary": "Distributed recommendation-model embeddings using JAX and TPU SparseCore.",
+    "sections": [
+      {
+        "heading": "DistributedEmbedding using TPU SparseCore and JAX",
+        "level": 1,
+        "content": "**Author:** [Fabien Hertschuh](https://github.com/hertschuh/), [Abheesht Sharma](https://github.com/abheesht17/), [C. Antonio S\u00e1nchez](https://github.com/cantonios/)<br>\n**Date created:** 2025/06/03<br>\n**Last modified:** 2025/09/02<br>\n**Description:** Rank movies using a two tower model with embeddings on SparseCore.\n\n\n<img class=\"k-inline-icon\" src=\"https://colab.research.google.com/img/colab_favicon.ico\"/> [**View in Colab**](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/keras_rs/ipynb/distributed_embedding_jax.ipynb)  <span class=\"k-dot\">\u2022</span><img class=\"k-inline-icon\" src=\"https://github.com/favicon.ico\"/> [**GitHub source**](https://github.com/keras-team/keras-io/blob/master/examples/keras_rs/distributed_embedding_jax.py)\n\n\n\n---"
+      },
+      {
+        "heading": "Introduction",
+        "level": 2,
+        "content": "In the [basic ranking](/keras_rs/examples/basic_ranking/) tutorial, we showed\nhow to build a ranking model for the MovieLens dataset to suggest movies to\nusers.\n\nThis tutorial implements the same model trained on the same dataset but with the\nuse of `keras_rs.layers.DistributedEmbedding`, which makes use of SparseCore on\nTPU. This is the JAX version of the tutorial. It needs to be run on TPU v5p or\nv6e.\n\nLet's begin by choosing JAX as the backend and importing all the necessary\nlibraries.\n\n\n```python\n!pip install -q -U jax[tpu]>=0.7.0\n!pip install -q jax-tpu-embedding\n!pip install -q tensorflow-cpu\n!pip install -q keras-rs\n```\n\n```python\nimport os\n\nos.environ[\"KERAS_BACKEND\"] = \"jax\"\n\nimport jax\nimport keras\nimport keras_rs\nimport tensorflow as tf  # Needed for the dataset\nimport tensorflow_datasets as tfds\n```\n\n---"
+      },
+      {
+        "heading": "Dataset distribution",
+        "level": 2,
+        "content": "While the model is replicated and the embedding tables are sharded across\nSparseCores, the dataset is distributed by sharding each batch across the TPUs.\nWe need to make sure the batch size is a multiple of the number of TPUs.\n\n\n```python\nPER_REPLICA_BATCH_SIZE = 256\nBATCH_SIZE = PER_REPLICA_BATCH_SIZE * jax.local_device_count(\"tpu\")\n\ndistribution = keras.distribution.DataParallel(devices=jax.devices(\"tpu\"))\nkeras.distribution.set_distribution(distribution)\n```\n\n---"
+      },
+      {
+        "heading": "Preparing the dataset",
+        "level": 2,
+        "content": "We're going to use the same MovieLens data. The ratings are the objectives we\nare trying to predict.\n\n\n```python"
+      },
+      {
+        "heading": "Ratings data.",
+        "level": 1,
+        "content": "ratings = tfds.load(\"movielens/100k-ratings\", split=\"train\")"
+      },
+      {
+        "heading": "Features of all the available movies.",
+        "level": 1,
+        "content": "movies = tfds.load(\"movielens/100k-movies\", split=\"train\")\n```\n\nWe need to know the number of users as we're using the user ID directly as an\nindex in the user embedding table.\n\n\n```python\nusers_count = int(\n    ratings.map(lambda x: tf.strings.to_number(x[\"user_id\"], out_type=tf.int32))\n    .reduce(tf.constant(0, tf.int32), tf.maximum)\n    .numpy()\n)\n```\n\nWe also need do know the number of movies as we're using the movie ID directly\nas an index in the movie embedding table.\n\n\n```python\nmovies_count = int(movies.cardinality().numpy())\n```\n\nThe inputs to the model are the user IDs and movie IDs and the labels are the\nratings.\n\n\n```python\n\ndef preprocess_rating(x):\n    return (\n        # Inputs are user IDs and movie IDs\n        {\n            \"user_id\": tf.strings.to_number(x[\"user_id\"], out_type=tf.int32),\n            \"movie_id\": tf.strings.to_number(x[\"movie_id\"], out_type=tf.int32),\n        },\n        # Labels are ratings between 0 and 1.\n        (x[\"user_rating\"] - 1.0) / 4.0,\n    )\n\n```\n\nWe'll split the data by putting 80% of the ratings in the train set, and 20% in\nthe test set.\n\n\n```python\nshuffled_ratings = ratings.map(preprocess_rating).shuffle(\n    100_000, seed=42, reshuffle_each_iteration=False\n)\ntrain_ratings = (\n    shuffled_ratings.take(80_000).batch(BATCH_SIZE, drop_remainder=True).cache()\n)\ntest_ratings = (\n    shuffled_ratings.skip(80_000)\n    .take(20_000)\n    .batch(BATCH_SIZE, drop_remainder=True)\n    .cache()\n)\n```\n\n---"
+      },
+      {
+        "heading": "Configuring DistributedEmbedding",
+        "level": 2,
+        "content": "The `keras_rs.layers.DistributedEmbedding` handles multiple features and\nmultiple embedding tables. This is to enable the sharing of tables between\nfeatures and allow some optimizations that come from combining multiple\nembedding lookups into a single invocation. In this section, we'll describe\nhow to configure these."
+      },
+      {
+        "heading": "Configuring tables",
+        "level": 3,
+        "content": "Tables are configured using `keras_rs.layers.TableConfig`, which has:\n\n- A name.\n- A vocabulary size (input size).\n- an embedding dimension (output size).\n- A combiner to specify how to reduce multiple embeddings into a single one in\n  the case when we embed a sequence. Note that this doesn't apply to our example\n  because we're getting a single embedding for each user and each movie.\n- A placement to tell whether to put the table on the SparseCore chips or not.\n  In this case, we want the `\"sparsecore\"` placement.\n- An optimizer to specify how to apply gradients when training. Each table has\n  its own optimizer and the one passed to `model.compile()` is not used for the\n  embedding tables."
+      },
+      {
+        "heading": "Configuring features",
+        "level": 3,
+        "content": "Features are configured using `keras_rs.layers.FeatureConfig`, which has:\n\n- A name.\n- A table, the embedding table to use.\n- An input shape (batch size is for all TPUs).\n- An output shape (batch size is for all TPUs).\n\nWe can organize features in any structure we want, which can be nested. A dict\nis often a good choice to have names for the inputs and outputs.\n\n\n```python\nEMBEDDING_DIMENSION = 32\n\nmovie_table = keras_rs.layers.TableConfig(\n    name=\"movie_table\",\n    vocabulary_size=movies_count + 1,  # +1 for movie ID 0, which is not used\n    embedding_dim=EMBEDDING_DIMENSION,\n    optimizer=\"adam\",\n    placement=\"sparsecore\",\n)\nuser_table = keras_rs.layers.TableConfig(\n    name=\"user_table\",\n    vocabulary_size=users_count + 1,  # +1 for user ID 0, which is not used\n    embedding_dim=EMBEDDING_DIMENSION,\n    optimizer=\"adam\",\n    placement=\"sparsecore\",\n)\n\nFEATURE_CONFIGS = {\n    \"movie_id\": keras_rs.layers.FeatureConfig(\n        name=\"movie\",\n        table=movie_table,\n        input_shape=(BATCH_SIZE,),\n        output_shape=(BATCH_SIZE, EMBEDDING_DIMENSION),\n    ),\n    \"user_id\": keras_rs.layers.FeatureConfig(\n        name=\"user\",\n        table=user_table,\n        input_shape=(BATCH_SIZE,),\n        output_shape=(BATCH_SIZE, EMBEDDING_DIMENSION),\n    ),\n}\n```\n\n---"
+      },
+      {
+        "heading": "Defining the Model",
+        "level": 2,
+        "content": "We're now ready to create a `DistributedEmbedding` inside a model. Once we have\nthe configuration, we simply pass it the constructor of `DistributedEmbedding`.\nThen, within the model `call` method, `DistributedEmbedding` is the first layer\nwe call.\n\nThe ouputs have the exact same structure as the inputs. In our example, we\nconcatenate the embeddings we got as outputs and run them through a tower of\ndense layers.\n\n\n```python\n\nclass EmbeddingModel(keras.Model):\n    \"\"\"Create the model with the embedding configuration.\n\n    Args:\n        feature_configs: the configuration for `DistributedEmbedding`.\n    \"\"\"\n\n    def __init__(self, feature_configs):\n        super().__init__()\n\n        self.embedding_layer = keras_rs.layers.DistributedEmbedding(\n            feature_configs=feature_configs\n        )\n        self.ratings = keras.Sequential(\n            [\n                # Learn multiple dense layers.\n                keras.layers.Dense(256, activation=\"relu\"),\n                keras.layers.Dense(64, activation=\"relu\"),\n                # Make rating predictions in the final layer.\n                keras.layers.Dense(1),\n            ]\n        )\n\n    def call(self, preprocessed_features):\n        # Embedding lookup. Outputs have the same structure as the inputs.\n        embedding = self.embedding_layer(preprocessed_features)\n        return self.ratings(\n            keras.ops.concatenate(\n                [embedding[\"user_id\"], embedding[\"movie_id\"]],\n                axis=1,\n            )\n        )\n\n```\n\nLet's now instantiate the model. We then use `model.compile()` to configure the\nloss, metrics and optimizer. Again, this Adagrad optimizer will only apply to\nthe dense layers and not the embedding tables.\n\n\n```python\nmodel = EmbeddingModel(FEATURE_CONFIGS)\n\nmodel.compile(\n    loss=keras.losses.MeanSquaredError(),\n    metrics=[keras.metrics.RootMeanSquaredError()],\n    optimizer=\"adagrad\",\n)\n```\n\nWith the JAX backend, we need to preprocess the inputs to convert them to a\nhardware-dependent format required for use with SparseCores. We'll do this by\nwrapping the datasets into generator functions.\n\n\n```python\n\ndef train_dataset_generator():\n    for inputs, labels in iter(train_ratings):\n        yield model.embedding_layer.preprocess(inputs, training=True), labels\n\n\ndef test_dataset_generator():\n    for inputs, labels in iter(test_ratings):\n        yield model.embedding_layer.preprocess(inputs, training=False), labels\n\n```\n\n---"
+      },
+      {
+        "heading": "Fitting and evaluating",
+        "level": 2,
+        "content": "We can use the standard Keras `model.fit()` to train the model. Keras will\nautomatically use the `TPUStrategy` to distribute the model and the data.\n\n\n```python\nmodel.fit(train_dataset_generator(), epochs=5)\n```\n\n<div class=\"k-default-codeblock\">\n```\nEpoch 1/5\n\n312/312 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 14s 37ms/step - loss: 0.2746 - root_mean_squared_error: 0.5200\n\nEpoch 2/5\n\n312/312 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 2s 16us/step - loss: 0.0924 - root_mean_squared_error: 0.3040\n\nEpoch 3/5\n\n312/312 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 0s 18us/step - loss: 0.0922 - root_mean_squared_error: 0.3037\n\nEpoch 4/5\n\n312/312 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 0s 17us/step - loss: 0.0921 - root_mean_squared_error: 0.3034\n\nEpoch 5/5\n\n312/312 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 0s 18us/step - loss: 0.0919 - root_mean_squared_error: 0.3031\n\n<keras.src.callbacks.history.History at 0x775c331de5f0>\n```\n</div>\n\nSame for `model.evaluate()`.\n\n\n```python\nmodel.evaluate(test_dataset_generator(), return_dict=True)\n```\n\n    \n<div class=\"k-default-codeblock\">\n```\n78/78 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 2s 11ms/step - loss: 0.0964 - root_mean_squared_error: 0.3105\n\n{'loss': 0.09723417460918427, 'root_mean_squared_error': 0.31182393431663513}\n```\n</div>\n\nThat's it.\n\nThis example shows that after configuring the `DistributedEmbedding` and setting\nup the required preprocessing, you can use the standard Keras workflows."
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "python",
+        "code": "!pip install -q -U jax[tpu]>=0.7.0\n!pip install -q jax-tpu-embedding\n!pip install -q tensorflow-cpu\n!pip install -q keras-rs"
+      },
+      {
+        "language": "python",
+        "code": "import os\n\nos.environ[\"KERAS_BACKEND\"] = \"jax\"\n\nimport jax\nimport keras\nimport keras_rs\nimport tensorflow as tf  # Needed for the dataset\nimport tensorflow_datasets as tfds"
+      },
+      {
+        "language": "python",
+        "code": "PER_REPLICA_BATCH_SIZE = 256\nBATCH_SIZE = PER_REPLICA_BATCH_SIZE * jax.local_device_count(\"tpu\")\n\ndistribution = keras.distribution.DataParallel(devices=jax.devices(\"tpu\"))\nkeras.distribution.set_distribution(distribution)"
+      },
+      {
+        "language": "python",
+        "code": "# Ratings data.\nratings = tfds.load(\"movielens/100k-ratings\", split=\"train\")\n# Features of all the available movies.\nmovies = tfds.load(\"movielens/100k-movies\", split=\"train\")"
+      },
+      {
+        "language": "python",
+        "code": "users_count = int(\n    ratings.map(lambda x: tf.strings.to_number(x[\"user_id\"], out_type=tf.int32))\n    .reduce(tf.constant(0, tf.int32), tf.maximum)\n    .numpy()\n)"
+      },
+      {
+        "language": "python",
+        "code": "movies_count = int(movies.cardinality().numpy())"
+      },
+      {
+        "language": "python",
+        "code": "def preprocess_rating(x):\n    return (\n        # Inputs are user IDs and movie IDs\n        {\n            \"user_id\": tf.strings.to_number(x[\"user_id\"], out_type=tf.int32),\n            \"movie_id\": tf.strings.to_number(x[\"movie_id\"], out_type=tf.int32),\n        },\n        # Labels are ratings between 0 and 1.\n        (x[\"user_rating\"] - 1.0) / 4.0,\n    )"
+      },
+      {
+        "language": "python",
+        "code": "shuffled_ratings = ratings.map(preprocess_rating).shuffle(\n    100_000, seed=42, reshuffle_each_iteration=False\n)\ntrain_ratings = (\n    shuffled_ratings.take(80_000).batch(BATCH_SIZE, drop_remainder=True).cache()\n)\ntest_ratings = (\n    shuffled_ratings.skip(80_000)\n    .take(20_000)\n    .batch(BATCH_SIZE, drop_remainder=True)\n    .cache()\n)"
+      },
+      {
+        "language": "python",
+        "code": "EMBEDDING_DIMENSION = 32\n\nmovie_table = keras_rs.layers.TableConfig(\n    name=\"movie_table\",\n    vocabulary_size=movies_count + 1,  # +1 for movie ID 0, which is not used\n    embedding_dim=EMBEDDING_DIMENSION,\n    optimizer=\"adam\",\n    placement=\"sparsecore\",\n)\nuser_table = keras_rs.layers.TableConfig(\n    name=\"user_table\",\n    vocabulary_size=users_count + 1,  # +1 for user ID 0, which is not used\n    embedding_dim=EMBEDDING_DIMENSION,\n    optimizer=\"adam\",\n    placement=\"sparsecore\",\n)\n\nFEATURE_CONFIGS = {\n    \"movie_id\": keras_rs.layers.FeatureConfig(\n        name=\"movie\",\n        table=movie_table,\n        input_shape=(BATCH_SIZE,),\n        output_shape=(BATCH_SIZE, EMBEDDING_DIMENSION),\n    ),\n    \"user_id\": keras_rs.layers.FeatureConfig(\n        name=\"user\",\n        table=user_table,\n        input_shape=(BATCH_SIZE,),\n        output_shape=(BATCH_SIZE, EMBEDDING_DIMENSION),\n    ),\n}"
+      },
+      {
+        "language": "python",
+        "code": "class EmbeddingModel(keras.Model):\n    \"\"\"Create the model with the embedding configuration.\n\n    Args:\n        feature_configs: the configuration for `DistributedEmbedding`.\n    \"\"\"\n\n    def __init__(self, feature_configs):\n        super().__init__()\n\n        self.embedding_layer = keras_rs.layers.DistributedEmbedding(\n            feature_configs=feature_configs\n        )\n        self.ratings = keras.Sequential(\n            [\n                # Learn multiple dense layers.\n                keras.layers.Dense(256, activation=\"relu\"),\n                keras.layers.Dense(64, activation=\"relu\"),\n                # Make rating predictions in the final layer.\n                keras.layers.Dense(1),\n            ]\n        )\n\n    def call(self, preprocessed_features):\n        # Embedding lookup. Outputs have the same structure as the inputs.\n        embedding = self.embedding_layer(preprocessed_features)\n        return self.ratings(\n            keras.ops.concatenate(\n                [embedding[\"user_id\"], embedding[\"movie_id\"]],\n                axis=1,\n            )\n        )"
+      },
+      {
+        "language": "python",
+        "code": "model = EmbeddingModel(FEATURE_CONFIGS)\n\nmodel.compile(\n    loss=keras.losses.MeanSquaredError(),\n    metrics=[keras.metrics.RootMeanSquaredError()],\n    optimizer=\"adagrad\",\n)"
+      },
+      {
+        "language": "python",
+        "code": "def train_dataset_generator():\n    for inputs, labels in iter(train_ratings):\n        yield model.embedding_layer.preprocess(inputs, training=True), labels\n\n\ndef test_dataset_generator():\n    for inputs, labels in iter(test_ratings):\n        yield model.embedding_layer.preprocess(inputs, training=False), labels"
+      },
+      {
+        "language": "python",
+        "code": "model.fit(train_dataset_generator(), epochs=5)"
+      },
+      {
+        "language": "text",
+        "code": "Epoch 1/5\n\n312/312 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 14s 37ms/step - loss: 0.2746 - root_mean_squared_error: 0.5200\n\nEpoch 2/5\n\n312/312 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 2s 16us/step - loss: 0.0924 - root_mean_squared_error: 0.3040\n\nEpoch 3/5\n\n312/312 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 0s 18us/step - loss: 0.0922 - root_mean_squared_error: 0.3037\n\nEpoch 4/5\n\n312/312 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 0s 17us/step - loss: 0.0921 - root_mean_squared_error: 0.3034\n\nEpoch 5/5\n\n312/312 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 0s 18us/step - loss: 0.0919 - root_mean_squared_error: 0.3031\n\n<keras.src.callbacks.history.History at 0x775c331de5f0>"
+      },
+      {
+        "language": "python",
+        "code": "model.evaluate(test_dataset_generator(), return_dict=True)"
+      },
+      {
+        "language": "text",
+        "code": "78/78 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 2s 11ms/step - loss: 0.0964 - root_mean_squared_error: 0.3105\n\n{'loss': 0.09723417460918427, 'root_mean_squared_error': 0.31182393431663513}"
+      }
+    ],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Keras SparseCore embedding example' (https://keras.io/keras_rs/examples/distributed_embedding_jax/)?",
+        "answer": "Distributed recommendation-model embeddings using JAX and TPU SparseCore."
+      },
+      {
+        "question": "How does 'Keras SparseCore embedding example' handle: DistributedEmbedding using TPU SparseCore and JAX?",
+        "answer": "**Author:** [Fabien Hertschuh](https://github.com/hertschuh/), [Abheesht Sharma](https://github.com/abheesht17/), [C. Antonio S\u00e1nchez](https://github.com/cantonios/)<br>\n**Date created:** 2025/06/03<br>\n**Last modified:** 2025/09/02<br>\n**Description:** Rank movies using a two tower model with embeddings on SparseCore.\n\n\n<img class=\"k-inline-icon\" src=\"https://colab.research.google.com/img/colab_favicon.ico\"/> [**View in Colab**](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/keras_rs/ipynb/distributed_embedding_jax.ipynb)  <span class=\"k-dot\">\u2022</span><img class=\"k-inline-icon\" src=\"https://github.com/favicon.ico\"/> [**GitHub source**](https://github.com/keras-team/keras-io/blob/master/examples/keras_rs/distributed_embedding_jax.py)\n\n\n\n---"
+      },
+      {
+        "question": "How does 'Keras SparseCore embedding example' handle: Introduction?",
+        "answer": "In the [basic ranking](/keras_rs/examples/basic_ranking/) tutorial, we showed\nhow to build a ranking model for the MovieLens dataset to suggest movies to\nusers.\n\nThis tutorial implements the same model trained on the same dataset but with the\nuse of `keras_rs.layers.DistributedEmbedding`, which makes use of SparseCore on\nTPU. This is the JAX version of the tutorial. It needs to be run on TPU v5p or\nv6e.\n\nLet's begin by choosing JAX as the backend and importing all the necessary\nlibraries.\n\n\n```python\n!pip install -q -U jax[tpu]>=0.7.0\n!pip install -q jax-tpu-embedding\n!pip install -q tensorflow-cpu\n!pip install -q keras-rs\n```\n\n```python\nimport os\n\nos.environ[\"KERAS_BACKEND\"] = \"jax\"\n\nimport jax\nimport keras\nimport keras_rs\nimport tensorflow as tf  # Needed for the dataset\nimport tensorflow_datasets as tfds\n```\n\n---"
+      },
+      {
+        "question": "How does 'Keras SparseCore embedding example' handle: Dataset distribution?",
+        "answer": "While the model is replicated and the embedding tables are sharded across\nSparseCores, the dataset is distributed by sharding each batch across the TPUs.\nWe need to make sure the batch size is a multiple of the number of TPUs.\n\n\n```python\nPER_REPLICA_BATCH_SIZE = 256\nBATCH_SIZE = PER_REPLICA_BATCH_SIZE * jax.local_device_count(\"tpu\")\n\ndistribution = keras.distribution.DataParallel(devices=jax.devices(\"tpu\"))\nkeras.distribution.set_distribution(distribution)\n```\n\n---"
+      },
+      {
+        "question": "How does 'Keras SparseCore embedding example' handle: Preparing the dataset?",
+        "answer": "We're going to use the same MovieLens data. The ratings are the objectives we\nare trying to predict.\n\n\n```python"
+      },
+      {
+        "question": "How does 'Keras SparseCore embedding example' handle: Features of all the available movies.?",
+        "answer": "movies = tfds.load(\"movielens/100k-movies\", split=\"train\")\n```\n\nWe need to know the number of users as we're using the user ID directly as an\nindex in the user embedding table.\n\n\n```python\nusers_count = int(\n    ratings.map(lambda x: tf.strings.to_number(x[\"user_id\"], out_type=tf.int32))\n    .reduce(tf.constant(0, tf.int32), tf.maximum)\n    .numpy()\n)\n```\n\nWe also need do know the number of movies as we're using the movie ID directly\nas an index in the movie embedding table.\n\n\n```python\nmovies_count = int(movies.cardinality().numpy())\n```\n\nThe inputs to the model are the user IDs and movie IDs and the labels are the\nratings.\n\n\n```python\n\ndef preprocess_rating(x):\n    return (\n        # Inputs are user IDs and movie IDs\n        {\n            \"user_id\": tf.strings.to_number(x[\"user_id\"], out_type=tf.int32),\n            \"movie_id\": tf.strings.to_number(x[\"movie_id\"], out_type=tf.int32),\n        },\n        # Labels are ratings between 0 and 1.\n        (x[\"user_rating\"] - 1.0) / 4.0,\n    )\n\n```\n\nWe'll split the data by putting 80% of the ratings in the train set, and 20% in\nthe test set.\n\n\n```python\nshuffled_ratings = ratings.map(preprocess_rating).shuffle(\n    100_000, seed=42, reshuff"
+      },
+      {
+        "question": "How does 'Keras SparseCore embedding example' handle: Configuring DistributedEmbedding?",
+        "answer": "The `keras_rs.layers.DistributedEmbedding` handles multiple features and\nmultiple embedding tables. This is to enable the sharing of tables between\nfeatures and allow some optimizations that come from combining multiple\nembedding lookups into a single invocation. In this section, we'll describe\nhow to configure these."
+      },
+      {
+        "question": "How does 'Keras SparseCore embedding example' handle: Configuring tables?",
+        "answer": "Tables are configured using `keras_rs.layers.TableConfig`, which has:\n\n- A name.\n- A vocabulary size (input size).\n- an embedding dimension (output size).\n- A combiner to specify how to reduce multiple embeddings into a single one in\n  the case when we embed a sequence. Note that this doesn't apply to our example\n  because we're getting a single embedding for each user and each movie.\n- A placement to tell whether to put the table on the SparseCore chips or not.\n  In this case, we want the `\"sparsecore\"` placement.\n- An optimizer to specify how to apply gradients when training. Each table has\n  its own optimizer and the one passed to `model.compile()` is not used for the\n  embedding tables."
+      },
+      {
+        "question": "How does 'Keras SparseCore embedding example' handle: Configuring features?",
+        "answer": "Features are configured using `keras_rs.layers.FeatureConfig`, which has:\n\n- A name.\n- A table, the embedding table to use.\n- An input shape (batch size is for all TPUs).\n- An output shape (batch size is for all TPUs).\n\nWe can organize features in any structure we want, which can be nested. A dict\nis often a good choice to have names for the inputs and outputs.\n\n\n```python\nEMBEDDING_DIMENSION = 32\n\nmovie_table = keras_rs.layers.TableConfig(\n    name=\"movie_table\",\n    vocabulary_size=movies_count + 1,  # +1 for movie ID 0, which is not used\n    embedding_dim=EMBEDDING_DIMENSION,\n    optimizer=\"adam\",\n    placement=\"sparsecore\",\n)\nuser_table = keras_rs.layers.TableConfig(\n    name=\"user_table\",\n    vocabulary_size=users_count + 1,  # +1 for user ID 0, which is not used\n    embedding_dim=EMBEDDING_DIMENSION,\n    optimizer=\"adam\",\n    placement=\"sparsecore\",\n)\n\nFEATURE_CONFIGS = {\n    \"movie_id\": keras_rs.layers.FeatureConfig(\n        name=\"movie\",\n        table=movie_table,\n        input_shape=(BATCH_SIZE,),\n        output_shape=(BATCH_SIZE, EMBEDDING_DIMENSION),\n    ),\n    \"user_id\": keras_rs.layers.FeatureConfig(\n        name=\"user\",\n        table=user_table,\n        input_shape=(B"
+      },
+      {
+        "question": "How does 'Keras SparseCore embedding example' handle: Defining the Model?",
+        "answer": "We're now ready to create a `DistributedEmbedding` inside a model. Once we have\nthe configuration, we simply pass it the constructor of `DistributedEmbedding`.\nThen, within the model `call` method, `DistributedEmbedding` is the first layer\nwe call.\n\nThe ouputs have the exact same structure as the inputs. In our example, we\nconcatenate the embeddings we got as outputs and run them through a tower of\ndense layers.\n\n\n```python\n\nclass EmbeddingModel(keras.Model):\n    \"\"\"Create the model with the embedding configuration.\n\n    Args:\n        feature_configs: the configuration for `DistributedEmbedding`.\n    \"\"\"\n\n    def __init__(self, feature_configs):\n        super().__init__()\n\n        self.embedding_layer = keras_rs.layers.DistributedEmbedding(\n            feature_configs=feature_configs\n        )\n        self.ratings = keras.Sequential(\n            [\n                # Learn multiple dense layers.\n                keras.layers.Dense(256, activation=\"relu\"),\n                keras.layers.Dense(64, activation=\"relu\"),\n                # Make rating predictions in the final layer.\n                keras.layers.Dense(1),\n            ]\n        )\n\n    def call(self, preprocessed_features):\n     "
+      }
+    ],
+    "full_markdown": "# DistributedEmbedding using TPU SparseCore and JAX\n\n**Author:** [Fabien Hertschuh](https://github.com/hertschuh/), [Abheesht Sharma](https://github.com/abheesht17/), [C. Antonio S\u00e1nchez](https://github.com/cantonios/)<br>\n**Date created:** 2025/06/03<br>\n**Last modified:** 2025/09/02<br>\n**Description:** Rank movies using a two tower model with embeddings on SparseCore.\n\n\n<img class=\"k-inline-icon\" src=\"https://colab.research.google.com/img/colab_favicon.ico\"/> [**View in Colab**](https://colab.research.google.com/github/keras-team/keras-io/blob/master/examples/keras_rs/ipynb/distributed_embedding_jax.ipynb)  <span class=\"k-dot\">\u2022</span><img class=\"k-inline-icon\" src=\"https://github.com/favicon.ico\"/> [**GitHub source**](https://github.com/keras-team/keras-io/blob/master/examples/keras_rs/distributed_embedding_jax.py)\n\n\n\n---\n## Introduction\n\nIn the [basic ranking](/keras_rs/examples/basic_ranking/) tutorial, we showed\nhow to build a ranking model for the MovieLens dataset to suggest movies to\nusers.\n\nThis tutorial implements the same model trained on the same dataset but with the\nuse of `keras_rs.layers.DistributedEmbedding`, which makes use of SparseCore on\nTPU. This is the JAX version of the tutorial. It needs to be run on TPU v5p or\nv6e.\n\nLet's begin by choosing JAX as the backend and importing all the necessary\nlibraries.\n\n\n```python\n!pip install -q -U jax[tpu]>=0.7.0\n!pip install -q jax-tpu-embedding\n!pip install -q tensorflow-cpu\n!pip install -q keras-rs\n```\n\n```python\nimport os\n\nos.environ[\"KERAS_BACKEND\"] = \"jax\"\n\nimport jax\nimport keras\nimport keras_rs\nimport tensorflow as tf  # Needed for the dataset\nimport tensorflow_datasets as tfds\n```\n\n---\n## Dataset distribution\n\nWhile the model is replicated and the embedding tables are sharded across\nSparseCores, the dataset is distributed by sharding each batch across the TPUs.\nWe need to make sure the batch size is a multiple of the number of TPUs.\n\n\n```python\nPER_REPLICA_BATCH_SIZE = 256\nBATCH_SIZE = PER_REPLICA_BATCH_SIZE * jax.local_device_count(\"tpu\")\n\ndistribution = keras.distribution.DataParallel(devices=jax.devices(\"tpu\"))\nkeras.distribution.set_distribution(distribution)\n```\n\n---\n## Preparing the dataset\n\nWe're going to use the same MovieLens data. The ratings are the objectives we\nare trying to predict.\n\n\n```python\n# Ratings data.\nratings = tfds.load(\"movielens/100k-ratings\", split=\"train\")\n# Features of all the available movies.\nmovies = tfds.load(\"movielens/100k-movies\", split=\"train\")\n```\n\nWe need to know the number of users as we're using the user ID directly as an\nindex in the user embedding table.\n\n\n```python\nusers_count = int(\n    ratings.map(lambda x: tf.strings.to_number(x[\"user_id\"], out_type=tf.int32))\n    .reduce(tf.constant(0, tf.int32), tf.maximum)\n    .numpy()\n)\n```\n\nWe also need do know the number of movies as we're using the movie ID directly\nas an index in the movie embedding table.\n\n\n```python\nmovies_count = int(movies.cardinality().numpy())\n```\n\nThe inputs to the model are the user IDs and movie IDs and the labels are the\nratings.\n\n\n```python\n\ndef preprocess_rating(x):\n    return (\n        # Inputs are user IDs and movie IDs\n        {\n            \"user_id\": tf.strings.to_number(x[\"user_id\"], out_type=tf.int32),\n            \"movie_id\": tf.strings.to_number(x[\"movie_id\"], out_type=tf.int32),\n        },\n        # Labels are ratings between 0 and 1.\n        (x[\"user_rating\"] - 1.0) / 4.0,\n    )\n\n```\n\nWe'll split the data by putting 80% of the ratings in the train set, and 20% in\nthe test set.\n\n\n```python\nshuffled_ratings = ratings.map(preprocess_rating).shuffle(\n    100_000, seed=42, reshuffle_each_iteration=False\n)\ntrain_ratings = (\n    shuffled_ratings.take(80_000).batch(BATCH_SIZE, drop_remainder=True).cache()\n)\ntest_ratings = (\n    shuffled_ratings.skip(80_000)\n    .take(20_000)\n    .batch(BATCH_SIZE, drop_remainder=True)\n    .cache()\n)\n```\n\n---\n## Configuring DistributedEmbedding\n\nThe `keras_rs.layers.DistributedEmbedding` handles multiple features and\nmultiple embedding tables. This is to enable the sharing of tables between\nfeatures and allow some optimizations that come from combining multiple\nembedding lookups into a single invocation. In this section, we'll describe\nhow to configure these.\n\n### Configuring tables\n\nTables are configured using `keras_rs.layers.TableConfig`, which has:\n\n- A name.\n- A vocabulary size (input size).\n- an embedding dimension (output size).\n- A combiner to specify how to reduce multiple embeddings into a single one in\n  the case when we embed a sequence. Note that this doesn't apply to our example\n  because we're getting a single embedding for each user and each movie.\n- A placement to tell whether to put the table on the SparseCore chips or not.\n  In this case, we want the `\"sparsecore\"` placement.\n- An optimizer to specify how to apply gradients when training. Each table has\n  its own optimizer and the one passed to `model.compile()` is not used for the\n  embedding tables.\n\n### Configuring features\n\nFeatures are configured using `keras_rs.layers.FeatureConfig`, which has:\n\n- A name.\n- A table, the embedding table to use.\n- An input shape (batch size is for all TPUs).\n- An output shape (batch size is for all TPUs).\n\nWe can organize features in any structure we want, which can be nested. A dict\nis often a good choice to have names for the inputs and outputs.\n\n\n```python\nEMBEDDING_DIMENSION = 32\n\nmovie_table = keras_rs.layers.TableConfig(\n    name=\"movie_table\",\n    vocabulary_size=movies_count + 1,  # +1 for movie ID 0, which is not used\n    embedding_dim=EMBEDDING_DIMENSION,\n    optimizer=\"adam\",\n    placement=\"sparsecore\",\n)\nuser_table = keras_rs.layers.TableConfig(\n    name=\"user_table\",\n    vocabulary_size=users_count + 1,  # +1 for user ID 0, which is not used\n    embedding_dim=EMBEDDING_DIMENSION,\n    optimizer=\"adam\",\n    placement=\"sparsecore\",\n)\n\nFEATURE_CONFIGS = {\n    \"movie_id\": keras_rs.layers.FeatureConfig(\n        name=\"movie\",\n        table=movie_table,\n        input_shape=(BATCH_SIZE,),\n        output_shape=(BATCH_SIZE, EMBEDDING_DIMENSION),\n    ),\n    \"user_id\": keras_rs.layers.FeatureConfig(\n        name=\"user\",\n        table=user_table,\n        input_shape=(BATCH_SIZE,),\n        output_shape=(BATCH_SIZE, EMBEDDING_DIMENSION),\n    ),\n}\n```\n\n---\n## Defining the Model\n\nWe're now ready to create a `DistributedEmbedding` inside a model. Once we have\nthe configuration, we simply pass it the constructor of `DistributedEmbedding`.\nThen, within the model `call` method, `DistributedEmbedding` is the first layer\nwe call.\n\nThe ouputs have the exact same structure as the inputs. In our example, we\nconcatenate the embeddings we got as outputs and run them through a tower of\ndense layers.\n\n\n```python\n\nclass EmbeddingModel(keras.Model):\n    \"\"\"Create the model with the embedding configuration.\n\n    Args:\n        feature_configs: the configuration for `DistributedEmbedding`.\n    \"\"\"\n\n    def __init__(self, feature_configs):\n        super().__init__()\n\n        self.embedding_layer = keras_rs.layers.DistributedEmbedding(\n            feature_configs=feature_configs\n        )\n        self.ratings = keras.Sequential(\n            [\n                # Learn multiple dense layers.\n                keras.layers.Dense(256, activation=\"relu\"),\n                keras.layers.Dense(64, activation=\"relu\"),\n                # Make rating predictions in the final layer.\n                keras.layers.Dense(1),\n            ]\n        )\n\n    def call(self, preprocessed_features):\n        # Embedding lookup. Outputs have the same structure as the inputs.\n        embedding = self.embedding_layer(preprocessed_features)\n        return self.ratings(\n            keras.ops.concatenate(\n                [embedding[\"user_id\"], embedding[\"movie_id\"]],\n                axis=1,\n            )\n        )\n\n```\n\nLet's now instantiate the model. We then use `model.compile()` to configure the\nloss, metrics and optimizer. Again, this Adagrad optimizer will only apply to\nthe dense layers and not the embedding tables.\n\n\n```python\nmodel = EmbeddingModel(FEATURE_CONFIGS)\n\nmodel.compile(\n    loss=keras.losses.MeanSquaredError(),\n    metrics=[keras.metrics.RootMeanSquaredError()],\n    optimizer=\"adagrad\",\n)\n```\n\nWith the JAX backend, we need to preprocess the inputs to convert them to a\nhardware-dependent format required for use with SparseCores. We'll do this by\nwrapping the datasets into generator functions.\n\n\n```python\n\ndef train_dataset_generator():\n    for inputs, labels in iter(train_ratings):\n        yield model.embedding_layer.preprocess(inputs, training=True), labels\n\n\ndef test_dataset_generator():\n    for inputs, labels in iter(test_ratings):\n        yield model.embedding_layer.preprocess(inputs, training=False), labels\n\n```\n\n---\n## Fitting and evaluating\n\nWe can use the standard Keras `model.fit()` to train the model. Keras will\nautomatically use the `TPUStrategy` to distribute the model and the data.\n\n\n```python\nmodel.fit(train_dataset_generator(), epochs=5)\n```\n\n<div class=\"k-default-codeblock\">\n```\nEpoch 1/5\n\n312/312 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 14s 37ms/step - loss: 0.2746 - root_mean_squared_error: 0.5200\n\nEpoch 2/5\n\n312/312 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 2s 16us/step - loss: 0.0924 - root_mean_squared_error: 0.3040\n\nEpoch 3/5\n\n312/312 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 0s 18us/step - loss: 0.0922 - root_mean_squared_error: 0.3037\n\nEpoch 4/5\n\n312/312 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 0s 17us/step - loss: 0.0921 - root_mean_squared_error: 0.3034\n\nEpoch 5/5\n\n312/312 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 0s 18us/step - loss: 0.0919 - root_mean_squared_error: 0.3031\n\n<keras.src.callbacks.history.History at 0x775c331de5f0>\n```\n</div>\n\nSame for `model.evaluate()`.\n\n\n```python\nmodel.evaluate(test_dataset_generator(), return_dict=True)\n```\n\n    \n<div class=\"k-default-codeblock\">\n```\n78/78 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 2s 11ms/step - loss: 0.0964 - root_mean_squared_error: 0.3105\n\n{'loss': 0.09723417460918427, 'root_mean_squared_error': 0.31182393431663513}\n```\n</div>\n\nThat's it.\n\nThis example shows that after configuring the `DistributedEmbedding` and setting\nup the required preprocessing, you can use the standard Keras workflows."
+  }
 }

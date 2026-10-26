@@ -1,52 +1,441 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:train_13_keras_distribution_guide",
-  "@type": "DocumentationResource",
-  "name": "Keras 3 distribution guide",
-  "canonicalUrl": "https://keras.io/guides/distribution/",
-  "category": "Training framework links",
-  "categorySlug": "training_framework_links",
-  "description": "Data and model distribution concepts for multi-device Keras workflows.",
-  "provenance": {
-    "sourceUrl": "https://keras.io/guides/distribution/",
-    "crawledAt": "2026-10-26T12:47:07.500661+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 18577
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Keras 3 distribution guide",
-      "documentedIn",
-      "https://keras.io/guides/distribution/"
-    ],
-    [
-      "Keras 3 distribution guide",
-      "belongsToCategory",
-      "training_framework_links"
-    ],
-    [
-      "Keras 3 distribution guide",
-      "supportsWorkflow",
-      "Distributed Machine Learning Training"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:train_13_keras_distribution_guide",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "train_13_keras_distribution_guide",
+    "name": "Keras 3 distribution guide",
+    "url": "https://keras.io/guides/distribution/",
+    "category": "training_framework_links",
+    "description": "Data and model distribution concepts for multi-device Keras workflows.",
+    "char_count": 11264,
+    "word_count": 1368,
+    "section_count": 35,
+    "code_block_count": 7,
+    "table_count": 0,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.517371+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "schema:name",
+        "object": "Keras 3 distribution guide"
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "schema:url",
+        "object": "https://keras.io/guides/distribution/"
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "schema:category",
+        "object": "training_framework_links"
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "schema:description",
+        "object": "Data and model distribution concepts for multi-device Keras workflows."
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "Distributed training with Keras 3"
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "Introduction"
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "How it works"
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "Setup"
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "The distribution API is only implemented for the JAX backend for now."
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "`DeviceMesh` and `TensorLayout`"
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "Retrieve the local available gpu devices."
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "Define a 2x4 device mesh with data and model parallel axes"
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "A 2D layout, which describes how a tensor is distributed across the"
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "mesh. The layout can be visualized as a 2D grid with \"model\" as rows and"
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "\"data\" as columns, and it is a [4, 2] grid when it mapped to the physical"
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "devices on the mesh."
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "A 4D layout which could be used for data parallel of a image input."
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "Distribution"
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "DataParallel"
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "Create DataParallel with list of devices."
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "As a shortcut, the devices can be skipped,"
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "and Keras will detect all local available devices."
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "E.g. data_parallel = DataParallel()"
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "Or you can choose to create DataParallel with a 1D `DeviceMesh`."
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "Set the global distribution."
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "Note that all the model weights from here on are replicated to"
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "all the devices of the `DeviceMesh`. This includes the RNG"
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "state, optimizer states, metrics, etc. The dataset fed into `model.fit` or"
+      },
+      {
+        "subject": "tpu_doc:train_13_keras_distribution_guide",
+        "predicate": "okf:hasSection",
+        "object": "`model.evaluate` will be split evenly on the batch dimension, and sent to"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Keras 3 distribution guide provides official guidance on Data and model distribution concepts for multi-device Keras workflows.",
-      "confidence": 1.0,
-      "source": "https://keras.io/guides/distribution/",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Keras 3 distribution guide used for in Cloud TPU workflows?",
-      "answer": "Data and model distribution concepts for multi-device Keras workflows.",
-      "category": "training_framework_links"
-    }
-  ],
-  "contentSummary": "Data and model distribution concepts for multi-device Keras workflows."
+  },
+  "structured_content": {
+    "summary": "Data and model distribution concepts for multi-device Keras workflows.",
+    "sections": [
+      {
+        "heading": "Distributed training with Keras 3",
+        "level": 1,
+        "content": "**Author:** [Qianli Zhu](https://github.com/qlzh727)<br>\n**Date created:** 2023/11/07<br>\n**Last modified:** 2023/11/07<br>\n**Description:** Complete guide to the distribution API for multi-backend Keras.\n\n\n<img class=\"k-inline-icon\" src=\"https://colab.research.google.com/img/colab_favicon.ico\"/> [**View in Colab**](https://colab.research.google.com/github/keras-team/keras-io/blob/master/guides/ipynb/distribution.ipynb)  <span class=\"k-dot\">\u2022</span><img class=\"k-inline-icon\" src=\"https://github.com/favicon.ico\"/> [**GitHub source**](https://github.com/keras-team/keras-io/blob/master/guides/distribution.py)\n\n\n\n---"
+      },
+      {
+        "heading": "Introduction",
+        "level": 2,
+        "content": "The Keras distribution API is a new interface designed to facilitate\ndistributed deep learning across a variety of backends like JAX, TensorFlow and\nPyTorch. This powerful API introduces a suite of tools enabling data and model\nparallelism, allowing for efficient scaling of deep learning models on multiple\naccelerators and hosts. Whether leveraging the power of GPUs or TPUs, the API\nprovides a streamlined approach to initializing distributed environments,\ndefining device meshes, and orchestrating the layout of tensors across\ncomputational resources. Through classes like `DataParallel` and\n`ModelParallel`, it abstracts the complexity involved in parallel computation,\nmaking it easier for developers to accelerate their machine learning\nworkflows.\n\n---"
+      },
+      {
+        "heading": "How it works",
+        "level": 2,
+        "content": "The Keras distribution API provides a global programming model that allows\ndevelopers to compose applications that operate on tensors in a global context\n(as if working with a single device) while\nautomatically managing distribution across many devices. The API leverages the\nunderlying framework (e.g. JAX) to distribute the program and tensors according to the\nsharding directives through a procedure called single program, multiple data\n(SPMD) expansion.\n\nBy decoupling the application from sharding directives, the API enables running\nthe same application on a single device, multiple devices, or even multiple\nclients, while preserving its global semantics.\n\n---"
+      },
+      {
+        "heading": "Setup",
+        "level": 2,
+        "content": "```python\nimport os"
+      },
+      {
+        "heading": "The distribution API is only implemented for the JAX backend for now.",
+        "level": 1,
+        "content": "os.environ[\"KERAS_BACKEND\"] = \"jax\"\n\nimport keras\nfrom keras import layers\nimport jax\nimport numpy as np\nfrom tensorflow import data as tf_data  # For dataset input.\n```\n\n---"
+      },
+      {
+        "heading": "`DeviceMesh` and `TensorLayout`",
+        "level": 2,
+        "content": "The `keras.distribution.DeviceMesh` class in Keras distribution API represents a cluster of\ncomputational devices configured for distributed computation. It aligns with\nsimilar concepts in [`jax.sharding.Mesh`](https://jax.readthedocs.io/en/latest/jax.sharding.html#jax.sharding.Mesh) and\n[`tf.dtensor.Mesh`](https://www.tensorflow.org/api_docs/python/tf/experimental/dtensor/Mesh),\nwhere it's used to map the physical devices to a logical mesh structure.\n\nThe `TensorLayout` class then specifies how tensors are distributed across the\n`DeviceMesh`, detailing the sharding of tensors along specified axes that\ncorrespond to the names of the axes in the `DeviceMesh`.\n\nYou can find more detailed concept explainers in the\n[TensorFlow DTensor guide](https://www.tensorflow.org/guide/dtensor_overview#dtensors_model_of_distributed_tensors).\n\n\n```python"
+      },
+      {
+        "heading": "Retrieve the local available gpu devices.",
+        "level": 1,
+        "content": "devices = jax.devices(\"gpu\")  # Assume it has 8 local GPUs."
+      },
+      {
+        "heading": "Define a 2x4 device mesh with data and model parallel axes",
+        "level": 1,
+        "content": "mesh = keras.distribution.DeviceMesh(\n    shape=(2, 4), axis_names=[\"data\", \"model\"], devices=devices\n)"
+      },
+      {
+        "heading": "A 2D layout, which describes how a tensor is distributed across the",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "mesh. The layout can be visualized as a 2D grid with \"model\" as rows and",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "\"data\" as columns, and it is a [4, 2] grid when it mapped to the physical",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "devices on the mesh.",
+        "level": 1,
+        "content": "layout_2d = keras.distribution.TensorLayout(axes=(\"model\", \"data\"), device_mesh=mesh)"
+      },
+      {
+        "heading": "A 4D layout which could be used for data parallel of a image input.",
+        "level": 1,
+        "content": "replicated_layout_4d = keras.distribution.TensorLayout(\n    axes=(\"data\", None, None, None), device_mesh=mesh\n)\n```\n\n---"
+      },
+      {
+        "heading": "Distribution",
+        "level": 2,
+        "content": "The `Distribution` class in Keras serves as a foundational abstract class designed\nfor developing custom distribution strategies. It encapsulates the core logic\nneeded to distribute a model's variables, input data, and intermediate\ncomputations across a device mesh. As an end user, you won't have to interact\ndirectly with this class, but its subclasses like `DataParallel` or\n`ModelParallel`.\n\n---"
+      },
+      {
+        "heading": "DataParallel",
+        "level": 2,
+        "content": "The `DataParallel` class in the Keras distribution API is designed for the\ndata parallelism strategy in distributed training, where the model weights are\nreplicated across all devices in the `DeviceMesh`, and each device processes a\nportion of the input data.\n\nHere is a sample usage of this class.\n\n\n```python"
+      },
+      {
+        "heading": "Create DataParallel with list of devices.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "As a shortcut, the devices can be skipped,",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "and Keras will detect all local available devices.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "E.g. data_parallel = DataParallel()",
+        "level": 1,
+        "content": "data_parallel = keras.distribution.DataParallel(devices=devices)"
+      },
+      {
+        "heading": "Or you can choose to create DataParallel with a 1D `DeviceMesh`.",
+        "level": 1,
+        "content": "mesh_1d = keras.distribution.DeviceMesh(\n    shape=(8,), axis_names=[\"data\"], devices=devices\n)\ndata_parallel = keras.distribution.DataParallel(device_mesh=mesh_1d)\n\ninputs = np.random.normal(size=(128, 28, 28, 1))\nlabels = np.random.normal(size=(128, 10))\ndataset = tf_data.Dataset.from_tensor_slices((inputs, labels)).batch(16)"
+      },
+      {
+        "heading": "Set the global distribution.",
+        "level": 1,
+        "content": "keras.distribution.set_distribution(data_parallel)"
+      },
+      {
+        "heading": "Note that all the model weights from here on are replicated to",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "all the devices of the `DeviceMesh`. This includes the RNG",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "state, optimizer states, metrics, etc. The dataset fed into `model.fit` or",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "`model.evaluate` will be split evenly on the batch dimension, and sent to",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "all the devices. You don't have to do any manual aggregration of losses,",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "since all the computation happens in a global context.",
+        "level": 1,
+        "content": "inputs = layers.Input(shape=(28, 28, 1))\ny = layers.Flatten()(inputs)\ny = layers.Dense(units=200, use_bias=False, activation=\"relu\")(y)\ny = layers.Dropout(0.4)(y)\ny = layers.Dense(units=10, activation=\"softmax\")(y)\nmodel = keras.Model(inputs=inputs, outputs=y)\n\nmodel.compile(loss=\"mse\")\nmodel.fit(dataset, epochs=3)\nmodel.evaluate(dataset)\n```\n\n<div class=\"k-default-codeblock\">\n```\nEpoch 1/3\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 8s 30ms/step - loss: 1.0116\nEpoch 2/3\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 0s 4ms/step - loss: 0.9237\nEpoch 3/3\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 0s 4ms/step - loss: 0.8736\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 5s 5ms/step - loss: 0.8349\n\n0.842325747013092\n\n```\n</div>\n---"
+      },
+      {
+        "heading": "`ModelParallel` and `LayoutMap`",
+        "level": 2,
+        "content": "`ModelParallel` will be mostly useful when model weights are too large to fit\non a single accelerator. This setting allows you to spit your model weights or\nactivation tensors across all the devices on the `DeviceMesh`, and enable the\nhorizontal scaling for the large models.\n\nUnlike the `DataParallel` model where all weights are fully replicated,\nthe weights layout under `ModelParallel` usually need some customization for\nbest performances. We introduce `LayoutMap` to let you specify the\n`TensorLayout` for any weights and intermediate tensors from global perspective.\n\n`LayoutMap` is a dict-like object that maps a string to `TensorLayout`\ninstances. It behaves differently from a normal Python dict in that the string\nkey is treated as a regex when retrieving the value. The class allows you to\ndefine the naming schema of `TensorLayout` and then retrieve the corresponding\n`TensorLayout` instance. Typically, the key used to query\nis the `variable.path` attribute,  which is the identifier of the variable.\nAs a shortcut, a tuple or list of axis\nnames is also allowed when inserting a value, and it will be converted to\n`TensorLayout`.\n\nThe `LayoutMap` can also optionally contain a `DeviceMesh` to populate the\n`TensorLayout.device_mesh` if it is not set. When retrieving a layout with a\nkey, and if there isn't an exact match, all existing keys in the layout map will\nbe treated as regex and matched against the input key again. If there are\nmultiple matches, a `ValueError` is raised. If no matches are found, `None` is\nreturned.\n\n\n```python\nmesh_2d = keras.distribution.DeviceMesh(\n    shape=(2, 4), axis_names=[\"data\", \"model\"], devices=devices\n)\nlayout_map = keras.distribution.LayoutMap(mesh_2d)"
+      },
+      {
+        "heading": "The rule below means that for any weights that match with d1/kernel, it",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "will be sharded with model dimensions (4 devices), same for the d1/bias.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "All other weights will be fully replicated.",
+        "level": 1,
+        "content": "layout_map[\"d1/kernel\"] = (None, \"model\")\nlayout_map[\"d1/bias\"] = (\"model\",)"
+      },
+      {
+        "heading": "You can also set the layout for the layer output like",
+        "level": 1,
+        "content": "layout_map[\"d2/output\"] = (\"data\", None)\n\nmodel_parallel = keras.distribution.ModelParallel(layout_map, batch_dim_name=\"data\")\n\nkeras.distribution.set_distribution(model_parallel)\n\ninputs = layers.Input(shape=(28, 28, 1))\ny = layers.Flatten()(inputs)\ny = layers.Dense(units=200, use_bias=False, activation=\"relu\", name=\"d1\")(y)\ny = layers.Dropout(0.4)(y)\ny = layers.Dense(units=10, activation=\"softmax\", name=\"d2\")(y)\nmodel = keras.Model(inputs=inputs, outputs=y)"
+      },
+      {
+        "heading": "The data will be sharded across the \"data\" dimension of the method, which",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "has 2 devices.",
+        "level": 1,
+        "content": "model.compile(loss=\"mse\")\nmodel.fit(dataset, epochs=3)\nmodel.evaluate(dataset)\n```\n\n<div class=\"k-default-codeblock\">\n```\nEpoch 1/3\n\n/opt/conda/envs/keras-jax/lib/python3.10/site-packages/jax/_src/interpreters/mlir.py:761: UserWarning: Some donated buffers were not usable: ShapedArray(float32[784,50]).\nSee an explanation at https://jax.readthedocs.io/en/latest/faq.html#buffer-donation.\n  warnings.warn(\"Some donated buffers were not usable:\"\n\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 5s 8ms/step - loss: 1.0266\nEpoch 2/3\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 0s 5ms/step - loss: 0.9181\nEpoch 3/3\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 0s 5ms/step - loss: 0.8725\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 1s 4ms/step - loss: 0.8381  \n\n0.8502610325813293\n\n```\n</div>\nIt is also easy to change the mesh structure to tune the computation between\nmore data parallel or model parallel. You can do this by adjusting the shape of\nthe mesh. And no changes are needed for any other code.\n\n\n```python\nfull_data_parallel_mesh = keras.distribution.DeviceMesh(\n    shape=(8, 1), axis_names=[\"data\", \"model\"], devices=devices\n)\nmore_data_parallel_mesh = keras.distribution.DeviceMesh(\n    shape=(4, 2), axis_names=[\"data\", \"model\"], devices=devices\n)\nmore_model_parallel_mesh = keras.distribution.DeviceMesh(\n    shape=(2, 4), axis_names=[\"data\", \"model\"], devices=devices\n)\nfull_model_parallel_mesh = keras.distribution.DeviceMesh(\n    shape=(1, 8), axis_names=[\"data\", \"model\"], devices=devices\n)\n```"
+      },
+      {
+        "heading": "Further reading",
+        "level": 3,
+        "content": "1. [JAX Distributed arrays and automatic parallelization](https://jax.readthedocs.io/en/latest/notebooks/Distributed_arrays_and_automatic_parallelization.html)\n2. [JAX sharding module](https://jax.readthedocs.io/en/latest/jax.sharding.html)\n3. [TensorFlow Distributed training with DTensors](https://www.tensorflow.org/tutorials/distribute/dtensor_ml_tutorial)\n4. [TensorFlow DTensor concepts](https://www.tensorflow.org/guide/dtensor_overview)\n5. [Using DTensors with tf.keras](https://www.tensorflow.org/tutorials/distribute/dtensor_keras_tutorial)"
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "python",
+        "code": "import os\n\n# The distribution API is only implemented for the JAX backend for now.\nos.environ[\"KERAS_BACKEND\"] = \"jax\"\n\nimport keras\nfrom keras import layers\nimport jax\nimport numpy as np\nfrom tensorflow import data as tf_data  # For dataset input."
+      },
+      {
+        "language": "python",
+        "code": "# Retrieve the local available gpu devices.\ndevices = jax.devices(\"gpu\")  # Assume it has 8 local GPUs.\n\n# Define a 2x4 device mesh with data and model parallel axes\nmesh = keras.distribution.DeviceMesh(\n    shape=(2, 4), axis_names=[\"data\", \"model\"], devices=devices\n)\n\n# A 2D layout, which describes how a tensor is distributed across the\n# mesh. The layout can be visualized as a 2D grid with \"model\" as rows and\n# \"data\" as columns, and it is a [4, 2] grid when it mapped to the physical\n# devices on the mesh.\nlayout_2d = keras.distribution.TensorLayout(axes=(\"model\", \"data\"), device_mesh=mesh)\n\n# A 4D layout which could be used for data parallel of a image input.\nreplicated_layout_4d = keras.distribution.TensorLayout(\n    axes=(\"data\", None, None, None), device_mesh=mesh\n)"
+      },
+      {
+        "language": "python",
+        "code": "# Create DataParallel with list of devices.\n# As a shortcut, the devices can be skipped,\n# and Keras will detect all local available devices.\n# E.g. data_parallel = DataParallel()\ndata_parallel = keras.distribution.DataParallel(devices=devices)\n\n# Or you can choose to create DataParallel with a 1D `DeviceMesh`.\nmesh_1d = keras.distribution.DeviceMesh(\n    shape=(8,), axis_names=[\"data\"], devices=devices\n)\ndata_parallel = keras.distribution.DataParallel(device_mesh=mesh_1d)\n\ninputs = np.random.normal(size=(128, 28, 28, 1))\nlabels = np.random.normal(size=(128, 10))\ndataset = tf_data.Dataset.from_tensor_slices((inputs, labels)).batch(16)\n\n# Set the global distribution.\nkeras.distribution.set_distribution(data_parallel)\n\n# Note that all the model weights from here on are replicated to\n# all the devices of the `DeviceMesh`. This includes the RNG\n# state, optimizer states, metrics, etc. The dataset fed into `model.fit` or\n# `model.evaluate` will be split evenly on the batch dimension, and sent to\n# all the devices. You don't have to do any manual aggregration of losses,\n# since all the computation happens in a global context.\ninputs = layers.Input(shape=(28, 28, 1))\ny = layers.Flatten()(inputs)\ny = layers.Dense(units=200, use_bias=False, activation=\"relu\")(y)\ny = layers.Dropout(0.4)(y)\ny = layers.Dense(units=10, activation=\"softmax\")(y)\nmodel = keras.Model(inputs=inputs, outputs=y)\n\nmodel.compile(loss=\"mse\")\nmodel.fit(dataset, epochs=3)\nmodel.evaluate(dataset)"
+      },
+      {
+        "language": "text",
+        "code": "Epoch 1/3\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 8s 30ms/step - loss: 1.0116\nEpoch 2/3\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 0s 4ms/step - loss: 0.9237\nEpoch 3/3\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 0s 4ms/step - loss: 0.8736\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 5s 5ms/step - loss: 0.8349\n\n0.842325747013092"
+      },
+      {
+        "language": "python",
+        "code": "mesh_2d = keras.distribution.DeviceMesh(\n    shape=(2, 4), axis_names=[\"data\", \"model\"], devices=devices\n)\nlayout_map = keras.distribution.LayoutMap(mesh_2d)\n# The rule below means that for any weights that match with d1/kernel, it\n# will be sharded with model dimensions (4 devices), same for the d1/bias.\n# All other weights will be fully replicated.\nlayout_map[\"d1/kernel\"] = (None, \"model\")\nlayout_map[\"d1/bias\"] = (\"model\",)\n\n# You can also set the layout for the layer output like\nlayout_map[\"d2/output\"] = (\"data\", None)\n\nmodel_parallel = keras.distribution.ModelParallel(layout_map, batch_dim_name=\"data\")\n\nkeras.distribution.set_distribution(model_parallel)\n\ninputs = layers.Input(shape=(28, 28, 1))\ny = layers.Flatten()(inputs)\ny = layers.Dense(units=200, use_bias=False, activation=\"relu\", name=\"d1\")(y)\ny = layers.Dropout(0.4)(y)\ny = layers.Dense(units=10, activation=\"softmax\", name=\"d2\")(y)\nmodel = keras.Model(inputs=inputs, outputs=y)\n\n# The data will be sharded across the \"data\" dimension of the method, which\n# has 2 devices.\nmodel.compile(loss=\"mse\")\nmodel.fit(dataset, epochs=3)\nmodel.evaluate(dataset)"
+      },
+      {
+        "language": "text",
+        "code": "Epoch 1/3\n\n/opt/conda/envs/keras-jax/lib/python3.10/site-packages/jax/_src/interpreters/mlir.py:761: UserWarning: Some donated buffers were not usable: ShapedArray(float32[784,50]).\nSee an explanation at https://jax.readthedocs.io/en/latest/faq.html#buffer-donation.\n  warnings.warn(\"Some donated buffers were not usable:\"\n\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 5s 8ms/step - loss: 1.0266\nEpoch 2/3\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 0s 5ms/step - loss: 0.9181\nEpoch 3/3\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 0s 5ms/step - loss: 0.8725\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 1s 4ms/step - loss: 0.8381  \n\n0.8502610325813293"
+      },
+      {
+        "language": "python",
+        "code": "full_data_parallel_mesh = keras.distribution.DeviceMesh(\n    shape=(8, 1), axis_names=[\"data\", \"model\"], devices=devices\n)\nmore_data_parallel_mesh = keras.distribution.DeviceMesh(\n    shape=(4, 2), axis_names=[\"data\", \"model\"], devices=devices\n)\nmore_model_parallel_mesh = keras.distribution.DeviceMesh(\n    shape=(2, 4), axis_names=[\"data\", \"model\"], devices=devices\n)\nfull_model_parallel_mesh = keras.distribution.DeviceMesh(\n    shape=(1, 8), axis_names=[\"data\", \"model\"], devices=devices\n)"
+      }
+    ],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Keras 3 distribution guide' (https://keras.io/guides/distribution/)?",
+        "answer": "Data and model distribution concepts for multi-device Keras workflows."
+      },
+      {
+        "question": "How does 'Keras 3 distribution guide' handle: Distributed training with Keras 3?",
+        "answer": "**Author:** [Qianli Zhu](https://github.com/qlzh727)<br>\n**Date created:** 2023/11/07<br>\n**Last modified:** 2023/11/07<br>\n**Description:** Complete guide to the distribution API for multi-backend Keras.\n\n\n<img class=\"k-inline-icon\" src=\"https://colab.research.google.com/img/colab_favicon.ico\"/> [**View in Colab**](https://colab.research.google.com/github/keras-team/keras-io/blob/master/guides/ipynb/distribution.ipynb)  <span class=\"k-dot\">\u2022</span><img class=\"k-inline-icon\" src=\"https://github.com/favicon.ico\"/> [**GitHub source**](https://github.com/keras-team/keras-io/blob/master/guides/distribution.py)\n\n\n\n---"
+      },
+      {
+        "question": "How does 'Keras 3 distribution guide' handle: Introduction?",
+        "answer": "The Keras distribution API is a new interface designed to facilitate\ndistributed deep learning across a variety of backends like JAX, TensorFlow and\nPyTorch. This powerful API introduces a suite of tools enabling data and model\nparallelism, allowing for efficient scaling of deep learning models on multiple\naccelerators and hosts. Whether leveraging the power of GPUs or TPUs, the API\nprovides a streamlined approach to initializing distributed environments,\ndefining device meshes, and orchestrating the layout of tensors across\ncomputational resources. Through classes like `DataParallel` and\n`ModelParallel`, it abstracts the complexity involved in parallel computation,\nmaking it easier for developers to accelerate their machine learning\nworkflows.\n\n---"
+      },
+      {
+        "question": "How does 'Keras 3 distribution guide' handle: How it works?",
+        "answer": "The Keras distribution API provides a global programming model that allows\ndevelopers to compose applications that operate on tensors in a global context\n(as if working with a single device) while\nautomatically managing distribution across many devices. The API leverages the\nunderlying framework (e.g. JAX) to distribute the program and tensors according to the\nsharding directives through a procedure called single program, multiple data\n(SPMD) expansion.\n\nBy decoupling the application from sharding directives, the API enables running\nthe same application on a single device, multiple devices, or even multiple\nclients, while preserving its global semantics.\n\n---"
+      },
+      {
+        "question": "How does 'Keras 3 distribution guide' handle: The distribution API is only implemented for the JAX backend for now.?",
+        "answer": "os.environ[\"KERAS_BACKEND\"] = \"jax\"\n\nimport keras\nfrom keras import layers\nimport jax\nimport numpy as np\nfrom tensorflow import data as tf_data  # For dataset input.\n```\n\n---"
+      },
+      {
+        "question": "How does 'Keras 3 distribution guide' handle: `DeviceMesh` and `TensorLayout`?",
+        "answer": "The `keras.distribution.DeviceMesh` class in Keras distribution API represents a cluster of\ncomputational devices configured for distributed computation. It aligns with\nsimilar concepts in [`jax.sharding.Mesh`](https://jax.readthedocs.io/en/latest/jax.sharding.html#jax.sharding.Mesh) and\n[`tf.dtensor.Mesh`](https://www.tensorflow.org/api_docs/python/tf/experimental/dtensor/Mesh),\nwhere it's used to map the physical devices to a logical mesh structure.\n\nThe `TensorLayout` class then specifies how tensors are distributed across the\n`DeviceMesh`, detailing the sharding of tensors along specified axes that\ncorrespond to the names of the axes in the `DeviceMesh`.\n\nYou can find more detailed concept explainers in the\n[TensorFlow DTensor guide](https://www.tensorflow.org/guide/dtensor_overview#dtensors_model_of_distributed_tensors).\n\n\n```python"
+      },
+      {
+        "question": "How does 'Keras 3 distribution guide' handle: Define a 2x4 device mesh with data and model parallel axes?",
+        "answer": "mesh = keras.distribution.DeviceMesh(\n    shape=(2, 4), axis_names=[\"data\", \"model\"], devices=devices\n)"
+      },
+      {
+        "question": "How does 'Keras 3 distribution guide' handle: devices on the mesh.?",
+        "answer": "layout_2d = keras.distribution.TensorLayout(axes=(\"model\", \"data\"), device_mesh=mesh)"
+      },
+      {
+        "question": "How does 'Keras 3 distribution guide' handle: A 4D layout which could be used for data parallel of a image input.?",
+        "answer": "replicated_layout_4d = keras.distribution.TensorLayout(\n    axes=(\"data\", None, None, None), device_mesh=mesh\n)\n```\n\n---"
+      },
+      {
+        "question": "How does 'Keras 3 distribution guide' handle: Distribution?",
+        "answer": "The `Distribution` class in Keras serves as a foundational abstract class designed\nfor developing custom distribution strategies. It encapsulates the core logic\nneeded to distribute a model's variables, input data, and intermediate\ncomputations across a device mesh. As an end user, you won't have to interact\ndirectly with this class, but its subclasses like `DataParallel` or\n`ModelParallel`.\n\n---"
+      }
+    ],
+    "full_markdown": "# Distributed training with Keras 3\n\n**Author:** [Qianli Zhu](https://github.com/qlzh727)<br>\n**Date created:** 2023/11/07<br>\n**Last modified:** 2023/11/07<br>\n**Description:** Complete guide to the distribution API for multi-backend Keras.\n\n\n<img class=\"k-inline-icon\" src=\"https://colab.research.google.com/img/colab_favicon.ico\"/> [**View in Colab**](https://colab.research.google.com/github/keras-team/keras-io/blob/master/guides/ipynb/distribution.ipynb)  <span class=\"k-dot\">\u2022</span><img class=\"k-inline-icon\" src=\"https://github.com/favicon.ico\"/> [**GitHub source**](https://github.com/keras-team/keras-io/blob/master/guides/distribution.py)\n\n\n\n---\n## Introduction\n\nThe Keras distribution API is a new interface designed to facilitate\ndistributed deep learning across a variety of backends like JAX, TensorFlow and\nPyTorch. This powerful API introduces a suite of tools enabling data and model\nparallelism, allowing for efficient scaling of deep learning models on multiple\naccelerators and hosts. Whether leveraging the power of GPUs or TPUs, the API\nprovides a streamlined approach to initializing distributed environments,\ndefining device meshes, and orchestrating the layout of tensors across\ncomputational resources. Through classes like `DataParallel` and\n`ModelParallel`, it abstracts the complexity involved in parallel computation,\nmaking it easier for developers to accelerate their machine learning\nworkflows.\n\n---\n## How it works\n\nThe Keras distribution API provides a global programming model that allows\ndevelopers to compose applications that operate on tensors in a global context\n(as if working with a single device) while\nautomatically managing distribution across many devices. The API leverages the\nunderlying framework (e.g. JAX) to distribute the program and tensors according to the\nsharding directives through a procedure called single program, multiple data\n(SPMD) expansion.\n\nBy decoupling the application from sharding directives, the API enables running\nthe same application on a single device, multiple devices, or even multiple\nclients, while preserving its global semantics.\n\n---\n## Setup\n\n\n```python\nimport os\n\n# The distribution API is only implemented for the JAX backend for now.\nos.environ[\"KERAS_BACKEND\"] = \"jax\"\n\nimport keras\nfrom keras import layers\nimport jax\nimport numpy as np\nfrom tensorflow import data as tf_data  # For dataset input.\n```\n\n---\n## `DeviceMesh` and `TensorLayout`\n\nThe `keras.distribution.DeviceMesh` class in Keras distribution API represents a cluster of\ncomputational devices configured for distributed computation. It aligns with\nsimilar concepts in [`jax.sharding.Mesh`](https://jax.readthedocs.io/en/latest/jax.sharding.html#jax.sharding.Mesh) and\n[`tf.dtensor.Mesh`](https://www.tensorflow.org/api_docs/python/tf/experimental/dtensor/Mesh),\nwhere it's used to map the physical devices to a logical mesh structure.\n\nThe `TensorLayout` class then specifies how tensors are distributed across the\n`DeviceMesh`, detailing the sharding of tensors along specified axes that\ncorrespond to the names of the axes in the `DeviceMesh`.\n\nYou can find more detailed concept explainers in the\n[TensorFlow DTensor guide](https://www.tensorflow.org/guide/dtensor_overview#dtensors_model_of_distributed_tensors).\n\n\n```python\n# Retrieve the local available gpu devices.\ndevices = jax.devices(\"gpu\")  # Assume it has 8 local GPUs.\n\n# Define a 2x4 device mesh with data and model parallel axes\nmesh = keras.distribution.DeviceMesh(\n    shape=(2, 4), axis_names=[\"data\", \"model\"], devices=devices\n)\n\n# A 2D layout, which describes how a tensor is distributed across the\n# mesh. The layout can be visualized as a 2D grid with \"model\" as rows and\n# \"data\" as columns, and it is a [4, 2] grid when it mapped to the physical\n# devices on the mesh.\nlayout_2d = keras.distribution.TensorLayout(axes=(\"model\", \"data\"), device_mesh=mesh)\n\n# A 4D layout which could be used for data parallel of a image input.\nreplicated_layout_4d = keras.distribution.TensorLayout(\n    axes=(\"data\", None, None, None), device_mesh=mesh\n)\n```\n\n---\n## Distribution\n\nThe `Distribution` class in Keras serves as a foundational abstract class designed\nfor developing custom distribution strategies. It encapsulates the core logic\nneeded to distribute a model's variables, input data, and intermediate\ncomputations across a device mesh. As an end user, you won't have to interact\ndirectly with this class, but its subclasses like `DataParallel` or\n`ModelParallel`.\n\n---\n## DataParallel\n\nThe `DataParallel` class in the Keras distribution API is designed for the\ndata parallelism strategy in distributed training, where the model weights are\nreplicated across all devices in the `DeviceMesh`, and each device processes a\nportion of the input data.\n\nHere is a sample usage of this class.\n\n\n```python\n# Create DataParallel with list of devices.\n# As a shortcut, the devices can be skipped,\n# and Keras will detect all local available devices.\n# E.g. data_parallel = DataParallel()\ndata_parallel = keras.distribution.DataParallel(devices=devices)\n\n# Or you can choose to create DataParallel with a 1D `DeviceMesh`.\nmesh_1d = keras.distribution.DeviceMesh(\n    shape=(8,), axis_names=[\"data\"], devices=devices\n)\ndata_parallel = keras.distribution.DataParallel(device_mesh=mesh_1d)\n\ninputs = np.random.normal(size=(128, 28, 28, 1))\nlabels = np.random.normal(size=(128, 10))\ndataset = tf_data.Dataset.from_tensor_slices((inputs, labels)).batch(16)\n\n# Set the global distribution.\nkeras.distribution.set_distribution(data_parallel)\n\n# Note that all the model weights from here on are replicated to\n# all the devices of the `DeviceMesh`. This includes the RNG\n# state, optimizer states, metrics, etc. The dataset fed into `model.fit` or\n# `model.evaluate` will be split evenly on the batch dimension, and sent to\n# all the devices. You don't have to do any manual aggregration of losses,\n# since all the computation happens in a global context.\ninputs = layers.Input(shape=(28, 28, 1))\ny = layers.Flatten()(inputs)\ny = layers.Dense(units=200, use_bias=False, activation=\"relu\")(y)\ny = layers.Dropout(0.4)(y)\ny = layers.Dense(units=10, activation=\"softmax\")(y)\nmodel = keras.Model(inputs=inputs, outputs=y)\n\nmodel.compile(loss=\"mse\")\nmodel.fit(dataset, epochs=3)\nmodel.evaluate(dataset)\n```\n\n<div class=\"k-default-codeblock\">\n```\nEpoch 1/3\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 8s 30ms/step - loss: 1.0116\nEpoch 2/3\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 0s 4ms/step - loss: 0.9237\nEpoch 3/3\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 0s 4ms/step - loss: 0.8736\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 5s 5ms/step - loss: 0.8349\n\n0.842325747013092\n\n```\n</div>\n---\n## `ModelParallel` and `LayoutMap`\n\n`ModelParallel` will be mostly useful when model weights are too large to fit\non a single accelerator. This setting allows you to spit your model weights or\nactivation tensors across all the devices on the `DeviceMesh`, and enable the\nhorizontal scaling for the large models.\n\nUnlike the `DataParallel` model where all weights are fully replicated,\nthe weights layout under `ModelParallel` usually need some customization for\nbest performances. We introduce `LayoutMap` to let you specify the\n`TensorLayout` for any weights and intermediate tensors from global perspective.\n\n`LayoutMap` is a dict-like object that maps a string to `TensorLayout`\ninstances. It behaves differently from a normal Python dict in that the string\nkey is treated as a regex when retrieving the value. The class allows you to\ndefine the naming schema of `TensorLayout` and then retrieve the corresponding\n`TensorLayout` instance. Typically, the key used to query\nis the `variable.path` attribute,  which is the identifier of the variable.\nAs a shortcut, a tuple or list of axis\nnames is also allowed when inserting a value, and it will be converted to\n`TensorLayout`.\n\nThe `LayoutMap` can also optionally contain a `DeviceMesh` to populate the\n`TensorLayout.device_mesh` if it is not set. When retrieving a layout with a\nkey, and if there isn't an exact match, all existing keys in the layout map will\nbe treated as regex and matched against the input key again. If there are\nmultiple matches, a `ValueError` is raised. If no matches are found, `None` is\nreturned.\n\n\n```python\nmesh_2d = keras.distribution.DeviceMesh(\n    shape=(2, 4), axis_names=[\"data\", \"model\"], devices=devices\n)\nlayout_map = keras.distribution.LayoutMap(mesh_2d)\n# The rule below means that for any weights that match with d1/kernel, it\n# will be sharded with model dimensions (4 devices), same for the d1/bias.\n# All other weights will be fully replicated.\nlayout_map[\"d1/kernel\"] = (None, \"model\")\nlayout_map[\"d1/bias\"] = (\"model\",)\n\n# You can also set the layout for the layer output like\nlayout_map[\"d2/output\"] = (\"data\", None)\n\nmodel_parallel = keras.distribution.ModelParallel(layout_map, batch_dim_name=\"data\")\n\nkeras.distribution.set_distribution(model_parallel)\n\ninputs = layers.Input(shape=(28, 28, 1))\ny = layers.Flatten()(inputs)\ny = layers.Dense(units=200, use_bias=False, activation=\"relu\", name=\"d1\")(y)\ny = layers.Dropout(0.4)(y)\ny = layers.Dense(units=10, activation=\"softmax\", name=\"d2\")(y)\nmodel = keras.Model(inputs=inputs, outputs=y)\n\n# The data will be sharded across the \"data\" dimension of the method, which\n# has 2 devices.\nmodel.compile(loss=\"mse\")\nmodel.fit(dataset, epochs=3)\nmodel.evaluate(dataset)\n```\n\n<div class=\"k-default-codeblock\">\n```\nEpoch 1/3\n\n/opt/conda/envs/keras-jax/lib/python3.10/site-packages/jax/_src/interpreters/mlir.py:761: UserWarning: Some donated buffers were not usable: ShapedArray(float32[784,50]).\nSee an explanation at https://jax.readthedocs.io/en/latest/faq.html#buffer-donation.\n  warnings.warn(\"Some donated buffers were not usable:\"\n\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 5s 8ms/step - loss: 1.0266\nEpoch 2/3\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 0s 5ms/step - loss: 0.9181\nEpoch 3/3\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 0s 5ms/step - loss: 0.8725\n 8/8 \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 1s 4ms/step - loss: 0.8381  \n\n0.8502610325813293\n\n```\n</div>\nIt is also easy to change the mesh structure to tune the computation between\nmore data parallel or model parallel. You can do this by adjusting the shape of\nthe mesh. And no changes are needed for any other code.\n\n\n```python\nfull_data_parallel_mesh = keras.distribution.DeviceMesh(\n    shape=(8, 1), axis_names=[\"data\", \"model\"], devices=devices\n)\nmore_data_parallel_mesh = keras.distribution.DeviceMesh(\n    shape=(4, 2), axis_names=[\"data\", \"model\"], devices=devices\n)\nmore_model_parallel_mesh = keras.distribution.DeviceMesh(\n    shape=(2, 4), axis_names=[\"data\", \"model\"], devices=devices\n)\nfull_model_parallel_mesh = keras.distribution.DeviceMesh(\n    shape=(1, 8), axis_names=[\"data\", \"model\"], devices=devices\n)\n```\n\n### Further reading\n\n1. [JAX Distributed arrays and automatic parallelization](https://jax.readthedocs.io/en/latest/notebooks/Distributed_arrays_and_automatic_parallelization.html)\n2. [JAX sharding module](https://jax.readthedocs.io/en/latest/jax.sharding.html)\n3. [TensorFlow Distributed training with DTensors](https://www.tensorflow.org/tutorials/distribute/dtensor_ml_tutorial)\n4. [TensorFlow DTensor concepts](https://www.tensorflow.org/guide/dtensor_overview)\n5. [Using DTensors with tf.keras](https://www.tensorflow.org/tutorials/distribute/dtensor_keras_tutorial)"
+  }
 }

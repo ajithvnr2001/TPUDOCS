@@ -1,63 +1,316 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:mig_11_torchtpu_custom_kernels",
-  "@type": "DocumentationResource",
-  "name": "TorchTPU custom kernels and API reference",
-  "canonicalUrl": "https://torchtpu.readthedocs.io/en/latest/custom_kernels/",
-  "category": "Nvidia to tpu migration docs",
-  "categorySlug": "nvidia_to_tpu_migration_docs",
-  "description": "Integrate prebuilt Tokamax kernels, custom Pallas kernels, or experimental Helion kernels.",
-  "provenance": {
-    "sourceUrl": "https://torchtpu.readthedocs.io/en/latest/custom_kernels/",
-    "crawledAt": "2026-10-26T12:48:08.094119+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 14733
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "TorchTPU custom kernels and API reference",
-      "documentedIn",
-      "https://torchtpu.readthedocs.io/en/latest/custom_kernels/"
-    ],
-    [
-      "TorchTPU custom kernels and API reference",
-      "belongsToCategory",
-      "nvidia_to_tpu_migration_docs"
-    ],
-    [
-      "TorchTPU custom kernels and API reference",
-      "supportsWorkflow",
-      "CUDA to TPU Code Migration"
-    ],
-    [
-      "TorchTPU custom kernels and API reference",
-      "primaryFramework",
-      "TorchTPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:mig_11_torchtpu_custom_kernels",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "mig_11_torchtpu_custom_kernels",
+    "name": "TorchTPU custom kernels and API reference",
+    "url": "https://torchtpu.readthedocs.io/en/latest/custom_kernels/",
+    "category": "nvidia_to_tpu_migration_docs",
+    "description": "Integrate prebuilt Tokamax kernels, custom Pallas kernels, or experimental Helion kernels.",
+    "char_count": 4845,
+    "word_count": 618,
+    "section_count": 15,
+    "code_block_count": 2,
+    "table_count": 1,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.767098+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "schema:name",
+        "object": "TorchTPU custom kernels and API reference"
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "schema:url",
+        "object": "https://torchtpu.readthedocs.io/en/latest/custom_kernels/"
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "schema:category",
+        "object": "nvidia_to_tpu_migration_docs"
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "schema:description",
+        "object": "Integrate prebuilt Tokamax kernels, custom Pallas kernels, or experimental Helion kernels."
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:Pallas"
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:Tokamax"
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:XProf"
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "okf:hasSection",
+        "object": "TorchTPU custom kernels"
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "okf:hasSection",
+        "object": "Choosing an integration approach"
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "okf:hasSection",
+        "object": "1. Using pre-built kernels from Tokamax"
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "okf:hasSection",
+        "object": "When to use"
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "okf:hasSection",
+        "object": "How it works"
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "okf:hasSection",
+        "object": "2. Writing Custom Pallas Kernels"
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "okf:hasSection",
+        "object": "How to integrate a Pallas kernel"
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "okf:hasSection",
+        "object": "1. Define the Pallas kernel"
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "okf:hasSection",
+        "object": "2. Wrap the Pallas kernel into a JAX function"
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "okf:hasSection",
+        "object": "3. Wrap it for PyTorch using the functional interface"
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "okf:hasSection",
+        "object": "4. Call it like a standard PyTorch function"
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "okf:hasSection",
+        "object": "3. Writing portable kernels with Helion (experimental)"
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "okf:hasSection",
+        "object": "How to write a Helion kernel"
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "okf:hasSection",
+        "object": "1. Define the kernel in Helion"
+      },
+      {
+        "subject": "tpu_doc:mig_11_torchtpu_custom_kernels",
+        "predicate": "okf:hasSection",
+        "object": "2. Call it like a standard PyTorch function"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "TorchTPU custom kernels and API reference provides official guidance on Integrate prebuilt Tokamax kernels, custom Pallas kernels, or experimental Helion kernels.",
-      "confidence": 1.0,
-      "source": "https://torchtpu.readthedocs.io/en/latest/custom_kernels/",
-      "verified": true
-    },
-    {
-      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
-      "confidence": 1.0,
-      "source": "https://torchtpu.readthedocs.io/en/latest/custom_kernels/",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is TorchTPU custom kernels and API reference used for in Cloud TPU workflows?",
-      "answer": "Integrate prebuilt Tokamax kernels, custom Pallas kernels, or experimental Helion kernels.",
-      "category": "nvidia_to_tpu_migration_docs"
-    }
-  ],
-  "contentSummary": "Integrate prebuilt Tokamax kernels, custom Pallas kernels, or experimental Helion kernels."
+  },
+  "structured_content": {
+    "summary": "Integrate prebuilt Tokamax kernels, custom Pallas kernels, or experimental Helion kernels.",
+    "sections": [
+      {
+        "heading": "TorchTPU custom kernels",
+        "level": 1,
+        "content": "While TorchTPU natively accelerates standard PyTorch framework operators (such as [`torch.nn.functional.scaled_dot_product_attention`](https://docs.pytorch.org/docs/stable/generated/torch.nn.functional.scaled_dot_product_attention.html)), you may need to integrate custom kernels to accelerate model-specific operations, fuse operations to reduce memory bandwidth overhead, or implement novel architectures not yet covered by standard PyTorch operators."
+      },
+      {
+        "heading": "Choosing an integration approach",
+        "level": 2,
+        "content": "TorchTPU provides three ways to use custom kernels on TPU, depending on your use case:  \n| Approach  | Status  | Best For  |  \n| --- | --- | --- |  \n| **Tokamax**  | Production Ready  | Drop-in acceleration for common LLM/MoE building blocks without writing kernel code.  |  \n| **Pallas (`torch.tpu.pallas.jax_op`)**  | Production Ready  | Writing bespoke, maximum-performance TPU kernels in JAX/Pallas and calling them from PyTorch.  |  \n| **Helion**  | Experimental  | Writing kernels that are portable across accelerators (e.g. GPU, TPU) using a PyTorch-native DSL.  |"
+      },
+      {
+        "heading": "1. Using pre-built kernels from Tokamax",
+        "level": 2,
+        "content": "Before writing a custom kernel from scratch, check if the operator is available in [Tokamax](http://openxla.org/tokamax)\u2014a library of high-performance TPU kernels with native PyTorch interoperability."
+      },
+      {
+        "heading": "When to use",
+        "level": 3,
+        "content": "Use Tokamax when your model requires standard high-performance building blocks, including:\n  * **Mixture-of-Experts (MoE):** Grouped matrix multiplication, token gathers, and scatters.\n  * **Attention Variants:** Paged attention, Gated DeltaNet, Kimi Delta Attention, and Multi-head Latent Attention (MLA).\n  * **Selection:** Optimized `TopK` computation."
+      },
+      {
+        "heading": "How it works",
+        "level": 3,
+        "content": "Tokamax kernels are authored in JAX/Pallas and backed by integrated autotuning (such as automated tile-size search), low-overhead XProf benchmarking, and regression testing across TPU generations. Under the hood, Tokamax uses `torch.tpu.pallas.jax_op` to handle framework interoperability transparently and exposes native PyTorch APIs directly to your model."
+      },
+      {
+        "heading": "2. Writing Custom Pallas Kernels",
+        "level": 2,
+        "content": "If you need a bespoke operation not covered by PyTorch or Tokamax, you can write a TPU kernel in [Pallas](https://docs.jax.dev/en/latest/pallas/index.html) and register it as a PyTorch operator using `torch.tpu.pallas.jax_op`."
+      },
+      {
+        "heading": "How to integrate a Pallas kernel",
+        "level": 3,
+        "content": "1. **Define the Pallas kernel** using input and output memory references (`Ref`s).\n  2. **Wrap the kernel in a JAX function** using `pl.pallas_call` to specify output shapes and dtypes.\n  3. **Register the JAX function with TorchTPU** via `torch.tpu.pallas.jax_op`.\n\n```\nimport jax\nfrom jax.experimental import pallas as pl\nimport torch"
+      },
+      {
+        "heading": "1. Define the Pallas kernel",
+        "level": 1,
+        "content": "def add_vectors_pallas_kernel(x_ref, y_ref, o_ref):\n  x, y = x_ref[...], y_ref[...]\n  o_ref[...] = x + y"
+      },
+      {
+        "heading": "2. Wrap the Pallas kernel into a JAX function",
+        "level": 1,
+        "content": "def add_vectors_jax(x: jax.Array, y: jax.Array) -> jax.Array:\n  return pl.pallas_call(\n      add_vectors_pallas_kernel,\n      out_shape=jax.ShapeDtypeStruct(x.shape, x.dtype),\n  )(x, y)"
+      },
+      {
+        "heading": "3. Wrap it for PyTorch using the functional interface",
+        "level": 1,
+        "content": "add_vectors_fn = torch.tpu.pallas.jax_op(\n    \"pallas::add_vectors\",\n    add_vectors_jax,\n)"
+      },
+      {
+        "heading": "4. Call it like a standard PyTorch function",
+        "level": 1,
+        "content": "x = torch.tensor([1.0, 2.0, 3.0], device=\"tpu\")\ny = torch.tensor([4.0, 5.0, 6.0], device=\"tpu\")\nz = add_vectors_fn(x, y)\n\n```"
+      },
+      {
+        "heading": "3. Writing portable kernels with Helion (experimental)",
+        "level": 2,
+        "content": "If you want your kernels to be portable across accelerators (e.g. TPU, GPU), you can use [Helion](https://helionlang.com/), a PyTorch-native DSL for kernel authoring.\nNote\nHelion support on TorchTPU is currently **experimental**. For production workloads, use Tokamax or `torch.tpu.pallas.jax_op`."
+      },
+      {
+        "heading": "How to write a Helion kernel",
+        "level": 3,
+        "content": "Decorate your function with `@helion.kernel`. Use standard PyTorch operations for host-side setup, and `hl.tile` to define the device execution loop over partitioned tiles:\n\n```\nimport helion\nimport helion.language as hl\nimport torch"
+      },
+      {
+        "heading": "1. Define the kernel in Helion",
+        "level": 1,
+        "content": "@helion.kernel\ndef add_vectors(x: torch.Tensor, y: torch.Tensor) -> torch.Tensor:\n  # Standard PyTorch host-side setup\n  x, y = torch.broadcast_tensors(x, y)\n  out = torch.empty_like(x)\n\n  # Device execution loop over automatically partitioned tiles\n  for tile in hl.tile(out.size()):\n    out[tile] = x[tile] + y[tile]\n\n  return out"
+      },
+      {
+        "heading": "2. Call it like a standard PyTorch function",
+        "level": 1,
+        "content": "x = torch.tensor([1.0, 2.0, 3.0], device=\"tpu\")\ny = torch.tensor([4.0, 5.0, 6.0], device=\"tpu\")\nz = add_vectors(x, y)\n\n```\n\nFor more information about Helion, see the [Helion documentation](https://helionlang.com/), ask questions in the [PyTorch developer discussion forum](https://dev-discuss.pytorch.org/c/helion/31), or [report issues on GitHub](https://github.com/pytorch/helion/issues)."
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "import jax\nfrom jax.experimental import pallas as pl\nimport torch\n\n# 1. Define the Pallas kernel\ndef add_vectors_pallas_kernel(x_ref, y_ref, o_ref):\n  x, y = x_ref[...], y_ref[...]\n  o_ref[...] = x + y\n\n# 2. Wrap the Pallas kernel into a JAX function\ndef add_vectors_jax(x: jax.Array, y: jax.Array) -> jax.Array:\n  return pl.pallas_call(\n      add_vectors_pallas_kernel,\n      out_shape=jax.ShapeDtypeStruct(x.shape, x.dtype),\n  )(x, y)\n\n# 3. Wrap it for PyTorch using the functional interface\nadd_vectors_fn = torch.tpu.pallas.jax_op(\n    \"pallas::add_vectors\",\n    add_vectors_jax,\n)\n\n# 4. Call it like a standard PyTorch function\nx = torch.tensor([1.0, 2.0, 3.0], device=\"tpu\")\ny = torch.tensor([4.0, 5.0, 6.0], device=\"tpu\")\nz = add_vectors_fn(x, y)"
+      },
+      {
+        "language": "text",
+        "code": "import helion\nimport helion.language as hl\nimport torch\n\n# 1. Define the kernel in Helion\n@helion.kernel\ndef add_vectors(x: torch.Tensor, y: torch.Tensor) -> torch.Tensor:\n  # Standard PyTorch host-side setup\n  x, y = torch.broadcast_tensors(x, y)\n  out = torch.empty_like(x)\n\n  # Device execution loop over automatically partitioned tiles\n  for tile in hl.tile(out.size()):\n    out[tile] = x[tile] + y[tile]\n\n  return out\n\n# 2. Call it like a standard PyTorch function\nx = torch.tensor([1.0, 2.0, 3.0], device=\"tpu\")\ny = torch.tensor([4.0, 5.0, 6.0], device=\"tpu\")\nz = add_vectors(x, y)"
+      }
+    ],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [
+      {
+        "headers": [
+          "Approach",
+          "Status",
+          "Best For"
+        ],
+        "rows": [
+          [
+            "**Tokamax**",
+            "Production Ready",
+            "Drop-in acceleration for common LLM/MoE building blocks without writing kernel code."
+          ],
+          [
+            "**Pallas (`torch.tpu.pallas.jax_op`)**",
+            "Production Ready",
+            "Writing bespoke, maximum-performance TPU kernels in JAX/Pallas and calling them from PyTorch."
+          ],
+          [
+            "**Helion**",
+            "Experimental",
+            "Writing kernels that are portable across accelerators (e.g. GPU, TPU) using a PyTorch-native DSL."
+          ]
+        ]
+      }
+    ],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'TorchTPU custom kernels and API reference' (https://torchtpu.readthedocs.io/en/latest/custom_kernels/)?",
+        "answer": "Integrate prebuilt Tokamax kernels, custom Pallas kernels, or experimental Helion kernels."
+      },
+      {
+        "question": "How does 'TorchTPU custom kernels and API reference' handle: TorchTPU custom kernels?",
+        "answer": "While TorchTPU natively accelerates standard PyTorch framework operators (such as [`torch.nn.functional.scaled_dot_product_attention`](https://docs.pytorch.org/docs/stable/generated/torch.nn.functional.scaled_dot_product_attention.html)), you may need to integrate custom kernels to accelerate model-specific operations, fuse operations to reduce memory bandwidth overhead, or implement novel architectures not yet covered by standard PyTorch operators."
+      },
+      {
+        "question": "How does 'TorchTPU custom kernels and API reference' handle: Choosing an integration approach?",
+        "answer": "TorchTPU provides three ways to use custom kernels on TPU, depending on your use case:  \n| Approach  | Status  | Best For  |  \n| --- | --- | --- |  \n| **Tokamax**  | Production Ready  | Drop-in acceleration for common LLM/MoE building blocks without writing kernel code.  |  \n| **Pallas (`torch.tpu.pallas.jax_op`)**  | Production Ready  | Writing bespoke, maximum-performance TPU kernels in JAX/Pallas and calling them from PyTorch.  |  \n| **Helion**  | Experimental  | Writing kernels that are portable across accelerators (e.g. GPU, TPU) using a PyTorch-native DSL.  |"
+      },
+      {
+        "question": "How does 'TorchTPU custom kernels and API reference' handle: 1. Using pre-built kernels from Tokamax?",
+        "answer": "Before writing a custom kernel from scratch, check if the operator is available in [Tokamax](http://openxla.org/tokamax)\u2014a library of high-performance TPU kernels with native PyTorch interoperability."
+      },
+      {
+        "question": "How does 'TorchTPU custom kernels and API reference' handle: When to use?",
+        "answer": "Use Tokamax when your model requires standard high-performance building blocks, including:\n  * **Mixture-of-Experts (MoE):** Grouped matrix multiplication, token gathers, and scatters.\n  * **Attention Variants:** Paged attention, Gated DeltaNet, Kimi Delta Attention, and Multi-head Latent Attention (MLA).\n  * **Selection:** Optimized `TopK` computation."
+      },
+      {
+        "question": "How does 'TorchTPU custom kernels and API reference' handle: How it works?",
+        "answer": "Tokamax kernels are authored in JAX/Pallas and backed by integrated autotuning (such as automated tile-size search), low-overhead XProf benchmarking, and regression testing across TPU generations. Under the hood, Tokamax uses `torch.tpu.pallas.jax_op` to handle framework interoperability transparently and exposes native PyTorch APIs directly to your model."
+      },
+      {
+        "question": "How does 'TorchTPU custom kernels and API reference' handle: 2. Writing Custom Pallas Kernels?",
+        "answer": "If you need a bespoke operation not covered by PyTorch or Tokamax, you can write a TPU kernel in [Pallas](https://docs.jax.dev/en/latest/pallas/index.html) and register it as a PyTorch operator using `torch.tpu.pallas.jax_op`."
+      },
+      {
+        "question": "How does 'TorchTPU custom kernels and API reference' handle: How to integrate a Pallas kernel?",
+        "answer": "1. **Define the Pallas kernel** using input and output memory references (`Ref`s).\n  2. **Wrap the kernel in a JAX function** using `pl.pallas_call` to specify output shapes and dtypes.\n  3. **Register the JAX function with TorchTPU** via `torch.tpu.pallas.jax_op`.\n\n```\nimport jax\nfrom jax.experimental import pallas as pl\nimport torch"
+      },
+      {
+        "question": "How does 'TorchTPU custom kernels and API reference' handle: 1. Define the Pallas kernel?",
+        "answer": "def add_vectors_pallas_kernel(x_ref, y_ref, o_ref):\n  x, y = x_ref[...], y_ref[...]\n  o_ref[...] = x + y"
+      },
+      {
+        "question": "How does 'TorchTPU custom kernels and API reference' handle: 2. Wrap the Pallas kernel into a JAX function?",
+        "answer": "def add_vectors_jax(x: jax.Array, y: jax.Array) -> jax.Array:\n  return pl.pallas_call(\n      add_vectors_pallas_kernel,\n      out_shape=jax.ShapeDtypeStruct(x.shape, x.dtype),\n  )(x, y)"
+      }
+    ],
+    "full_markdown": "# TorchTPU custom kernels\nWhile TorchTPU natively accelerates standard PyTorch framework operators (such as [`torch.nn.functional.scaled_dot_product_attention`](https://docs.pytorch.org/docs/stable/generated/torch.nn.functional.scaled_dot_product_attention.html)), you may need to integrate custom kernels to accelerate model-specific operations, fuse operations to reduce memory bandwidth overhead, or implement novel architectures not yet covered by standard PyTorch operators.\n## Choosing an integration approach\nTorchTPU provides three ways to use custom kernels on TPU, depending on your use case:  \n| Approach  | Status  | Best For  |  \n| --- | --- | --- |  \n| **Tokamax**  | Production Ready  | Drop-in acceleration for common LLM/MoE building blocks without writing kernel code.  |  \n| **Pallas (`torch.tpu.pallas.jax_op`)**  | Production Ready  | Writing bespoke, maximum-performance TPU kernels in JAX/Pallas and calling them from PyTorch.  |  \n| **Helion**  | Experimental  | Writing kernels that are portable across accelerators (e.g. GPU, TPU) using a PyTorch-native DSL.  |  \n## 1. Using pre-built kernels from Tokamax\nBefore writing a custom kernel from scratch, check if the operator is available in [Tokamax](http://openxla.org/tokamax)\u2014a library of high-performance TPU kernels with native PyTorch interoperability.\n### When to use\nUse Tokamax when your model requires standard high-performance building blocks, including:\n  * **Mixture-of-Experts (MoE):** Grouped matrix multiplication, token gathers, and scatters.\n  * **Attention Variants:** Paged attention, Gated DeltaNet, Kimi Delta Attention, and Multi-head Latent Attention (MLA).\n  * **Selection:** Optimized `TopK` computation.\n\n\n### How it works\nTokamax kernels are authored in JAX/Pallas and backed by integrated autotuning (such as automated tile-size search), low-overhead XProf benchmarking, and regression testing across TPU generations. Under the hood, Tokamax uses `torch.tpu.pallas.jax_op` to handle framework interoperability transparently and exposes native PyTorch APIs directly to your model.\n## 2. Writing Custom Pallas Kernels\nIf you need a bespoke operation not covered by PyTorch or Tokamax, you can write a TPU kernel in [Pallas](https://docs.jax.dev/en/latest/pallas/index.html) and register it as a PyTorch operator using `torch.tpu.pallas.jax_op`.\n### How to integrate a Pallas kernel\n  1. **Define the Pallas kernel** using input and output memory references (`Ref`s).\n  2. **Wrap the kernel in a JAX function** using `pl.pallas_call` to specify output shapes and dtypes.\n  3. **Register the JAX function with TorchTPU** via `torch.tpu.pallas.jax_op`.\n\n```\nimport jax\nfrom jax.experimental import pallas as pl\nimport torch\n\n# 1. Define the Pallas kernel\ndef add_vectors_pallas_kernel(x_ref, y_ref, o_ref):\n  x, y = x_ref[...], y_ref[...]\n  o_ref[...] = x + y\n\n# 2. Wrap the Pallas kernel into a JAX function\ndef add_vectors_jax(x: jax.Array, y: jax.Array) -> jax.Array:\n  return pl.pallas_call(\n      add_vectors_pallas_kernel,\n      out_shape=jax.ShapeDtypeStruct(x.shape, x.dtype),\n  )(x, y)\n\n# 3. Wrap it for PyTorch using the functional interface\nadd_vectors_fn = torch.tpu.pallas.jax_op(\n    \"pallas::add_vectors\",\n    add_vectors_jax,\n)\n\n# 4. Call it like a standard PyTorch function\nx = torch.tensor([1.0, 2.0, 3.0], device=\"tpu\")\ny = torch.tensor([4.0, 5.0, 6.0], device=\"tpu\")\nz = add_vectors_fn(x, y)\n\n```\n\n## 3. Writing portable kernels with Helion (experimental)\nIf you want your kernels to be portable across accelerators (e.g. TPU, GPU), you can use [Helion](https://helionlang.com/), a PyTorch-native DSL for kernel authoring.\nNote\nHelion support on TorchTPU is currently **experimental**. For production workloads, use Tokamax or `torch.tpu.pallas.jax_op`.\n### How to write a Helion kernel\nDecorate your function with `@helion.kernel`. Use standard PyTorch operations for host-side setup, and `hl.tile` to define the device execution loop over partitioned tiles:\n\n```\nimport helion\nimport helion.language as hl\nimport torch\n\n# 1. Define the kernel in Helion\n@helion.kernel\ndef add_vectors(x: torch.Tensor, y: torch.Tensor) -> torch.Tensor:\n  # Standard PyTorch host-side setup\n  x, y = torch.broadcast_tensors(x, y)\n  out = torch.empty_like(x)\n\n  # Device execution loop over automatically partitioned tiles\n  for tile in hl.tile(out.size()):\n    out[tile] = x[tile] + y[tile]\n\n  return out\n\n# 2. Call it like a standard PyTorch function\nx = torch.tensor([1.0, 2.0, 3.0], device=\"tpu\")\ny = torch.tensor([4.0, 5.0, 6.0], device=\"tpu\")\nz = add_vectors(x, y)\n\n```\n\nFor more information about Helion, see the [Helion documentation](https://helionlang.com/), ask questions in the [PyTorch developer discussion forum](https://dev-discuss.pytorch.org/c/helion/31), or [report issues on GitHub](https://github.com/pytorch/helion/issues)."
+  }
 }

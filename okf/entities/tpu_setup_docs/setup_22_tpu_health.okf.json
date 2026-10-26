@@ -1,57 +1,280 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:setup_22_tpu_health",
-  "@type": "DocumentationResource",
-  "name": "Monitor Cloud TPU health",
-  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/troubleshooting/tpu-health",
-  "category": "TPU setup docs",
-  "categorySlug": "tpu_setup_docs",
-  "description": "Health monitoring and unhealthy-instance detection for TPU VMs, including dashboard and metric labels.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/troubleshooting/tpu-health",
-    "crawledAt": "2026-10-26T12:45:28.102243+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 30690
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Monitor Cloud TPU health",
-      "documentedIn",
-      "https://docs.cloud.google.com/tpu/docs/troubleshooting/tpu-health"
-    ],
-    [
-      "Monitor Cloud TPU health",
-      "belongsToCategory",
-      "tpu_setup_docs"
-    ],
-    [
-      "Monitor Cloud TPU health",
-      "targetsPlatform",
-      "Google Cloud Platform"
-    ],
-    [
-      "Monitor Cloud TPU health",
-      "managesHardware",
-      "Google Cloud TPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:setup_22_tpu_health",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "setup_22_tpu_health",
+    "name": "Monitor Cloud TPU health",
+    "url": "https://docs.cloud.google.com/tpu/docs/troubleshooting/tpu-health",
+    "category": "tpu_setup_docs",
+    "description": "Health monitoring and unhealthy-instance detection for TPU VMs, including dashboard and metric labels.",
+    "char_count": 7467,
+    "word_count": 1019,
+    "section_count": 7,
+    "code_block_count": 3,
+    "table_count": 3,
+    "cli_command_count": 4,
+    "indexed_at": "2026-10-26T14:46:54.417467+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:setup_22_tpu_health",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:setup_22_tpu_health",
+        "predicate": "schema:name",
+        "object": "Monitor Cloud TPU health"
+      },
+      {
+        "subject": "tpu_doc:setup_22_tpu_health",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/tpu/docs/troubleshooting/tpu-health"
+      },
+      {
+        "subject": "tpu_doc:setup_22_tpu_health",
+        "predicate": "schema:category",
+        "object": "tpu_setup_docs"
+      },
+      {
+        "subject": "tpu_doc:setup_22_tpu_health",
+        "predicate": "schema:description",
+        "object": "Health monitoring and unhealthy-instance detection for TPU VMs, including dashboard and metric labels."
+      },
+      {
+        "subject": "tpu_doc:setup_22_tpu_health",
+        "predicate": "okf:hasSection",
+        "object": "Monitor Cloud TPU health"
+      },
+      {
+        "subject": "tpu_doc:setup_22_tpu_health",
+        "predicate": "okf:hasSection",
+        "object": "Unhealthy TPU detection"
+      },
+      {
+        "subject": "tpu_doc:setup_22_tpu_health",
+        "predicate": "okf:hasSection",
+        "object": "TPU health status causes"
+      },
+      {
+        "subject": "tpu_doc:setup_22_tpu_health",
+        "predicate": "okf:hasSection",
+        "object": "Metric labels"
+      },
+      {
+        "subject": "tpu_doc:setup_22_tpu_health",
+        "predicate": "okf:hasSection",
+        "object": "Logging"
+      },
+      {
+        "subject": "tpu_doc:setup_22_tpu_health",
+        "predicate": "okf:hasSection",
+        "object": "Monitoring with the console"
+      },
+      {
+        "subject": "tpu_doc:setup_22_tpu_health",
+        "predicate": "okf:hasSection",
+        "object": "Monitoring with the CLI"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Monitor Cloud TPU health provides official guidance on Health monitoring and unhealthy-instance detection for TPU VMs, including dashboard and metric labels.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/troubleshooting/tpu-health",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Monitor Cloud TPU health used for in Cloud TPU workflows?",
-      "answer": "Health monitoring and unhealthy-instance detection for TPU VMs, including dashboard and metric labels.",
-      "category": "tpu_setup_docs"
-    }
-  ],
-  "contentSummary": "Health monitoring and unhealthy-instance detection for TPU VMs, including dashboard and metric labels."
+  },
+  "structured_content": {
+    "summary": "Health monitoring and unhealthy-instance detection for TPU VMs, including dashboard and metric labels.",
+    "sections": [
+      {
+        "heading": "Monitor Cloud TPU health",
+        "level": 1,
+        "content": "Cloud TPU health monitoring provides real-time information on the health status of TPU VMs and slices. Using either the [Cloud Monitoring](https://cloud.google.com/monitoring) console or [ Google Cloud CLI](https://docs.cloud.google.com/sdk/gcloud), you can identify hardware failures as they occur and reallocate resources, avoiding job failures and minimizing performance degradation.\nTPU health monitoring assigns either a `HEALTHY` or `UNHEALTHY` status to each TPU instance in use. TPUs functioning as expected are assigned a `HEALTHY` status, and those that are no longer functional or performing at a severely reduced level are assigned an `UNHEALTHY` status.\nAlong with a health status, TPU health monitoring provides logging metrics for specific jobs. You can use these metrics to further diagnose TPU health and performance issues that are not caused by hardware issues."
+      },
+      {
+        "heading": "Unhealthy TPU detection",
+        "level": 2,
+        "content": "When TPU health monitoring assigns an `UNHEALTHY` status to a TPU, it provides identifying information of the failing TPU through the `compute.googleapis.com/instance/tpu/infra_health` service endpoint."
+      },
+      {
+        "heading": "TPU health status causes",
+        "level": 3,
+        "content": "**Key Term:** Workers are the processes running on a TPU that compile and execute TPU programs (TPU modules).\nA machine is categorized as `UNHEALTHY` when there are issues with the physical hardware. When a machine is categorized as `UNHEALTHY`, TPU health monitoring provides one of the following causes:\n  * `BAD_TPU_CHIP`: A physical failure within the TPU hardware itself. The VM may be running as intended, but a TPU connected to the VM is faulty.\n  * `NETWORKING_ISSUE`: Hardware issues in the underlying network communication between the different workers or components of the distributed TPU system, such as dropped transfer Remote Procedure Calls (RPCs).\n  * `BAD_SC_CHIP`: A physical failure within a [SparseCore](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#sparsecore) of a TPU chip."
+      },
+      {
+        "heading": "Metric labels",
+        "level": 3,
+        "content": "TPU health monitoring provides the following metric labels to identify the specific unhealthy TPU:  \n| **Label name**  | **Type**  | **Description**  |  \n| --- | --- | --- |  \n| `health_status`  | `STRING`  | The overall health state of the TPU instance.  |  \n| `unhealthy_category`  | `STRING`  | The health status cause. This label is populated only when the value of the metric is `UNHEALTHY`.  |  \n| `machine_type`  | `STRING`  | The Compute Engine machine type of the instance.  |  \n| `reservation_id`  | `STRING`  | The ID of the physical machine reservation.  |  \nTPU health monitoring also provides the following resource labels:  \n| **Label name**  | **Type**  | **Description**  |  \n| --- | --- | --- |  \n| `project`  | `STRING`  | The project number.  |  \n| `service`  | `STRING`  | The API service (`compute.googleapis.com`).  |  \n| `resource_type`  | `STRING`  | The VM instance.  |  \n| `location`  | `STRING`  | The zone of the instance.  |  \n| `resource_id`  | `STRING`  | The Compute Engine instance ID.  |  \nTPU health monitoring provides the following additional metric labels for All Capacity mode reservations through [TPU Cluster Director](https://docs.cloud.google.com/tpu/docs/all-capacity-overview):  \n| **Label name**  | **Type**  | **Description**  |  \n| --- | --- | --- |  \n| `machine_id`  | `STRING`  | The ID of the physical machine hosting the VM.  |  \n| `block_id`  | `STRING`  | The ID of the block within the cluster hosting the VM.  |  \n| `cluster_id`  | `STRING`  | The ID of the cluster hosting the VM.  |  \n| `subblock_id`  | `STRING`  | The ID of the sub-block hosting the VM.  |"
+      },
+      {
+        "heading": "Logging",
+        "level": 2,
+        "content": "**Key Term:** TPU modules contain the code running on a TPU.\nA machine without any physical issues may be impaired or non-functional due to issues unrelated to hardware. In these cases, TPU health monitoring continues to categorize the machine as `HEALTHY`, but also logs potential causes of the issue with Cloud Logging in the associated project. The logs provide details about the issue, including a brief description, the suspected root cause, potential culprits, and actionable next steps.\nThe logs contain one of the following causes:\n  * `FINGERPRINT_MISMATCH`: Programs expected to be running the same TPU module contain different binary fingerprints. This is likely due to inconsistencies caused by compiler issues.\n  * `DATA_INPUT_STALL`: TPUs are stuck during Direct Memory Access (DMA) operations or data transfers. TPUs cannot continue until DMA operations complete.\n  * `UNRECOVERABLE_ERROR`: One or more workers encountered an unrecoverable error and are in an undefined state.\n  * `DIFFERENT_MODULE`: Workers are executing different TPU modules when they are expected to be running the same module.\n  * `UNKNOWN_CAUSE`: Undetermined cause of error.\n\n\nYou can view logs using the Logs Explorer or Logs API. For more information about Google Cloud logging, see [ Google Cloud Logging](https://cloud.google.com/logging)."
+      },
+      {
+        "heading": "Monitoring with the console",
+        "level": 2,
+        "content": "The Monitoring Dashboard in the Google Cloud console provides real-time visualizations of machine health status, historical trends, and total counts. The **_Failure Event_** table links job failures to their root causes.\nTo view a prebuilt a dashboard in Cloud Monitoring:\n  1. In the Google Cloud console, go to the Cloud Monitoring page.   \n[Go to the Monitoring console](https://console.cloud.google.com/monitoring)\n  2. In the navigation pane, click **Dashboards**.\n  3. In the **Filter search** field, enter \"TPU Instance Health Dashboard\".\n\n\nThe dashboard displays the following metrics by default:\n  * **Overall TPU instance health** : The percentage of TPU instances that are categorized as `HEALTHY`.\n  * **Number of instances** : The total number of TPU instances in use.\n  * **Number of healthy TPU instances** : The total number of TPU instances categorized as `HEALTHY`.\n  * **Number of unhealthy TPU instances** : The total number of TPU instances categorized as `UNHEALTHY`.\n  * **VM infra health distribution** : The number of `HEALTHY` instances over time.\n\n\nTo add a custom query, click **Add Query** and write a PromQL query. For example, the following query retrieves all unhealthy TPU instances:\n\n```\ncount({__name__=\"compute.googleapis.com/instance/tpu/infra_health\", monitored_resource=\"gce_instance\", health_status=\"UNHEALTHY\"})\n\n```\n\nFor more information on monitoring with the Google Cloud console, see the [ Cloud Monitoring documentation](https://docs.cloud.google.com/monitoring/docs)."
+      },
+      {
+        "heading": "Monitoring with the CLI",
+        "level": 2,
+        "content": "The Google Cloud CLI provides real-time TPU health data. The following example request retrieves all `UNHEALTHY` TPU:\n\n```\nexport TOKEN=$(gcloud auth application-default print-access-token)\n\nexport PROMQL_QUERY='count({__name__=\"compute.googleapis.com/instance/tpu/infra_health\", monitored_resource=\"gce_instance\", health_status=\"UNHEALTHY\"})'\n\nexport LOCATION=\"global\"\n\ncurl -G \\\n  --header \"Authorization: Bearer ${TOKEN}\" \\\n  --header \"Content-Type: application/json\" \\\n  --header \"X-Goog-User-Project: ${PROJECT_ID}\" \\\n  --data-urlencode \"query=${PROMQL_QUERY}\" \\\n  \"https://monitoring.googleapis.com/v1/projects/${PROJECT_ID}/location/${LOCATION}/prometheus/api/v1/query\"\n\n```\n\nYou should expect to see a response similar to the following:\n\n```\n{\"status\":\"success\",\"data\":{\"resultType\":\"vector\",\"result\":[65]}}\n\n```\n\nFor more information on gcloud CLI, see [gcloud CLI overview](https://docs.cloud.google.com/sdk/gcloud)."
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "count({__name__=\"compute.googleapis.com/instance/tpu/infra_health\", monitored_resource=\"gce_instance\", health_status=\"UNHEALTHY\"})"
+      },
+      {
+        "language": "text",
+        "code": "export TOKEN=$(gcloud auth application-default print-access-token)\n\nexport PROMQL_QUERY='count({__name__=\"compute.googleapis.com/instance/tpu/infra_health\", monitored_resource=\"gce_instance\", health_status=\"UNHEALTHY\"})'\n\nexport LOCATION=\"global\"\n\ncurl -G \\\n  --header \"Authorization: Bearer ${TOKEN}\" \\\n  --header \"Content-Type: application/json\" \\\n  --header \"X-Goog-User-Project: ${PROJECT_ID}\" \\\n  --data-urlencode \"query=${PROMQL_QUERY}\" \\\n  \"https://monitoring.googleapis.com/v1/projects/${PROJECT_ID}/location/${LOCATION}/prometheus/api/v1/query\""
+      },
+      {
+        "language": "text",
+        "code": "{\"status\":\"success\",\"data\":{\"resultType\":\"vector\",\"result\":[65]}}"
+      }
+    ],
+    "cli_commands": [
+      "export TOKEN=$(gcloud auth application-default print-access-token)",
+      "export PROMQL_QUERY='count({__name__=\"compute.googleapis.com/instance/tpu/infra_health\", monitored_resource=\"gce_instance\", health_status=\"UNHEALTHY\"})'",
+      "export LOCATION=\"global\"",
+      "curl -G \\"
+    ],
+    "environment_variables": [],
+    "tables": [
+      {
+        "headers": [
+          "**Label name**",
+          "**Type**",
+          "**Description**"
+        ],
+        "rows": [
+          [
+            "`health_status`",
+            "`STRING`",
+            "The overall health state of the TPU instance."
+          ],
+          [
+            "`unhealthy_category`",
+            "`STRING`",
+            "The health status cause. This label is populated only when the value of the metric is `UNHEALTHY`."
+          ],
+          [
+            "`machine_type`",
+            "`STRING`",
+            "The Compute Engine machine type of the instance."
+          ],
+          [
+            "`reservation_id`",
+            "`STRING`",
+            "The ID of the physical machine reservation."
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "**Label name**",
+          "**Type**",
+          "**Description**"
+        ],
+        "rows": [
+          [
+            "`project`",
+            "`STRING`",
+            "The project number."
+          ],
+          [
+            "`service`",
+            "`STRING`",
+            "The API service (`compute.googleapis.com`)."
+          ],
+          [
+            "`resource_type`",
+            "`STRING`",
+            "The VM instance."
+          ],
+          [
+            "`location`",
+            "`STRING`",
+            "The zone of the instance."
+          ],
+          [
+            "`resource_id`",
+            "`STRING`",
+            "The Compute Engine instance ID."
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "**Label name**",
+          "**Type**",
+          "**Description**"
+        ],
+        "rows": [
+          [
+            "`machine_id`",
+            "`STRING`",
+            "The ID of the physical machine hosting the VM."
+          ],
+          [
+            "`block_id`",
+            "`STRING`",
+            "The ID of the block within the cluster hosting the VM."
+          ],
+          [
+            "`cluster_id`",
+            "`STRING`",
+            "The ID of the cluster hosting the VM."
+          ],
+          [
+            "`subblock_id`",
+            "`STRING`",
+            "The ID of the sub-block hosting the VM."
+          ]
+        ]
+      }
+    ],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Monitor Cloud TPU health' (https://docs.cloud.google.com/tpu/docs/troubleshooting/tpu-health)?",
+        "answer": "Health monitoring and unhealthy-instance detection for TPU VMs, including dashboard and metric labels."
+      },
+      {
+        "question": "How does 'Monitor Cloud TPU health' handle: Monitor Cloud TPU health?",
+        "answer": "Cloud TPU health monitoring provides real-time information on the health status of TPU VMs and slices. Using either the [Cloud Monitoring](https://cloud.google.com/monitoring) console or [ Google Cloud CLI](https://docs.cloud.google.com/sdk/gcloud), you can identify hardware failures as they occur and reallocate resources, avoiding job failures and minimizing performance degradation.\nTPU health monitoring assigns either a `HEALTHY` or `UNHEALTHY` status to each TPU instance in use. TPUs functioning as expected are assigned a `HEALTHY` status, and those that are no longer functional or performing at a severely reduced level are assigned an `UNHEALTHY` status.\nAlong with a health status, TPU health monitoring provides logging metrics for specific jobs. You can use these metrics to further diagnose TPU health and performance issues that are not caused by hardware issues."
+      },
+      {
+        "question": "How does 'Monitor Cloud TPU health' handle: Unhealthy TPU detection?",
+        "answer": "When TPU health monitoring assigns an `UNHEALTHY` status to a TPU, it provides identifying information of the failing TPU through the `compute.googleapis.com/instance/tpu/infra_health` service endpoint."
+      },
+      {
+        "question": "How does 'Monitor Cloud TPU health' handle: TPU health status causes?",
+        "answer": "**Key Term:** Workers are the processes running on a TPU that compile and execute TPU programs (TPU modules).\nA machine is categorized as `UNHEALTHY` when there are issues with the physical hardware. When a machine is categorized as `UNHEALTHY`, TPU health monitoring provides one of the following causes:\n  * `BAD_TPU_CHIP`: A physical failure within the TPU hardware itself. The VM may be running as intended, but a TPU connected to the VM is faulty.\n  * `NETWORKING_ISSUE`: Hardware issues in the underlying network communication between the different workers or components of the distributed TPU system, such as dropped transfer Remote Procedure Calls (RPCs).\n  * `BAD_SC_CHIP`: A physical failure within a [SparseCore](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#sparsecore) of a TPU chip."
+      },
+      {
+        "question": "How does 'Monitor Cloud TPU health' handle: Metric labels?",
+        "answer": "TPU health monitoring provides the following metric labels to identify the specific unhealthy TPU:  \n| **Label name**  | **Type**  | **Description**  |  \n| --- | --- | --- |  \n| `health_status`  | `STRING`  | The overall health state of the TPU instance.  |  \n| `unhealthy_category`  | `STRING`  | The health status cause. This label is populated only when the value of the metric is `UNHEALTHY`.  |  \n| `machine_type`  | `STRING`  | The Compute Engine machine type of the instance.  |  \n| `reservation_id`  | `STRING`  | The ID of the physical machine reservation.  |  \nTPU health monitoring also provides the following resource labels:  \n| **Label name**  | **Type**  | **Description**  |  \n| --- | --- | --- |  \n| `project`  | `STRING`  | The project number.  |  \n| `service`  | `STRING`  | The API service (`compute.googleapis.com`).  |  \n| `resource_type`  | `STRING`  | The VM instance.  |  \n| `location`  | `STRING`  | The zone of the instance.  |  \n| `resource_id`  | `STRING`  | The Compute Engine instance ID.  |  \nTPU health monitoring provides the following additional metric labels for All Capacity mode reservations through [TPU Cluster Director](https://docs.cloud.google.com/tpu/docs/"
+      },
+      {
+        "question": "How does 'Monitor Cloud TPU health' handle: Logging?",
+        "answer": "**Key Term:** TPU modules contain the code running on a TPU.\nA machine without any physical issues may be impaired or non-functional due to issues unrelated to hardware. In these cases, TPU health monitoring continues to categorize the machine as `HEALTHY`, but also logs potential causes of the issue with Cloud Logging in the associated project. The logs provide details about the issue, including a brief description, the suspected root cause, potential culprits, and actionable next steps.\nThe logs contain one of the following causes:\n  * `FINGERPRINT_MISMATCH`: Programs expected to be running the same TPU module contain different binary fingerprints. This is likely due to inconsistencies caused by compiler issues.\n  * `DATA_INPUT_STALL`: TPUs are stuck during Direct Memory Access (DMA) operations or data transfers. TPUs cannot continue until DMA operations complete.\n  * `UNRECOVERABLE_ERROR`: One or more workers encountered an unrecoverable error and are in an undefined state.\n  * `DIFFERENT_MODULE`: Workers are executing different TPU modules when they are expected to be running the same module.\n  * `UNKNOWN_CAUSE`: Undetermined cause of error.\n\n\nYou can view logs using the Logs E"
+      },
+      {
+        "question": "How does 'Monitor Cloud TPU health' handle: Monitoring with the console?",
+        "answer": "The Monitoring Dashboard in the Google Cloud console provides real-time visualizations of machine health status, historical trends, and total counts. The **_Failure Event_** table links job failures to their root causes.\nTo view a prebuilt a dashboard in Cloud Monitoring:\n  1. In the Google Cloud console, go to the Cloud Monitoring page.   \n[Go to the Monitoring console](https://console.cloud.google.com/monitoring)\n  2. In the navigation pane, click **Dashboards**.\n  3. In the **Filter search** field, enter \"TPU Instance Health Dashboard\".\n\n\nThe dashboard displays the following metrics by default:\n  * **Overall TPU instance health** : The percentage of TPU instances that are categorized as `HEALTHY`.\n  * **Number of instances** : The total number of TPU instances in use.\n  * **Number of healthy TPU instances** : The total number of TPU instances categorized as `HEALTHY`.\n  * **Number of unhealthy TPU instances** : The total number of TPU instances categorized as `UNHEALTHY`.\n  * **VM infra health distribution** : The number of `HEALTHY` instances over time.\n\n\nTo add a custom query, click **Add Query** and write a PromQL query. For example, the following query retrieves all unhealth"
+      },
+      {
+        "question": "How does 'Monitor Cloud TPU health' handle: Monitoring with the CLI?",
+        "answer": "The Google Cloud CLI provides real-time TPU health data. The following example request retrieves all `UNHEALTHY` TPU:\n\n```\nexport TOKEN=$(gcloud auth application-default print-access-token)\n\nexport PROMQL_QUERY='count({__name__=\"compute.googleapis.com/instance/tpu/infra_health\", monitored_resource=\"gce_instance\", health_status=\"UNHEALTHY\"})'\n\nexport LOCATION=\"global\"\n\ncurl -G \\\n  --header \"Authorization: Bearer ${TOKEN}\" \\\n  --header \"Content-Type: application/json\" \\\n  --header \"X-Goog-User-Project: ${PROJECT_ID}\" \\\n  --data-urlencode \"query=${PROMQL_QUERY}\" \\\n  \"https://monitoring.googleapis.com/v1/projects/${PROJECT_ID}/location/${LOCATION}/prometheus/api/v1/query\"\n\n```\n\nYou should expect to see a response similar to the following:\n\n```\n{\"status\":\"success\",\"data\":{\"resultType\":\"vector\",\"result\":[65]}}\n\n```\n\nFor more information on gcloud CLI, see [gcloud CLI overview](https://docs.cloud.google.com/sdk/gcloud)."
+      }
+    ],
+    "full_markdown": "# Monitor Cloud TPU health\nCloud TPU health monitoring provides real-time information on the health status of TPU VMs and slices. Using either the [Cloud Monitoring](https://cloud.google.com/monitoring) console or [ Google Cloud CLI](https://docs.cloud.google.com/sdk/gcloud), you can identify hardware failures as they occur and reallocate resources, avoiding job failures and minimizing performance degradation.\nTPU health monitoring assigns either a `HEALTHY` or `UNHEALTHY` status to each TPU instance in use. TPUs functioning as expected are assigned a `HEALTHY` status, and those that are no longer functional or performing at a severely reduced level are assigned an `UNHEALTHY` status.\nAlong with a health status, TPU health monitoring provides logging metrics for specific jobs. You can use these metrics to further diagnose TPU health and performance issues that are not caused by hardware issues.\n## Unhealthy TPU detection\nWhen TPU health monitoring assigns an `UNHEALTHY` status to a TPU, it provides identifying information of the failing TPU through the `compute.googleapis.com/instance/tpu/infra_health` service endpoint.\n### TPU health status causes\n**Key Term:** Workers are the processes running on a TPU that compile and execute TPU programs (TPU modules).\nA machine is categorized as `UNHEALTHY` when there are issues with the physical hardware. When a machine is categorized as `UNHEALTHY`, TPU health monitoring provides one of the following causes:\n  * `BAD_TPU_CHIP`: A physical failure within the TPU hardware itself. The VM may be running as intended, but a TPU connected to the VM is faulty.\n  * `NETWORKING_ISSUE`: Hardware issues in the underlying network communication between the different workers or components of the distributed TPU system, such as dropped transfer Remote Procedure Calls (RPCs).\n  * `BAD_SC_CHIP`: A physical failure within a [SparseCore](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#sparsecore) of a TPU chip.\n\n\n### Metric labels\nTPU health monitoring provides the following metric labels to identify the specific unhealthy TPU:  \n| **Label name**  | **Type**  | **Description**  |  \n| --- | --- | --- |  \n| `health_status`  | `STRING`  | The overall health state of the TPU instance.  |  \n| `unhealthy_category`  | `STRING`  | The health status cause. This label is populated only when the value of the metric is `UNHEALTHY`.  |  \n| `machine_type`  | `STRING`  | The Compute Engine machine type of the instance.  |  \n| `reservation_id`  | `STRING`  | The ID of the physical machine reservation.  |  \nTPU health monitoring also provides the following resource labels:  \n| **Label name**  | **Type**  | **Description**  |  \n| --- | --- | --- |  \n| `project`  | `STRING`  | The project number.  |  \n| `service`  | `STRING`  | The API service (`compute.googleapis.com`).  |  \n| `resource_type`  | `STRING`  | The VM instance.  |  \n| `location`  | `STRING`  | The zone of the instance.  |  \n| `resource_id`  | `STRING`  | The Compute Engine instance ID.  |  \nTPU health monitoring provides the following additional metric labels for All Capacity mode reservations through [TPU Cluster Director](https://docs.cloud.google.com/tpu/docs/all-capacity-overview):  \n| **Label name**  | **Type**  | **Description**  |  \n| --- | --- | --- |  \n| `machine_id`  | `STRING`  | The ID of the physical machine hosting the VM.  |  \n| `block_id`  | `STRING`  | The ID of the block within the cluster hosting the VM.  |  \n| `cluster_id`  | `STRING`  | The ID of the cluster hosting the VM.  |  \n| `subblock_id`  | `STRING`  | The ID of the sub-block hosting the VM.  |  \n## Logging\n**Key Term:** TPU modules contain the code running on a TPU.\nA machine without any physical issues may be impaired or non-functional due to issues unrelated to hardware. In these cases, TPU health monitoring continues to categorize the machine as `HEALTHY`, but also logs potential causes of the issue with Cloud Logging in the associated project. The logs provide details about the issue, including a brief description, the suspected root cause, potential culprits, and actionable next steps.\nThe logs contain one of the following causes:\n  * `FINGERPRINT_MISMATCH`: Programs expected to be running the same TPU module contain different binary fingerprints. This is likely due to inconsistencies caused by compiler issues.\n  * `DATA_INPUT_STALL`: TPUs are stuck during Direct Memory Access (DMA) operations or data transfers. TPUs cannot continue until DMA operations complete.\n  * `UNRECOVERABLE_ERROR`: One or more workers encountered an unrecoverable error and are in an undefined state.\n  * `DIFFERENT_MODULE`: Workers are executing different TPU modules when they are expected to be running the same module.\n  * `UNKNOWN_CAUSE`: Undetermined cause of error.\n\n\nYou can view logs using the Logs Explorer or Logs API. For more information about Google Cloud logging, see [ Google Cloud Logging](https://cloud.google.com/logging).\n## Monitoring with the console\nThe Monitoring Dashboard in the Google Cloud console provides real-time visualizations of machine health status, historical trends, and total counts. The **_Failure Event_** table links job failures to their root causes.\nTo view a prebuilt a dashboard in Cloud Monitoring:\n  1. In the Google Cloud console, go to the Cloud Monitoring page.   \n[Go to the Monitoring console](https://console.cloud.google.com/monitoring)\n  2. In the navigation pane, click **Dashboards**.\n  3. In the **Filter search** field, enter \"TPU Instance Health Dashboard\".\n\n\nThe dashboard displays the following metrics by default:\n  * **Overall TPU instance health** : The percentage of TPU instances that are categorized as `HEALTHY`.\n  * **Number of instances** : The total number of TPU instances in use.\n  * **Number of healthy TPU instances** : The total number of TPU instances categorized as `HEALTHY`.\n  * **Number of unhealthy TPU instances** : The total number of TPU instances categorized as `UNHEALTHY`.\n  * **VM infra health distribution** : The number of `HEALTHY` instances over time.\n\n\nTo add a custom query, click **Add Query** and write a PromQL query. For example, the following query retrieves all unhealthy TPU instances:\n\n```\ncount({__name__=\"compute.googleapis.com/instance/tpu/infra_health\", monitored_resource=\"gce_instance\", health_status=\"UNHEALTHY\"})\n\n```\n\nFor more information on monitoring with the Google Cloud console, see the [ Cloud Monitoring documentation](https://docs.cloud.google.com/monitoring/docs).\n## Monitoring with the CLI\nThe Google Cloud CLI provides real-time TPU health data. The following example request retrieves all `UNHEALTHY` TPU:\n\n```\nexport TOKEN=$(gcloud auth application-default print-access-token)\n\nexport PROMQL_QUERY='count({__name__=\"compute.googleapis.com/instance/tpu/infra_health\", monitored_resource=\"gce_instance\", health_status=\"UNHEALTHY\"})'\n\nexport LOCATION=\"global\"\n\ncurl -G \\\n  --header \"Authorization: Bearer ${TOKEN}\" \\\n  --header \"Content-Type: application/json\" \\\n  --header \"X-Goog-User-Project: ${PROJECT_ID}\" \\\n  --data-urlencode \"query=${PROMQL_QUERY}\" \\\n  \"https://monitoring.googleapis.com/v1/projects/${PROJECT_ID}/location/${LOCATION}/prometheus/api/v1/query\"\n\n```\n\nYou should expect to see a response similar to the following:\n\n```\n{\"status\":\"success\",\"data\":{\"resultType\":\"vector\",\"result\":[65]}}\n\n```\n\nFor more information on gcloud CLI, see [gcloud CLI overview](https://docs.cloud.google.com/sdk/gcloud)."
+  }
 }

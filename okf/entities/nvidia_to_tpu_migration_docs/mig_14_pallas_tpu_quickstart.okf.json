@@ -1,57 +1,261 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:mig_14_pallas_tpu_quickstart",
-  "@type": "DocumentationResource",
-  "name": "Pallas TPU kernel quickstart",
-  "canonicalUrl": "https://docs.jax.dev/en/latest/pallas/tpu/quickstart.html",
-  "category": "Nvidia to tpu migration docs",
-  "categorySlug": "nvidia_to_tpu_migration_docs",
-  "description": "Write custom TPU kernels using Pallas; relevant when replacing CUDA-specific kernels.",
-  "provenance": {
-    "sourceUrl": "https://docs.jax.dev/en/latest/pallas/tpu/quickstart.html",
-    "crawledAt": "2026-10-26T12:48:12.573624+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 36665
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Pallas TPU kernel quickstart",
-      "documentedIn",
-      "https://docs.jax.dev/en/latest/pallas/tpu/quickstart.html"
-    ],
-    [
-      "Pallas TPU kernel quickstart",
-      "belongsToCategory",
-      "nvidia_to_tpu_migration_docs"
-    ],
-    [
-      "Pallas TPU kernel quickstart",
-      "supportsWorkflow",
-      "CUDA to TPU Code Migration"
-    ],
-    [
-      "Pallas TPU kernel quickstart",
-      "primaryFramework",
-      "TorchTPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:mig_14_pallas_tpu_quickstart",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "mig_14_pallas_tpu_quickstart",
+    "name": "Pallas TPU kernel quickstart",
+    "url": "https://docs.jax.dev/en/latest/pallas/tpu/quickstart.html",
+    "category": "nvidia_to_tpu_migration_docs",
+    "description": "Write custom TPU kernels using Pallas; relevant when replacing CUDA-specific kernels.",
+    "char_count": 5674,
+    "word_count": 755,
+    "section_count": 13,
+    "code_block_count": 4,
+    "table_count": 0,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.778759+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:mig_14_pallas_tpu_quickstart",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:mig_14_pallas_tpu_quickstart",
+        "predicate": "schema:name",
+        "object": "Pallas TPU kernel quickstart"
+      },
+      {
+        "subject": "tpu_doc:mig_14_pallas_tpu_quickstart",
+        "predicate": "schema:url",
+        "object": "https://docs.jax.dev/en/latest/pallas/tpu/quickstart.html"
+      },
+      {
+        "subject": "tpu_doc:mig_14_pallas_tpu_quickstart",
+        "predicate": "schema:category",
+        "object": "nvidia_to_tpu_migration_docs"
+      },
+      {
+        "subject": "tpu_doc:mig_14_pallas_tpu_quickstart",
+        "predicate": "schema:description",
+        "object": "Write custom TPU kernels using Pallas; relevant when replacing CUDA-specific kernels."
+      },
+      {
+        "subject": "tpu_doc:mig_14_pallas_tpu_quickstart",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5p"
+      },
+      {
+        "subject": "tpu_doc:mig_14_pallas_tpu_quickstart",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:mig_14_pallas_tpu_quickstart",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:Pallas"
+      },
+      {
+        "subject": "tpu_doc:mig_14_pallas_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "Quickstart: TPU"
+      },
+      {
+        "subject": "tpu_doc:mig_14_pallas_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "TPU memory spaces"
+      },
+      {
+        "subject": "tpu_doc:mig_14_pallas_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "Your first kernel"
+      },
+      {
+        "subject": "tpu_doc:mig_14_pallas_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "Distributing work across TensorCores"
+      },
+      {
+        "subject": "tpu_doc:mig_14_pallas_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "Making it fast: pipelining"
+      },
+      {
+        "subject": "tpu_doc:mig_14_pallas_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "Array([[5., 5., 5., ..., 5., 5., 5.],"
+      },
+      {
+        "subject": "tpu_doc:mig_14_pallas_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "[5., 5., 5., ..., 5., 5., 5.],"
+      },
+      {
+        "subject": "tpu_doc:mig_14_pallas_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "[5., 5., 5., ..., 5., 5., 5.],"
+      },
+      {
+        "subject": "tpu_doc:mig_14_pallas_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "...,"
+      },
+      {
+        "subject": "tpu_doc:mig_14_pallas_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "[5., 5., 5., ..., 5., 5., 5.],"
+      },
+      {
+        "subject": "tpu_doc:mig_14_pallas_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "[5., 5., 5., ..., 5., 5., 5.],"
+      },
+      {
+        "subject": "tpu_doc:mig_14_pallas_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "[5., 5., 5., ..., 5., 5., 5.]], dtype=float32)"
+      },
+      {
+        "subject": "tpu_doc:mig_14_pallas_tpu_quickstart",
+        "predicate": "okf:hasSection",
+        "object": "What\u2019s next"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Pallas TPU kernel quickstart provides official guidance on Write custom TPU kernels using Pallas; relevant when replacing CUDA-specific kernels.",
-      "confidence": 1.0,
-      "source": "https://docs.jax.dev/en/latest/pallas/tpu/quickstart.html",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Pallas TPU kernel quickstart used for in Cloud TPU workflows?",
-      "answer": "Write custom TPU kernels using Pallas; relevant when replacing CUDA-specific kernels.",
-      "category": "nvidia_to_tpu_migration_docs"
-    }
-  ],
-  "contentSummary": "Write custom TPU kernels using Pallas; relevant when replacing CUDA-specific kernels."
+  },
+  "structured_content": {
+    "summary": "Write custom TPU kernels using Pallas; relevant when replacing CUDA-specific kernels.",
+    "sections": [
+      {
+        "heading": "Quickstart: TPU",
+        "level": 1,
+        "content": "This quickstart covers the basics of writing Pallas kernels for TPU: memory spaces, `pl.kernel`, and pipelining.\n\n```\nimport jax\nimport jax.numpy as jnp\nfrom jax.experimental import pallas as pl\nfrom jax.experimental.pallas import tpu as pltpu\n\n```"
+      },
+      {
+        "heading": "TPU memory spaces",
+        "level": 2,
+        "content": "Pallas kernels interact with memory through **Refs** \u2013 JAX\u2019s mutable array references. On TPU, each Ref lives in a specific **memory space** :\n  * **HBM** : large but slow. Kernel inputs and outputs live here.\n  * **VMEM** : small but fast. Computation happens here.\n\n\nYou can\u2019t compute directly on HBM Refs. Data has to be copied to VMEM first, and results copied back."
+      },
+      {
+        "heading": "Your first kernel",
+        "level": 2,
+        "content": "Here\u2019s a kernel that fills an output array with a constant. We allocate a temporary VMEM buffer, write the constant there, and copy it to the output HBM Ref.\n\n```\n@pl.kernel(\n    out_type=jax.ShapeDtypeStruct((128,), jnp.float32),\n    mesh=pltpu.TensorCoreMesh(axis_name='core'),\n    scratch_types=dict(o_vmem=pltpu.VMEM((128,), jnp.float32)),\n)\ndef fill_42(o_ref, o_vmem):\n  # Compute in VMEM\n  o_vmem[...] = jnp.full_like(o_vmem, 42.0)\n\n  # VMEM \u2192 HBM (blocks until the transfer completes)\n  pltpu.sync_copy(o_vmem, o_ref)\n\nresult = fill_42()  # [42.0, 42.0, ...]\n\n```\n`pl.kernel` wraps a kernel function to make it callable with standard JAX arrays. It handles allocating the necessary Refs and executing the kernel on-device:\n  * `out_type` allocates an output Ref in HBM for the result.\n  * `scratch_types` allocates the VMEM buffers (like `o_vmem`) that get passed as extra arguments to the kernel.\n\n\nNote\nIf your chip has multiple TensorCores (e.g. TPU v5p has 2), the kernel runs on all of them. As written, both cores will redundantly perform the exact same computation. In a real kernel, you would distribute work across cores either manually or by using pipelining."
+      },
+      {
+        "heading": "Distributing work across TensorCores",
+        "level": 3,
+        "content": "To process a larger array, we can distribute work across multiple TensorCores manually. Each core runs a separate invocation of the kernel.\n\n```\ndef iota() -> jax.Array:\n  tpu_info = pltpu.get_tpu_info()\n\n  @pl.kernel(\n      out_type=jax.ShapeDtypeStruct((128 * tpu_info.num_cores,), jnp.float32),\n      mesh=pltpu.TensorCoreMesh(axis_name='core'),\n      scratch_types=dict(o_vmem=pltpu.VMEM((128,), jnp.float32)),\n  )\n  def kernel(o_ref, o_vmem):\n    i = jax.lax.axis_index('core')\n\n    # Compute our chunk in VMEM\n    o_vmem[...] = jnp.arange(128, dtype=jnp.float32) + i * 128\n\n    # Copy back to our slice of HBM\n    pltpu.sync_copy(o_vmem, o_ref.at[pl.ds(i * 128, 128)])\n\n  return kernel()\n\nresult = iota()  # [0.0, 1.0, 2.0, ...]\n\n```\n`jax.lax.axis_index('core')` tells you which TensorCore you\u2019re on \u2013 use it to determine your slice of the output."
+      },
+      {
+        "heading": "Making it fast: pipelining",
+        "level": 2,
+        "content": "The examples above work, but are inefficient. They copy data in, compute, then copy out \u2013 each `sync_copy` blocks until the transfer completes. The TensorCores sit idle while memory is moving, and vice versa.\n**Pipelining** fixes this by breaking the work into blocks and overlapping memory transfers with compute. While the TensorCores process block N, the DMA engine is already fetching block N+1.\n`pltpu.emit_pipeline` handles the double-buffering machinery for you. It takes:\n  * A **grid** : how many pipeline blocks to process.\n  * **`BlockSpec`s** : how to slice the arrays into blocks.\n  * A **body** function: the computation to run for each block.\n\n\nHere\u2019s an elementwise addition kernel using pipelining:\n\n```\ndef add_matrices_pipelined(x: jax.Array, y: jax.Array) -> jax.Array:\n  @pl.kernel(\n      out_type=jax.ShapeDtypeStruct.like(x),\n      mesh=pltpu.TensorCoreMesh(axis_name='core'),\n  )\n  def kernel(x_hbm, y_hbm, o_hbm):\n    def add_body(x_vmem, y_vmem, o_vmem):\n      o_vmem[...] = x_vmem[...] + y_vmem[...]\n\n    pltpu.emit_pipeline(\n        add_body,\n        grid=(x_hbm.shape[0] // 128, x_hbm.shape[1] // 128),\n        in_specs=[\n            pl.BlockSpec((128, 128), lambda i, j: (i, j)),\n            pl.BlockSpec((128, 128), lambda i, j: (i, j)),\n        ],\n        out_specs=pl.BlockSpec((128, 128), lambda i, j: (i, j)),\n        core_axis_name='core',\n        dimension_semantics=(pltpu.PARALLEL, pltpu.ARBITRARY),\n    )(x_hbm, y_hbm, o_hbm)\n  return kernel(x, y)\n\nx = 2 * jnp.ones((256, 256))\ny = 3 * jnp.ones((256, 256))\nadd_matrices_pipelined(x, y)"
+      },
+      {
+        "heading": "Array([[5., 5., 5., ..., 5., 5., 5.],",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "[5., 5., 5., ..., 5., 5., 5.],",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "[5., 5., 5., ..., 5., 5., 5.],",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "...,",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "[5., 5., 5., ..., 5., 5., 5.],",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "[5., 5., 5., ..., 5., 5., 5.],",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "[5., 5., 5., ..., 5., 5., 5.]], dtype=float32)",
+        "level": 1,
+        "content": "```\nNotice the body is just the compute \u2013 no `sync_copy`, no scratch allocation. `emit_pipeline` takes care of the memory movement and buffer management.\nWe also passed `core_axis_name='core'` and `dimension_semantics`. This tells the pipeline how to map the grid to the hardware:\n  * `pltpu.PARALLEL` means the first dimension of the grid is distributed across the TensorCores, splitting the work automatically.\n  * `pltpu.ARBITRARY` indicates that Pallas cannot make assumptions about data independence along this dimension; it therefore cannot be parallelized across cores and is instead executed sequentially on a single core."
+      },
+      {
+        "heading": "What\u2019s next",
+        "level": 2,
+        "content": "* [TPU Details](https://docs.jax.dev/en/latest/pallas/tpu/details.html) \u2013 the full picture of TPU memory spaces and supported ops\n  * [TPU Pipelining](https://docs.jax.dev/en/latest/pallas/tpu/pipelining.html) \u2013 deeper dive into pipelining, reductions, and accumulation\n  * [Matrix Multiplication](https://docs.jax.dev/en/latest/pallas/tpu/matmul.html) \u2013 putting it all together in a full kernel"
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "import jax\nimport jax.numpy as jnp\nfrom jax.experimental import pallas as pl\nfrom jax.experimental.pallas import tpu as pltpu"
+      },
+      {
+        "language": "text",
+        "code": "@pl.kernel(\n    out_type=jax.ShapeDtypeStruct((128,), jnp.float32),\n    mesh=pltpu.TensorCoreMesh(axis_name='core'),\n    scratch_types=dict(o_vmem=pltpu.VMEM((128,), jnp.float32)),\n)\ndef fill_42(o_ref, o_vmem):\n  # Compute in VMEM\n  o_vmem[...] = jnp.full_like(o_vmem, 42.0)\n\n  # VMEM \u2192 HBM (blocks until the transfer completes)\n  pltpu.sync_copy(o_vmem, o_ref)\n\nresult = fill_42()  # [42.0, 42.0, ...]"
+      },
+      {
+        "language": "text",
+        "code": "def iota() -> jax.Array:\n  tpu_info = pltpu.get_tpu_info()\n\n  @pl.kernel(\n      out_type=jax.ShapeDtypeStruct((128 * tpu_info.num_cores,), jnp.float32),\n      mesh=pltpu.TensorCoreMesh(axis_name='core'),\n      scratch_types=dict(o_vmem=pltpu.VMEM((128,), jnp.float32)),\n  )\n  def kernel(o_ref, o_vmem):\n    i = jax.lax.axis_index('core')\n\n    # Compute our chunk in VMEM\n    o_vmem[...] = jnp.arange(128, dtype=jnp.float32) + i * 128\n\n    # Copy back to our slice of HBM\n    pltpu.sync_copy(o_vmem, o_ref.at[pl.ds(i * 128, 128)])\n\n  return kernel()\n\nresult = iota()  # [0.0, 1.0, 2.0, ...]"
+      },
+      {
+        "language": "text",
+        "code": "def add_matrices_pipelined(x: jax.Array, y: jax.Array) -> jax.Array:\n  @pl.kernel(\n      out_type=jax.ShapeDtypeStruct.like(x),\n      mesh=pltpu.TensorCoreMesh(axis_name='core'),\n  )\n  def kernel(x_hbm, y_hbm, o_hbm):\n    def add_body(x_vmem, y_vmem, o_vmem):\n      o_vmem[...] = x_vmem[...] + y_vmem[...]\n\n    pltpu.emit_pipeline(\n        add_body,\n        grid=(x_hbm.shape[0] // 128, x_hbm.shape[1] // 128),\n        in_specs=[\n            pl.BlockSpec((128, 128), lambda i, j: (i, j)),\n            pl.BlockSpec((128, 128), lambda i, j: (i, j)),\n        ],\n        out_specs=pl.BlockSpec((128, 128), lambda i, j: (i, j)),\n        core_axis_name='core',\n        dimension_semantics=(pltpu.PARALLEL, pltpu.ARBITRARY),\n    )(x_hbm, y_hbm, o_hbm)\n  return kernel(x, y)\n\nx = 2 * jnp.ones((256, 256))\ny = 3 * jnp.ones((256, 256))\nadd_matrices_pipelined(x, y)\n# Array([[5., 5., 5., ..., 5., 5., 5.],\n#        [5., 5., 5., ..., 5., 5., 5.],\n#        [5., 5., 5., ..., 5., 5., 5.],\n#        ...,\n#        [5., 5., 5., ..., 5., 5., 5.],\n#        [5., 5., 5., ..., 5., 5., 5.],\n#        [5., 5., 5., ..., 5., 5., 5.]], dtype=float32)"
+      }
+    ],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Pallas TPU kernel quickstart' (https://docs.jax.dev/en/latest/pallas/tpu/quickstart.html)?",
+        "answer": "Write custom TPU kernels using Pallas; relevant when replacing CUDA-specific kernels."
+      },
+      {
+        "question": "How does 'Pallas TPU kernel quickstart' handle: Quickstart: TPU?",
+        "answer": "This quickstart covers the basics of writing Pallas kernels for TPU: memory spaces, `pl.kernel`, and pipelining.\n\n```\nimport jax\nimport jax.numpy as jnp\nfrom jax.experimental import pallas as pl\nfrom jax.experimental.pallas import tpu as pltpu\n\n```"
+      },
+      {
+        "question": "How does 'Pallas TPU kernel quickstart' handle: TPU memory spaces?",
+        "answer": "Pallas kernels interact with memory through **Refs** \u2013 JAX\u2019s mutable array references. On TPU, each Ref lives in a specific **memory space** :\n  * **HBM** : large but slow. Kernel inputs and outputs live here.\n  * **VMEM** : small but fast. Computation happens here.\n\n\nYou can\u2019t compute directly on HBM Refs. Data has to be copied to VMEM first, and results copied back."
+      },
+      {
+        "question": "How does 'Pallas TPU kernel quickstart' handle: Your first kernel?",
+        "answer": "Here\u2019s a kernel that fills an output array with a constant. We allocate a temporary VMEM buffer, write the constant there, and copy it to the output HBM Ref.\n\n```\n@pl.kernel(\n    out_type=jax.ShapeDtypeStruct((128,), jnp.float32),\n    mesh=pltpu.TensorCoreMesh(axis_name='core'),\n    scratch_types=dict(o_vmem=pltpu.VMEM((128,), jnp.float32)),\n)\ndef fill_42(o_ref, o_vmem):\n  # Compute in VMEM\n  o_vmem[...] = jnp.full_like(o_vmem, 42.0)\n\n  # VMEM \u2192 HBM (blocks until the transfer completes)\n  pltpu.sync_copy(o_vmem, o_ref)\n\nresult = fill_42()  # [42.0, 42.0, ...]\n\n```\n`pl.kernel` wraps a kernel function to make it callable with standard JAX arrays. It handles allocating the necessary Refs and executing the kernel on-device:\n  * `out_type` allocates an output Ref in HBM for the result.\n  * `scratch_types` allocates the VMEM buffers (like `o_vmem`) that get passed as extra arguments to the kernel.\n\n\nNote\nIf your chip has multiple TensorCores (e.g. TPU v5p has 2), the kernel runs on all of them. As written, both cores will redundantly perform the exact same computation. In a real kernel, you would distribute work across cores either manually or by using pipelining."
+      },
+      {
+        "question": "How does 'Pallas TPU kernel quickstart' handle: Distributing work across TensorCores?",
+        "answer": "To process a larger array, we can distribute work across multiple TensorCores manually. Each core runs a separate invocation of the kernel.\n\n```\ndef iota() -> jax.Array:\n  tpu_info = pltpu.get_tpu_info()\n\n  @pl.kernel(\n      out_type=jax.ShapeDtypeStruct((128 * tpu_info.num_cores,), jnp.float32),\n      mesh=pltpu.TensorCoreMesh(axis_name='core'),\n      scratch_types=dict(o_vmem=pltpu.VMEM((128,), jnp.float32)),\n  )\n  def kernel(o_ref, o_vmem):\n    i = jax.lax.axis_index('core')\n\n    # Compute our chunk in VMEM\n    o_vmem[...] = jnp.arange(128, dtype=jnp.float32) + i * 128\n\n    # Copy back to our slice of HBM\n    pltpu.sync_copy(o_vmem, o_ref.at[pl.ds(i * 128, 128)])\n\n  return kernel()\n\nresult = iota()  # [0.0, 1.0, 2.0, ...]\n\n```\n`jax.lax.axis_index('core')` tells you which TensorCore you\u2019re on \u2013 use it to determine your slice of the output."
+      },
+      {
+        "question": "How does 'Pallas TPU kernel quickstart' handle: Making it fast: pipelining?",
+        "answer": "The examples above work, but are inefficient. They copy data in, compute, then copy out \u2013 each `sync_copy` blocks until the transfer completes. The TensorCores sit idle while memory is moving, and vice versa.\n**Pipelining** fixes this by breaking the work into blocks and overlapping memory transfers with compute. While the TensorCores process block N, the DMA engine is already fetching block N+1.\n`pltpu.emit_pipeline` handles the double-buffering machinery for you. It takes:\n  * A **grid** : how many pipeline blocks to process.\n  * **`BlockSpec`s** : how to slice the arrays into blocks.\n  * A **body** function: the computation to run for each block.\n\n\nHere\u2019s an elementwise addition kernel using pipelining:\n\n```\ndef add_matrices_pipelined(x: jax.Array, y: jax.Array) -> jax.Array:\n  @pl.kernel(\n      out_type=jax.ShapeDtypeStruct.like(x),\n      mesh=pltpu.TensorCoreMesh(axis_name='core'),\n  )\n  def kernel(x_hbm, y_hbm, o_hbm):\n    def add_body(x_vmem, y_vmem, o_vmem):\n      o_vmem[...] = x_vmem[...] + y_vmem[...]\n\n    pltpu.emit_pipeline(\n        add_body,\n        grid=(x_hbm.shape[0] // 128, x_hbm.shape[1] // 128),\n        in_specs=[\n            pl.BlockSpec((128, 128), lambda i, j:"
+      },
+      {
+        "question": "How does 'Pallas TPU kernel quickstart' handle: [5., 5., 5., ..., 5., 5., 5.]], dtype=float32)?",
+        "answer": "```\nNotice the body is just the compute \u2013 no `sync_copy`, no scratch allocation. `emit_pipeline` takes care of the memory movement and buffer management.\nWe also passed `core_axis_name='core'` and `dimension_semantics`. This tells the pipeline how to map the grid to the hardware:\n  * `pltpu.PARALLEL` means the first dimension of the grid is distributed across the TensorCores, splitting the work automatically.\n  * `pltpu.ARBITRARY` indicates that Pallas cannot make assumptions about data independence along this dimension; it therefore cannot be parallelized across cores and is instead executed sequentially on a single core."
+      },
+      {
+        "question": "How does 'Pallas TPU kernel quickstart' handle: What\u2019s next?",
+        "answer": "* [TPU Details](https://docs.jax.dev/en/latest/pallas/tpu/details.html) \u2013 the full picture of TPU memory spaces and supported ops\n  * [TPU Pipelining](https://docs.jax.dev/en/latest/pallas/tpu/pipelining.html) \u2013 deeper dive into pipelining, reductions, and accumulation\n  * [Matrix Multiplication](https://docs.jax.dev/en/latest/pallas/tpu/matmul.html) \u2013 putting it all together in a full kernel"
+      }
+    ],
+    "full_markdown": "# Quickstart: TPU\nThis quickstart covers the basics of writing Pallas kernels for TPU: memory spaces, `pl.kernel`, and pipelining.\n\n```\nimport jax\nimport jax.numpy as jnp\nfrom jax.experimental import pallas as pl\nfrom jax.experimental.pallas import tpu as pltpu\n\n```\n## TPU memory spaces\nPallas kernels interact with memory through **Refs** \u2013 JAX\u2019s mutable array references. On TPU, each Ref lives in a specific **memory space** :\n  * **HBM** : large but slow. Kernel inputs and outputs live here.\n  * **VMEM** : small but fast. Computation happens here.\n\n\nYou can\u2019t compute directly on HBM Refs. Data has to be copied to VMEM first, and results copied back.\n## Your first kernel\nHere\u2019s a kernel that fills an output array with a constant. We allocate a temporary VMEM buffer, write the constant there, and copy it to the output HBM Ref.\n\n```\n@pl.kernel(\n    out_type=jax.ShapeDtypeStruct((128,), jnp.float32),\n    mesh=pltpu.TensorCoreMesh(axis_name='core'),\n    scratch_types=dict(o_vmem=pltpu.VMEM((128,), jnp.float32)),\n)\ndef fill_42(o_ref, o_vmem):\n  # Compute in VMEM\n  o_vmem[...] = jnp.full_like(o_vmem, 42.0)\n\n  # VMEM \u2192 HBM (blocks until the transfer completes)\n  pltpu.sync_copy(o_vmem, o_ref)\n\nresult = fill_42()  # [42.0, 42.0, ...]\n\n```\n`pl.kernel` wraps a kernel function to make it callable with standard JAX arrays. It handles allocating the necessary Refs and executing the kernel on-device:\n  * `out_type` allocates an output Ref in HBM for the result.\n  * `scratch_types` allocates the VMEM buffers (like `o_vmem`) that get passed as extra arguments to the kernel.\n\n\nNote\nIf your chip has multiple TensorCores (e.g. TPU v5p has 2), the kernel runs on all of them. As written, both cores will redundantly perform the exact same computation. In a real kernel, you would distribute work across cores either manually or by using pipelining.\n### Distributing work across TensorCores\nTo process a larger array, we can distribute work across multiple TensorCores manually. Each core runs a separate invocation of the kernel.\n\n```\ndef iota() -> jax.Array:\n  tpu_info = pltpu.get_tpu_info()\n\n  @pl.kernel(\n      out_type=jax.ShapeDtypeStruct((128 * tpu_info.num_cores,), jnp.float32),\n      mesh=pltpu.TensorCoreMesh(axis_name='core'),\n      scratch_types=dict(o_vmem=pltpu.VMEM((128,), jnp.float32)),\n  )\n  def kernel(o_ref, o_vmem):\n    i = jax.lax.axis_index('core')\n\n    # Compute our chunk in VMEM\n    o_vmem[...] = jnp.arange(128, dtype=jnp.float32) + i * 128\n\n    # Copy back to our slice of HBM\n    pltpu.sync_copy(o_vmem, o_ref.at[pl.ds(i * 128, 128)])\n\n  return kernel()\n\nresult = iota()  # [0.0, 1.0, 2.0, ...]\n\n```\n`jax.lax.axis_index('core')` tells you which TensorCore you\u2019re on \u2013 use it to determine your slice of the output.\n## Making it fast: pipelining\nThe examples above work, but are inefficient. They copy data in, compute, then copy out \u2013 each `sync_copy` blocks until the transfer completes. The TensorCores sit idle while memory is moving, and vice versa.\n**Pipelining** fixes this by breaking the work into blocks and overlapping memory transfers with compute. While the TensorCores process block N, the DMA engine is already fetching block N+1.\n`pltpu.emit_pipeline` handles the double-buffering machinery for you. It takes:\n  * A **grid** : how many pipeline blocks to process.\n  * **`BlockSpec`s** : how to slice the arrays into blocks.\n  * A **body** function: the computation to run for each block.\n\n\nHere\u2019s an elementwise addition kernel using pipelining:\n\n```\ndef add_matrices_pipelined(x: jax.Array, y: jax.Array) -> jax.Array:\n  @pl.kernel(\n      out_type=jax.ShapeDtypeStruct.like(x),\n      mesh=pltpu.TensorCoreMesh(axis_name='core'),\n  )\n  def kernel(x_hbm, y_hbm, o_hbm):\n    def add_body(x_vmem, y_vmem, o_vmem):\n      o_vmem[...] = x_vmem[...] + y_vmem[...]\n\n    pltpu.emit_pipeline(\n        add_body,\n        grid=(x_hbm.shape[0] // 128, x_hbm.shape[1] // 128),\n        in_specs=[\n            pl.BlockSpec((128, 128), lambda i, j: (i, j)),\n            pl.BlockSpec((128, 128), lambda i, j: (i, j)),\n        ],\n        out_specs=pl.BlockSpec((128, 128), lambda i, j: (i, j)),\n        core_axis_name='core',\n        dimension_semantics=(pltpu.PARALLEL, pltpu.ARBITRARY),\n    )(x_hbm, y_hbm, o_hbm)\n  return kernel(x, y)\n\nx = 2 * jnp.ones((256, 256))\ny = 3 * jnp.ones((256, 256))\nadd_matrices_pipelined(x, y)\n# Array([[5., 5., 5., ..., 5., 5., 5.],\n#        [5., 5., 5., ..., 5., 5., 5.],\n#        [5., 5., 5., ..., 5., 5., 5.],\n#        ...,\n#        [5., 5., 5., ..., 5., 5., 5.],\n#        [5., 5., 5., ..., 5., 5., 5.],\n#        [5., 5., 5., ..., 5., 5., 5.]], dtype=float32)\n\n```\nNotice the body is just the compute \u2013 no `sync_copy`, no scratch allocation. `emit_pipeline` takes care of the memory movement and buffer management.\nWe also passed `core_axis_name='core'` and `dimension_semantics`. This tells the pipeline how to map the grid to the hardware:\n  * `pltpu.PARALLEL` means the first dimension of the grid is distributed across the TensorCores, splitting the work automatically.\n  * `pltpu.ARBITRARY` indicates that Pallas cannot make assumptions about data independence along this dimension; it therefore cannot be parallelized across cores and is instead executed sequentially on a single core.\n\n\n## What\u2019s next\n  * [TPU Details](https://docs.jax.dev/en/latest/pallas/tpu/details.html) \u2013 the full picture of TPU memory spaces and supported ops\n  * [TPU Pipelining](https://docs.jax.dev/en/latest/pallas/tpu/pipelining.html) \u2013 deeper dive into pipelining, reductions, and accumulation\n  * [Matrix Multiplication](https://docs.jax.dev/en/latest/pallas/tpu/matmul.html) \u2013 putting it all together in a full kernel"
+  }
 }

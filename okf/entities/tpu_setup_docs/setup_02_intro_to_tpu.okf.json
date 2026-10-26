@@ -1,63 +1,273 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:setup_02_intro_to_tpu",
-  "@type": "DocumentationResource",
-  "name": "Introduction to Cloud TPU",
-  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/intro-to-tpu",
-  "category": "TPU setup docs",
-  "categorySlug": "tpu_setup_docs",
-  "description": "Official entry point: explains service choices, hardware fit, and points to setup, planning, and provisioning. Explicitly says the Cloud TPU API is deprecated.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/intro-to-tpu",
-    "crawledAt": "2026-10-26T12:44:55.726260+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 29291
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Introduction to Cloud TPU",
-      "documentedIn",
-      "https://docs.cloud.google.com/tpu/docs/intro-to-tpu"
-    ],
-    [
-      "Introduction to Cloud TPU",
-      "belongsToCategory",
-      "tpu_setup_docs"
-    ],
-    [
-      "Introduction to Cloud TPU",
-      "targetsPlatform",
-      "Google Cloud Platform"
-    ],
-    [
-      "Introduction to Cloud TPU",
-      "managesHardware",
-      "Google Cloud TPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:setup_02_intro_to_tpu",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "setup_02_intro_to_tpu",
+    "name": "Introduction to Cloud TPU",
+    "url": "https://docs.cloud.google.com/tpu/docs/intro-to-tpu",
+    "category": "tpu_setup_docs",
+    "description": "Official entry point: explains service choices, hardware fit, and points to setup, planning, and provisioning. Explicitly says the Cloud TPU API is deprecated.",
+    "char_count": 7851,
+    "word_count": 1043,
+    "section_count": 14,
+    "code_block_count": 0,
+    "table_count": 1,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.363371+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:setup_02_intro_to_tpu",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:setup_02_intro_to_tpu",
+        "predicate": "schema:name",
+        "object": "Introduction to Cloud TPU"
+      },
+      {
+        "subject": "tpu_doc:setup_02_intro_to_tpu",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/tpu/docs/intro-to-tpu"
+      },
+      {
+        "subject": "tpu_doc:setup_02_intro_to_tpu",
+        "predicate": "schema:category",
+        "object": "tpu_setup_docs"
+      },
+      {
+        "subject": "tpu_doc:setup_02_intro_to_tpu",
+        "predicate": "schema:description",
+        "object": "Official entry point: explains service choices, hardware fit, and points to setup, planning, and provisioning. Explicitly says the Cloud TPU API is deprecated."
+      },
+      {
+        "subject": "tpu_doc:setup_02_intro_to_tpu",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:setup_02_intro_to_tpu",
+        "predicate": "okf:hasSection",
+        "object": "Introduction to Cloud TPU"
+      },
+      {
+        "subject": "tpu_doc:setup_02_intro_to_tpu",
+        "predicate": "okf:hasSection",
+        "object": "When to use TPUs"
+      },
+      {
+        "subject": "tpu_doc:setup_02_intro_to_tpu",
+        "predicate": "okf:hasSection",
+        "object": "CPUs"
+      },
+      {
+        "subject": "tpu_doc:setup_02_intro_to_tpu",
+        "predicate": "okf:hasSection",
+        "object": "GPUs"
+      },
+      {
+        "subject": "tpu_doc:setup_02_intro_to_tpu",
+        "predicate": "okf:hasSection",
+        "object": "TPUs"
+      },
+      {
+        "subject": "tpu_doc:setup_02_intro_to_tpu",
+        "predicate": "okf:hasSection",
+        "object": "TPUs in Google Cloud"
+      },
+      {
+        "subject": "tpu_doc:setup_02_intro_to_tpu",
+        "predicate": "okf:hasSection",
+        "object": "Best practices for model development"
+      },
+      {
+        "subject": "tpu_doc:setup_02_intro_to_tpu",
+        "predicate": "okf:hasSection",
+        "object": "Layout"
+      },
+      {
+        "subject": "tpu_doc:setup_02_intro_to_tpu",
+        "predicate": "okf:hasSection",
+        "object": "Shapes"
+      },
+      {
+        "subject": "tpu_doc:setup_02_intro_to_tpu",
+        "predicate": "okf:hasSection",
+        "object": "Padding"
+      },
+      {
+        "subject": "tpu_doc:setup_02_intro_to_tpu",
+        "predicate": "okf:hasSection",
+        "object": "Dimensions"
+      },
+      {
+        "subject": "tpu_doc:setup_02_intro_to_tpu",
+        "predicate": "okf:hasSection",
+        "object": "Getting started with Cloud TPU"
+      },
+      {
+        "subject": "tpu_doc:setup_02_intro_to_tpu",
+        "predicate": "okf:hasSection",
+        "object": "Requesting help"
+      },
+      {
+        "subject": "tpu_doc:setup_02_intro_to_tpu",
+        "predicate": "okf:hasSection",
+        "object": "What's next"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Introduction to Cloud TPU provides official guidance on Official entry point: explains service choices, hardware fit, and points to setup, planning, and provisioning. Explicitly says the Cloud TPU API is deprecated.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/intro-to-tpu",
-      "verified": true
-    },
-    {
-      "assertion": "Resource Introduction to Cloud TPU is legacy or deprecated; use Compute Engine TPU API and TorchTPU for current workloads.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/intro-to-tpu",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Introduction to Cloud TPU used for in Cloud TPU workflows?",
-      "answer": "Official entry point: explains service choices, hardware fit, and points to setup, planning, and provisioning. Explicitly says the Cloud TPU API is deprecated.",
-      "category": "tpu_setup_docs"
-    }
-  ],
-  "contentSummary": "Official entry point: explains service choices, hardware fit, and points to setup, planning, and provisioning. Explicitly says the Cloud TPU API is deprecated."
+  },
+  "structured_content": {
+    "summary": "Official entry point: explains service choices, hardware fit, and points to setup, planning, and provisioning. Explicitly says the Cloud TPU API is deprecated.",
+    "sections": [
+      {
+        "heading": "Introduction to Cloud TPU",
+        "level": 1,
+        "content": "Tensor Processing Units (TPUs) are Google's custom-developed, application-specific integrated circuits (ASICs) used to accelerate machine learning workloads. For more information about TPU hardware, see [TPU architecture](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm).\nTPUs efficiently train your models by using hardware designed for performing large matrix operations often found in machine learning algorithms. TPUs have on-chip high-bandwidth memory (HBM) letting you use larger models and batch sizes. TPUs can be connected in groups called slices that scale up your workloads with little to no code changes.\nCode that runs on TPUs must be compiled by the accelerated linear algebra (XLA) compiler. [XLA](https://openxla.org/xla) is a just-in-time compiler that takes the graph emitted by an ML framework application and compiles the linear algebra, loss, and gradient components of the graph into TPU machine code. The rest of the program runs on the TPU host machine. The XLA compiler is part of the TPU VM image that runs on a TPU host machine.\nFor more information about Tensor Processing Units, see [How to think about TPUs](https://jax-ml.github.io/scaling-book/tpus/)."
+      },
+      {
+        "heading": "When to use TPUs",
+        "level": 2,
+        "content": "Cloud TPUs are optimized for specific workloads. In some situations, you might want to use GPUs or CPUs on Compute Engine instances to run your machine learning workloads. In general, you can decide what hardware is best for your workload based on the guidelines that follow."
+      },
+      {
+        "heading": "CPUs",
+        "level": 3,
+        "content": "* Quick prototyping that requires maximum flexibility\n  * Simple models that don't take long to train\n  * Small models with small, effective batch sizes\n  * Models that contain many [custom TensorFlow operations written in C++](https://www.tensorflow.org/guide/create_op)\n  * Models that are limited by available I/O or the networking bandwidth of the host system"
+      },
+      {
+        "heading": "GPUs",
+        "level": 3,
+        "content": "* Models with a significant number of custom PyTorch/JAX operations that must run at least partially on CPUs\n  * Models with TensorFlow ops that are not available on Cloud TPU (see the list of [available TensorFlow ops](https://docs.cloud.google.com/tpu/docs/tensorflow-ops))\n  * Medium-to-large models with larger effective batch sizes"
+      },
+      {
+        "heading": "TPUs",
+        "level": 3,
+        "content": "* Models dominated by matrix computations\n  * Models with no custom PyTorch/JAX operations inside the main training loop\n  * Models that train for weeks or months\n  * Large models with large effective batch sizes\n  * Models with ultra-large embeddings common in advanced ranking and recommendation workloads\n\n\nCloud TPUs are _not_ suited to the following workloads:\n  * Linear algebra programs that require frequent branching or contain many element-wise algebra operations\n  * Workloads that require high-precision arithmetic\n  * Neural network workloads that contain custom operations in the main training loop"
+      },
+      {
+        "heading": "TPUs in Google Cloud",
+        "level": 2,
+        "content": "You can use TPUs through Compute Engine, Google Kubernetes Engine, and Gemini Enterprise Agent Platform. The Cloud TPU API is deprecated. For more information, see [Migrate from the Cloud TPU API](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine#migrate). The following table lists resources for each Google Cloud service.  \n| Google Cloud service  | Resources  |  \n| --- | --- |  \n| Compute Engine  | [TPU resources in Compute Engine](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine)  |  \n| Google Kubernetes Engine  |  [About TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus) Deploy [GKE Cloud TPU workloads in Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-tpu-overview)  |  \n| Gemini Enterprise Agent Platform  |  [Training on Gemini Enterprise Agent Platform with TPUs](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/training-with-tpu-vm) [Use TPUs for online prediction on Gemini Enterprise Agent Platform](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/predictions/use-tpu)  |"
+      },
+      {
+        "heading": "Best practices for model development",
+        "level": 2,
+        "content": "A program whose computation is dominated by non-matrix operations such as add, reshape, or concatenate, will likely not achieve high MXU utilization. The following are some guidelines to help you choose and build models that are suitable for Cloud TPU."
+      },
+      {
+        "heading": "Layout",
+        "level": 3,
+        "content": "The XLA compiler performs code transformations, including tiling a matrix multiply into smaller blocks, to efficiently execute computations on the matrix unit (MXU). The structure of the MXU hardware, a 128x128 [systolic array](https://en.wikipedia.org/wiki/Systolic_array), and the design of TPUs memory subsystem, which prefers dimensions that are multiples of 8, are used by the XLA compiler for tiling efficiency.\nConsequently, certain layouts are more conducive to tiling, while others require _reshapes_ to be performed before they can be tiled. Reshape operations are often memory bound on the Cloud TPU."
+      },
+      {
+        "heading": "Shapes",
+        "level": 3,
+        "content": "The XLA compiler compiles an ML graph just in time for the first batch. If any subsequent batches have different shapes, the model doesn't work. (Re-compiling the graph every time the shape changes is too slow.) Therefore, any model that has tensors with dynamic shapes isn't well suited to TPUs."
+      },
+      {
+        "heading": "Padding",
+        "level": 3,
+        "content": "A high performing Cloud TPU program is one where the dense compute can be tiled into 128x128 chunks. When a matrix computation cannot occupy an entire MXU, the compiler pads tensors with zeros. There are two drawbacks to padding:\n  * Tensors padded with zeros underutilize the TPU core.\n  * Padding increases the amount of on-chip memory storage required for a tensor and can lead to an out-of-memory error in the extreme case.\n\n\nWhile padding is automatically performed by the XLA compiler when necessary, one can determine the amount of padding performed by means of the [op_profile](https://docs.cloud.google.com/tpu/docs/cloud-tpu-tools#interpreting_the_results_1) tool. You can avoid padding by picking tensor dimensions that are well suited to TPUs."
+      },
+      {
+        "heading": "Dimensions",
+        "level": 3,
+        "content": "Choosing suitable tensor dimensions goes a long way in extracting maximum performance from the TPU hardware, particularly the MXU. The XLA compiler attempts to use either the batch size or a feature dimension to maximally use the MXU. Therefore, one of these must be a multiple of 128. Otherwise, the compiler will pad one of them to 128. Ideally, batch size and feature dimensions should be multiples of 8, which enables extracting high performance from the memory subsystem."
+      },
+      {
+        "heading": "Getting started with Cloud TPU",
+        "level": 2,
+        "content": "To get started with TPUs using Compute Engine, follow these steps:\n  1. To set up your project, enable the Compute Engine API, and get the required permissions, follow the steps in [Set up a Google Cloud project](https://docs.cloud.google.com/tpu/docs/setup-gcp-account-compute).\n  2. To learn about TPU versions, configurations, quotas, and pricing, read [Plan your Cloud TPU resources](https://docs.cloud.google.com/tpu/docs/plan-tpus).\n  3. To get started with TPUs, see [Quickstart: Create a TPU instance](https://docs.cloud.google.com/tpu/docs/quickstart-create-tpu-instance). For more information about creating TPUs, see [TPU creation overview](https://docs.cloud.google.com/tpu/docs/create-tpu-vm-compute)."
+      },
+      {
+        "heading": "Requesting help",
+        "level": 2,
+        "content": "To get help, contact [Cloud TPU support](https://docs.cloud.google.com/tpu/docs/getting-support). If you have an active Google Cloud project, be prepared to provide the following information:\n  * Your Google Cloud project ID\n  * Your TPU name, if one exists\n  * Other information you want to provide"
+      },
+      {
+        "heading": "What's next",
+        "level": 2,
+        "content": "* [Cloud TPU architecture](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm)\n  * [Cloud TPU pricing](https://docs.cloud.google.com/tpu/docs/pricing)\n  * [Contact sales](https://cloud.google.com/contact/)"
+      }
+    ],
+    "code_examples": [],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [
+      {
+        "headers": [
+          "Google Cloud service",
+          "Resources"
+        ],
+        "rows": [
+          [
+            "Compute Engine",
+            "[TPU resources in Compute Engine](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine)"
+          ],
+          [
+            "Google Kubernetes Engine",
+            "[About TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus) Deploy [GKE Cloud TPU workloads in Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-tpu-overview)"
+          ],
+          [
+            "Gemini Enterprise Agent Platform",
+            "[Training on Gemini Enterprise Agent Platform with TPUs](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/training-with-tpu-vm) [Use TPUs for online prediction on Gemini Enterprise Agent Platform](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/predictions/use-tpu)"
+          ]
+        ]
+      }
+    ],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Introduction to Cloud TPU' (https://docs.cloud.google.com/tpu/docs/intro-to-tpu)?",
+        "answer": "Official entry point: explains service choices, hardware fit, and points to setup, planning, and provisioning. Explicitly says the Cloud TPU API is deprecated."
+      },
+      {
+        "question": "How does 'Introduction to Cloud TPU' handle: Introduction to Cloud TPU?",
+        "answer": "Tensor Processing Units (TPUs) are Google's custom-developed, application-specific integrated circuits (ASICs) used to accelerate machine learning workloads. For more information about TPU hardware, see [TPU architecture](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm).\nTPUs efficiently train your models by using hardware designed for performing large matrix operations often found in machine learning algorithms. TPUs have on-chip high-bandwidth memory (HBM) letting you use larger models and batch sizes. TPUs can be connected in groups called slices that scale up your workloads with little to no code changes.\nCode that runs on TPUs must be compiled by the accelerated linear algebra (XLA) compiler. [XLA](https://openxla.org/xla) is a just-in-time compiler that takes the graph emitted by an ML framework application and compiles the linear algebra, loss, and gradient components of the graph into TPU machine code. The rest of the program runs on the TPU host machine. The XLA compiler is part of the TPU VM image that runs on a TPU host machine.\nFor more information about Tensor Processing Units, see [How to think about TPUs](https://jax-ml.github.io/scaling-book/tpus/)"
+      },
+      {
+        "question": "How does 'Introduction to Cloud TPU' handle: When to use TPUs?",
+        "answer": "Cloud TPUs are optimized for specific workloads. In some situations, you might want to use GPUs or CPUs on Compute Engine instances to run your machine learning workloads. In general, you can decide what hardware is best for your workload based on the guidelines that follow."
+      },
+      {
+        "question": "How does 'Introduction to Cloud TPU' handle: CPUs?",
+        "answer": "* Quick prototyping that requires maximum flexibility\n  * Simple models that don't take long to train\n  * Small models with small, effective batch sizes\n  * Models that contain many [custom TensorFlow operations written in C++](https://www.tensorflow.org/guide/create_op)\n  * Models that are limited by available I/O or the networking bandwidth of the host system"
+      },
+      {
+        "question": "How does 'Introduction to Cloud TPU' handle: GPUs?",
+        "answer": "* Models with a significant number of custom PyTorch/JAX operations that must run at least partially on CPUs\n  * Models with TensorFlow ops that are not available on Cloud TPU (see the list of [available TensorFlow ops](https://docs.cloud.google.com/tpu/docs/tensorflow-ops))\n  * Medium-to-large models with larger effective batch sizes"
+      },
+      {
+        "question": "How does 'Introduction to Cloud TPU' handle: TPUs?",
+        "answer": "* Models dominated by matrix computations\n  * Models with no custom PyTorch/JAX operations inside the main training loop\n  * Models that train for weeks or months\n  * Large models with large effective batch sizes\n  * Models with ultra-large embeddings common in advanced ranking and recommendation workloads\n\n\nCloud TPUs are _not_ suited to the following workloads:\n  * Linear algebra programs that require frequent branching or contain many element-wise algebra operations\n  * Workloads that require high-precision arithmetic\n  * Neural network workloads that contain custom operations in the main training loop"
+      },
+      {
+        "question": "How does 'Introduction to Cloud TPU' handle: TPUs in Google Cloud?",
+        "answer": "You can use TPUs through Compute Engine, Google Kubernetes Engine, and Gemini Enterprise Agent Platform. The Cloud TPU API is deprecated. For more information, see [Migrate from the Cloud TPU API](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine#migrate). The following table lists resources for each Google Cloud service.  \n| Google Cloud service  | Resources  |  \n| --- | --- |  \n| Compute Engine  | [TPU resources in Compute Engine](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine)  |  \n| Google Kubernetes Engine  |  [About TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus) Deploy [GKE Cloud TPU workloads in Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-tpu-overview)  |  \n| Gemini Enterprise Agent Platform  |  [Training on Gemini Enterprise Agent Platform with TPUs](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/training-with-tpu-vm) [Use TPUs for online prediction on Gemini Enterprise Agent Platform](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/predictions/use-tpu)  |"
+      },
+      {
+        "question": "How does 'Introduction to Cloud TPU' handle: Best practices for model development?",
+        "answer": "A program whose computation is dominated by non-matrix operations such as add, reshape, or concatenate, will likely not achieve high MXU utilization. The following are some guidelines to help you choose and build models that are suitable for Cloud TPU."
+      },
+      {
+        "question": "How does 'Introduction to Cloud TPU' handle: Layout?",
+        "answer": "The XLA compiler performs code transformations, including tiling a matrix multiply into smaller blocks, to efficiently execute computations on the matrix unit (MXU). The structure of the MXU hardware, a 128x128 [systolic array](https://en.wikipedia.org/wiki/Systolic_array), and the design of TPUs memory subsystem, which prefers dimensions that are multiples of 8, are used by the XLA compiler for tiling efficiency.\nConsequently, certain layouts are more conducive to tiling, while others require _reshapes_ to be performed before they can be tiled. Reshape operations are often memory bound on the Cloud TPU."
+      },
+      {
+        "question": "How does 'Introduction to Cloud TPU' handle: Shapes?",
+        "answer": "The XLA compiler compiles an ML graph just in time for the first batch. If any subsequent batches have different shapes, the model doesn't work. (Re-compiling the graph every time the shape changes is too slow.) Therefore, any model that has tensors with dynamic shapes isn't well suited to TPUs."
+      }
+    ],
+    "full_markdown": "# Introduction to Cloud TPU\nTensor Processing Units (TPUs) are Google's custom-developed, application-specific integrated circuits (ASICs) used to accelerate machine learning workloads. For more information about TPU hardware, see [TPU architecture](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm).\nTPUs efficiently train your models by using hardware designed for performing large matrix operations often found in machine learning algorithms. TPUs have on-chip high-bandwidth memory (HBM) letting you use larger models and batch sizes. TPUs can be connected in groups called slices that scale up your workloads with little to no code changes.\nCode that runs on TPUs must be compiled by the accelerated linear algebra (XLA) compiler. [XLA](https://openxla.org/xla) is a just-in-time compiler that takes the graph emitted by an ML framework application and compiles the linear algebra, loss, and gradient components of the graph into TPU machine code. The rest of the program runs on the TPU host machine. The XLA compiler is part of the TPU VM image that runs on a TPU host machine.\nFor more information about Tensor Processing Units, see [How to think about TPUs](https://jax-ml.github.io/scaling-book/tpus/).\n## When to use TPUs\nCloud TPUs are optimized for specific workloads. In some situations, you might want to use GPUs or CPUs on Compute Engine instances to run your machine learning workloads. In general, you can decide what hardware is best for your workload based on the guidelines that follow.\n### CPUs\n  * Quick prototyping that requires maximum flexibility\n  * Simple models that don't take long to train\n  * Small models with small, effective batch sizes\n  * Models that contain many [custom TensorFlow operations written in C++](https://www.tensorflow.org/guide/create_op)\n  * Models that are limited by available I/O or the networking bandwidth of the host system\n\n\n### GPUs\n  * Models with a significant number of custom PyTorch/JAX operations that must run at least partially on CPUs\n  * Models with TensorFlow ops that are not available on Cloud TPU (see the list of [available TensorFlow ops](https://docs.cloud.google.com/tpu/docs/tensorflow-ops))\n  * Medium-to-large models with larger effective batch sizes\n\n\n### TPUs\n  * Models dominated by matrix computations\n  * Models with no custom PyTorch/JAX operations inside the main training loop\n  * Models that train for weeks or months\n  * Large models with large effective batch sizes\n  * Models with ultra-large embeddings common in advanced ranking and recommendation workloads\n\n\nCloud TPUs are _not_ suited to the following workloads:\n  * Linear algebra programs that require frequent branching or contain many element-wise algebra operations\n  * Workloads that require high-precision arithmetic\n  * Neural network workloads that contain custom operations in the main training loop\n\n\n## TPUs in Google Cloud\nYou can use TPUs through Compute Engine, Google Kubernetes Engine, and Gemini Enterprise Agent Platform. The Cloud TPU API is deprecated. For more information, see [Migrate from the Cloud TPU API](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine#migrate). The following table lists resources for each Google Cloud service.  \n| Google Cloud service  | Resources  |  \n| --- | --- |  \n| Compute Engine  | [TPU resources in Compute Engine](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine)  |  \n| Google Kubernetes Engine  |  [About TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus) Deploy [GKE Cloud TPU workloads in Cluster Toolkit](https://docs.cloud.google.com/cluster-toolkit/docs/deploy/gke/gke-tpu-overview)  |  \n| Gemini Enterprise Agent Platform  |  [Training on Gemini Enterprise Agent Platform with TPUs](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/training/training-with-tpu-vm) [Use TPUs for online prediction on Gemini Enterprise Agent Platform](https://docs.cloud.google.com/gemini-enterprise-agent-platform/machine-learning/predictions/use-tpu)  |  \n## Best practices for model development\nA program whose computation is dominated by non-matrix operations such as add, reshape, or concatenate, will likely not achieve high MXU utilization. The following are some guidelines to help you choose and build models that are suitable for Cloud TPU.\n### Layout\nThe XLA compiler performs code transformations, including tiling a matrix multiply into smaller blocks, to efficiently execute computations on the matrix unit (MXU). The structure of the MXU hardware, a 128x128 [systolic array](https://en.wikipedia.org/wiki/Systolic_array), and the design of TPUs memory subsystem, which prefers dimensions that are multiples of 8, are used by the XLA compiler for tiling efficiency.\nConsequently, certain layouts are more conducive to tiling, while others require _reshapes_ to be performed before they can be tiled. Reshape operations are often memory bound on the Cloud TPU.\n### Shapes\nThe XLA compiler compiles an ML graph just in time for the first batch. If any subsequent batches have different shapes, the model doesn't work. (Re-compiling the graph every time the shape changes is too slow.) Therefore, any model that has tensors with dynamic shapes isn't well suited to TPUs.\n### Padding\nA high performing Cloud TPU program is one where the dense compute can be tiled into 128x128 chunks. When a matrix computation cannot occupy an entire MXU, the compiler pads tensors with zeros. There are two drawbacks to padding:\n  * Tensors padded with zeros underutilize the TPU core.\n  * Padding increases the amount of on-chip memory storage required for a tensor and can lead to an out-of-memory error in the extreme case.\n\n\nWhile padding is automatically performed by the XLA compiler when necessary, one can determine the amount of padding performed by means of the [op_profile](https://docs.cloud.google.com/tpu/docs/cloud-tpu-tools#interpreting_the_results_1) tool. You can avoid padding by picking tensor dimensions that are well suited to TPUs.\n### Dimensions\nChoosing suitable tensor dimensions goes a long way in extracting maximum performance from the TPU hardware, particularly the MXU. The XLA compiler attempts to use either the batch size or a feature dimension to maximally use the MXU. Therefore, one of these must be a multiple of 128. Otherwise, the compiler will pad one of them to 128. Ideally, batch size and feature dimensions should be multiples of 8, which enables extracting high performance from the memory subsystem.\n## Getting started with Cloud TPU\nTo get started with TPUs using Compute Engine, follow these steps:\n  1. To set up your project, enable the Compute Engine API, and get the required permissions, follow the steps in [Set up a Google Cloud project](https://docs.cloud.google.com/tpu/docs/setup-gcp-account-compute).\n  2. To learn about TPU versions, configurations, quotas, and pricing, read [Plan your Cloud TPU resources](https://docs.cloud.google.com/tpu/docs/plan-tpus).\n  3. To get started with TPUs, see [Quickstart: Create a TPU instance](https://docs.cloud.google.com/tpu/docs/quickstart-create-tpu-instance). For more information about creating TPUs, see [TPU creation overview](https://docs.cloud.google.com/tpu/docs/create-tpu-vm-compute).\n\n\n## Requesting help\nTo get help, contact [Cloud TPU support](https://docs.cloud.google.com/tpu/docs/getting-support). If you have an active Google Cloud project, be prepared to provide the following information:\n  * Your Google Cloud project ID\n  * Your TPU name, if one exists\n  * Other information you want to provide\n\n\n## What's next\n  * [Cloud TPU architecture](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm)\n  * [Cloud TPU pricing](https://docs.cloud.google.com/tpu/docs/pricing)\n  * [Contact sales](https://cloud.google.com/contact/)"
+  }
 }

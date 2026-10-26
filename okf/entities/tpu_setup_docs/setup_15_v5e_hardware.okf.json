@@ -1,57 +1,372 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:setup_15_v5e_hardware",
-  "@type": "DocumentationResource",
-  "name": "TPU v5e hardware documentation",
-  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/v5e",
-  "category": "TPU setup docs",
-  "categorySlug": "tpu_setup_docs",
-  "description": "Hardware specifications and configurations for TPU v5e.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/v5e",
-    "crawledAt": "2026-10-26T12:45:18.480392+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 26919
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "TPU v5e hardware documentation",
-      "documentedIn",
-      "https://docs.cloud.google.com/tpu/docs/v5e"
-    ],
-    [
-      "TPU v5e hardware documentation",
-      "belongsToCategory",
-      "tpu_setup_docs"
-    ],
-    [
-      "TPU v5e hardware documentation",
-      "targetsPlatform",
-      "Google Cloud Platform"
-    ],
-    [
-      "TPU v5e hardware documentation",
-      "managesHardware",
-      "Google Cloud TPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:setup_15_v5e_hardware",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "setup_15_v5e_hardware",
+    "name": "TPU v5e hardware documentation",
+    "url": "https://docs.cloud.google.com/tpu/docs/v5e",
+    "category": "tpu_setup_docs",
+    "description": "Hardware specifications and configurations for TPU v5e.",
+    "char_count": 5498,
+    "word_count": 856,
+    "section_count": 6,
+    "code_block_count": 0,
+    "table_count": 5,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.399492+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:setup_15_v5e_hardware",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:setup_15_v5e_hardware",
+        "predicate": "schema:name",
+        "object": "TPU v5e hardware documentation"
+      },
+      {
+        "subject": "tpu_doc:setup_15_v5e_hardware",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/tpu/docs/v5e"
+      },
+      {
+        "subject": "tpu_doc:setup_15_v5e_hardware",
+        "predicate": "schema:category",
+        "object": "tpu_setup_docs"
+      },
+      {
+        "subject": "tpu_doc:setup_15_v5e_hardware",
+        "predicate": "schema:description",
+        "object": "Hardware specifications and configurations for TPU v5e."
+      },
+      {
+        "subject": "tpu_doc:setup_15_v5e_hardware",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5e"
+      },
+      {
+        "subject": "tpu_doc:setup_15_v5e_hardware",
+        "predicate": "okf:hasSection",
+        "object": "TPU v5e"
+      },
+      {
+        "subject": "tpu_doc:setup_15_v5e_hardware",
+        "predicate": "okf:hasSection",
+        "object": "System architecture"
+      },
+      {
+        "subject": "tpu_doc:setup_15_v5e_hardware",
+        "predicate": "okf:hasSection",
+        "object": "Configurations"
+      },
+      {
+        "subject": "tpu_doc:setup_15_v5e_hardware",
+        "predicate": "okf:hasSection",
+        "object": "VM types"
+      },
+      {
+        "subject": "tpu_doc:setup_15_v5e_hardware",
+        "predicate": "okf:hasSection",
+        "object": "Cloud TPU v5e types for serving"
+      },
+      {
+        "subject": "tpu_doc:setup_15_v5e_hardware",
+        "predicate": "okf:hasSection",
+        "object": "Cloud TPU v5e types for training"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "TPU v5e hardware documentation provides official guidance on Hardware specifications and configurations for TPU v5e.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/v5e",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is TPU v5e hardware documentation used for in Cloud TPU workflows?",
-      "answer": "Hardware specifications and configurations for TPU v5e.",
-      "category": "tpu_setup_docs"
-    }
-  ],
-  "contentSummary": "Hardware specifications and configurations for TPU v5e."
+  },
+  "structured_content": {
+    "summary": "Hardware specifications and configurations for TPU v5e.",
+    "sections": [
+      {
+        "heading": "TPU v5e",
+        "level": 1,
+        "content": "**Note:** TPU v5e is supported using Google Kubernetes Engine and the Cloud TPU API. The Cloud TPU API is no longer under active development and will receive bug fixes and security updates only. For more information about TPUs and GKE, see [About TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus).\nThis document describes the architecture and supported configurations of Cloud TPU v5e.\nTPU v5e supports single and multi-host training and single-host inference. Multi-host inference is supported using [Sax](https://github.com/google/saxml). For more information, see [Cloud TPU inference](https://docs.cloud.google.com/tpu/docs/tpu-inference)."
+      },
+      {
+        "heading": "System architecture",
+        "level": 2,
+        "content": "Each v5e chip contains one TensorCore. Each TensorCore has four matrix-multiply units (MXUs), a vector unit, and a scalar unit.\nThe following diagram illustrates a TPU v5e chip.\n![Diagram of a v5e chip](https://docs.cloud.google.com/static/tpu/docs/images/v5e-tensorcore.png)\nThe following table shows the key specifications and their values for v5e.  \n| Specification  | Values  |  \n| --- | --- |  \n| Performance/total cost of ownership (TCO) (expected)  | 0.65x  |  \n| Peak compute per chip (bf16)  | 197 TFLOPs  |  \n| Peak compute per chip (Int8)  | 393 TOPs  |  \n| HBM capacity per chip  | 16 GB  |  \n| HBM bandwidth per chip  | 800 GiBps  |  \n| Bidirectional inter-chip interconnect (ICI) bandwidth (per chip)  | 400 GBps  |  \n| ICI ports per chip  | 4  |  \n| DRAM per host  | 512 GiB  |  \n| Chips per host   | 8  |  \n| TPU Pod size  | 256 chips  |  \n| Interconnect topology  | 2D torus  |  \n| BF16 peak compute per Pod  | 50.63 PFLOPs  |  \n| All-reduce bandwidth per Pod  | 51.2 TB/s  |  \n| Bisection bandwidth per Pod  | 1.6 TB/s  |  \n| Per-host NIC configuration  | 2 x 100 Gbps NIC  |  \n| Data center network bandwidth per Pod   | 6.4 Tbps  |  \n| Peak compute per Pod  | 100 PetaOps (Int8)  |"
+      },
+      {
+        "heading": "Configurations",
+        "level": 2,
+        "content": "**Note:** Use the [TPU topology visualizer](https://tpu-visualizer.uc.r.appspot.com/) to view 3D renderings of different TPU configurations. \nCloud TPU v5e is a combined training and inference (serving) product. Training jobs are optimized for throughput and availability, while serving jobs are optimized for latency. A training job on TPUs provisioned for serving could have lower availability and similarly, a serving job executed on TPUs provisioned for training could have higher latency.\nThe following 2D slice shapes are supported for v5e:  \n| Topology  | Number of TPU chips  |  Number of hosts  |  \n| --- | --- | --- |  \n| 1x1  | 1  | 1/8  |  \n| 2x2  | 4  | 1/2  |  \n| 2x4  | 8  | 1  |  \n| 4x4  | 16  | 2  |  \n| 4x8  | 32  | 4  |  \n| 8x8  | 64  | 8  |  \n| 8x16  | 128  | 16  |  \n| 16x16  | 256  | 32  |"
+      },
+      {
+        "heading": "VM types",
+        "level": 3,
+        "content": "Each TPU VM in a v5e TPU slice contains 1, 4 or 8 chips. In 4-chip and smaller slices, all TPU chips share the same non-uniform memory access (NUMA) node.\nFor 8-chip v5e TPU VMs, CPU-TPU communication will be more efficient within NUMA partitions. For example, in the following figure, `CPU0-Chip0` communication will be faster than `CPU0-Chip4` communication.\n![NUMA node communication](https://docs.cloud.google.com/static/tpu/docs/images/tpu-host-v5e.png)\nThe following table shows a comparison of TPU v5e VM types:  \n| VM type  | Machine type  | Number of vCPUs per VM  | RAM (GB) per VM  | Number of NUMA nodes per VM  |  \n| --- | --- | --- | --- | --- |  \n| 1-chip VM  | `ct5lp-hightpu-1t`  | 24  | 48  | 1  |  \n| 4-chip VM  | `ct5lp-hightpu-4t`  | 112  | 192  | 1  |  \n| 8-chip VM  | `ct5lp-hightpu-8t`  | 224  | 384  | 2  |"
+      },
+      {
+        "heading": "Cloud TPU v5e types for serving",
+        "level": 3,
+        "content": "Single-host serving is supported for up to 8 v5e chips. The following configurations are supported: 1x1, 2x2 and 2x4 slices. Each slice has 1, 4 and 8 chips respectively.\n![TPU v5e configurations that support serving: 1x1, 2x2, and\n2x4.](https://docs.cloud.google.com/static/tpu/docs/images/lite-pod-chips-for-serving.png)\nTo provision TPUs for a serving job, use one of the following TPU slice sizes in your CLI or API TPU creation request:  \n| Number of TPU chips  | Machine type  |  \n| --- | --- |  \n| `1`  | `ct5lp-hightpu-1t`  |  \n| `4`  | `ct5lp-hightpu-4t`  |  \n| `8`  | `ct5lp-hightpu-8t`  |  \nFor more information about managing TPUs, see [Manage TPUs](https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm). For more information about the system architecture of Cloud TPU, see [System architecture](https://docs.cloud.google.com/tpu/docs/system-architecture).\nServing on more than 8 v5e chips, also called multi-host serving, is supported using [Sax](https://github.com/google/saxml). For more information, see [ Cloud TPU inference](https://docs.cloud.google.com/tpu/docs/tpu-inference)."
+      },
+      {
+        "heading": "Cloud TPU v5e types for training",
+        "level": 3,
+        "content": "Training is supported for up to 256 chips.\nTo provision TPUs for a v5e training job, use one of the following TPU slice sizes in your CLI or API TPU creation request:  \n| Number of TPU chips  | Machine type  | Topology  |  \n| --- | --- | --- |  \n| `16`  | `ct5lp-hightpu-4t`  | 4x4  |  \n| `32`  | `ct5lp-hightpu-4t`  | 4x8  |  \n| `64`  | `ct5lp-hightpu-4t`  | 8x8  |  \n| `128`  | `ct5lp-hightpu-4t`  | 8x16  |  \n| `256`  | `ct5lp-hightpu-4t`  | 16x16  |  \nFor more information about managing TPUs, see [Manage TPUs](https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm). For more information about the system architecture of Cloud TPU, see [System architecture](https://docs.cloud.google.com/tpu/docs/system-architecture)."
+      }
+    ],
+    "code_examples": [],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [
+      {
+        "headers": [
+          "Specification",
+          "Values"
+        ],
+        "rows": [
+          [
+            "Performance/total cost of ownership (TCO) (expected)",
+            "0.65x"
+          ],
+          [
+            "Peak compute per chip (bf16)",
+            "197 TFLOPs"
+          ],
+          [
+            "Peak compute per chip (Int8)",
+            "393 TOPs"
+          ],
+          [
+            "HBM capacity per chip",
+            "16 GB"
+          ],
+          [
+            "HBM bandwidth per chip",
+            "800 GiBps"
+          ],
+          [
+            "Bidirectional inter-chip interconnect (ICI) bandwidth (per chip)",
+            "400 GBps"
+          ],
+          [
+            "ICI ports per chip",
+            "4"
+          ],
+          [
+            "DRAM per host",
+            "512 GiB"
+          ],
+          [
+            "Chips per host",
+            "8"
+          ],
+          [
+            "TPU Pod size",
+            "256 chips"
+          ],
+          [
+            "Interconnect topology",
+            "2D torus"
+          ],
+          [
+            "BF16 peak compute per Pod",
+            "50.63 PFLOPs"
+          ],
+          [
+            "All-reduce bandwidth per Pod",
+            "51.2 TB/s"
+          ],
+          [
+            "Bisection bandwidth per Pod",
+            "1.6 TB/s"
+          ],
+          [
+            "Per-host NIC configuration",
+            "2 x 100 Gbps NIC"
+          ],
+          [
+            "Data center network bandwidth per Pod",
+            "6.4 Tbps"
+          ],
+          [
+            "Peak compute per Pod",
+            "100 PetaOps (Int8)"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "Topology",
+          "Number of TPU chips",
+          "Number of hosts"
+        ],
+        "rows": [
+          [
+            "1x1",
+            "1",
+            "1/8"
+          ],
+          [
+            "2x2",
+            "4",
+            "1/2"
+          ],
+          [
+            "2x4",
+            "8",
+            "1"
+          ],
+          [
+            "4x4",
+            "16",
+            "2"
+          ],
+          [
+            "4x8",
+            "32",
+            "4"
+          ],
+          [
+            "8x8",
+            "64",
+            "8"
+          ],
+          [
+            "8x16",
+            "128",
+            "16"
+          ],
+          [
+            "16x16",
+            "256",
+            "32"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "VM type",
+          "Machine type",
+          "Number of vCPUs per VM",
+          "RAM (GB) per VM",
+          "Number of NUMA nodes per VM"
+        ],
+        "rows": [
+          [
+            "1-chip VM",
+            "`ct5lp-hightpu-1t`",
+            "24",
+            "48",
+            "1"
+          ],
+          [
+            "4-chip VM",
+            "`ct5lp-hightpu-4t`",
+            "112",
+            "192",
+            "1"
+          ],
+          [
+            "8-chip VM",
+            "`ct5lp-hightpu-8t`",
+            "224",
+            "384",
+            "2"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "Number of TPU chips",
+          "Machine type"
+        ],
+        "rows": [
+          [
+            "`1`",
+            "`ct5lp-hightpu-1t`"
+          ],
+          [
+            "`4`",
+            "`ct5lp-hightpu-4t`"
+          ],
+          [
+            "`8`",
+            "`ct5lp-hightpu-8t`"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "Number of TPU chips",
+          "Machine type",
+          "Topology"
+        ],
+        "rows": [
+          [
+            "`16`",
+            "`ct5lp-hightpu-4t`",
+            "4x4"
+          ],
+          [
+            "`32`",
+            "`ct5lp-hightpu-4t`",
+            "4x8"
+          ],
+          [
+            "`64`",
+            "`ct5lp-hightpu-4t`",
+            "8x8"
+          ],
+          [
+            "`128`",
+            "`ct5lp-hightpu-4t`",
+            "8x16"
+          ],
+          [
+            "`256`",
+            "`ct5lp-hightpu-4t`",
+            "16x16"
+          ]
+        ]
+      }
+    ],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'TPU v5e hardware documentation' (https://docs.cloud.google.com/tpu/docs/v5e)?",
+        "answer": "Hardware specifications and configurations for TPU v5e."
+      },
+      {
+        "question": "How does 'TPU v5e hardware documentation' handle: TPU v5e?",
+        "answer": "**Note:** TPU v5e is supported using Google Kubernetes Engine and the Cloud TPU API. The Cloud TPU API is no longer under active development and will receive bug fixes and security updates only. For more information about TPUs and GKE, see [About TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus).\nThis document describes the architecture and supported configurations of Cloud TPU v5e.\nTPU v5e supports single and multi-host training and single-host inference. Multi-host inference is supported using [Sax](https://github.com/google/saxml). For more information, see [Cloud TPU inference](https://docs.cloud.google.com/tpu/docs/tpu-inference)."
+      },
+      {
+        "question": "How does 'TPU v5e hardware documentation' handle: System architecture?",
+        "answer": "Each v5e chip contains one TensorCore. Each TensorCore has four matrix-multiply units (MXUs), a vector unit, and a scalar unit.\nThe following diagram illustrates a TPU v5e chip.\n![Diagram of a v5e chip](https://docs.cloud.google.com/static/tpu/docs/images/v5e-tensorcore.png)\nThe following table shows the key specifications and their values for v5e.  \n| Specification  | Values  |  \n| --- | --- |  \n| Performance/total cost of ownership (TCO) (expected)  | 0.65x  |  \n| Peak compute per chip (bf16)  | 197 TFLOPs  |  \n| Peak compute per chip (Int8)  | 393 TOPs  |  \n| HBM capacity per chip  | 16 GB  |  \n| HBM bandwidth per chip  | 800 GiBps  |  \n| Bidirectional inter-chip interconnect (ICI) bandwidth (per chip)  | 400 GBps  |  \n| ICI ports per chip  | 4  |  \n| DRAM per host  | 512 GiB  |  \n| Chips per host   | 8  |  \n| TPU Pod size  | 256 chips  |  \n| Interconnect topology  | 2D torus  |  \n| BF16 peak compute per Pod  | 50.63 PFLOPs  |  \n| All-reduce bandwidth per Pod  | 51.2 TB/s  |  \n| Bisection bandwidth per Pod  | 1.6 TB/s  |  \n| Per-host NIC configuration  | 2 x 100 Gbps NIC  |  \n| Data center network bandwidth per Pod   | 6.4 Tbps  |  \n| Peak compute per Pod  | 100 PetaOps (Int8)  "
+      },
+      {
+        "question": "How does 'TPU v5e hardware documentation' handle: Configurations?",
+        "answer": "**Note:** Use the [TPU topology visualizer](https://tpu-visualizer.uc.r.appspot.com/) to view 3D renderings of different TPU configurations. \nCloud TPU v5e is a combined training and inference (serving) product. Training jobs are optimized for throughput and availability, while serving jobs are optimized for latency. A training job on TPUs provisioned for serving could have lower availability and similarly, a serving job executed on TPUs provisioned for training could have higher latency.\nThe following 2D slice shapes are supported for v5e:  \n| Topology  | Number of TPU chips  |  Number of hosts  |  \n| --- | --- | --- |  \n| 1x1  | 1  | 1/8  |  \n| 2x2  | 4  | 1/2  |  \n| 2x4  | 8  | 1  |  \n| 4x4  | 16  | 2  |  \n| 4x8  | 32  | 4  |  \n| 8x8  | 64  | 8  |  \n| 8x16  | 128  | 16  |  \n| 16x16  | 256  | 32  |"
+      },
+      {
+        "question": "How does 'TPU v5e hardware documentation' handle: VM types?",
+        "answer": "Each TPU VM in a v5e TPU slice contains 1, 4 or 8 chips. In 4-chip and smaller slices, all TPU chips share the same non-uniform memory access (NUMA) node.\nFor 8-chip v5e TPU VMs, CPU-TPU communication will be more efficient within NUMA partitions. For example, in the following figure, `CPU0-Chip0` communication will be faster than `CPU0-Chip4` communication.\n![NUMA node communication](https://docs.cloud.google.com/static/tpu/docs/images/tpu-host-v5e.png)\nThe following table shows a comparison of TPU v5e VM types:  \n| VM type  | Machine type  | Number of vCPUs per VM  | RAM (GB) per VM  | Number of NUMA nodes per VM  |  \n| --- | --- | --- | --- | --- |  \n| 1-chip VM  | `ct5lp-hightpu-1t`  | 24  | 48  | 1  |  \n| 4-chip VM  | `ct5lp-hightpu-4t`  | 112  | 192  | 1  |  \n| 8-chip VM  | `ct5lp-hightpu-8t`  | 224  | 384  | 2  |"
+      },
+      {
+        "question": "How does 'TPU v5e hardware documentation' handle: Cloud TPU v5e types for serving?",
+        "answer": "Single-host serving is supported for up to 8 v5e chips. The following configurations are supported: 1x1, 2x2 and 2x4 slices. Each slice has 1, 4 and 8 chips respectively.\n![TPU v5e configurations that support serving: 1x1, 2x2, and\n2x4.](https://docs.cloud.google.com/static/tpu/docs/images/lite-pod-chips-for-serving.png)\nTo provision TPUs for a serving job, use one of the following TPU slice sizes in your CLI or API TPU creation request:  \n| Number of TPU chips  | Machine type  |  \n| --- | --- |  \n| `1`  | `ct5lp-hightpu-1t`  |  \n| `4`  | `ct5lp-hightpu-4t`  |  \n| `8`  | `ct5lp-hightpu-8t`  |  \nFor more information about managing TPUs, see [Manage TPUs](https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm). For more information about the system architecture of Cloud TPU, see [System architecture](https://docs.cloud.google.com/tpu/docs/system-architecture).\nServing on more than 8 v5e chips, also called multi-host serving, is supported using [Sax](https://github.com/google/saxml). For more information, see [ Cloud TPU inference](https://docs.cloud.google.com/tpu/docs/tpu-inference)."
+      },
+      {
+        "question": "How does 'TPU v5e hardware documentation' handle: Cloud TPU v5e types for training?",
+        "answer": "Training is supported for up to 256 chips.\nTo provision TPUs for a v5e training job, use one of the following TPU slice sizes in your CLI or API TPU creation request:  \n| Number of TPU chips  | Machine type  | Topology  |  \n| --- | --- | --- |  \n| `16`  | `ct5lp-hightpu-4t`  | 4x4  |  \n| `32`  | `ct5lp-hightpu-4t`  | 4x8  |  \n| `64`  | `ct5lp-hightpu-4t`  | 8x8  |  \n| `128`  | `ct5lp-hightpu-4t`  | 8x16  |  \n| `256`  | `ct5lp-hightpu-4t`  | 16x16  |  \nFor more information about managing TPUs, see [Manage TPUs](https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm). For more information about the system architecture of Cloud TPU, see [System architecture](https://docs.cloud.google.com/tpu/docs/system-architecture)."
+      }
+    ],
+    "full_markdown": "# TPU v5e\n**Note:** TPU v5e is supported using Google Kubernetes Engine and the Cloud TPU API. The Cloud TPU API is no longer under active development and will receive bug fixes and security updates only. For more information about TPUs and GKE, see [About TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus).\nThis document describes the architecture and supported configurations of Cloud TPU v5e.\nTPU v5e supports single and multi-host training and single-host inference. Multi-host inference is supported using [Sax](https://github.com/google/saxml). For more information, see [Cloud TPU inference](https://docs.cloud.google.com/tpu/docs/tpu-inference).\n## System architecture\nEach v5e chip contains one TensorCore. Each TensorCore has four matrix-multiply units (MXUs), a vector unit, and a scalar unit.\nThe following diagram illustrates a TPU v5e chip.\n![Diagram of a v5e chip](https://docs.cloud.google.com/static/tpu/docs/images/v5e-tensorcore.png)\nThe following table shows the key specifications and their values for v5e.  \n| Specification  | Values  |  \n| --- | --- |  \n| Performance/total cost of ownership (TCO) (expected)  | 0.65x  |  \n| Peak compute per chip (bf16)  | 197 TFLOPs  |  \n| Peak compute per chip (Int8)  | 393 TOPs  |  \n| HBM capacity per chip  | 16 GB  |  \n| HBM bandwidth per chip  | 800 GiBps  |  \n| Bidirectional inter-chip interconnect (ICI) bandwidth (per chip)  | 400 GBps  |  \n| ICI ports per chip  | 4  |  \n| DRAM per host  | 512 GiB  |  \n| Chips per host   | 8  |  \n| TPU Pod size  | 256 chips  |  \n| Interconnect topology  | 2D torus  |  \n| BF16 peak compute per Pod  | 50.63 PFLOPs  |  \n| All-reduce bandwidth per Pod  | 51.2 TB/s  |  \n| Bisection bandwidth per Pod  | 1.6 TB/s  |  \n| Per-host NIC configuration  | 2 x 100 Gbps NIC  |  \n| Data center network bandwidth per Pod   | 6.4 Tbps  |  \n| Peak compute per Pod  | 100 PetaOps (Int8)  |  \n## Configurations\n**Note:** Use the [TPU topology visualizer](https://tpu-visualizer.uc.r.appspot.com/) to view 3D renderings of different TPU configurations. \nCloud TPU v5e is a combined training and inference (serving) product. Training jobs are optimized for throughput and availability, while serving jobs are optimized for latency. A training job on TPUs provisioned for serving could have lower availability and similarly, a serving job executed on TPUs provisioned for training could have higher latency.\nThe following 2D slice shapes are supported for v5e:  \n| Topology  | Number of TPU chips  |  Number of hosts  |  \n| --- | --- | --- |  \n| 1x1  | 1  | 1/8  |  \n| 2x2  | 4  | 1/2  |  \n| 2x4  | 8  | 1  |  \n| 4x4  | 16  | 2  |  \n| 4x8  | 32  | 4  |  \n| 8x8  | 64  | 8  |  \n| 8x16  | 128  | 16  |  \n| 16x16  | 256  | 32  |  \n### VM types\nEach TPU VM in a v5e TPU slice contains 1, 4 or 8 chips. In 4-chip and smaller slices, all TPU chips share the same non-uniform memory access (NUMA) node.\nFor 8-chip v5e TPU VMs, CPU-TPU communication will be more efficient within NUMA partitions. For example, in the following figure, `CPU0-Chip0` communication will be faster than `CPU0-Chip4` communication.\n![NUMA node communication](https://docs.cloud.google.com/static/tpu/docs/images/tpu-host-v5e.png)\nThe following table shows a comparison of TPU v5e VM types:  \n| VM type  | Machine type  | Number of vCPUs per VM  | RAM (GB) per VM  | Number of NUMA nodes per VM  |  \n| --- | --- | --- | --- | --- |  \n| 1-chip VM  | `ct5lp-hightpu-1t`  | 24  | 48  | 1  |  \n| 4-chip VM  | `ct5lp-hightpu-4t`  | 112  | 192  | 1  |  \n| 8-chip VM  | `ct5lp-hightpu-8t`  | 224  | 384  | 2  |  \n### Cloud TPU v5e types for serving\nSingle-host serving is supported for up to 8 v5e chips. The following configurations are supported: 1x1, 2x2 and 2x4 slices. Each slice has 1, 4 and 8 chips respectively.\n![TPU v5e configurations that support serving: 1x1, 2x2, and\n2x4.](https://docs.cloud.google.com/static/tpu/docs/images/lite-pod-chips-for-serving.png)\nTo provision TPUs for a serving job, use one of the following TPU slice sizes in your CLI or API TPU creation request:  \n| Number of TPU chips  | Machine type  |  \n| --- | --- |  \n| `1`  | `ct5lp-hightpu-1t`  |  \n| `4`  | `ct5lp-hightpu-4t`  |  \n| `8`  | `ct5lp-hightpu-8t`  |  \nFor more information about managing TPUs, see [Manage TPUs](https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm). For more information about the system architecture of Cloud TPU, see [System architecture](https://docs.cloud.google.com/tpu/docs/system-architecture).\nServing on more than 8 v5e chips, also called multi-host serving, is supported using [Sax](https://github.com/google/saxml). For more information, see [ Cloud TPU inference](https://docs.cloud.google.com/tpu/docs/tpu-inference).\n### Cloud TPU v5e types for training\nTraining is supported for up to 256 chips.\nTo provision TPUs for a v5e training job, use one of the following TPU slice sizes in your CLI or API TPU creation request:  \n| Number of TPU chips  | Machine type  | Topology  |  \n| --- | --- | --- |  \n| `16`  | `ct5lp-hightpu-4t`  | 4x4  |  \n| `32`  | `ct5lp-hightpu-4t`  | 4x8  |  \n| `64`  | `ct5lp-hightpu-4t`  | 8x8  |  \n| `128`  | `ct5lp-hightpu-4t`  | 8x16  |  \n| `256`  | `ct5lp-hightpu-4t`  | 16x16  |  \nFor more information about managing TPUs, see [Manage TPUs](https://docs.cloud.google.com/tpu/docs/managing-tpus-tpu-vm). For more information about the system architecture of Cloud TPU, see [System architecture](https://docs.cloud.google.com/tpu/docs/system-architecture)."
+  }
 }

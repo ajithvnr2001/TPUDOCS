@@ -1,52 +1,401 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:train_08_tensorflow_tpu_guide",
-  "@type": "DocumentationResource",
-  "name": "TensorFlow TPU guide",
-  "canonicalUrl": "https://www.tensorflow.org/guide/tpu",
-  "category": "Training framework links",
-  "categorySlug": "training_framework_links",
-  "description": "Initialize TPU hardware and use tf.distribute.TPUStrategy for TensorFlow/Keras workloads.",
-  "provenance": {
-    "sourceUrl": "https://www.tensorflow.org/guide/tpu",
-    "crawledAt": "2026-10-26T12:45:44.173462+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 39946
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "TensorFlow TPU guide",
-      "documentedIn",
-      "https://www.tensorflow.org/guide/tpu"
-    ],
-    [
-      "TensorFlow TPU guide",
-      "belongsToCategory",
-      "training_framework_links"
-    ],
-    [
-      "TensorFlow TPU guide",
-      "supportsWorkflow",
-      "Distributed Machine Learning Training"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:train_08_tensorflow_tpu_guide",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "train_08_tensorflow_tpu_guide",
+    "name": "TensorFlow TPU guide",
+    "url": "https://www.tensorflow.org/guide/tpu",
+    "category": "training_framework_links",
+    "description": "Initialize TPU hardware and use tf.distribute.TPUStrategy for TensorFlow/Keras workloads.",
+    "char_count": 26241,
+    "word_count": 2407,
+    "section_count": 19,
+    "code_block_count": 22,
+    "table_count": 1,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.487609+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "schema:name",
+        "object": "TensorFlow TPU guide"
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "schema:url",
+        "object": "https://www.tensorflow.org/guide/tpu"
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "schema:category",
+        "object": "training_framework_links"
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "schema:description",
+        "object": "Initialize TPU hardware and use tf.distribute.TPUStrategy for TensorFlow/Keras workloads."
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TPUStrategy"
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "Use TPUs"
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "Setup"
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "TPU initialization"
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "This is the TPU initialization code that has to be at the beginning."
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "Manual device placement"
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "Distribution strategies"
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "Classification on TPUs"
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "Define a Keras model"
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "Load the dataset"
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "Train the model using Keras high-level APIs"
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "Train the model using a custom training loop"
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "Create the model, optimizer and metrics inside the `tf.distribute.Strategy`"
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "scope, so that the variables can be mirrored on each device."
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "Calculate per replica batch size, and distribute the `tf.data.Dataset`s"
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "on each TPU worker."
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "Improving performance with multiple steps inside [`tf.function`](https://www.tensorflow.org/api_docs/python/tf/function)"
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "Convert `steps_per_epoch` to `tf.Tensor` so the `tf.function` won't get"
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "retraced if the value changes."
+      },
+      {
+        "subject": "tpu_doc:train_08_tensorflow_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "Next steps"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "TensorFlow TPU guide provides official guidance on Initialize TPU hardware and use tf.distribute.TPUStrategy for TensorFlow/Keras workloads.",
-      "confidence": 1.0,
-      "source": "https://www.tensorflow.org/guide/tpu",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is TensorFlow TPU guide used for in Cloud TPU workflows?",
-      "answer": "Initialize TPU hardware and use tf.distribute.TPUStrategy for TensorFlow/Keras workloads.",
-      "category": "training_framework_links"
-    }
-  ],
-  "contentSummary": "Initialize TPU hardware and use tf.distribute.TPUStrategy for TensorFlow/Keras workloads."
+  },
+  "structured_content": {
+    "summary": "Initialize TPU hardware and use tf.distribute.TPUStrategy for TensorFlow/Keras workloads.",
+    "sections": [
+      {
+        "heading": "Use TPUs",
+        "level": 1,
+        "content": "|  [![](https://www.tensorflow.org/images/tf_logo_32px.png)View on TensorFlow.org](https://www.tensorflow.org/guide/tpu)  |  [![](https://www.tensorflow.org/images/colab_logo_32px.png)Run in Google Colab](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/guide/tpu.ipynb)  |  [![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://github.com/tensorflow/docs/blob/master/site/en/guide/tpu.ipynb)  |  [![](https://www.tensorflow.org/images/download_logo_32px.png)Download notebook](https://storage.googleapis.com/tensorflow_docs/docs/site/en/guide/tpu.ipynb)  |  \n| --- | --- | --- | --- |  \nThis guide demonstrates how to perform basic training on [Tensor Processing Units (TPUs)](https://cloud.google.com/tpu/) and TPU Pods, a collection of TPU devices connected by dedicated high-speed network interfaces, with [`tf.keras`](https://www.tensorflow.org/api_docs/python/tf/keras) and custom training loops.\nTPUs are Google's custom-developed application-specific integrated circuits (ASICs) used to accelerate machine learning workloads. They are available through [Google Colab](https://colab.research.google.com/), the [TPU Research Cloud](https://sites.research.google/trc/), and [Cloud TPU](https://cloud.google.com/tpu)."
+      },
+      {
+        "heading": "Setup",
+        "level": 2,
+        "content": "Before you run this Colab notebook, make sure that your hardware accelerator is a TPU by checking your notebook settings: **Runtime** > **Change runtime type** > **Hardware accelerator** > **TPU**.\nImport some necessary libraries, including TensorFlow Datasets:\n\n```\nimport tensorflow as tf\n\nimport os\nimport tensorflow_datasets as tfds\n\n```\n\n```\n2023-06-09 12:13:32.486552: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT\n\n```"
+      },
+      {
+        "heading": "TPU initialization",
+        "level": 2,
+        "content": "TPUs are typically [Cloud TPU](https://cloud.google.com/tpu/docs/) workers, which are different from the local process running the user's Python program. Thus, you need to do some initialization work to connect to the remote cluster and initialize the TPUs. Note that the `tpu` argument to [`tf.distribute.cluster_resolver.TPUClusterResolver`](https://www.tensorflow.org/api_docs/python/tf/distribute/cluster_resolver/TPUClusterResolver) is a special address just for Colab. If you are running your code on Google Compute Engine (GCE), you should instead pass in the name of your Cloud TPU.\n**Note:** The TPU initialization code has to be at the beginning of your program.\n```\nresolver = tf.distribute.cluster_resolver.TPUClusterResolver(tpu='')\ntf.config.experimental_connect_to_cluster(resolver)"
+      },
+      {
+        "heading": "This is the TPU initialization code that has to be at the beginning.",
+        "level": 1,
+        "content": "tf.tpu.experimental.initialize_tpu_system(resolver)\nprint(\"All devices: \", tf.config.list_logical_devices('TPU'))\n\n```\n\n```\nINFO:tensorflow:Deallocate tpu buffers before initializing tpu system.\n2023-06-09 12:13:34.011755: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:266] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected\nINFO:tensorflow:Deallocate tpu buffers before initializing tpu system.\nINFO:tensorflow:Initializing the TPU system: grpc://10.25.167.66:8470\nINFO:tensorflow:Initializing the TPU system: grpc://10.25.167.66:8470\nINFO:tensorflow:Finished initializing TPU system.\nINFO:tensorflow:Finished initializing TPU system.\nAll devices:  [LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:0', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:1', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:2', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:3', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:4', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:5', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:6', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:7', device_type='TPU')]\n\n```"
+      },
+      {
+        "heading": "Manual device placement",
+        "level": 2,
+        "content": "After the TPU is initialized, you can use manual device placement to place the computation on a single TPU device:\n\n```\na = tf.constant([[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]])\nb = tf.constant([[1.0, 2.0], [3.0, 4.0], [5.0, 6.0]])\n\nwith tf.device('/TPU:0'):\n  c = tf.matmul(a, b)\n\nprint(\"c device: \", c.device)\nprint(c)\n\n```\n\n```\nc device:  /job:worker/replica:0/task:0/device:TPU:0\ntf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32)\n\n```"
+      },
+      {
+        "heading": "Distribution strategies",
+        "level": 2,
+        "content": "Usually, you run your model on multiple TPUs in a data-parallel way. To distribute your model on multiple TPUs (as well as multiple GPUs or multiple machines), TensorFlow offers the [`tf.distribute.Strategy`](https://www.tensorflow.org/api_docs/python/tf/distribute/Strategy) API. You can replace your distribution strategy and the model will run on any given (TPU) device. Learn more in the [Distributed training with TensorFlow](https://www.tensorflow.org/guide/distributed_training) guide.\nUsing the [`tf.distribute.TPUStrategy`](https://www.tensorflow.org/api_docs/python/tf/distribute/TPUStrategy) option implements synchronous distributed training. TPUs provide their own implementation of efficient all-reduce and other collective operations across multiple TPU cores, which are used in `TPUStrategy`.\nTo demonstrate this, create a [`tf.distribute.TPUStrategy`](https://www.tensorflow.org/api_docs/python/tf/distribute/TPUStrategy) object:\n\n```\nstrategy = tf.distribute.TPUStrategy(resolver)\n\n```\n\n```\nINFO:tensorflow:Found TPU system:\nINFO:tensorflow:Found TPU system:\nINFO:tensorflow:*** Num TPU Cores: 8\nINFO:tensorflow:*** Num TPU Cores: 8\nINFO:tensorflow:*** Num TPU Workers: 1\nINFO:tensorflow:*** Num TPU Workers: 1\nINFO:tensorflow:*** Num TPU Cores Per Worker: 8\nINFO:tensorflow:*** Num TPU Cores Per Worker: 8\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:CPU:0, CPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:CPU:0, CPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:CPU:0, CPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:CPU:0, CPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:0, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:0, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:1, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:1, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:2, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:2, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:3, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:3, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:4, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:4, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:5, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:5, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:6, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:6, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:7, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:7, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 0, 0)\n\n```\n\nTo replicate a computation so it can run in all TPU cores, you can pass it into the [`Strategy.run`](https://www.tensorflow.org/api_docs/python/tf/distribute/MirroredStrategy#run) API. Below is an example that shows all cores receiving the same inputs `(a, b)` and performing matrix multiplication on each core independently. The outputs will be the values from all the replicas.\n\n```\n@tf.function\ndef matmul_fn(x, y):\n  z = tf.matmul(x, y)\n  return z\n\nz = strategy.run(matmul_fn, args=(a, b))\nprint(z)\n\n```\n\n```\nPerReplica:{\n  0: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32),\n  1: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32),\n  2: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32),\n  3: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32),\n  4: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32),\n  5: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32),\n  6: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32),\n  7: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32)\n}\n\n```"
+      },
+      {
+        "heading": "Classification on TPUs",
+        "level": 2,
+        "content": "Having covered the basic concepts, consider a more concrete example. This section demonstrates how to use the distribution strategy\u2014[`tf.distribute.TPUStrategy`](https://www.tensorflow.org/api_docs/python/tf/distribute/TPUStrategy)\u2014to train a Keras model on a Cloud TPU."
+      },
+      {
+        "heading": "Define a Keras model",
+        "level": 3,
+        "content": "Start with a definition of a [`Sequential` Keras model](https://www.tensorflow.org/guide/keras/sequential_model) for image classification on the MNIST dataset. It's no different than what you would use if you were training on CPUs or GPUs. Note that Keras model creation needs to be inside the [`Strategy.scope`](https://www.tensorflow.org/api_docs/python/tf/distribute/MirroredStrategy#scope), so the variables can be created on each TPU device. Other parts of the code are not necessary to be inside the `Strategy` scope.\n\n```\ndef create_model():\n  return tf.keras.Sequential(\n      [tf.keras.layers.Conv2D(256, 3, activation='relu', input_shape=(28, 28, 1)),\n       tf.keras.layers.Conv2D(256, 3, activation='relu'),\n       tf.keras.layers.Flatten(),\n       tf.keras.layers.Dense(256, activation='relu'),\n       tf.keras.layers.Dense(128, activation='relu'),\n       tf.keras.layers.Dense(10)])\n\n```"
+      },
+      {
+        "heading": "Load the dataset",
+        "level": 3,
+        "content": "Efficient use of the [`tf.data.Dataset`](https://www.tensorflow.org/api_docs/python/tf/data/Dataset) API is critical when using a Cloud TPU. You can learn more about dataset performance in the [Input pipeline performance guide](https://www.tensorflow.org/guide/data_performance).\nIf you are using [TPU Nodes](https://cloud.google.com/tpu/docs/managing-tpus-tpu-vm), you need to store all data files read by the TensorFlow `Dataset` in [Google Cloud Storage (GCS) buckets](https://cloud.google.com/tpu/docs/storage-buckets). If you are using [TPU VMs](https://cloud.google.com/tpu/docs/users-guide-tpu-vm), you can store data wherever you like. For more information on TPU Nodes and TPU VMs, refer to the [TPU System Architecture](https://cloud.google.com/tpu/docs/system-architecture-tpu-vm) documentation.\nFor most use cases, it is recommended to convert your data into the `TFRecord` format and use a [`tf.data.TFRecordDataset`](https://www.tensorflow.org/api_docs/python/tf/data/TFRecordDataset) to read it. Check the [TFRecord and tf.Example tutorial](https://www.tensorflow.org/tutorials/load_data/tfrecord) for details on how to do this. It is not a hard requirement and you can use other dataset readers, such as [`tf.data.FixedLengthRecordDataset`](https://www.tensorflow.org/api_docs/python/tf/data/FixedLengthRecordDataset) or [`tf.data.TextLineDataset`](https://www.tensorflow.org/api_docs/python/tf/data/TextLineDataset).\nYou can load entire small datasets into memory using [`tf.data.Dataset.cache`](https://www.tensorflow.org/api_docs/python/tf/data/Dataset#cache).\nRegardless of the data format used, it is strongly recommended that you use large files on the order of 100MB. This is especially important in this networked setting, as the overhead of opening a file is significantly higher.\nAs shown in the code below, you should use the Tensorflow Datasets [`tfds.load`](https://www.tensorflow.org/datasets/api_docs/python/tfds/load) module to get a copy of the MNIST training and test data. Note that `try_gcs` is specified to use a copy that is available in a public GCS bucket. If you don't specify this, the TPU will not be able to access the downloaded data.\n\n```\ndef get_dataset(batch_size, is_training=True):\n  split = 'train' if is_training else 'test'\n  dataset, info = tfds.load(name='mnist', split=split, with_info=True,\n                            as_supervised=True, try_gcs=True)\n\n  # Normalize the input data.\n  def scale(image, label):\n    image = tf.cast(image, tf.float32)\n    image /= 255.0\n    return image, label\n\n  dataset = dataset.map(scale)\n\n  # Only shuffle and repeat the dataset in training. The advantage of having an\n  # infinite dataset for training is to avoid the potential last partial batch\n  # in each epoch, so that you don't need to think about scaling the gradients\n  # based on the actual batch size.\n  if is_training:\n    dataset = dataset.shuffle(10000)\n    dataset = dataset.repeat()\n\n  dataset = dataset.batch(batch_size)\n\n  return dataset\n\n```"
+      },
+      {
+        "heading": "Train the model using Keras high-level APIs",
+        "level": 3,
+        "content": "You can train your model with Keras [`Model.fit`](https://www.tensorflow.org/api_docs/python/tf/keras/Model#fit) and [`Model.compile`](https://www.tensorflow.org/api_docs/python/tf/keras/Model#compile) APIs. There is nothing TPU-specific in this step\u2014you write the code as if you were using multiple GPUs and a `MirroredStrategy` instead of the `TPUStrategy`. You can learn more in the [Distributed training with Keras](https://www.tensorflow.org/tutorials/distribute/keras) tutorial.\n\n```\nwith strategy.scope():\n  model = create_model()\n  model.compile(optimizer='adam',\n                loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),\n                metrics=['sparse_categorical_accuracy'])\n\nbatch_size = 200\nsteps_per_epoch = 60000 // batch_size\nvalidation_steps = 10000 // batch_size\n\ntrain_dataset = get_dataset(batch_size, is_training=True)\ntest_dataset = get_dataset(batch_size, is_training=False)\n\nmodel.fit(train_dataset,\n          epochs=5,\n          steps_per_epoch=steps_per_epoch,\n          validation_data=test_dataset,\n          validation_steps=validation_steps)\n\n```\n\n```\nEpoch 1/5\n300/300 [==============================] - 17s 32ms/step - loss: 0.1235 - sparse_categorical_accuracy: 0.9620 - val_loss: 0.0462 - val_sparse_categorical_accuracy: 0.9856\nEpoch 2/5\n300/300 [==============================] - 7s 24ms/step - loss: 0.0333 - sparse_categorical_accuracy: 0.9894 - val_loss: 0.0401 - val_sparse_categorical_accuracy: 0.9878\nEpoch 3/5\n300/300 [==============================] - 7s 24ms/step - loss: 0.0186 - sparse_categorical_accuracy: 0.9938 - val_loss: 0.0352 - val_sparse_categorical_accuracy: 0.9900\nEpoch 4/5\n300/300 [==============================] - 7s 25ms/step - loss: 0.0127 - sparse_categorical_accuracy: 0.9957 - val_loss: 0.0482 - val_sparse_categorical_accuracy: 0.9879\nEpoch 5/5\n300/300 [==============================] - 7s 24ms/step - loss: 0.0111 - sparse_categorical_accuracy: 0.9962 - val_loss: 0.0448 - val_sparse_categorical_accuracy: 0.9894\n<keras.callbacks.History at 0x7f79107c8d30>\n\n```\n\nTo reduce Python overhead and maximize the performance of your TPU, pass in the `steps_per_execution` argument to Keras [`Model.compile`](https://www.tensorflow.org/api_docs/python/tf/keras/Model#compile). In this example, it increases throughput by about 50%:\n\n```\nwith strategy.scope():\n  model = create_model()\n  model.compile(optimizer='adam',\n                # Anything between 2 and `steps_per_epoch` could help here.\n                steps_per_execution = 50,\n                loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),\n                metrics=['sparse_categorical_accuracy'])\n\nmodel.fit(train_dataset,\n          epochs=5,\n          steps_per_epoch=steps_per_epoch,\n          validation_data=test_dataset,\n          validation_steps=validation_steps)\n\n```\n\n```\nEpoch 1/5\n300/300 [==============================] - 14s 45ms/step - loss: 0.1306 - sparse_categorical_accuracy: 0.9591 - val_loss: 0.0420 - val_sparse_categorical_accuracy: 0.9863\nEpoch 2/5\n300/300 [==============================] - 3s 10ms/step - loss: 0.0333 - sparse_categorical_accuracy: 0.9900 - val_loss: 0.0502 - val_sparse_categorical_accuracy: 0.9846\nEpoch 3/5\n300/300 [==============================] - 3s 10ms/step - loss: 0.0193 - sparse_categorical_accuracy: 0.9936 - val_loss: 0.0406 - val_sparse_categorical_accuracy: 0.9879\nEpoch 4/5\n300/300 [==============================] - 3s 10ms/step - loss: 0.0135 - sparse_categorical_accuracy: 0.9955 - val_loss: 0.0416 - val_sparse_categorical_accuracy: 0.9882\nEpoch 5/5\n300/300 [==============================] - 3s 10ms/step - loss: 0.0110 - sparse_categorical_accuracy: 0.9962 - val_loss: 0.0463 - val_sparse_categorical_accuracy: 0.9882\n<keras.callbacks.History at 0x7f7898488e20>\n\n```"
+      },
+      {
+        "heading": "Train the model using a custom training loop",
+        "level": 3,
+        "content": "You can also create and train your model using [`tf.function`](https://www.tensorflow.org/api_docs/python/tf/function) and [`tf.distribute`](https://www.tensorflow.org/api_docs/python/tf/distribute) APIs directly. You can use the `Strategy.experimental_distribute_datasets_from_function` API to distribute the [`tf.data.Dataset`](https://www.tensorflow.org/api_docs/python/tf/data/Dataset) given a dataset function. Note that in the example below the batch size passed into the `Dataset` is the per-replica batch size instead of the global batch size. To learn more, check out the [Custom training with `tf.distribute.Strategy`](https://www.tensorflow.org/tutorials/distribute/custom_training) tutorial.\nFirst, create the model, datasets and [`tf.function`](https://www.tensorflow.org/api_docs/python/tf/function)s:\n\n```"
+      },
+      {
+        "heading": "Create the model, optimizer and metrics inside the `tf.distribute.Strategy`",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "scope, so that the variables can be mirrored on each device.",
+        "level": 1,
+        "content": "with strategy.scope():\n  model = create_model()\n  optimizer = tf.keras.optimizers.Adam()\n  training_loss = tf.keras.metrics.Mean('training_loss', dtype=tf.float32)\n  training_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(\n      'training_accuracy', dtype=tf.float32)"
+      },
+      {
+        "heading": "Calculate per replica batch size, and distribute the `tf.data.Dataset`s",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "on each TPU worker.",
+        "level": 1,
+        "content": "per_replica_batch_size = batch_size // strategy.num_replicas_in_sync\n\ntrain_dataset = strategy.experimental_distribute_datasets_from_function(\n    lambda _: get_dataset(per_replica_batch_size, is_training=True))\n\n@tf.function\ndef train_step(iterator):\n  \"\"\"The step function for one training step.\"\"\"\n\n  def step_fn(inputs):\n    \"\"\"The computation to run on each TPU device.\"\"\"\n    images, labels = inputs\n    with tf.GradientTape() as tape:\n      logits = model(images, training=True)\n      loss = tf.keras.losses.sparse_categorical_crossentropy(\n          labels, logits, from_logits=True)\n      loss = tf.nn.compute_average_loss(loss, global_batch_size=batch_size)\n    grads = tape.gradient(loss, model.trainable_variables)\n    optimizer.apply_gradients(list(zip(grads, model.trainable_variables)))\n    training_loss.update_state(loss * strategy.num_replicas_in_sync)\n    training_accuracy.update_state(labels, logits)\n\n  strategy.run(step_fn, args=(next(iterator),))\n\n```\n\n```\nWARNING:tensorflow:From /tmpfs/tmp/ipykernel_9094/1509474074.py:14: StrategyBase.experimental_distribute_datasets_from_function (from tensorflow.python.distribute.distribute_lib) is deprecated and will be removed in a future version.\nInstructions for updating:\nrename to distribute_datasets_from_function\nWARNING:tensorflow:From /tmpfs/tmp/ipykernel_9094/1509474074.py:14: StrategyBase.experimental_distribute_datasets_from_function (from tensorflow.python.distribute.distribute_lib) is deprecated and will be removed in a future version.\nInstructions for updating:\nrename to distribute_datasets_from_function\n\n```\n\nThen, run the training loop:\n\n```\nsteps_per_eval = 10000 // batch_size\n\ntrain_iterator = iter(train_dataset)\nfor epoch in range(5):\n  print('Epoch: {}/5'.format(epoch))\n\n  for step in range(steps_per_epoch):\n    train_step(train_iterator)\n  print('Current step: {}, training loss: {}, accuracy: {}%'.format(\n      optimizer.iterations.numpy(),\n      round(float(training_loss.result()), 4),\n      round(float(training_accuracy.result()) * 100, 2)))\n  training_loss.reset_states()\n  training_accuracy.reset_states()\n\n```\n\n```\nEpoch: 0/5\nCurrent step: 300, training loss: 0.1465, accuracy: 95.4%\nEpoch: 1/5\nCurrent step: 600, training loss: 0.035, accuracy: 98.94%\nEpoch: 2/5\nCurrent step: 900, training loss: 0.0197, accuracy: 99.39%\nEpoch: 3/5\nCurrent step: 1200, training loss: 0.0126, accuracy: 99.59%\nEpoch: 4/5\nCurrent step: 1500, training loss: 0.0109, accuracy: 99.64%\n\n```"
+      },
+      {
+        "heading": "Improving performance with multiple steps inside [`tf.function`](https://www.tensorflow.org/api_docs/python/tf/function)",
+        "level": 3,
+        "content": "You can improve the performance by running multiple steps within a [`tf.function`](https://www.tensorflow.org/api_docs/python/tf/function). This is achieved by wrapping the [`Strategy.run`](https://www.tensorflow.org/api_docs/python/tf/distribute/MirroredStrategy#run) call with a [`tf.range`](https://www.tensorflow.org/api_docs/python/tf/range) inside [`tf.function`](https://www.tensorflow.org/api_docs/python/tf/function), and AutoGraph will convert it to a [`tf.while_loop`](https://www.tensorflow.org/api_docs/python/tf/while_loop) on the TPU worker. You can learn more about [`tf.function`](https://www.tensorflow.org/api_docs/python/tf/function)s in the [Better performance with `tf.function`](https://www.tensorflow.org/guide/function) guide.\nDespite the improved performance, there are tradeoffs with this method compared to running a single step inside a [`tf.function`](https://www.tensorflow.org/api_docs/python/tf/function). Running multiple steps in a [`tf.function`](https://www.tensorflow.org/api_docs/python/tf/function) is less flexible\u2014you cannot run things eagerly or arbitrary Python code within the steps.\n\n```\n@tf.function\ndef train_multiple_steps(iterator, steps):\n  \"\"\"The step function for one training step.\"\"\"\n\n  def step_fn(inputs):\n    \"\"\"The computation to run on each TPU device.\"\"\"\n    images, labels = inputs\n    with tf.GradientTape() as tape:\n      logits = model(images, training=True)\n      loss = tf.keras.losses.sparse_categorical_crossentropy(\n          labels, logits, from_logits=True)\n      loss = tf.nn.compute_average_loss(loss, global_batch_size=batch_size)\n    grads = tape.gradient(loss, model.trainable_variables)\n    optimizer.apply_gradients(list(zip(grads, model.trainable_variables)))\n    training_loss.update_state(loss * strategy.num_replicas_in_sync)\n    training_accuracy.update_state(labels, logits)\n\n  for _ in tf.range(steps):\n    strategy.run(step_fn, args=(next(iterator),))"
+      },
+      {
+        "heading": "Convert `steps_per_epoch` to `tf.Tensor` so the `tf.function` won't get",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "retraced if the value changes.",
+        "level": 1,
+        "content": "train_multiple_steps(train_iterator, tf.convert_to_tensor(steps_per_epoch))\n\nprint('Current step: {}, training loss: {}, accuracy: {}%'.format(\n      optimizer.iterations.numpy(),\n      round(float(training_loss.result()), 4),\n      round(float(training_accuracy.result()) * 100, 2)))\n\n```\n\n```\nCurrent step: 1800, training loss: 0.009, accuracy: 99.72%\n\n```"
+      },
+      {
+        "heading": "Next steps",
+        "level": 2,
+        "content": "To learn more about Cloud TPUs and how to use them:\n  * [Google Cloud TPU](https://cloud.google.com/tpu): The Google Cloud TPU homepage.\n  * [Google Cloud TPU documentation](https://cloud.google.com/tpu/docs/): Google Cloud TPU documentation, which includes: \n    * [Introduction to Cloud TPU](https://cloud.google.com/tpu/docs/intro-to-tpu): An overview of working with Cloud TPUs.\n    * [Cloud TPU quickstarts](https://cloud.google.com/tpu/docs/quick-starts): Quickstart introductions to working with Cloud TPU VMs using TensorFlow and other main machine learning frameworks.\n  * [Google Cloud TPU Colab notebooks](https://cloud.google.com/tpu/docs/colabs): End-to-end training examples.\n  * [Google Cloud TPU performance guide](https://cloud.google.com/tpu/docs/performance-guide): Enhance Cloud TPU performance further by adjusting Cloud TPU configuration parameters for your application\n  * [Distributed training with TensorFlow](https://www.tensorflow.org/guide/distributed_training): How to use distribution strategies\u2014including [`tf.distribute.TPUStrategy`](https://www.tensorflow.org/api_docs/python/tf/distribute/TPUStrategy)\u2014with examples showing best practices.\n  * TPU embeddings: TensorFlow includes specialized support for training embeddings on TPUs via [`tf.tpu.experimental.embedding`](https://www.tensorflow.org/api_docs/python/tf/tpu/experimental/embedding). In addition, [TensorFlow Recommenders](https://www.tensorflow.org/recommenders) has [`tfrs.layers.embedding.TPUEmbedding`](https://www.tensorflow.org/recommenders/api_docs/python/tfrs/layers/embedding/TPUEmbedding). Embeddings provide efficient and dense representations, capturing complex similarities and relationships between features. TensorFlow's TPU-specific embedding support allows you to train embeddings that are larger than the memory of a single TPU device, and to use sparse and ragged inputs on TPUs.\n  * [TPU Research Cloud (TRC)](https://sites.research.google/trc/about/): TRC enables researchers to apply for access to a cluster of more than 1,000 Cloud TPU devices."
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "import tensorflow as tf\n\nimport os\nimport tensorflow_datasets as tfds"
+      },
+      {
+        "language": "text",
+        "code": "2023-06-09 12:13:32.486552: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT"
+      },
+      {
+        "language": "text",
+        "code": "resolver = tf.distribute.cluster_resolver.TPUClusterResolver(tpu='')\ntf.config.experimental_connect_to_cluster(resolver)\n# This is the TPU initialization code that has to be at the beginning.\ntf.tpu.experimental.initialize_tpu_system(resolver)\nprint(\"All devices: \", tf.config.list_logical_devices('TPU'))"
+      },
+      {
+        "language": "text",
+        "code": "INFO:tensorflow:Deallocate tpu buffers before initializing tpu system.\n2023-06-09 12:13:34.011755: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:266] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected\nINFO:tensorflow:Deallocate tpu buffers before initializing tpu system.\nINFO:tensorflow:Initializing the TPU system: grpc://10.25.167.66:8470\nINFO:tensorflow:Initializing the TPU system: grpc://10.25.167.66:8470\nINFO:tensorflow:Finished initializing TPU system.\nINFO:tensorflow:Finished initializing TPU system.\nAll devices:  [LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:0', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:1', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:2', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:3', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:4', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:5', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:6', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:7', device_type='TPU')]"
+      },
+      {
+        "language": "text",
+        "code": "a = tf.constant([[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]])\nb = tf.constant([[1.0, 2.0], [3.0, 4.0], [5.0, 6.0]])\n\nwith tf.device('/TPU:0'):\n  c = tf.matmul(a, b)\n\nprint(\"c device: \", c.device)\nprint(c)"
+      },
+      {
+        "language": "text",
+        "code": "c device:  /job:worker/replica:0/task:0/device:TPU:0\ntf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32)"
+      },
+      {
+        "language": "text",
+        "code": "strategy = tf.distribute.TPUStrategy(resolver)"
+      },
+      {
+        "language": "text",
+        "code": "INFO:tensorflow:Found TPU system:\nINFO:tensorflow:Found TPU system:\nINFO:tensorflow:*** Num TPU Cores: 8\nINFO:tensorflow:*** Num TPU Cores: 8\nINFO:tensorflow:*** Num TPU Workers: 1\nINFO:tensorflow:*** Num TPU Workers: 1\nINFO:tensorflow:*** Num TPU Cores Per Worker: 8\nINFO:tensorflow:*** Num TPU Cores Per Worker: 8\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:CPU:0, CPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:CPU:0, CPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:CPU:0, CPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:CPU:0, CPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:0, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:0, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:1, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:1, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:2, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:2, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:3, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:3, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:4, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:4, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:5, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:5, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:6, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:6, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:7, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:7, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 0, 0)"
+      },
+      {
+        "language": "text",
+        "code": "@tf.function\ndef matmul_fn(x, y):\n  z = tf.matmul(x, y)\n  return z\n\nz = strategy.run(matmul_fn, args=(a, b))\nprint(z)"
+      },
+      {
+        "language": "text",
+        "code": "PerReplica:{\n  0: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32),\n  1: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32),\n  2: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32),\n  3: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32),\n  4: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32),\n  5: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32),\n  6: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32),\n  7: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32)\n}"
+      },
+      {
+        "language": "text",
+        "code": "def create_model():\n  return tf.keras.Sequential(\n      [tf.keras.layers.Conv2D(256, 3, activation='relu', input_shape=(28, 28, 1)),\n       tf.keras.layers.Conv2D(256, 3, activation='relu'),\n       tf.keras.layers.Flatten(),\n       tf.keras.layers.Dense(256, activation='relu'),\n       tf.keras.layers.Dense(128, activation='relu'),\n       tf.keras.layers.Dense(10)])"
+      },
+      {
+        "language": "text",
+        "code": "def get_dataset(batch_size, is_training=True):\n  split = 'train' if is_training else 'test'\n  dataset, info = tfds.load(name='mnist', split=split, with_info=True,\n                            as_supervised=True, try_gcs=True)\n\n  # Normalize the input data.\n  def scale(image, label):\n    image = tf.cast(image, tf.float32)\n    image /= 255.0\n    return image, label\n\n  dataset = dataset.map(scale)\n\n  # Only shuffle and repeat the dataset in training. The advantage of having an\n  # infinite dataset for training is to avoid the potential last partial batch\n  # in each epoch, so that you don't need to think about scaling the gradients\n  # based on the actual batch size.\n  if is_training:\n    dataset = dataset.shuffle(10000)\n    dataset = dataset.repeat()\n\n  dataset = dataset.batch(batch_size)\n\n  return dataset"
+      },
+      {
+        "language": "text",
+        "code": "with strategy.scope():\n  model = create_model()\n  model.compile(optimizer='adam',\n                loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),\n                metrics=['sparse_categorical_accuracy'])\n\nbatch_size = 200\nsteps_per_epoch = 60000 // batch_size\nvalidation_steps = 10000 // batch_size\n\ntrain_dataset = get_dataset(batch_size, is_training=True)\ntest_dataset = get_dataset(batch_size, is_training=False)\n\nmodel.fit(train_dataset,\n          epochs=5,\n          steps_per_epoch=steps_per_epoch,\n          validation_data=test_dataset,\n          validation_steps=validation_steps)"
+      },
+      {
+        "language": "text",
+        "code": "Epoch 1/5\n300/300 [==============================] - 17s 32ms/step - loss: 0.1235 - sparse_categorical_accuracy: 0.9620 - val_loss: 0.0462 - val_sparse_categorical_accuracy: 0.9856\nEpoch 2/5\n300/300 [==============================] - 7s 24ms/step - loss: 0.0333 - sparse_categorical_accuracy: 0.9894 - val_loss: 0.0401 - val_sparse_categorical_accuracy: 0.9878\nEpoch 3/5\n300/300 [==============================] - 7s 24ms/step - loss: 0.0186 - sparse_categorical_accuracy: 0.9938 - val_loss: 0.0352 - val_sparse_categorical_accuracy: 0.9900\nEpoch 4/5\n300/300 [==============================] - 7s 25ms/step - loss: 0.0127 - sparse_categorical_accuracy: 0.9957 - val_loss: 0.0482 - val_sparse_categorical_accuracy: 0.9879\nEpoch 5/5\n300/300 [==============================] - 7s 24ms/step - loss: 0.0111 - sparse_categorical_accuracy: 0.9962 - val_loss: 0.0448 - val_sparse_categorical_accuracy: 0.9894\n<keras.callbacks.History at 0x7f79107c8d30>"
+      },
+      {
+        "language": "text",
+        "code": "with strategy.scope():\n  model = create_model()\n  model.compile(optimizer='adam',\n                # Anything between 2 and `steps_per_epoch` could help here.\n                steps_per_execution = 50,\n                loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),\n                metrics=['sparse_categorical_accuracy'])\n\nmodel.fit(train_dataset,\n          epochs=5,\n          steps_per_epoch=steps_per_epoch,\n          validation_data=test_dataset,\n          validation_steps=validation_steps)"
+      },
+      {
+        "language": "text",
+        "code": "Epoch 1/5\n300/300 [==============================] - 14s 45ms/step - loss: 0.1306 - sparse_categorical_accuracy: 0.9591 - val_loss: 0.0420 - val_sparse_categorical_accuracy: 0.9863\nEpoch 2/5\n300/300 [==============================] - 3s 10ms/step - loss: 0.0333 - sparse_categorical_accuracy: 0.9900 - val_loss: 0.0502 - val_sparse_categorical_accuracy: 0.9846\nEpoch 3/5\n300/300 [==============================] - 3s 10ms/step - loss: 0.0193 - sparse_categorical_accuracy: 0.9936 - val_loss: 0.0406 - val_sparse_categorical_accuracy: 0.9879\nEpoch 4/5\n300/300 [==============================] - 3s 10ms/step - loss: 0.0135 - sparse_categorical_accuracy: 0.9955 - val_loss: 0.0416 - val_sparse_categorical_accuracy: 0.9882\nEpoch 5/5\n300/300 [==============================] - 3s 10ms/step - loss: 0.0110 - sparse_categorical_accuracy: 0.9962 - val_loss: 0.0463 - val_sparse_categorical_accuracy: 0.9882\n<keras.callbacks.History at 0x7f7898488e20>"
+      },
+      {
+        "language": "text",
+        "code": "# Create the model, optimizer and metrics inside the `tf.distribute.Strategy`\n# scope, so that the variables can be mirrored on each device.\nwith strategy.scope():\n  model = create_model()\n  optimizer = tf.keras.optimizers.Adam()\n  training_loss = tf.keras.metrics.Mean('training_loss', dtype=tf.float32)\n  training_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(\n      'training_accuracy', dtype=tf.float32)\n\n# Calculate per replica batch size, and distribute the `tf.data.Dataset`s\n# on each TPU worker.\nper_replica_batch_size = batch_size // strategy.num_replicas_in_sync\n\ntrain_dataset = strategy.experimental_distribute_datasets_from_function(\n    lambda _: get_dataset(per_replica_batch_size, is_training=True))\n\n@tf.function\ndef train_step(iterator):\n  \"\"\"The step function for one training step.\"\"\"\n\n  def step_fn(inputs):\n    \"\"\"The computation to run on each TPU device.\"\"\"\n    images, labels = inputs\n    with tf.GradientTape() as tape:\n      logits = model(images, training=True)\n      loss = tf.keras.losses.sparse_categorical_crossentropy(\n          labels, logits, from_logits=True)\n      loss = tf.nn.compute_average_loss(loss, global_batch_size=batch_size)\n    grads = tape.gradient(loss, model.trainable_variables)\n    optimizer.apply_gradients(list(zip(grads, model.trainable_variables)))\n    training_loss.update_state(loss * strategy.num_replicas_in_sync)\n    training_accuracy.update_state(labels, logits)\n\n  strategy.run(step_fn, args=(next(iterator),))"
+      },
+      {
+        "language": "text",
+        "code": "WARNING:tensorflow:From /tmpfs/tmp/ipykernel_9094/1509474074.py:14: StrategyBase.experimental_distribute_datasets_from_function (from tensorflow.python.distribute.distribute_lib) is deprecated and will be removed in a future version.\nInstructions for updating:\nrename to distribute_datasets_from_function\nWARNING:tensorflow:From /tmpfs/tmp/ipykernel_9094/1509474074.py:14: StrategyBase.experimental_distribute_datasets_from_function (from tensorflow.python.distribute.distribute_lib) is deprecated and will be removed in a future version.\nInstructions for updating:\nrename to distribute_datasets_from_function"
+      },
+      {
+        "language": "text",
+        "code": "steps_per_eval = 10000 // batch_size\n\ntrain_iterator = iter(train_dataset)\nfor epoch in range(5):\n  print('Epoch: {}/5'.format(epoch))\n\n  for step in range(steps_per_epoch):\n    train_step(train_iterator)\n  print('Current step: {}, training loss: {}, accuracy: {}%'.format(\n      optimizer.iterations.numpy(),\n      round(float(training_loss.result()), 4),\n      round(float(training_accuracy.result()) * 100, 2)))\n  training_loss.reset_states()\n  training_accuracy.reset_states()"
+      },
+      {
+        "language": "text",
+        "code": "Epoch: 0/5\nCurrent step: 300, training loss: 0.1465, accuracy: 95.4%\nEpoch: 1/5\nCurrent step: 600, training loss: 0.035, accuracy: 98.94%\nEpoch: 2/5\nCurrent step: 900, training loss: 0.0197, accuracy: 99.39%\nEpoch: 3/5\nCurrent step: 1200, training loss: 0.0126, accuracy: 99.59%\nEpoch: 4/5\nCurrent step: 1500, training loss: 0.0109, accuracy: 99.64%"
+      },
+      {
+        "language": "text",
+        "code": "@tf.function\ndef train_multiple_steps(iterator, steps):\n  \"\"\"The step function for one training step.\"\"\"\n\n  def step_fn(inputs):\n    \"\"\"The computation to run on each TPU device.\"\"\"\n    images, labels = inputs\n    with tf.GradientTape() as tape:\n      logits = model(images, training=True)\n      loss = tf.keras.losses.sparse_categorical_crossentropy(\n          labels, logits, from_logits=True)\n      loss = tf.nn.compute_average_loss(loss, global_batch_size=batch_size)\n    grads = tape.gradient(loss, model.trainable_variables)\n    optimizer.apply_gradients(list(zip(grads, model.trainable_variables)))\n    training_loss.update_state(loss * strategy.num_replicas_in_sync)\n    training_accuracy.update_state(labels, logits)\n\n  for _ in tf.range(steps):\n    strategy.run(step_fn, args=(next(iterator),))\n\n# Convert `steps_per_epoch` to `tf.Tensor` so the `tf.function` won't get\n# retraced if the value changes.\ntrain_multiple_steps(train_iterator, tf.convert_to_tensor(steps_per_epoch))\n\nprint('Current step: {}, training loss: {}, accuracy: {}%'.format(\n      optimizer.iterations.numpy(),\n      round(float(training_loss.result()), 4),\n      round(float(training_accuracy.result()) * 100, 2)))"
+      },
+      {
+        "language": "text",
+        "code": "Current step: 1800, training loss: 0.009, accuracy: 99.72%"
+      }
+    ],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [
+      {
+        "headers": [
+          "[![](https://www.tensorflow.org/images/tf_logo_32px.png)View on TensorFlow.org](https://www.tensorflow.org/guide/tpu)",
+          "[![](https://www.tensorflow.org/images/colab_logo_32px.png)Run in Google Colab](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/guide/tpu.ipynb)",
+          "[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://github.com/tensorflow/docs/blob/master/site/en/guide/tpu.ipynb)",
+          "[![](https://www.tensorflow.org/images/download_logo_32px.png)Download notebook](https://storage.googleapis.com/tensorflow_docs/docs/site/en/guide/tpu.ipynb)"
+        ],
+        "rows": []
+      }
+    ],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'TensorFlow TPU guide' (https://www.tensorflow.org/guide/tpu)?",
+        "answer": "Initialize TPU hardware and use tf.distribute.TPUStrategy for TensorFlow/Keras workloads."
+      },
+      {
+        "question": "How does 'TensorFlow TPU guide' handle: Use TPUs?",
+        "answer": "|  [![](https://www.tensorflow.org/images/tf_logo_32px.png)View on TensorFlow.org](https://www.tensorflow.org/guide/tpu)  |  [![](https://www.tensorflow.org/images/colab_logo_32px.png)Run in Google Colab](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/guide/tpu.ipynb)  |  [![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://github.com/tensorflow/docs/blob/master/site/en/guide/tpu.ipynb)  |  [![](https://www.tensorflow.org/images/download_logo_32px.png)Download notebook](https://storage.googleapis.com/tensorflow_docs/docs/site/en/guide/tpu.ipynb)  |  \n| --- | --- | --- | --- |  \nThis guide demonstrates how to perform basic training on [Tensor Processing Units (TPUs)](https://cloud.google.com/tpu/) and TPU Pods, a collection of TPU devices connected by dedicated high-speed network interfaces, with [`tf.keras`](https://www.tensorflow.org/api_docs/python/tf/keras) and custom training loops.\nTPUs are Google's custom-developed application-specific integrated circuits (ASICs) used to accelerate machine learning workloads. They are available through [Google Colab](https://colab.research.google.com/), the [TPU Research Clou"
+      },
+      {
+        "question": "How does 'TensorFlow TPU guide' handle: Setup?",
+        "answer": "Before you run this Colab notebook, make sure that your hardware accelerator is a TPU by checking your notebook settings: **Runtime** > **Change runtime type** > **Hardware accelerator** > **TPU**.\nImport some necessary libraries, including TensorFlow Datasets:\n\n```\nimport tensorflow as tf\n\nimport os\nimport tensorflow_datasets as tfds\n\n```\n\n```\n2023-06-09 12:13:32.486552: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT\n\n```"
+      },
+      {
+        "question": "How does 'TensorFlow TPU guide' handle: TPU initialization?",
+        "answer": "TPUs are typically [Cloud TPU](https://cloud.google.com/tpu/docs/) workers, which are different from the local process running the user's Python program. Thus, you need to do some initialization work to connect to the remote cluster and initialize the TPUs. Note that the `tpu` argument to [`tf.distribute.cluster_resolver.TPUClusterResolver`](https://www.tensorflow.org/api_docs/python/tf/distribute/cluster_resolver/TPUClusterResolver) is a special address just for Colab. If you are running your code on Google Compute Engine (GCE), you should instead pass in the name of your Cloud TPU.\n**Note:** The TPU initialization code has to be at the beginning of your program.\n```\nresolver = tf.distribute.cluster_resolver.TPUClusterResolver(tpu='')\ntf.config.experimental_connect_to_cluster(resolver)"
+      },
+      {
+        "question": "How does 'TensorFlow TPU guide' handle: This is the TPU initialization code that has to be at the beginning.?",
+        "answer": "tf.tpu.experimental.initialize_tpu_system(resolver)\nprint(\"All devices: \", tf.config.list_logical_devices('TPU'))\n\n```\n\n```\nINFO:tensorflow:Deallocate tpu buffers before initializing tpu system.\n2023-06-09 12:13:34.011755: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:266] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected\nINFO:tensorflow:Deallocate tpu buffers before initializing tpu system.\nINFO:tensorflow:Initializing the TPU system: grpc://10.25.167.66:8470\nINFO:tensorflow:Initializing the TPU system: grpc://10.25.167.66:8470\nINFO:tensorflow:Finished initializing TPU system.\nINFO:tensorflow:Finished initializing TPU system.\nAll devices:  [LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:0', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:1', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:2', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:3', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:4', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:5', device_type='TPU'), "
+      },
+      {
+        "question": "How does 'TensorFlow TPU guide' handle: Manual device placement?",
+        "answer": "After the TPU is initialized, you can use manual device placement to place the computation on a single TPU device:\n\n```\na = tf.constant([[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]])\nb = tf.constant([[1.0, 2.0], [3.0, 4.0], [5.0, 6.0]])\n\nwith tf.device('/TPU:0'):\n  c = tf.matmul(a, b)\n\nprint(\"c device: \", c.device)\nprint(c)\n\n```\n\n```\nc device:  /job:worker/replica:0/task:0/device:TPU:0\ntf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32)\n\n```"
+      },
+      {
+        "question": "How does 'TensorFlow TPU guide' handle: Distribution strategies?",
+        "answer": "Usually, you run your model on multiple TPUs in a data-parallel way. To distribute your model on multiple TPUs (as well as multiple GPUs or multiple machines), TensorFlow offers the [`tf.distribute.Strategy`](https://www.tensorflow.org/api_docs/python/tf/distribute/Strategy) API. You can replace your distribution strategy and the model will run on any given (TPU) device. Learn more in the [Distributed training with TensorFlow](https://www.tensorflow.org/guide/distributed_training) guide.\nUsing the [`tf.distribute.TPUStrategy`](https://www.tensorflow.org/api_docs/python/tf/distribute/TPUStrategy) option implements synchronous distributed training. TPUs provide their own implementation of efficient all-reduce and other collective operations across multiple TPU cores, which are used in `TPUStrategy`.\nTo demonstrate this, create a [`tf.distribute.TPUStrategy`](https://www.tensorflow.org/api_docs/python/tf/distribute/TPUStrategy) object:\n\n```\nstrategy = tf.distribute.TPUStrategy(resolver)\n\n```\n\n```\nINFO:tensorflow:Found TPU system:\nINFO:tensorflow:Found TPU system:\nINFO:tensorflow:*** Num TPU Cores: 8\nINFO:tensorflow:*** Num TPU Cores: 8\nINFO:tensorflow:*** Num TPU Workers: 1\nINFO:tenso"
+      },
+      {
+        "question": "How does 'TensorFlow TPU guide' handle: Classification on TPUs?",
+        "answer": "Having covered the basic concepts, consider a more concrete example. This section demonstrates how to use the distribution strategy\u2014[`tf.distribute.TPUStrategy`](https://www.tensorflow.org/api_docs/python/tf/distribute/TPUStrategy)\u2014to train a Keras model on a Cloud TPU."
+      },
+      {
+        "question": "How does 'TensorFlow TPU guide' handle: Define a Keras model?",
+        "answer": "Start with a definition of a [`Sequential` Keras model](https://www.tensorflow.org/guide/keras/sequential_model) for image classification on the MNIST dataset. It's no different than what you would use if you were training on CPUs or GPUs. Note that Keras model creation needs to be inside the [`Strategy.scope`](https://www.tensorflow.org/api_docs/python/tf/distribute/MirroredStrategy#scope), so the variables can be created on each TPU device. Other parts of the code are not necessary to be inside the `Strategy` scope.\n\n```\ndef create_model():\n  return tf.keras.Sequential(\n      [tf.keras.layers.Conv2D(256, 3, activation='relu', input_shape=(28, 28, 1)),\n       tf.keras.layers.Conv2D(256, 3, activation='relu'),\n       tf.keras.layers.Flatten(),\n       tf.keras.layers.Dense(256, activation='relu'),\n       tf.keras.layers.Dense(128, activation='relu'),\n       tf.keras.layers.Dense(10)])\n\n```"
+      },
+      {
+        "question": "How does 'TensorFlow TPU guide' handle: Load the dataset?",
+        "answer": "Efficient use of the [`tf.data.Dataset`](https://www.tensorflow.org/api_docs/python/tf/data/Dataset) API is critical when using a Cloud TPU. You can learn more about dataset performance in the [Input pipeline performance guide](https://www.tensorflow.org/guide/data_performance).\nIf you are using [TPU Nodes](https://cloud.google.com/tpu/docs/managing-tpus-tpu-vm), you need to store all data files read by the TensorFlow `Dataset` in [Google Cloud Storage (GCS) buckets](https://cloud.google.com/tpu/docs/storage-buckets). If you are using [TPU VMs](https://cloud.google.com/tpu/docs/users-guide-tpu-vm), you can store data wherever you like. For more information on TPU Nodes and TPU VMs, refer to the [TPU System Architecture](https://cloud.google.com/tpu/docs/system-architecture-tpu-vm) documentation.\nFor most use cases, it is recommended to convert your data into the `TFRecord` format and use a [`tf.data.TFRecordDataset`](https://www.tensorflow.org/api_docs/python/tf/data/TFRecordDataset) to read it. Check the [TFRecord and tf.Example tutorial](https://www.tensorflow.org/tutorials/load_data/tfrecord) for details on how to do this. It is not a hard requirement and you can use other datas"
+      }
+    ],
+    "full_markdown": "#  Use TPUs\n|  [![](https://www.tensorflow.org/images/tf_logo_32px.png)View on TensorFlow.org](https://www.tensorflow.org/guide/tpu)  |  [![](https://www.tensorflow.org/images/colab_logo_32px.png)Run in Google Colab](https://colab.research.google.com/github/tensorflow/docs/blob/master/site/en/guide/tpu.ipynb)  |  [![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://github.com/tensorflow/docs/blob/master/site/en/guide/tpu.ipynb)  |  [![](https://www.tensorflow.org/images/download_logo_32px.png)Download notebook](https://storage.googleapis.com/tensorflow_docs/docs/site/en/guide/tpu.ipynb)  |  \n| --- | --- | --- | --- |  \nThis guide demonstrates how to perform basic training on [Tensor Processing Units (TPUs)](https://cloud.google.com/tpu/) and TPU Pods, a collection of TPU devices connected by dedicated high-speed network interfaces, with [`tf.keras`](https://www.tensorflow.org/api_docs/python/tf/keras) and custom training loops.\nTPUs are Google's custom-developed application-specific integrated circuits (ASICs) used to accelerate machine learning workloads. They are available through [Google Colab](https://colab.research.google.com/), the [TPU Research Cloud](https://sites.research.google/trc/), and [Cloud TPU](https://cloud.google.com/tpu).\n## Setup\nBefore you run this Colab notebook, make sure that your hardware accelerator is a TPU by checking your notebook settings: **Runtime** > **Change runtime type** > **Hardware accelerator** > **TPU**.\nImport some necessary libraries, including TensorFlow Datasets:\n\n```\nimport tensorflow as tf\n\nimport os\nimport tensorflow_datasets as tfds\n\n```\n\n```\n2023-06-09 12:13:32.486552: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT\n\n```\n\n## TPU initialization\nTPUs are typically [Cloud TPU](https://cloud.google.com/tpu/docs/) workers, which are different from the local process running the user's Python program. Thus, you need to do some initialization work to connect to the remote cluster and initialize the TPUs. Note that the `tpu` argument to [`tf.distribute.cluster_resolver.TPUClusterResolver`](https://www.tensorflow.org/api_docs/python/tf/distribute/cluster_resolver/TPUClusterResolver) is a special address just for Colab. If you are running your code on Google Compute Engine (GCE), you should instead pass in the name of your Cloud TPU.\n**Note:** The TPU initialization code has to be at the beginning of your program.\n```\nresolver = tf.distribute.cluster_resolver.TPUClusterResolver(tpu='')\ntf.config.experimental_connect_to_cluster(resolver)\n# This is the TPU initialization code that has to be at the beginning.\ntf.tpu.experimental.initialize_tpu_system(resolver)\nprint(\"All devices: \", tf.config.list_logical_devices('TPU'))\n\n```\n\n```\nINFO:tensorflow:Deallocate tpu buffers before initializing tpu system.\n2023-06-09 12:13:34.011755: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:266] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected\nINFO:tensorflow:Deallocate tpu buffers before initializing tpu system.\nINFO:tensorflow:Initializing the TPU system: grpc://10.25.167.66:8470\nINFO:tensorflow:Initializing the TPU system: grpc://10.25.167.66:8470\nINFO:tensorflow:Finished initializing TPU system.\nINFO:tensorflow:Finished initializing TPU system.\nAll devices:  [LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:0', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:1', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:2', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:3', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:4', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:5', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:6', device_type='TPU'), LogicalDevice(name='/job:worker/replica:0/task:0/device:TPU:7', device_type='TPU')]\n\n```\n\n## Manual device placement\nAfter the TPU is initialized, you can use manual device placement to place the computation on a single TPU device:\n\n```\na = tf.constant([[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]])\nb = tf.constant([[1.0, 2.0], [3.0, 4.0], [5.0, 6.0]])\n\nwith tf.device('/TPU:0'):\n  c = tf.matmul(a, b)\n\nprint(\"c device: \", c.device)\nprint(c)\n\n```\n\n```\nc device:  /job:worker/replica:0/task:0/device:TPU:0\ntf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32)\n\n```\n\n## Distribution strategies\nUsually, you run your model on multiple TPUs in a data-parallel way. To distribute your model on multiple TPUs (as well as multiple GPUs or multiple machines), TensorFlow offers the [`tf.distribute.Strategy`](https://www.tensorflow.org/api_docs/python/tf/distribute/Strategy) API. You can replace your distribution strategy and the model will run on any given (TPU) device. Learn more in the [Distributed training with TensorFlow](https://www.tensorflow.org/guide/distributed_training) guide.\nUsing the [`tf.distribute.TPUStrategy`](https://www.tensorflow.org/api_docs/python/tf/distribute/TPUStrategy) option implements synchronous distributed training. TPUs provide their own implementation of efficient all-reduce and other collective operations across multiple TPU cores, which are used in `TPUStrategy`.\nTo demonstrate this, create a [`tf.distribute.TPUStrategy`](https://www.tensorflow.org/api_docs/python/tf/distribute/TPUStrategy) object:\n\n```\nstrategy = tf.distribute.TPUStrategy(resolver)\n\n```\n\n```\nINFO:tensorflow:Found TPU system:\nINFO:tensorflow:Found TPU system:\nINFO:tensorflow:*** Num TPU Cores: 8\nINFO:tensorflow:*** Num TPU Cores: 8\nINFO:tensorflow:*** Num TPU Workers: 1\nINFO:tensorflow:*** Num TPU Workers: 1\nINFO:tensorflow:*** Num TPU Cores Per Worker: 8\nINFO:tensorflow:*** Num TPU Cores Per Worker: 8\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:CPU:0, CPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:CPU:0, CPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:CPU:0, CPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:CPU:0, CPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:0, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:0, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:1, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:1, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:2, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:2, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:3, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:3, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:4, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:4, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:5, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:5, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:6, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:6, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:7, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:7, TPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 0, 0)\nINFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 0, 0)\n\n```\n\nTo replicate a computation so it can run in all TPU cores, you can pass it into the [`Strategy.run`](https://www.tensorflow.org/api_docs/python/tf/distribute/MirroredStrategy#run) API. Below is an example that shows all cores receiving the same inputs `(a, b)` and performing matrix multiplication on each core independently. The outputs will be the values from all the replicas.\n\n```\n@tf.function\ndef matmul_fn(x, y):\n  z = tf.matmul(x, y)\n  return z\n\nz = strategy.run(matmul_fn, args=(a, b))\nprint(z)\n\n```\n\n```\nPerReplica:{\n  0: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32),\n  1: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32),\n  2: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32),\n  3: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32),\n  4: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32),\n  5: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32),\n  6: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32),\n  7: tf.Tensor(\n[[22. 28.]\n [49. 64.]], shape=(2, 2), dtype=float32)\n}\n\n```\n\n## Classification on TPUs\nHaving covered the basic concepts, consider a more concrete example. This section demonstrates how to use the distribution strategy\u2014[`tf.distribute.TPUStrategy`](https://www.tensorflow.org/api_docs/python/tf/distribute/TPUStrategy)\u2014to train a Keras model on a Cloud TPU.\n### Define a Keras model\nStart with a definition of a [`Sequential` Keras model](https://www.tensorflow.org/guide/keras/sequential_model) for image classification on the MNIST dataset. It's no different than what you would use if you were training on CPUs or GPUs. Note that Keras model creation needs to be inside the [`Strategy.scope`](https://www.tensorflow.org/api_docs/python/tf/distribute/MirroredStrategy#scope), so the variables can be created on each TPU device. Other parts of the code are not necessary to be inside the `Strategy` scope.\n\n```\ndef create_model():\n  return tf.keras.Sequential(\n      [tf.keras.layers.Conv2D(256, 3, activation='relu', input_shape=(28, 28, 1)),\n       tf.keras.layers.Conv2D(256, 3, activation='relu'),\n       tf.keras.layers.Flatten(),\n       tf.keras.layers.Dense(256, activation='relu'),\n       tf.keras.layers.Dense(128, activation='relu'),\n       tf.keras.layers.Dense(10)])\n\n```\n\n### Load the dataset\nEfficient use of the [`tf.data.Dataset`](https://www.tensorflow.org/api_docs/python/tf/data/Dataset) API is critical when using a Cloud TPU. You can learn more about dataset performance in the [Input pipeline performance guide](https://www.tensorflow.org/guide/data_performance).\nIf you are using [TPU Nodes](https://cloud.google.com/tpu/docs/managing-tpus-tpu-vm), you need to store all data files read by the TensorFlow `Dataset` in [Google Cloud Storage (GCS) buckets](https://cloud.google.com/tpu/docs/storage-buckets). If you are using [TPU VMs](https://cloud.google.com/tpu/docs/users-guide-tpu-vm), you can store data wherever you like. For more information on TPU Nodes and TPU VMs, refer to the [TPU System Architecture](https://cloud.google.com/tpu/docs/system-architecture-tpu-vm) documentation.\nFor most use cases, it is recommended to convert your data into the `TFRecord` format and use a [`tf.data.TFRecordDataset`](https://www.tensorflow.org/api_docs/python/tf/data/TFRecordDataset) to read it. Check the [TFRecord and tf.Example tutorial](https://www.tensorflow.org/tutorials/load_data/tfrecord) for details on how to do this. It is not a hard requirement and you can use other dataset readers, such as [`tf.data.FixedLengthRecordDataset`](https://www.tensorflow.org/api_docs/python/tf/data/FixedLengthRecordDataset) or [`tf.data.TextLineDataset`](https://www.tensorflow.org/api_docs/python/tf/data/TextLineDataset).\nYou can load entire small datasets into memory using [`tf.data.Dataset.cache`](https://www.tensorflow.org/api_docs/python/tf/data/Dataset#cache).\nRegardless of the data format used, it is strongly recommended that you use large files on the order of 100MB. This is especially important in this networked setting, as the overhead of opening a file is significantly higher.\nAs shown in the code below, you should use the Tensorflow Datasets [`tfds.load`](https://www.tensorflow.org/datasets/api_docs/python/tfds/load) module to get a copy of the MNIST training and test data. Note that `try_gcs` is specified to use a copy that is available in a public GCS bucket. If you don't specify this, the TPU will not be able to access the downloaded data.\n\n```\ndef get_dataset(batch_size, is_training=True):\n  split = 'train' if is_training else 'test'\n  dataset, info = tfds.load(name='mnist', split=split, with_info=True,\n                            as_supervised=True, try_gcs=True)\n\n  # Normalize the input data.\n  def scale(image, label):\n    image = tf.cast(image, tf.float32)\n    image /= 255.0\n    return image, label\n\n  dataset = dataset.map(scale)\n\n  # Only shuffle and repeat the dataset in training. The advantage of having an\n  # infinite dataset for training is to avoid the potential last partial batch\n  # in each epoch, so that you don't need to think about scaling the gradients\n  # based on the actual batch size.\n  if is_training:\n    dataset = dataset.shuffle(10000)\n    dataset = dataset.repeat()\n\n  dataset = dataset.batch(batch_size)\n\n  return dataset\n\n```\n\n### Train the model using Keras high-level APIs\nYou can train your model with Keras [`Model.fit`](https://www.tensorflow.org/api_docs/python/tf/keras/Model#fit) and [`Model.compile`](https://www.tensorflow.org/api_docs/python/tf/keras/Model#compile) APIs. There is nothing TPU-specific in this step\u2014you write the code as if you were using multiple GPUs and a `MirroredStrategy` instead of the `TPUStrategy`. You can learn more in the [Distributed training with Keras](https://www.tensorflow.org/tutorials/distribute/keras) tutorial.\n\n```\nwith strategy.scope():\n  model = create_model()\n  model.compile(optimizer='adam',\n                loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),\n                metrics=['sparse_categorical_accuracy'])\n\nbatch_size = 200\nsteps_per_epoch = 60000 // batch_size\nvalidation_steps = 10000 // batch_size\n\ntrain_dataset = get_dataset(batch_size, is_training=True)\ntest_dataset = get_dataset(batch_size, is_training=False)\n\nmodel.fit(train_dataset,\n          epochs=5,\n          steps_per_epoch=steps_per_epoch,\n          validation_data=test_dataset,\n          validation_steps=validation_steps)\n\n```\n\n```\nEpoch 1/5\n300/300 [==============================] - 17s 32ms/step - loss: 0.1235 - sparse_categorical_accuracy: 0.9620 - val_loss: 0.0462 - val_sparse_categorical_accuracy: 0.9856\nEpoch 2/5\n300/300 [==============================] - 7s 24ms/step - loss: 0.0333 - sparse_categorical_accuracy: 0.9894 - val_loss: 0.0401 - val_sparse_categorical_accuracy: 0.9878\nEpoch 3/5\n300/300 [==============================] - 7s 24ms/step - loss: 0.0186 - sparse_categorical_accuracy: 0.9938 - val_loss: 0.0352 - val_sparse_categorical_accuracy: 0.9900\nEpoch 4/5\n300/300 [==============================] - 7s 25ms/step - loss: 0.0127 - sparse_categorical_accuracy: 0.9957 - val_loss: 0.0482 - val_sparse_categorical_accuracy: 0.9879\nEpoch 5/5\n300/300 [==============================] - 7s 24ms/step - loss: 0.0111 - sparse_categorical_accuracy: 0.9962 - val_loss: 0.0448 - val_sparse_categorical_accuracy: 0.9894\n<keras.callbacks.History at 0x7f79107c8d30>\n\n```\n\nTo reduce Python overhead and maximize the performance of your TPU, pass in the `steps_per_execution` argument to Keras [`Model.compile`](https://www.tensorflow.org/api_docs/python/tf/keras/Model#compile). In this example, it increases throughput by about 50%:\n\n```\nwith strategy.scope():\n  model = create_model()\n  model.compile(optimizer='adam',\n                # Anything between 2 and `steps_per_epoch` could help here.\n                steps_per_execution = 50,\n                loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),\n                metrics=['sparse_categorical_accuracy'])\n\nmodel.fit(train_dataset,\n          epochs=5,\n          steps_per_epoch=steps_per_epoch,\n          validation_data=test_dataset,\n          validation_steps=validation_steps)\n\n```\n\n```\nEpoch 1/5\n300/300 [==============================] - 14s 45ms/step - loss: 0.1306 - sparse_categorical_accuracy: 0.9591 - val_loss: 0.0420 - val_sparse_categorical_accuracy: 0.9863\nEpoch 2/5\n300/300 [==============================] - 3s 10ms/step - loss: 0.0333 - sparse_categorical_accuracy: 0.9900 - val_loss: 0.0502 - val_sparse_categorical_accuracy: 0.9846\nEpoch 3/5\n300/300 [==============================] - 3s 10ms/step - loss: 0.0193 - sparse_categorical_accuracy: 0.9936 - val_loss: 0.0406 - val_sparse_categorical_accuracy: 0.9879\nEpoch 4/5\n300/300 [==============================] - 3s 10ms/step - loss: 0.0135 - sparse_categorical_accuracy: 0.9955 - val_loss: 0.0416 - val_sparse_categorical_accuracy: 0.9882\nEpoch 5/5\n300/300 [==============================] - 3s 10ms/step - loss: 0.0110 - sparse_categorical_accuracy: 0.9962 - val_loss: 0.0463 - val_sparse_categorical_accuracy: 0.9882\n<keras.callbacks.History at 0x7f7898488e20>\n\n```\n\n### Train the model using a custom training loop\nYou can also create and train your model using [`tf.function`](https://www.tensorflow.org/api_docs/python/tf/function) and [`tf.distribute`](https://www.tensorflow.org/api_docs/python/tf/distribute) APIs directly. You can use the `Strategy.experimental_distribute_datasets_from_function` API to distribute the [`tf.data.Dataset`](https://www.tensorflow.org/api_docs/python/tf/data/Dataset) given a dataset function. Note that in the example below the batch size passed into the `Dataset` is the per-replica batch size instead of the global batch size. To learn more, check out the [Custom training with `tf.distribute.Strategy`](https://www.tensorflow.org/tutorials/distribute/custom_training) tutorial.\nFirst, create the model, datasets and [`tf.function`](https://www.tensorflow.org/api_docs/python/tf/function)s:\n\n```\n# Create the model, optimizer and metrics inside the `tf.distribute.Strategy`\n# scope, so that the variables can be mirrored on each device.\nwith strategy.scope():\n  model = create_model()\n  optimizer = tf.keras.optimizers.Adam()\n  training_loss = tf.keras.metrics.Mean('training_loss', dtype=tf.float32)\n  training_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(\n      'training_accuracy', dtype=tf.float32)\n\n# Calculate per replica batch size, and distribute the `tf.data.Dataset`s\n# on each TPU worker.\nper_replica_batch_size = batch_size // strategy.num_replicas_in_sync\n\ntrain_dataset = strategy.experimental_distribute_datasets_from_function(\n    lambda _: get_dataset(per_replica_batch_size, is_training=True))\n\n@tf.function\ndef train_step(iterator):\n  \"\"\"The step function for one training step.\"\"\"\n\n  def step_fn(inputs):\n    \"\"\"The computation to run on each TPU device.\"\"\"\n    images, labels = inputs\n    with tf.GradientTape() as tape:\n      logits = model(images, training=True)\n      loss = tf.keras.losses.sparse_categorical_crossentropy(\n          labels, logits, from_logits=True)\n      loss = tf.nn.compute_average_loss(loss, global_batch_size=batch_size)\n    grads = tape.gradient(loss, model.trainable_variables)\n    optimizer.apply_gradients(list(zip(grads, model.trainable_variables)))\n    training_loss.update_state(loss * strategy.num_replicas_in_sync)\n    training_accuracy.update_state(labels, logits)\n\n  strategy.run(step_fn, args=(next(iterator),))\n\n```\n\n```\nWARNING:tensorflow:From /tmpfs/tmp/ipykernel_9094/1509474074.py:14: StrategyBase.experimental_distribute_datasets_from_function (from tensorflow.python.distribute.distribute_lib) is deprecated and will be removed in a future version.\nInstructions for updating:\nrename to distribute_datasets_from_function\nWARNING:tensorflow:From /tmpfs/tmp/ipykernel_9094/1509474074.py:14: StrategyBase.experimental_distribute_datasets_from_function (from tensorflow.python.distribute.distribute_lib) is deprecated and will be removed in a future version.\nInstructions for updating:\nrename to distribute_datasets_from_function\n\n```\n\nThen, run the training loop:\n\n```\nsteps_per_eval = 10000 // batch_size\n\ntrain_iterator = iter(train_dataset)\nfor epoch in range(5):\n  print('Epoch: {}/5'.format(epoch))\n\n  for step in range(steps_per_epoch):\n    train_step(train_iterator)\n  print('Current step: {}, training loss: {}, accuracy: {}%'.format(\n      optimizer.iterations.numpy(),\n      round(float(training_loss.result()), 4),\n      round(float(training_accuracy.result()) * 100, 2)))\n  training_loss.reset_states()\n  training_accuracy.reset_states()\n\n```\n\n```\nEpoch: 0/5\nCurrent step: 300, training loss: 0.1465, accuracy: 95.4%\nEpoch: 1/5\nCurrent step: 600, training loss: 0.035, accuracy: 98.94%\nEpoch: 2/5\nCurrent step: 900, training loss: 0.0197, accuracy: 99.39%\nEpoch: 3/5\nCurrent step: 1200, training loss: 0.0126, accuracy: 99.59%\nEpoch: 4/5\nCurrent step: 1500, training loss: 0.0109, accuracy: 99.64%\n\n```\n\n### Improving performance with multiple steps inside [`tf.function`](https://www.tensorflow.org/api_docs/python/tf/function)\nYou can improve the performance by running multiple steps within a [`tf.function`](https://www.tensorflow.org/api_docs/python/tf/function). This is achieved by wrapping the [`Strategy.run`](https://www.tensorflow.org/api_docs/python/tf/distribute/MirroredStrategy#run) call with a [`tf.range`](https://www.tensorflow.org/api_docs/python/tf/range) inside [`tf.function`](https://www.tensorflow.org/api_docs/python/tf/function), and AutoGraph will convert it to a [`tf.while_loop`](https://www.tensorflow.org/api_docs/python/tf/while_loop) on the TPU worker. You can learn more about [`tf.function`](https://www.tensorflow.org/api_docs/python/tf/function)s in the [Better performance with `tf.function`](https://www.tensorflow.org/guide/function) guide.\nDespite the improved performance, there are tradeoffs with this method compared to running a single step inside a [`tf.function`](https://www.tensorflow.org/api_docs/python/tf/function). Running multiple steps in a [`tf.function`](https://www.tensorflow.org/api_docs/python/tf/function) is less flexible\u2014you cannot run things eagerly or arbitrary Python code within the steps.\n\n```\n@tf.function\ndef train_multiple_steps(iterator, steps):\n  \"\"\"The step function for one training step.\"\"\"\n\n  def step_fn(inputs):\n    \"\"\"The computation to run on each TPU device.\"\"\"\n    images, labels = inputs\n    with tf.GradientTape() as tape:\n      logits = model(images, training=True)\n      loss = tf.keras.losses.sparse_categorical_crossentropy(\n          labels, logits, from_logits=True)\n      loss = tf.nn.compute_average_loss(loss, global_batch_size=batch_size)\n    grads = tape.gradient(loss, model.trainable_variables)\n    optimizer.apply_gradients(list(zip(grads, model.trainable_variables)))\n    training_loss.update_state(loss * strategy.num_replicas_in_sync)\n    training_accuracy.update_state(labels, logits)\n\n  for _ in tf.range(steps):\n    strategy.run(step_fn, args=(next(iterator),))\n\n# Convert `steps_per_epoch` to `tf.Tensor` so the `tf.function` won't get\n# retraced if the value changes.\ntrain_multiple_steps(train_iterator, tf.convert_to_tensor(steps_per_epoch))\n\nprint('Current step: {}, training loss: {}, accuracy: {}%'.format(\n      optimizer.iterations.numpy(),\n      round(float(training_loss.result()), 4),\n      round(float(training_accuracy.result()) * 100, 2)))\n\n```\n\n```\nCurrent step: 1800, training loss: 0.009, accuracy: 99.72%\n\n```\n\n## Next steps\nTo learn more about Cloud TPUs and how to use them:\n  * [Google Cloud TPU](https://cloud.google.com/tpu): The Google Cloud TPU homepage.\n  * [Google Cloud TPU documentation](https://cloud.google.com/tpu/docs/): Google Cloud TPU documentation, which includes: \n    * [Introduction to Cloud TPU](https://cloud.google.com/tpu/docs/intro-to-tpu): An overview of working with Cloud TPUs.\n    * [Cloud TPU quickstarts](https://cloud.google.com/tpu/docs/quick-starts): Quickstart introductions to working with Cloud TPU VMs using TensorFlow and other main machine learning frameworks.\n  * [Google Cloud TPU Colab notebooks](https://cloud.google.com/tpu/docs/colabs): End-to-end training examples.\n  * [Google Cloud TPU performance guide](https://cloud.google.com/tpu/docs/performance-guide): Enhance Cloud TPU performance further by adjusting Cloud TPU configuration parameters for your application\n  * [Distributed training with TensorFlow](https://www.tensorflow.org/guide/distributed_training): How to use distribution strategies\u2014including [`tf.distribute.TPUStrategy`](https://www.tensorflow.org/api_docs/python/tf/distribute/TPUStrategy)\u2014with examples showing best practices.\n  * TPU embeddings: TensorFlow includes specialized support for training embeddings on TPUs via [`tf.tpu.experimental.embedding`](https://www.tensorflow.org/api_docs/python/tf/tpu/experimental/embedding). In addition, [TensorFlow Recommenders](https://www.tensorflow.org/recommenders) has [`tfrs.layers.embedding.TPUEmbedding`](https://www.tensorflow.org/recommenders/api_docs/python/tfrs/layers/embedding/TPUEmbedding). Embeddings provide efficient and dense representations, capturing complex similarities and relationships between features. TensorFlow's TPU-specific embedding support allows you to train embeddings that are larger than the memory of a single TPU device, and to use sparse and ragged inputs on TPUs.\n  * [TPU Research Cloud (TRC)](https://sites.research.google/trc/about/): TRC enables researchers to apply for access to a cluster of more than 1,000 Cloud TPU devices."
+  }
 }

@@ -1,52 +1,249 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:train_10_hf_keras_tf_tpu_guide",
-  "@type": "DocumentationResource",
-  "name": "Hugging Face Keras/TF TPU guide",
-  "canonicalUrl": "https://huggingface.co/docs/transformers/main/en/perf_train_tpu_tf",
-  "category": "Training framework links",
-  "categorySlug": "training_framework_links",
-  "description": "Usable Keras sequence-classification example: initialize TPUClusterResolver, TPUStrategy, load/tokenize data, create the model inside strategy.scope(), and call model.fit().",
-  "provenance": {
-    "sourceUrl": "https://huggingface.co/docs/transformers/main/en/perf_train_tpu_tf",
-    "crawledAt": "2026-10-26T12:45:46.944214+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 24385
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Hugging Face Keras/TF TPU guide",
-      "documentedIn",
-      "https://huggingface.co/docs/transformers/main/en/perf_train_tpu_tf"
-    ],
-    [
-      "Hugging Face Keras/TF TPU guide",
-      "belongsToCategory",
-      "training_framework_links"
-    ],
-    [
-      "Hugging Face Keras/TF TPU guide",
-      "supportsWorkflow",
-      "Distributed Machine Learning Training"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:train_10_hf_keras_tf_tpu_guide",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "train_10_hf_keras_tf_tpu_guide",
+    "name": "Hugging Face Keras/TF TPU guide",
+    "url": "https://huggingface.co/docs/transformers/main/en/perf_train_tpu_tf",
+    "category": "training_framework_links",
+    "description": "Usable Keras sequence-classification example: initialize TPUClusterResolver, TPUStrategy, load/tokenize data, create the model inside strategy.scope(), and call model.fit().",
+    "char_count": 12899,
+    "word_count": 2064,
+    "section_count": 11,
+    "code_block_count": 4,
+    "table_count": 0,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.503891+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:train_10_hf_keras_tf_tpu_guide",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:train_10_hf_keras_tf_tpu_guide",
+        "predicate": "schema:name",
+        "object": "Hugging Face Keras/TF TPU guide"
+      },
+      {
+        "subject": "tpu_doc:train_10_hf_keras_tf_tpu_guide",
+        "predicate": "schema:url",
+        "object": "https://huggingface.co/docs/transformers/main/en/perf_train_tpu_tf"
+      },
+      {
+        "subject": "tpu_doc:train_10_hf_keras_tf_tpu_guide",
+        "predicate": "schema:category",
+        "object": "training_framework_links"
+      },
+      {
+        "subject": "tpu_doc:train_10_hf_keras_tf_tpu_guide",
+        "predicate": "schema:description",
+        "object": "Usable Keras sequence-classification example: initialize TPUClusterResolver, TPUStrategy, load/tokenize data, create the model inside strategy.scope(), and call model.fit()."
+      },
+      {
+        "subject": "tpu_doc:train_10_hf_keras_tf_tpu_guide",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v4"
+      },
+      {
+        "subject": "tpu_doc:train_10_hf_keras_tf_tpu_guide",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:train_10_hf_keras_tf_tpu_guide",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TPUStrategy"
+      },
+      {
+        "subject": "tpu_doc:train_10_hf_keras_tf_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "Training on TPU with TensorFlow"
+      },
+      {
+        "subject": "tpu_doc:train_10_hf_keras_tf_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "What is a TPU?"
+      },
+      {
+        "subject": "tpu_doc:train_10_hf_keras_tf_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "What kinds of TPU are available?"
+      },
+      {
+        "subject": "tpu_doc:train_10_hf_keras_tf_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "What sizes of TPU are available?"
+      },
+      {
+        "subject": "tpu_doc:train_10_hf_keras_tf_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "I keep hearing about this XLA thing. What\u2019s XLA, and how does it relate to TPUs?"
+      },
+      {
+        "subject": "tpu_doc:train_10_hf_keras_tf_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "How do I make my model XLA compatible?"
+      },
+      {
+        "subject": "tpu_doc:train_10_hf_keras_tf_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "XLA Rule #1: Your code cannot have \u201cdata-dependent conditionals\u201d"
+      },
+      {
+        "subject": "tpu_doc:train_10_hf_keras_tf_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "XLA Rule #2: Your code cannot have \u201cdata-dependent shapes\u201d"
+      },
+      {
+        "subject": "tpu_doc:train_10_hf_keras_tf_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "XLA Rule #3: XLA will need to recompile your model for every different input shape it sees"
+      },
+      {
+        "subject": "tpu_doc:train_10_hf_keras_tf_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "How do I actually train my model on TPU?"
+      },
+      {
+        "subject": "tpu_doc:train_10_hf_keras_tf_tpu_guide",
+        "predicate": "okf:hasSection",
+        "object": "Summary"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Hugging Face Keras/TF TPU guide provides official guidance on Usable Keras sequence-classification example: initialize TPUClusterResolver, TPUStrategy, load/tokenize data, create the model inside strategy.scope(), and call model.fit().",
-      "confidence": 1.0,
-      "source": "https://huggingface.co/docs/transformers/main/en/perf_train_tpu_tf",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Hugging Face Keras/TF TPU guide used for in Cloud TPU workflows?",
-      "answer": "Usable Keras sequence-classification example: initialize TPUClusterResolver, TPUStrategy, load/tokenize data, create the model inside strategy.scope(), and call model.fit().",
-      "category": "training_framework_links"
-    }
-  ],
-  "contentSummary": "Usable Keras sequence-classification example: initialize TPUClusterResolver, TPUStrategy, load/tokenize data, create the model inside strategy.scope(), and call model.fit()."
+  },
+  "structured_content": {
+    "summary": "Usable Keras sequence-classification example: initialize TPUClusterResolver, TPUStrategy, load/tokenize data, create the model inside strategy.scope(), and call model.fit().",
+    "sections": [
+      {
+        "heading": "Training on TPU with TensorFlow",
+        "level": 1,
+        "content": "<Tip>\n\nIf you don't need long explanations and just want TPU code samples to get started with, check out [our TPU example notebook!](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/tpu_training-tf.ipynb)\n\n</Tip>"
+      },
+      {
+        "heading": "What is a TPU?",
+        "level": 3,
+        "content": "A TPU is a **Tensor Processing Unit.** They are hardware designed by Google, which are used to greatly speed up the tensor computations within neural networks, much like GPUs. They can be used for both network training and inference. They are generally accessed through Google\u2019s cloud services, but small TPUs can also be accessed directly for free through Google Colab and Kaggle Kernels.\n\nBecause [all TensorFlow models in \ud83e\udd17 Transformers are Keras models](https://huggingface.co/blog/tensorflow-philosophy), most of the methods in this document are generally applicable to TPU training for any Keras model! However, there are a few points that are specific to the HuggingFace ecosystem (hug-o-system?) of Transformers and Datasets, and we\u2019ll make sure to flag them up when we get to them."
+      },
+      {
+        "heading": "What kinds of TPU are available?",
+        "level": 3,
+        "content": "New users are often very confused by the range of TPUs, and the different ways to access them. The first key distinction to understand is the difference between **TPU Nodes** and **TPU VMs.**\n\nWhen you use a **TPU Node**, you are effectively indirectly accessing a remote TPU. You will need a separate VM, which will initialize your network and data pipeline and then forward them to the remote node. When you use a TPU on Google Colab, you are accessing it in the **TPU Node** style.\n\nUsing TPU Nodes can have some quite unexpected behaviour for people who aren\u2019t used to them! In particular, because the TPU is located on a physically different system to the machine you\u2019re running your Python code on, your data cannot be local to your machine - any data pipeline that loads from your machine\u2019s internal storage will totally fail! Instead, data must be stored in Google Cloud Storage where your data pipeline can still access it, even when the pipeline is running on the remote TPU node.\n\n<Tip>\n\nIf you can fit all your data in memory as `np.ndarray` or `tf.Tensor`, then you can `fit()` on that data even when using Colab or a TPU Node, without needing to upload it to Google Cloud Storage.\n\n</Tip>\n\n<Tip>\n\n**\ud83e\udd17Specific Hugging Face Tip\ud83e\udd17:** The methods `Dataset.to_tf_dataset()` and its higher-level wrapper `model.prepare_tf_dataset()` , which you will see throughout our TF code examples, will both fail on a TPU Node. The reason for this is that even though they create a `tf.data.Dataset` it is not a \u201cpure\u201d `tf.data` pipeline and uses `tf.numpy_function` or `Dataset.from_generator()` to stream data from the underlying HuggingFace `Dataset`. This HuggingFace `Dataset` is backed by data that is on a local disc and which the remote TPU Node will not be able to read.\n\n</Tip>\n\nThe second way to access a TPU is via a **TPU VM.** When using a TPU VM, you connect directly to the machine that the TPU is attached to, much like training on a GPU VM. TPU VMs are generally easier to work with, particularly when it comes to your data pipeline. All of the above warnings do not apply to TPU VMs!\n\nThis is an opinionated document, so here\u2019s our opinion: **Avoid using TPU Node if possible.** It is more confusing and more difficult to debug than TPU VMs. It is also likely to be unsupported in future - Google\u2019s latest TPU, TPUv4, can only be accessed as a TPU VM, which suggests that TPU Nodes are increasingly going to become a \u201clegacy\u201d access method. However, we understand that the only free TPU access is on Colab and Kaggle Kernels, which uses TPU Node - so we\u2019ll try to explain how to handle it if you have to! Check the [TPU example notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/tpu_training-tf.ipynb) for code samples that explain this in more detail."
+      },
+      {
+        "heading": "What sizes of TPU are available?",
+        "level": 3,
+        "content": "A single TPU (a v2-8/v3-8/v4-8) runs 8 replicas. TPUs exist in **pods** that can run hundreds or thousands of replicas simultaneously. When you use more than a single TPU but less than a whole pod (for example, a v3-32), your TPU fleet is referred to as a **pod slice.**\n\nWhen you access a free TPU via Colab, you generally get a single v2-8 TPU."
+      },
+      {
+        "heading": "I keep hearing about this XLA thing. What\u2019s XLA, and how does it relate to TPUs?",
+        "level": 3,
+        "content": "XLA is an optimizing compiler, used by both TensorFlow and JAX. In JAX it is the only compiler, whereas in TensorFlow it is optional (but mandatory on TPU!). The easiest way to enable it when training a Keras model is to pass the argument `jit_compile=True` to `model.compile()`. If you don\u2019t get any errors and performance is good, that\u2019s a great sign that you\u2019re ready to move to TPU!\n\nDebugging on TPU is generally a bit harder than on CPU/GPU, so we recommend getting your code running on CPU/GPU with XLA first before trying it on TPU. You don\u2019t have to train for long, of course - just for a few steps to make sure that your model and data pipeline are working like you expect them to.\n\n<Tip>\n\nXLA compiled code is usually faster - so even if you\u2019re not planning to run on TPU, adding `jit_compile=True` can improve your performance. Be sure to note the caveats below about XLA compatibility, though!\n\n</Tip>\n\n<Tip warning={true}>\n\n**Tip born of painful experience:** Although using `jit_compile=True` is a good way to get a speed boost and test if your CPU/GPU code is XLA-compatible, it can actually cause a lot of problems if you leave it in when actually training on TPU. XLA compilation will happen implicitly on TPU, so remember to remove that line before actually running your code on a TPU!\n\n</Tip>"
+      },
+      {
+        "heading": "How do I make my model XLA compatible?",
+        "level": 3,
+        "content": "In many cases, your code is probably XLA-compatible already! However, there are a few things that work in normal TensorFlow that don\u2019t work in XLA. We\u2019ve distilled them into three core rules below:\n\n<Tip>\n\n**\ud83e\udd17Specific HuggingFace Tip\ud83e\udd17:** We\u2019ve put a lot of effort into rewriting our TensorFlow models and loss functions to be XLA-compatible. Our models and loss functions generally obey rule #1 and #2 by default, so you can skip over them if you\u2019re using `transformers` models. Don\u2019t forget about these rules when writing your own models and loss functions, though!\n\n</Tip>"
+      },
+      {
+        "heading": "XLA Rule #1: Your code cannot have \u201cdata-dependent conditionals\u201d",
+        "level": 4,
+        "content": "What that means is that any `if` statement cannot depend on values inside a `tf.Tensor`. For example, this code block cannot be compiled with XLA!\n\n```python\nif tf.reduce_sum(tensor) > 10:\n    tensor = tensor / 2.0\n```\n\nThis might seem very restrictive at first, but most neural net code doesn\u2019t need to do this. You can often get around this restriction by using `tf.cond` (see the documentation [here](https://www.tensorflow.org/api_docs/python/tf/cond)) or by removing the conditional and finding a clever math trick with indicator variables instead, like so:\n\n```python\nsum_over_10 = tf.cast(tf.reduce_sum(tensor) > 10, tf.float32)\ntensor = tensor / (1.0 + sum_over_10)\n```\n\nThis code has exactly the same effect as the code above, but by avoiding a conditional, we ensure it will compile with XLA without problems!"
+      },
+      {
+        "heading": "XLA Rule #2: Your code cannot have \u201cdata-dependent shapes\u201d",
+        "level": 4,
+        "content": "What this means is that the shape of all of the `tf.Tensor` objects in your code cannot depend on their values. For example, the function `tf.unique` cannot be compiled with XLA, because it returns a `tensor` containing one instance of each unique value in the input. The shape of this output will obviously be different depending on how repetitive the input `Tensor` was, and so XLA refuses to handle it!\n\nIn general, most neural network code obeys rule #2 by default. However, there are a few common cases where it becomes a problem. One very common one is when you use **label masking**, setting your labels to a negative value to indicate that those positions should be ignored when computing the loss. If you look at NumPy or PyTorch loss functions that support label masking, you will often see code like this that uses [boolean indexing](https://numpy.org/doc/stable/user/basics.indexing.html#boolean-array-indexing):\n\n```python\nlabel_mask = labels >= 0\nmasked_outputs = outputs[label_mask]\nmasked_labels = labels[label_mask]\nloss = compute_loss(masked_outputs, masked_labels)\nmean_loss = torch.mean(loss)\n```\n\nThis code is totally fine in NumPy or PyTorch, but it breaks in XLA! Why? Because the shape of `masked_outputs` and `masked_labels` depends on how many positions are masked - that makes it a **data-dependent shape.** However, just like for rule #1, we can often rewrite this code to yield exactly the same output without any data-dependent shapes.\n\n```python\nlabel_mask = tf.cast(labels >= 0, tf.float32)\nloss = compute_loss(outputs, labels)\nloss = loss * label_mask  # Set negative label positions to 0\nmean_loss = tf.reduce_sum(loss) / tf.reduce_sum(label_mask)\n```\n\nHere, we avoid data-dependent shapes by computing the loss for every position, but zeroing out the masked positions in both the numerator and denominator when we calculate the mean, which yields exactly the same result as the first block while maintaining XLA compatibility. Note that we use the same trick as in rule #1 - converting a `tf.bool` to `tf.float32` and using it as an indicator variable. This is a really useful trick, so remember it if you need to convert your own code to XLA!"
+      },
+      {
+        "heading": "XLA Rule #3: XLA will need to recompile your model for every different input shape it sees",
+        "level": 4,
+        "content": "This is the big one. What this means is that if your input shapes are very variable, XLA will have to recompile your model over and over, which will create huge performance problems. This commonly arises in NLP models, where input texts have variable lengths after tokenization. In other modalities, static shapes are more common and this rule is much less of a problem.\n\nHow can you get around rule #3? The key is **padding** - if you pad all your inputs to the same length, and then use an `attention_mask`, you can get the same results as you\u2019d get from variable shapes, but without any XLA issues. However, excessive padding can cause severe slowdown too - if you pad all your samples to the maximum length in the whole dataset, you might end up with batches consisting endless padding tokens, which will waste a lot of compute and memory!\n\nThere isn\u2019t a perfect solution to this problem. However, you can try some tricks. One very useful trick is to **pad batches of samples up to a multiple of a number like 32 or 64 tokens.** This often only increases the number of tokens by a small amount, but it hugely reduces the number of unique input shapes, because every input shape now has to be a multiple of 32 or 64. Fewer unique input shapes means fewer XLA compilations!\n\n<Tip>\n\n**\ud83e\udd17Specific HuggingFace Tip\ud83e\udd17:** Our tokenizers and data collators have methods that can help you here. You can use `padding=\"max_length\"` or `padding=\"longest\"` when calling tokenizers to get them to output padded data. Our tokenizers and data collators also have a `pad_to_multiple_of` argument that you can use to reduce the number of unique input shapes you see!\n\n</Tip>"
+      },
+      {
+        "heading": "How do I actually train my model on TPU?",
+        "level": 3,
+        "content": "Once your training is XLA-compatible and (if you\u2019re using TPU Node / Colab) your dataset has been prepared appropriately, running on TPU is surprisingly easy! All you really need to change in your code is to add a few lines to initialize your TPU, and to ensure that your model and dataset are created inside a `TPUStrategy` scope. Take a look at [our TPU example notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/tpu_training-tf.ipynb) to see this in action!"
+      },
+      {
+        "heading": "Summary",
+        "level": 3,
+        "content": "There was a lot in here, so let\u2019s summarize with a quick checklist you can follow when you want to get your model ready for TPU training:\n\n- Make sure your code follows the three rules of XLA\n- Compile your model with `jit_compile=True` on CPU/GPU and confirm that you can train it with XLA\n- Either load your dataset into memory or use a TPU-compatible dataset loading approach (see [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/tpu_training-tf.ipynb))\n- Migrate your code either to Colab (with accelerator set to \u201cTPU\u201d) or a TPU VM on Google Cloud\n- Add TPU initializer code (see [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/tpu_training-tf.ipynb))\n- Create your `TPUStrategy` and make sure dataset loading and model creation are inside the `strategy.scope()` (see [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/tpu_training-tf.ipynb))\n- Don\u2019t forget to take `jit_compile=True` out again when you move to TPU!\n- \ud83d\ude4f\ud83d\ude4f\ud83d\ude4f\ud83e\udd7a\ud83e\udd7a\ud83e\udd7a\n- Call `model.fit()`\n- You did it!"
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "python",
+        "code": "if tf.reduce_sum(tensor) > 10:\n    tensor = tensor / 2.0"
+      },
+      {
+        "language": "python",
+        "code": "sum_over_10 = tf.cast(tf.reduce_sum(tensor) > 10, tf.float32)\ntensor = tensor / (1.0 + sum_over_10)"
+      },
+      {
+        "language": "python",
+        "code": "label_mask = labels >= 0\nmasked_outputs = outputs[label_mask]\nmasked_labels = labels[label_mask]\nloss = compute_loss(masked_outputs, masked_labels)\nmean_loss = torch.mean(loss)"
+      },
+      {
+        "language": "python",
+        "code": "label_mask = tf.cast(labels >= 0, tf.float32)\nloss = compute_loss(outputs, labels)\nloss = loss * label_mask  # Set negative label positions to 0\nmean_loss = tf.reduce_sum(loss) / tf.reduce_sum(label_mask)"
+      }
+    ],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Hugging Face Keras/TF TPU guide' (https://huggingface.co/docs/transformers/main/en/perf_train_tpu_tf)?",
+        "answer": "Usable Keras sequence-classification example: initialize TPUClusterResolver, TPUStrategy, load/tokenize data, create the model inside strategy.scope(), and call model.fit()."
+      },
+      {
+        "question": "How does 'Hugging Face Keras/TF TPU guide' handle: Training on TPU with TensorFlow?",
+        "answer": "<Tip>\n\nIf you don't need long explanations and just want TPU code samples to get started with, check out [our TPU example notebook!](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/tpu_training-tf.ipynb)\n\n</Tip>"
+      },
+      {
+        "question": "How does 'Hugging Face Keras/TF TPU guide' handle: What is a TPU??",
+        "answer": "A TPU is a **Tensor Processing Unit.** They are hardware designed by Google, which are used to greatly speed up the tensor computations within neural networks, much like GPUs. They can be used for both network training and inference. They are generally accessed through Google\u2019s cloud services, but small TPUs can also be accessed directly for free through Google Colab and Kaggle Kernels.\n\nBecause [all TensorFlow models in \ud83e\udd17 Transformers are Keras models](https://huggingface.co/blog/tensorflow-philosophy), most of the methods in this document are generally applicable to TPU training for any Keras model! However, there are a few points that are specific to the HuggingFace ecosystem (hug-o-system?) of Transformers and Datasets, and we\u2019ll make sure to flag them up when we get to them."
+      },
+      {
+        "question": "How does 'Hugging Face Keras/TF TPU guide' handle: What kinds of TPU are available??",
+        "answer": "New users are often very confused by the range of TPUs, and the different ways to access them. The first key distinction to understand is the difference between **TPU Nodes** and **TPU VMs.**\n\nWhen you use a **TPU Node**, you are effectively indirectly accessing a remote TPU. You will need a separate VM, which will initialize your network and data pipeline and then forward them to the remote node. When you use a TPU on Google Colab, you are accessing it in the **TPU Node** style.\n\nUsing TPU Nodes can have some quite unexpected behaviour for people who aren\u2019t used to them! In particular, because the TPU is located on a physically different system to the machine you\u2019re running your Python code on, your data cannot be local to your machine - any data pipeline that loads from your machine\u2019s internal storage will totally fail! Instead, data must be stored in Google Cloud Storage where your data pipeline can still access it, even when the pipeline is running on the remote TPU node.\n\n<Tip>\n\nIf you can fit all your data in memory as `np.ndarray` or `tf.Tensor`, then you can `fit()` on that data even when using Colab or a TPU Node, without needing to upload it to Google Cloud Storage.\n\n</Ti"
+      },
+      {
+        "question": "How does 'Hugging Face Keras/TF TPU guide' handle: What sizes of TPU are available??",
+        "answer": "A single TPU (a v2-8/v3-8/v4-8) runs 8 replicas. TPUs exist in **pods** that can run hundreds or thousands of replicas simultaneously. When you use more than a single TPU but less than a whole pod (for example, a v3-32), your TPU fleet is referred to as a **pod slice.**\n\nWhen you access a free TPU via Colab, you generally get a single v2-8 TPU."
+      },
+      {
+        "question": "How does 'Hugging Face Keras/TF TPU guide' handle: I keep hearing about this XLA thing. What\u2019s XLA, and how does it relate to TPUs??",
+        "answer": "XLA is an optimizing compiler, used by both TensorFlow and JAX. In JAX it is the only compiler, whereas in TensorFlow it is optional (but mandatory on TPU!). The easiest way to enable it when training a Keras model is to pass the argument `jit_compile=True` to `model.compile()`. If you don\u2019t get any errors and performance is good, that\u2019s a great sign that you\u2019re ready to move to TPU!\n\nDebugging on TPU is generally a bit harder than on CPU/GPU, so we recommend getting your code running on CPU/GPU with XLA first before trying it on TPU. You don\u2019t have to train for long, of course - just for a few steps to make sure that your model and data pipeline are working like you expect them to.\n\n<Tip>\n\nXLA compiled code is usually faster - so even if you\u2019re not planning to run on TPU, adding `jit_compile=True` can improve your performance. Be sure to note the caveats below about XLA compatibility, though!\n\n</Tip>\n\n<Tip warning={true}>\n\n**Tip born of painful experience:** Although using `jit_compile=True` is a good way to get a speed boost and test if your CPU/GPU code is XLA-compatible, it can actually cause a lot of problems if you leave it in when actually training on TPU. XLA compilation wi"
+      },
+      {
+        "question": "How does 'Hugging Face Keras/TF TPU guide' handle: How do I make my model XLA compatible??",
+        "answer": "In many cases, your code is probably XLA-compatible already! However, there are a few things that work in normal TensorFlow that don\u2019t work in XLA. We\u2019ve distilled them into three core rules below:\n\n<Tip>\n\n**\ud83e\udd17Specific HuggingFace Tip\ud83e\udd17:** We\u2019ve put a lot of effort into rewriting our TensorFlow models and loss functions to be XLA-compatible. Our models and loss functions generally obey rule #1 and #2 by default, so you can skip over them if you\u2019re using `transformers` models. Don\u2019t forget about these rules when writing your own models and loss functions, though!\n\n</Tip>"
+      },
+      {
+        "question": "How does 'Hugging Face Keras/TF TPU guide' handle: XLA Rule #1: Your code cannot have \u201cdata-dependent conditionals\u201d?",
+        "answer": "What that means is that any `if` statement cannot depend on values inside a `tf.Tensor`. For example, this code block cannot be compiled with XLA!\n\n```python\nif tf.reduce_sum(tensor) > 10:\n    tensor = tensor / 2.0\n```\n\nThis might seem very restrictive at first, but most neural net code doesn\u2019t need to do this. You can often get around this restriction by using `tf.cond` (see the documentation [here](https://www.tensorflow.org/api_docs/python/tf/cond)) or by removing the conditional and finding a clever math trick with indicator variables instead, like so:\n\n```python\nsum_over_10 = tf.cast(tf.reduce_sum(tensor) > 10, tf.float32)\ntensor = tensor / (1.0 + sum_over_10)\n```\n\nThis code has exactly the same effect as the code above, but by avoiding a conditional, we ensure it will compile with XLA without problems!"
+      },
+      {
+        "question": "How does 'Hugging Face Keras/TF TPU guide' handle: XLA Rule #2: Your code cannot have \u201cdata-dependent shapes\u201d?",
+        "answer": "What this means is that the shape of all of the `tf.Tensor` objects in your code cannot depend on their values. For example, the function `tf.unique` cannot be compiled with XLA, because it returns a `tensor` containing one instance of each unique value in the input. The shape of this output will obviously be different depending on how repetitive the input `Tensor` was, and so XLA refuses to handle it!\n\nIn general, most neural network code obeys rule #2 by default. However, there are a few common cases where it becomes a problem. One very common one is when you use **label masking**, setting your labels to a negative value to indicate that those positions should be ignored when computing the loss. If you look at NumPy or PyTorch loss functions that support label masking, you will often see code like this that uses [boolean indexing](https://numpy.org/doc/stable/user/basics.indexing.html#boolean-array-indexing):\n\n```python\nlabel_mask = labels >= 0\nmasked_outputs = outputs[label_mask]\nmasked_labels = labels[label_mask]\nloss = compute_loss(masked_outputs, masked_labels)\nmean_loss = torch.mean(loss)\n```\n\nThis code is totally fine in NumPy or PyTorch, but it breaks in XLA! Why? Because "
+      },
+      {
+        "question": "How does 'Hugging Face Keras/TF TPU guide' handle: XLA Rule #3: XLA will need to recompile your model for every different input shape it sees?",
+        "answer": "This is the big one. What this means is that if your input shapes are very variable, XLA will have to recompile your model over and over, which will create huge performance problems. This commonly arises in NLP models, where input texts have variable lengths after tokenization. In other modalities, static shapes are more common and this rule is much less of a problem.\n\nHow can you get around rule #3? The key is **padding** - if you pad all your inputs to the same length, and then use an `attention_mask`, you can get the same results as you\u2019d get from variable shapes, but without any XLA issues. However, excessive padding can cause severe slowdown too - if you pad all your samples to the maximum length in the whole dataset, you might end up with batches consisting endless padding tokens, which will waste a lot of compute and memory!\n\nThere isn\u2019t a perfect solution to this problem. However, you can try some tricks. One very useful trick is to **pad batches of samples up to a multiple of a number like 32 or 64 tokens.** This often only increases the number of tokens by a small amount, but it hugely reduces the number of unique input shapes, because every input shape now has to be a mu"
+      }
+    ],
+    "full_markdown": "# Training on TPU with TensorFlow\n\n<Tip>\n\nIf you don't need long explanations and just want TPU code samples to get started with, check out [our TPU example notebook!](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/tpu_training-tf.ipynb)\n\n</Tip>\n\n### What is a TPU?\n\nA TPU is a **Tensor Processing Unit.** They are hardware designed by Google, which are used to greatly speed up the tensor computations within neural networks, much like GPUs. They can be used for both network training and inference. They are generally accessed through Google\u2019s cloud services, but small TPUs can also be accessed directly for free through Google Colab and Kaggle Kernels.\n\nBecause [all TensorFlow models in \ud83e\udd17 Transformers are Keras models](https://huggingface.co/blog/tensorflow-philosophy), most of the methods in this document are generally applicable to TPU training for any Keras model! However, there are a few points that are specific to the HuggingFace ecosystem (hug-o-system?) of Transformers and Datasets, and we\u2019ll make sure to flag them up when we get to them.\n\n### What kinds of TPU are available?\n\nNew users are often very confused by the range of TPUs, and the different ways to access them. The first key distinction to understand is the difference between **TPU Nodes** and **TPU VMs.**\n\nWhen you use a **TPU Node**, you are effectively indirectly accessing a remote TPU. You will need a separate VM, which will initialize your network and data pipeline and then forward them to the remote node. When you use a TPU on Google Colab, you are accessing it in the **TPU Node** style.\n\nUsing TPU Nodes can have some quite unexpected behaviour for people who aren\u2019t used to them! In particular, because the TPU is located on a physically different system to the machine you\u2019re running your Python code on, your data cannot be local to your machine - any data pipeline that loads from your machine\u2019s internal storage will totally fail! Instead, data must be stored in Google Cloud Storage where your data pipeline can still access it, even when the pipeline is running on the remote TPU node.\n\n<Tip>\n\nIf you can fit all your data in memory as `np.ndarray` or `tf.Tensor`, then you can `fit()` on that data even when using Colab or a TPU Node, without needing to upload it to Google Cloud Storage.\n\n</Tip>\n\n<Tip>\n\n**\ud83e\udd17Specific Hugging Face Tip\ud83e\udd17:** The methods `Dataset.to_tf_dataset()` and its higher-level wrapper `model.prepare_tf_dataset()` , which you will see throughout our TF code examples, will both fail on a TPU Node. The reason for this is that even though they create a `tf.data.Dataset` it is not a \u201cpure\u201d `tf.data` pipeline and uses `tf.numpy_function` or `Dataset.from_generator()` to stream data from the underlying HuggingFace `Dataset`. This HuggingFace `Dataset` is backed by data that is on a local disc and which the remote TPU Node will not be able to read.\n\n</Tip>\n\nThe second way to access a TPU is via a **TPU VM.** When using a TPU VM, you connect directly to the machine that the TPU is attached to, much like training on a GPU VM. TPU VMs are generally easier to work with, particularly when it comes to your data pipeline. All of the above warnings do not apply to TPU VMs!\n\nThis is an opinionated document, so here\u2019s our opinion: **Avoid using TPU Node if possible.** It is more confusing and more difficult to debug than TPU VMs. It is also likely to be unsupported in future - Google\u2019s latest TPU, TPUv4, can only be accessed as a TPU VM, which suggests that TPU Nodes are increasingly going to become a \u201clegacy\u201d access method. However, we understand that the only free TPU access is on Colab and Kaggle Kernels, which uses TPU Node - so we\u2019ll try to explain how to handle it if you have to! Check the [TPU example notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/tpu_training-tf.ipynb) for code samples that explain this in more detail.\n\n### What sizes of TPU are available?\n\nA single TPU (a v2-8/v3-8/v4-8) runs 8 replicas. TPUs exist in **pods** that can run hundreds or thousands of replicas simultaneously. When you use more than a single TPU but less than a whole pod (for example, a v3-32), your TPU fleet is referred to as a **pod slice.**\n\nWhen you access a free TPU via Colab, you generally get a single v2-8 TPU.\n\n### I keep hearing about this XLA thing. What\u2019s XLA, and how does it relate to TPUs?\n\nXLA is an optimizing compiler, used by both TensorFlow and JAX. In JAX it is the only compiler, whereas in TensorFlow it is optional (but mandatory on TPU!). The easiest way to enable it when training a Keras model is to pass the argument `jit_compile=True` to `model.compile()`. If you don\u2019t get any errors and performance is good, that\u2019s a great sign that you\u2019re ready to move to TPU!\n\nDebugging on TPU is generally a bit harder than on CPU/GPU, so we recommend getting your code running on CPU/GPU with XLA first before trying it on TPU. You don\u2019t have to train for long, of course - just for a few steps to make sure that your model and data pipeline are working like you expect them to.\n\n<Tip>\n\nXLA compiled code is usually faster - so even if you\u2019re not planning to run on TPU, adding `jit_compile=True` can improve your performance. Be sure to note the caveats below about XLA compatibility, though!\n\n</Tip>\n\n<Tip warning={true}>\n\n**Tip born of painful experience:** Although using `jit_compile=True` is a good way to get a speed boost and test if your CPU/GPU code is XLA-compatible, it can actually cause a lot of problems if you leave it in when actually training on TPU. XLA compilation will happen implicitly on TPU, so remember to remove that line before actually running your code on a TPU!\n\n</Tip>\n\n### How do I make my model XLA compatible?\n\nIn many cases, your code is probably XLA-compatible already! However, there are a few things that work in normal TensorFlow that don\u2019t work in XLA. We\u2019ve distilled them into three core rules below:\n\n<Tip>\n\n**\ud83e\udd17Specific HuggingFace Tip\ud83e\udd17:** We\u2019ve put a lot of effort into rewriting our TensorFlow models and loss functions to be XLA-compatible. Our models and loss functions generally obey rule #1 and #2 by default, so you can skip over them if you\u2019re using `transformers` models. Don\u2019t forget about these rules when writing your own models and loss functions, though!\n\n</Tip>\n\n#### XLA Rule #1: Your code cannot have \u201cdata-dependent conditionals\u201d\n\nWhat that means is that any `if` statement cannot depend on values inside a `tf.Tensor`. For example, this code block cannot be compiled with XLA!\n\n```python\nif tf.reduce_sum(tensor) > 10:\n    tensor = tensor / 2.0\n```\n\nThis might seem very restrictive at first, but most neural net code doesn\u2019t need to do this. You can often get around this restriction by using `tf.cond` (see the documentation [here](https://www.tensorflow.org/api_docs/python/tf/cond)) or by removing the conditional and finding a clever math trick with indicator variables instead, like so:\n\n```python\nsum_over_10 = tf.cast(tf.reduce_sum(tensor) > 10, tf.float32)\ntensor = tensor / (1.0 + sum_over_10)\n```\n\nThis code has exactly the same effect as the code above, but by avoiding a conditional, we ensure it will compile with XLA without problems!\n\n#### XLA Rule #2: Your code cannot have \u201cdata-dependent shapes\u201d\n\nWhat this means is that the shape of all of the `tf.Tensor` objects in your code cannot depend on their values. For example, the function `tf.unique` cannot be compiled with XLA, because it returns a `tensor` containing one instance of each unique value in the input. The shape of this output will obviously be different depending on how repetitive the input `Tensor` was, and so XLA refuses to handle it!\n\nIn general, most neural network code obeys rule #2 by default. However, there are a few common cases where it becomes a problem. One very common one is when you use **label masking**, setting your labels to a negative value to indicate that those positions should be ignored when computing the loss. If you look at NumPy or PyTorch loss functions that support label masking, you will often see code like this that uses [boolean indexing](https://numpy.org/doc/stable/user/basics.indexing.html#boolean-array-indexing):\n\n```python\nlabel_mask = labels >= 0\nmasked_outputs = outputs[label_mask]\nmasked_labels = labels[label_mask]\nloss = compute_loss(masked_outputs, masked_labels)\nmean_loss = torch.mean(loss)\n```\n\nThis code is totally fine in NumPy or PyTorch, but it breaks in XLA! Why? Because the shape of `masked_outputs` and `masked_labels` depends on how many positions are masked - that makes it a **data-dependent shape.** However, just like for rule #1, we can often rewrite this code to yield exactly the same output without any data-dependent shapes.\n\n```python\nlabel_mask = tf.cast(labels >= 0, tf.float32)\nloss = compute_loss(outputs, labels)\nloss = loss * label_mask  # Set negative label positions to 0\nmean_loss = tf.reduce_sum(loss) / tf.reduce_sum(label_mask)\n```\n\nHere, we avoid data-dependent shapes by computing the loss for every position, but zeroing out the masked positions in both the numerator and denominator when we calculate the mean, which yields exactly the same result as the first block while maintaining XLA compatibility. Note that we use the same trick as in rule #1 - converting a `tf.bool` to `tf.float32` and using it as an indicator variable. This is a really useful trick, so remember it if you need to convert your own code to XLA!\n\n#### XLA Rule #3: XLA will need to recompile your model for every different input shape it sees\n\nThis is the big one. What this means is that if your input shapes are very variable, XLA will have to recompile your model over and over, which will create huge performance problems. This commonly arises in NLP models, where input texts have variable lengths after tokenization. In other modalities, static shapes are more common and this rule is much less of a problem.\n\nHow can you get around rule #3? The key is **padding** - if you pad all your inputs to the same length, and then use an `attention_mask`, you can get the same results as you\u2019d get from variable shapes, but without any XLA issues. However, excessive padding can cause severe slowdown too - if you pad all your samples to the maximum length in the whole dataset, you might end up with batches consisting endless padding tokens, which will waste a lot of compute and memory!\n\nThere isn\u2019t a perfect solution to this problem. However, you can try some tricks. One very useful trick is to **pad batches of samples up to a multiple of a number like 32 or 64 tokens.** This often only increases the number of tokens by a small amount, but it hugely reduces the number of unique input shapes, because every input shape now has to be a multiple of 32 or 64. Fewer unique input shapes means fewer XLA compilations!\n\n<Tip>\n\n**\ud83e\udd17Specific HuggingFace Tip\ud83e\udd17:** Our tokenizers and data collators have methods that can help you here. You can use `padding=\"max_length\"` or `padding=\"longest\"` when calling tokenizers to get them to output padded data. Our tokenizers and data collators also have a `pad_to_multiple_of` argument that you can use to reduce the number of unique input shapes you see!\n\n</Tip>\n\n### How do I actually train my model on TPU?\n\nOnce your training is XLA-compatible and (if you\u2019re using TPU Node / Colab) your dataset has been prepared appropriately, running on TPU is surprisingly easy! All you really need to change in your code is to add a few lines to initialize your TPU, and to ensure that your model and dataset are created inside a `TPUStrategy` scope. Take a look at [our TPU example notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/tpu_training-tf.ipynb) to see this in action!\n\n### Summary\n\nThere was a lot in here, so let\u2019s summarize with a quick checklist you can follow when you want to get your model ready for TPU training:\n\n- Make sure your code follows the three rules of XLA\n- Compile your model with `jit_compile=True` on CPU/GPU and confirm that you can train it with XLA\n- Either load your dataset into memory or use a TPU-compatible dataset loading approach (see [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/tpu_training-tf.ipynb))\n- Migrate your code either to Colab (with accelerator set to \u201cTPU\u201d) or a TPU VM on Google Cloud\n- Add TPU initializer code (see [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/tpu_training-tf.ipynb))\n- Create your `TPUStrategy` and make sure dataset loading and model creation are inside the `strategy.scope()` (see [notebook](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/tpu_training-tf.ipynb))\n- Don\u2019t forget to take `jit_compile=True` out again when you move to TPU!\n- \ud83d\ude4f\ud83d\ude4f\ud83d\ude4f\ud83e\udd7a\ud83e\udd7a\ud83e\udd7a\n- Call `model.fit()`\n- You did it!"
+  }
 }

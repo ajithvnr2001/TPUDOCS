@@ -1,57 +1,113 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:setup_18_bfloat16_guide",
-  "@type": "DocumentationResource",
-  "name": "Cloud TPU bfloat16 guide",
-  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/bfloat16",
-  "category": "TPU setup docs",
-  "categorySlug": "tpu_setup_docs",
-  "description": "Precision guidance and checkpoint portability considerations for TPU workloads.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/bfloat16",
-    "crawledAt": "2026-10-26T12:45:22.303904+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 24236
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Cloud TPU bfloat16 guide",
-      "documentedIn",
-      "https://docs.cloud.google.com/tpu/docs/bfloat16"
-    ],
-    [
-      "Cloud TPU bfloat16 guide",
-      "belongsToCategory",
-      "tpu_setup_docs"
-    ],
-    [
-      "Cloud TPU bfloat16 guide",
-      "targetsPlatform",
-      "Google Cloud Platform"
-    ],
-    [
-      "Cloud TPU bfloat16 guide",
-      "managesHardware",
-      "Google Cloud TPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:setup_18_bfloat16_guide",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "setup_18_bfloat16_guide",
+    "name": "Cloud TPU bfloat16 guide",
+    "url": "https://docs.cloud.google.com/tpu/docs/bfloat16",
+    "category": "tpu_setup_docs",
+    "description": "Precision guidance and checkpoint portability considerations for TPU workloads.",
+    "char_count": 2806,
+    "word_count": 353,
+    "section_count": 3,
+    "code_block_count": 0,
+    "table_count": 0,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.407667+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:setup_18_bfloat16_guide",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:setup_18_bfloat16_guide",
+        "predicate": "schema:name",
+        "object": "Cloud TPU bfloat16 guide"
+      },
+      {
+        "subject": "tpu_doc:setup_18_bfloat16_guide",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/tpu/docs/bfloat16"
+      },
+      {
+        "subject": "tpu_doc:setup_18_bfloat16_guide",
+        "predicate": "schema:category",
+        "object": "tpu_setup_docs"
+      },
+      {
+        "subject": "tpu_doc:setup_18_bfloat16_guide",
+        "predicate": "schema:description",
+        "object": "Precision guidance and checkpoint portability considerations for TPU workloads."
+      },
+      {
+        "subject": "tpu_doc:setup_18_bfloat16_guide",
+        "predicate": "okf:hasSection",
+        "object": "Improve your model's performance with bfloat16"
+      },
+      {
+        "subject": "tpu_doc:setup_18_bfloat16_guide",
+        "predicate": "okf:hasSection",
+        "object": "Use bfloat16 explicitly"
+      },
+      {
+        "subject": "tpu_doc:setup_18_bfloat16_guide",
+        "predicate": "okf:hasSection",
+        "object": "Format conversion details"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Cloud TPU bfloat16 guide provides official guidance on Precision guidance and checkpoint portability considerations for TPU workloads.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/bfloat16",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Cloud TPU bfloat16 guide used for in Cloud TPU workflows?",
-      "answer": "Precision guidance and checkpoint portability considerations for TPU workloads.",
-      "category": "tpu_setup_docs"
-    }
-  ],
-  "contentSummary": "Precision guidance and checkpoint portability considerations for TPU workloads."
+  },
+  "structured_content": {
+    "summary": "Precision guidance and checkpoint portability considerations for TPU workloads.",
+    "sections": [
+      {
+        "heading": "Improve your model's performance with bfloat16",
+        "level": 1,
+        "content": "By default, TPUs perform matrix multiplication operations with [`bfloat16`](https://en.wikipedia.org/wiki/Bfloat16_floating-point_format) values and accumulations with IEEE [`float32`](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) values. Using reduced-precision floating point numbers decreases time to convergence without losing accuracy.\nThe dynamic range of `bfloat16` and `float32` are equivalent. However, `bfloat16` uses half of the memory space. For more information about `bfloat16` performance, see [A Study of BFLOAT16 for Deep Learning Training](https://arxiv.org/abs/1905.12322)."
+      },
+      {
+        "heading": "Use bfloat16 explicitly",
+        "level": 2,
+        "content": "While automatic format conversion in TPUs lets you avoid thinking about numerical precision, you can achieve performance improvements by explicitly casting values to `bfloat16`. There are two reasons to explicitly cast values to `bfloat16`:\n  1. Storing values in `bfloat16` format saves on-chip memory, enabling Cloud TPUs to train larger models or use larger batch sizes.\n  2. Some operations are memory-bandwidth-bound, which means the amount of time it takes to load data from memory can slow down the overall time spent performing the computation. Storing operands and outputs of those operations in `bfloat16` format reduces the amount of data that must be transferred, improving overall speed.\n\n\nTo get started, we recommend getting some experience with one of the [Cloud TPU reference models](https://docs.cloud.google.com/tpu/docs/tutorials/supported-models). After that, the [profiling tools guide](https://docs.cloud.google.com/tpu/docs/profile-tpu-vm), and [troubleshooting guide](https://docs.cloud.google.com/tpu/docs/troubleshooting/troubleshooting) provide in-depth technical information to help you create and optimize machine learning models on your own."
+      },
+      {
+        "heading": "Format conversion details",
+        "level": 3,
+        "content": "The format conversion from `float32` to `bfloat16` is automatically inserted by the XLA compiler. On TPU, the rounding scheme in the conversion is [round to nearest even](https://en.wikipedia.org/wiki/IEEE_754#Roundings_to_nearest) and overflow to `inf`. Also, the `bfloat16` on Cloud TPU does not support subnormals, so all subnormals are flushed to zero during the conversion. Special values, such as `NaN` and `inf`, are preserved in the conversion.\nThe format conversion from `bfloat16` to `float32` is also automatically inserted by the XLA compiler. Since `float32` can represent all exact values in `bfloat16`, the conversion pads 16 zeros in the mantissa bits. Special values are preserved in the conversion.\nCheckpoints obtained from a model trained on Cloud TPUs can be deployed on other hardware platforms (for example, inference or fine-tuning on CPUs or GPUs) without extensive manual conversions."
+      }
+    ],
+    "code_examples": [],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Cloud TPU bfloat16 guide' (https://docs.cloud.google.com/tpu/docs/bfloat16)?",
+        "answer": "Precision guidance and checkpoint portability considerations for TPU workloads."
+      },
+      {
+        "question": "How does 'Cloud TPU bfloat16 guide' handle: Improve your model's performance with bfloat16?",
+        "answer": "By default, TPUs perform matrix multiplication operations with [`bfloat16`](https://en.wikipedia.org/wiki/Bfloat16_floating-point_format) values and accumulations with IEEE [`float32`](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) values. Using reduced-precision floating point numbers decreases time to convergence without losing accuracy.\nThe dynamic range of `bfloat16` and `float32` are equivalent. However, `bfloat16` uses half of the memory space. For more information about `bfloat16` performance, see [A Study of BFLOAT16 for Deep Learning Training](https://arxiv.org/abs/1905.12322)."
+      },
+      {
+        "question": "How does 'Cloud TPU bfloat16 guide' handle: Use bfloat16 explicitly?",
+        "answer": "While automatic format conversion in TPUs lets you avoid thinking about numerical precision, you can achieve performance improvements by explicitly casting values to `bfloat16`. There are two reasons to explicitly cast values to `bfloat16`:\n  1. Storing values in `bfloat16` format saves on-chip memory, enabling Cloud TPUs to train larger models or use larger batch sizes.\n  2. Some operations are memory-bandwidth-bound, which means the amount of time it takes to load data from memory can slow down the overall time spent performing the computation. Storing operands and outputs of those operations in `bfloat16` format reduces the amount of data that must be transferred, improving overall speed.\n\n\nTo get started, we recommend getting some experience with one of the [Cloud TPU reference models](https://docs.cloud.google.com/tpu/docs/tutorials/supported-models). After that, the [profiling tools guide](https://docs.cloud.google.com/tpu/docs/profile-tpu-vm), and [troubleshooting guide](https://docs.cloud.google.com/tpu/docs/troubleshooting/troubleshooting) provide in-depth technical information to help you create and optimize machine learning models on your own."
+      },
+      {
+        "question": "How does 'Cloud TPU bfloat16 guide' handle: Format conversion details?",
+        "answer": "The format conversion from `float32` to `bfloat16` is automatically inserted by the XLA compiler. On TPU, the rounding scheme in the conversion is [round to nearest even](https://en.wikipedia.org/wiki/IEEE_754#Roundings_to_nearest) and overflow to `inf`. Also, the `bfloat16` on Cloud TPU does not support subnormals, so all subnormals are flushed to zero during the conversion. Special values, such as `NaN` and `inf`, are preserved in the conversion.\nThe format conversion from `bfloat16` to `float32` is also automatically inserted by the XLA compiler. Since `float32` can represent all exact values in `bfloat16`, the conversion pads 16 zeros in the mantissa bits. Special values are preserved in the conversion.\nCheckpoints obtained from a model trained on Cloud TPUs can be deployed on other hardware platforms (for example, inference or fine-tuning on CPUs or GPUs) without extensive manual conversions."
+      }
+    ],
+    "full_markdown": "# Improve your model's performance with bfloat16\nBy default, TPUs perform matrix multiplication operations with [`bfloat16`](https://en.wikipedia.org/wiki/Bfloat16_floating-point_format) values and accumulations with IEEE [`float32`](https://en.wikipedia.org/wiki/Single-precision_floating-point_format) values. Using reduced-precision floating point numbers decreases time to convergence without losing accuracy.\nThe dynamic range of `bfloat16` and `float32` are equivalent. However, `bfloat16` uses half of the memory space. For more information about `bfloat16` performance, see [A Study of BFLOAT16 for Deep Learning Training](https://arxiv.org/abs/1905.12322).\n## Use bfloat16 explicitly\nWhile automatic format conversion in TPUs lets you avoid thinking about numerical precision, you can achieve performance improvements by explicitly casting values to `bfloat16`. There are two reasons to explicitly cast values to `bfloat16`:\n  1. Storing values in `bfloat16` format saves on-chip memory, enabling Cloud TPUs to train larger models or use larger batch sizes.\n  2. Some operations are memory-bandwidth-bound, which means the amount of time it takes to load data from memory can slow down the overall time spent performing the computation. Storing operands and outputs of those operations in `bfloat16` format reduces the amount of data that must be transferred, improving overall speed.\n\n\nTo get started, we recommend getting some experience with one of the [Cloud TPU reference models](https://docs.cloud.google.com/tpu/docs/tutorials/supported-models). After that, the [profiling tools guide](https://docs.cloud.google.com/tpu/docs/profile-tpu-vm), and [troubleshooting guide](https://docs.cloud.google.com/tpu/docs/troubleshooting/troubleshooting) provide in-depth technical information to help you create and optimize machine learning models on your own.\n### Format conversion details\nThe format conversion from `float32` to `bfloat16` is automatically inserted by the XLA compiler. On TPU, the rounding scheme in the conversion is [round to nearest even](https://en.wikipedia.org/wiki/IEEE_754#Roundings_to_nearest) and overflow to `inf`. Also, the `bfloat16` on Cloud TPU does not support subnormals, so all subnormals are flushed to zero during the conversion. Special values, such as `NaN` and `inf`, are preserved in the conversion.\nThe format conversion from `bfloat16` to `float32` is also automatically inserted by the XLA compiler. Since `float32` can represent all exact values in `bfloat16`, the conversion pads 16 zeros in the mantissa bits. Special values are preserved in the conversion.\nCheckpoints obtained from a model trained on Cloud TPUs can be deployed on other hardware platforms (for example, inference or fine-tuning on CPUs or GPUs) without extensive manual conversions."
+  }
 }

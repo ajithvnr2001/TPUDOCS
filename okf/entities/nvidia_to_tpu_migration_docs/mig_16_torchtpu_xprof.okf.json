@@ -1,63 +1,500 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:mig_16_torchtpu_xprof",
-  "@type": "DocumentationResource",
-  "name": "TorchTPU performance profiling with XProf",
-  "canonicalUrl": "https://torchtpu.readthedocs.io/en/latest/performance_profiling_with_xprof/",
-  "category": "Nvidia to tpu migration docs",
-  "categorySlug": "nvidia_to_tpu_migration_docs",
-  "description": "Capture and inspect TPU execution traces; check documented PyTorch and profiler prerequisites.",
-  "provenance": {
-    "sourceUrl": "https://torchtpu.readthedocs.io/en/latest/performance_profiling_with_xprof/",
-    "crawledAt": "2026-10-26T12:48:16.448398+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 26265
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "TorchTPU performance profiling with XProf",
-      "documentedIn",
-      "https://torchtpu.readthedocs.io/en/latest/performance_profiling_with_xprof/"
-    ],
-    [
-      "TorchTPU performance profiling with XProf",
-      "belongsToCategory",
-      "nvidia_to_tpu_migration_docs"
-    ],
-    [
-      "TorchTPU performance profiling with XProf",
-      "supportsWorkflow",
-      "CUDA to TPU Code Migration"
-    ],
-    [
-      "TorchTPU performance profiling with XProf",
-      "primaryFramework",
-      "TorchTPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:mig_16_torchtpu_xprof",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "mig_16_torchtpu_xprof",
+    "name": "TorchTPU performance profiling with XProf",
+    "url": "https://torchtpu.readthedocs.io/en/latest/performance_profiling_with_xprof/",
+    "category": "nvidia_to_tpu_migration_docs",
+    "description": "Capture and inspect TPU execution traces; check documented PyTorch and profiler prerequisites.",
+    "char_count": 8867,
+    "word_count": 1084,
+    "section_count": 17,
+    "code_block_count": 9,
+    "table_count": 5,
+    "cli_command_count": 3,
+    "indexed_at": "2026-10-26T14:46:54.782646+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "schema:name",
+        "object": "TorchTPU performance profiling with XProf"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "schema:url",
+        "object": "https://torchtpu.readthedocs.io/en/latest/performance_profiling_with_xprof/"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "schema:category",
+        "object": "nvidia_to_tpu_migration_docs"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "schema:description",
+        "object": "Capture and inspect TPU execution traces; check documented PyTorch and profiler prerequisites."
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:TPU7x"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:Pallas"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:XProf"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "okf:hasSection",
+        "object": "Performance profiling with XProf"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "okf:hasSection",
+        "object": "1. The TPU profiler"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "okf:hasSection",
+        "object": "2. Custom profiling configuration (`TpuProfilerConfig`)"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "okf:hasSection",
+        "object": "Sanctioned configuration options"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "okf:hasSection",
+        "object": "3. Capturing a profile"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "okf:hasSection",
+        "object": "Build a small model and optimizer"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "okf:hasSection",
+        "object": "Where to save the profiler traces"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "okf:hasSection",
+        "object": "Configure TPU-specific tracer levels"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "okf:hasSection",
+        "object": "Profile 100 training steps with native PyTorch profiler"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "okf:hasSection",
+        "object": "4. Viewing traces in TensorBoard"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "okf:hasSection",
+        "object": "5. What to look for"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "okf:hasSection",
+        "object": "Red flags in traces"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "okf:hasSection",
+        "object": "The ideal profile"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "okf:hasSection",
+        "object": "6. Verifying the traces were captured"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "okf:hasSection",
+        "object": "7. Kernel profiling (Fine-grained performance counters)"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "okf:hasSection",
+        "object": "Enabling performance counters"
+      },
+      {
+        "subject": "tpu_doc:mig_16_torchtpu_xprof",
+        "predicate": "okf:hasSection",
+        "object": "8. Quick reference"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "TorchTPU performance profiling with XProf provides official guidance on Capture and inspect TPU execution traces; check documented PyTorch and profiler prerequisites.",
-      "confidence": 1.0,
-      "source": "https://torchtpu.readthedocs.io/en/latest/performance_profiling_with_xprof/",
-      "verified": true
-    },
-    {
-      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
-      "confidence": 1.0,
-      "source": "https://torchtpu.readthedocs.io/en/latest/performance_profiling_with_xprof/",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is TorchTPU performance profiling with XProf used for in Cloud TPU workflows?",
-      "answer": "Capture and inspect TPU execution traces; check documented PyTorch and profiler prerequisites.",
-      "category": "nvidia_to_tpu_migration_docs"
-    }
-  ],
-  "contentSummary": "Capture and inspect TPU execution traces; check documented PyTorch and profiler prerequisites."
+  },
+  "structured_content": {
+    "summary": "Capture and inspect TPU execution traces; check documented PyTorch and profiler prerequisites.",
+    "sections": [
+      {
+        "heading": "Performance profiling with XProf",
+        "level": 1,
+        "content": "Understanding where time is spent is critical for training large models on TPU. This guide covers how to capture execution traces with the TPU Profiler and analyze them in TensorBoard.\nWarning\n**Prerequisite:** TensorBoard requires `setuptools<81`. The latest version removes `pkg_resources`, which TensorBoard depends on. Install it first:\n\n```\npip install \"setuptools<81\"\npip install xprof tensorboard\n\n```\n\nNote\n**PyTorch version:** the native `torch.profiler` TPU integration requires PyTorch 2.12 or newer."
+      },
+      {
+        "heading": "1. The TPU profiler",
+        "level": 2,
+        "content": "Standard `torch.profiler` (integrated with `torch_tpu`) provides a **context manager** interface for tracing both CPU and TPU activities. You wrap the code you want to profile in a `torch.profiler.profile()` block, and the collected traces are saved to disk for viewing in TensorBoard.\n**Key components:**  \n| Component  | Role  |  \n| --- | --- |  \n| `torch.profiler.profile()`  | Standard context manager that starts/stops   \ntrace collection  |  \n| `torch.profiler.ProfilerActivity.CPU`  | Traces CPU-side operations (dispatch, data   \nloading)  |  \n| `torch.profiler.ProfilerActivity.TPU`  | Traces TPU hardware execution (compute,   \nmemory, interconnect)  |  \n| `torch.profiler.tensorboard_trace_handler`  | Callback that saves traces to a directory for   \nTensorBoard  |  \n| `TpuProfilerConfig`  | Helper for custom TPU profiling configuration  |  \n\n```\nimport torch\nfrom torch.tpu.profiler import TpuProfilerConfig\n\ndevice = torch.device(\"tpu\")\n\n```"
+      },
+      {
+        "heading": "2. Custom profiling configuration (`TpuProfilerConfig`)",
+        "level": 2,
+        "content": "Options passed via `TpuProfilerConfig` allow fine-grained control over host and device tracer levels as well as output directory structures."
+      },
+      {
+        "heading": "Sanctioned configuration options",
+        "level": 3,
+        "content": "| Option Key  | Type  | Default  | Description  |  \n| --- | --- | --- | --- |  \n| `host_tracer_level`  | `int`  | `2`  | Controls CPU host tracer verbosity   \n(0=off, 1=critical, 2=all).  |  \n| `device_tracer_level`  | `int`  | `1`  | Controls TPU hardware device tracer   \nverbosity (0=off, 1=on).  |  \n| `python_tracer_level`  | `int`  | `0`  | Controls Python function tracing   \nlevel (0=off, 1=on).  |  \n| `run_dir`  | `pathlib.Path`  | `None`  | Output directory where TPU hardware trace   \nfiles (`.xplane.pb`) are saved.  |  \n\n```\nimport pathlib\nimport torch\nfrom torch.tpu.profiler import TpuProfilerConfig\n\nconfig = TpuProfilerConfig(\n    host_tracer_level=2,\n    device_tracer_level=1,\n    python_tracer_level=0,\n    run_dir=pathlib.Path(\"./profiler_output\"),\n)\n\nwith torch.profiler.profile(\n    activities=[\n        torch.profiler.ProfilerActivity.CPU,\n        torch.profiler.ProfilerActivity.TPU,\n    ],\n    experimental_config=config,\n    on_trace_ready=torch.profiler.tensorboard_trace_handler(\"./profiler_output\"),\n) as prof:\n    model(inputs)\n\n```"
+      },
+      {
+        "heading": "3. Capturing a profile",
+        "level": 2,
+        "content": "The cell below runs a small training loop inside the profiler context. The key points:\n  1. Wrap your training loop inside `torch.profiler.profile()`\n  2. Specify activities \u2014 `CPU` for host-side ops, `TPU` for hardware execution\n  3. Set `on_trace_ready` to save traces to a directory using `torch.profiler.tensorboard_trace_handler`\n  4. (Optional) Pass `experimental_config` with `TpuProfilerConfig` to control tracer levels\n\n\nImportant\nThe profiler adds overhead. Profile only a representative subset of steps (e.g., 100\u20131000), not your entire training run.\n\n```"
+      },
+      {
+        "heading": "Build a small model and optimizer",
+        "level": 1,
+        "content": "model = (\n    torch.nn.Sequential(\n        torch.nn.Linear(128, 64), torch.nn.ReLU(), torch.nn.Linear(64, 10)\n    )\n    .to(device)\n    .to(torch.bfloat16)\n)\n\noptimizer = torch.optim.SGD(model.parameters(), lr=0.01)\ndata = torch.randn(32, 128, device=device, dtype=torch.bfloat16)"
+      },
+      {
+        "heading": "Where to save the profiler traces",
+        "level": 1,
+        "content": "log_dir = \"/tmp/profiler_output\""
+      },
+      {
+        "heading": "Configure TPU-specific tracer levels",
+        "level": 1,
+        "content": "config = TpuProfilerConfig(\n    host_tracer_level=2,\n    device_tracer_level=1,\n)"
+      },
+      {
+        "heading": "Profile 100 training steps with native PyTorch profiler",
+        "level": 1,
+        "content": "with torch.profiler.profile(\n    activities=[\n        torch.profiler.ProfilerActivity.CPU,\n        torch.profiler.ProfilerActivity.TPU,\n    ],\n    experimental_config=config,\n    on_trace_ready=torch.profiler.tensorboard_trace_handler(log_dir),\n) as prof:\n  for step in range(100):\n    optimizer.zero_grad()\n    loss = model(data).sum()\n    loss.backward()\n    optimizer.step()\n    torch.accelerator.synchronize()\n    prof.step()\n\nprint(f\"\u2705 Profile captured: {100} steps saved to {log_dir}\")\n\n```"
+      },
+      {
+        "heading": "4. Viewing traces in TensorBoard",
+        "level": 2,
+        "content": "Run the following commands:\n**Step 1:** Install the profiler plugin (required for the dashboard to appear):\n\n```\npip install tensorboard-plugin-profile \"setuptools<81\"\n\n```\n\n**Step 2:** Launch TensorBoard:\n\n```\ntensorboard --logdir=/tmp/profiler_output --port=6006\n\n```\n\nXProf can also be run as a standalone server.\n\n```\nxprof --logdir=/tmp/profiler_output --port=6006\n\n```\n\n**Step 3:** Open `http://localhost:6006` in your browser and select the **\"Profile\"** tab.\nNote\nYou must run TensorBoard from the VS Code integrated terminal so that port forwarding works automatically.\n**On GKE:** write the trace directory to a Cloud Storage bucket mounted with the [Cloud Storage FUSE CSI driver](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/cloud-storage-fuse-csi-driver) so the traces outlive the pod, then open them with `xprof --logdir=gs://<bucket>/profiler_output`.  \n| View  | What it shows  |  \n| --- | --- |  \n| **Overview**  | High-level summary: step time, device utilization, top ops  |  \n| **Trace Viewer**  | Timeline of every op on CPU and TPU \u2014 look for gaps (idle hardware)  |  \n| **Op Profile**  | Breakdown of time per operation \u2014 find the most expensive ops  |  \n| **Memory Profile**  | HBM usage over time \u2014 detect memory spikes  |"
+      },
+      {
+        "heading": "5. What to look for",
+        "level": 2,
+        "content": ""
+      },
+      {
+        "heading": "Red flags in traces",
+        "level": 3,
+        "content": "| Pattern  | Meaning  | Fix  |  \n| --- | --- | --- |  \n| Large gaps between TPU ops  | Host-side bottleneck   \n(data loading, Python overhead)  | Prefetch data, reduce Python logic in the loop  |  \n| Frequent short TPU bursts  | Too many graph breaks \u2192 frequent recompilation  | Reduce `.item()` / `.cpu()` calls, use `torch.compile`  |  \n| Low MXU utilization  | Tensor dimensions not aligned to tile size (128)  | Pad dimensions to multiples of 128  |"
+      },
+      {
+        "heading": "The ideal profile",
+        "level": 3,
+        "content": "A well-optimized TPU workload shows:\n  * **Long, continuous TPU compute blocks** \u2014 the compiler fused many ops into one execution\n  * **Minimal CPU\u2192TPU gaps** \u2014 data loading is overlapped with compute\n  * **High MXU utilization ( >60%)** \u2014 tensor shapes are hardware-aligned"
+      },
+      {
+        "heading": "6. Verifying the traces were captured",
+        "level": 2,
+        "content": "The cell below checks that the profiler output directory contains trace files.\n\n```\nimport os\n\ntrace_files = os.listdir(log_dir)\nprint(f\"Trace directory: {log_dir}\")\nprint(f\"Files found: {len(trace_files)}\")\nfor f in sorted(trace_files)[:10]:\n  size_kb = os.path.getsize(os.path.join(log_dir, f)) / 1024\n  print(f\"  {f} ({size_kb:.1f} KB)\")\n\nif trace_files:\n  print(f\"\\n\u2705 Traces ready. View with:\")\n  print(f\"   tensorboard --logdir={log_dir}\")\nelse:\n  print(\"\\n\u274c No trace files found. Check profiler configuration.\")\n\n```"
+      },
+      {
+        "heading": "7. Kernel profiling (Fine-grained performance counters)",
+        "level": 2,
+        "content": "Kernel profiling enables the collection of fine-grained hardware performance counters (e.g., for Pallas kernels) to diagnose performance bottlenecks that are otherwise invisible in standard event traces.\nNote\nFine-grained performance counter sampling is an advanced hardware feature available for **Ironwood (TPU v7/TPU7x)** and subsequent TPU generations."
+      },
+      {
+        "heading": "Enabling performance counters",
+        "level": 3,
+        "content": "You can enable performance counters by passing the counter configuration via `experimental_options` in `TpuProfilerConfig`:\n\n```\nfrom torch.tpu.profiler import TpuProfilerConfig\n\nconfig = TpuProfilerConfig(\n    experimental_options={\n        \"tpu_enable_periodic_counter_sampling\": True,\n        \"tpu_tc_perf_counter_sampling_options\": (\n            \"interval_us:1 scaling:0 counter_size_bits:1 indices:10\"\n            \" indices:11 indices:56 indices:57 indices:58\"\n        ),\n    }\n)\n\n```\n\nFor the detailed list of configuration parameters (such as sampling intervals, scaling, and trigger modes) and instructions on how to determine counter indices, refer to the official [OpenXLA Kernel Profiling Guide](https://openxla.org/xprof/kernel-profiling)."
+      },
+      {
+        "heading": "8. Quick reference",
+        "level": 2,
+        "content": "| Step  | Command / Code  |  \n| --- | --- |  \n| **Import**  | `from torch.tpu.profiler import TpuProfilerConfig`  |  \n| **Profile**  | `with torch.profiler.profile(activities=[...], on_trace_ready=...):`  |  \n| **Save**  | `torch.profiler.tensorboard_trace_handler(\"/tmp/profiler_output\")`  |  \n| **View**  | `tensorboard --logdir=/tmp/profiler_output`  |  \nNote\nProfile only 100\u20131000 steps to keep trace files manageable. The profiler adds ~5\u201310% overhead per step."
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "pip install \"setuptools<81\"\npip install xprof tensorboard"
+      },
+      {
+        "language": "text",
+        "code": "import torch\nfrom torch.tpu.profiler import TpuProfilerConfig\n\ndevice = torch.device(\"tpu\")"
+      },
+      {
+        "language": "text",
+        "code": "import pathlib\nimport torch\nfrom torch.tpu.profiler import TpuProfilerConfig\n\nconfig = TpuProfilerConfig(\n    host_tracer_level=2,\n    device_tracer_level=1,\n    python_tracer_level=0,\n    run_dir=pathlib.Path(\"./profiler_output\"),\n)\n\nwith torch.profiler.profile(\n    activities=[\n        torch.profiler.ProfilerActivity.CPU,\n        torch.profiler.ProfilerActivity.TPU,\n    ],\n    experimental_config=config,\n    on_trace_ready=torch.profiler.tensorboard_trace_handler(\"./profiler_output\"),\n) as prof:\n    model(inputs)"
+      },
+      {
+        "language": "text",
+        "code": "# Build a small model and optimizer\nmodel = (\n    torch.nn.Sequential(\n        torch.nn.Linear(128, 64), torch.nn.ReLU(), torch.nn.Linear(64, 10)\n    )\n    .to(device)\n    .to(torch.bfloat16)\n)\n\noptimizer = torch.optim.SGD(model.parameters(), lr=0.01)\ndata = torch.randn(32, 128, device=device, dtype=torch.bfloat16)\n\n# Where to save the profiler traces\nlog_dir = \"/tmp/profiler_output\"\n\n# Configure TPU-specific tracer levels\nconfig = TpuProfilerConfig(\n    host_tracer_level=2,\n    device_tracer_level=1,\n)\n\n# Profile 100 training steps with native PyTorch profiler\nwith torch.profiler.profile(\n    activities=[\n        torch.profiler.ProfilerActivity.CPU,\n        torch.profiler.ProfilerActivity.TPU,\n    ],\n    experimental_config=config,\n    on_trace_ready=torch.profiler.tensorboard_trace_handler(log_dir),\n) as prof:\n  for step in range(100):\n    optimizer.zero_grad()\n    loss = model(data).sum()\n    loss.backward()\n    optimizer.step()\n    torch.accelerator.synchronize()\n    prof.step()\n\nprint(f\"\u2705 Profile captured: {100} steps saved to {log_dir}\")"
+      },
+      {
+        "language": "text",
+        "code": "pip install tensorboard-plugin-profile \"setuptools<81\""
+      },
+      {
+        "language": "text",
+        "code": "tensorboard --logdir=/tmp/profiler_output --port=6006"
+      },
+      {
+        "language": "text",
+        "code": "xprof --logdir=/tmp/profiler_output --port=6006"
+      },
+      {
+        "language": "text",
+        "code": "import os\n\ntrace_files = os.listdir(log_dir)\nprint(f\"Trace directory: {log_dir}\")\nprint(f\"Files found: {len(trace_files)}\")\nfor f in sorted(trace_files)[:10]:\n  size_kb = os.path.getsize(os.path.join(log_dir, f)) / 1024\n  print(f\"  {f} ({size_kb:.1f} KB)\")\n\nif trace_files:\n  print(f\"\\n\u2705 Traces ready. View with:\")\n  print(f\"   tensorboard --logdir={log_dir}\")\nelse:\n  print(\"\\n\u274c No trace files found. Check profiler configuration.\")"
+      },
+      {
+        "language": "text",
+        "code": "from torch.tpu.profiler import TpuProfilerConfig\n\nconfig = TpuProfilerConfig(\n    experimental_options={\n        \"tpu_enable_periodic_counter_sampling\": True,\n        \"tpu_tc_perf_counter_sampling_options\": (\n            \"interval_us:1 scaling:0 counter_size_bits:1 indices:10\"\n            \" indices:11 indices:56 indices:57 indices:58\"\n        ),\n    }\n)"
+      }
+    ],
+    "cli_commands": [
+      "pip install \"setuptools<81\"",
+      "pip install xprof tensorboard",
+      "pip install tensorboard-plugin-profile \"setuptools<81\""
+    ],
+    "environment_variables": [],
+    "tables": [
+      {
+        "headers": [
+          "Component",
+          "Role"
+        ],
+        "rows": [
+          [
+            "`torch.profiler.profile()`",
+            "Standard context manager that starts/stops"
+          ],
+          [
+            "trace collection"
+          ],
+          [
+            "`torch.profiler.ProfilerActivity.CPU`",
+            "Traces CPU-side operations (dispatch, data"
+          ],
+          [
+            "loading)"
+          ],
+          [
+            "`torch.profiler.ProfilerActivity.TPU`",
+            "Traces TPU hardware execution (compute,"
+          ],
+          [
+            "memory, interconnect)"
+          ],
+          [
+            "`torch.profiler.tensorboard_trace_handler`",
+            "Callback that saves traces to a directory for"
+          ],
+          [
+            "TensorBoard"
+          ],
+          [
+            "`TpuProfilerConfig`",
+            "Helper for custom TPU profiling configuration"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "Option Key",
+          "Type",
+          "Default",
+          "Description"
+        ],
+        "rows": [
+          [
+            "`host_tracer_level`",
+            "`int`",
+            "`2`",
+            "Controls CPU host tracer verbosity"
+          ],
+          [
+            "(0=off, 1=critical, 2=all)."
+          ],
+          [
+            "`device_tracer_level`",
+            "`int`",
+            "`1`",
+            "Controls TPU hardware device tracer"
+          ],
+          [
+            "verbosity (0=off, 1=on)."
+          ],
+          [
+            "`python_tracer_level`",
+            "`int`",
+            "`0`",
+            "Controls Python function tracing"
+          ],
+          [
+            "level (0=off, 1=on)."
+          ],
+          [
+            "`run_dir`",
+            "`pathlib.Path`",
+            "`None`",
+            "Output directory where TPU hardware trace"
+          ],
+          [
+            "files (`.xplane.pb`) are saved."
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "View",
+          "What it shows"
+        ],
+        "rows": [
+          [
+            "**Overview**",
+            "High-level summary: step time, device utilization, top ops"
+          ],
+          [
+            "**Trace Viewer**",
+            "Timeline of every op on CPU and TPU \u2014 look for gaps (idle hardware)"
+          ],
+          [
+            "**Op Profile**",
+            "Breakdown of time per operation \u2014 find the most expensive ops"
+          ],
+          [
+            "**Memory Profile**",
+            "HBM usage over time \u2014 detect memory spikes"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "Pattern",
+          "Meaning",
+          "Fix"
+        ],
+        "rows": [
+          [
+            "Large gaps between TPU ops",
+            "Host-side bottleneck"
+          ],
+          [
+            "(data loading, Python overhead)",
+            "Prefetch data, reduce Python logic in the loop"
+          ],
+          [
+            "Frequent short TPU bursts",
+            "Too many graph breaks \u2192 frequent recompilation",
+            "Reduce `.item()` / `.cpu()` calls, use `torch.compile`"
+          ],
+          [
+            "Low MXU utilization",
+            "Tensor dimensions not aligned to tile size (128)",
+            "Pad dimensions to multiples of 128"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "Step",
+          "Command / Code"
+        ],
+        "rows": [
+          [
+            "**Import**",
+            "`from torch.tpu.profiler import TpuProfilerConfig`"
+          ],
+          [
+            "**Profile**",
+            "`with torch.profiler.profile(activities=[...], on_trace_ready=...):`"
+          ],
+          [
+            "**Save**",
+            "`torch.profiler.tensorboard_trace_handler(\"/tmp/profiler_output\")`"
+          ],
+          [
+            "**View**",
+            "`tensorboard --logdir=/tmp/profiler_output`"
+          ]
+        ]
+      }
+    ],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'TorchTPU performance profiling with XProf' (https://torchtpu.readthedocs.io/en/latest/performance_profiling_with_xprof/)?",
+        "answer": "Capture and inspect TPU execution traces; check documented PyTorch and profiler prerequisites."
+      },
+      {
+        "question": "How does 'TorchTPU performance profiling with XProf' handle: Performance profiling with XProf?",
+        "answer": "Understanding where time is spent is critical for training large models on TPU. This guide covers how to capture execution traces with the TPU Profiler and analyze them in TensorBoard.\nWarning\n**Prerequisite:** TensorBoard requires `setuptools<81`. The latest version removes `pkg_resources`, which TensorBoard depends on. Install it first:\n\n```\npip install \"setuptools<81\"\npip install xprof tensorboard\n\n```\n\nNote\n**PyTorch version:** the native `torch.profiler` TPU integration requires PyTorch 2.12 or newer."
+      },
+      {
+        "question": "How does 'TorchTPU performance profiling with XProf' handle: 1. The TPU profiler?",
+        "answer": "Standard `torch.profiler` (integrated with `torch_tpu`) provides a **context manager** interface for tracing both CPU and TPU activities. You wrap the code you want to profile in a `torch.profiler.profile()` block, and the collected traces are saved to disk for viewing in TensorBoard.\n**Key components:**  \n| Component  | Role  |  \n| --- | --- |  \n| `torch.profiler.profile()`  | Standard context manager that starts/stops   \ntrace collection  |  \n| `torch.profiler.ProfilerActivity.CPU`  | Traces CPU-side operations (dispatch, data   \nloading)  |  \n| `torch.profiler.ProfilerActivity.TPU`  | Traces TPU hardware execution (compute,   \nmemory, interconnect)  |  \n| `torch.profiler.tensorboard_trace_handler`  | Callback that saves traces to a directory for   \nTensorBoard  |  \n| `TpuProfilerConfig`  | Helper for custom TPU profiling configuration  |  \n\n```\nimport torch\nfrom torch.tpu.profiler import TpuProfilerConfig\n\ndevice = torch.device(\"tpu\")\n\n```"
+      },
+      {
+        "question": "How does 'TorchTPU performance profiling with XProf' handle: 2. Custom profiling configuration (`TpuProfilerConfig`)?",
+        "answer": "Options passed via `TpuProfilerConfig` allow fine-grained control over host and device tracer levels as well as output directory structures."
+      },
+      {
+        "question": "How does 'TorchTPU performance profiling with XProf' handle: Sanctioned configuration options?",
+        "answer": "| Option Key  | Type  | Default  | Description  |  \n| --- | --- | --- | --- |  \n| `host_tracer_level`  | `int`  | `2`  | Controls CPU host tracer verbosity   \n(0=off, 1=critical, 2=all).  |  \n| `device_tracer_level`  | `int`  | `1`  | Controls TPU hardware device tracer   \nverbosity (0=off, 1=on).  |  \n| `python_tracer_level`  | `int`  | `0`  | Controls Python function tracing   \nlevel (0=off, 1=on).  |  \n| `run_dir`  | `pathlib.Path`  | `None`  | Output directory where TPU hardware trace   \nfiles (`.xplane.pb`) are saved.  |  \n\n```\nimport pathlib\nimport torch\nfrom torch.tpu.profiler import TpuProfilerConfig\n\nconfig = TpuProfilerConfig(\n    host_tracer_level=2,\n    device_tracer_level=1,\n    python_tracer_level=0,\n    run_dir=pathlib.Path(\"./profiler_output\"),\n)\n\nwith torch.profiler.profile(\n    activities=[\n        torch.profiler.ProfilerActivity.CPU,\n        torch.profiler.ProfilerActivity.TPU,\n    ],\n    experimental_config=config,\n    on_trace_ready=torch.profiler.tensorboard_trace_handler(\"./profiler_output\"),\n) as prof:\n    model(inputs)\n\n```"
+      },
+      {
+        "question": "How does 'TorchTPU performance profiling with XProf' handle: 3. Capturing a profile?",
+        "answer": "The cell below runs a small training loop inside the profiler context. The key points:\n  1. Wrap your training loop inside `torch.profiler.profile()`\n  2. Specify activities \u2014 `CPU` for host-side ops, `TPU` for hardware execution\n  3. Set `on_trace_ready` to save traces to a directory using `torch.profiler.tensorboard_trace_handler`\n  4. (Optional) Pass `experimental_config` with `TpuProfilerConfig` to control tracer levels\n\n\nImportant\nThe profiler adds overhead. Profile only a representative subset of steps (e.g., 100\u20131000), not your entire training run.\n\n```"
+      },
+      {
+        "question": "How does 'TorchTPU performance profiling with XProf' handle: Build a small model and optimizer?",
+        "answer": "model = (\n    torch.nn.Sequential(\n        torch.nn.Linear(128, 64), torch.nn.ReLU(), torch.nn.Linear(64, 10)\n    )\n    .to(device)\n    .to(torch.bfloat16)\n)\n\noptimizer = torch.optim.SGD(model.parameters(), lr=0.01)\ndata = torch.randn(32, 128, device=device, dtype=torch.bfloat16)"
+      },
+      {
+        "question": "How does 'TorchTPU performance profiling with XProf' handle: Configure TPU-specific tracer levels?",
+        "answer": "config = TpuProfilerConfig(\n    host_tracer_level=2,\n    device_tracer_level=1,\n)"
+      },
+      {
+        "question": "How does 'TorchTPU performance profiling with XProf' handle: Profile 100 training steps with native PyTorch profiler?",
+        "answer": "with torch.profiler.profile(\n    activities=[\n        torch.profiler.ProfilerActivity.CPU,\n        torch.profiler.ProfilerActivity.TPU,\n    ],\n    experimental_config=config,\n    on_trace_ready=torch.profiler.tensorboard_trace_handler(log_dir),\n) as prof:\n  for step in range(100):\n    optimizer.zero_grad()\n    loss = model(data).sum()\n    loss.backward()\n    optimizer.step()\n    torch.accelerator.synchronize()\n    prof.step()\n\nprint(f\"\u2705 Profile captured: {100} steps saved to {log_dir}\")\n\n```"
+      },
+      {
+        "question": "How does 'TorchTPU performance profiling with XProf' handle: 4. Viewing traces in TensorBoard?",
+        "answer": "Run the following commands:\n**Step 1:** Install the profiler plugin (required for the dashboard to appear):\n\n```\npip install tensorboard-plugin-profile \"setuptools<81\"\n\n```\n\n**Step 2:** Launch TensorBoard:\n\n```\ntensorboard --logdir=/tmp/profiler_output --port=6006\n\n```\n\nXProf can also be run as a standalone server.\n\n```\nxprof --logdir=/tmp/profiler_output --port=6006\n\n```\n\n**Step 3:** Open `http://localhost:6006` in your browser and select the **\"Profile\"** tab.\nNote\nYou must run TensorBoard from the VS Code integrated terminal so that port forwarding works automatically.\n**On GKE:** write the trace directory to a Cloud Storage bucket mounted with the [Cloud Storage FUSE CSI driver](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/cloud-storage-fuse-csi-driver) so the traces outlive the pod, then open them with `xprof --logdir=gs://<bucket>/profiler_output`.  \n| View  | What it shows  |  \n| --- | --- |  \n| **Overview**  | High-level summary: step time, device utilization, top ops  |  \n| **Trace Viewer**  | Timeline of every op on CPU and TPU \u2014 look for gaps (idle hardware)  |  \n| **Op Profile**  | Breakdown of time per operation \u2014 find the most expensi"
+      }
+    ],
+    "full_markdown": "# Performance profiling with XProf\nUnderstanding where time is spent is critical for training large models on TPU. This guide covers how to capture execution traces with the TPU Profiler and analyze them in TensorBoard.\nWarning\n**Prerequisite:** TensorBoard requires `setuptools<81`. The latest version removes `pkg_resources`, which TensorBoard depends on. Install it first:\n\n```\npip install \"setuptools<81\"\npip install xprof tensorboard\n\n```\n\nNote\n**PyTorch version:** the native `torch.profiler` TPU integration requires PyTorch 2.12 or newer.\n## 1. The TPU profiler\nStandard `torch.profiler` (integrated with `torch_tpu`) provides a **context manager** interface for tracing both CPU and TPU activities. You wrap the code you want to profile in a `torch.profiler.profile()` block, and the collected traces are saved to disk for viewing in TensorBoard.\n**Key components:**  \n| Component  | Role  |  \n| --- | --- |  \n| `torch.profiler.profile()`  | Standard context manager that starts/stops   \ntrace collection  |  \n| `torch.profiler.ProfilerActivity.CPU`  | Traces CPU-side operations (dispatch, data   \nloading)  |  \n| `torch.profiler.ProfilerActivity.TPU`  | Traces TPU hardware execution (compute,   \nmemory, interconnect)  |  \n| `torch.profiler.tensorboard_trace_handler`  | Callback that saves traces to a directory for   \nTensorBoard  |  \n| `TpuProfilerConfig`  | Helper for custom TPU profiling configuration  |  \n\n```\nimport torch\nfrom torch.tpu.profiler import TpuProfilerConfig\n\ndevice = torch.device(\"tpu\")\n\n```\n\n## 2. Custom profiling configuration (`TpuProfilerConfig`)\nOptions passed via `TpuProfilerConfig` allow fine-grained control over host and device tracer levels as well as output directory structures.\n### Sanctioned configuration options\n| Option Key  | Type  | Default  | Description  |  \n| --- | --- | --- | --- |  \n| `host_tracer_level`  | `int`  | `2`  | Controls CPU host tracer verbosity   \n(0=off, 1=critical, 2=all).  |  \n| `device_tracer_level`  | `int`  | `1`  | Controls TPU hardware device tracer   \nverbosity (0=off, 1=on).  |  \n| `python_tracer_level`  | `int`  | `0`  | Controls Python function tracing   \nlevel (0=off, 1=on).  |  \n| `run_dir`  | `pathlib.Path`  | `None`  | Output directory where TPU hardware trace   \nfiles (`.xplane.pb`) are saved.  |  \n\n```\nimport pathlib\nimport torch\nfrom torch.tpu.profiler import TpuProfilerConfig\n\nconfig = TpuProfilerConfig(\n    host_tracer_level=2,\n    device_tracer_level=1,\n    python_tracer_level=0,\n    run_dir=pathlib.Path(\"./profiler_output\"),\n)\n\nwith torch.profiler.profile(\n    activities=[\n        torch.profiler.ProfilerActivity.CPU,\n        torch.profiler.ProfilerActivity.TPU,\n    ],\n    experimental_config=config,\n    on_trace_ready=torch.profiler.tensorboard_trace_handler(\"./profiler_output\"),\n) as prof:\n    model(inputs)\n\n```\n\n## 3. Capturing a profile\nThe cell below runs a small training loop inside the profiler context. The key points:\n  1. Wrap your training loop inside `torch.profiler.profile()`\n  2. Specify activities \u2014 `CPU` for host-side ops, `TPU` for hardware execution\n  3. Set `on_trace_ready` to save traces to a directory using `torch.profiler.tensorboard_trace_handler`\n  4. (Optional) Pass `experimental_config` with `TpuProfilerConfig` to control tracer levels\n\n\nImportant\nThe profiler adds overhead. Profile only a representative subset of steps (e.g., 100\u20131000), not your entire training run.\n\n```\n# Build a small model and optimizer\nmodel = (\n    torch.nn.Sequential(\n        torch.nn.Linear(128, 64), torch.nn.ReLU(), torch.nn.Linear(64, 10)\n    )\n    .to(device)\n    .to(torch.bfloat16)\n)\n\noptimizer = torch.optim.SGD(model.parameters(), lr=0.01)\ndata = torch.randn(32, 128, device=device, dtype=torch.bfloat16)\n\n# Where to save the profiler traces\nlog_dir = \"/tmp/profiler_output\"\n\n# Configure TPU-specific tracer levels\nconfig = TpuProfilerConfig(\n    host_tracer_level=2,\n    device_tracer_level=1,\n)\n\n# Profile 100 training steps with native PyTorch profiler\nwith torch.profiler.profile(\n    activities=[\n        torch.profiler.ProfilerActivity.CPU,\n        torch.profiler.ProfilerActivity.TPU,\n    ],\n    experimental_config=config,\n    on_trace_ready=torch.profiler.tensorboard_trace_handler(log_dir),\n) as prof:\n  for step in range(100):\n    optimizer.zero_grad()\n    loss = model(data).sum()\n    loss.backward()\n    optimizer.step()\n    torch.accelerator.synchronize()\n    prof.step()\n\nprint(f\"\u2705 Profile captured: {100} steps saved to {log_dir}\")\n\n```\n\n## 4. Viewing traces in TensorBoard\nRun the following commands:\n**Step 1:** Install the profiler plugin (required for the dashboard to appear):\n\n```\npip install tensorboard-plugin-profile \"setuptools<81\"\n\n```\n\n**Step 2:** Launch TensorBoard:\n\n```\ntensorboard --logdir=/tmp/profiler_output --port=6006\n\n```\n\nXProf can also be run as a standalone server.\n\n```\nxprof --logdir=/tmp/profiler_output --port=6006\n\n```\n\n**Step 3:** Open `http://localhost:6006` in your browser and select the **\"Profile\"** tab.\nNote\nYou must run TensorBoard from the VS Code integrated terminal so that port forwarding works automatically.\n**On GKE:** write the trace directory to a Cloud Storage bucket mounted with the [Cloud Storage FUSE CSI driver](https://docs.cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/cloud-storage-fuse-csi-driver) so the traces outlive the pod, then open them with `xprof --logdir=gs://<bucket>/profiler_output`.  \n| View  | What it shows  |  \n| --- | --- |  \n| **Overview**  | High-level summary: step time, device utilization, top ops  |  \n| **Trace Viewer**  | Timeline of every op on CPU and TPU \u2014 look for gaps (idle hardware)  |  \n| **Op Profile**  | Breakdown of time per operation \u2014 find the most expensive ops  |  \n| **Memory Profile**  | HBM usage over time \u2014 detect memory spikes  |  \n## 5. What to look for\n### Red flags in traces\n| Pattern  | Meaning  | Fix  |  \n| --- | --- | --- |  \n| Large gaps between TPU ops  | Host-side bottleneck   \n(data loading, Python overhead)  | Prefetch data, reduce Python logic in the loop  |  \n| Frequent short TPU bursts  | Too many graph breaks \u2192 frequent recompilation  | Reduce `.item()` / `.cpu()` calls, use `torch.compile`  |  \n| Low MXU utilization  | Tensor dimensions not aligned to tile size (128)  | Pad dimensions to multiples of 128  |  \n### The ideal profile\nA well-optimized TPU workload shows:\n  * **Long, continuous TPU compute blocks** \u2014 the compiler fused many ops into one execution\n  * **Minimal CPU\u2192TPU gaps** \u2014 data loading is overlapped with compute\n  * **High MXU utilization ( >60%)** \u2014 tensor shapes are hardware-aligned\n\n\n## 6. Verifying the traces were captured\nThe cell below checks that the profiler output directory contains trace files.\n\n```\nimport os\n\ntrace_files = os.listdir(log_dir)\nprint(f\"Trace directory: {log_dir}\")\nprint(f\"Files found: {len(trace_files)}\")\nfor f in sorted(trace_files)[:10]:\n  size_kb = os.path.getsize(os.path.join(log_dir, f)) / 1024\n  print(f\"  {f} ({size_kb:.1f} KB)\")\n\nif trace_files:\n  print(f\"\\n\u2705 Traces ready. View with:\")\n  print(f\"   tensorboard --logdir={log_dir}\")\nelse:\n  print(\"\\n\u274c No trace files found. Check profiler configuration.\")\n\n```\n\n## 7. Kernel profiling (Fine-grained performance counters)\nKernel profiling enables the collection of fine-grained hardware performance counters (e.g., for Pallas kernels) to diagnose performance bottlenecks that are otherwise invisible in standard event traces.\nNote\nFine-grained performance counter sampling is an advanced hardware feature available for **Ironwood (TPU v7/TPU7x)** and subsequent TPU generations.\n### Enabling performance counters\nYou can enable performance counters by passing the counter configuration via `experimental_options` in `TpuProfilerConfig`:\n\n```\nfrom torch.tpu.profiler import TpuProfilerConfig\n\nconfig = TpuProfilerConfig(\n    experimental_options={\n        \"tpu_enable_periodic_counter_sampling\": True,\n        \"tpu_tc_perf_counter_sampling_options\": (\n            \"interval_us:1 scaling:0 counter_size_bits:1 indices:10\"\n            \" indices:11 indices:56 indices:57 indices:58\"\n        ),\n    }\n)\n\n```\n\nFor the detailed list of configuration parameters (such as sampling intervals, scaling, and trigger modes) and instructions on how to determine counter indices, refer to the official [OpenXLA Kernel Profiling Guide](https://openxla.org/xprof/kernel-profiling).\n## 8. Quick reference\n| Step  | Command / Code  |  \n| --- | --- |  \n| **Import**  | `from torch.tpu.profiler import TpuProfilerConfig`  |  \n| **Profile**  | `with torch.profiler.profile(activities=[...], on_trace_ready=...):`  |  \n| **Save**  | `torch.profiler.tensorboard_trace_handler(\"/tmp/profiler_output\")`  |  \n| **View**  | `tensorboard --logdir=/tmp/profiler_output`  |  \nNote\nProfile only 100\u20131000 steps to keep trace files manageable. The profiler adds ~5\u201310% overhead per step."
+  }
 }

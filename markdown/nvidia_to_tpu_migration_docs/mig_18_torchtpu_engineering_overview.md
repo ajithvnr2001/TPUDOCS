@@ -2,24 +2,11 @@
 id: "mig_18_torchtpu_engineering_overview"
 title: "TorchTPU engineering overview"
 url: "https://developers.googleblog.com/torchtpu-running-pytorch-natively-on-tpus-at-google-scale/"
-category: "Nvidia to tpu migration docs"
+category: "nvidia_to_tpu_migration_docs"
 description: "Explains native PyTorch TPU execution and the engineering choices behind workload portability."
-crawled_at: "2026-10-26T12:48:22.359073+00:00"
-crawler_engine: "Crawl4AI"
+crawled_at: "2026-10-26T14:44:05.047697+00:00"
+crawler_engine: "Crawl4AI+BlogArticleCleaner"
 ---
-
-[ ![Google for Developers](https://storage.googleapis.com/gweb-developer-goog-blog-cms-assets/site/20260817-205152/images/g-dev.svg) ](https://developers.google.com/)
-[ Community/Events ](https://developers.google.com/community)
-[ Learn ](https://developers.google.com/solutions/catalog)
-[ Blog ](https://developers.googleblog.com)
-[ YouTube ](https://www.youtube.com/user/GoogleDevelopers)
-Search 
-[ ![Google for Developers](https://storage.googleapis.com/gweb-developer-goog-blog-cms-assets/site/20260817-205152/images/g-dev.svg) ](https://developers.google.com/)
-  * [ Community/Events  ](https://developers.google.com/community)
-  * [ Learn  ](https://developers.google.com/solutions/catalog)
-  * [ Blog  ](https://developers.googleblog.com)
-  * [ YouTube  ](https://www.youtube.com/user/GoogleDevelopers)
-
 
 # TorchTPU: Running PyTorch Natively on TPUs at Google Scale
 APRIL 7, 2026
@@ -94,39 +81,4 @@ posted in:
 Next [ ](https://developers.googleblog.com/speeding-up-ai-bringing-google-colossus-to-pytorch-via-gcsfs-and-rapid-bucket/)
 Related Posts
 [ ![Architecting Governed, Self-Evolving AI Agents on Google Cloud](https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Gemini_Generated_Image_g9d0nag9d0n.2e16d0ba.fill-800x400.jpg) AI Cloud Tutorials Industry Trends Architecting Governed, Self-Evolving AI Agents on Google Cloud OCT. 22, 2026 ](https://developers.googleblog.com/architecting-governed-self-evolving-ai-agents-on-gemini-agent-platform/) [ ![Integrating TorchTPU into TorchTitan and Optimizing Models for TPU](https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Torch_Titan_Header_Image.2e16d0ba.fill-800x400.jpg) AI Cloud Announcements Best Practices Integrating TorchTPU into TorchTitan and Optimizing Models for TPU OCT. 20, 2026 ](https://developers.googleblog.com/integrating-torchtpu-into-torchtitan-and-optimizing-models-for-tpu/) [ ![Streaming comes to API Gateway: real-time and AI-ready APIs, without changing your spec](https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Streaming_feature_in__API_Gateway_.2e16d0ba.fill-800x400.jpg) Cloud Announcements Events Streaming comes to API Gateway: real-time and AI-ready APIs, without changing your spec OCT. 22, 2026 ](https://developers.googleblog.com/streaming-comes-to-api-gateway-real-time-and-ai-ready-apis-without-changing-your-spec/) [ ![Powering the Agent Development Lifecycle with any framework, from ADK to LangChain and beyond](https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/1_2.2e16d0ba.fill-800x400.png) AI Cloud Tutorials Influence Powering the Agent Development Lifecycle with any framework, from ADK to LangChain and beyond OCT. 21, 2026 ](https://developers.googleblog.com/powering-the-agent-development-lifecycle-with-any-framework-from-adk-to-langchain-and-beyond/)
-  * Connect 
-    * [ Blog ](https://googledevelopers.blogspot.com)
-    * [ Bluesky ](https://goo.gle/3FReQXN)
-    * [ Instagram ](https://goo.gle/googlefordevs)
-    * [ LinkedIn ](https://goo.gle/gdevs-li)
-    * [ X (Twitter) ](https://goo.gle/gdevs-tw)
-    * [ YouTube ](https://goo.gle/developers)
-  * Programs 
-    * [ Google Developer Program ](https://developers.google.com/program)
-    * [ Google Developer Groups ](https://developers.google.com/community/gdg)
-    * [ Google Developer Experts ](https://developers.google.com/community/experts)
-    * [ Accelerators ](https://developers.google.com/community/accelerators)
-    * [ Women Techmakers ](https://www.womentechmakers.com)
-    * [ Google Cloud & NVIDIA ](https://developers.google.com/community/nvidia)
-  * Developer consoles 
-    * [ Google API Console ](https://console.developers.google.com)
-    * [ Google Cloud Platform Console ](https://console.cloud.google.com)
-    * [ Google Play Console ](https://play.google.com/apps/publish)
-    * [ Firebase Console ](https://console.firebase.google.com)
-    * [ Actions on Google Console ](https://console.actions.google.com)
-    * [ Cast SDK Developer Console ](https://cast.google.com/publish)
-    * [ Chrome Web Store Dashboard ](https://chrome.google.com/webstore/developer/dashboard)
-    * [ Google Home Developer Console ](https://console.home.google.com/)
-
-
-[ ![Google for Developers](https://storage.googleapis.com/gweb-developer-goog-blog-cms-assets/site/20260817-205152/images/g-dev.svg) ](https://developers.google.com/)
-  * [ Android ](https://developer.android.com)
-  * [ Chrome ](https://developer.chrome.com/home)
-  * [ Firebase ](https://firebase.google.com)
-  * [ Google Cloud Platform ](https://cloud.google.com)
-  * [ All products ](https://developers.google.com/products)
-  * Manage cookies 
-
-
-  * [ Terms ](https://developers.google.com/terms/site-terms)
-  * [ Privacy ](https://policies.google.com/privacy)
+  * Connect

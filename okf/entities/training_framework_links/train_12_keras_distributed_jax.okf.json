@@ -1,52 +1,279 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:train_12_keras_distributed_jax",
-  "@type": "DocumentationResource",
-  "name": "Keras distributed training with JAX",
-  "canonicalUrl": "https://keras.io/guides/distributed_training_with_jax/",
-  "category": "Training framework links",
-  "categorySlug": "training_framework_links",
-  "description": "Use JAX sharding to train Keras models across multiple GPUs or TPUs.",
-  "provenance": {
-    "sourceUrl": "https://keras.io/guides/distributed_training_with_jax/",
-    "crawledAt": "2026-10-26T12:46:45.055751+00:00",
-    "extractorEngine": "DescriptorFallback",
-    "contentLengthBytes": 224
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Keras distributed training with JAX",
-      "documentedIn",
-      "https://keras.io/guides/distributed_training_with_jax/"
-    ],
-    [
-      "Keras distributed training with JAX",
-      "belongsToCategory",
-      "training_framework_links"
-    ],
-    [
-      "Keras distributed training with JAX",
-      "supportsWorkflow",
-      "Distributed Machine Learning Training"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:train_12_keras_distributed_jax",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "train_12_keras_distributed_jax",
+    "name": "Keras distributed training with JAX",
+    "url": "https://keras.io/guides/distributed_training_with_jax/",
+    "category": "training_framework_links",
+    "description": "Use JAX sharding to train Keras models across multiple GPUs or TPUs.",
+    "char_count": 12600,
+    "word_count": 1295,
+    "section_count": 15,
+    "code_block_count": 4,
+    "table_count": 0,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.513202+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:train_12_keras_distributed_jax",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:train_12_keras_distributed_jax",
+        "predicate": "schema:name",
+        "object": "Keras distributed training with JAX"
+      },
+      {
+        "subject": "tpu_doc:train_12_keras_distributed_jax",
+        "predicate": "schema:url",
+        "object": "https://keras.io/guides/distributed_training_with_jax/"
+      },
+      {
+        "subject": "tpu_doc:train_12_keras_distributed_jax",
+        "predicate": "schema:category",
+        "object": "training_framework_links"
+      },
+      {
+        "subject": "tpu_doc:train_12_keras_distributed_jax",
+        "predicate": "schema:description",
+        "object": "Use JAX sharding to train Keras models across multiple GPUs or TPUs."
+      },
+      {
+        "subject": "tpu_doc:train_12_keras_distributed_jax",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:train_12_keras_distributed_jax",
+        "predicate": "okf:hasSection",
+        "object": "Multi-GPU distributed training with JAX"
+      },
+      {
+        "subject": "tpu_doc:train_12_keras_distributed_jax",
+        "predicate": "okf:hasSection",
+        "object": "Introduction"
+      },
+      {
+        "subject": "tpu_doc:train_12_keras_distributed_jax",
+        "predicate": "okf:hasSection",
+        "object": "Setup"
+      },
+      {
+        "subject": "tpu_doc:train_12_keras_distributed_jax",
+        "predicate": "okf:hasSection",
+        "object": "Single-host, multi-device synchronous training"
+      },
+      {
+        "subject": "tpu_doc:train_12_keras_distributed_jax",
+        "predicate": "okf:hasSection",
+        "object": "Config"
+      },
+      {
+        "subject": "tpu_doc:train_12_keras_distributed_jax",
+        "predicate": "okf:hasSection",
+        "object": "Initialize all state with .build()"
+      },
+      {
+        "subject": "tpu_doc:train_12_keras_distributed_jax",
+        "predicate": "okf:hasSection",
+        "object": "This is the loss function that will be differentiated."
+      },
+      {
+        "subject": "tpu_doc:train_12_keras_distributed_jax",
+        "predicate": "okf:hasSection",
+        "object": "Keras provides a pure functional forward pass: model.stateless_call"
+      },
+      {
+        "subject": "tpu_doc:train_12_keras_distributed_jax",
+        "predicate": "okf:hasSection",
+        "object": "Function to compute gradients"
+      },
+      {
+        "subject": "tpu_doc:train_12_keras_distributed_jax",
+        "predicate": "okf:hasSection",
+        "object": "Training step, Keras provides a pure functional optimizer.stateless_apply"
+      },
+      {
+        "subject": "tpu_doc:train_12_keras_distributed_jax",
+        "predicate": "okf:hasSection",
+        "object": "Replicate the model and optimizer variable on all devices"
+      },
+      {
+        "subject": "tpu_doc:train_12_keras_distributed_jax",
+        "predicate": "okf:hasSection",
+        "object": "Data will be split along the batch axis"
+      },
+      {
+        "subject": "tpu_doc:train_12_keras_distributed_jax",
+        "predicate": "okf:hasSection",
+        "object": "Display data sharding"
+      },
+      {
+        "subject": "tpu_doc:train_12_keras_distributed_jax",
+        "predicate": "okf:hasSection",
+        "object": "Custom training loop"
+      },
+      {
+        "subject": "tpu_doc:train_12_keras_distributed_jax",
+        "predicate": "okf:hasSection",
+        "object": "Post-processing model state update to write them back into the model"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Keras distributed training with JAX provides official guidance on Use JAX sharding to train Keras models across multiple GPUs or TPUs.",
-      "confidence": 1.0,
-      "source": "https://keras.io/guides/distributed_training_with_jax/",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Keras distributed training with JAX used for in Cloud TPU workflows?",
-      "answer": "Use JAX sharding to train Keras models across multiple GPUs or TPUs.",
-      "category": "training_framework_links"
-    }
-  ],
-  "contentSummary": "Use JAX sharding to train Keras models across multiple GPUs or TPUs."
+  },
+  "structured_content": {
+    "summary": "Use JAX sharding to train Keras models across multiple GPUs or TPUs.",
+    "sections": [
+      {
+        "heading": "Multi-GPU distributed training with JAX",
+        "level": 1,
+        "content": "**Author:** [fchollet](https://twitter.com/fchollet)<br>\n**Date created:** 2023/07/11<br>\n**Last modified:** 2023/07/11<br>\n**Description:** Guide to multi-GPU/TPU training for Keras models with JAX.\n\n\n<img class=\"k-inline-icon\" src=\"https://colab.research.google.com/img/colab_favicon.ico\"/> [**View in Colab**](https://colab.research.google.com/github/keras-team/keras-io/blob/master/guides/ipynb/distributed_training_with_jax.ipynb)  <span class=\"k-dot\">\u2022</span><img class=\"k-inline-icon\" src=\"https://github.com/favicon.ico\"/> [**GitHub source**](https://github.com/keras-team/keras-io/blob/master/guides/distributed_training_with_jax.py)\n\n\n\n---"
+      },
+      {
+        "heading": "Introduction",
+        "level": 2,
+        "content": "There are generally two ways to distribute computation across multiple devices:\n\n**Data parallelism**, where a single model gets replicated on multiple devices or\nmultiple machines. Each of them processes different batches of data, then they merge\ntheir results. There exist many variants of this setup, that differ in how the different\nmodel replicas merge results, in whether they stay in sync at every batch or whether they\nare more loosely coupled, etc.\n\n**Model parallelism**, where different parts of a single model run on different devices,\nprocessing a single batch of data together. This works best with models that have a\nnaturally-parallel architecture, such as models that feature multiple branches.\n\nThis guide focuses on data parallelism, in particular **synchronous data parallelism**,\nwhere the different replicas of the model stay in sync after each batch they process.\nSynchronicity keeps the model convergence behavior identical to what you would see for\nsingle-device training.\n\nSpecifically, this guide teaches you how to use `jax.sharding` APIs to train Keras\nmodels, with minimal changes to your code, on multiple GPUs or TPUS (typically 2 to 16)\ninstalled on a single machine (single host, multi-device training). This is the\nmost common setup for researchers and small-scale industry workflows.\n\n---"
+      },
+      {
+        "heading": "Setup",
+        "level": 2,
+        "content": "Let's start by defining the function that creates the model that we will train,\nand the function that creates the dataset we will train on (MNIST in this case).\n\n\n```python\nimport os\n\nos.environ[\"KERAS_BACKEND\"] = \"jax\"\n\nimport jax\nimport numpy as np\nimport tensorflow as tf\nimport keras\n\nfrom jax.experimental import mesh_utils\nfrom jax.sharding import Mesh\nfrom jax.sharding import NamedSharding\nfrom jax.sharding import PartitionSpec as P\n\n\ndef get_model():\n    # Make a simple convnet with batch normalization and dropout.\n    inputs = keras.Input(shape=(28, 28, 1))\n    x = keras.layers.Rescaling(1.0 / 255.0)(inputs)\n    x = keras.layers.Conv2D(filters=12, kernel_size=3, padding=\"same\", use_bias=False)(\n        x\n    )\n    x = keras.layers.BatchNormalization(scale=False, center=True)(x)\n    x = keras.layers.ReLU()(x)\n    x = keras.layers.Conv2D(\n        filters=24,\n        kernel_size=6,\n        use_bias=False,\n        strides=2,\n    )(x)\n    x = keras.layers.BatchNormalization(scale=False, center=True)(x)\n    x = keras.layers.ReLU()(x)\n    x = keras.layers.Conv2D(\n        filters=32,\n        kernel_size=6,\n        padding=\"same\",\n        strides=2,\n        name=\"large_k\",\n    )(x)\n    x = keras.layers.BatchNormalization(scale=False, center=True)(x)\n    x = keras.layers.ReLU()(x)\n    x = keras.layers.GlobalAveragePooling2D()(x)\n    x = keras.layers.Dense(256, activation=\"relu\")(x)\n    x = keras.layers.Dropout(0.5)(x)\n    outputs = keras.layers.Dense(10)(x)\n    model = keras.Model(inputs, outputs)\n    return model\n\n\ndef get_datasets():\n    # Load the data and split it between train and test sets\n    (x_train, y_train), (x_test, y_test) = keras.datasets.mnist.load_data()\n\n    # Scale images to the [0, 1] range\n    x_train = x_train.astype(\"float32\")\n    x_test = x_test.astype(\"float32\")\n    # Make sure images have shape (28, 28, 1)\n    x_train = np.expand_dims(x_train, -1)\n    x_test = np.expand_dims(x_test, -1)\n    print(\"x_train shape:\", x_train.shape)\n    print(x_train.shape[0], \"train samples\")\n    print(x_test.shape[0], \"test samples\")\n\n    # Create TF Datasets\n    train_data = tf.data.Dataset.from_tensor_slices((x_train, y_train))\n    eval_data = tf.data.Dataset.from_tensor_slices((x_test, y_test))\n    return train_data, eval_data\n\n```\n\n---"
+      },
+      {
+        "heading": "Single-host, multi-device synchronous training",
+        "level": 2,
+        "content": "In this setup, you have one machine with several GPUs or TPUs on it (typically 2 to 16).\nEach device will run a copy of your model (called a **replica**). For simplicity, in\nwhat follows, we'll assume we're dealing with 8 GPUs, at no loss of generality.\n\n**How it works**\n\nAt each step of training:\n\n- The current batch of data (called **global batch**) is split into 8 different\n  sub-batches (called **local batches**). For instance, if the global batch has 512\n  samples, each of the 8 local batches will have 64 samples.\n- Each of the 8 replicas independently processes a local batch: they run a forward pass,\n  then a backward pass, outputting the gradient of the weights with respect to the loss of\n  the model on the local batch.\n- The weight updates originating from local gradients are efficiently merged across the 8\n  replicas. Because this is done at the end of every step, the replicas always stay in\n  sync.\n\nIn practice, the process of synchronously updating the weights of the model replicas is\nhandled at the level of each individual weight variable. This is done through a using\na `jax.sharding.NamedSharding` that is configured to replicate the variables.\n\n**How to use it**\n\nTo do single-host, multi-device synchronous training with a Keras model, you\nwould use the `jax.sharding` features. Here's how it works:\n\n- We first create a device mesh using `mesh_utils.create_device_mesh`.\n- We use `jax.sharding.Mesh`, `jax.sharding.NamedSharding` and\n  `jax.sharding.PartitionSpec` to define how to partition JAX arrays.\n    - We specify that we want to replicate the model and optimizer variables\n      across all devices by using a spec with no axis.\n    - We specify that we want to shard the data across devices by using a spec\n      that splits along the batch dimension.\n- We use `jax.device_put` to replicate the model and optimizer variables across\n  devices. This happens once at the beginning.\n- In the training loop, for each batch that we process, we use `jax.device_put`\n  to split the batch across devices before invoking the train step.\n\nHere's the flow, where each step is split into its own utility function:\n\n\n```python"
+      },
+      {
+        "heading": "Config",
+        "level": 1,
+        "content": "num_epochs = 2\nbatch_size = 64\n\ntrain_data, eval_data = get_datasets()\ntrain_data = train_data.batch(batch_size, drop_remainder=True)\n\nmodel = get_model()\noptimizer = keras.optimizers.Adam(1e-3)\nloss = keras.losses.SparseCategoricalCrossentropy(from_logits=True)"
+      },
+      {
+        "heading": "Initialize all state with .build()",
+        "level": 1,
+        "content": "(one_batch, one_batch_labels) = next(iter(train_data))\nmodel.build(one_batch)\noptimizer.build(model.trainable_variables)"
+      },
+      {
+        "heading": "This is the loss function that will be differentiated.",
+        "level": 1,
+        "content": ""
+      },
+      {
+        "heading": "Keras provides a pure functional forward pass: model.stateless_call",
+        "level": 1,
+        "content": "def compute_loss(trainable_variables, non_trainable_variables, x, y):\n    y_pred, updated_non_trainable_variables = model.stateless_call(\n        trainable_variables, non_trainable_variables, x, training=True\n    )\n    loss_value = loss(y, y_pred)\n    return loss_value, updated_non_trainable_variables"
+      },
+      {
+        "heading": "Function to compute gradients",
+        "level": 1,
+        "content": "compute_gradients = jax.value_and_grad(compute_loss, has_aux=True)"
+      },
+      {
+        "heading": "Training step, Keras provides a pure functional optimizer.stateless_apply",
+        "level": 1,
+        "content": "@jax.jit\ndef train_step(train_state, x, y):\n    trainable_variables, non_trainable_variables, optimizer_variables = train_state\n    (loss_value, non_trainable_variables), grads = compute_gradients(\n        trainable_variables, non_trainable_variables, x, y\n    )\n\n    trainable_variables, optimizer_variables = optimizer.stateless_apply(\n        optimizer_variables, grads, trainable_variables\n    )\n\n    return loss_value, (\n        trainable_variables,\n        non_trainable_variables,\n        optimizer_variables,\n    )"
+      },
+      {
+        "heading": "Replicate the model and optimizer variable on all devices",
+        "level": 1,
+        "content": "def get_replicated_train_state(devices):\n    # All variables will be replicated on all devices\n    var_mesh = Mesh(devices, axis_names=(\"_\"))\n    # In NamedSharding, axes not mentioned are replicated (all axes here)\n    var_replication = NamedSharding(var_mesh, P())\n\n    # Apply the distribution settings to the model variables\n    trainable_variables = jax.device_put(model.trainable_variables, var_replication)\n    non_trainable_variables = jax.device_put(\n        model.non_trainable_variables, var_replication\n    )\n    optimizer_variables = jax.device_put(optimizer.variables, var_replication)\n\n    # Combine all state in a tuple\n    return (trainable_variables, non_trainable_variables, optimizer_variables)\n\n\nnum_devices = len(jax.local_devices())\nprint(f\"Running on {num_devices} devices: {jax.local_devices()}\")\ndevices = mesh_utils.create_device_mesh((num_devices,))"
+      },
+      {
+        "heading": "Data will be split along the batch axis",
+        "level": 1,
+        "content": "data_mesh = Mesh(devices, axis_names=(\"batch\",))  # naming axes of the mesh\ndata_sharding = NamedSharding(\n    data_mesh,\n    P(\n        \"batch\",\n    ),\n)  # naming axes of the sharded partition"
+      },
+      {
+        "heading": "Display data sharding",
+        "level": 1,
+        "content": "x, y = next(iter(train_data))\nsharded_x = jax.device_put(x.numpy(), data_sharding)\nprint(\"Data sharding\")\njax.debug.visualize_array_sharding(jax.numpy.reshape(sharded_x, [-1, 28 * 28]))\n\ntrain_state = get_replicated_train_state(devices)"
+      },
+      {
+        "heading": "Custom training loop",
+        "level": 1,
+        "content": "for epoch in range(num_epochs):\n    data_iter = iter(train_data)\n    for data in data_iter:\n        x, y = data\n        sharded_x = jax.device_put(x.numpy(), data_sharding)\n        loss_value, train_state = train_step(train_state, sharded_x, y.numpy())\n    print(\"Epoch\", epoch, \"loss:\", loss_value)"
+      },
+      {
+        "heading": "Post-processing model state update to write them back into the model",
+        "level": 1,
+        "content": "trainable_variables, non_trainable_variables, optimizer_variables = train_state\nfor variable, value in zip(model.trainable_variables, trainable_variables):\n    variable.assign(value)\nfor variable, value in zip(model.non_trainable_variables, non_trainable_variables):\n    variable.assign(value)\n```\n\n<div class=\"k-default-codeblock\">\n```\nx_train shape: (60000, 28, 28, 1)\n60000 train samples\n10000 test samples\nRunning on 1 devices: [CpuDevice(id=0)]\nData sharding\n\n```\n</div>\n<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #ffffff; text-decoration-color: #ffffff; background-color: #393b79\">                                                                                </span>\n<span style=\"color: #ffffff; text-decoration-color: #ffffff; background-color: #393b79\">                                                                                </span>\n<span style=\"color: #ffffff; text-decoration-color: #ffffff; background-color: #393b79\">                                                                                </span>\n<span style=\"color: #ffffff; text-decoration-color: #ffffff; background-color: #393b79\">                                                                                </span>\n<span style=\"color: #ffffff; text-decoration-color: #ffffff; background-color: #393b79\">                                                                                </span>\n<span style=\"color: #ffffff; text-decoration-color: #ffffff; background-color: #393b79\">                                     CPU 0                                      </span>\n<span style=\"color: #ffffff; text-decoration-color: #ffffff; background-color: #393b79\">                                                                                </span>\n<span style=\"color: #ffffff; text-decoration-color: #ffffff; background-color: #393b79\">                                                                                </span>\n<span style=\"color: #ffffff; text-decoration-color: #ffffff; background-color: #393b79\">                                                                                </span>\n<span style=\"color: #ffffff; text-decoration-color: #ffffff; background-color: #393b79\">                                                                                </span>\n<span style=\"color: #ffffff; text-decoration-color: #ffffff; background-color: #393b79\">                                                                                </span>\n</pre>\n\n\n\n<div class=\"k-default-codeblock\">\n```\nEpoch 0 loss: 0.28599858\nEpoch 1 loss: 0.23666474\n\n```\n</div>\nThat's it!"
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "python",
+        "code": "import os\n\nos.environ[\"KERAS_BACKEND\"] = \"jax\"\n\nimport jax\nimport numpy as np\nimport tensorflow as tf\nimport keras\n\nfrom jax.experimental import mesh_utils\nfrom jax.sharding import Mesh\nfrom jax.sharding import NamedSharding\nfrom jax.sharding import PartitionSpec as P\n\n\ndef get_model():\n    # Make a simple convnet with batch normalization and dropout.\n    inputs = keras.Input(shape=(28, 28, 1))\n    x = keras.layers.Rescaling(1.0 / 255.0)(inputs)\n    x = keras.layers.Conv2D(filters=12, kernel_size=3, padding=\"same\", use_bias=False)(\n        x\n    )\n    x = keras.layers.BatchNormalization(scale=False, center=True)(x)\n    x = keras.layers.ReLU()(x)\n    x = keras.layers.Conv2D(\n        filters=24,\n        kernel_size=6,\n        use_bias=False,\n        strides=2,\n    )(x)\n    x = keras.layers.BatchNormalization(scale=False, center=True)(x)\n    x = keras.layers.ReLU()(x)\n    x = keras.layers.Conv2D(\n        filters=32,\n        kernel_size=6,\n        padding=\"same\",\n        strides=2,\n        name=\"large_k\",\n    )(x)\n    x = keras.layers.BatchNormalization(scale=False, center=True)(x)\n    x = keras.layers.ReLU()(x)\n    x = keras.layers.GlobalAveragePooling2D()(x)\n    x = keras.layers.Dense(256, activation=\"relu\")(x)\n    x = keras.layers.Dropout(0.5)(x)\n    outputs = keras.layers.Dense(10)(x)\n    model = keras.Model(inputs, outputs)\n    return model\n\n\ndef get_datasets():\n    # Load the data and split it between train and test sets\n    (x_train, y_train), (x_test, y_test) = keras.datasets.mnist.load_data()\n\n    # Scale images to the [0, 1] range\n    x_train = x_train.astype(\"float32\")\n    x_test = x_test.astype(\"float32\")\n    # Make sure images have shape (28, 28, 1)\n    x_train = np.expand_dims(x_train, -1)\n    x_test = np.expand_dims(x_test, -1)\n    print(\"x_train shape:\", x_train.shape)\n    print(x_train.shape[0], \"train samples\")\n    print(x_test.shape[0], \"test samples\")\n\n    # Create TF Datasets\n    train_data = tf.data.Dataset.from_tensor_slices((x_train, y_train))\n    eval_data = tf.data.Dataset.from_tensor_slices((x_test, y_test))\n    return train_data, eval_data"
+      },
+      {
+        "language": "python",
+        "code": "# Config\nnum_epochs = 2\nbatch_size = 64\n\ntrain_data, eval_data = get_datasets()\ntrain_data = train_data.batch(batch_size, drop_remainder=True)\n\nmodel = get_model()\noptimizer = keras.optimizers.Adam(1e-3)\nloss = keras.losses.SparseCategoricalCrossentropy(from_logits=True)\n\n# Initialize all state with .build()\n(one_batch, one_batch_labels) = next(iter(train_data))\nmodel.build(one_batch)\noptimizer.build(model.trainable_variables)\n\n\n# This is the loss function that will be differentiated.\n# Keras provides a pure functional forward pass: model.stateless_call\ndef compute_loss(trainable_variables, non_trainable_variables, x, y):\n    y_pred, updated_non_trainable_variables = model.stateless_call(\n        trainable_variables, non_trainable_variables, x, training=True\n    )\n    loss_value = loss(y, y_pred)\n    return loss_value, updated_non_trainable_variables\n\n\n# Function to compute gradients\ncompute_gradients = jax.value_and_grad(compute_loss, has_aux=True)\n\n\n# Training step, Keras provides a pure functional optimizer.stateless_apply\n@jax.jit\ndef train_step(train_state, x, y):\n    trainable_variables, non_trainable_variables, optimizer_variables = train_state\n    (loss_value, non_trainable_variables), grads = compute_gradients(\n        trainable_variables, non_trainable_variables, x, y\n    )\n\n    trainable_variables, optimizer_variables = optimizer.stateless_apply(\n        optimizer_variables, grads, trainable_variables\n    )\n\n    return loss_value, (\n        trainable_variables,\n        non_trainable_variables,\n        optimizer_variables,\n    )\n\n\n# Replicate the model and optimizer variable on all devices\ndef get_replicated_train_state(devices):\n    # All variables will be replicated on all devices\n    var_mesh = Mesh(devices, axis_names=(\"_\"))\n    # In NamedSharding, axes not mentioned are replicated (all axes here)\n    var_replication = NamedSharding(var_mesh, P())\n\n    # Apply the distribution settings to the model variables\n    trainable_variables = jax.device_put(model.trainable_variables, var_replication)\n    non_trainable_variables = jax.device_put(\n        model.non_trainable_variables, var_replication\n    )\n    optimizer_variables = jax.device_put(optimizer.variables, var_replication)\n\n    # Combine all state in a tuple\n    return (trainable_variables, non_trainable_variables, optimizer_variables)\n\n\nnum_devices = len(jax.local_devices())\nprint(f\"Running on {num_devices} devices: {jax.local_devices()}\")\ndevices = mesh_utils.create_device_mesh((num_devices,))\n\n# Data will be split along the batch axis\ndata_mesh = Mesh(devices, axis_names=(\"batch\",))  # naming axes of the mesh\ndata_sharding = NamedSharding(\n    data_mesh,\n    P(\n        \"batch\",\n    ),\n)  # naming axes of the sharded partition\n\n# Display data sharding\nx, y = next(iter(train_data))\nsharded_x = jax.device_put(x.numpy(), data_sharding)\nprint(\"Data sharding\")\njax.debug.visualize_array_sharding(jax.numpy.reshape(sharded_x, [-1, 28 * 28]))\n\ntrain_state = get_replicated_train_state(devices)\n\n# Custom training loop\nfor epoch in range(num_epochs):\n    data_iter = iter(train_data)\n    for data in data_iter:\n        x, y = data\n        sharded_x = jax.device_put(x.numpy(), data_sharding)\n        loss_value, train_state = train_step(train_state, sharded_x, y.numpy())\n    print(\"Epoch\", epoch, \"loss:\", loss_value)\n\n# Post-processing model state update to write them back into the model\ntrainable_variables, non_trainable_variables, optimizer_variables = train_state\nfor variable, value in zip(model.trainable_variables, trainable_variables):\n    variable.assign(value)\nfor variable, value in zip(model.non_trainable_variables, non_trainable_variables):\n    variable.assign(value)"
+      },
+      {
+        "language": "text",
+        "code": "x_train shape: (60000, 28, 28, 1)\n60000 train samples\n10000 test samples\nRunning on 1 devices: [CpuDevice(id=0)]\nData sharding"
+      },
+      {
+        "language": "text",
+        "code": "Epoch 0 loss: 0.28599858\nEpoch 1 loss: 0.23666474"
+      }
+    ],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Keras distributed training with JAX' (https://keras.io/guides/distributed_training_with_jax/)?",
+        "answer": "Use JAX sharding to train Keras models across multiple GPUs or TPUs."
+      },
+      {
+        "question": "How does 'Keras distributed training with JAX' handle: Multi-GPU distributed training with JAX?",
+        "answer": "**Author:** [fchollet](https://twitter.com/fchollet)<br>\n**Date created:** 2023/07/11<br>\n**Last modified:** 2023/07/11<br>\n**Description:** Guide to multi-GPU/TPU training for Keras models with JAX.\n\n\n<img class=\"k-inline-icon\" src=\"https://colab.research.google.com/img/colab_favicon.ico\"/> [**View in Colab**](https://colab.research.google.com/github/keras-team/keras-io/blob/master/guides/ipynb/distributed_training_with_jax.ipynb)  <span class=\"k-dot\">\u2022</span><img class=\"k-inline-icon\" src=\"https://github.com/favicon.ico\"/> [**GitHub source**](https://github.com/keras-team/keras-io/blob/master/guides/distributed_training_with_jax.py)\n\n\n\n---"
+      },
+      {
+        "question": "How does 'Keras distributed training with JAX' handle: Introduction?",
+        "answer": "There are generally two ways to distribute computation across multiple devices:\n\n**Data parallelism**, where a single model gets replicated on multiple devices or\nmultiple machines. Each of them processes different batches of data, then they merge\ntheir results. There exist many variants of this setup, that differ in how the different\nmodel replicas merge results, in whether they stay in sync at every batch or whether they\nare more loosely coupled, etc.\n\n**Model parallelism**, where different parts of a single model run on different devices,\nprocessing a single batch of data together. This works best with models that have a\nnaturally-parallel architecture, such as models that feature multiple branches.\n\nThis guide focuses on data parallelism, in particular **synchronous data parallelism**,\nwhere the different replicas of the model stay in sync after each batch they process.\nSynchronicity keeps the model convergence behavior identical to what you would see for\nsingle-device training.\n\nSpecifically, this guide teaches you how to use `jax.sharding` APIs to train Keras\nmodels, with minimal changes to your code, on multiple GPUs or TPUS (typically 2 to 16)\ninstalled on a single machine "
+      },
+      {
+        "question": "How does 'Keras distributed training with JAX' handle: Setup?",
+        "answer": "Let's start by defining the function that creates the model that we will train,\nand the function that creates the dataset we will train on (MNIST in this case).\n\n\n```python\nimport os\n\nos.environ[\"KERAS_BACKEND\"] = \"jax\"\n\nimport jax\nimport numpy as np\nimport tensorflow as tf\nimport keras\n\nfrom jax.experimental import mesh_utils\nfrom jax.sharding import Mesh\nfrom jax.sharding import NamedSharding\nfrom jax.sharding import PartitionSpec as P\n\n\ndef get_model():\n    # Make a simple convnet with batch normalization and dropout.\n    inputs = keras.Input(shape=(28, 28, 1))\n    x = keras.layers.Rescaling(1.0 / 255.0)(inputs)\n    x = keras.layers.Conv2D(filters=12, kernel_size=3, padding=\"same\", use_bias=False)(\n        x\n    )\n    x = keras.layers.BatchNormalization(scale=False, center=True)(x)\n    x = keras.layers.ReLU()(x)\n    x = keras.layers.Conv2D(\n        filters=24,\n        kernel_size=6,\n        use_bias=False,\n        strides=2,\n    )(x)\n    x = keras.layers.BatchNormalization(scale=False, center=True)(x)\n    x = keras.layers.ReLU()(x)\n    x = keras.layers.Conv2D(\n        filters=32,\n        kernel_size=6,\n        padding=\"same\",\n        strides=2,\n        name=\"large_k\",\n    )(x)\n "
+      },
+      {
+        "question": "How does 'Keras distributed training with JAX' handle: Single-host, multi-device synchronous training?",
+        "answer": "In this setup, you have one machine with several GPUs or TPUs on it (typically 2 to 16).\nEach device will run a copy of your model (called a **replica**). For simplicity, in\nwhat follows, we'll assume we're dealing with 8 GPUs, at no loss of generality.\n\n**How it works**\n\nAt each step of training:\n\n- The current batch of data (called **global batch**) is split into 8 different\n  sub-batches (called **local batches**). For instance, if the global batch has 512\n  samples, each of the 8 local batches will have 64 samples.\n- Each of the 8 replicas independently processes a local batch: they run a forward pass,\n  then a backward pass, outputting the gradient of the weights with respect to the loss of\n  the model on the local batch.\n- The weight updates originating from local gradients are efficiently merged across the 8\n  replicas. Because this is done at the end of every step, the replicas always stay in\n  sync.\n\nIn practice, the process of synchronously updating the weights of the model replicas is\nhandled at the level of each individual weight variable. This is done through a using\na `jax.sharding.NamedSharding` that is configured to replicate the variables.\n\n**How to use it**\n\nTo do"
+      },
+      {
+        "question": "How does 'Keras distributed training with JAX' handle: Config?",
+        "answer": "num_epochs = 2\nbatch_size = 64\n\ntrain_data, eval_data = get_datasets()\ntrain_data = train_data.batch(batch_size, drop_remainder=True)\n\nmodel = get_model()\noptimizer = keras.optimizers.Adam(1e-3)\nloss = keras.losses.SparseCategoricalCrossentropy(from_logits=True)"
+      },
+      {
+        "question": "How does 'Keras distributed training with JAX' handle: Initialize all state with .build()?",
+        "answer": "(one_batch, one_batch_labels) = next(iter(train_data))\nmodel.build(one_batch)\noptimizer.build(model.trainable_variables)"
+      },
+      {
+        "question": "How does 'Keras distributed training with JAX' handle: Keras provides a pure functional forward pass: model.stateless_call?",
+        "answer": "def compute_loss(trainable_variables, non_trainable_variables, x, y):\n    y_pred, updated_non_trainable_variables = model.stateless_call(\n        trainable_variables, non_trainable_variables, x, training=True\n    )\n    loss_value = loss(y, y_pred)\n    return loss_value, updated_non_trainable_variables"
+      },
+      {
+        "question": "How does 'Keras distributed training with JAX' handle: Function to compute gradients?",
+        "answer": "compute_gradients = jax.value_and_grad(compute_loss, has_aux=True)"
+      },
+      {
+        "question": "How does 'Keras distributed training with JAX' handle: Training step, Keras provides a pure functional optimizer.stateless_apply?",
+        "answer": "@jax.jit\ndef train_step(train_state, x, y):\n    trainable_variables, non_trainable_variables, optimizer_variables = train_state\n    (loss_value, non_trainable_variables), grads = compute_gradients(\n        trainable_variables, non_trainable_variables, x, y\n    )\n\n    trainable_variables, optimizer_variables = optimizer.stateless_apply(\n        optimizer_variables, grads, trainable_variables\n    )\n\n    return loss_value, (\n        trainable_variables,\n        non_trainable_variables,\n        optimizer_variables,\n    )"
+      }
+    ],
+    "full_markdown": "# Multi-GPU distributed training with JAX\n\n**Author:** [fchollet](https://twitter.com/fchollet)<br>\n**Date created:** 2023/07/11<br>\n**Last modified:** 2023/07/11<br>\n**Description:** Guide to multi-GPU/TPU training for Keras models with JAX.\n\n\n<img class=\"k-inline-icon\" src=\"https://colab.research.google.com/img/colab_favicon.ico\"/> [**View in Colab**](https://colab.research.google.com/github/keras-team/keras-io/blob/master/guides/ipynb/distributed_training_with_jax.ipynb)  <span class=\"k-dot\">\u2022</span><img class=\"k-inline-icon\" src=\"https://github.com/favicon.ico\"/> [**GitHub source**](https://github.com/keras-team/keras-io/blob/master/guides/distributed_training_with_jax.py)\n\n\n\n---\n## Introduction\n\nThere are generally two ways to distribute computation across multiple devices:\n\n**Data parallelism**, where a single model gets replicated on multiple devices or\nmultiple machines. Each of them processes different batches of data, then they merge\ntheir results. There exist many variants of this setup, that differ in how the different\nmodel replicas merge results, in whether they stay in sync at every batch or whether they\nare more loosely coupled, etc.\n\n**Model parallelism**, where different parts of a single model run on different devices,\nprocessing a single batch of data together. This works best with models that have a\nnaturally-parallel architecture, such as models that feature multiple branches.\n\nThis guide focuses on data parallelism, in particular **synchronous data parallelism**,\nwhere the different replicas of the model stay in sync after each batch they process.\nSynchronicity keeps the model convergence behavior identical to what you would see for\nsingle-device training.\n\nSpecifically, this guide teaches you how to use `jax.sharding` APIs to train Keras\nmodels, with minimal changes to your code, on multiple GPUs or TPUS (typically 2 to 16)\ninstalled on a single machine (single host, multi-device training). This is the\nmost common setup for researchers and small-scale industry workflows.\n\n---\n## Setup\n\nLet's start by defining the function that creates the model that we will train,\nand the function that creates the dataset we will train on (MNIST in this case).\n\n\n```python\nimport os\n\nos.environ[\"KERAS_BACKEND\"] = \"jax\"\n\nimport jax\nimport numpy as np\nimport tensorflow as tf\nimport keras\n\nfrom jax.experimental import mesh_utils\nfrom jax.sharding import Mesh\nfrom jax.sharding import NamedSharding\nfrom jax.sharding import PartitionSpec as P\n\n\ndef get_model():\n    # Make a simple convnet with batch normalization and dropout.\n    inputs = keras.Input(shape=(28, 28, 1))\n    x = keras.layers.Rescaling(1.0 / 255.0)(inputs)\n    x = keras.layers.Conv2D(filters=12, kernel_size=3, padding=\"same\", use_bias=False)(\n        x\n    )\n    x = keras.layers.BatchNormalization(scale=False, center=True)(x)\n    x = keras.layers.ReLU()(x)\n    x = keras.layers.Conv2D(\n        filters=24,\n        kernel_size=6,\n        use_bias=False,\n        strides=2,\n    )(x)\n    x = keras.layers.BatchNormalization(scale=False, center=True)(x)\n    x = keras.layers.ReLU()(x)\n    x = keras.layers.Conv2D(\n        filters=32,\n        kernel_size=6,\n        padding=\"same\",\n        strides=2,\n        name=\"large_k\",\n    )(x)\n    x = keras.layers.BatchNormalization(scale=False, center=True)(x)\n    x = keras.layers.ReLU()(x)\n    x = keras.layers.GlobalAveragePooling2D()(x)\n    x = keras.layers.Dense(256, activation=\"relu\")(x)\n    x = keras.layers.Dropout(0.5)(x)\n    outputs = keras.layers.Dense(10)(x)\n    model = keras.Model(inputs, outputs)\n    return model\n\n\ndef get_datasets():\n    # Load the data and split it between train and test sets\n    (x_train, y_train), (x_test, y_test) = keras.datasets.mnist.load_data()\n\n    # Scale images to the [0, 1] range\n    x_train = x_train.astype(\"float32\")\n    x_test = x_test.astype(\"float32\")\n    # Make sure images have shape (28, 28, 1)\n    x_train = np.expand_dims(x_train, -1)\n    x_test = np.expand_dims(x_test, -1)\n    print(\"x_train shape:\", x_train.shape)\n    print(x_train.shape[0], \"train samples\")\n    print(x_test.shape[0], \"test samples\")\n\n    # Create TF Datasets\n    train_data = tf.data.Dataset.from_tensor_slices((x_train, y_train))\n    eval_data = tf.data.Dataset.from_tensor_slices((x_test, y_test))\n    return train_data, eval_data\n\n```\n\n---\n## Single-host, multi-device synchronous training\n\nIn this setup, you have one machine with several GPUs or TPUs on it (typically 2 to 16).\nEach device will run a copy of your model (called a **replica**). For simplicity, in\nwhat follows, we'll assume we're dealing with 8 GPUs, at no loss of generality.\n\n**How it works**\n\nAt each step of training:\n\n- The current batch of data (called **global batch**) is split into 8 different\n  sub-batches (called **local batches**). For instance, if the global batch has 512\n  samples, each of the 8 local batches will have 64 samples.\n- Each of the 8 replicas independently processes a local batch: they run a forward pass,\n  then a backward pass, outputting the gradient of the weights with respect to the loss of\n  the model on the local batch.\n- The weight updates originating from local gradients are efficiently merged across the 8\n  replicas. Because this is done at the end of every step, the replicas always stay in\n  sync.\n\nIn practice, the process of synchronously updating the weights of the model replicas is\nhandled at the level of each individual weight variable. This is done through a using\na `jax.sharding.NamedSharding` that is configured to replicate the variables.\n\n**How to use it**\n\nTo do single-host, multi-device synchronous training with a Keras model, you\nwould use the `jax.sharding` features. Here's how it works:\n\n- We first create a device mesh using `mesh_utils.create_device_mesh`.\n- We use `jax.sharding.Mesh`, `jax.sharding.NamedSharding` and\n  `jax.sharding.PartitionSpec` to define how to partition JAX arrays.\n    - We specify that we want to replicate the model and optimizer variables\n      across all devices by using a spec with no axis.\n    - We specify that we want to shard the data across devices by using a spec\n      that splits along the batch dimension.\n- We use `jax.device_put` to replicate the model and optimizer variables across\n  devices. This happens once at the beginning.\n- In the training loop, for each batch that we process, we use `jax.device_put`\n  to split the batch across devices before invoking the train step.\n\nHere's the flow, where each step is split into its own utility function:\n\n\n```python\n# Config\nnum_epochs = 2\nbatch_size = 64\n\ntrain_data, eval_data = get_datasets()\ntrain_data = train_data.batch(batch_size, drop_remainder=True)\n\nmodel = get_model()\noptimizer = keras.optimizers.Adam(1e-3)\nloss = keras.losses.SparseCategoricalCrossentropy(from_logits=True)\n\n# Initialize all state with .build()\n(one_batch, one_batch_labels) = next(iter(train_data))\nmodel.build(one_batch)\noptimizer.build(model.trainable_variables)\n\n\n# This is the loss function that will be differentiated.\n# Keras provides a pure functional forward pass: model.stateless_call\ndef compute_loss(trainable_variables, non_trainable_variables, x, y):\n    y_pred, updated_non_trainable_variables = model.stateless_call(\n        trainable_variables, non_trainable_variables, x, training=True\n    )\n    loss_value = loss(y, y_pred)\n    return loss_value, updated_non_trainable_variables\n\n\n# Function to compute gradients\ncompute_gradients = jax.value_and_grad(compute_loss, has_aux=True)\n\n\n# Training step, Keras provides a pure functional optimizer.stateless_apply\n@jax.jit\ndef train_step(train_state, x, y):\n    trainable_variables, non_trainable_variables, optimizer_variables = train_state\n    (loss_value, non_trainable_variables), grads = compute_gradients(\n        trainable_variables, non_trainable_variables, x, y\n    )\n\n    trainable_variables, optimizer_variables = optimizer.stateless_apply(\n        optimizer_variables, grads, trainable_variables\n    )\n\n    return loss_value, (\n        trainable_variables,\n        non_trainable_variables,\n        optimizer_variables,\n    )\n\n\n# Replicate the model and optimizer variable on all devices\ndef get_replicated_train_state(devices):\n    # All variables will be replicated on all devices\n    var_mesh = Mesh(devices, axis_names=(\"_\"))\n    # In NamedSharding, axes not mentioned are replicated (all axes here)\n    var_replication = NamedSharding(var_mesh, P())\n\n    # Apply the distribution settings to the model variables\n    trainable_variables = jax.device_put(model.trainable_variables, var_replication)\n    non_trainable_variables = jax.device_put(\n        model.non_trainable_variables, var_replication\n    )\n    optimizer_variables = jax.device_put(optimizer.variables, var_replication)\n\n    # Combine all state in a tuple\n    return (trainable_variables, non_trainable_variables, optimizer_variables)\n\n\nnum_devices = len(jax.local_devices())\nprint(f\"Running on {num_devices} devices: {jax.local_devices()}\")\ndevices = mesh_utils.create_device_mesh((num_devices,))\n\n# Data will be split along the batch axis\ndata_mesh = Mesh(devices, axis_names=(\"batch\",))  # naming axes of the mesh\ndata_sharding = NamedSharding(\n    data_mesh,\n    P(\n        \"batch\",\n    ),\n)  # naming axes of the sharded partition\n\n# Display data sharding\nx, y = next(iter(train_data))\nsharded_x = jax.device_put(x.numpy(), data_sharding)\nprint(\"Data sharding\")\njax.debug.visualize_array_sharding(jax.numpy.reshape(sharded_x, [-1, 28 * 28]))\n\ntrain_state = get_replicated_train_state(devices)\n\n# Custom training loop\nfor epoch in range(num_epochs):\n    data_iter = iter(train_data)\n    for data in data_iter:\n        x, y = data\n        sharded_x = jax.device_put(x.numpy(), data_sharding)\n        loss_value, train_state = train_step(train_state, sharded_x, y.numpy())\n    print(\"Epoch\", epoch, \"loss:\", loss_value)\n\n# Post-processing model state update to write them back into the model\ntrainable_variables, non_trainable_variables, optimizer_variables = train_state\nfor variable, value in zip(model.trainable_variables, trainable_variables):\n    variable.assign(value)\nfor variable, value in zip(model.non_trainable_variables, non_trainable_variables):\n    variable.assign(value)\n```\n\n<div class=\"k-default-codeblock\">\n```\nx_train shape: (60000, 28, 28, 1)\n60000 train samples\n10000 test samples\nRunning on 1 devices: [CpuDevice(id=0)]\nData sharding\n\n```\n</div>\n<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\"><span style=\"color: #ffffff; text-decoration-color: #ffffff; background-color: #393b79\">                                                                                </span>\n<span style=\"color: #ffffff; text-decoration-color: #ffffff; background-color: #393b79\">                                                                                </span>\n<span style=\"color: #ffffff; text-decoration-color: #ffffff; background-color: #393b79\">                                                                                </span>\n<span style=\"color: #ffffff; text-decoration-color: #ffffff; background-color: #393b79\">                                                                                </span>\n<span style=\"color: #ffffff; text-decoration-color: #ffffff; background-color: #393b79\">                                                                                </span>\n<span style=\"color: #ffffff; text-decoration-color: #ffffff; background-color: #393b79\">                                     CPU 0                                      </span>\n<span style=\"color: #ffffff; text-decoration-color: #ffffff; background-color: #393b79\">                                                                                </span>\n<span style=\"color: #ffffff; text-decoration-color: #ffffff; background-color: #393b79\">                                                                                </span>\n<span style=\"color: #ffffff; text-decoration-color: #ffffff; background-color: #393b79\">                                                                                </span>\n<span style=\"color: #ffffff; text-decoration-color: #ffffff; background-color: #393b79\">                                                                                </span>\n<span style=\"color: #ffffff; text-decoration-color: #ffffff; background-color: #393b79\">                                                                                </span>\n</pre>\n\n\n\n<div class=\"k-default-codeblock\">\n```\nEpoch 0 loss: 0.28599858\nEpoch 1 loss: 0.23666474\n\n```\n</div>\nThat's it!"
+  }
 }

@@ -1,57 +1,286 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:setup_16_spot_compute",
-  "@type": "DocumentationResource",
-  "name": "Request TPU Spot VMs",
-  "canonicalUrl": "https://docs.cloud.google.com/tpu/docs/spot-compute",
-  "category": "TPU setup docs",
-  "categorySlug": "tpu_setup_docs",
-  "description": "Current discounted/preemptible Compute Engine TPU operation, including single VMs and MIG-backed multi-host slices.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/tpu/docs/spot-compute",
-    "crawledAt": "2026-10-26T12:45:19.717710+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 30033
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Request TPU Spot VMs",
-      "documentedIn",
-      "https://docs.cloud.google.com/tpu/docs/spot-compute"
-    ],
-    [
-      "Request TPU Spot VMs",
-      "belongsToCategory",
-      "tpu_setup_docs"
-    ],
-    [
-      "Request TPU Spot VMs",
-      "targetsPlatform",
-      "Google Cloud Platform"
-    ],
-    [
-      "Request TPU Spot VMs",
-      "managesHardware",
-      "Google Cloud TPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:setup_16_spot_compute",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "setup_16_spot_compute",
+    "name": "Request TPU Spot VMs",
+    "url": "https://docs.cloud.google.com/tpu/docs/spot-compute",
+    "category": "tpu_setup_docs",
+    "description": "Current discounted/preemptible Compute Engine TPU operation, including single VMs and MIG-backed multi-host slices.",
+    "char_count": 8649,
+    "word_count": 855,
+    "section_count": 14,
+    "code_block_count": 8,
+    "table_count": 0,
+    "cli_command_count": 5,
+    "indexed_at": "2026-10-26T14:46:54.402050+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:setup_16_spot_compute",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:setup_16_spot_compute",
+        "predicate": "schema:name",
+        "object": "Request TPU Spot VMs"
+      },
+      {
+        "subject": "tpu_doc:setup_16_spot_compute",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/tpu/docs/spot-compute"
+      },
+      {
+        "subject": "tpu_doc:setup_16_spot_compute",
+        "predicate": "schema:category",
+        "object": "tpu_setup_docs"
+      },
+      {
+        "subject": "tpu_doc:setup_16_spot_compute",
+        "predicate": "schema:description",
+        "object": "Current discounted/preemptible Compute Engine TPU operation, including single VMs and MIG-backed multi-host slices."
+      },
+      {
+        "subject": "tpu_doc:setup_16_spot_compute",
+        "predicate": "okf:hasSection",
+        "object": "Request TPU Spot VMs"
+      },
+      {
+        "subject": "tpu_doc:setup_16_spot_compute",
+        "predicate": "okf:hasSection",
+        "object": "Create TPU Spot VMs"
+      },
+      {
+        "subject": "tpu_doc:setup_16_spot_compute",
+        "predicate": "okf:hasSection",
+        "object": "Using MIGs for multi-host slices (Recommended)"
+      },
+      {
+        "subject": "tpu_doc:setup_16_spot_compute",
+        "predicate": "okf:hasSection",
+        "object": "gcloud"
+      },
+      {
+        "subject": "tpu_doc:setup_16_spot_compute",
+        "predicate": "okf:hasSection",
+        "object": "REST"
+      },
+      {
+        "subject": "tpu_doc:setup_16_spot_compute",
+        "predicate": "okf:hasSection",
+        "object": "gcloud"
+      },
+      {
+        "subject": "tpu_doc:setup_16_spot_compute",
+        "predicate": "okf:hasSection",
+        "object": "REST"
+      },
+      {
+        "subject": "tpu_doc:setup_16_spot_compute",
+        "predicate": "okf:hasSection",
+        "object": "gcloud"
+      },
+      {
+        "subject": "tpu_doc:setup_16_spot_compute",
+        "predicate": "okf:hasSection",
+        "object": "REST"
+      },
+      {
+        "subject": "tpu_doc:setup_16_spot_compute",
+        "predicate": "okf:hasSection",
+        "object": "Using single TPU VMs"
+      },
+      {
+        "subject": "tpu_doc:setup_16_spot_compute",
+        "predicate": "okf:hasSection",
+        "object": "gcloud"
+      },
+      {
+        "subject": "tpu_doc:setup_16_spot_compute",
+        "predicate": "okf:hasSection",
+        "object": "REST"
+      },
+      {
+        "subject": "tpu_doc:setup_16_spot_compute",
+        "predicate": "okf:hasSection",
+        "object": "Pricing and quota"
+      },
+      {
+        "subject": "tpu_doc:setup_16_spot_compute",
+        "predicate": "okf:hasSection",
+        "object": "What's next"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Request TPU Spot VMs provides official guidance on Current discounted/preemptible Compute Engine TPU operation, including single VMs and MIG-backed multi-host slices.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/tpu/docs/spot-compute",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Request TPU Spot VMs used for in Cloud TPU workflows?",
-      "answer": "Current discounted/preemptible Compute Engine TPU operation, including single VMs and MIG-backed multi-host slices.",
-      "category": "tpu_setup_docs"
-    }
-  ],
-  "contentSummary": "Current discounted/preemptible Compute Engine TPU operation, including single VMs and MIG-backed multi-host slices."
+  },
+  "structured_content": {
+    "summary": "Current discounted/preemptible Compute Engine TPU operation, including single VMs and MIG-backed multi-host slices.",
+    "sections": [
+      {
+        "heading": "Request TPU Spot VMs",
+        "level": 1,
+        "content": "Spot VMs offer unused capacity at significantly discounted rates. While Spot VMs are preemptible at any time, they don't have a maximum runtime duration, unlike [preemptible TPUs](https://docs.cloud.google.com/tpu/docs/preemptible). To restart a Spot VMs instance or MIG, you must delete and then recreate it.\nFor more information about Spot VMs, see the [Compute Engine documentation about Spot VMs](https://docs.cloud.google.com/compute/docs/instances/spot)."
+      },
+      {
+        "heading": "Create TPU Spot VMs",
+        "level": 2,
+        "content": "You can create TPU Spot VMs as individual instances or as part of a managed instance group (MIG)."
+      },
+      {
+        "heading": "Using MIGs for multi-host slices (Recommended)",
+        "level": 3,
+        "content": "To create TPU Spot VMs with a MIG, specify the Spot provisioning model in your instance template.\n  1. **Create an instance template** :"
+      },
+      {
+        "heading": "gcloud",
+        "level": 3,
+        "content": "```\ngcloud compute instance-templates create INSTANCE_TEMPLATE_NAME \\\n    --project=PROJECT_ID \\\n    --machine-type=MACHINE_TYPE \\\n    --maintenance-policy=TERMINATE \\\n    --instance-termination-action=STOP \\\n    --provisioning-model=SPOT \\\n    --image-family=IMAGE_FAMILY \\\n--image-project=IMAGE_PROJECT\n\n```"
+      },
+      {
+        "heading": "REST",
+        "level": 3,
+        "content": "```\ncurl -X POST \\\n-H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n-H \"Content-Type: application/json\" \\\n-d '{\n    \"name\": \"INSTANCE_TEMPLATE_NAME\",\n    \"properties\": {\n    \"machineType\": \"MACHINE_TYPE\",\n    \"disks\": [\n        {\n        \"boot\": true,\n        \"initializeParams\": {\n            \"sourceImage\": \"projects/IMAGE_PROJECT/global/images/family/IMAGE_FAMILY\"\n        }\n        }\n    ],\n    \"scheduling\": {\n        \"onHostMaintenance\": \"TERMINATE\",\n        \"provisioningModel\": \"SPOT\",\n        \"instanceTerminationAction\": \"STOP\"\n    },\n    \"networkInterfaces\": [\n        {\n        \"network\": \"global/networks/default\"\n        }\n    ]\n    }\n}' \\\n\"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/global/instanceTemplates\"\n\n```\n\nReplace the following placeholders:\n     * PROJECT_ID: The ID of your Google Cloud project.\n     * INSTANCE_TEMPLATE_NAME: The name of your instance template.\n     * MACHINE_TYPE: The [machine type](https://docs.cloud.google.com/compute/docs/tpus/tpu-machines#tpu_machine_types) for the TPU VM, for example, `ct6e-standard-8t`.\n     * IMAGE_FAMILY: The [OS image family](https://docs.cloud.google.com/compute/docs/images/os-details#ga_ubuntu_lts_versions) for the TPU VM. If you want to install a specific OS version, use the `--image` flag. For more information about OS images, see [OS images](https://docs.cloud.google.com/compute/docs/images).\n     * IMAGE_PROJECT: The project that contains the OS image. For TPU images, this is `ubuntu-os-accelerator-images`.\n  2. **Create a workload policy**\nThe following command creates a workload policy. This is optional for single-host slices."
+      },
+      {
+        "heading": "gcloud",
+        "level": 3,
+        "content": "```\ngcloud compute resource-policies create workload-policy WORKLOAD_POLICY_NAME \\\n--type=high-throughput \\\n--accelerator-topology=TOPOLOGY \\\n--region=REGION\n\n```"
+      },
+      {
+        "heading": "REST",
+        "level": 3,
+        "content": "```\ncurl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"name\": \"WORKLOAD_POLICY_NAME\",\n    \"workloadPolicy\": {\n      \"type\": \"HIGH_THROUGHPUT\",\n      \"acceleratorTopology\": \"TOPOLOGY\"\n    }\n  }' \\\n  \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/regions/REGION/resourcePolicies\"\n\n```\n\nReplace the following placeholders:\n     * `PROJECT_ID`: The ID of your Google Cloud project.\n     * `WORKLOAD_POLICY_NAME`: The name of your workload policy.\n     * `TOPOLOGY`: The topology of the TPU VMs, for example, `4x4x8`. For more information about topology for each version of TPU, see [TPU versions](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#versions).\n     * `REGION`: The [region](https://docs.cloud.google.com/tpu/docs/regions-zones) for your workload policy.\n  3. **Create the MIG** :"
+      },
+      {
+        "heading": "gcloud",
+        "level": 3,
+        "content": "```\ngcloud compute instance-groups managed create MIG_NAME \\\n--size=MIG_SIZE \\\n--target-size-policy-mode=bulk \\\n--template=INSTANCE_TEMPLATE_URL \\\n--zone=ZONE \\\n--default-action-on-vm-failure=do-nothing \\\n--workload-policy=WORKLOAD_POLICY_URL\n\n```"
+      },
+      {
+        "heading": "REST",
+        "level": 3,
+        "content": "```\ncurl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n        \"name\": \"MIG_NAME\",\n        \"targetSize\": MIG_SIZE,\n        \"targetSizePolicy\": {\n          \"mode\": \"BULK\"\n        },\n        \"instanceTemplate\": \"INSTANCE_TEMPLATE_URL\",\n        \"instanceLifecyclePolicy\": {\n          \"defaultActionOnFailure\": \"DO_NOTHING\"\n        },\n        \"resourcePolicies\": {\n          \"workloadPolicy\": \"WORKLOAD_POLICY_URL\"\n        }\n      }' \\\n    \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instanceGroupManagers\"\n\n```\n\nReplace the following placeholders:\n     * `PROJECT_ID`: The ID of your Google Cloud project.\n     * `MIG_NAME`: The name of your MIG.\n     * `MIG_SIZE`: The size of the MIG.\n     * `INSTANCE_TEMPLATE_URL`: the URL of the instance template that you want to use to create instances in the MIG. The URL can contain either the [ID](https://docs.cloud.google.com/compute/docs/instance-templates/get-list-delete-instance-templates#get_information_about_an_instance_template) or name of the instance template. Specify one of the following values: \n       * For a regional instance template: `projects/PROJECT_ID/regions/REGION/instanceTemplates/INSTANCE_TEMPLATE_ID`\n       * For a global instance template: `INSTANCE_TEMPLATE_ID`\n     * `ZONE`: The [zone](https://docs.cloud.google.com/tpu/docs/regions-zones) for your MIG.\n     * `WORKLOAD_POLICY_URL`: The URL of the workload policy that you want to use to create instances in the MIG. For example: `projects/PROJECT_ID/regions/WORKLOAD_POLICY_REGION/resourcePolicies/WORKLOAD_POLICY_NAME`.\n**Note:** For multi-host TPU slices, you must define a [workload policy](https://docs.cloud.google.com/ai-hypercomputer/docs/placement-policy-and-workload-policy#workload-policy) and use the `--target-size-policy-mode=bulk` flag when creating the MIG to ensure that all VMs are created in the same network and can communicate."
+      },
+      {
+        "heading": "Using single TPU VMs",
+        "level": 3,
+        "content": "You can also create single TPU Spot VMs."
+      },
+      {
+        "heading": "gcloud",
+        "level": 3,
+        "content": "```\ngcloud compute instances create TPU_NAME \\\n  --machine-type=MACHINE_TYPE \\\n  --image-family=IMAGE_FAMILY \\\n  --image-project=IMAGE_PROJECT \\\n  --zone=ZONE \\\n  --provisioning-model=SPOT \\\n  --instance-termination-action=DELETE \\\n  --maintenance-policy=TERMINATE\n\n```"
+      },
+      {
+        "heading": "REST",
+        "level": 3,
+        "content": "```\ncurl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"name\": \"TPU_NAME\",\n    \"machineType\": \"zones/ZONE/machineTypes/MACHINE_TYPE\",\n    \"disks\": [\n      {\n        \"boot\": true,\n        \"initializeParams\": {\n          \"sourceImage\": \"projects/IMAGE_PROJECT/global/images/family/IMAGE_FAMILY\"\n        }\n      }\n    ],\n    \"scheduling\": {\n      \"onHostMaintenance\": \"TERMINATE\",\n      \"provisioningModel\": \"SPOT\",\n      \"instanceTerminationAction\": \"DELETE\"\n    },\n    \"networkInterfaces\": [\n      {\n        \"network\": \"global/networks/default\"\n      }\n    ]\n  }' \\\n  \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances\"\n\n```\n\nReplace the following placeholders:\n  * PROJECT_ID: The ID of your Google Cloud project.\n  * TPU_NAME: A name for your TPU VM.\n  * MACHINE_TYPE: The [machine type](https://docs.cloud.google.com/compute/docs/tpus/tpu-machines#tpu_machine_types) for the TPU VM (for example `ct6e-standard-8t`).\n  * IMAGE_FAMILY: The [OS image family](https://docs.cloud.google.com/compute/docs/images#image_families) for the TPU VM. If you want to install a specific OS version, use the `--image` flag. For more information about OS images, see [OS images](https://docs.cloud.google.com/compute/docs/images).\n  * IMAGE_PROJECT: The project that contains the OS image. For TPU images, this is `ubuntu-os-accelerator-images`.\n  * ZONE: The [zone](https://docs.cloud.google.com/tpu/docs/regions-zones) for the TPU VM (for example `us-central1-b`).\n\n\nFor more information about Spot VMs in Compute Engine, see [Spot VMs](https://docs.cloud.google.com/compute/docs/instances/spot)."
+      },
+      {
+        "heading": "Pricing and quota",
+        "level": 2,
+        "content": "Pricing for TPU Spot VMs is significantly lower than for on-demand and reserved TPUs. For more information about pricing, see [Cloud TPU pricing](https://docs.cloud.google.com/tpu/docs/pricing).\nYou need preemptible quota to use TPU Spot VMs. For more information, see [Quotas](https://docs.cloud.google.com/tpu/docs/quota)."
+      },
+      {
+        "heading": "What's next",
+        "level": 2,
+        "content": "* Learn how to [manage TPUs](https://docs.cloud.google.com/tpu/docs/managing-tpus-compute)"
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "gcloud compute instance-templates create INSTANCE_TEMPLATE_NAME \\\n    --project=PROJECT_ID \\\n    --machine-type=MACHINE_TYPE \\\n    --maintenance-policy=TERMINATE \\\n    --instance-termination-action=STOP \\\n    --provisioning-model=SPOT \\\n    --image-family=IMAGE_FAMILY \\\n--image-project=IMAGE_PROJECT"
+      },
+      {
+        "language": "text",
+        "code": "curl -X POST \\\n-H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n-H \"Content-Type: application/json\" \\\n-d '{\n    \"name\": \"INSTANCE_TEMPLATE_NAME\",\n    \"properties\": {\n    \"machineType\": \"MACHINE_TYPE\",\n    \"disks\": [\n        {\n        \"boot\": true,\n        \"initializeParams\": {\n            \"sourceImage\": \"projects/IMAGE_PROJECT/global/images/family/IMAGE_FAMILY\"\n        }\n        }\n    ],\n    \"scheduling\": {\n        \"onHostMaintenance\": \"TERMINATE\",\n        \"provisioningModel\": \"SPOT\",\n        \"instanceTerminationAction\": \"STOP\"\n    },\n    \"networkInterfaces\": [\n        {\n        \"network\": \"global/networks/default\"\n        }\n    ]\n    }\n}' \\\n\"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/global/instanceTemplates\""
+      },
+      {
+        "language": "text",
+        "code": "gcloud compute resource-policies create workload-policy WORKLOAD_POLICY_NAME \\\n--type=high-throughput \\\n--accelerator-topology=TOPOLOGY \\\n--region=REGION"
+      },
+      {
+        "language": "text",
+        "code": "curl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"name\": \"WORKLOAD_POLICY_NAME\",\n    \"workloadPolicy\": {\n      \"type\": \"HIGH_THROUGHPUT\",\n      \"acceleratorTopology\": \"TOPOLOGY\"\n    }\n  }' \\\n  \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/regions/REGION/resourcePolicies\""
+      },
+      {
+        "language": "text",
+        "code": "gcloud compute instance-groups managed create MIG_NAME \\\n--size=MIG_SIZE \\\n--target-size-policy-mode=bulk \\\n--template=INSTANCE_TEMPLATE_URL \\\n--zone=ZONE \\\n--default-action-on-vm-failure=do-nothing \\\n--workload-policy=WORKLOAD_POLICY_URL"
+      },
+      {
+        "language": "text",
+        "code": "curl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n        \"name\": \"MIG_NAME\",\n        \"targetSize\": MIG_SIZE,\n        \"targetSizePolicy\": {\n          \"mode\": \"BULK\"\n        },\n        \"instanceTemplate\": \"INSTANCE_TEMPLATE_URL\",\n        \"instanceLifecyclePolicy\": {\n          \"defaultActionOnFailure\": \"DO_NOTHING\"\n        },\n        \"resourcePolicies\": {\n          \"workloadPolicy\": \"WORKLOAD_POLICY_URL\"\n        }\n      }' \\\n    \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instanceGroupManagers\""
+      },
+      {
+        "language": "text",
+        "code": "gcloud compute instances create TPU_NAME \\\n  --machine-type=MACHINE_TYPE \\\n  --image-family=IMAGE_FAMILY \\\n  --image-project=IMAGE_PROJECT \\\n  --zone=ZONE \\\n  --provisioning-model=SPOT \\\n  --instance-termination-action=DELETE \\\n  --maintenance-policy=TERMINATE"
+      },
+      {
+        "language": "text",
+        "code": "curl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"name\": \"TPU_NAME\",\n    \"machineType\": \"zones/ZONE/machineTypes/MACHINE_TYPE\",\n    \"disks\": [\n      {\n        \"boot\": true,\n        \"initializeParams\": {\n          \"sourceImage\": \"projects/IMAGE_PROJECT/global/images/family/IMAGE_FAMILY\"\n        }\n      }\n    ],\n    \"scheduling\": {\n      \"onHostMaintenance\": \"TERMINATE\",\n      \"provisioningModel\": \"SPOT\",\n      \"instanceTerminationAction\": \"DELETE\"\n    },\n    \"networkInterfaces\": [\n      {\n        \"network\": \"global/networks/default\"\n      }\n    ]\n  }' \\\n  \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances\""
+      }
+    ],
+    "cli_commands": [
+      "gcloud compute instance-templates create INSTANCE_TEMPLATE_NAME \\",
+      "curl -X POST \\",
+      "gcloud compute resource-policies create workload-policy WORKLOAD_POLICY_NAME \\",
+      "gcloud compute instance-groups managed create MIG_NAME \\",
+      "gcloud compute instances create TPU_NAME \\"
+    ],
+    "environment_variables": [],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Request TPU Spot VMs' (https://docs.cloud.google.com/tpu/docs/spot-compute)?",
+        "answer": "Current discounted/preemptible Compute Engine TPU operation, including single VMs and MIG-backed multi-host slices."
+      },
+      {
+        "question": "How does 'Request TPU Spot VMs' handle: Request TPU Spot VMs?",
+        "answer": "Spot VMs offer unused capacity at significantly discounted rates. While Spot VMs are preemptible at any time, they don't have a maximum runtime duration, unlike [preemptible TPUs](https://docs.cloud.google.com/tpu/docs/preemptible). To restart a Spot VMs instance or MIG, you must delete and then recreate it.\nFor more information about Spot VMs, see the [Compute Engine documentation about Spot VMs](https://docs.cloud.google.com/compute/docs/instances/spot)."
+      },
+      {
+        "question": "How does 'Request TPU Spot VMs' handle: Create TPU Spot VMs?",
+        "answer": "You can create TPU Spot VMs as individual instances or as part of a managed instance group (MIG)."
+      },
+      {
+        "question": "How does 'Request TPU Spot VMs' handle: Using MIGs for multi-host slices (Recommended)?",
+        "answer": "To create TPU Spot VMs with a MIG, specify the Spot provisioning model in your instance template.\n  1. **Create an instance template** :"
+      },
+      {
+        "question": "How does 'Request TPU Spot VMs' handle: gcloud?",
+        "answer": "```\ngcloud compute instance-templates create INSTANCE_TEMPLATE_NAME \\\n    --project=PROJECT_ID \\\n    --machine-type=MACHINE_TYPE \\\n    --maintenance-policy=TERMINATE \\\n    --instance-termination-action=STOP \\\n    --provisioning-model=SPOT \\\n    --image-family=IMAGE_FAMILY \\\n--image-project=IMAGE_PROJECT\n\n```"
+      },
+      {
+        "question": "How does 'Request TPU Spot VMs' handle: REST?",
+        "answer": "```\ncurl -X POST \\\n-H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n-H \"Content-Type: application/json\" \\\n-d '{\n    \"name\": \"INSTANCE_TEMPLATE_NAME\",\n    \"properties\": {\n    \"machineType\": \"MACHINE_TYPE\",\n    \"disks\": [\n        {\n        \"boot\": true,\n        \"initializeParams\": {\n            \"sourceImage\": \"projects/IMAGE_PROJECT/global/images/family/IMAGE_FAMILY\"\n        }\n        }\n    ],\n    \"scheduling\": {\n        \"onHostMaintenance\": \"TERMINATE\",\n        \"provisioningModel\": \"SPOT\",\n        \"instanceTerminationAction\": \"STOP\"\n    },\n    \"networkInterfaces\": [\n        {\n        \"network\": \"global/networks/default\"\n        }\n    ]\n    }\n}' \\\n\"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/global/instanceTemplates\"\n\n```\n\nReplace the following placeholders:\n     * PROJECT_ID: The ID of your Google Cloud project.\n     * INSTANCE_TEMPLATE_NAME: The name of your instance template.\n     * MACHINE_TYPE: The [machine type](https://docs.cloud.google.com/compute/docs/tpus/tpu-machines#tpu_machine_types) for the TPU VM, for example, `ct6e-standard-8t`.\n     * IMAGE_FAMILY: The [OS image family](https://docs.cloud.google.com/compute/docs/images/os-details#ga_ub"
+      },
+      {
+        "question": "How does 'Request TPU Spot VMs' handle: gcloud?",
+        "answer": "```\ngcloud compute resource-policies create workload-policy WORKLOAD_POLICY_NAME \\\n--type=high-throughput \\\n--accelerator-topology=TOPOLOGY \\\n--region=REGION\n\n```"
+      },
+      {
+        "question": "How does 'Request TPU Spot VMs' handle: REST?",
+        "answer": "```\ncurl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"name\": \"WORKLOAD_POLICY_NAME\",\n    \"workloadPolicy\": {\n      \"type\": \"HIGH_THROUGHPUT\",\n      \"acceleratorTopology\": \"TOPOLOGY\"\n    }\n  }' \\\n  \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/regions/REGION/resourcePolicies\"\n\n```\n\nReplace the following placeholders:\n     * `PROJECT_ID`: The ID of your Google Cloud project.\n     * `WORKLOAD_POLICY_NAME`: The name of your workload policy.\n     * `TOPOLOGY`: The topology of the TPU VMs, for example, `4x4x8`. For more information about topology for each version of TPU, see [TPU versions](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#versions).\n     * `REGION`: The [region](https://docs.cloud.google.com/tpu/docs/regions-zones) for your workload policy.\n  3. **Create the MIG** :"
+      },
+      {
+        "question": "How does 'Request TPU Spot VMs' handle: gcloud?",
+        "answer": "```\ngcloud compute instance-groups managed create MIG_NAME \\\n--size=MIG_SIZE \\\n--target-size-policy-mode=bulk \\\n--template=INSTANCE_TEMPLATE_URL \\\n--zone=ZONE \\\n--default-action-on-vm-failure=do-nothing \\\n--workload-policy=WORKLOAD_POLICY_URL\n\n```"
+      },
+      {
+        "question": "How does 'Request TPU Spot VMs' handle: REST?",
+        "answer": "```\ncurl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n        \"name\": \"MIG_NAME\",\n        \"targetSize\": MIG_SIZE,\n        \"targetSizePolicy\": {\n          \"mode\": \"BULK\"\n        },\n        \"instanceTemplate\": \"INSTANCE_TEMPLATE_URL\",\n        \"instanceLifecyclePolicy\": {\n          \"defaultActionOnFailure\": \"DO_NOTHING\"\n        },\n        \"resourcePolicies\": {\n          \"workloadPolicy\": \"WORKLOAD_POLICY_URL\"\n        }\n      }' \\\n    \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instanceGroupManagers\"\n\n```\n\nReplace the following placeholders:\n     * `PROJECT_ID`: The ID of your Google Cloud project.\n     * `MIG_NAME`: The name of your MIG.\n     * `MIG_SIZE`: The size of the MIG.\n     * `INSTANCE_TEMPLATE_URL`: the URL of the instance template that you want to use to create instances in the MIG. The URL can contain either the [ID](https://docs.cloud.google.com/compute/docs/instance-templates/get-list-delete-instance-templates#get_information_about_an_instance_template) or name of the instance template. Specify one of the following values: \n       * For a regional instance template:"
+      }
+    ],
+    "full_markdown": "# Request TPU Spot VMs\nSpot VMs offer unused capacity at significantly discounted rates. While Spot VMs are preemptible at any time, they don't have a maximum runtime duration, unlike [preemptible TPUs](https://docs.cloud.google.com/tpu/docs/preemptible). To restart a Spot VMs instance or MIG, you must delete and then recreate it.\nFor more information about Spot VMs, see the [Compute Engine documentation about Spot VMs](https://docs.cloud.google.com/compute/docs/instances/spot).\n## Create TPU Spot VMs\nYou can create TPU Spot VMs as individual instances or as part of a managed instance group (MIG).\n### Using MIGs for multi-host slices (Recommended)\nTo create TPU Spot VMs with a MIG, specify the Spot provisioning model in your instance template.\n  1. **Create an instance template** :\n###  gcloud \n\n```\ngcloud compute instance-templates create INSTANCE_TEMPLATE_NAME \\\n    --project=PROJECT_ID \\\n    --machine-type=MACHINE_TYPE \\\n    --maintenance-policy=TERMINATE \\\n    --instance-termination-action=STOP \\\n    --provisioning-model=SPOT \\\n    --image-family=IMAGE_FAMILY \\\n--image-project=IMAGE_PROJECT\n\n```\n\n###  REST \n\n```\ncurl -X POST \\\n-H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n-H \"Content-Type: application/json\" \\\n-d '{\n    \"name\": \"INSTANCE_TEMPLATE_NAME\",\n    \"properties\": {\n    \"machineType\": \"MACHINE_TYPE\",\n    \"disks\": [\n        {\n        \"boot\": true,\n        \"initializeParams\": {\n            \"sourceImage\": \"projects/IMAGE_PROJECT/global/images/family/IMAGE_FAMILY\"\n        }\n        }\n    ],\n    \"scheduling\": {\n        \"onHostMaintenance\": \"TERMINATE\",\n        \"provisioningModel\": \"SPOT\",\n        \"instanceTerminationAction\": \"STOP\"\n    },\n    \"networkInterfaces\": [\n        {\n        \"network\": \"global/networks/default\"\n        }\n    ]\n    }\n}' \\\n\"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/global/instanceTemplates\"\n\n```\n\nReplace the following placeholders:\n     * PROJECT_ID: The ID of your Google Cloud project.\n     * INSTANCE_TEMPLATE_NAME: The name of your instance template.\n     * MACHINE_TYPE: The [machine type](https://docs.cloud.google.com/compute/docs/tpus/tpu-machines#tpu_machine_types) for the TPU VM, for example, `ct6e-standard-8t`.\n     * IMAGE_FAMILY: The [OS image family](https://docs.cloud.google.com/compute/docs/images/os-details#ga_ubuntu_lts_versions) for the TPU VM. If you want to install a specific OS version, use the `--image` flag. For more information about OS images, see [OS images](https://docs.cloud.google.com/compute/docs/images).\n     * IMAGE_PROJECT: The project that contains the OS image. For TPU images, this is `ubuntu-os-accelerator-images`.\n  2. **Create a workload policy**\nThe following command creates a workload policy. This is optional for single-host slices.\n###  gcloud \n\n```\ngcloud compute resource-policies create workload-policy WORKLOAD_POLICY_NAME \\\n--type=high-throughput \\\n--accelerator-topology=TOPOLOGY \\\n--region=REGION\n\n```\n\n###  REST \n\n```\ncurl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"name\": \"WORKLOAD_POLICY_NAME\",\n    \"workloadPolicy\": {\n      \"type\": \"HIGH_THROUGHPUT\",\n      \"acceleratorTopology\": \"TOPOLOGY\"\n    }\n  }' \\\n  \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/regions/REGION/resourcePolicies\"\n\n```\n\nReplace the following placeholders:\n     * `PROJECT_ID`: The ID of your Google Cloud project.\n     * `WORKLOAD_POLICY_NAME`: The name of your workload policy.\n     * `TOPOLOGY`: The topology of the TPU VMs, for example, `4x4x8`. For more information about topology for each version of TPU, see [TPU versions](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm#versions).\n     * `REGION`: The [region](https://docs.cloud.google.com/tpu/docs/regions-zones) for your workload policy.\n  3. **Create the MIG** :\n###  gcloud \n\n```\ngcloud compute instance-groups managed create MIG_NAME \\\n--size=MIG_SIZE \\\n--target-size-policy-mode=bulk \\\n--template=INSTANCE_TEMPLATE_URL \\\n--zone=ZONE \\\n--default-action-on-vm-failure=do-nothing \\\n--workload-policy=WORKLOAD_POLICY_URL\n\n```\n\n###  REST \n\n```\ncurl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n        \"name\": \"MIG_NAME\",\n        \"targetSize\": MIG_SIZE,\n        \"targetSizePolicy\": {\n          \"mode\": \"BULK\"\n        },\n        \"instanceTemplate\": \"INSTANCE_TEMPLATE_URL\",\n        \"instanceLifecyclePolicy\": {\n          \"defaultActionOnFailure\": \"DO_NOTHING\"\n        },\n        \"resourcePolicies\": {\n          \"workloadPolicy\": \"WORKLOAD_POLICY_URL\"\n        }\n      }' \\\n    \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instanceGroupManagers\"\n\n```\n\nReplace the following placeholders:\n     * `PROJECT_ID`: The ID of your Google Cloud project.\n     * `MIG_NAME`: The name of your MIG.\n     * `MIG_SIZE`: The size of the MIG.\n     * `INSTANCE_TEMPLATE_URL`: the URL of the instance template that you want to use to create instances in the MIG. The URL can contain either the [ID](https://docs.cloud.google.com/compute/docs/instance-templates/get-list-delete-instance-templates#get_information_about_an_instance_template) or name of the instance template. Specify one of the following values: \n       * For a regional instance template: `projects/PROJECT_ID/regions/REGION/instanceTemplates/INSTANCE_TEMPLATE_ID`\n       * For a global instance template: `INSTANCE_TEMPLATE_ID`\n     * `ZONE`: The [zone](https://docs.cloud.google.com/tpu/docs/regions-zones) for your MIG.\n     * `WORKLOAD_POLICY_URL`: The URL of the workload policy that you want to use to create instances in the MIG. For example: `projects/PROJECT_ID/regions/WORKLOAD_POLICY_REGION/resourcePolicies/WORKLOAD_POLICY_NAME`.\n**Note:** For multi-host TPU slices, you must define a [workload policy](https://docs.cloud.google.com/ai-hypercomputer/docs/placement-policy-and-workload-policy#workload-policy) and use the `--target-size-policy-mode=bulk` flag when creating the MIG to ensure that all VMs are created in the same network and can communicate.\n\n\n### Using single TPU VMs\nYou can also create single TPU Spot VMs.\n###  gcloud \n\n```\ngcloud compute instances create TPU_NAME \\\n  --machine-type=MACHINE_TYPE \\\n  --image-family=IMAGE_FAMILY \\\n  --image-project=IMAGE_PROJECT \\\n  --zone=ZONE \\\n  --provisioning-model=SPOT \\\n  --instance-termination-action=DELETE \\\n  --maintenance-policy=TERMINATE\n\n```\n\n###  REST \n\n```\ncurl -X POST \\\n  -H \"Authorization: Bearer $(gcloud auth print-access-token)\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"name\": \"TPU_NAME\",\n    \"machineType\": \"zones/ZONE/machineTypes/MACHINE_TYPE\",\n    \"disks\": [\n      {\n        \"boot\": true,\n        \"initializeParams\": {\n          \"sourceImage\": \"projects/IMAGE_PROJECT/global/images/family/IMAGE_FAMILY\"\n        }\n      }\n    ],\n    \"scheduling\": {\n      \"onHostMaintenance\": \"TERMINATE\",\n      \"provisioningModel\": \"SPOT\",\n      \"instanceTerminationAction\": \"DELETE\"\n    },\n    \"networkInterfaces\": [\n      {\n        \"network\": \"global/networks/default\"\n      }\n    ]\n  }' \\\n  \"https://compute.googleapis.com/compute/v1/projects/PROJECT_ID/zones/ZONE/instances\"\n\n```\n\nReplace the following placeholders:\n  * PROJECT_ID: The ID of your Google Cloud project.\n  * TPU_NAME: A name for your TPU VM.\n  * MACHINE_TYPE: The [machine type](https://docs.cloud.google.com/compute/docs/tpus/tpu-machines#tpu_machine_types) for the TPU VM (for example `ct6e-standard-8t`).\n  * IMAGE_FAMILY: The [OS image family](https://docs.cloud.google.com/compute/docs/images#image_families) for the TPU VM. If you want to install a specific OS version, use the `--image` flag. For more information about OS images, see [OS images](https://docs.cloud.google.com/compute/docs/images).\n  * IMAGE_PROJECT: The project that contains the OS image. For TPU images, this is `ubuntu-os-accelerator-images`.\n  * ZONE: The [zone](https://docs.cloud.google.com/tpu/docs/regions-zones) for the TPU VM (for example `us-central1-b`).\n\n\nFor more information about Spot VMs in Compute Engine, see [Spot VMs](https://docs.cloud.google.com/compute/docs/instances/spot).\n## Pricing and quota\nPricing for TPU Spot VMs is significantly lower than for on-demand and reserved TPUs. For more information about pricing, see [Cloud TPU pricing](https://docs.cloud.google.com/tpu/docs/pricing).\nYou need preemptible quota to use TPU Spot VMs. For more information, see [Quotas](https://docs.cloud.google.com/tpu/docs/quota).\n## What's next\n  * Learn how to [manage TPUs](https://docs.cloud.google.com/tpu/docs/managing-tpus-compute)"
+  }
 }

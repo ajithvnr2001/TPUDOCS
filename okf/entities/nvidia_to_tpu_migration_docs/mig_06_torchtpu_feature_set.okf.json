@@ -1,63 +1,159 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:mig_06_torchtpu_feature_set",
-  "@type": "DocumentationResource",
-  "name": "TorchTPU supported features and roadmap",
-  "canonicalUrl": "https://torchtpu.readthedocs.io/en/latest/feature_set/",
-  "category": "Nvidia to tpu migration docs",
-  "categorySlug": "nvidia_to_tpu_migration_docs",
-  "description": "Check validated versus experimental hardware, operators, models, kernels, and distributed features.",
-  "provenance": {
-    "sourceUrl": "https://torchtpu.readthedocs.io/en/latest/feature_set/",
-    "crawledAt": "2026-10-26T12:48:03.381642+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 7639
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "TorchTPU supported features and roadmap",
-      "documentedIn",
-      "https://torchtpu.readthedocs.io/en/latest/feature_set/"
-    ],
-    [
-      "TorchTPU supported features and roadmap",
-      "belongsToCategory",
-      "nvidia_to_tpu_migration_docs"
-    ],
-    [
-      "TorchTPU supported features and roadmap",
-      "supportsWorkflow",
-      "CUDA to TPU Code Migration"
-    ],
-    [
-      "TorchTPU supported features and roadmap",
-      "primaryFramework",
-      "TorchTPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:mig_06_torchtpu_feature_set",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "mig_06_torchtpu_feature_set",
+    "name": "TorchTPU supported features and roadmap",
+    "url": "https://torchtpu.readthedocs.io/en/latest/feature_set/",
+    "category": "nvidia_to_tpu_migration_docs",
+    "description": "Check validated versus experimental hardware, operators, models, kernels, and distributed features.",
+    "char_count": 3735,
+    "word_count": 560,
+    "section_count": 2,
+    "code_block_count": 0,
+    "table_count": 2,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.753112+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:mig_06_torchtpu_feature_set",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:mig_06_torchtpu_feature_set",
+        "predicate": "schema:name",
+        "object": "TorchTPU supported features and roadmap"
+      },
+      {
+        "subject": "tpu_doc:mig_06_torchtpu_feature_set",
+        "predicate": "schema:url",
+        "object": "https://torchtpu.readthedocs.io/en/latest/feature_set/"
+      },
+      {
+        "subject": "tpu_doc:mig_06_torchtpu_feature_set",
+        "predicate": "schema:category",
+        "object": "nvidia_to_tpu_migration_docs"
+      },
+      {
+        "subject": "tpu_doc:mig_06_torchtpu_feature_set",
+        "predicate": "schema:description",
+        "object": "Check validated versus experimental hardware, operators, models, kernels, and distributed features."
+      },
+      {
+        "subject": "tpu_doc:mig_06_torchtpu_feature_set",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:mig_06_torchtpu_feature_set",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5p"
+      },
+      {
+        "subject": "tpu_doc:mig_06_torchtpu_feature_set",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5e"
+      },
+      {
+        "subject": "tpu_doc:mig_06_torchtpu_feature_set",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTPU"
+      },
+      {
+        "subject": "tpu_doc:mig_06_torchtpu_feature_set",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:TorchTitan"
+      },
+      {
+        "subject": "tpu_doc:mig_06_torchtpu_feature_set",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:Pallas"
+      },
+      {
+        "subject": "tpu_doc:mig_06_torchtpu_feature_set",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:Tokamax"
+      },
+      {
+        "subject": "tpu_doc:mig_06_torchtpu_feature_set",
+        "predicate": "okf:hasSection",
+        "object": "Current supported feature set"
+      },
+      {
+        "subject": "tpu_doc:mig_06_torchtpu_feature_set",
+        "predicate": "okf:hasSection",
+        "object": "Future work"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "TorchTPU supported features and roadmap provides official guidance on Check validated versus experimental hardware, operators, models, kernels, and distributed features.",
-      "confidence": 1.0,
-      "source": "https://torchtpu.readthedocs.io/en/latest/feature_set/",
-      "verified": true
-    },
-    {
-      "assertion": "TorchTPU is the native PyTorch runtime replacing the deprecated PyTorch/XLA backend for TPU workloads.",
-      "confidence": 1.0,
-      "source": "https://torchtpu.readthedocs.io/en/latest/feature_set/",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is TorchTPU supported features and roadmap used for in Cloud TPU workflows?",
-      "answer": "Check validated versus experimental hardware, operators, models, kernels, and distributed features.",
-      "category": "nvidia_to_tpu_migration_docs"
-    }
-  ],
-  "contentSummary": "Check validated versus experimental hardware, operators, models, kernels, and distributed features."
+  },
+  "structured_content": {
+    "summary": "Check validated versus experimental hardware, operators, models, kernels, and distributed features.",
+    "sections": [
+      {
+        "heading": "Current supported feature set",
+        "level": 2,
+        "content": "The table below reflects our current feature coverage as of the initial open-source release.\nTo help you evaluate TorchTPU for your workloads, we categorize features into two tiers:\n  * **Validated:** Capabilities that have end-to-end continuous testing, automated CI/CD coverage, and benchmark verification across standard model architectures.\n  * **Experimental:** Early-stage implementations, emerging APIs, or prototype features. These are functional and available for early feedback, but may undergo behavioral refinement or API changes based on community input.\n\n\nNote\nTorchTPU is evolving rapidly in the open. For the most up-to-date status or to request specific features, visit our [GitHub](https://github.com/google-pytorch/torch_tpu).  \n|   | **Validated**  | **Experimental**  |  \n| --- | --- | --- |  \n| **PyTorch Community Engagement**  | \n  * OSS release for TorchTPU, vLLM, SGLang, TorchTitan, TorchRec\n  * Accepting external PRs\n  * Documentation / Tutorials\n  * CI/CD\n  * Colab\n\n | \n  * TPU Agent for ATEN migration\n\n |  \n| **TPU Support**  | \n  * v5e, v5p, v6e, v7\n\n |   |  \n| **Basic functionality**  | \n  * Ease of migration\n  * Mixed eager + compiled\n  * FW + BW\n  * Torch.profile\n  * Dynamic ops (recompilation)\n\n | \n  * SymInts\n  * Jagged tensors\n\n |  \n| **Model Architectures**  | \n  * Transformer (Dense + MoE): Qwen, Llama, Muse Glimmer, Gemma\n  * Diffusion: WAN, FLUX\n  * CNN\n\n | \n  * GLM, Kimi, DeepSeek, GPT OSS, many more (hill climb)\n  * Mamba\n  * LSTM/GRU\n  * DLRM\n\n |  \n| **Kernel Support**  | \n  * Pallas\n  * Tokamax\n\n | \n  * Helion\n\n |  \n| **Quantization**  | \n  * Full tensor FP8/FP4\n  * Per-channel FP8\n\n |   |  \n| **Distributed**  | \n  * Optimal mesh\n  * SimpleFSDP\n  * Checkpointing\n  * Activation offloading\n  * Multi-slice up to 8K chip\n\n | \n  * FSDPv2 (low perf)\n  * MPMD (low perf)\n  * TorchComm\n\n |  \n| **Ecosystem Integrations**  | \n  * Hugging Face\n  * Ray\n  * vLLM / SGLang\n  * TorchTitan\n  * TorchRec\n\n |   |  \n| **Production-ready Solutions**  | \n  * Inference (multi-host, P/D disagg)\n  * Fine-tuning (up to \\~8K chips)\n\n |   |"
+      },
+      {
+        "heading": "Future work",
+        "level": 2,
+        "content": "This section outlines our future development horizons and explorations, not a committed release schedule.\nAs a community-first open-source project, our development priorities are intentionally responsive to community feedback and developer adoption. Features, timelines, and architectural approaches may evolve as we learn what workloads matter most to you.\nWe organize our upcoming work into two broad horizons:\n  * **Near-Term Focus:** Areas of active design, ongoing prototyping, and performance hardening that the core team is currently prioritizing.\n  * **Future Exploration:** Long-term architectural explorations, prospective ecosystem integrations, and community-requested backlog items that we are actively investigating.\n\n  \n|   | **Near-term focus**  | **Future exploration**  |  \n| --- | --- | --- |  \n| **PyTorch Community Engagement**  | \n  * More docs / tutorial / blogs\n\n | \n  * TPU Agent for Kernel migration\n\n |  \n| **TPU Support**  | \n  * v8i, v8t\n\n |   |  \n| **Basic functionality**  | \n  * Streams\n  * Graph capture\n  * Eager mode with fast startup time\n  * Dynamic ops (no recompilation)\n\n |   |  \n| **Model Architectures**  | \n  * Day 1 model support\n\n |   |  \n| **Quantization**  | \n  * Block-wise FP8/FP4 w/ torchao (peak perf on TPUv8t)\n\n |   |  \n| **Distributed**  | \n  * FSDPv2 (w/ perf)\n  * MPMD (w/ perf)\n  * Training > 8K chips\n  * Multi-tier checkpointing\n  * Goodput\n\n | \n  * Training >> 8K chips\n\n |  \n| **Ecosystem Integrations**  | \n  * VeRL\n\n |   |  \n| **Production-ready Solutions**  | \n  * RL\n\n | \n  * Pre-training\n\n |"
+      }
+    ],
+    "code_examples": [],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [
+      {
+        "headers": [
+          "",
+          "**Validated**",
+          "**Experimental**"
+        ],
+        "rows": [
+          [
+            "**PyTorch Community Engagement**"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "",
+          "**Near-term focus**",
+          "**Future exploration**"
+        ],
+        "rows": [
+          [
+            "**PyTorch Community Engagement**"
+          ]
+        ]
+      }
+    ],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'TorchTPU supported features and roadmap' (https://torchtpu.readthedocs.io/en/latest/feature_set/)?",
+        "answer": "Check validated versus experimental hardware, operators, models, kernels, and distributed features."
+      },
+      {
+        "question": "How does 'TorchTPU supported features and roadmap' handle: Current supported feature set?",
+        "answer": "The table below reflects our current feature coverage as of the initial open-source release.\nTo help you evaluate TorchTPU for your workloads, we categorize features into two tiers:\n  * **Validated:** Capabilities that have end-to-end continuous testing, automated CI/CD coverage, and benchmark verification across standard model architectures.\n  * **Experimental:** Early-stage implementations, emerging APIs, or prototype features. These are functional and available for early feedback, but may undergo behavioral refinement or API changes based on community input.\n\n\nNote\nTorchTPU is evolving rapidly in the open. For the most up-to-date status or to request specific features, visit our [GitHub](https://github.com/google-pytorch/torch_tpu).  \n|   | **Validated**  | **Experimental**  |  \n| --- | --- | --- |  \n| **PyTorch Community Engagement**  | \n  * OSS release for TorchTPU, vLLM, SGLang, TorchTitan, TorchRec\n  * Accepting external PRs\n  * Documentation / Tutorials\n  * CI/CD\n  * Colab\n\n | \n  * TPU Agent for ATEN migration\n\n |  \n| **TPU Support**  | \n  * v5e, v5p, v6e, v7\n\n |   |  \n| **Basic functionality**  | \n  * Ease of migration\n  * Mixed eager + compiled\n  * FW + BW\n  * Torch.profi"
+      },
+      {
+        "question": "How does 'TorchTPU supported features and roadmap' handle: Future work?",
+        "answer": "This section outlines our future development horizons and explorations, not a committed release schedule.\nAs a community-first open-source project, our development priorities are intentionally responsive to community feedback and developer adoption. Features, timelines, and architectural approaches may evolve as we learn what workloads matter most to you.\nWe organize our upcoming work into two broad horizons:\n  * **Near-Term Focus:** Areas of active design, ongoing prototyping, and performance hardening that the core team is currently prioritizing.\n  * **Future Exploration:** Long-term architectural explorations, prospective ecosystem integrations, and community-requested backlog items that we are actively investigating.\n\n  \n|   | **Near-term focus**  | **Future exploration**  |  \n| --- | --- | --- |  \n| **PyTorch Community Engagement**  | \n  * More docs / tutorial / blogs\n\n | \n  * TPU Agent for Kernel migration\n\n |  \n| **TPU Support**  | \n  * v8i, v8t\n\n |   |  \n| **Basic functionality**  | \n  * Streams\n  * Graph capture\n  * Eager mode with fast startup time\n  * Dynamic ops (no recompilation)\n\n |   |  \n| **Model Architectures**  | \n  * Day 1 model support\n\n |   |  \n| **Quantization"
+      }
+    ],
+    "full_markdown": "# TorchTPU supported feature set and future work\n## Current supported feature set\nThe table below reflects our current feature coverage as of the initial open-source release.\nTo help you evaluate TorchTPU for your workloads, we categorize features into two tiers:\n  * **Validated:** Capabilities that have end-to-end continuous testing, automated CI/CD coverage, and benchmark verification across standard model architectures.\n  * **Experimental:** Early-stage implementations, emerging APIs, or prototype features. These are functional and available for early feedback, but may undergo behavioral refinement or API changes based on community input.\n\n\nNote\nTorchTPU is evolving rapidly in the open. For the most up-to-date status or to request specific features, visit our [GitHub](https://github.com/google-pytorch/torch_tpu).  \n|   | **Validated**  | **Experimental**  |  \n| --- | --- | --- |  \n| **PyTorch Community Engagement**  | \n  * OSS release for TorchTPU, vLLM, SGLang, TorchTitan, TorchRec\n  * Accepting external PRs\n  * Documentation / Tutorials\n  * CI/CD\n  * Colab\n\n | \n  * TPU Agent for ATEN migration\n\n |  \n| **TPU Support**  | \n  * v5e, v5p, v6e, v7\n\n |   |  \n| **Basic functionality**  | \n  * Ease of migration\n  * Mixed eager + compiled\n  * FW + BW\n  * Torch.profile\n  * Dynamic ops (recompilation)\n\n | \n  * SymInts\n  * Jagged tensors\n\n |  \n| **Model Architectures**  | \n  * Transformer (Dense + MoE): Qwen, Llama, Muse Glimmer, Gemma\n  * Diffusion: WAN, FLUX\n  * CNN\n\n | \n  * GLM, Kimi, DeepSeek, GPT OSS, many more (hill climb)\n  * Mamba\n  * LSTM/GRU\n  * DLRM\n\n |  \n| **Kernel Support**  | \n  * Pallas\n  * Tokamax\n\n | \n  * Helion\n\n |  \n| **Quantization**  | \n  * Full tensor FP8/FP4\n  * Per-channel FP8\n\n |   |  \n| **Distributed**  | \n  * Optimal mesh\n  * SimpleFSDP\n  * Checkpointing\n  * Activation offloading\n  * Multi-slice up to 8K chip\n\n | \n  * FSDPv2 (low perf)\n  * MPMD (low perf)\n  * TorchComm\n\n |  \n| **Ecosystem Integrations**  | \n  * Hugging Face\n  * Ray\n  * vLLM / SGLang\n  * TorchTitan\n  * TorchRec\n\n |   |  \n| **Production-ready Solutions**  | \n  * Inference (multi-host, P/D disagg)\n  * Fine-tuning (up to \\~8K chips)\n\n |   |  \n## Future work\nThis section outlines our future development horizons and explorations, not a committed release schedule.\nAs a community-first open-source project, our development priorities are intentionally responsive to community feedback and developer adoption. Features, timelines, and architectural approaches may evolve as we learn what workloads matter most to you.\nWe organize our upcoming work into two broad horizons:\n  * **Near-Term Focus:** Areas of active design, ongoing prototyping, and performance hardening that the core team is currently prioritizing.\n  * **Future Exploration:** Long-term architectural explorations, prospective ecosystem integrations, and community-requested backlog items that we are actively investigating.\n\n  \n|   | **Near-term focus**  | **Future exploration**  |  \n| --- | --- | --- |  \n| **PyTorch Community Engagement**  | \n  * More docs / tutorial / blogs\n\n | \n  * TPU Agent for Kernel migration\n\n |  \n| **TPU Support**  | \n  * v8i, v8t\n\n |   |  \n| **Basic functionality**  | \n  * Streams\n  * Graph capture\n  * Eager mode with fast startup time\n  * Dynamic ops (no recompilation)\n\n |   |  \n| **Model Architectures**  | \n  * Day 1 model support\n\n |   |  \n| **Quantization**  | \n  * Block-wise FP8/FP4 w/ torchao (peak perf on TPUv8t)\n\n |   |  \n| **Distributed**  | \n  * FSDPv2 (w/ perf)\n  * MPMD (w/ perf)\n  * Training > 8K chips\n  * Multi-tier checkpointing\n  * Goodput\n\n | \n  * Training >> 8K chips\n\n |  \n| **Ecosystem Integrations**  | \n  * VeRL\n\n |   |  \n| **Production-ready Solutions**  | \n  * RL\n\n | \n  * Pre-training\n\n |"
+  }
 }

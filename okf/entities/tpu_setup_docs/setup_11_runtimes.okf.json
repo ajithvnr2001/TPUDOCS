@@ -1,57 +1,422 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:setup_11_runtimes",
-  "@type": "DocumentationResource",
-  "name": "TPU software versions",
-  "canonicalUrl": "https://cloud.google.com/tpu/docs/runtimes",
-  "category": "TPU setup docs",
-  "categorySlug": "tpu_setup_docs",
-  "description": "Runtime/image selection for TPU generations and PyTorch/JAX workloads.",
-  "provenance": {
-    "sourceUrl": "https://cloud.google.com/tpu/docs/runtimes",
-    "crawledAt": "2026-10-26T12:45:09.200581+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 33305
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "TPU software versions",
-      "documentedIn",
-      "https://cloud.google.com/tpu/docs/runtimes"
-    ],
-    [
-      "TPU software versions",
-      "belongsToCategory",
-      "tpu_setup_docs"
-    ],
-    [
-      "TPU software versions",
-      "targetsPlatform",
-      "Google Cloud Platform"
-    ],
-    [
-      "TPU software versions",
-      "managesHardware",
-      "Google Cloud TPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:setup_11_runtimes",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "setup_11_runtimes",
+    "name": "TPU software versions",
+    "url": "https://cloud.google.com/tpu/docs/runtimes",
+    "category": "tpu_setup_docs",
+    "description": "Runtime/image selection for TPU generations and PyTorch/JAX workloads.",
+    "char_count": 11873,
+    "word_count": 1056,
+    "section_count": 8,
+    "code_block_count": 0,
+    "table_count": 4,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.387585+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:setup_11_runtimes",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:setup_11_runtimes",
+        "predicate": "schema:name",
+        "object": "TPU software versions"
+      },
+      {
+        "subject": "tpu_doc:setup_11_runtimes",
+        "predicate": "schema:url",
+        "object": "https://cloud.google.com/tpu/docs/runtimes"
+      },
+      {
+        "subject": "tpu_doc:setup_11_runtimes",
+        "predicate": "schema:category",
+        "object": "tpu_setup_docs"
+      },
+      {
+        "subject": "tpu_doc:setup_11_runtimes",
+        "predicate": "schema:description",
+        "object": "Runtime/image selection for TPU generations and PyTorch/JAX workloads."
+      },
+      {
+        "subject": "tpu_doc:setup_11_runtimes",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:TPU7x"
+      },
+      {
+        "subject": "tpu_doc:setup_11_runtimes",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:setup_11_runtimes",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5p"
+      },
+      {
+        "subject": "tpu_doc:setup_11_runtimes",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5e"
+      },
+      {
+        "subject": "tpu_doc:setup_11_runtimes",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v4"
+      },
+      {
+        "subject": "tpu_doc:setup_11_runtimes",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:setup_11_runtimes",
+        "predicate": "okf:hasSection",
+        "object": "TPU software versions"
+      },
+      {
+        "subject": "tpu_doc:setup_11_runtimes",
+        "predicate": "okf:hasSection",
+        "object": "PyTorch and JAX"
+      },
+      {
+        "subject": "tpu_doc:setup_11_runtimes",
+        "predicate": "okf:hasSection",
+        "object": "TensorFlow"
+      },
+      {
+        "subject": "tpu_doc:setup_11_runtimes",
+        "predicate": "okf:hasSection",
+        "object": "TPU v6e, v5p, and v5e"
+      },
+      {
+        "subject": "tpu_doc:setup_11_runtimes",
+        "predicate": "okf:hasSection",
+        "object": "TPU v4"
+      },
+      {
+        "subject": "tpu_doc:setup_11_runtimes",
+        "predicate": "okf:hasSection",
+        "object": "TPU v2 and v3"
+      },
+      {
+        "subject": "tpu_doc:setup_11_runtimes",
+        "predicate": "okf:hasSection",
+        "object": "TensorFlow PJRT support"
+      },
+      {
+        "subject": "tpu_doc:setup_11_runtimes",
+        "predicate": "okf:hasSection",
+        "object": "What's next"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "TPU software versions provides official guidance on Runtime/image selection for TPU generations and PyTorch/JAX workloads.",
-      "confidence": 1.0,
-      "source": "https://cloud.google.com/tpu/docs/runtimes",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is TPU software versions used for in Cloud TPU workflows?",
-      "answer": "Runtime/image selection for TPU generations and PyTorch/JAX workloads.",
-      "category": "tpu_setup_docs"
-    }
-  ],
-  "contentSummary": "Runtime/image selection for TPU generations and PyTorch/JAX workloads."
+  },
+  "structured_content": {
+    "summary": "Runtime/image selection for TPU generations and PyTorch/JAX workloads.",
+    "sections": [
+      {
+        "heading": "TPU software versions",
+        "level": 1,
+        "content": "**Caution:** This page applies to the Cloud TPU API, which is no longer under active development. The Cloud TPU API will receive bug fixes and security updates only. For the latest features and support for the latest TPU versions, we recommend using Compute Engine or Google Kubernetes Engine to manage TPU resources. For more information, see [TPU resources in Compute Engine](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine) and [About TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus). The Cloud TPU API is not supported on TPU7x and later TPU versions. \nThis document provides guidance on selecting the appropriate TPU software version when you create Cloud TPUs.\nWhen you create TPU resources, you specify the software version, also called runtime version, which refers to the software environment that is pre-installed on your TPU VM. This includes the Ubuntu operating system, Docker, and other software required to run your code on TPUs.\nIf you're using the Google Cloud CLI, you specify the TPU software version using the `--version` or `--runtime-version` parameter. If you're using the Google Cloud console, you select a TPU software version from the **TPU software version** list."
+      },
+      {
+        "heading": "PyTorch and JAX",
+        "level": 2,
+        "content": "Use the following common TPU software versions for PyTorch and JAX, then install the framework you want to use.  \n| TPU version  | TPU software version  |  \n| --- | --- |  \n| Trillium (v6e)  | v2-alpha-tpuv6e  |  \n| v5p  | v2-alpha-tpuv5  |  \n| v5e  | v2-alpha-tpuv5-lite  |  \n| v4 and older  | tpu-ubuntu2204-base  |  \nFor more information about installation and getting started with JAX or PyTorch, see [Run a calculation on a Cloud TPU VM using JAX](https://docs.cloud.google.com/tpu/docs/run-calculation-jax) and [PyTorch on Cloud TPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu)."
+      },
+      {
+        "heading": "TensorFlow",
+        "level": 2,
+        "content": "**Note:** TensorFlow is not supported on Ironwood (TPU7x).\nTPU software versions for TensorFlow follow a specific naming convention:\n`tpu-vm-tf-x.y.z[-{pod}][-{device_api}]`\n  * `x.y.z`: Represents the major, minor, and patch versions of TensorFlow.\n  * `-pod` (optional): Indicates that you're using a multi-host TPU slice.\n  * `-{device_api}` (optional): Specifies the device API, for example, `-pjrt` (if you're using the [PJRT API](https://docs.cloud.google.com/tpu/docs/runtimes#pjrt-support)).\n\n\nSee the following sections for more information on how to specify a TPU software version.\nThere are TPU software versions specific to each version of TensorFlow. The following table shows the supported TensorFlow versions and associated libtpu versions:  \n| TensorFlow version  | libtpu.so version  |  \n| --- | --- |  \n| [2.18.0](https://pypi.org/project/tensorflow-tpu/2.18.0/#files)  | [1.12.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.12.0/libtpu.so)  |  \n| [2.17.1](https://pypi.org/project/tensorflow-tpu/2.17.1/#files)  | [1.11.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.11.1/libtpu.so)  |  \n| [2.17.0](https://pypi.org/project/tensorflow-tpu/2.17.0/#files)  | [1.11.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.11.0/libtpu.so)  |  \n| [2.16.2](https://pypi.org/project/tensorflow-tpu/2.16.2/#files)  | [1.10.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.10.1/libtpu.so)  |  \n| [2.16.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.16.1/tensorflow-2.16.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.10.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.10.1/libtpu.so)  |  \n| [2.15.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.15.0/tensorflow-2.15.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.9.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.9.0/libtpu.so)  |  \n| [2.15.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.15.0/tensorflow-2.15.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.9.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.9.0/libtpu.so)  |  \n| [2.14.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.14.1/tensorflow-2.14.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.8.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.8.1/libtpu.so)  |  \n| [2.14.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.14.0/tensorflow-2.14.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.8.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.8.0/libtpu.so)  |  \n| [2.13.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.13.1/tensorflow-2.13.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.7.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.7.1/libtpu.so)  |  \n| [2.13.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.13.0/tensorflow-2.13.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.7.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.7.0/libtpu.so)  |  \n| [2.12.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.12.1/tensorflow-2.12.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.6.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.6.1/libtpu.so)  |  \n| [2.12.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.12.0/tensorflow-2.12.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.6.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.6.0/libtpu.so)  |  \n| [2.11.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.11.1/tensorflow-2.11.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.5.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.5.1/libtpu.so)  |  \n| [2.11.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.11.0/tensorflow-2.11.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.5.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.5.0/libtpu.so)  |  \n| [2.10.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.10.1/tensorflow-2.10.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.4.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.4.1/libtpu.so)  |  \n| [2.10.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.10.0/tensorflow-2.10.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.4.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.4.0/libtpu.so)  |  \n| [2.9.3](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.9.3/tensorflow-2.9.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.3.2](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.3.2/libtpu.so)  |  \n| [2.9.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.9.1/tensorflow-2.9.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.3.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.3.0/libtpu.so)  |  \n| [2.8.3](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.8.3/tensorflow-2.8.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.2.3](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.2.3/libtpu.so)  |  \n| [2.8.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.8.0/tensorflow-2.8.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.2.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.2.0/libtpu.so)  |  \n| [2.7.3](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.7.3/tensorflow-2.7.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.1.2](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.1.2/libtpu.so)  |  \nFor more information about TensorFlow patch versions, see [Supported TensorFlow patch versions](https://docs.cloud.google.com/tpu/docs/supported-patches)."
+      },
+      {
+        "heading": "TPU v6e, v5p, and v5e",
+        "level": 3,
+        "content": "TPU v6e, v5e, and v5p support TensorFlow 2.15.0 and newer. You specify the TPU software version using the form: `tpu-vm-tf-x.y.z-{pod}-pjrt` where `x` is the major TensorFlow version, `y` is the minor version, and `z` is the TensorFlow patch version. Add `pod` after the TensorFlow version if you are using a multi-host TPU. For example, if you are using TensorFlow 2.16.0 on a multi-host TPU, use the `tpu-vm-tf-2.16.0-pod-pjrt` TPU software version. For other versions of TensorFlow, replace `2.16.0` with the major and patch versions of TensorFlow you are using. If you are using a single-host TPU, omit `pod`."
+      },
+      {
+        "heading": "TPU v4",
+        "level": 3,
+        "content": "If you're using TPU v4 and TensorFlow 2.10.1 or newer, follow the instructions for [TPU v2 and v3](https://docs.cloud.google.com/tpu/docs/runtimes#tf-v2-v3). If you're using TensorFlow 2.10.0 or earlier, use a v4-specific TPU software version:  \n| TensorFlow version  | TPU software version  |  \n| --- | --- |  \n| 2.10.0  | tpu-vm-tf-2.10.0-v4  \ntpu-vm-tf-2.10.0-pod-v4  |  \n| 2.9.3  | tpu-vm-tf-2.9.3-v4  \ntpu-vm-tf-2.9.3-pod-v4  |  \n| 2.9.2  | tpu-vm-tf-2.9.2-v4  \ntpu-vm-tf-2.9.2-pod-v4  |  \n| 2.9.1  | tpu-vm-tf-2.9.1-v4  \ntpu-vm-tf-2.9.1-pod-v4  |"
+      },
+      {
+        "heading": "TPU v2 and v3",
+        "level": 3,
+        "content": "If you are using TPU v2 or v3, use the TPU software version that matches the version of TensorFlow you are using. For example if you are using TensorFlow 2.14.1, use the `tpu-vm-tf-2.14.1` TPU software version. For other versions of TensorFlow, replace `2.14.1` with the TensorFlow version you are using. If you are using a multi-host TPU, append pod to the end of the TPU software version, for example `tpu-vm-tf-2.14.1-pod`.\nBeginning with TensorFlow 2.15.0, you must also specify a device API as part of the software version name. For example, if you are using TensorFlow 2.16.1 with the PJRT API, use the TPU software version `tpu-vm-tf-2.16.1-pjrt`. If you are using the stream executor API with the same version of TensorFlow, use the `tpu-vm-tf-2.16.1-se` TPU software version. TensorFlow versions older than 2.15.0 only support stream executor."
+      },
+      {
+        "heading": "TensorFlow PJRT support",
+        "level": 3,
+        "content": "Beginning with TensorFlow 2.15.0, you can use the PJRT interface for TensorFlow on TPU. PJRT features automatic device memory defragmentation and simplifies the integration of hardware with frameworks. For more information about PJRT, see [PJRT: Simplifying ML Hardware and Framework Integration](https://opensource.googleblog.com/2023/05/pjrt-simplifying-ml-hardware-and-framework-integration.html).\n**Important:** TPU v5e and future TPU generations only support PJRT. Not all features of TPU v2, v3, and v4 have been migrated to the PJRT API. The following table describes which features are supported on PJRT or stream executor.  \n| Accelerator  | Feature  | PJRT support  | Stream executor support  |  \n| --- | --- | --- | --- |  \n| TPU v2 - v4  | Dense compute (no TPU embedding API)  | Yes  | Yes  |  \n| TPU v2 - v4  | Dense compute API + TPU embedding API  | No  | Yes  |  \n| TPU v2 - v4  | tf.summary/tf.print with soft device placement  | No  | Yes  |  \n| TPU v5e  | Dense compute (no TPU embedding API)  | Yes  | No  |  \n| TPU v5e  | TPU embedding API  | N/A  | No  |  \n| TPU v5p  | Dense compute (no TPU embedding API)  | Yes  | No  |  \n| TPU v5p  | TPU embedding API  | Yes  | No  |"
+      },
+      {
+        "heading": "What's next",
+        "level": 2,
+        "content": "* See [TPU architecture](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm) to learn more about TPU architecture.\n  * See [When to use TPUs](https://docs.cloud.google.com/tpu/docs/tpus#when_to_use_tpus) to learn about the types of models that are well suited to Cloud TPU."
+      }
+    ],
+    "code_examples": [],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [
+      {
+        "headers": [
+          "TPU version",
+          "TPU software version"
+        ],
+        "rows": [
+          [
+            "Trillium (v6e)",
+            "v2-alpha-tpuv6e"
+          ],
+          [
+            "v5p",
+            "v2-alpha-tpuv5"
+          ],
+          [
+            "v5e",
+            "v2-alpha-tpuv5-lite"
+          ],
+          [
+            "v4 and older",
+            "tpu-ubuntu2204-base"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "TensorFlow version",
+          "libtpu.so version"
+        ],
+        "rows": [
+          [
+            "[2.18.0](https://pypi.org/project/tensorflow-tpu/2.18.0/#files)",
+            "[1.12.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.12.0/libtpu.so)"
+          ],
+          [
+            "[2.17.1](https://pypi.org/project/tensorflow-tpu/2.17.1/#files)",
+            "[1.11.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.11.1/libtpu.so)"
+          ],
+          [
+            "[2.17.0](https://pypi.org/project/tensorflow-tpu/2.17.0/#files)",
+            "[1.11.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.11.0/libtpu.so)"
+          ],
+          [
+            "[2.16.2](https://pypi.org/project/tensorflow-tpu/2.16.2/#files)",
+            "[1.10.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.10.1/libtpu.so)"
+          ],
+          [
+            "[2.16.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.16.1/tensorflow-2.16.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)",
+            "[1.10.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.10.1/libtpu.so)"
+          ],
+          [
+            "[2.15.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.15.0/tensorflow-2.15.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)",
+            "[1.9.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.9.0/libtpu.so)"
+          ],
+          [
+            "[2.15.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.15.0/tensorflow-2.15.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)",
+            "[1.9.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.9.0/libtpu.so)"
+          ],
+          [
+            "[2.14.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.14.1/tensorflow-2.14.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)",
+            "[1.8.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.8.1/libtpu.so)"
+          ],
+          [
+            "[2.14.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.14.0/tensorflow-2.14.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)",
+            "[1.8.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.8.0/libtpu.so)"
+          ],
+          [
+            "[2.13.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.13.1/tensorflow-2.13.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)",
+            "[1.7.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.7.1/libtpu.so)"
+          ],
+          [
+            "[2.13.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.13.0/tensorflow-2.13.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)",
+            "[1.7.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.7.0/libtpu.so)"
+          ],
+          [
+            "[2.12.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.12.1/tensorflow-2.12.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)",
+            "[1.6.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.6.1/libtpu.so)"
+          ],
+          [
+            "[2.12.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.12.0/tensorflow-2.12.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)",
+            "[1.6.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.6.0/libtpu.so)"
+          ],
+          [
+            "[2.11.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.11.1/tensorflow-2.11.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)",
+            "[1.5.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.5.1/libtpu.so)"
+          ],
+          [
+            "[2.11.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.11.0/tensorflow-2.11.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)",
+            "[1.5.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.5.0/libtpu.so)"
+          ],
+          [
+            "[2.10.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.10.1/tensorflow-2.10.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)",
+            "[1.4.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.4.1/libtpu.so)"
+          ],
+          [
+            "[2.10.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.10.0/tensorflow-2.10.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)",
+            "[1.4.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.4.0/libtpu.so)"
+          ],
+          [
+            "[2.9.3](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.9.3/tensorflow-2.9.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)",
+            "[1.3.2](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.3.2/libtpu.so)"
+          ],
+          [
+            "[2.9.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.9.1/tensorflow-2.9.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)",
+            "[1.3.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.3.0/libtpu.so)"
+          ],
+          [
+            "[2.8.3](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.8.3/tensorflow-2.8.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)",
+            "[1.2.3](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.2.3/libtpu.so)"
+          ],
+          [
+            "[2.8.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.8.0/tensorflow-2.8.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)",
+            "[1.2.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.2.0/libtpu.so)"
+          ],
+          [
+            "[2.7.3](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.7.3/tensorflow-2.7.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)",
+            "[1.1.2](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.1.2/libtpu.so)"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "TensorFlow version",
+          "TPU software version"
+        ],
+        "rows": [
+          [
+            "2.10.0",
+            "tpu-vm-tf-2.10.0-v4"
+          ],
+          [
+            "tpu-vm-tf-2.10.0-pod-v4"
+          ],
+          [
+            "2.9.3",
+            "tpu-vm-tf-2.9.3-v4"
+          ],
+          [
+            "tpu-vm-tf-2.9.3-pod-v4"
+          ],
+          [
+            "2.9.2",
+            "tpu-vm-tf-2.9.2-v4"
+          ],
+          [
+            "tpu-vm-tf-2.9.2-pod-v4"
+          ],
+          [
+            "2.9.1",
+            "tpu-vm-tf-2.9.1-v4"
+          ],
+          [
+            "tpu-vm-tf-2.9.1-pod-v4"
+          ]
+        ]
+      },
+      {
+        "headers": [
+          "Accelerator",
+          "Feature",
+          "PJRT support",
+          "Stream executor support"
+        ],
+        "rows": [
+          [
+            "TPU v2 - v4",
+            "Dense compute (no TPU embedding API)",
+            "Yes",
+            "Yes"
+          ],
+          [
+            "TPU v2 - v4",
+            "Dense compute API + TPU embedding API",
+            "No",
+            "Yes"
+          ],
+          [
+            "TPU v2 - v4",
+            "tf.summary/tf.print with soft device placement",
+            "No",
+            "Yes"
+          ],
+          [
+            "TPU v5e",
+            "Dense compute (no TPU embedding API)",
+            "Yes",
+            "No"
+          ],
+          [
+            "TPU v5e",
+            "TPU embedding API",
+            "N/A",
+            "No"
+          ],
+          [
+            "TPU v5p",
+            "Dense compute (no TPU embedding API)",
+            "Yes",
+            "No"
+          ],
+          [
+            "TPU v5p",
+            "TPU embedding API",
+            "Yes",
+            "No"
+          ]
+        ]
+      }
+    ],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'TPU software versions' (https://cloud.google.com/tpu/docs/runtimes)?",
+        "answer": "Runtime/image selection for TPU generations and PyTorch/JAX workloads."
+      },
+      {
+        "question": "How does 'TPU software versions' handle: TPU software versions?",
+        "answer": "**Caution:** This page applies to the Cloud TPU API, which is no longer under active development. The Cloud TPU API will receive bug fixes and security updates only. For the latest features and support for the latest TPU versions, we recommend using Compute Engine or Google Kubernetes Engine to manage TPU resources. For more information, see [TPU resources in Compute Engine](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine) and [About TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus). The Cloud TPU API is not supported on TPU7x and later TPU versions. \nThis document provides guidance on selecting the appropriate TPU software version when you create Cloud TPUs.\nWhen you create TPU resources, you specify the software version, also called runtime version, which refers to the software environment that is pre-installed on your TPU VM. This includes the Ubuntu operating system, Docker, and other software required to run your code on TPUs.\nIf you're using the Google Cloud CLI, you specify the TPU software version using the `--version` or `--runtime-version` parameter. If you're using the Google Cloud console, you select a TPU software version fr"
+      },
+      {
+        "question": "How does 'TPU software versions' handle: PyTorch and JAX?",
+        "answer": "Use the following common TPU software versions for PyTorch and JAX, then install the framework you want to use.  \n| TPU version  | TPU software version  |  \n| --- | --- |  \n| Trillium (v6e)  | v2-alpha-tpuv6e  |  \n| v5p  | v2-alpha-tpuv5  |  \n| v5e  | v2-alpha-tpuv5-lite  |  \n| v4 and older  | tpu-ubuntu2204-base  |  \nFor more information about installation and getting started with JAX or PyTorch, see [Run a calculation on a Cloud TPU VM using JAX](https://docs.cloud.google.com/tpu/docs/run-calculation-jax) and [PyTorch on Cloud TPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu)."
+      },
+      {
+        "question": "How does 'TPU software versions' handle: TensorFlow?",
+        "answer": "**Note:** TensorFlow is not supported on Ironwood (TPU7x).\nTPU software versions for TensorFlow follow a specific naming convention:\n`tpu-vm-tf-x.y.z[-{pod}][-{device_api}]`\n  * `x.y.z`: Represents the major, minor, and patch versions of TensorFlow.\n  * `-pod` (optional): Indicates that you're using a multi-host TPU slice.\n  * `-{device_api}` (optional): Specifies the device API, for example, `-pjrt` (if you're using the [PJRT API](https://docs.cloud.google.com/tpu/docs/runtimes#pjrt-support)).\n\n\nSee the following sections for more information on how to specify a TPU software version.\nThere are TPU software versions specific to each version of TensorFlow. The following table shows the supported TensorFlow versions and associated libtpu versions:  \n| TensorFlow version  | libtpu.so version  |  \n| --- | --- |  \n| [2.18.0](https://pypi.org/project/tensorflow-tpu/2.18.0/#files)  | [1.12.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.12.0/libtpu.so)  |  \n| [2.17.1](https://pypi.org/project/tensorflow-tpu/2.17.1/#files)  | [1.11.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.11.1/libtpu.so)  |  \n| [2.17.0](https://pypi.org/project/tensorflow-tp"
+      },
+      {
+        "question": "How does 'TPU software versions' handle: TPU v6e, v5p, and v5e?",
+        "answer": "TPU v6e, v5e, and v5p support TensorFlow 2.15.0 and newer. You specify the TPU software version using the form: `tpu-vm-tf-x.y.z-{pod}-pjrt` where `x` is the major TensorFlow version, `y` is the minor version, and `z` is the TensorFlow patch version. Add `pod` after the TensorFlow version if you are using a multi-host TPU. For example, if you are using TensorFlow 2.16.0 on a multi-host TPU, use the `tpu-vm-tf-2.16.0-pod-pjrt` TPU software version. For other versions of TensorFlow, replace `2.16.0` with the major and patch versions of TensorFlow you are using. If you are using a single-host TPU, omit `pod`."
+      },
+      {
+        "question": "How does 'TPU software versions' handle: TPU v4?",
+        "answer": "If you're using TPU v4 and TensorFlow 2.10.1 or newer, follow the instructions for [TPU v2 and v3](https://docs.cloud.google.com/tpu/docs/runtimes#tf-v2-v3). If you're using TensorFlow 2.10.0 or earlier, use a v4-specific TPU software version:  \n| TensorFlow version  | TPU software version  |  \n| --- | --- |  \n| 2.10.0  | tpu-vm-tf-2.10.0-v4  \ntpu-vm-tf-2.10.0-pod-v4  |  \n| 2.9.3  | tpu-vm-tf-2.9.3-v4  \ntpu-vm-tf-2.9.3-pod-v4  |  \n| 2.9.2  | tpu-vm-tf-2.9.2-v4  \ntpu-vm-tf-2.9.2-pod-v4  |  \n| 2.9.1  | tpu-vm-tf-2.9.1-v4  \ntpu-vm-tf-2.9.1-pod-v4  |"
+      },
+      {
+        "question": "How does 'TPU software versions' handle: TPU v2 and v3?",
+        "answer": "If you are using TPU v2 or v3, use the TPU software version that matches the version of TensorFlow you are using. For example if you are using TensorFlow 2.14.1, use the `tpu-vm-tf-2.14.1` TPU software version. For other versions of TensorFlow, replace `2.14.1` with the TensorFlow version you are using. If you are using a multi-host TPU, append pod to the end of the TPU software version, for example `tpu-vm-tf-2.14.1-pod`.\nBeginning with TensorFlow 2.15.0, you must also specify a device API as part of the software version name. For example, if you are using TensorFlow 2.16.1 with the PJRT API, use the TPU software version `tpu-vm-tf-2.16.1-pjrt`. If you are using the stream executor API with the same version of TensorFlow, use the `tpu-vm-tf-2.16.1-se` TPU software version. TensorFlow versions older than 2.15.0 only support stream executor."
+      },
+      {
+        "question": "How does 'TPU software versions' handle: TensorFlow PJRT support?",
+        "answer": "Beginning with TensorFlow 2.15.0, you can use the PJRT interface for TensorFlow on TPU. PJRT features automatic device memory defragmentation and simplifies the integration of hardware with frameworks. For more information about PJRT, see [PJRT: Simplifying ML Hardware and Framework Integration](https://opensource.googleblog.com/2023/05/pjrt-simplifying-ml-hardware-and-framework-integration.html).\n**Important:** TPU v5e and future TPU generations only support PJRT. Not all features of TPU v2, v3, and v4 have been migrated to the PJRT API. The following table describes which features are supported on PJRT or stream executor.  \n| Accelerator  | Feature  | PJRT support  | Stream executor support  |  \n| --- | --- | --- | --- |  \n| TPU v2 - v4  | Dense compute (no TPU embedding API)  | Yes  | Yes  |  \n| TPU v2 - v4  | Dense compute API + TPU embedding API  | No  | Yes  |  \n| TPU v2 - v4  | tf.summary/tf.print with soft device placement  | No  | Yes  |  \n| TPU v5e  | Dense compute (no TPU embedding API)  | Yes  | No  |  \n| TPU v5e  | TPU embedding API  | N/A  | No  |  \n| TPU v5p  | Dense compute (no TPU embedding API)  | Yes  | No  |  \n| TPU v5p  | TPU embedding API  | Yes  | No  |"
+      },
+      {
+        "question": "How does 'TPU software versions' handle: What's next?",
+        "answer": "* See [TPU architecture](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm) to learn more about TPU architecture.\n  * See [When to use TPUs](https://docs.cloud.google.com/tpu/docs/tpus#when_to_use_tpus) to learn about the types of models that are well suited to Cloud TPU."
+      }
+    ],
+    "full_markdown": "# TPU software versions\n**Caution:** This page applies to the Cloud TPU API, which is no longer under active development. The Cloud TPU API will receive bug fixes and security updates only. For the latest features and support for the latest TPU versions, we recommend using Compute Engine or Google Kubernetes Engine to manage TPU resources. For more information, see [TPU resources in Compute Engine](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine) and [About TPUs in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus). The Cloud TPU API is not supported on TPU7x and later TPU versions. \nThis document provides guidance on selecting the appropriate TPU software version when you create Cloud TPUs.\nWhen you create TPU resources, you specify the software version, also called runtime version, which refers to the software environment that is pre-installed on your TPU VM. This includes the Ubuntu operating system, Docker, and other software required to run your code on TPUs.\nIf you're using the Google Cloud CLI, you specify the TPU software version using the `--version` or `--runtime-version` parameter. If you're using the Google Cloud console, you select a TPU software version from the **TPU software version** list.\n## PyTorch and JAX\nUse the following common TPU software versions for PyTorch and JAX, then install the framework you want to use.  \n| TPU version  | TPU software version  |  \n| --- | --- |  \n| Trillium (v6e)  | v2-alpha-tpuv6e  |  \n| v5p  | v2-alpha-tpuv5  |  \n| v5e  | v2-alpha-tpuv5-lite  |  \n| v4 and older  | tpu-ubuntu2204-base  |  \nFor more information about installation and getting started with JAX or PyTorch, see [Run a calculation on a Cloud TPU VM using JAX](https://docs.cloud.google.com/tpu/docs/run-calculation-jax) and [PyTorch on Cloud TPU](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu).\n## TensorFlow\n**Note:** TensorFlow is not supported on Ironwood (TPU7x).\nTPU software versions for TensorFlow follow a specific naming convention:\n`tpu-vm-tf-x.y.z[-{pod}][-{device_api}]`\n  * `x.y.z`: Represents the major, minor, and patch versions of TensorFlow.\n  * `-pod` (optional): Indicates that you're using a multi-host TPU slice.\n  * `-{device_api}` (optional): Specifies the device API, for example, `-pjrt` (if you're using the [PJRT API](https://docs.cloud.google.com/tpu/docs/runtimes#pjrt-support)).\n\n\nSee the following sections for more information on how to specify a TPU software version.\nThere are TPU software versions specific to each version of TensorFlow. The following table shows the supported TensorFlow versions and associated libtpu versions:  \n| TensorFlow version  | libtpu.so version  |  \n| --- | --- |  \n| [2.18.0](https://pypi.org/project/tensorflow-tpu/2.18.0/#files)  | [1.12.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.12.0/libtpu.so)  |  \n| [2.17.1](https://pypi.org/project/tensorflow-tpu/2.17.1/#files)  | [1.11.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.11.1/libtpu.so)  |  \n| [2.17.0](https://pypi.org/project/tensorflow-tpu/2.17.0/#files)  | [1.11.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.11.0/libtpu.so)  |  \n| [2.16.2](https://pypi.org/project/tensorflow-tpu/2.16.2/#files)  | [1.10.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.10.1/libtpu.so)  |  \n| [2.16.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.16.1/tensorflow-2.16.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.10.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.10.1/libtpu.so)  |  \n| [2.15.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.15.0/tensorflow-2.15.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.9.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.9.0/libtpu.so)  |  \n| [2.15.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.15.0/tensorflow-2.15.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.9.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.9.0/libtpu.so)  |  \n| [2.14.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.14.1/tensorflow-2.14.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.8.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.8.1/libtpu.so)  |  \n| [2.14.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.14.0/tensorflow-2.14.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.8.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.8.0/libtpu.so)  |  \n| [2.13.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.13.1/tensorflow-2.13.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.7.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.7.1/libtpu.so)  |  \n| [2.13.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.13.0/tensorflow-2.13.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.7.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.7.0/libtpu.so)  |  \n| [2.12.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.12.1/tensorflow-2.12.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.6.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.6.1/libtpu.so)  |  \n| [2.12.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.12.0/tensorflow-2.12.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.6.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.6.0/libtpu.so)  |  \n| [2.11.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.11.1/tensorflow-2.11.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.5.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.5.1/libtpu.so)  |  \n| [2.11.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.11.0/tensorflow-2.11.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.5.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.5.0/libtpu.so)  |  \n| [2.10.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.10.1/tensorflow-2.10.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.4.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.4.1/libtpu.so)  |  \n| [2.10.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.10.0/tensorflow-2.10.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.4.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.4.0/libtpu.so)  |  \n| [2.9.3](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.9.3/tensorflow-2.9.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.3.2](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.3.2/libtpu.so)  |  \n| [2.9.1](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.9.1/tensorflow-2.9.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.3.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.3.0/libtpu.so)  |  \n| [2.8.3](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.8.3/tensorflow-2.8.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.2.3](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.2.3/libtpu.so)  |  \n| [2.8.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.8.0/tensorflow-2.8.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.2.0](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.2.0/libtpu.so)  |  \n| [2.7.3](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/tensorflow/tf-2.7.3/tensorflow-2.7.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl)  | [1.1.2](https://storage.googleapis.com/cloud-tpu-tpuvm-artifacts/libtpu/1.1.2/libtpu.so)  |  \nFor more information about TensorFlow patch versions, see [Supported TensorFlow patch versions](https://docs.cloud.google.com/tpu/docs/supported-patches).\n### TPU v6e, v5p, and v5e\nTPU v6e, v5e, and v5p support TensorFlow 2.15.0 and newer. You specify the TPU software version using the form: `tpu-vm-tf-x.y.z-{pod}-pjrt` where `x` is the major TensorFlow version, `y` is the minor version, and `z` is the TensorFlow patch version. Add `pod` after the TensorFlow version if you are using a multi-host TPU. For example, if you are using TensorFlow 2.16.0 on a multi-host TPU, use the `tpu-vm-tf-2.16.0-pod-pjrt` TPU software version. For other versions of TensorFlow, replace `2.16.0` with the major and patch versions of TensorFlow you are using. If you are using a single-host TPU, omit `pod`.\n### TPU v4\nIf you're using TPU v4 and TensorFlow 2.10.1 or newer, follow the instructions for [TPU v2 and v3](https://docs.cloud.google.com/tpu/docs/runtimes#tf-v2-v3). If you're using TensorFlow 2.10.0 or earlier, use a v4-specific TPU software version:  \n| TensorFlow version  | TPU software version  |  \n| --- | --- |  \n| 2.10.0  | tpu-vm-tf-2.10.0-v4  \ntpu-vm-tf-2.10.0-pod-v4  |  \n| 2.9.3  | tpu-vm-tf-2.9.3-v4  \ntpu-vm-tf-2.9.3-pod-v4  |  \n| 2.9.2  | tpu-vm-tf-2.9.2-v4  \ntpu-vm-tf-2.9.2-pod-v4  |  \n| 2.9.1  | tpu-vm-tf-2.9.1-v4  \ntpu-vm-tf-2.9.1-pod-v4  |  \n### TPU v2 and v3\nIf you are using TPU v2 or v3, use the TPU software version that matches the version of TensorFlow you are using. For example if you are using TensorFlow 2.14.1, use the `tpu-vm-tf-2.14.1` TPU software version. For other versions of TensorFlow, replace `2.14.1` with the TensorFlow version you are using. If you are using a multi-host TPU, append pod to the end of the TPU software version, for example `tpu-vm-tf-2.14.1-pod`.\nBeginning with TensorFlow 2.15.0, you must also specify a device API as part of the software version name. For example, if you are using TensorFlow 2.16.1 with the PJRT API, use the TPU software version `tpu-vm-tf-2.16.1-pjrt`. If you are using the stream executor API with the same version of TensorFlow, use the `tpu-vm-tf-2.16.1-se` TPU software version. TensorFlow versions older than 2.15.0 only support stream executor.\n### TensorFlow PJRT support\nBeginning with TensorFlow 2.15.0, you can use the PJRT interface for TensorFlow on TPU. PJRT features automatic device memory defragmentation and simplifies the integration of hardware with frameworks. For more information about PJRT, see [PJRT: Simplifying ML Hardware and Framework Integration](https://opensource.googleblog.com/2023/05/pjrt-simplifying-ml-hardware-and-framework-integration.html).\n**Important:** TPU v5e and future TPU generations only support PJRT. Not all features of TPU v2, v3, and v4 have been migrated to the PJRT API. The following table describes which features are supported on PJRT or stream executor.  \n| Accelerator  | Feature  | PJRT support  | Stream executor support  |  \n| --- | --- | --- | --- |  \n| TPU v2 - v4  | Dense compute (no TPU embedding API)  | Yes  | Yes  |  \n| TPU v2 - v4  | Dense compute API + TPU embedding API  | No  | Yes  |  \n| TPU v2 - v4  | tf.summary/tf.print with soft device placement  | No  | Yes  |  \n| TPU v5e  | Dense compute (no TPU embedding API)  | Yes  | No  |  \n| TPU v5e  | TPU embedding API  | N/A  | No  |  \n| TPU v5p  | Dense compute (no TPU embedding API)  | Yes  | No  |  \n| TPU v5p  | TPU embedding API  | Yes  | No  |  \n## What's next\n  * See [TPU architecture](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm) to learn more about TPU architecture.\n  * See [When to use TPUs](https://docs.cloud.google.com/tpu/docs/tpus#when_to_use_tpus) to learn about the types of models that are well suited to Cloud TPU."
+  }
 }

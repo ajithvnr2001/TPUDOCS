@@ -1,58 +1,513 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:train_18_maxtext_gemma_sft_single_host",
-  "@type": "DocumentationResource",
-  "name": "MaxText single-host Gemma supervised fine-tuning",
-  "canonicalUrl": "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-sft-v6e-8-tpu-vm-maxtext",
-  "category": "Training framework links",
-  "categorySlug": "training_framework_links",
-  "description": "Fine-tune Gemma on a v6e-8 TPU VM and convert checkpoints between Hugging Face and MaxText.",
-  "provenance": {
-    "sourceUrl": "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-sft-v6e-8-tpu-vm-maxtext",
-    "crawledAt": "2026-10-26T12:47:11.881220+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 38480
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "MaxText single-host Gemma supervised fine-tuning",
-      "documentedIn",
-      "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-sft-v6e-8-tpu-vm-maxtext"
-    ],
-    [
-      "MaxText single-host Gemma supervised fine-tuning",
-      "belongsToCategory",
-      "training_framework_links"
-    ],
-    [
-      "MaxText single-host Gemma supervised fine-tuning",
-      "supportsWorkflow",
-      "Distributed Machine Learning Training"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "train_18_maxtext_gemma_sft_single_host",
+    "name": "MaxText single-host Gemma supervised fine-tuning",
+    "url": "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-sft-v6e-8-tpu-vm-maxtext",
+    "category": "training_framework_links",
+    "description": "Fine-tune Gemma on a v6e-8 TPU VM and convert checkpoints between Hugging Face and MaxText.",
+    "char_count": 11371,
+    "word_count": 1327,
+    "section_count": 18,
+    "code_block_count": 17,
+    "table_count": 0,
+    "cli_command_count": 39,
+    "indexed_at": "2026-10-26T14:46:54.540752+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "schema:name",
+        "object": "MaxText single-host Gemma supervised fine-tuning"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "schema:url",
+        "object": "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-sft-v6e-8-tpu-vm-maxtext"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "schema:category",
+        "object": "training_framework_links"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "schema:description",
+        "object": "Fine-tune Gemma on a v6e-8 TPU VM and convert checkpoints between Hugging Face and MaxText."
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v6e"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5p"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:v5e"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:MaxText"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:hasSection",
+        "object": "Run supervised fine-tuning on a TPU VM by using MaxText"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:hasSection",
+        "object": "Workload summary"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:hasSection",
+        "object": "Objectives"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:hasSection",
+        "object": "Costs"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:hasSection",
+        "object": "Before you begin"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:hasSection",
+        "object": "Set up the environment"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:hasSection",
+        "object": "Create your Cloud TPU VM"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:hasSection",
+        "object": "Install MaxText"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:hasSection",
+        "object": "Convert the model to MaxText format"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:hasSection",
+        "object": "Start the training workload"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:hasSection",
+        "object": "-- MaxText configuration --"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:hasSection",
+        "object": "-- Dataset configuration --"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:hasSection",
+        "object": "Convert the trained model back into Hugging Face format"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:hasSection",
+        "object": "Clean up"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:hasSection",
+        "object": "Delete your TPU VM instance"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:hasSection",
+        "object": "1. Delete TPU instance"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:hasSection",
+        "object": "2. Delete IAP firewall rule"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:hasSection",
+        "object": "What's next"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "BASE_OUTPUT_DIRECTORY"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "HF_EXPORT"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "HF_TOKEN"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "MODEL_CHECKPOINT_DIRECTORY"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "MODEL_NAME"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "PROJECT"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "TPU_ACCELERATOR_TYPE"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "TPU_CHIPS_PER_HOST_BOUNDS"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "TPU_HOST_BOUNDS"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "TPU_NAME"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "TPU_SKIP_MDS_QUERY"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "TPU_TOPOLOGY"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "TPU_WORKER_HOSTNAMES"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "TPU_WORKER_ID"
+      },
+      {
+        "subject": "tpu_doc:train_18_maxtext_gemma_sft_single_host",
+        "predicate": "okf:configuresEnvironmentVariable",
+        "object": "UV_TORCH_BACKEND"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "MaxText single-host Gemma supervised fine-tuning provides official guidance on Fine-tune Gemma on a v6e-8 TPU VM and convert checkpoints between Hugging Face and MaxText.",
-      "confidence": 1.0,
-      "source": "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-sft-v6e-8-tpu-vm-maxtext",
-      "verified": true
-    },
-    {
-      "assertion": "TPU v6e (Trillium) is Google's 6th generation TPU offering high efficiency for inference and training.",
-      "confidence": 0.99,
-      "source": "https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-sft-v6e-8-tpu-vm-maxtext",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is MaxText single-host Gemma supervised fine-tuning used for in Cloud TPU workflows?",
-      "answer": "Fine-tune Gemma on a v6e-8 TPU VM and convert checkpoints between Hugging Face and MaxText.",
-      "category": "training_framework_links"
-    }
-  ],
-  "contentSummary": "Fine-tune Gemma on a v6e-8 TPU VM and convert checkpoints between Hugging Face and MaxText."
+  },
+  "structured_content": {
+    "summary": "Fine-tune Gemma on a v6e-8 TPU VM and convert checkpoints between Hugging Face and MaxText.",
+    "sections": [
+      {
+        "heading": "Run supervised fine-tuning on a TPU VM by using MaxText",
+        "level": 1,
+        "content": "This tutorial provides a step-by-step guide for running supervised fine-tuning (SFT) on a single `v6e-8` Tensor Processing Unit (TPU) virtual machine (VM) instance on Google Cloud by using MaxText, a high-performance JAX-based training stack for large language models (LLMs)."
+      },
+      {
+        "heading": "Workload summary",
+        "level": 2,
+        "content": "Running this SFT workload on a Cloud TPU VM involves the following components:\n  * **Model:** Gemma 3 4B (`gemma3-4b`), an open-weights lightweight language model. In this tutorial, the model weights are converted from Hugging Face format into MaxText-compatible format (`mt-format`) and prepared for execution on a single Cloud TPU `v6e-8` VM using JAX.\n  * **Training method:** SFT using MaxText. The workload executes a fine-tuning pipeline on a single Cloud TPU `v6e-8` instance using JAX. It optimizes model parameters over 1000 steps using MaxText's built-in SFT trainer (`maxtext.trainers.post_train.sft.train_sft`) and dialogue-focused instruction-tuning datasets.\n  * **Dataset and template:** UltraChat 200k (`HuggingFaceH4/ultrachat_200k`), a large-scale, high-quality multi-turn dialogue dataset (`train_sft` split with `messages` column). It is used to fine-tune the model and improve its conversational and instruction-following capabilities.\n  * **Infrastructure and framework:** a single Cloud TPU `v6e-8` VM instance (`ct6e-standard-8t`). The framework is MaxText (`maxtext[tpu-post-train]`) powered by JAX."
+      },
+      {
+        "heading": "Objectives",
+        "level": 2,
+        "content": "* Set up a Cloud TPU VM instance.\n  * Install MaxText and its dependencies.\n  * Convert a Hugging Face model to MaxText format.\n  * Run an SFT training workload on the TPU.\n  * Convert the fine-tuned model back to Hugging Face format for serving."
+      },
+      {
+        "heading": "Costs",
+        "level": 2,
+        "content": "In this document, you use the following billable components of Google Cloud: \n  * [ Cloud TPU](https://cloud.google.com/tpu/pricing)\n\n\nTo generate a cost estimate based on your projected usage, use the [pricing calculator](https://docs.cloud.google.com/products/calculator). \nNew Google Cloud users might be eligible for a [free trial](https://docs.cloud.google.com/free). \nWhen you finish the tasks that are described in this document, you can avoid continued billing by deleting the resources that you created. For more information, see [Clean up](https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-sft-v6e-8-tpu-vm-maxtext#clean-up).\n**Important:** To complete this tutorial, you must have access to `v6e-8` TPUs. This tutorial assumes that you already have a reservation for these TPUs in your Google Cloud project to ensure that you have the capacity available when you need it. To learn more about your options for reserving Cloud TPU capacity for a future date and time, see [About Cloud TPU reservations](https://docs.cloud.google.com/tpu/docs/about-tpu-reservations)."
+      },
+      {
+        "heading": "Before you begin",
+        "level": 2,
+        "content": "* You need a Hugging Face access token to use this tutorial. You can sign up for a free account at [Hugging Face](http://huggingface.co/login). After you have an account, generate an access token:\n    1. On the [Welcome to Hugging Face](https://huggingface.co/welcome) page, click your account avatar and select **Access tokens**.\n    2. On the **Access tokens** page, click **Create new token**.\n    3. Select the **Read** token type and enter a name for your token.\n    4. Your access token is displayed. Save the token in a safe place.\n\n\n  * On the [Hugging Face website](https://huggingface.co/), accept the license agreement for the model that you plan to train. This tutorial uses the model `gemma3-4b`.\n\n\nTo get the permissions that you need to complete this tutorial, ask your administrator to grant you the following IAM roles on your project: \n  * [TPU Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/tpu#tpu.admin) (`roles/tpu.admin`)\n  * [Service Account User ](https://docs.cloud.google.com/iam/docs/roles-permissions/iam#iam.serviceAccountUser) (`roles/iam.serviceAccountUser`)\n  * [Compute Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/compute#compute.editor) (`roles/compute.editor`)\n\n\nFor more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \nYou might also be able to get the required permissions through [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined)."
+      },
+      {
+        "heading": "Set up the environment",
+        "level": 2,
+        "content": "Set up your environment variables by running the following script:\n\n```\nexport PROJECT=\"YOUR_PROJECT_ID\"\nexport ZONE=\"YOUR_ZONE\"\nexport RESERVATION=\"YOUR_RESERVATION_NAME\"\nexport NAME=\"YOUR_TPU_NAME\"\nexport NETWORK=\"default\"\n```\n\nReplace the following:\n  * YOUR_PROJECT_ID: your Google Cloud project ID\n  * YOUR_ZONE: the zone that you want to use\n  * YOUR_RESERVATION_NAME: your capacity reservation\n  * YOUR_TPU_NAME: the name of your Cloud TPU VM instance\n\n\nAuthenticate with Google Cloud by running the following command:\n\n```\ngcloud auth login\n\n```"
+      },
+      {
+        "heading": "Create your Cloud TPU VM",
+        "level": 2,
+        "content": "Create a Cloud TPU VM instance with 8 `v6e` TPU chips, bound to your capacity reservation.\n\n```\ngcloud compute instances create \"${NAME}\" \\\n    --zone=\"${ZONE}\" \\\n    --project=\"${PROJECT}\" \\\n    --network=\"${NETWORK}\" \\\n    --tags=\"${NAME}\" \\\n    --machine-type=ct6e-standard-8t \\\n    --image-project=ubuntu-os-accelerator-images \\\n    --image-family=ubuntu-accel-2204-amd64-tpu-v5e-v5p-v6e \\\n    --boot-disk-size=200GB \\\n    --maintenance-policy=TERMINATE \\\n    --instance-termination-action=DELETE \\\n    --provisioning-model=RESERVATION_BOUND \\\n    --reservation-affinity=specific \\\n    --reservation=\"${RESERVATION}\"\n```\n\nAfter the VM instance has been created, connect to it by using SSH.\n\n```\ngcloud compute ssh \"${NAME}\" --zone \"${ZONE}\" --project \"${PROJECT}\"\n```\n\nComplete the steps that follow within your TPU VM instance."
+      },
+      {
+        "heading": "Install MaxText",
+        "level": 2,
+        "content": "Update the system packages within the TPU VM instance.\n\n```\nsudo apt update && sudo apt upgrade -y --fix-missing\n```\n\nInstall Python 3.12, which MaxText requires, and its virtual environment package.\n\n```\nsudo apt install -y build-essential cmake ninja-build\n```\n\nUse `uv` to speed up the installation of the Python package.\n\n```\ncurl -LsSf https://astral.sh/uv/install.sh | sh\nsource \"${HOME}/.local/bin/env\"\n```\n\nCreate a virtual environment named `maxtext_venv` and activate it.\n\n```\nuv python install 3.12\nuv venv --python 3.12 --seed maxtext_venv\nsource maxtext_venv/bin/activate\n```\n\nInstall MaxText and the dependencies that it requires for post-training tasks.\n\n```\nUV_TORCH_BACKEND=cpu uv pip install \"maxtext[tpu-post-train]==0.2.2\" --resolution=lowest\n```\n\nInstall the remaining required dependencies by running the following command:\n\n```\ninstall_tpu_post_train_extra_deps\n```"
+      },
+      {
+        "heading": "Convert the model to MaxText format",
+        "level": 2,
+        "content": "To train the model in MaxText format, you must convert it from Hugging Face format to MaxText format.\nSpecify your environment variables, such as your Hugging Face access token, the name of the model that you want to use, and the directory where you want to save the model in MaxText format.\n\n```\nexport HF_TOKEN=\"YOUR_HF_TOKEN\"\nexport MODEL_NAME='gemma3-4b'\nexport MODEL_CHECKPOINT_DIRECTORY=/dev/shm/$MODEL_NAME/mt-format/\nexport USE_PATHWAYS=0 # Set to 1 for Pathways, 0 for McJAX\nexport LAZY_LOAD_TENSORS=False # True to use lazy load, False to use eager load.\n```\n\nReplace YOUR_HF_TOKEN with the Hugging Face access token that you previously created.\nTo convert the model from Hugging Face format to MaxText format, run the following script. This conversion takes about five minutes to complete.\n\n```\npython3 -m maxtext.checkpoint_conversion.to_maxtext \\\n    model_name=\"${MODEL_NAME?}\" \\\n    hf_access_token=\"${HF_TOKEN?}\" \\\n    base_output_directory=\"${MODEL_CHECKPOINT_DIRECTORY?}\" \\\n    scan_layers=True \\\n    use_multimodal=False \\\n    hardware=cpu \\\n    skip_jax_distributed_system=true \\\n    checkpoint_storage_use_zarr3=$((1 - USE_PATHWAYS)) \\\n    checkpoint_storage_use_ocdbt=$((1 - USE_PATHWAYS)) \\\n    --lazy_load_tensors=\"${LAZY_LOAD_TENSORS?}\"\n```"
+      },
+      {
+        "heading": "Start the training workload",
+        "level": 2,
+        "content": "After the conversion process has completed, you can start the SFT workload.\n  1. Configure the SFT workload training parameters.\n\n```"
+      },
+      {
+        "heading": "-- MaxText configuration --",
+        "level": 1,
+        "content": "export BASE_OUTPUT_DIRECTORY=/dev/shm/$MODEL_NAME/post-train/\nRUN_NAME=$(date +%Y-%m-%d-%H-%M-%S)\nexport RUN_NAME\nexport STEPS=1000\nexport PER_DEVICE_BATCH_SIZE=1"
+      },
+      {
+        "heading": "-- Dataset configuration --",
+        "level": 1,
+        "content": "export DATASET_NAME=\"HuggingFaceH4/ultrachat_200k\"\nexport TRAIN_SPLIT=\"train_sft\"\nexport TRAIN_DATA_COLUMNS=\"['messages']\"\n\nexport MAXTEXT_CKPT_PATH=$MODEL_CHECKPOINT_DIRECTORY/0/items\nexport TPU_ACCELERATOR_TYPE=v6e-8\nexport TPU_WORKER_ID=0\nTPU_NAME=$(hostname)\nexport TPU_NAME\nexport TPU_SKIP_MDS_QUERY=1\nexport TPU_WORKER_HOSTNAMES=localhost\nexport TPU_TOPOLOGY=2x4\nexport TPU_CHIPS_PER_HOST_BOUNDS=2,4,1\nexport TPU_HOST_BOUNDS=1,1,1\n```\n\n  2. Start the training job. This takes about 10 minutes on a `v6e-8` VM instance.\n\n```\npython3 -m maxtext.trainers.post_train.sft.train_sft \\\n    run_name=\"${RUN_NAME?}\" \\\n    base_output_directory=\"${BASE_OUTPUT_DIRECTORY?}\" \\\n    model_name=\"${MODEL_NAME?}\" \\\n    load_parameters_path=\"${MAXTEXT_CKPT_PATH?}\" \\\n    per_device_batch_size=\"${PER_DEVICE_BATCH_SIZE?}\" \\\n    steps=\"${STEPS?}\" \\\n    hf_path=\"${DATASET_NAME?}\" \\\n    train_split=\"${TRAIN_SPLIT?}\" \\\n    train_data_columns=\"${TRAIN_DATA_COLUMNS?}\" \\\n    profiler=xplane\n```"
+      },
+      {
+        "heading": "Convert the trained model back into Hugging Face format",
+        "level": 2,
+        "content": "After the training workload has completed, convert the model back to Hugging Face format.\n  1. Set the paths for export and the trained parameters.\n\n```\nexport HF_EXPORT=/dev/shm/$MODEL_NAME/hf-trained/\nexport POST_TRAIN_PATH=$BASE_OUTPUT_DIRECTORY/$RUN_NAME/checkpoints/$STEPS/model_params\n```\n\n  2. Run the conversion back to Hugging Face format.\n\n```\npython3 -m maxtext.checkpoint_conversion.to_huggingface \\\n    model_name=\"${MODEL_NAME}\" \\\n    load_parameters_path=\"${POST_TRAIN_PATH}\" \\\n    base_output_directory=\"${HF_EXPORT}\" \\\n    scan_layers=True \\\n    use_multimodal=False \\\n    weight_dtype=bfloat16\n```\n\nAfter the conversion has completed, your tuned model stored in `/dev/shm/gemma3-4b/hf-trained` is ready to be used. Because you lose access to the contents of the `/dev/shm` folder when the VM reboots, you should move the tuned model to persistent storage or upload it to the Hugging Face Hub."
+      },
+      {
+        "heading": "Clean up",
+        "level": 2,
+        "content": "To avoid incurring additional charges, delete the resources created during this tutorial."
+      },
+      {
+        "heading": "Delete your TPU VM instance",
+        "level": 3,
+        "content": "Exit your Cloud TPU VM instance, and then delete it.\n\n```"
+      },
+      {
+        "heading": "1. Delete TPU instance",
+        "level": 1,
+        "content": "echo \"Deleting TPU instance: ${NAME}...\"\ngcloud compute instances delete \"${NAME}\" \\\n    --zone=\"${ZONE}\" \\\n    --project=\"${PROJECT}\" \\\n    --quiet || true"
+      },
+      {
+        "heading": "2. Delete IAP firewall rule",
+        "level": 1,
+        "content": "echo \"Deleting firewall rule: ${FIREWALL_RULE_NAME}...\"\ngcloud compute firewall-rules delete \"${FIREWALL_RULE_NAME}\" \\\n    --project=\"${PROJECT}\" \\\n    --quiet || true\n```"
+      },
+      {
+        "heading": "What's next",
+        "level": 2,
+        "content": "* For more information about Cloud TPU, see [Introduction to Cloud TPU](https://docs.cloud.google.com/tpu/docs/intro-to-tpu).\n  * For architecture and configuration details for the `v6e-8` TPU, see [TPU v6e](https://docs.cloud.google.com/tpu/docs/v6e)."
+      }
+    ],
+    "code_examples": [
+      {
+        "language": "text",
+        "code": "export PROJECT=\"YOUR_PROJECT_ID\"\nexport ZONE=\"YOUR_ZONE\"\nexport RESERVATION=\"YOUR_RESERVATION_NAME\"\nexport NAME=\"YOUR_TPU_NAME\"\nexport NETWORK=\"default\""
+      },
+      {
+        "language": "text",
+        "code": "gcloud auth login"
+      },
+      {
+        "language": "text",
+        "code": "gcloud compute instances create \"${NAME}\" \\\n    --zone=\"${ZONE}\" \\\n    --project=\"${PROJECT}\" \\\n    --network=\"${NETWORK}\" \\\n    --tags=\"${NAME}\" \\\n    --machine-type=ct6e-standard-8t \\\n    --image-project=ubuntu-os-accelerator-images \\\n    --image-family=ubuntu-accel-2204-amd64-tpu-v5e-v5p-v6e \\\n    --boot-disk-size=200GB \\\n    --maintenance-policy=TERMINATE \\\n    --instance-termination-action=DELETE \\\n    --provisioning-model=RESERVATION_BOUND \\\n    --reservation-affinity=specific \\\n    --reservation=\"${RESERVATION}\""
+      },
+      {
+        "language": "text",
+        "code": "gcloud compute ssh \"${NAME}\" --zone \"${ZONE}\" --project \"${PROJECT}\""
+      },
+      {
+        "language": "text",
+        "code": "sudo apt update && sudo apt upgrade -y --fix-missing"
+      },
+      {
+        "language": "text",
+        "code": "sudo apt install -y build-essential cmake ninja-build"
+      },
+      {
+        "language": "text",
+        "code": "curl -LsSf https://astral.sh/uv/install.sh | sh\nsource \"${HOME}/.local/bin/env\""
+      },
+      {
+        "language": "text",
+        "code": "uv python install 3.12\nuv venv --python 3.12 --seed maxtext_venv\nsource maxtext_venv/bin/activate"
+      },
+      {
+        "language": "text",
+        "code": "UV_TORCH_BACKEND=cpu uv pip install \"maxtext[tpu-post-train]==0.2.2\" --resolution=lowest"
+      },
+      {
+        "language": "text",
+        "code": "install_tpu_post_train_extra_deps"
+      },
+      {
+        "language": "text",
+        "code": "export HF_TOKEN=\"YOUR_HF_TOKEN\"\nexport MODEL_NAME='gemma3-4b'\nexport MODEL_CHECKPOINT_DIRECTORY=/dev/shm/$MODEL_NAME/mt-format/\nexport USE_PATHWAYS=0 # Set to 1 for Pathways, 0 for McJAX\nexport LAZY_LOAD_TENSORS=False # True to use lazy load, False to use eager load."
+      },
+      {
+        "language": "text",
+        "code": "python3 -m maxtext.checkpoint_conversion.to_maxtext \\\n    model_name=\"${MODEL_NAME?}\" \\\n    hf_access_token=\"${HF_TOKEN?}\" \\\n    base_output_directory=\"${MODEL_CHECKPOINT_DIRECTORY?}\" \\\n    scan_layers=True \\\n    use_multimodal=False \\\n    hardware=cpu \\\n    skip_jax_distributed_system=true \\\n    checkpoint_storage_use_zarr3=$((1 - USE_PATHWAYS)) \\\n    checkpoint_storage_use_ocdbt=$((1 - USE_PATHWAYS)) \\\n    --lazy_load_tensors=\"${LAZY_LOAD_TENSORS?}\""
+      },
+      {
+        "language": "text",
+        "code": "# -- MaxText configuration --\nexport BASE_OUTPUT_DIRECTORY=/dev/shm/$MODEL_NAME/post-train/\nRUN_NAME=$(date +%Y-%m-%d-%H-%M-%S)\nexport RUN_NAME\nexport STEPS=1000\nexport PER_DEVICE_BATCH_SIZE=1\n\n# -- Dataset configuration --\nexport DATASET_NAME=\"HuggingFaceH4/ultrachat_200k\"\nexport TRAIN_SPLIT=\"train_sft\"\nexport TRAIN_DATA_COLUMNS=\"['messages']\"\n\nexport MAXTEXT_CKPT_PATH=$MODEL_CHECKPOINT_DIRECTORY/0/items\nexport TPU_ACCELERATOR_TYPE=v6e-8\nexport TPU_WORKER_ID=0\nTPU_NAME=$(hostname)\nexport TPU_NAME\nexport TPU_SKIP_MDS_QUERY=1\nexport TPU_WORKER_HOSTNAMES=localhost\nexport TPU_TOPOLOGY=2x4\nexport TPU_CHIPS_PER_HOST_BOUNDS=2,4,1\nexport TPU_HOST_BOUNDS=1,1,1"
+      },
+      {
+        "language": "text",
+        "code": "python3 -m maxtext.trainers.post_train.sft.train_sft \\\n    run_name=\"${RUN_NAME?}\" \\\n    base_output_directory=\"${BASE_OUTPUT_DIRECTORY?}\" \\\n    model_name=\"${MODEL_NAME?}\" \\\n    load_parameters_path=\"${MAXTEXT_CKPT_PATH?}\" \\\n    per_device_batch_size=\"${PER_DEVICE_BATCH_SIZE?}\" \\\n    steps=\"${STEPS?}\" \\\n    hf_path=\"${DATASET_NAME?}\" \\\n    train_split=\"${TRAIN_SPLIT?}\" \\\n    train_data_columns=\"${TRAIN_DATA_COLUMNS?}\" \\\n    profiler=xplane"
+      },
+      {
+        "language": "text",
+        "code": "export HF_EXPORT=/dev/shm/$MODEL_NAME/hf-trained/\nexport POST_TRAIN_PATH=$BASE_OUTPUT_DIRECTORY/$RUN_NAME/checkpoints/$STEPS/model_params"
+      },
+      {
+        "language": "text",
+        "code": "python3 -m maxtext.checkpoint_conversion.to_huggingface \\\n    model_name=\"${MODEL_NAME}\" \\\n    load_parameters_path=\"${POST_TRAIN_PATH}\" \\\n    base_output_directory=\"${HF_EXPORT}\" \\\n    scan_layers=True \\\n    use_multimodal=False \\\n    weight_dtype=bfloat16"
+      },
+      {
+        "language": "text",
+        "code": "# 1. Delete TPU instance\necho \"Deleting TPU instance: ${NAME}...\"\ngcloud compute instances delete \"${NAME}\" \\\n    --zone=\"${ZONE}\" \\\n    --project=\"${PROJECT}\" \\\n    --quiet || true\n\n# 2. Delete IAP firewall rule\necho \"Deleting firewall rule: ${FIREWALL_RULE_NAME}...\"\ngcloud compute firewall-rules delete \"${FIREWALL_RULE_NAME}\" \\\n    --project=\"${PROJECT}\" \\\n    --quiet || true"
+      }
+    ],
+    "cli_commands": [
+      "export PROJECT=\"YOUR_PROJECT_ID\"",
+      "export ZONE=\"YOUR_ZONE\"",
+      "export RESERVATION=\"YOUR_RESERVATION_NAME\"",
+      "export NAME=\"YOUR_TPU_NAME\"",
+      "export NETWORK=\"default\"",
+      "gcloud auth login",
+      "gcloud compute instances create \"${NAME}\" \\",
+      "gcloud compute ssh \"${NAME}\" --zone \"${ZONE}\" --project \"${PROJECT}\"",
+      "curl -LsSf https://astral.sh/uv/install.sh | sh",
+      "uv python install 3.12",
+      "uv venv --python 3.12 --seed maxtext_venv",
+      "export HF_TOKEN=\"YOUR_HF_TOKEN\"",
+      "export MODEL_NAME='gemma3-4b'",
+      "export MODEL_CHECKPOINT_DIRECTORY=/dev/shm/$MODEL_NAME/mt-format/",
+      "export USE_PATHWAYS=0 # Set to 1 for Pathways, 0 for McJAX",
+      "export LAZY_LOAD_TENSORS=False # True to use lazy load, False to use eager load.",
+      "python3 -m maxtext.checkpoint_conversion.to_maxtext \\",
+      "export BASE_OUTPUT_DIRECTORY=/dev/shm/$MODEL_NAME/post-train/",
+      "export RUN_NAME",
+      "export STEPS=1000",
+      "export PER_DEVICE_BATCH_SIZE=1",
+      "export DATASET_NAME=\"HuggingFaceH4/ultrachat_200k\"",
+      "export TRAIN_SPLIT=\"train_sft\"",
+      "export TRAIN_DATA_COLUMNS=\"['messages']\"",
+      "export MAXTEXT_CKPT_PATH=$MODEL_CHECKPOINT_DIRECTORY/0/items",
+      "export TPU_ACCELERATOR_TYPE=v6e-8",
+      "export TPU_WORKER_ID=0",
+      "export TPU_NAME",
+      "export TPU_SKIP_MDS_QUERY=1",
+      "export TPU_WORKER_HOSTNAMES=localhost",
+      "export TPU_TOPOLOGY=2x4",
+      "export TPU_CHIPS_PER_HOST_BOUNDS=2,4,1",
+      "export TPU_HOST_BOUNDS=1,1,1",
+      "python3 -m maxtext.trainers.post_train.sft.train_sft \\",
+      "export HF_EXPORT=/dev/shm/$MODEL_NAME/hf-trained/",
+      "export POST_TRAIN_PATH=$BASE_OUTPUT_DIRECTORY/$RUN_NAME/checkpoints/$STEPS/model_params",
+      "python3 -m maxtext.checkpoint_conversion.to_huggingface \\",
+      "gcloud compute instances delete \"${NAME}\" \\",
+      "gcloud compute firewall-rules delete \"${FIREWALL_RULE_NAME}\" \\"
+    ],
+    "environment_variables": [
+      "BASE_OUTPUT_DIRECTORY",
+      "HF_EXPORT",
+      "HF_TOKEN",
+      "MODEL_CHECKPOINT_DIRECTORY",
+      "MODEL_NAME",
+      "PROJECT",
+      "TPU_ACCELERATOR_TYPE",
+      "TPU_CHIPS_PER_HOST_BOUNDS",
+      "TPU_HOST_BOUNDS",
+      "TPU_NAME",
+      "TPU_SKIP_MDS_QUERY",
+      "TPU_TOPOLOGY",
+      "TPU_WORKER_HOSTNAMES",
+      "TPU_WORKER_ID",
+      "UV_TORCH_BACKEND",
+      "ZONE"
+    ],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'MaxText single-host Gemma supervised fine-tuning' (https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-sft-v6e-8-tpu-vm-maxtext)?",
+        "answer": "Fine-tune Gemma on a v6e-8 TPU VM and convert checkpoints between Hugging Face and MaxText."
+      },
+      {
+        "question": "How does 'MaxText single-host Gemma supervised fine-tuning' handle: Run supervised fine-tuning on a TPU VM by using MaxText?",
+        "answer": "This tutorial provides a step-by-step guide for running supervised fine-tuning (SFT) on a single `v6e-8` Tensor Processing Unit (TPU) virtual machine (VM) instance on Google Cloud by using MaxText, a high-performance JAX-based training stack for large language models (LLMs)."
+      },
+      {
+        "question": "How does 'MaxText single-host Gemma supervised fine-tuning' handle: Workload summary?",
+        "answer": "Running this SFT workload on a Cloud TPU VM involves the following components:\n  * **Model:** Gemma 3 4B (`gemma3-4b`), an open-weights lightweight language model. In this tutorial, the model weights are converted from Hugging Face format into MaxText-compatible format (`mt-format`) and prepared for execution on a single Cloud TPU `v6e-8` VM using JAX.\n  * **Training method:** SFT using MaxText. The workload executes a fine-tuning pipeline on a single Cloud TPU `v6e-8` instance using JAX. It optimizes model parameters over 1000 steps using MaxText's built-in SFT trainer (`maxtext.trainers.post_train.sft.train_sft`) and dialogue-focused instruction-tuning datasets.\n  * **Dataset and template:** UltraChat 200k (`HuggingFaceH4/ultrachat_200k`), a large-scale, high-quality multi-turn dialogue dataset (`train_sft` split with `messages` column). It is used to fine-tune the model and improve its conversational and instruction-following capabilities.\n  * **Infrastructure and framework:** a single Cloud TPU `v6e-8` VM instance (`ct6e-standard-8t`). The framework is MaxText (`maxtext[tpu-post-train]`) powered by JAX."
+      },
+      {
+        "question": "How does 'MaxText single-host Gemma supervised fine-tuning' handle: Objectives?",
+        "answer": "* Set up a Cloud TPU VM instance.\n  * Install MaxText and its dependencies.\n  * Convert a Hugging Face model to MaxText format.\n  * Run an SFT training workload on the TPU.\n  * Convert the fine-tuned model back to Hugging Face format for serving."
+      },
+      {
+        "question": "How does 'MaxText single-host Gemma supervised fine-tuning' handle: Costs?",
+        "answer": "In this document, you use the following billable components of Google Cloud: \n  * [ Cloud TPU](https://cloud.google.com/tpu/pricing)\n\n\nTo generate a cost estimate based on your projected usage, use the [pricing calculator](https://docs.cloud.google.com/products/calculator). \nNew Google Cloud users might be eligible for a [free trial](https://docs.cloud.google.com/free). \nWhen you finish the tasks that are described in this document, you can avoid continued billing by deleting the resources that you created. For more information, see [Clean up](https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-sft-v6e-8-tpu-vm-maxtext#clean-up).\n**Important:** To complete this tutorial, you must have access to `v6e-8` TPUs. This tutorial assumes that you already have a reservation for these TPUs in your Google Cloud project to ensure that you have the capacity available when you need it. To learn more about your options for reserving Cloud TPU capacity for a future date and time, see [About Cloud TPU reservations](https://docs.cloud.google.com/tpu/docs/about-tpu-reservations)."
+      },
+      {
+        "question": "How does 'MaxText single-host Gemma supervised fine-tuning' handle: Before you begin?",
+        "answer": "* You need a Hugging Face access token to use this tutorial. You can sign up for a free account at [Hugging Face](http://huggingface.co/login). After you have an account, generate an access token:\n    1. On the [Welcome to Hugging Face](https://huggingface.co/welcome) page, click your account avatar and select **Access tokens**.\n    2. On the **Access tokens** page, click **Create new token**.\n    3. Select the **Read** token type and enter a name for your token.\n    4. Your access token is displayed. Save the token in a safe place.\n\n\n  * On the [Hugging Face website](https://huggingface.co/), accept the license agreement for the model that you plan to train. This tutorial uses the model `gemma3-4b`.\n\n\nTo get the permissions that you need to complete this tutorial, ask your administrator to grant you the following IAM roles on your project: \n  * [TPU Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/tpu#tpu.admin) (`roles/tpu.admin`)\n  * [Service Account User ](https://docs.cloud.google.com/iam/docs/roles-permissions/iam#iam.serviceAccountUser) (`roles/iam.serviceAccountUser`)\n  * [Compute Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/compute#comp"
+      },
+      {
+        "question": "How does 'MaxText single-host Gemma supervised fine-tuning' handle: Set up the environment?",
+        "answer": "Set up your environment variables by running the following script:\n\n```\nexport PROJECT=\"YOUR_PROJECT_ID\"\nexport ZONE=\"YOUR_ZONE\"\nexport RESERVATION=\"YOUR_RESERVATION_NAME\"\nexport NAME=\"YOUR_TPU_NAME\"\nexport NETWORK=\"default\"\n```\n\nReplace the following:\n  * YOUR_PROJECT_ID: your Google Cloud project ID\n  * YOUR_ZONE: the zone that you want to use\n  * YOUR_RESERVATION_NAME: your capacity reservation\n  * YOUR_TPU_NAME: the name of your Cloud TPU VM instance\n\n\nAuthenticate with Google Cloud by running the following command:\n\n```\ngcloud auth login\n\n```"
+      },
+      {
+        "question": "How does 'MaxText single-host Gemma supervised fine-tuning' handle: Create your Cloud TPU VM?",
+        "answer": "Create a Cloud TPU VM instance with 8 `v6e` TPU chips, bound to your capacity reservation.\n\n```\ngcloud compute instances create \"${NAME}\" \\\n    --zone=\"${ZONE}\" \\\n    --project=\"${PROJECT}\" \\\n    --network=\"${NETWORK}\" \\\n    --tags=\"${NAME}\" \\\n    --machine-type=ct6e-standard-8t \\\n    --image-project=ubuntu-os-accelerator-images \\\n    --image-family=ubuntu-accel-2204-amd64-tpu-v5e-v5p-v6e \\\n    --boot-disk-size=200GB \\\n    --maintenance-policy=TERMINATE \\\n    --instance-termination-action=DELETE \\\n    --provisioning-model=RESERVATION_BOUND \\\n    --reservation-affinity=specific \\\n    --reservation=\"${RESERVATION}\"\n```\n\nAfter the VM instance has been created, connect to it by using SSH.\n\n```\ngcloud compute ssh \"${NAME}\" --zone \"${ZONE}\" --project \"${PROJECT}\"\n```\n\nComplete the steps that follow within your TPU VM instance."
+      },
+      {
+        "question": "How does 'MaxText single-host Gemma supervised fine-tuning' handle: Install MaxText?",
+        "answer": "Update the system packages within the TPU VM instance.\n\n```\nsudo apt update && sudo apt upgrade -y --fix-missing\n```\n\nInstall Python 3.12, which MaxText requires, and its virtual environment package.\n\n```\nsudo apt install -y build-essential cmake ninja-build\n```\n\nUse `uv` to speed up the installation of the Python package.\n\n```\ncurl -LsSf https://astral.sh/uv/install.sh | sh\nsource \"${HOME}/.local/bin/env\"\n```\n\nCreate a virtual environment named `maxtext_venv` and activate it.\n\n```\nuv python install 3.12\nuv venv --python 3.12 --seed maxtext_venv\nsource maxtext_venv/bin/activate\n```\n\nInstall MaxText and the dependencies that it requires for post-training tasks.\n\n```\nUV_TORCH_BACKEND=cpu uv pip install \"maxtext[tpu-post-train]==0.2.2\" --resolution=lowest\n```\n\nInstall the remaining required dependencies by running the following command:\n\n```\ninstall_tpu_post_train_extra_deps\n```"
+      },
+      {
+        "question": "How does 'MaxText single-host Gemma supervised fine-tuning' handle: Convert the model to MaxText format?",
+        "answer": "To train the model in MaxText format, you must convert it from Hugging Face format to MaxText format.\nSpecify your environment variables, such as your Hugging Face access token, the name of the model that you want to use, and the directory where you want to save the model in MaxText format.\n\n```\nexport HF_TOKEN=\"YOUR_HF_TOKEN\"\nexport MODEL_NAME='gemma3-4b'\nexport MODEL_CHECKPOINT_DIRECTORY=/dev/shm/$MODEL_NAME/mt-format/\nexport USE_PATHWAYS=0 # Set to 1 for Pathways, 0 for McJAX\nexport LAZY_LOAD_TENSORS=False # True to use lazy load, False to use eager load.\n```\n\nReplace YOUR_HF_TOKEN with the Hugging Face access token that you previously created.\nTo convert the model from Hugging Face format to MaxText format, run the following script. This conversion takes about five minutes to complete.\n\n```\npython3 -m maxtext.checkpoint_conversion.to_maxtext \\\n    model_name=\"${MODEL_NAME?}\" \\\n    hf_access_token=\"${HF_TOKEN?}\" \\\n    base_output_directory=\"${MODEL_CHECKPOINT_DIRECTORY?}\" \\\n    scan_layers=True \\\n    use_multimodal=False \\\n    hardware=cpu \\\n    skip_jax_distributed_system=true \\\n    checkpoint_storage_use_zarr3=$((1 - USE_PATHWAYS)) \\\n    checkpoint_storage_use_ocdbt=$((1 - USE"
+      }
+    ],
+    "full_markdown": "#  Run supervised fine-tuning on a TPU VM by using MaxText\nThis tutorial provides a step-by-step guide for running supervised fine-tuning (SFT) on a single `v6e-8` Tensor Processing Unit (TPU) virtual machine (VM) instance on Google Cloud by using MaxText, a high-performance JAX-based training stack for large language models (LLMs).\n## Workload summary\nRunning this SFT workload on a Cloud TPU VM involves the following components:\n  * **Model:** Gemma 3 4B (`gemma3-4b`), an open-weights lightweight language model. In this tutorial, the model weights are converted from Hugging Face format into MaxText-compatible format (`mt-format`) and prepared for execution on a single Cloud TPU `v6e-8` VM using JAX.\n  * **Training method:** SFT using MaxText. The workload executes a fine-tuning pipeline on a single Cloud TPU `v6e-8` instance using JAX. It optimizes model parameters over 1000 steps using MaxText's built-in SFT trainer (`maxtext.trainers.post_train.sft.train_sft`) and dialogue-focused instruction-tuning datasets.\n  * **Dataset and template:** UltraChat 200k (`HuggingFaceH4/ultrachat_200k`), a large-scale, high-quality multi-turn dialogue dataset (`train_sft` split with `messages` column). It is used to fine-tune the model and improve its conversational and instruction-following capabilities.\n  * **Infrastructure and framework:** a single Cloud TPU `v6e-8` VM instance (`ct6e-standard-8t`). The framework is MaxText (`maxtext[tpu-post-train]`) powered by JAX.\n\n\n## Objectives\n  * Set up a Cloud TPU VM instance.\n  * Install MaxText and its dependencies.\n  * Convert a Hugging Face model to MaxText format.\n  * Run an SFT training workload on the TPU.\n  * Convert the fine-tuned model back to Hugging Face format for serving.\n\n\n## Costs\nIn this document, you use the following billable components of Google Cloud: \n  * [ Cloud TPU](https://cloud.google.com/tpu/pricing)\n\n\nTo generate a cost estimate based on your projected usage, use the [pricing calculator](https://docs.cloud.google.com/products/calculator). \nNew Google Cloud users might be eligible for a [free trial](https://docs.cloud.google.com/free). \nWhen you finish the tasks that are described in this document, you can avoid continued billing by deleting the resources that you created. For more information, see [Clean up](https://docs.cloud.google.com/ai-hypercomputer/docs/tutorials/tpu/run-sft-v6e-8-tpu-vm-maxtext#clean-up).\n**Important:** To complete this tutorial, you must have access to `v6e-8` TPUs. This tutorial assumes that you already have a reservation for these TPUs in your Google Cloud project to ensure that you have the capacity available when you need it. To learn more about your options for reserving Cloud TPU capacity for a future date and time, see [About Cloud TPU reservations](https://docs.cloud.google.com/tpu/docs/about-tpu-reservations).\n## Before you begin\n  * You need a Hugging Face access token to use this tutorial. You can sign up for a free account at [Hugging Face](http://huggingface.co/login). After you have an account, generate an access token:\n    1. On the [Welcome to Hugging Face](https://huggingface.co/welcome) page, click your account avatar and select **Access tokens**.\n    2. On the **Access tokens** page, click **Create new token**.\n    3. Select the **Read** token type and enter a name for your token.\n    4. Your access token is displayed. Save the token in a safe place.\n\n\n  * On the [Hugging Face website](https://huggingface.co/), accept the license agreement for the model that you plan to train. This tutorial uses the model `gemma3-4b`.\n\n\nTo get the permissions that you need to complete this tutorial, ask your administrator to grant you the following IAM roles on your project: \n  * [TPU Admin ](https://docs.cloud.google.com/iam/docs/roles-permissions/tpu#tpu.admin) (`roles/tpu.admin`)\n  * [Service Account User ](https://docs.cloud.google.com/iam/docs/roles-permissions/iam#iam.serviceAccountUser) (`roles/iam.serviceAccountUser`)\n  * [Compute Editor ](https://docs.cloud.google.com/iam/docs/roles-permissions/compute#compute.editor) (`roles/compute.editor`)\n\n\nFor more information about granting roles, see [Manage access to projects, folders, and organizations](https://docs.cloud.google.com/iam/docs/granting-changing-revoking-access). \nYou might also be able to get the required permissions through [custom roles](https://docs.cloud.google.com/iam/docs/creating-custom-roles) or other [predefined roles](https://docs.cloud.google.com/iam/docs/roles-overview#predefined). \n## Set up the environment\nSet up your environment variables by running the following script:\n\n```\nexport PROJECT=\"YOUR_PROJECT_ID\"\nexport ZONE=\"YOUR_ZONE\"\nexport RESERVATION=\"YOUR_RESERVATION_NAME\"\nexport NAME=\"YOUR_TPU_NAME\"\nexport NETWORK=\"default\"\n```\n\nReplace the following:\n  * YOUR_PROJECT_ID: your Google Cloud project ID\n  * YOUR_ZONE: the zone that you want to use\n  * YOUR_RESERVATION_NAME: your capacity reservation\n  * YOUR_TPU_NAME: the name of your Cloud TPU VM instance\n\n\nAuthenticate with Google Cloud by running the following command:\n\n```\ngcloud auth login\n\n```\n\n## Create your Cloud TPU VM\nCreate a Cloud TPU VM instance with 8 `v6e` TPU chips, bound to your capacity reservation.\n\n```\ngcloud compute instances create \"${NAME}\" \\\n    --zone=\"${ZONE}\" \\\n    --project=\"${PROJECT}\" \\\n    --network=\"${NETWORK}\" \\\n    --tags=\"${NAME}\" \\\n    --machine-type=ct6e-standard-8t \\\n    --image-project=ubuntu-os-accelerator-images \\\n    --image-family=ubuntu-accel-2204-amd64-tpu-v5e-v5p-v6e \\\n    --boot-disk-size=200GB \\\n    --maintenance-policy=TERMINATE \\\n    --instance-termination-action=DELETE \\\n    --provisioning-model=RESERVATION_BOUND \\\n    --reservation-affinity=specific \\\n    --reservation=\"${RESERVATION}\"\n```\n\nAfter the VM instance has been created, connect to it by using SSH.\n\n```\ngcloud compute ssh \"${NAME}\" --zone \"${ZONE}\" --project \"${PROJECT}\"\n```\n\nComplete the steps that follow within your TPU VM instance.\n## Install MaxText\nUpdate the system packages within the TPU VM instance.\n\n```\nsudo apt update && sudo apt upgrade -y --fix-missing\n```\n\nInstall Python 3.12, which MaxText requires, and its virtual environment package.\n\n```\nsudo apt install -y build-essential cmake ninja-build\n```\n\nUse `uv` to speed up the installation of the Python package.\n\n```\ncurl -LsSf https://astral.sh/uv/install.sh | sh\nsource \"${HOME}/.local/bin/env\"\n```\n\nCreate a virtual environment named `maxtext_venv` and activate it.\n\n```\nuv python install 3.12\nuv venv --python 3.12 --seed maxtext_venv\nsource maxtext_venv/bin/activate\n```\n\nInstall MaxText and the dependencies that it requires for post-training tasks.\n\n```\nUV_TORCH_BACKEND=cpu uv pip install \"maxtext[tpu-post-train]==0.2.2\" --resolution=lowest\n```\n\nInstall the remaining required dependencies by running the following command:\n\n```\ninstall_tpu_post_train_extra_deps\n```\n\n## Convert the model to MaxText format\nTo train the model in MaxText format, you must convert it from Hugging Face format to MaxText format.\nSpecify your environment variables, such as your Hugging Face access token, the name of the model that you want to use, and the directory where you want to save the model in MaxText format.\n\n```\nexport HF_TOKEN=\"YOUR_HF_TOKEN\"\nexport MODEL_NAME='gemma3-4b'\nexport MODEL_CHECKPOINT_DIRECTORY=/dev/shm/$MODEL_NAME/mt-format/\nexport USE_PATHWAYS=0 # Set to 1 for Pathways, 0 for McJAX\nexport LAZY_LOAD_TENSORS=False # True to use lazy load, False to use eager load.\n```\n\nReplace YOUR_HF_TOKEN with the Hugging Face access token that you previously created.\nTo convert the model from Hugging Face format to MaxText format, run the following script. This conversion takes about five minutes to complete.\n\n```\npython3 -m maxtext.checkpoint_conversion.to_maxtext \\\n    model_name=\"${MODEL_NAME?}\" \\\n    hf_access_token=\"${HF_TOKEN?}\" \\\n    base_output_directory=\"${MODEL_CHECKPOINT_DIRECTORY?}\" \\\n    scan_layers=True \\\n    use_multimodal=False \\\n    hardware=cpu \\\n    skip_jax_distributed_system=true \\\n    checkpoint_storage_use_zarr3=$((1 - USE_PATHWAYS)) \\\n    checkpoint_storage_use_ocdbt=$((1 - USE_PATHWAYS)) \\\n    --lazy_load_tensors=\"${LAZY_LOAD_TENSORS?}\"\n```\n\n## Start the training workload\nAfter the conversion process has completed, you can start the SFT workload.\n  1. Configure the SFT workload training parameters.\n\n```\n# -- MaxText configuration --\nexport BASE_OUTPUT_DIRECTORY=/dev/shm/$MODEL_NAME/post-train/\nRUN_NAME=$(date +%Y-%m-%d-%H-%M-%S)\nexport RUN_NAME\nexport STEPS=1000\nexport PER_DEVICE_BATCH_SIZE=1\n\n# -- Dataset configuration --\nexport DATASET_NAME=\"HuggingFaceH4/ultrachat_200k\"\nexport TRAIN_SPLIT=\"train_sft\"\nexport TRAIN_DATA_COLUMNS=\"['messages']\"\n\nexport MAXTEXT_CKPT_PATH=$MODEL_CHECKPOINT_DIRECTORY/0/items\nexport TPU_ACCELERATOR_TYPE=v6e-8\nexport TPU_WORKER_ID=0\nTPU_NAME=$(hostname)\nexport TPU_NAME\nexport TPU_SKIP_MDS_QUERY=1\nexport TPU_WORKER_HOSTNAMES=localhost\nexport TPU_TOPOLOGY=2x4\nexport TPU_CHIPS_PER_HOST_BOUNDS=2,4,1\nexport TPU_HOST_BOUNDS=1,1,1\n```\n\n  2. Start the training job. This takes about 10 minutes on a `v6e-8` VM instance.\n\n```\npython3 -m maxtext.trainers.post_train.sft.train_sft \\\n    run_name=\"${RUN_NAME?}\" \\\n    base_output_directory=\"${BASE_OUTPUT_DIRECTORY?}\" \\\n    model_name=\"${MODEL_NAME?}\" \\\n    load_parameters_path=\"${MAXTEXT_CKPT_PATH?}\" \\\n    per_device_batch_size=\"${PER_DEVICE_BATCH_SIZE?}\" \\\n    steps=\"${STEPS?}\" \\\n    hf_path=\"${DATASET_NAME?}\" \\\n    train_split=\"${TRAIN_SPLIT?}\" \\\n    train_data_columns=\"${TRAIN_DATA_COLUMNS?}\" \\\n    profiler=xplane\n```\n\n## Convert the trained model back into Hugging Face format\nAfter the training workload has completed, convert the model back to Hugging Face format.\n  1. Set the paths for export and the trained parameters.\n\n```\nexport HF_EXPORT=/dev/shm/$MODEL_NAME/hf-trained/\nexport POST_TRAIN_PATH=$BASE_OUTPUT_DIRECTORY/$RUN_NAME/checkpoints/$STEPS/model_params\n```\n\n  2. Run the conversion back to Hugging Face format.\n\n```\npython3 -m maxtext.checkpoint_conversion.to_huggingface \\\n    model_name=\"${MODEL_NAME}\" \\\n    load_parameters_path=\"${POST_TRAIN_PATH}\" \\\n    base_output_directory=\"${HF_EXPORT}\" \\\n    scan_layers=True \\\n    use_multimodal=False \\\n    weight_dtype=bfloat16\n```\n\nAfter the conversion has completed, your tuned model stored in `/dev/shm/gemma3-4b/hf-trained` is ready to be used. Because you lose access to the contents of the `/dev/shm` folder when the VM reboots, you should move the tuned model to persistent storage or upload it to the Hugging Face Hub.\n## Clean up\nTo avoid incurring additional charges, delete the resources created during this tutorial.\n### Delete your TPU VM instance\nExit your Cloud TPU VM instance, and then delete it.\n\n```\n# 1. Delete TPU instance\necho \"Deleting TPU instance: ${NAME}...\"\ngcloud compute instances delete \"${NAME}\" \\\n    --zone=\"${ZONE}\" \\\n    --project=\"${PROJECT}\" \\\n    --quiet || true\n\n# 2. Delete IAP firewall rule\necho \"Deleting firewall rule: ${FIREWALL_RULE_NAME}...\"\ngcloud compute firewall-rules delete \"${FIREWALL_RULE_NAME}\" \\\n    --project=\"${PROJECT}\" \\\n    --quiet || true\n```\n\n## What's next\n  * For more information about Cloud TPU, see [Introduction to Cloud TPU](https://docs.cloud.google.com/tpu/docs/intro-to-tpu).\n  * For architecture and configuration details for the `v6e-8` TPU, see [TPU v6e](https://docs.cloud.google.com/tpu/docs/v6e)."
+  }
 }

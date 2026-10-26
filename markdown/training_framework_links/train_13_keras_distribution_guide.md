@@ -2,46 +2,59 @@
 id: "train_13_keras_distribution_guide"
 title: "Keras 3 distribution guide"
 url: "https://keras.io/guides/distribution/"
-category: "Training framework links"
+category: "training_framework_links"
 description: "Data and model distribution concepts for multi-device Keras workflows."
-crawled_at: "2026-10-26T12:47:07.500661+00:00"
-crawler_engine: "Crawl4AI"
+crawled_at: "2026-10-26T14:43:52.598860+00:00"
+crawler_engine: "Canonical-Source+Crawl4AI"
 ---
 
-None 
-[ ![](https://keras.io/img/k-logo.png) ](https://keras.io/)
-[Getting started](https://keras.io/getting_started/) [Developer guides](https://keras.io/guides/) [The Functional API](https://keras.io/guides/functional_api/) [The Sequential model](https://keras.io/guides/sequential_model/) [Making new layers & models via subclassing](https://keras.io/guides/making_new_layers_and_models_via_subclassing/) [Training & evaluation with the built-in methods](https://keras.io/guides/training_with_built_in_methods/) [Customizing `fit()` with JAX](https://keras.io/guides/custom_train_step_in_jax/) [Customizing `fit()` with TensorFlow](https://keras.io/guides/custom_train_step_in_tensorflow/) [Customizing `fit()` with PyTorch](https://keras.io/guides/custom_train_step_in_torch/) [Writing a custom training loop in JAX](https://keras.io/guides/writing_a_custom_training_loop_in_jax/) [Writing a custom training loop in TensorFlow](https://keras.io/guides/writing_a_custom_training_loop_in_tensorflow/) [Writing a custom training loop in PyTorch](https://keras.io/guides/writing_a_custom_training_loop_in_torch/) [Serialization & saving](https://keras.io/guides/serialization_and_saving/) [Customizing saving & serialization](https://keras.io/guides/customizing_saving_and_serialization/) [Writing your own callbacks](https://keras.io/guides/writing_your_own_callbacks/) [Transfer learning & fine-tuning](https://keras.io/guides/transfer_learning/) [Distributed training with JAX](https://keras.io/guides/distributed_training_with_jax/) [Distributed training with TensorFlow](https://keras.io/guides/distributed_training_with_tensorflow/) [Distributed training with PyTorch](https://keras.io/guides/distributed_training_with_torch/) [Distributed training with Keras 3](https://keras.io/guides/distribution/) [Migrating Keras 2 code to Keras 3](https://keras.io/guides/migrating_to_keras_3/) [How to use Keras with NNX backend](https://keras.io/guides/keras_nnx_guide/) [Orbax Checkpointing in Keras](https://keras.io/guides/orbax_checkpoint/) [Quantization in Keras](https://keras.io/guides/quantization_overview/) [8-bit integer quantization in Keras](https://keras.io/guides/int8_quantization_in_keras/) [4-bit integer quantization in Keras](https://keras.io/guides/int4_quantization_in_keras/) [GPTQ quantization in Keras](https://keras.io/guides/gptq_quantization_in_keras/) [AWQ quantization in Keras](https://keras.io/guides/awq_quantization_in_keras/) [Writing quantization-compatible layers in Keras](https://keras.io/guides/writing_quantization_compatible_layers/) [Customizing quantization in Keras](https://keras.io/guides/customizing_quantization/) [Exporting Keras models to LiteRT](https://keras.io/guides/litert_export/) [Define a Custom TPU/GPU Kernel](https://keras.io/guides/define_custom_kernel/) [Code examples](https://keras.io/examples/) [Keras 3 API documentation](https://keras.io/api/) [Keras 2 API documentation](https://keras.io/2/api/) [KerasTuner: Hyperparam Tuning](https://keras.io/keras_tuner/) [KerasHub: Pretrained Models](https://keras.io/keras_hub/) [KerasRS](https://keras.io/keras_rs/)
-[ ![keras.io logo](https://keras.io/img/logo.png) ](https://keras.io/)
-  * [Get started](https://keras.io/getting_started/)
-  * [Guides](https://keras.io/guides/)
-  * [API](https://keras.io/api/)
-  * [Examples](https://keras.io/examples/)
-  * [Keras Hub](https://keras.io/keras_hub/)
-  * [Keras RS](https://keras.io/keras_rs/)
-  * [Keras Tuner](https://keras.io/keras_tuner/)
-
-
-[ Developer guides ](https://keras.io/guides/)
-[The Functional API](https://keras.io/guides/functional_api/) [The Sequential model](https://keras.io/guides/sequential_model/) [Making new layers & models via subclassing](https://keras.io/guides/making_new_layers_and_models_via_subclassing/) [Training & evaluation with the built-in methods](https://keras.io/guides/training_with_built_in_methods/) [Customizing `fit()` with JAX](https://keras.io/guides/custom_train_step_in_jax/) [Customizing `fit()` with TensorFlow](https://keras.io/guides/custom_train_step_in_tensorflow/) [Customizing `fit()` with PyTorch](https://keras.io/guides/custom_train_step_in_torch/) [Writing a custom training loop in JAX](https://keras.io/guides/writing_a_custom_training_loop_in_jax/) [Writing a custom training loop in TensorFlow](https://keras.io/guides/writing_a_custom_training_loop_in_tensorflow/) [Writing a custom training loop in PyTorch](https://keras.io/guides/writing_a_custom_training_loop_in_torch/) [Serialization & saving](https://keras.io/guides/serialization_and_saving/) [Customizing saving & serialization](https://keras.io/guides/customizing_saving_and_serialization/) [Writing your own callbacks](https://keras.io/guides/writing_your_own_callbacks/) [Transfer learning & fine-tuning](https://keras.io/guides/transfer_learning/) [Distributed training with JAX](https://keras.io/guides/distributed_training_with_jax/) [Distributed training with TensorFlow](https://keras.io/guides/distributed_training_with_tensorflow/) [Distributed training with PyTorch](https://keras.io/guides/distributed_training_with_torch/) [Distributed training with Keras 3](https://keras.io/guides/distribution/) [Migrating Keras 2 code to Keras 3](https://keras.io/guides/migrating_to_keras_3/) [How to use Keras with NNX backend](https://keras.io/guides/keras_nnx_guide/) [Orbax Checkpointing in Keras](https://keras.io/guides/orbax_checkpoint/) [Quantization in Keras](https://keras.io/guides/quantization_overview/) [8-bit integer quantization in Keras](https://keras.io/guides/int8_quantization_in_keras/) [4-bit integer quantization in Keras](https://keras.io/guides/int4_quantization_in_keras/) [GPTQ quantization in Keras](https://keras.io/guides/gptq_quantization_in_keras/) [AWQ quantization in Keras](https://keras.io/guides/awq_quantization_in_keras/) [Writing quantization-compatible layers in Keras](https://keras.io/guides/writing_quantization_compatible_layers/) [Customizing quantization in Keras](https://keras.io/guides/customizing_quantization/) [Exporting Keras models to LiteRT](https://keras.io/guides/litert_export/) [Define a Custom TPU/GPU Kernel](https://keras.io/guides/define_custom_kernel/)
-► [Developer guides](https://keras.io/guides/) / Distributed training with Keras 3 
 # Distributed training with Keras 3
-**Author:** [Qianli Zhu](https://github.com/qlzh727)  
-**Date created:** 2023/11/07  
-**Last modified:** 2023/11/07  
-**Description:** Complete guide to the distribution API for multi-backend Keras.
-![](https://colab.research.google.com/img/colab_favicon.ico) [**View in Colab**](https://colab.research.google.com/github/keras-team/keras-io/blob/master/guides/ipynb/distribution.ipynb) •![](https://github.com/favicon.ico) [**GitHub source**](https://github.com/keras-team/keras-io/blob/master/guides/distribution.py)
-* * *
-## Introduction
-The Keras distribution API is a new interface designed to facilitate distributed deep learning across a variety of backends like JAX, TensorFlow and PyTorch. This powerful API introduces a suite of tools enabling data and model parallelism, allowing for efficient scaling of deep learning models on multiple accelerators and hosts. Whether leveraging the power of GPUs or TPUs, the API provides a streamlined approach to initializing distributed environments, defining device meshes, and orchestrating the layout of tensors across computational resources. Through classes like `DataParallel` and `ModelParallel`, it abstracts the complexity involved in parallel computation, making it easier for developers to accelerate their machine learning workflows.
-* * *
-## How it works
-The Keras distribution API provides a global programming model that allows developers to compose applications that operate on tensors in a global context (as if working with a single device) while automatically managing distribution across many devices. The API leverages the underlying framework (e.g. JAX) to distribute the program and tensors according to the sharding directives through a procedure called single program, multiple data (SPMD) expansion.
-By decoupling the application from sharding directives, the API enables running the same application on a single device, multiple devices, or even multiple clients, while preserving its global semantics.
-* * *
-## Setup
-Copied!
 
-```
+**Author:** [Qianli Zhu](https://github.com/qlzh727)<br>
+**Date created:** 2023/11/07<br>
+**Last modified:** 2023/11/07<br>
+**Description:** Complete guide to the distribution API for multi-backend Keras.
+
+
+<img class="k-inline-icon" src="https://colab.research.google.com/img/colab_favicon.ico"/> [**View in Colab**](https://colab.research.google.com/github/keras-team/keras-io/blob/master/guides/ipynb/distribution.ipynb)  <span class="k-dot">•</span><img class="k-inline-icon" src="https://github.com/favicon.ico"/> [**GitHub source**](https://github.com/keras-team/keras-io/blob/master/guides/distribution.py)
+
+
+
+---
+## Introduction
+
+The Keras distribution API is a new interface designed to facilitate
+distributed deep learning across a variety of backends like JAX, TensorFlow and
+PyTorch. This powerful API introduces a suite of tools enabling data and model
+parallelism, allowing for efficient scaling of deep learning models on multiple
+accelerators and hosts. Whether leveraging the power of GPUs or TPUs, the API
+provides a streamlined approach to initializing distributed environments,
+defining device meshes, and orchestrating the layout of tensors across
+computational resources. Through classes like `DataParallel` and
+`ModelParallel`, it abstracts the complexity involved in parallel computation,
+making it easier for developers to accelerate their machine learning
+workflows.
+
+---
+## How it works
+
+The Keras distribution API provides a global programming model that allows
+developers to compose applications that operate on tensors in a global context
+(as if working with a single device) while
+automatically managing distribution across many devices. The API leverages the
+underlying framework (e.g. JAX) to distribute the program and tensors according to the
+sharding directives through a procedure called single program, multiple data
+(SPMD) expansion.
+
+By decoupling the application from sharding directives, the API enables running
+the same application on a single device, multiple devices, or even multiple
+clients, while preserving its global semantics.
+
+---
+## Setup
+
+
+```python
 import os
 
 # The distribution API is only implemented for the JAX backend for now.
@@ -52,17 +65,26 @@ from keras import layers
 import jax
 import numpy as np
 from tensorflow import data as tf_data  # For dataset input.
-
 ```
 
-* * *
-##  `DeviceMesh` and `TensorLayout`
-The [`keras.distribution.DeviceMesh`](https://keras.io/api/distribution/layout_map#devicemesh-class) class in Keras distribution API represents a cluster of computational devices configured for distributed computation. It aligns with similar concepts in [`jax.sharding.Mesh`](https://jax.readthedocs.io/en/latest/jax.sharding.html#jax.sharding.Mesh) and [`tf.dtensor.Mesh`](https://www.tensorflow.org/api_docs/python/tf/experimental/dtensor/Mesh), where it's used to map the physical devices to a logical mesh structure.
-The `TensorLayout` class then specifies how tensors are distributed across the `DeviceMesh`, detailing the sharding of tensors along specified axes that correspond to the names of the axes in the `DeviceMesh`.
-You can find more detailed concept explainers in the [TensorFlow DTensor guide](https://www.tensorflow.org/guide/dtensor_overview#dtensors_model_of_distributed_tensors).
-Copied!
+---
+## `DeviceMesh` and `TensorLayout`
 
-```
+The `keras.distribution.DeviceMesh` class in Keras distribution API represents a cluster of
+computational devices configured for distributed computation. It aligns with
+similar concepts in [`jax.sharding.Mesh`](https://jax.readthedocs.io/en/latest/jax.sharding.html#jax.sharding.Mesh) and
+[`tf.dtensor.Mesh`](https://www.tensorflow.org/api_docs/python/tf/experimental/dtensor/Mesh),
+where it's used to map the physical devices to a logical mesh structure.
+
+The `TensorLayout` class then specifies how tensors are distributed across the
+`DeviceMesh`, detailing the sharding of tensors along specified axes that
+correspond to the names of the axes in the `DeviceMesh`.
+
+You can find more detailed concept explainers in the
+[TensorFlow DTensor guide](https://www.tensorflow.org/guide/dtensor_overview#dtensors_model_of_distributed_tensors).
+
+
+```python
 # Retrieve the local available gpu devices.
 devices = jax.devices("gpu")  # Assume it has 8 local GPUs.
 
@@ -81,19 +103,30 @@ layout_2d = keras.distribution.TensorLayout(axes=("model", "data"), device_mesh=
 replicated_layout_4d = keras.distribution.TensorLayout(
     axes=("data", None, None, None), device_mesh=mesh
 )
-
 ```
 
-* * *
+---
 ## Distribution
-The `Distribution` class in Keras serves as a foundational abstract class designed for developing custom distribution strategies. It encapsulates the core logic needed to distribute a model's variables, input data, and intermediate computations across a device mesh. As an end user, you won't have to interact directly with this class, but its subclasses like `DataParallel` or `ModelParallel`.
-* * *
-## DataParallel
-The `DataParallel` class in the Keras distribution API is designed for the data parallelism strategy in distributed training, where the model weights are replicated across all devices in the `DeviceMesh`, and each device processes a portion of the input data.
-Here is a sample usage of this class.
-Copied!
 
-```
+The `Distribution` class in Keras serves as a foundational abstract class designed
+for developing custom distribution strategies. It encapsulates the core logic
+needed to distribute a model's variables, input data, and intermediate
+computations across a device mesh. As an end user, you won't have to interact
+directly with this class, but its subclasses like `DataParallel` or
+`ModelParallel`.
+
+---
+## DataParallel
+
+The `DataParallel` class in the Keras distribution API is designed for the
+data parallelism strategy in distributed training, where the model weights are
+replicated across all devices in the `DeviceMesh`, and each device processes a
+portion of the input data.
+
+Here is a sample usage of this class.
+
+
+```python
 # Create DataParallel with list of devices.
 # As a shortcut, the devices can be skipped,
 # and Keras will detect all local available devices.
@@ -129,10 +162,9 @@ model = keras.Model(inputs=inputs, outputs=y)
 model.compile(loss="mse")
 model.fit(dataset, epochs=3)
 model.evaluate(dataset)
-
 ```
 
-
+<div class="k-default-codeblock">
 ```
 Epoch 1/3
  8/8 ━━━━━━━━━━━━━━━━━━━━ 8s 30ms/step - loss: 1.0116
@@ -145,16 +177,39 @@ Epoch 3/3
 0.842325747013092
 
 ```
+</div>
+---
+## `ModelParallel` and `LayoutMap`
 
-* * *
-##  `ModelParallel` and `LayoutMap`
-`ModelParallel` will be mostly useful when model weights are too large to fit on a single accelerator. This setting allows you to spit your model weights or activation tensors across all the devices on the `DeviceMesh`, and enable the horizontal scaling for the large models.
-Unlike the `DataParallel` model where all weights are fully replicated, the weights layout under `ModelParallel` usually need some customization for best performances. We introduce `LayoutMap` to let you specify the `TensorLayout` for any weights and intermediate tensors from global perspective.
-`LayoutMap` is a dict-like object that maps a string to `TensorLayout` instances. It behaves differently from a normal Python dict in that the string key is treated as a regex when retrieving the value. The class allows you to define the naming schema of `TensorLayout` and then retrieve the corresponding `TensorLayout` instance. Typically, the key used to query is the `variable.path` attribute, which is the identifier of the variable. As a shortcut, a tuple or list of axis names is also allowed when inserting a value, and it will be converted to `TensorLayout`.
-The `LayoutMap` can also optionally contain a `DeviceMesh` to populate the `TensorLayout.device_mesh` if it is not set. When retrieving a layout with a key, and if there isn't an exact match, all existing keys in the layout map will be treated as regex and matched against the input key again. If there are multiple matches, a `ValueError` is raised. If no matches are found, `None` is returned.
-Copied!
+`ModelParallel` will be mostly useful when model weights are too large to fit
+on a single accelerator. This setting allows you to spit your model weights or
+activation tensors across all the devices on the `DeviceMesh`, and enable the
+horizontal scaling for the large models.
 
-```
+Unlike the `DataParallel` model where all weights are fully replicated,
+the weights layout under `ModelParallel` usually need some customization for
+best performances. We introduce `LayoutMap` to let you specify the
+`TensorLayout` for any weights and intermediate tensors from global perspective.
+
+`LayoutMap` is a dict-like object that maps a string to `TensorLayout`
+instances. It behaves differently from a normal Python dict in that the string
+key is treated as a regex when retrieving the value. The class allows you to
+define the naming schema of `TensorLayout` and then retrieve the corresponding
+`TensorLayout` instance. Typically, the key used to query
+is the `variable.path` attribute,  which is the identifier of the variable.
+As a shortcut, a tuple or list of axis
+names is also allowed when inserting a value, and it will be converted to
+`TensorLayout`.
+
+The `LayoutMap` can also optionally contain a `DeviceMesh` to populate the
+`TensorLayout.device_mesh` if it is not set. When retrieving a layout with a
+key, and if there isn't an exact match, all existing keys in the layout map will
+be treated as regex and matched against the input key again. If there are
+multiple matches, a `ValueError` is raised. If no matches are found, `None` is
+returned.
+
+
+```python
 mesh_2d = keras.distribution.DeviceMesh(
     shape=(2, 4), axis_names=["data", "model"], devices=devices
 )
@@ -184,10 +239,9 @@ model = keras.Model(inputs=inputs, outputs=y)
 model.compile(loss="mse")
 model.fit(dataset, epochs=3)
 model.evaluate(dataset)
-
 ```
 
-
+<div class="k-default-codeblock">
 ```
 Epoch 1/3
 
@@ -205,11 +259,13 @@ Epoch 3/3
 0.8502610325813293
 
 ```
+</div>
+It is also easy to change the mesh structure to tune the computation between
+more data parallel or model parallel. You can do this by adjusting the shape of
+the mesh. And no changes are needed for any other code.
 
-It is also easy to change the mesh structure to tune the computation between more data parallel or model parallel. You can do this by adjusting the shape of the mesh. And no changes are needed for any other code.
-Copied!
 
-```
+```python
 full_data_parallel_mesh = keras.distribution.DeviceMesh(
     shape=(8, 1), axis_names=["data", "model"], devices=devices
 )
@@ -222,26 +278,12 @@ more_model_parallel_mesh = keras.distribution.DeviceMesh(
 full_model_parallel_mesh = keras.distribution.DeviceMesh(
     shape=(1, 8), axis_names=["data", "model"], devices=devices
 )
-
 ```
 
 ### Further reading
-  1. [JAX Distributed arrays and automatic parallelization](https://jax.readthedocs.io/en/latest/notebooks/Distributed_arrays_and_automatic_parallelization.html)
-  2. [JAX sharding module](https://jax.readthedocs.io/en/latest/jax.sharding.html)
-  3. [TensorFlow Distributed training with DTensors](https://www.tensorflow.org/tutorials/distribute/dtensor_ml_tutorial)
-  4. [TensorFlow DTensor concepts](https://www.tensorflow.org/guide/dtensor_overview)
-  5. [Using DTensors with tf.keras](https://www.tensorflow.org/tutorials/distribute/dtensor_keras_tutorial)
 
-
-[Distributed training with Keras 3](https://keras.io/guides/distribution/#distributed-training-with-keras-3)
-[Introduction](https://keras.io/guides/distribution/#introduction)
-[How it works](https://keras.io/guides/distribution/#how-it-works)
-[Setup](https://keras.io/guides/distribution/#setup)
-[`DeviceMesh` and `TensorLayout`](https://keras.io/guides/distribution/#devicemesh-and-tensorlayout)
-[Distribution](https://keras.io/guides/distribution/#distribution)
-[DataParallel](https://keras.io/guides/distribution/#dataparallel)
-[`ModelParallel` and `LayoutMap`](https://keras.io/guides/distribution/#modelparallel-and-layoutmap)
-[Further reading](https://keras.io/guides/distribution/#further-reading)
-[Terms](https://policies.google.com/terms)
-|
-[Privacy](https://policies.google.com/privacy)
+1. [JAX Distributed arrays and automatic parallelization](https://jax.readthedocs.io/en/latest/notebooks/Distributed_arrays_and_automatic_parallelization.html)
+2. [JAX sharding module](https://jax.readthedocs.io/en/latest/jax.sharding.html)
+3. [TensorFlow Distributed training with DTensors](https://www.tensorflow.org/tutorials/distribute/dtensor_ml_tutorial)
+4. [TensorFlow DTensor concepts](https://www.tensorflow.org/guide/dtensor_overview)
+5. [Using DTensors with tf.keras](https://www.tensorflow.org/tutorials/distribute/dtensor_keras_tutorial)

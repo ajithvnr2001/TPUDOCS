@@ -1,57 +1,179 @@
 {
-  "@context": [
-    "https://schema.org",
-    "https://cloud.google.com/knowledge-graph/schema/tpu/v1"
-  ],
-  "@id": "okf:google:tpu:setup_01_cloud_tpu_docs_hub",
-  "@type": "DocumentationResource",
-  "name": "Cloud TPU documentation hub",
-  "canonicalUrl": "https://cloud.google.com/tpu/docs",
-  "category": "TPU setup docs",
-  "categorySlug": "tpu_setup_docs",
-  "description": "Main entry point for official TPU setup, hardware, training, serving, and operations documentation.",
-  "provenance": {
-    "sourceUrl": "https://cloud.google.com/tpu/docs",
-    "crawledAt": "2026-10-26T12:44:57.384936+00:00",
-    "extractorEngine": "Crawl4AI",
-    "contentLengthBytes": 45214
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "okf": "https://developers.google.com/open-knowledge-format/v1#",
+    "tpu_doc": "https://github.com/ajithvnr2001/TPUDOCS/okf/doc#",
+    "tpu_hw": "https://github.com/ajithvnr2001/TPUDOCS/okf/hardware#",
+    "tpu_fw": "https://github.com/ajithvnr2001/TPUDOCS/okf/framework#"
   },
-  "triples": [
-    [
-      "Cloud TPU documentation hub",
-      "documentedIn",
-      "https://cloud.google.com/tpu/docs"
-    ],
-    [
-      "Cloud TPU documentation hub",
-      "belongsToCategory",
-      "tpu_setup_docs"
-    ],
-    [
-      "Cloud TPU documentation hub",
-      "targetsPlatform",
-      "Google Cloud Platform"
-    ],
-    [
-      "Cloud TPU documentation hub",
-      "managesHardware",
-      "Google Cloud TPU"
+  "@type": "okf:KnowledgeDocument",
+  "@id": "tpu_doc:setup_01_cloud_tpu_docs_hub",
+  "okf_version": "1.0",
+  "metadata": {
+    "id": "setup_01_cloud_tpu_docs_hub",
+    "name": "Cloud TPU documentation hub",
+    "url": "https://cloud.google.com/tpu/docs",
+    "category": "tpu_setup_docs",
+    "description": "Main entry point for official TPU setup, hardware, training, serving, and operations documentation.",
+    "char_count": 2657,
+    "word_count": 240,
+    "section_count": 7,
+    "code_block_count": 0,
+    "table_count": 0,
+    "cli_command_count": 0,
+    "indexed_at": "2026-10-26T14:46:54.361741+00:00"
+  },
+  "knowledge_graph": {
+    "triples": [
+      {
+        "subject": "tpu_doc:setup_01_cloud_tpu_docs_hub",
+        "predicate": "rdf:type",
+        "object": "okf:TechnicalDocumentation"
+      },
+      {
+        "subject": "tpu_doc:setup_01_cloud_tpu_docs_hub",
+        "predicate": "schema:name",
+        "object": "Cloud TPU documentation hub"
+      },
+      {
+        "subject": "tpu_doc:setup_01_cloud_tpu_docs_hub",
+        "predicate": "schema:url",
+        "object": "https://cloud.google.com/tpu/docs"
+      },
+      {
+        "subject": "tpu_doc:setup_01_cloud_tpu_docs_hub",
+        "predicate": "schema:category",
+        "object": "tpu_setup_docs"
+      },
+      {
+        "subject": "tpu_doc:setup_01_cloud_tpu_docs_hub",
+        "predicate": "schema:description",
+        "object": "Main entry point for official TPU setup, hardware, training, serving, and operations documentation."
+      },
+      {
+        "subject": "tpu_doc:setup_01_cloud_tpu_docs_hub",
+        "predicate": "okf:documentsHardware",
+        "object": "tpu_hw:TPU7x"
+      },
+      {
+        "subject": "tpu_doc:setup_01_cloud_tpu_docs_hub",
+        "predicate": "okf:documentsFramework",
+        "object": "tpu_fw:JAX"
+      },
+      {
+        "subject": "tpu_doc:setup_01_cloud_tpu_docs_hub",
+        "predicate": "okf:hasSection",
+        "object": "Cloud TPU documentation"
+      },
+      {
+        "subject": "tpu_doc:setup_01_cloud_tpu_docs_hub",
+        "predicate": "okf:hasSection",
+        "object": "Start your proof of concept with $300 in free credit"
+      },
+      {
+        "subject": "tpu_doc:setup_01_cloud_tpu_docs_hub",
+        "predicate": "okf:hasSection",
+        "object": "Keep exploring with 20+ always-free products."
+      },
+      {
+        "subject": "tpu_doc:setup_01_cloud_tpu_docs_hub",
+        "predicate": "okf:hasSection",
+        "object": "Documentation resources"
+      },
+      {
+        "subject": "tpu_doc:setup_01_cloud_tpu_docs_hub",
+        "predicate": "okf:hasSection",
+        "object": "Guides"
+      },
+      {
+        "subject": "tpu_doc:setup_01_cloud_tpu_docs_hub",
+        "predicate": "okf:hasSection",
+        "object": "Reference"
+      },
+      {
+        "subject": "tpu_doc:setup_01_cloud_tpu_docs_hub",
+        "predicate": "okf:hasSection",
+        "object": "Resources"
+      }
     ]
-  ],
-  "assertions": [
-    {
-      "assertion": "Cloud TPU documentation hub provides official guidance on Main entry point for official TPU setup, hardware, training, serving, and operations documentation.",
-      "confidence": 1.0,
-      "source": "https://cloud.google.com/tpu/docs",
-      "verified": true
-    }
-  ],
-  "qaPairs": [
-    {
-      "question": "What is Cloud TPU documentation hub used for in Cloud TPU workflows?",
-      "answer": "Main entry point for official TPU setup, hardware, training, serving, and operations documentation.",
-      "category": "tpu_setup_docs"
-    }
-  ],
-  "contentSummary": "Main entry point for official TPU setup, hardware, training, serving, and operations documentation."
+  },
+  "structured_content": {
+    "summary": "Main entry point for official TPU setup, hardware, training, serving, and operations documentation.",
+    "sections": [
+      {
+        "heading": "Cloud TPU documentation",
+        "level": 1,
+        "content": "[Read product documentation](https://docs.cloud.google.com/tpu/docs/intro-to-tpu)\nTensor Processing Units (TPUs) are Google's custom-developed ASICs used to accelerate machine learning workloads. You can use Cloud TPU to access TPUs from [Compute Engine](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine), [ Google Kubernetes Engine](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus), and [Vertex AI](https://docs.cloud.google.com/vertex-ai/docs/training/training-with-tpu-vm). \n[Go to the Cloud TPU product page for more.](https://cloud.google.com/tpu/)\n[Get started for free](https://console.cloud.google.com/freetrial)"
+      },
+      {
+        "heading": "Start your proof of concept with $300 in free credit",
+        "level": 4,
+        "content": "* Develop with our latest Generative AI models and tools. \n  * Get free usage of 20+ popular products, including Compute Engine and AI APIs. \n  * No automatic charges, no commitment. \n\n\n[ View free product offers ](https://docs.cloud.google.com/free/docs/free-cloud-features#free-tier)"
+      },
+      {
+        "heading": "Keep exploring with 20+ always-free products.",
+        "level": 4,
+        "content": "Access 20+ free products for common use cases, including AI APIs, VMs, data warehouses, and more."
+      },
+      {
+        "heading": "Documentation resources",
+        "level": 2,
+        "content": "Find quickstarts and guides, review key references, and get help with common issues. \nformat_list_numbered"
+      },
+      {
+        "heading": "Guides",
+        "level": 3,
+        "content": "* [ Introduction to Cloud TPU ](https://docs.cloud.google.com/tpu/docs/intro-to-tpu)\n  * [ TPU architecture ](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm)\n  * [ Get started ](https://docs.cloud.google.com/tpu/docs/setup-gcp-account-compute)\n  * [ TPU7x (Ironwood) ](https://docs.cloud.google.com/tpu/docs/tpu7x)\n  * [ JAX on Cloud TPU ](https://docs.cloud.google.com/tpu/docs/jax-ai-stack)\n  * [ PyTorch on Cloud TPU ](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu)\n  * [ Run inference on Cloud TPU ](https://docs.cloud.google.com/tpu/docs/tpu-inference)\n\n\nfind_in_page"
+      },
+      {
+        "heading": "Reference",
+        "level": 3,
+        "content": "* [ Google Cloud CLI reference ](https://docs.cloud.google.com/sdk/gcloud/reference/compute/tpus)\n  * [ REST API ](https://docs.cloud.google.com/tpu/docs/reference/rest)\n\n\ninfo"
+      },
+      {
+        "heading": "Resources",
+        "level": 3,
+        "content": "* [ Cloud TPU pricing ](https://docs.cloud.google.com/tpu/pricing)\n  * [ Regions and zones ](https://docs.cloud.google.com/tpu/docs/regions-zones)\n  * [ Cloud TPU quotas ](https://docs.cloud.google.com/tpu/docs/quota)\n  * [ Release Notes ](https://docs.cloud.google.com/tpu/docs/release-notes)\n  * [ Getting Support ](https://docs.cloud.google.com/tpu/docs/getting-support)\n  * [ Billing questions ](https://docs.cloud.google.com/tpu/docs/billing-questions)\n  * [ Samples ](https://docs.cloud.google.com/tpu/docs/samples)"
+      }
+    ],
+    "code_examples": [],
+    "cli_commands": [],
+    "environment_variables": [],
+    "tables": [],
+    "qa_pairs": [
+      {
+        "question": "What is covered in 'Cloud TPU documentation hub' (https://cloud.google.com/tpu/docs)?",
+        "answer": "Main entry point for official TPU setup, hardware, training, serving, and operations documentation."
+      },
+      {
+        "question": "How does 'Cloud TPU documentation hub' handle: Cloud TPU documentation?",
+        "answer": "[Read product documentation](https://docs.cloud.google.com/tpu/docs/intro-to-tpu)\nTensor Processing Units (TPUs) are Google's custom-developed ASICs used to accelerate machine learning workloads. You can use Cloud TPU to access TPUs from [Compute Engine](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine), [ Google Kubernetes Engine](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus), and [Vertex AI](https://docs.cloud.google.com/vertex-ai/docs/training/training-with-tpu-vm). \n[Go to the Cloud TPU product page for more.](https://cloud.google.com/tpu/)\n[Get started for free](https://console.cloud.google.com/freetrial)"
+      },
+      {
+        "question": "How does 'Cloud TPU documentation hub' handle: Start your proof of concept with $300 in free credit?",
+        "answer": "* Develop with our latest Generative AI models and tools. \n  * Get free usage of 20+ popular products, including Compute Engine and AI APIs. \n  * No automatic charges, no commitment. \n\n\n[ View free product offers ](https://docs.cloud.google.com/free/docs/free-cloud-features#free-tier)"
+      },
+      {
+        "question": "How does 'Cloud TPU documentation hub' handle: Keep exploring with 20+ always-free products.?",
+        "answer": "Access 20+ free products for common use cases, including AI APIs, VMs, data warehouses, and more."
+      },
+      {
+        "question": "How does 'Cloud TPU documentation hub' handle: Documentation resources?",
+        "answer": "Find quickstarts and guides, review key references, and get help with common issues. \nformat_list_numbered"
+      },
+      {
+        "question": "How does 'Cloud TPU documentation hub' handle: Guides?",
+        "answer": "* [ Introduction to Cloud TPU ](https://docs.cloud.google.com/tpu/docs/intro-to-tpu)\n  * [ TPU architecture ](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm)\n  * [ Get started ](https://docs.cloud.google.com/tpu/docs/setup-gcp-account-compute)\n  * [ TPU7x (Ironwood) ](https://docs.cloud.google.com/tpu/docs/tpu7x)\n  * [ JAX on Cloud TPU ](https://docs.cloud.google.com/tpu/docs/jax-ai-stack)\n  * [ PyTorch on Cloud TPU ](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu)\n  * [ Run inference on Cloud TPU ](https://docs.cloud.google.com/tpu/docs/tpu-inference)\n\n\nfind_in_page"
+      },
+      {
+        "question": "How does 'Cloud TPU documentation hub' handle: Reference?",
+        "answer": "* [ Google Cloud CLI reference ](https://docs.cloud.google.com/sdk/gcloud/reference/compute/tpus)\n  * [ REST API ](https://docs.cloud.google.com/tpu/docs/reference/rest)\n\n\ninfo"
+      },
+      {
+        "question": "How does 'Cloud TPU documentation hub' handle: Resources?",
+        "answer": "* [ Cloud TPU pricing ](https://docs.cloud.google.com/tpu/pricing)\n  * [ Regions and zones ](https://docs.cloud.google.com/tpu/docs/regions-zones)\n  * [ Cloud TPU quotas ](https://docs.cloud.google.com/tpu/docs/quota)\n  * [ Release Notes ](https://docs.cloud.google.com/tpu/docs/release-notes)\n  * [ Getting Support ](https://docs.cloud.google.com/tpu/docs/getting-support)\n  * [ Billing questions ](https://docs.cloud.google.com/tpu/docs/billing-questions)\n  * [ Samples ](https://docs.cloud.google.com/tpu/docs/samples)"
+      }
+    ],
+    "full_markdown": "# Cloud TPU documentation\n[Read product documentation](https://docs.cloud.google.com/tpu/docs/intro-to-tpu)\nTensor Processing Units (TPUs) are Google's custom-developed ASICs used to accelerate machine learning workloads. You can use Cloud TPU to access TPUs from [Compute Engine](https://docs.cloud.google.com/tpu/docs/tpus-in-compute-engine), [ Google Kubernetes Engine](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/tpus), and [Vertex AI](https://docs.cloud.google.com/vertex-ai/docs/training/training-with-tpu-vm). \n[Go to the Cloud TPU product page for more.](https://cloud.google.com/tpu/)\n[Get started for free](https://console.cloud.google.com/freetrial)\n#### Start your proof of concept with $300 in free credit\n  * Develop with our latest Generative AI models and tools. \n  * Get free usage of 20+ popular products, including Compute Engine and AI APIs. \n  * No automatic charges, no commitment. \n\n\n[ View free product offers ](https://docs.cloud.google.com/free/docs/free-cloud-features#free-tier)\n#### Keep exploring with 20+ always-free products.\nAccess 20+ free products for common use cases, including AI APIs, VMs, data warehouses, and more. \n##  Documentation resources \nFind quickstarts and guides, review key references, and get help with common issues. \nformat_list_numbered \n### Guides\n  * [ Introduction to Cloud TPU ](https://docs.cloud.google.com/tpu/docs/intro-to-tpu)\n  * [ TPU architecture ](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm)\n  * [ Get started ](https://docs.cloud.google.com/tpu/docs/setup-gcp-account-compute)\n  * [ TPU7x (Ironwood) ](https://docs.cloud.google.com/tpu/docs/tpu7x)\n  * [ JAX on Cloud TPU ](https://docs.cloud.google.com/tpu/docs/jax-ai-stack)\n  * [ PyTorch on Cloud TPU ](https://docs.cloud.google.com/tpu/docs/pytorch-on-tpu)\n  * [ Run inference on Cloud TPU ](https://docs.cloud.google.com/tpu/docs/tpu-inference)\n\n\nfind_in_page \n### Reference\n  * [ Google Cloud CLI reference ](https://docs.cloud.google.com/sdk/gcloud/reference/compute/tpus)\n  * [ REST API ](https://docs.cloud.google.com/tpu/docs/reference/rest)\n\n\ninfo \n### Resources\n  * [ Cloud TPU pricing ](https://docs.cloud.google.com/tpu/pricing)\n  * [ Regions and zones ](https://docs.cloud.google.com/tpu/docs/regions-zones)\n  * [ Cloud TPU quotas ](https://docs.cloud.google.com/tpu/docs/quota)\n  * [ Release Notes ](https://docs.cloud.google.com/tpu/docs/release-notes)\n  * [ Getting Support ](https://docs.cloud.google.com/tpu/docs/getting-support)\n  * [ Billing questions ](https://docs.cloud.google.com/tpu/docs/billing-questions)\n  * [ Samples ](https://docs.cloud.google.com/tpu/docs/samples)"
+  }
 }
